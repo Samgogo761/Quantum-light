@@ -1,0 +1,42 @@
+! ======================================================================
+! Example wannier_sbe_input.txt with the new &quantum_light namelist.
+! The four pre-existing groups (&crystal, &laser, &wannier90, &sbe) are
+! unchanged -- paste your current values in them.
+! ======================================================================
+
+&crystal
+  nkx = 150
+  nky = 150
+/
+
+&laser
+  wvl       = 3200.0      ! driver wavelength [nm]
+  intensity = 2.0e11      ! classical peak intensity [W/cm^2]
+                          ! (used only when quantum_light%enabled = .false.)
+  env       = 2           ! 1 = Gaussian, 2 = cos^2
+/
+
+&wannier90
+  SOC = 0
+/
+
+&sbe
+  deph_t2              = 0.5     ! T2 [fs]
+  var_method           = 'ht'
+  calc_decompose_j     = .false.
+/
+
+! ----------------------------------------------------------------------
+! &quantum_light : BSV random-phase MC ensemble.
+! If absent, or if enabled = .false., the solver runs the classical path
+! exactly as before -- nothing else in the input file needs to change.
+! ----------------------------------------------------------------------
+&quantum_light
+  enabled   = .true.
+  I_bar     = 2.0e11      ! BSV mean intensity I_bar [W/cm^2].
+                          ! NOTE: this is the *mean*, not the peak.
+                          ! <I_sample> = 2 * I_bar  (exponential statistics)
+  n_samples = 500         ! MC trajectories. 500 is a reasonable start;
+                          ! scale up until sigma(omega) stops shrinking.
+  seed      = 42          ! PRNG seed; same seed -> identical trajectory set.
+/

@@ -1,0 +1,18 @@
+# Fortran build artefacts
+*.mod
+*.smod
+*.o
+*.obj
+*.a
+
+# Test binary
+tests/test_qlight_sampling
+
+# HHG outputs
+HHG/
+Jt/
+*.dat
+
+# Editor / OS
+*.swp
+.DS_Store
