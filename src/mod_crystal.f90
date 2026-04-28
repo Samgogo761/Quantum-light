@@ -95,9 +95,9 @@ contains
   end subroutine project_vec_to_trunc
 
   subroutine project_to_trunc_withU(Mk_full, Uk, nw, ns, Mk_trunc)
+    integer,     intent(in)  :: nw, ns
     complex(dp), intent(in)  :: Mk_full(nw, nw)
     complex(dp), intent(in)  :: Uk(nw, ns)
-    integer,     intent(in)  :: nw, ns
     complex(dp), intent(out) :: Mk_trunc(ns, ns)
     complex(dp) :: tmp(nw, ns)
 

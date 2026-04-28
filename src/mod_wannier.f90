@@ -14,10 +14,12 @@ contains
 
   subroutine read_tb_file(filename)
     character(*), intent(in) :: filename
-    integer :: u, ios, ir, m, n, nw_file, i
+    integer :: u, ios, ir, m, n, nw_file, ios_parse
+    integer :: r1, r2, r3, m_in, n_in
     real(dp) :: rr, ri, rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
     character(256) :: line
     integer :: ir0
+    real(dp) :: tb_a1_ang(3), tb_a2_ang(3), tb_a3_ang(3)
 
     open(newunit=u, file=filename, status='old', action='read', iostat=ios)
     if (ios /= 0) then
@@ -25,8 +27,26 @@ contains
       error stop 1
     end if
 
+    ! Line 1: comment/timestamp
     read(u, '(A)') line
-    read(u, *) nw_file
+
+    ! Wannier90 tb.dat can be:
+    !   (a) old compact: line2=nwann
+    !   (b) standard: lines2-4=lattice vectors, line5=nwann
+    read(u, '(A)') line
+    read(line, *, iostat=ios_parse) nw_file
+    if (ios_parse /= 0) then
+      read(line, *, iostat=ios_parse) tb_a1_ang
+      if (ios_parse /= 0) then
+        write(*,*) 'ERROR: failed to parse header of ', trim(filename)
+        error stop 1
+      end if
+      read(u, *) tb_a2_ang
+      read(u, *) tb_a3_ang
+      call check_tb_lattice(filename, tb_a1_ang, tb_a2_ang, tb_a3_ang)
+      read(u, *) nw_file
+    end if
+
     nwann = nw_file
     read(u, *) nrpts
 
@@ -41,29 +61,35 @@ contains
 
     do ir = 1, nrpts
       read(u, '(A)') line
-      read(u, *) irvec(1,ir), irvec(2,ir), irvec(3,ir)
+      read(u, *) r1, r2, r3
+      irvec(:, ir) = [r1, r2, r3]
       do n = 1, nwann
         do m = 1, nwann
-          read(u, *) i, i, rr, ri
-          Hmn_R(m, n, ir) = cmplx(rr, ri, dp)
+          read(u, *) m_in, n_in, rr, ri
+          Hmn_R(m_in, n_in, ir) = cmplx(rr, ri, dp)
         end do
       end do
     end do
 
     do ir = 1, nrpts
       read(u, '(A)') line
-      read(u, *) i, i, i
+      read(u, *) r1, r2, r3
+      if (any([r1, r2, r3] /= irvec(:, ir))) then
+        write(*,*) 'ERROR: inconsistent R header between H and r blocks in ', trim(filename)
+        error stop 1
+      end if
       do n = 1, nwann
         do m = 1, nwann
-          read(u, *) i, i, rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
-          rmn_R(m, n, 1, ir) = cmplx(rx_r, rx_i, dp)
-          rmn_R(m, n, 2, ir) = cmplx(ry_r, ry_i, dp)
-          rmn_R(m, n, 3, ir) = cmplx(rz_r, rz_i, dp)
+          read(u, *) m_in, n_in, rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
+          rmn_R(m_in, n_in, 1, ir) = cmplx(rx_r, rx_i, dp)
+          rmn_R(m_in, n_in, 2, ir) = cmplx(ry_r, ry_i, dp)
+          rmn_R(m_in, n_in, 3, ir) = cmplx(rz_r, rz_i, dp)
         end do
       end do
     end do
     close(u)
 
+    Hmn_R = Hmn_R * eV_to_Ha
     rmn_R = rmn_R * Ang_to_bohr
     has_rmn = .true.
 
@@ -80,7 +106,7 @@ contains
 
   subroutine read_hr_file(filename)
     character(*), intent(in) :: filename
-    integer :: u, ios, ir, m, n, nw_file, r1, r2, r3
+    integer :: u, ios, ir, m, n, nw_file, r1, r2, r3, m_in, n_in
     real(dp) :: rr, ri
     character(256) :: line
     integer :: idx, ir0
@@ -107,18 +133,20 @@ contains
     do ir = 1, nrpts
       do n = 1, nwann
         do m = 1, nwann
-          read(u, *) r1, r2, r3, m, n, rr, ri
-          if (m == 1 .and. n == 1) then
+          read(u, *) r1, r2, r3, m_in, n_in, rr, ri
+          if (m_in == 1 .and. n_in == 1) then
             idx = idx + 1
             irvec(1, idx) = r1
             irvec(2, idx) = r2
             irvec(3, idx) = r3
           end if
-          Hmn_R(m, n, ir) = cmplx(rr, ri, dp)
+          Hmn_R(m_in, n_in, ir) = cmplx(rr, ri, dp)
         end do
       end do
     end do
     close(u)
+
+    Hmn_R = Hmn_R * eV_to_Ha
 
     ir0 = find_R0()
     if (ir0 > 0) then
@@ -133,10 +161,11 @@ contains
 
   subroutine read_r_file(filename)
     character(*), intent(in) :: filename
-    integer :: u, ios, ir, m, n, nw_file, nrpts_r, i
+    integer :: u, ios, ir, m, n, nw_file, nrpts_r, m_in, n_in
     real(dp) :: rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
     character(256) :: line
     integer :: r1, r2, r3
+    integer, allocatable :: ndegen_r(:)
 
     open(newunit=u, file=filename, status='old', action='read', iostat=ios)
     if (ios /= 0) then
@@ -148,21 +177,31 @@ contains
     read(u, *) nw_file
     read(u, *) nrpts_r
 
+    if (allocated(rmn_R)) then
+      if (nrpts_r /= nrpts) then
+        write(*,*) 'ERROR: nrpts mismatch between hr.dat and r.dat for ', trim(filename)
+        error stop 1
+      end if
+    else
+      nrpts = nrpts_r
+    end if
+
     if (.not. allocated(rmn_R)) then
       allocate(rmn_R(nwann, nwann, 3, nrpts))
     end if
     rmn_R = C_0
 
-    allocate(ndegen(nrpts_r))
-    read(u, *) ndegen(1:nrpts_r)
+    allocate(ndegen_r(nrpts_r))
+    read(u, *) ndegen_r(1:nrpts_r)
+    deallocate(ndegen_r)
 
     do ir = 1, nrpts_r
       do n = 1, nwann
         do m = 1, nwann
-          read(u, *) r1, r2, r3, i, i, rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
-          rmn_R(m, n, 1, ir) = cmplx(rx_r, rx_i, dp)
-          rmn_R(m, n, 2, ir) = cmplx(ry_r, ry_i, dp)
-          rmn_R(m, n, 3, ir) = cmplx(rz_r, rz_i, dp)
+          read(u, *) r1, r2, r3, m_in, n_in, rx_r, rx_i, ry_r, ry_i, rz_r, rz_i
+          rmn_R(m_in, n_in, 1, ir) = cmplx(rx_r, rx_i, dp)
+          rmn_R(m_in, n_in, 2, ir) = cmplx(ry_r, ry_i, dp)
+          rmn_R(m_in, n_in, 3, ir) = cmplx(rz_r, rz_i, dp)
         end do
       end do
     end do
@@ -194,6 +233,26 @@ contains
       end if
     end do
   end function find_R0
+
+  subroutine check_tb_lattice(filename, tb_a1_ang, tb_a2_ang, tb_a3_ang)
+    character(*), intent(in) :: filename
+    real(dp), intent(in) :: tb_a1_ang(3), tb_a2_ang(3), tb_a3_ang(3)
+    real(dp), parameter :: tol_ang = 1.0e-5_dp
+
+    if (maxval(abs(tb_a1_ang - a1_ang)) > tol_ang .or. &
+        maxval(abs(tb_a2_ang - a2_ang)) > tol_ang .or. &
+        maxval(abs(tb_a3_ang - a3_ang)) > tol_ang) then
+      write(*,'(A)') 'ERROR: lattice vectors in tb.dat do not match input.nml.'
+      write(*,'(A)') '  File: '//trim(filename)
+      write(*,'(A,3F18.10)') '  tb.dat a1 (Ang): ', tb_a1_ang
+      write(*,'(A,3F18.10)') '  tb.dat a2 (Ang): ', tb_a2_ang
+      write(*,'(A,3F18.10)') '  tb.dat a3 (Ang): ', tb_a3_ang
+      write(*,'(A,3F18.10)') '  input  a1 (Ang): ', a1_ang
+      write(*,'(A,3F18.10)') '  input  a2 (Ang): ', a2_ang
+      write(*,'(A,3F18.10)') '  input  a3 (Ang): ', a3_ang
+      error stop 1
+    end if
+  end subroutine check_tb_lattice
 
   subroutine fourier_ham(k_cart, Hk)
     real(dp),    intent(in)  :: k_cart(3)

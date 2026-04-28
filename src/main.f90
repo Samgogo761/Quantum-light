@@ -12,18 +12,21 @@ program hhg_sbe_solver
   real(dp) :: t_start, t_end
   real(dp), allocatable :: hhg_x(:), hhg_y(:), hhg_tot(:)
   integer :: n_omega
+  character(256) :: input_file
 
   ! BSV variables
   type(qlight_params_t) :: qp
   real(dp), allocatable :: Jt_sample(:,:), hhg_accum(:)
   real(dp), allocatable :: hhg_x_s(:), hhg_y_s(:), hhg_tot_s(:)
   real(dp) :: I_sample, phi_sample, E_peak_sample
-  integer :: i_sample, n_omega_s
+  integer :: isamp, n_omega_s
 
   call cpu_time(t_start)
 
   ! === 1. Read input ===
-  call read_input("input.nml")
+  call resolve_input_file(input_file)
+  write(*,'(A)') 'Reading input from '//trim(input_file)
+  call read_input(trim(input_file))
 
   ! === 2. Read Wannier90 data ===
   if (len_trim(wannier_tb_file) > 0) then
@@ -68,7 +71,7 @@ program hhg_sbe_solver
 
     allocate(Jt_sample(nt, 2))
 
-    do i_sample = 1, bsv_n_samples
+    do isamp = 1, bsv_n_samples
       call qlight_sample_bsv(qp, I_sample, phi_sample)
 
       E_peak_sample = sqrt(2.0_dp * I_sample * Wcm2_to_au / c_au)
@@ -86,8 +89,8 @@ program hhg_sbe_solver
       hhg_accum = hhg_accum + hhg_tot_s
       deallocate(hhg_x_s, hhg_y_s, hhg_tot_s)
 
-      if (mod(i_sample, 50) == 0) then
-        write(*,'(A,I0,A,I0)') '  BSV sample ', i_sample, ' / ', bsv_n_samples
+      if (mod(isamp, 50) == 0) then
+        write(*,'(A,I0,A,I0)') '  BSV sample ', isamp, ' / ', bsv_n_samples
       end if
     end do
 
@@ -103,6 +106,36 @@ program hhg_sbe_solver
   write(*,'(A,F10.2,A)') 'Total wall time: ', t_end - t_start, ' seconds'
 
 contains
+
+  subroutine resolve_input_file(path)
+    character(*), intent(out) :: path
+    logical :: exists
+
+    if (command_argument_count() >= 1) then
+      call get_command_argument(1, path)
+      inquire(file=trim(path), exist=exists)
+      if (.not. exists) then
+        write(*,*) 'ERROR: input file from command line not found: ', trim(path)
+        error stop 1
+      end if
+      return
+    end if
+
+    inquire(file='input.nml', exist=exists)
+    if (exists) then
+      path = 'input.nml'
+      return
+    end if
+
+    inquire(file='input/input.nml', exist=exists)
+    if (exists) then
+      path = 'input/input.nml'
+      return
+    end if
+
+    write(*,*) 'ERROR: cannot find input.nml in current directory or input/input.nml.'
+    error stop 1
+  end subroutine resolve_input_file
 
   subroutine write_bsv_hhg(filename, hhg_avg, nw, nt_in, dt_in, omega0_in)
     character(*), intent(in) :: filename

@@ -21,7 +21,7 @@
 /
 
 &laser
-  wvl_nm = 900.0
+  wvl_nm = 3200.0
   intensity_Wcm2 = 2.0e11
   theta_deg = 0.0
   phi_cep_deg = 90.0
@@ -35,7 +35,7 @@
 /
 
 &dephasing
-  T2_fs = 10.0
+  T2_fs = 5.337
 /
 
 &bsv
