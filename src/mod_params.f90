@@ -118,7 +118,8 @@ contains
     E_fermi = E_fermi_eV * eV_to_Ha
 
     omega0  = TWOPI * c_au / (wvl_nm * nm_to_bohr)
-    E0      = sqrt(2.0_dp * intensity_Wcm2 * Wcm2_to_au / c_au)
+    ! Wcm2_to_au is defined so that E(a.u.)^2 = intensity(W/cm^2) * Wcm2_to_au.
+    E0      = sqrt(intensity_Wcm2 * Wcm2_to_au)
     A0      = E0 / omega0
     T_cycle = TWOPI / omega0
     T_total = ncyc * T_cycle
