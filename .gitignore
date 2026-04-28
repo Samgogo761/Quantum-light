@@ -4,15 +4,27 @@
 *.o
 *.obj
 *.a
+obj/
+mod/
 
-# Test binary
+# Binaries
+hhg_sbe
+test_qlight
 tests/test_qlight_sampling
 
 # HHG outputs
 HHG/
 Jt/
 *.dat
+!input/*.nml
+
+# Wannier90 data (user-provided, large)
+wannier90_tb.dat
+wannier90_hr.dat
+wannier90_r.dat
+wannier_tb.dat
 
 # Editor / OS
 *.swp
+*~
 .DS_Store
