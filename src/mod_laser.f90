@@ -2,10 +2,8 @@ module mod_laser
   use mod_params
   implicit none
 
-  real(dp), allocatable :: Et_scalar(:)   ! (nt) E-field scalar amplitude
-  real(dp), allocatable :: At_scalar(:)   ! (nt) vector potential scalar
-  real(dp), allocatable :: Et_vec(:,:)    ! (nt, 3) Cartesian components
-  real(dp), allocatable :: At_vec(:,:)    ! (nt, 3) Cartesian components
+  real(dp), allocatable :: Et_vec(:,:)    ! (nt, 3) Cartesian E-field
+  real(dp), allocatable :: At_vec(:,:)    ! (nt, 3) Cartesian vector potential
 
 contains
 
@@ -15,14 +13,18 @@ contains
 
   subroutine generate_field_sample(E_peak, phi_0)
     real(dp), intent(in) :: E_peak, phi_0
-    integer :: it
+    integer :: it, a
     real(dp) :: t, f_env, t_mid
-    integer :: a
+    real(dp) :: ex_dir(3), ey_dir(3)
+    real(dp) :: Ex_t, Ey_t
 
-    if (allocated(Et_scalar)) deallocate(Et_scalar, At_scalar, Et_vec, At_vec)
-    allocate(Et_scalar(nt), At_scalar(nt), Et_vec(nt, 3), At_vec(nt, 3))
+    if (allocated(Et_vec)) deallocate(Et_vec, At_vec)
+    allocate(Et_vec(nt, 3), At_vec(nt, 3))
 
     t_mid = T_total * 0.5_dp
+
+    ex_dir = pol_vec
+    ey_dir = [-pol_vec(2), pol_vec(1), 0.0_dp]
 
     do it = 1, nt
       t = (it - 1) * dt
@@ -46,17 +48,19 @@ contains
         f_env = 1.0_dp
       end select
 
-      Et_scalar(it) = E_peak * f_env * sin(omega0 * t + phi_0)
+      Ex_t = E_peak * f_env * sin(omega0 * t + phi_0)
+      Ey_t = E_peak * ellipticity * f_env * sin(omega0 * t + phi_0 + delta_phase)
+
+      do a = 1, 3
+        Et_vec(it, a) = Ex_t * ex_dir(a) + Ey_t * ey_dir(a)
+      end do
     end do
 
-    At_scalar(1) = 0.0_dp
+    At_vec(1, :) = 0.0_dp
     do it = 2, nt
-      At_scalar(it) = At_scalar(it-1) - 0.5_dp * dt * (Et_scalar(it-1) + Et_scalar(it))
-    end do
-
-    do a = 1, 3
-      Et_vec(:, a) = Et_scalar(:) * pol_vec(a)
-      At_vec(:, a) = At_scalar(:) * pol_vec(a)
+      do a = 1, 3
+        At_vec(it, a) = At_vec(it-1, a) - 0.5_dp * dt * (Et_vec(it-1, a) + Et_vec(it, a))
+      end do
     end do
   end subroutine generate_field_sample
 

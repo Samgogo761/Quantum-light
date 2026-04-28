@@ -51,8 +51,10 @@ module mod_params
   real(dp) :: phi_cep_deg    = 90.0_dp
   real(dp) :: ncyc           = 10.0_dp
   integer  :: env_type       = 2
+  real(dp) :: ellipticity    = 0.0_dp
+  real(dp) :: delta_phase_deg = 90.0_dp
   real(dp) :: omega0, E0, A0, T_cycle, T_total
-  real(dp) :: theta, phi_cep
+  real(dp) :: theta, phi_cep, delta_phase
   real(dp) :: pol_vec(3)
 
   ! --- Time ---
@@ -76,7 +78,7 @@ module mod_params
   namelist /kgrid/     nkx, nky
   namelist /bands/     nv_orig, nb_start, nb_end
   namelist /laser/     wvl_nm, intensity_Wcm2, theta_deg, phi_cep_deg, &
-                       ncyc, env_type
+                       ncyc, env_type, ellipticity, delta_phase_deg
   namelist /timestep/  dt, n_dt_deph
   namelist /dephasing/ T2_fs
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
@@ -126,8 +128,9 @@ contains
     nt      = nint(T_total / dt)
     if (nt < 1) nt = 1
 
-    theta   = theta_deg   * PI / 180.0_dp
-    phi_cep = phi_cep_deg * PI / 180.0_dp
+    theta       = theta_deg       * PI / 180.0_dp
+    phi_cep     = phi_cep_deg     * PI / 180.0_dp
+    delta_phase = delta_phase_deg * PI / 180.0_dp
     pol_vec = [cos(theta), sin(theta), 0.0_dp]
 
     T2 = T2_fs * fs_to_au
@@ -176,6 +179,10 @@ contains
     write(*,'(A,F10.2,A)') '  T_total      : ', T_total * au_to_fs, ' fs'
     write(*,'(A,I0)')      '  nt           : ', nt
     write(*,'(A,F10.4,A)') '  dt           : ', dt, ' a.u.'
+    if (abs(ellipticity) > 1.0e-10_dp) then
+      write(*,'(A,F10.4)')   '  ellipticity  : ', ellipticity
+      write(*,'(A,F10.2,A)') '  delta_phase  : ', delta_phase_deg, ' deg'
+    end if
     write(*,'(A)')       '-------------------------------------------'
     write(*,'(A,F10.2,A)') '  T2           : ', T2_fs, ' fs'
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph

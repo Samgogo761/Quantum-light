@@ -39,6 +39,7 @@ program hhg_sbe_solver
   ! === 3. Build k-grid and band structure ===
   call setup_kgrid()
   call compute_band_structure()
+  call precompute_projected_matrices()
   call print_params()
   call write_bands("bands.dat")
 
@@ -74,7 +75,7 @@ program hhg_sbe_solver
     do isamp = 1, bsv_n_samples
       call qlight_sample_bsv(qp, I_sample, phi_sample)
 
-      E_peak_sample = sqrt(2.0_dp * I_sample * Wcm2_to_au / c_au)
+      E_peak_sample = sqrt(I_sample * Wcm2_to_au)
       call generate_field_sample(E_peak_sample, phi_sample)
       call run_single_trajectory(Jt_sample)
 
