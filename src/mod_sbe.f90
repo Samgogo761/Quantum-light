@@ -6,18 +6,20 @@ module mod_sbe
   implicit none
 
   complex(dp), allocatable :: rho(:,:,:,:)      ! (n_trunc, n_trunc, nkx, nky)
-  complex(dp), allocatable :: rho_eq(:,:,:,:)   ! equilibrium density matrix
   real(dp),    allocatable :: Jt(:,:)           ! (nt, 2) current output
   real(dp) :: deph_factor
+
+  ! Pre-projected Wannier matrices for O(n_trunc^2) Fourier sums
+  complex(dp), allocatable :: HR_proj(:,:,:,:,:)    ! (n_trunc, n_trunc, nrpts, nkx, nky)
 
 contains
 
   subroutine init_density_matrix()
     integer :: ikx, iky, n
 
-    if (allocated(rho)) deallocate(rho, rho_eq)
-    allocate(rho(n_trunc, n_trunc, nkx, nky))
-    allocate(rho_eq(n_trunc, n_trunc, nkx, nky))
+    if (.not. allocated(rho)) then
+      allocate(rho(n_trunc, n_trunc, nkx, nky))
+    end if
     rho = C_0
     do iky = 1, nky
       do ikx = 1, nkx
@@ -26,86 +28,150 @@ contains
         end do
       end do
     end do
-    rho_eq = rho
 
     deph_factor = exp(-dt * real(n_dt_deph, dp) / T2)
 
-    if (allocated(Jt)) deallocate(Jt)
-    allocate(Jt(nt, 2))
+    if (.not. allocated(Jt)) then
+      allocate(Jt(nt, 2))
+    end if
     Jt = 0.0_dp
   end subroutine init_density_matrix
 
-  subroutine propagate()
-    integer  :: it, ikx, iky, a, m, n
-    real(dp) :: Jx_it, Jy_it, Nk_inv, k_t(3)
+  subroutine precompute_projected_matrices()
+    integer :: ikx, iky, ir, ios
+    real(dp) :: kdotR
+    complex(dp) :: ph0
+    integer(8) :: mem_bytes, mem_MB
+    complex(dp), allocatable :: tmp_full(:,:), tmp_proj(:,:)
 
-    complex(dp), allocatable :: Hk_W(:,:), Dk_W(:,:,:), vk_W(:,:,:)
-    complex(dp), allocatable :: Hk_proj(:,:), Dk_proj(:,:,:), vk_proj(:,:,:)
-    complex(dp), allocatable :: Ht(:,:), rho_k(:,:), rho_new(:,:)
-    complex(dp), allocatable :: phases(:)
-    complex(dp), allocatable :: phase0(:,:,:)
-    complex(dp), allocatable :: phase_A(:)
+    mem_bytes = int(n_trunc,8)**2 * int(nrpts,8) * int(nkx,8) * int(nky,8) * 16_8
+    mem_MB = mem_bytes / (1024_8 * 1024_8)
+    write(*,'(A,I0,A)') '  Pre-projection memory estimate: ', mem_MB, ' MB'
+
+    allocate(HR_proj(n_trunc, n_trunc, nrpts, nkx, nky), stat=ios)
+    if (ios /= 0) then
+      write(*,'(A)') '  ERROR: Cannot allocate HR_proj. Out of memory.'
+      error stop 1
+    end if
+
+    !$OMP PARALLEL DEFAULT(shared) PRIVATE(ikx, iky, ir, kdotR, ph0, tmp_full, tmp_proj)
+    allocate(tmp_full(nwann, nwann), tmp_proj(n_trunc, n_trunc))
+
+    !$OMP DO COLLAPSE(2) SCHEDULE(dynamic)
+    do iky = 1, nky
+      do ikx = 1, nkx
+        do ir = 1, nrpts
+          kdotR = dot_product(kpts_cart(:, ikx, iky), Rvec_cart(:, ir))
+          ph0 = exp(C_I * kdotR) / real(ndegen(ir), dp)
+
+          tmp_full = ph0 * Hmn_R(:,:,ir)
+          call project_to_trunc_withU(tmp_full, U_trunc(:,:,ikx,iky), nwann, n_trunc, tmp_proj)
+          HR_proj(:,:,ir,ikx,iky) = tmp_proj
+        end do
+      end do
+    end do
+    !$OMP END DO
+
+    deallocate(tmp_full, tmp_proj)
+    !$OMP END PARALLEL
+
+    write(*,'(A)') '  Pre-projected Wannier matrices into truncated basis.'
+  end subroutine precompute_projected_matrices
+
+  subroutine propagate()
+    integer  :: it, ikx, iky, a, m, n, ir
+    real(dp) :: Jx_it, Jy_it, Nk_inv
     complex(dp) :: tr_val
+    complex(dp), allocatable :: phase_A(:)
+
+    complex(dp), allocatable :: Ht(:,:), vk_a(:,:)
+    complex(dp), allocatable :: rho_k(:,:), rho_new(:,:)
+    complex(dp), allocatable :: k1(:,:), k2(:,:), k3(:,:), k4(:,:)
+    complex(dp), allocatable :: rho_tmp(:,:), AB(:,:)
+
+    if (.not. allocated(HR_proj)) then
+      write(*,*) 'ERROR: call precompute_projected_matrices() before propagate()'
+      error stop 1
+    end if
 
     Nk_inv = 1.0_dp / real(nkx * nky, dp)
-
-    allocate(phase0(nrpts, nkx, nky))
-    call precompute_phase0(phase0)
+    allocate(phase_A(nrpts))
 
     do it = 1, nt
       Jx_it = 0.0_dp
       Jy_it = 0.0_dp
 
+      call compute_phase_A(At_vec(it,:), phase_A)
+
       !$OMP PARALLEL DEFAULT(shared) &
-      !$OMP PRIVATE(ikx, iky, a, m, n, k_t, tr_val, &
-      !$OMP         Hk_W, Dk_W, vk_W, Hk_proj, Dk_proj, vk_proj, &
-      !$OMP         Ht, rho_k, rho_new, phases, phase_A) &
+      !$OMP PRIVATE(ikx, iky, a, m, n, ir, tr_val, &
+      !$OMP         Ht, vk_a, rho_k, rho_new, &
+      !$OMP         k1, k2, k3, k4, rho_tmp, AB) &
       !$OMP REDUCTION(+:Jx_it, Jy_it)
 
-      allocate(Hk_W(nwann, nwann), Dk_W(nwann, nwann, 3), vk_W(nwann, nwann, 3))
-      allocate(Hk_proj(n_trunc, n_trunc), Dk_proj(n_trunc, n_trunc, 3))
-      allocate(vk_proj(n_trunc, n_trunc, 3))
-      allocate(Ht(n_trunc, n_trunc), rho_k(n_trunc, n_trunc), rho_new(n_trunc, n_trunc))
-      allocate(phases(nrpts), phase_A(nrpts))
-
-      call compute_phase_A(At_vec(it,:), phase_A)
+      allocate(Ht(n_trunc,n_trunc), vk_a(n_trunc,n_trunc))
+      allocate(rho_k(n_trunc,n_trunc), rho_new(n_trunc,n_trunc))
+      allocate(k1(n_trunc,n_trunc), k2(n_trunc,n_trunc))
+      allocate(k3(n_trunc,n_trunc), k4(n_trunc,n_trunc))
+      allocate(rho_tmp(n_trunc,n_trunc), AB(n_trunc,n_trunc))
 
       !$OMP DO COLLAPSE(2) SCHEDULE(dynamic)
       do iky = 1, nky
         do ikx = 1, nkx
 
-          phases(:) = phase0(:, ikx, iky) * phase_A(:)
+          ! --- Fourier sum in truncated basis: O(n_trunc^2 * nrpts) ---
+          ! Pure velocity gauge: H_proj(k(t)) via Peierls phase, no E·D coupling
+          Ht = C_0
+          do ir = 1, nrpts
+            Ht = Ht + phase_A(ir) * HR_proj(:,:,ir,ikx,iky)
+          end do
 
-          call fourier_all_with_phases(phases, Hk_W, Dk_W, vk_W)
-
-          call project_to_trunc(Hk_W, ikx, iky, Hk_proj)
-
-          Ht = Hk_proj
-          if (has_rmn) then
-            call project_vec_to_trunc(Dk_W, ikx, iky, Dk_proj)
-            do a = 1, 3
-              if (abs(Et_vec(it, a)) > 1.0e-30_dp) then
-                Ht = Ht - Et_vec(it, a) * Dk_proj(:,:,a)
-              end if
-            end do
-          end if
-
+          ! --- RK4 with inlined commutator (no heap alloc per step) ---
           rho_k = rho(:,:,ikx,iky)
-          call rk4_step(Ht, rho_k, dt, rho_new)
 
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_k,n_trunc,C_0,AB,n_trunc)
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_k,n_trunc,Ht,n_trunc,C_0,k1,n_trunc)
+          k1 = -C_I * (AB - k1)
+
+          rho_tmp = rho_k + 0.5_dp * dt * k1
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k2,n_trunc)
+          k2 = -C_I * (AB - k2)
+
+          rho_tmp = rho_k + 0.5_dp * dt * k2
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k3,n_trunc)
+          k3 = -C_I * (AB - k3)
+
+          rho_tmp = rho_k + dt * k3
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
+          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k4,n_trunc)
+          k4 = -C_I * (AB - k4)
+
+          rho_new = rho_k + (dt / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
+
+          ! --- Dephasing ---
           if (mod(it, n_dt_deph) == 0) then
-            call apply_dephasing(rho_new, rho_eq(:,:,ikx,iky))
+            do n = 1, n_trunc
+              do m = 1, n_trunc
+                if (m /= n) rho_new(m,n) = rho_new(m,n) * deph_factor
+              end do
+            end do
           end if
 
           rho(:,:,ikx,iky) = rho_new
 
-          call project_vec_to_trunc(vk_W, ikx, iky, vk_proj)
-
+          ! --- Current: J_a = -Tr(rho * v_a) / Nk ---
+          ! v_a(k(t)) = sum_R i*R_a * phase_A(R) * HR_proj(R,k)
           do a = 1, 2
+            vk_a = C_0
+            do ir = 1, nrpts
+              vk_a = vk_a + (C_I * Rvec_cart(a,ir) * phase_A(ir)) * HR_proj(:,:,ir,ikx,iky)
+            end do
             tr_val = C_0
             do n = 1, n_trunc
               do m = 1, n_trunc
-                tr_val = tr_val + vk_proj(m, n, a) * rho_new(n, m)
+                tr_val = tr_val + vk_a(m,n) * rho_new(n,m)
               end do
             end do
             if (a == 1) Jx_it = Jx_it + real(tr_val, dp)
@@ -116,8 +182,8 @@ contains
       end do
       !$OMP END DO
 
-      deallocate(Hk_W, Dk_W, vk_W, Hk_proj, Dk_proj, vk_proj)
-      deallocate(Ht, rho_k, rho_new, phases, phase_A)
+      deallocate(Ht, vk_a, rho_k, rho_new)
+      deallocate(k1, k2, k3, k4, rho_tmp, AB)
       !$OMP END PARALLEL
 
       Jt(it, 1) = -Jx_it * Nk_inv
@@ -129,25 +195,8 @@ contains
       end if
     end do
 
-    deallocate(phase0)
+    deallocate(phase_A)
   end subroutine propagate
-
-  subroutine precompute_phase0(phase0)
-    complex(dp), intent(out) :: phase0(nrpts, nkx, nky)
-    integer :: ikx, iky, ir
-    real(dp) :: kdotR
-
-    !$OMP PARALLEL DO COLLAPSE(2) PRIVATE(ir, kdotR)
-    do iky = 1, nky
-      do ikx = 1, nkx
-        do ir = 1, nrpts
-          kdotR = dot_product(kpts_cart(:, ikx, iky), Rvec_cart(:, ir))
-          phase0(ir, ikx, iky) = exp(C_I * kdotR) / real(ndegen(ir), dp)
-        end do
-      end do
-    end do
-    !$OMP END PARALLEL DO
-  end subroutine precompute_phase0
 
   subroutine compute_phase_A(At_now, phase_A)
     real(dp),    intent(in)  :: At_now(3)
@@ -157,71 +206,6 @@ contains
       phase_A(ir) = exp(C_I * dot_product(At_now, Rvec_cart(:, ir)))
     end do
   end subroutine compute_phase_A
-
-  subroutine fourier_all_with_phases(phases_in, Hk, Dk, vk)
-    complex(dp), intent(in)  :: phases_in(nrpts)
-    complex(dp), intent(out) :: Hk(nwann, nwann)
-    complex(dp), intent(out) :: Dk(nwann, nwann, 3)
-    complex(dp), intent(out) :: vk(nwann, nwann, 3)
-    integer :: ir, a
-
-    Hk = C_0; Dk = C_0; vk = C_0
-    do ir = 1, nrpts
-      Hk = Hk + phases_in(ir) * Hmn_R(:,:,ir)
-      do a = 1, 3
-        if (has_rmn) then
-          Dk(:,:,a) = Dk(:,:,a) + phases_in(ir) * rmn_R(:,:,a,ir)
-        end if
-        vk(:,:,a) = vk(:,:,a) + C_I * Rvec_cart(a,ir) * phases_in(ir) * Hmn_R(:,:,ir)
-      end do
-    end do
-  end subroutine fourier_all_with_phases
-
-  subroutine rk4_step(Ht, rho_in, dt_step, rho_out)
-    complex(dp), intent(in)  :: Ht(:,:), rho_in(:,:)
-    real(dp),    intent(in)  :: dt_step
-    complex(dp), intent(out) :: rho_out(:,:)
-    integer :: ns
-    complex(dp), allocatable :: k1(:,:), k2(:,:), k3(:,:), k4(:,:), rho_tmp(:,:)
-
-    ns = size(rho_in, 1)
-    allocate(k1(ns,ns), k2(ns,ns), k3(ns,ns), k4(ns,ns), rho_tmp(ns,ns))
-
-    call commutator(Ht, rho_in, k1, ns)
-    rho_tmp = rho_in + 0.5_dp * dt_step * k1
-    call commutator(Ht, rho_tmp, k2, ns)
-    rho_tmp = rho_in + 0.5_dp * dt_step * k2
-    call commutator(Ht, rho_tmp, k3, ns)
-    rho_tmp = rho_in + dt_step * k3
-    call commutator(Ht, rho_tmp, k4, ns)
-
-    rho_out = rho_in + (dt_step / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
-
-    deallocate(k1, k2, k3, k4, rho_tmp)
-  end subroutine rk4_step
-
-  subroutine commutator(A, B, comm, ns)
-    integer,     intent(in)  :: ns
-    complex(dp), intent(in)  :: A(ns, ns), B(ns, ns)
-    complex(dp), intent(out) :: comm(ns, ns)
-    complex(dp) :: AB(ns, ns)
-
-    call zgemm('N', 'N', ns, ns, ns, C_1, A, ns, B, ns, C_0, AB, ns)
-    call zgemm('N', 'N', ns, ns, ns, C_1, B, ns, A, ns, C_0, comm, ns)
-    comm = -C_I * (AB - comm)
-  end subroutine commutator
-
-  subroutine apply_dephasing(rho_k, rho_eq_k)
-    complex(dp), intent(inout) :: rho_k(:,:)
-    complex(dp), intent(in)    :: rho_eq_k(:,:)
-    integer :: m, n, ns
-    ns = size(rho_k, 1)
-    do n = 1, ns
-      do m = 1, ns
-        if (m /= n) rho_k(m,n) = rho_k(m,n) * deph_factor
-      end do
-    end do
-  end subroutine apply_dephasing
 
   subroutine run_single_trajectory(Jt_out)
     real(dp), intent(out) :: Jt_out(:,:)

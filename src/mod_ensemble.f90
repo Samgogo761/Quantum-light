@@ -116,7 +116,7 @@ contains
     do i = 1, qp%n_samples
       call qlight_sample_bsv(qp, I_i, phi_i)
 
-      E_peak_au = sqrt(2.0_dp * I_i * Wcm2_to_au_loc / c_au_loc)
+      E_peak_au = sqrt(I_i * Wcm2_to_au_loc)
 
       call generate_field_sample(E_peak_au, phi_i)
       call run_single_trajectory(Jt_i)

@@ -51,9 +51,25 @@ module mod_params
   real(dp) :: phi_cep_deg    = 90.0_dp
   real(dp) :: ncyc           = 10.0_dp
   integer  :: env_type       = 2
-  real(dp) :: omega0, E0, A0, T_cycle, T_total
-  real(dp) :: theta, phi_cep
+  real(dp) :: ellipticity    = 0.0_dp
+  real(dp) :: delta_phase_deg = 90.0_dp
+  real(dp) :: omega0, E0, A0, T_cycle, T_total, T_total_1
+  real(dp) :: theta, phi_cep, delta_phase
   real(dp) :: pol_vec(3)
+
+  ! --- Laser 2 (dual-color, disabled when wvl_nm_2 = 0) ---
+  real(dp) :: wvl_nm_2          = 0.0_dp
+  real(dp) :: intensity_Wcm2_2  = 0.0_dp
+  real(dp) :: theta_deg_2       = 0.0_dp
+  real(dp) :: phi_cep_deg_2     = 0.0_dp
+  real(dp) :: ncyc_2            = 0.0_dp
+  integer  :: env_type_2        = 2
+  real(dp) :: ellipticity_2     = 0.0_dp
+  real(dp) :: delta_phase_deg_2 = 90.0_dp
+  real(dp) :: omega0_2, E0_2, T_cycle_2, T_total_2
+  real(dp) :: theta_2, phi_cep_2, delta_phase_2
+  real(dp) :: pol_vec_2(3)
+  logical  :: dual_color = .false.
 
   ! --- Time ---
   real(dp) :: dt         = 0.35_dp
@@ -76,7 +92,9 @@ module mod_params
   namelist /kgrid/     nkx, nky
   namelist /bands/     nv_orig, nb_start, nb_end
   namelist /laser/     wvl_nm, intensity_Wcm2, theta_deg, phi_cep_deg, &
-                       ncyc, env_type
+                       ncyc, env_type, ellipticity, delta_phase_deg
+  namelist /laser2/    wvl_nm_2, intensity_Wcm2_2, theta_deg_2, phi_cep_deg_2, &
+                       ncyc_2, env_type_2, ellipticity_2, delta_phase_deg_2
   namelist /timestep/  dt, n_dt_deph
   namelist /dephasing/ T2_fs
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
@@ -98,6 +116,7 @@ contains
     read(u, nml=kgrid,     iostat=ios); rewind(u)
     read(u, nml=bands,     iostat=ios); rewind(u)
     read(u, nml=laser,     iostat=ios); rewind(u)
+    read(u, nml=laser2,    iostat=ios); rewind(u)
     read(u, nml=timestep,  iostat=ios); rewind(u)
     read(u, nml=dephasing, iostat=ios); rewind(u)
     read(u, nml=bsv,       iostat=ios)
@@ -117,18 +136,34 @@ contains
 
     E_fermi = E_fermi_eV * eV_to_Ha
 
-    omega0  = TWOPI * c_au / (wvl_nm * nm_to_bohr)
-    ! Wcm2_to_au is defined so that E(a.u.)^2 = intensity(W/cm^2) * Wcm2_to_au.
-    E0      = sqrt(intensity_Wcm2 * Wcm2_to_au)
-    A0      = E0 / omega0
-    T_cycle = TWOPI / omega0
-    T_total = ncyc * T_cycle
-    nt      = nint(T_total / dt)
-    if (nt < 1) nt = 1
+    omega0    = TWOPI * c_au / (wvl_nm * nm_to_bohr)
+    E0        = sqrt(intensity_Wcm2 * Wcm2_to_au)
+    A0        = E0 / omega0
+    T_cycle   = TWOPI / omega0
+    T_total_1 = ncyc * T_cycle
+    T_total   = T_total_1
 
-    theta   = theta_deg   * PI / 180.0_dp
-    phi_cep = phi_cep_deg * PI / 180.0_dp
+    theta       = theta_deg       * PI / 180.0_dp
+    phi_cep     = phi_cep_deg     * PI / 180.0_dp
+    delta_phase = delta_phase_deg * PI / 180.0_dp
     pol_vec = [cos(theta), sin(theta), 0.0_dp]
+
+    dual_color = (wvl_nm_2 > 0.0_dp .and. intensity_Wcm2_2 > 0.0_dp)
+    if (dual_color) then
+      omega0_2  = TWOPI * c_au / (wvl_nm_2 * nm_to_bohr)
+      E0_2      = sqrt(intensity_Wcm2_2 * Wcm2_to_au)
+      T_cycle_2 = TWOPI / omega0_2
+      if (ncyc_2 <= 0.0_dp) ncyc_2 = ncyc
+      T_total_2 = ncyc_2 * T_cycle_2
+      T_total   = max(T_total_1, T_total_2)
+      theta_2       = theta_deg_2       * PI / 180.0_dp
+      phi_cep_2     = phi_cep_deg_2     * PI / 180.0_dp
+      delta_phase_2 = delta_phase_deg_2 * PI / 180.0_dp
+      pol_vec_2 = [cos(theta_2), sin(theta_2), 0.0_dp]
+    end if
+
+    nt = nint(T_total / dt)
+    if (nt < 1) nt = 1
 
     T2 = T2_fs * fs_to_au
   end subroutine read_input
@@ -176,6 +211,22 @@ contains
     write(*,'(A,F10.2,A)') '  T_total      : ', T_total * au_to_fs, ' fs'
     write(*,'(A,I0)')      '  nt           : ', nt
     write(*,'(A,F10.4,A)') '  dt           : ', dt, ' a.u.'
+    if (abs(ellipticity) > 1.0e-10_dp) then
+      write(*,'(A,F10.4)')   '  ellipticity  : ', ellipticity
+      write(*,'(A,F10.2,A)') '  delta_phase  : ', delta_phase_deg, ' deg'
+    end if
+    if (dual_color) then
+      write(*,'(A)')       '--- Laser 2 (dual-color) ------------------'
+      write(*,'(A,F10.2,A)') '  Wavelength_2 : ', wvl_nm_2, ' nm'
+      write(*,'(A,ES10.3,A)')'  Intensity_2  : ', intensity_Wcm2_2, ' W/cm^2'
+      write(*,'(A,F12.8,A)') '  omega0_2     : ', omega0_2, ' a.u.'
+      write(*,'(A,F12.8,A)') '  E0_2         : ', E0_2, ' a.u.'
+      write(*,'(A,F10.2,A)') '  theta_2      : ', theta_deg_2, ' deg'
+      write(*,'(A,F10.2,A)') '  phi_cep_2    : ', phi_cep_deg_2, ' deg'
+      if (abs(ellipticity_2) > 1.0e-10_dp) then
+        write(*,'(A,F10.4)')   '  ellipticity_2: ', ellipticity_2
+      end if
+    end if
     write(*,'(A)')       '-------------------------------------------'
     write(*,'(A,F10.2,A)') '  T2           : ', T2_fs, ' fs'
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
