@@ -11,7 +11,6 @@ module mod_sbe
 
   ! Pre-projected Wannier matrices for O(n_trunc^2) Fourier sums
   complex(dp), allocatable :: HR_proj(:,:,:,:,:)    ! (n_trunc, n_trunc, nrpts, nkx, nky)
-  complex(dp), allocatable :: DR_proj(:,:,:,:,:,:)  ! (n_trunc, n_trunc, 3, nrpts, nkx, nky)
 
 contains
 
@@ -39,14 +38,13 @@ contains
   end subroutine init_density_matrix
 
   subroutine precompute_projected_matrices()
-    integer :: ikx, iky, ir, a, ios
+    integer :: ikx, iky, ir, ios
     real(dp) :: kdotR
     complex(dp) :: ph0
     integer(8) :: mem_bytes, mem_MB
     complex(dp), allocatable :: tmp_full(:,:), tmp_proj(:,:)
 
     mem_bytes = int(n_trunc,8)**2 * int(nrpts,8) * int(nkx,8) * int(nky,8) * 16_8
-    if (has_rmn) mem_bytes = mem_bytes * 4_8
     mem_MB = mem_bytes / (1024_8 * 1024_8)
     write(*,'(A,I0,A)') '  Pre-projection memory estimate: ', mem_MB, ' MB'
 
@@ -56,15 +54,7 @@ contains
       error stop 1
     end if
 
-    if (has_rmn) then
-      allocate(DR_proj(n_trunc, n_trunc, 3, nrpts, nkx, nky), stat=ios)
-      if (ios /= 0) then
-        write(*,'(A)') '  ERROR: Cannot allocate DR_proj. Out of memory.'
-        error stop 1
-      end if
-    end if
-
-    !$OMP PARALLEL DEFAULT(shared) PRIVATE(ikx, iky, ir, a, kdotR, ph0, tmp_full, tmp_proj)
+    !$OMP PARALLEL DEFAULT(shared) PRIVATE(ikx, iky, ir, kdotR, ph0, tmp_full, tmp_proj)
     allocate(tmp_full(nwann, nwann), tmp_proj(n_trunc, n_trunc))
 
     !$OMP DO COLLAPSE(2) SCHEDULE(dynamic)
@@ -77,14 +67,6 @@ contains
           tmp_full = ph0 * Hmn_R(:,:,ir)
           call project_to_trunc_withU(tmp_full, U_trunc(:,:,ikx,iky), nwann, n_trunc, tmp_proj)
           HR_proj(:,:,ir,ikx,iky) = tmp_proj
-
-          if (has_rmn) then
-            do a = 1, 3
-              tmp_full = ph0 * rmn_R(:,:,a,ir)
-              call project_to_trunc_withU(tmp_full, U_trunc(:,:,ikx,iky), nwann, n_trunc, tmp_proj)
-              DR_proj(:,:,a,ir,ikx,iky) = tmp_proj
-            end do
-          end if
         end do
       end do
     end do
@@ -102,8 +84,7 @@ contains
     complex(dp) :: tr_val
     complex(dp), allocatable :: phase_A(:)
 
-    complex(dp), allocatable :: Hk_proj(:,:), Dk_a(:,:)
-    complex(dp), allocatable :: vk_a(:,:), Ht(:,:)
+    complex(dp), allocatable :: Ht(:,:), vk_a(:,:)
     complex(dp), allocatable :: rho_k(:,:), rho_new(:,:)
     complex(dp), allocatable :: k1(:,:), k2(:,:), k3(:,:), k4(:,:)
     complex(dp), allocatable :: rho_tmp(:,:), AB(:,:)
@@ -124,12 +105,11 @@ contains
 
       !$OMP PARALLEL DEFAULT(shared) &
       !$OMP PRIVATE(ikx, iky, a, m, n, ir, tr_val, &
-      !$OMP         Hk_proj, Dk_a, vk_a, Ht, rho_k, rho_new, &
+      !$OMP         Ht, vk_a, rho_k, rho_new, &
       !$OMP         k1, k2, k3, k4, rho_tmp, AB) &
       !$OMP REDUCTION(+:Jx_it, Jy_it)
 
-      allocate(Hk_proj(n_trunc,n_trunc), Dk_a(n_trunc,n_trunc))
-      allocate(vk_a(n_trunc,n_trunc), Ht(n_trunc,n_trunc))
+      allocate(Ht(n_trunc,n_trunc), vk_a(n_trunc,n_trunc))
       allocate(rho_k(n_trunc,n_trunc), rho_new(n_trunc,n_trunc))
       allocate(k1(n_trunc,n_trunc), k2(n_trunc,n_trunc))
       allocate(k3(n_trunc,n_trunc), k4(n_trunc,n_trunc))
@@ -140,24 +120,11 @@ contains
         do ikx = 1, nkx
 
           ! --- Fourier sum in truncated basis: O(n_trunc^2 * nrpts) ---
-          Hk_proj = C_0
+          ! Pure velocity gauge: H_proj(k(t)) via Peierls phase, no E·D coupling
+          Ht = C_0
           do ir = 1, nrpts
-            Hk_proj = Hk_proj + phase_A(ir) * HR_proj(:,:,ir,ikx,iky)
+            Ht = Ht + phase_A(ir) * HR_proj(:,:,ir,ikx,iky)
           end do
-
-          Ht = Hk_proj
-
-          if (has_rmn) then
-            do a = 1, 3
-              if (abs(Et_vec(it, a)) > 1.0e-30_dp) then
-                Dk_a = C_0
-                do ir = 1, nrpts
-                  Dk_a = Dk_a + phase_A(ir) * DR_proj(:,:,a,ir,ikx,iky)
-                end do
-                Ht = Ht - Et_vec(it, a) * Dk_a
-              end if
-            end do
-          end if
 
           ! --- RK4 with inlined commutator (no heap alloc per step) ---
           rho_k = rho(:,:,ikx,iky)
@@ -215,7 +182,7 @@ contains
       end do
       !$OMP END DO
 
-      deallocate(Hk_proj, Dk_a, vk_a, Ht, rho_k, rho_new)
+      deallocate(Ht, vk_a, rho_k, rho_new)
       deallocate(k1, k2, k3, k4, rho_tmp, AB)
       !$OMP END PARALLEL
 

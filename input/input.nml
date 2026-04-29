@@ -31,6 +31,11 @@
   delta_phase_deg = 90.0
 /
 
+&laser2
+  wvl_nm_2 = 0.0
+  intensity_Wcm2_2 = 0.0
+/
+
 &timestep
   dt = 0.35
   n_dt_deph = 5
