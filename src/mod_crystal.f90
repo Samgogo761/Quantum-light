@@ -6,6 +6,7 @@ module mod_crystal
   real(dp),    allocatable :: kpts_cart(:,:,:)    ! (3, nkx, nky)
   real(dp),    allocatable :: Ek(:,:,:)           ! (n_trunc, nkx, nky)
   complex(dp), allocatable :: U_trunc(:,:,:,:)    ! (nwann, n_trunc, nkx, nky)
+  integer,     allocatable :: valley_id(:,:)      ! (nkx, nky) 1=K, 2=K'
 
 contains
 
@@ -122,5 +123,43 @@ contains
     end do
     close(u)
   end subroutine write_bands
+
+  subroutine compute_valley_assignment()
+    integer :: ikx, iky, n1, n2
+    real(dp) :: K_cart(3), Kp_cart(3), dv(3)
+    real(dp) :: min_dist_K, min_dist_Kp, dist
+
+    K_cart  = (2.0_dp/3.0_dp) * b1 + (1.0_dp/3.0_dp) * b2
+    Kp_cart = (1.0_dp/3.0_dp) * b1 + (2.0_dp/3.0_dp) * b2
+
+    allocate(valley_id(nkx, nky))
+
+    do iky = 1, nky
+      do ikx = 1, nkx
+        min_dist_K  = huge(1.0_dp)
+        min_dist_Kp = huge(1.0_dp)
+        do n2 = -1, 1
+          do n1 = -1, 1
+            dv = kpts_cart(:,ikx,iky) - K_cart - real(n1,dp)*b1 - real(n2,dp)*b2
+            dist = sqrt(dot_product(dv, dv))
+            if (dist < min_dist_K) min_dist_K = dist
+
+            dv = kpts_cart(:,ikx,iky) - Kp_cart - real(n1,dp)*b1 - real(n2,dp)*b2
+            dist = sqrt(dot_product(dv, dv))
+            if (dist < min_dist_Kp) min_dist_Kp = dist
+          end do
+        end do
+
+        if (min_dist_K <= min_dist_Kp) then
+          valley_id(ikx, iky) = 1
+        else
+          valley_id(ikx, iky) = 2
+        end if
+      end do
+    end do
+
+    write(*,'(A,I0,A,I0)') '  Valley assignment: K=', &
+      count(valley_id==1), ', K''=', count(valley_id==2)
+  end subroutine compute_valley_assignment
 
 end module mod_crystal
