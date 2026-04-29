@@ -86,6 +86,9 @@ module mod_params
   real(dp) :: bsv_mean_intensity = 0.0_dp
   integer  :: bsv_seed           = 42
 
+  ! --- Method ---
+  character(8) :: gauge_method = 'vg'
+
   ! --- Namelists ---
   namelist /crystal/   a1_ang, a2_ang, a3_ang, E_fermi_eV, SOC, &
                        wannier_tb_file, wannier_hr_file, wannier_r_file
@@ -98,6 +101,7 @@ module mod_params
   namelist /timestep/  dt, n_dt_deph
   namelist /dephasing/ T2_fs
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
+  namelist /method/    gauge_method
 
 contains
 
@@ -119,7 +123,8 @@ contains
     read(u, nml=laser2,    iostat=ios); rewind(u)
     read(u, nml=timestep,  iostat=ios); rewind(u)
     read(u, nml=dephasing, iostat=ios); rewind(u)
-    read(u, nml=bsv,       iostat=ios)
+    read(u, nml=bsv,       iostat=ios); rewind(u)
+    read(u, nml=method,    iostat=ios)
     close(u)
 
     a1 = a1_ang * Ang_to_bohr
@@ -228,6 +233,7 @@ contains
       end if
     end if
     write(*,'(A)')       '-------------------------------------------'
+    write(*,'(A,A)')       '  gauge        : ', trim(gauge_method)
     write(*,'(A,F10.2,A)') '  T2           : ', T2_fs, ' fs'
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
     write(*,'(A)')       '==========================================='

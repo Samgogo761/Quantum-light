@@ -7,6 +7,7 @@ program hhg_sbe_solver
   use mod_current
   use mod_hhg
   use mod_quantum_light, only: qlight_params_t, qlight_init, qlight_sample_bsv
+  use mod_berry
   implicit none
 
   real(dp) :: t_start, t_end
@@ -38,10 +39,14 @@ program hhg_sbe_solver
 
   ! === 3. Build k-grid and band structure ===
   call setup_kgrid()
+  call compute_valley_assignment()
   call compute_band_structure()
   call precompute_projected_matrices()
+  if (trim(gauge_method) == 'lg') call precompute_lg_matrices()
+  call compute_berry_curvature()
   call print_params()
   call write_bands("bands.dat")
+  call write_berry_curvature("berry_curvature.dat")
 
   ! === 4. Branch: classical or BSV ===
   if (.not. bsv_enabled) then
@@ -55,6 +60,10 @@ program hhg_sbe_solver
     write(*,'(A)') 'Time evolution complete.'
 
     call write_current("Jt.dat", Jt, nt, dt)
+    call write_current_decomposed("Jt_decomposed.dat", Jt, Jt_intra, Jt_inter, nt, dt)
+    if (allocated(valley_id)) then
+      call write_valley_current("Jt_valley.dat", Jt_K, Jt_Kp, nt, dt)
+    end if
     call compute_hhg_spectrum(Jt, nt, dt, omega0, hhg_x, hhg_y, hhg_tot, n_omega)
     call write_hhg("HHG.dat", hhg_x, hhg_y, hhg_tot, n_omega, nt, dt, omega0)
     deallocate(hhg_x, hhg_y, hhg_tot)

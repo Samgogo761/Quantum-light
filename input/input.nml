@@ -51,3 +51,7 @@
   bsv_mean_intensity = 2.0e11
   bsv_seed = 42
 /
+
+&method
+  gauge_method = 'vg'
+/
