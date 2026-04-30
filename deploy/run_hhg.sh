@@ -12,46 +12,41 @@
 # Before running, edit the CONFIGURATION section below.
 #=============================================================================
 
-#--- SLURM directives (uncomment if using SLURM) ---
-##SBATCH --job-name=hhg_cri3
-##SBATCH --nodes=1
-##SBATCH --ntasks=1
-##SBATCH --cpus-per-task=32
-##SBATCH --mem=80G
-##SBATCH --time=04:00:00
-##SBATCH --output=hhg_%j.out
-##SBATCH --error=hhg_%j.err
-
-#--- PBS directives (uncomment if using PBS) ---
-##PBS -N hhg_cri3
-##PBS -l nodes=1:ppn=32
-##PBS -l mem=80gb
-##PBS -l walltime=04:00:00
-##PBS -o hhg_pbs.out
-##PBS -e hhg_pbs.err
+#--- SLURM directives ---
+#SBATCH --job-name=hhg_cri3
+#SBATCH --partition=part_1
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=36
+#SBATCH --exclusive
+#SBATCH --time=04:00:00
+#SBATCH --output=hhg_%j.out
+#SBATCH --error=hhg_%j.err
 
 #=============================================================================
-# CONFIGURATION - Edit these before running
+# CONFIGURATION
 #=============================================================================
 
 # Number of OpenMP threads (set to number of physical cores)
-NTHREADS=32
+NTHREADS=36
 
 # Compiler: "gfortran" or "intel"
-COMPILER="gfortran"
+COMPILER="intel"
 
-# Path to CrI3_tb.dat (absolute path recommended)
-TB_FILE="/path/to/CrI3_tb.dat"
+# Path to CrI3_tb.dat (absolute path)
+TB_FILE="/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat"
 
-# Working directory (where the code is)
-WORKDIR="$(cd "$(dirname "$0")/.." && pwd)"
+# Working directory - set this to the actual project root
+WORKDIR="/public/home/wangjs/project/Quantum-light"
 
 # Output directory
 OUTDIR="${WORKDIR}/output_120x120"
 
 #=============================================================================
-# Step 0: Environment check
+# Step 0: Change to workdir and verify
 #=============================================================================
+cd "${WORKDIR}" || { echo "ERROR: Cannot cd to ${WORKDIR}"; exit 1; }
+pwd
 
 echo "============================================="
 echo "  HHG-SBE Solver - Pre-flight Check"
@@ -105,18 +100,13 @@ echo "============================================="
 echo ""
 
 #=============================================================================
-# Step 1: Load modules (uncomment what your cluster uses)
+# Step 1: Environment setup (Intel oneAPI on CentOS 7)
 #=============================================================================
 
-# --- Intel oneAPI ---
-# module load intel/oneapi
-# module load compiler/latest
-# module load mkl/latest
-
-# --- GCC + libraries ---
-# module load gcc
-# module load openblas   # or lapack/blas
-# module load fftw/3
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:$LD_LIBRARY_PATH
+source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
+source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
 
 #=============================================================================
 # Step 2: Compile
@@ -125,10 +115,10 @@ echo ""
 cd "${WORKDIR}"
 
 if [ "${COMPILER}" = "intel" ]; then
-    export FC=ifx
-    export FFLAGS="-O3 -qopenmp -qmkl -fpp"
+    export FC=ifort
+    export FFLAGS="-O3 -qopenmp -mkl -fpp"
     export LDFLAGS=""
-    echo "Compiling with Intel ifx + MKL..."
+    echo "Compiling with Intel ifort + MKL..."
     make clean
     make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"
 else

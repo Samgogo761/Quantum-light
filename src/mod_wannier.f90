@@ -30,21 +30,19 @@ contains
     ! Line 1: comment/timestamp
     read(u, '(A)') line
 
-    ! Wannier90 tb.dat can be:
-    !   (a) old compact: line2=nwann
-    !   (b) standard: lines2-4=lattice vectors, line5=nwann
     read(u, '(A)') line
-    read(line, *, iostat=ios_parse) nw_file
-    if (ios_parse /= 0) then
+    if (index(line, '.') > 0) then
       read(line, *, iostat=ios_parse) tb_a1_ang
       if (ios_parse /= 0) then
-        write(*,*) 'ERROR: failed to parse header of ', trim(filename)
+        write(*,*) 'ERROR: failed to parse lattice vector a1 in ', trim(filename)
         error stop 1
       end if
       read(u, *) tb_a2_ang
       read(u, *) tb_a3_ang
       call check_tb_lattice(filename, tb_a1_ang, tb_a2_ang, tb_a3_ang)
       read(u, *) nw_file
+    else
+      read(line, *) nw_file
     end if
 
     nwann = nw_file
