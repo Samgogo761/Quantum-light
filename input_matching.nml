@@ -4,7 +4,7 @@
   a3_ang = 0.000, 0.000, 25.000
   E_fermi_eV = 0.0843
   SOC = 1
-  wannier_tb_file = "../../../CrI3_tb.dat"
+  wannier_tb_file = "CrI3_tb.dat"
   wannier_hr_file = ""
   wannier_r_file  = ""
 /
@@ -50,8 +50,4 @@
   bsv_n_samples = 100
   bsv_mean_intensity = 2.0e11
   bsv_seed = 42
-/
-
-&method
-  gauge_method = 'vg'
 /
