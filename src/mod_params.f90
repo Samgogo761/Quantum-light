@@ -26,6 +26,7 @@ module mod_params
   real(dp) :: a1(3), a2(3), a3(3)
   real(dp) :: b1(3), b2(3), b3(3)
   real(dp) :: Omega_cell
+  real(dp) :: A_cell
   character(256) :: wannier_tb_file = ''
   character(256) :: wannier_hr_file = ''
   character(256) :: wannier_r_file  = ''
@@ -133,6 +134,7 @@ contains
 
     call cross3(a2, a3, v)
     Omega_cell = abs(dot_product(a1, v))
+    A_cell = abs(a1(1)*a2(2) - a1(2)*a2(1))
     b1 = TWOPI * v / dot_product(a1, v)
     call cross3(a3, a1, v)
     b2 = TWOPI * v / dot_product(a2, v)
@@ -197,6 +199,7 @@ contains
     write(*,'(A,3F12.6)')'  b1 (1/bohr)    : ', b1
     write(*,'(A,3F12.6)')'  b2 (1/bohr)    : ', b2
     write(*,'(A,F12.6)') '  Omega_cell     : ', Omega_cell
+    write(*,'(A,F12.6)') '  A_cell (2D)    : ', A_cell
     write(*,'(A,F12.6)') '  E_fermi (Ha)   : ', E_fermi
     write(*,'(A,I0)')    '  SOC            : ', SOC
     write(*,'(A)')       '-------------------------------------------'

@@ -200,7 +200,7 @@ contains
       error stop 1
     end if
 
-    Nk_inv = 1.0_dp / real(nkx * nky, dp)
+    Nk_inv = 1.0_dp / (real(nkx * nky, dp) * A_cell)
     if (gauge_vg) allocate(phase_A(nrpts))
 
     lwork_d  = 2 * n_trunc + n_trunc * n_trunc
