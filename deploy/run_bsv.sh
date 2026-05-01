@@ -1,36 +1,45 @@
 #!/bin/bash
 #=============================================================================
-# BSV (Bright Squeezed Vacuum) HHG Calculation Script
-# CrI3 bilayer AFM with SOC, 120x120 k-grid, 500 BSV samples
-#=============================================================================
+# BSV (Bright Squeezed Vacuum) HHG - SLURM Array Job
+# CrI3 bilayer AFM with SOC, 120x120 k-grid
+#
+# Splits N_TOTAL BSV samples across N_JOBS array tasks.
+# Each task runs N_PER_JOB samples with a unique seed.
+# After all tasks complete, run deploy/combine_bsv.sh to merge results.
 #
 # Usage:
-#   1. Direct:   bash deploy/run_bsv.sh
-#   2. SLURM:    sbatch deploy/run_bsv.sh
-#
-# Before running, edit the CONFIGURATION section below.
+#   sbatch deploy/run_bsv.sh
+#   # wait for all tasks to finish, then:
+#   bash deploy/combine_bsv.sh
 #=============================================================================
 
 #--- SLURM directives ---
 #SBATCH --job-name=hhg_bsv
 #SBATCH --partition=part_1
+#SBATCH --array=0-9
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
 #SBATCH --exclusive
-#SBATCH --time=7-00:00:00
-#SBATCH --output=bsv_%j.out
-#SBATCH --error=bsv_%j.err
+#SBATCH --time=4-00:00:00
+#SBATCH --output=bsv_%A_%a.out
+#SBATCH --error=bsv_%A_%a.err
 
 #=============================================================================
 # CONFIGURATION
 #=============================================================================
 
 NTHREADS=36
-COMPILER="intel"
 TB_FILE="/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat"
 WORKDIR="/public/home/wangjs/project/Quantum-light"
-OUTDIR="${WORKDIR}/output_bsv"
+
+N_TOTAL=500
+N_JOBS=10
+N_PER_JOB=$((N_TOTAL / N_JOBS))
+
+TASK_ID=${SLURM_ARRAY_TASK_ID:-0}
+SEED=$((42 + TASK_ID * 1000))
+OUTDIR="${WORKDIR}/output_bsv/task_${TASK_ID}"
 
 #=============================================================================
 # Step 0: Change to workdir and verify
@@ -38,11 +47,13 @@ OUTDIR="${WORKDIR}/output_bsv"
 cd "${WORKDIR}" || { echo "ERROR: Cannot cd to ${WORKDIR}"; exit 1; }
 
 echo "============================================="
-echo "  BSV HHG Calculation - Pre-flight Check"
+echo "  BSV HHG - Array Task ${TASK_ID} / $((N_JOBS - 1))"
 echo "============================================="
 echo "  Date:       $(date)"
 echo "  Hostname:   $(hostname)"
-echo "  Workdir:    ${WORKDIR}"
+echo "  Samples:    ${N_PER_JOB} (of ${N_TOTAL} total)"
+echo "  Seed:       ${SEED}"
+echo "  Output:     ${OUTDIR}"
 echo "  Threads:    ${NTHREADS}"
 echo ""
 
@@ -50,9 +61,6 @@ if [ ! -f "${TB_FILE}" ]; then
     echo "  ERROR: CrI3_tb.dat not found at: ${TB_FILE}"
     exit 1
 fi
-echo "  TB file:    ${TB_FILE} (found)"
-echo "============================================="
-echo ""
 
 #=============================================================================
 # Step 1: Environment setup
@@ -64,42 +72,49 @@ source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
 source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
 
 #=============================================================================
-# Step 2: Compile (skip if binary exists and is newer than source)
+# Step 2: Compile (only task 0 compiles; others wait)
 #=============================================================================
 
 cd "${WORKDIR}"
 
-if [ ! -f hhg_sbe ] || [ "$(find src/ -name '*.f90' -newer hhg_sbe 2>/dev/null)" ]; then
-    export FC=ifort
-    export FFLAGS="-O3 -qopenmp -mkl -fpp"
-    export LDFLAGS=""
-    echo "Compiling with Intel ifort + MKL..."
-    make clean
-    make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"
-    if [ $? -ne 0 ]; then
-        echo "ERROR: Compilation failed!"
-        exit 1
+if [ "${TASK_ID}" -eq 0 ]; then
+    if [ ! -f hhg_sbe ] || [ "$(find src/ -name '*.f90' -newer hhg_sbe 2>/dev/null)" ]; then
+        export FC=ifort
+        export FFLAGS="-O3 -qopenmp -mkl -fpp"
+        export LDFLAGS=""
+        echo "Task 0: Compiling..."
+        make clean
+        make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"
+        if [ $? -ne 0 ]; then
+            echo "ERROR: Compilation failed!"
+            exit 1
+        fi
     fi
-    echo "Compilation successful."
+    touch "${WORKDIR}/.compile_done"
 else
-    echo "Binary hhg_sbe is up to date, skipping compilation."
+    echo "Task ${TASK_ID}: Waiting for compilation..."
+    while [ ! -f "${WORKDIR}/.compile_done" ]; do sleep 5; done
+    sleep 2
 fi
-echo ""
 
 #=============================================================================
-# Step 3: Prepare run directory
+# Step 3: Prepare task-specific run directory
 #=============================================================================
 
 mkdir -p "${OUTDIR}"
 
-sed "s|wannier_tb_file = .*|wannier_tb_file = \"${TB_FILE}\"|" \
+sed -e "s|wannier_tb_file = .*|wannier_tb_file = \"${TB_FILE}\"|" \
+    -e "s|bsv_n_samples = .*|bsv_n_samples = ${N_PER_JOB}|" \
+    -e "s|bsv_seed = .*|bsv_seed = ${SEED}|" \
     deploy/input_bsv.nml > "${OUTDIR}/input.nml"
 
-echo "Input file prepared at: ${OUTDIR}/input.nml"
+echo "Input: ${OUTDIR}/input.nml"
+echo "  bsv_n_samples = ${N_PER_JOB}"
+echo "  bsv_seed = ${SEED}"
 echo ""
 
 #=============================================================================
-# Step 4: Run BSV calculation
+# Step 4: Run
 #=============================================================================
 
 cd "${OUTDIR}"
@@ -110,37 +125,12 @@ export OMP_PROC_BIND=close
 export OMP_PLACES=cores
 
 echo "============================================="
-echo "  Starting BSV HHG calculation"
-echo "  k-grid:      120 x 120"
-echo "  BSV samples: 500"
-echo "  Ī (scale):   1.0e11 W/cm² (⟨I⟩ = 2Ī = 2e11)"
-echo "  Threads:     ${OMP_NUM_THREADS}"
-echo "  Start:       $(date)"
+echo "  Starting BSV task ${TASK_ID}: $(date)"
 echo "============================================="
 
 { time "${WORKDIR}/hhg_sbe" input.nml ; } 2>&1 | tee "${OUTDIR}/run.log"
 
 echo ""
-echo "============================================="
-echo "  BSV calculation finished: $(date)"
-echo "============================================="
+echo "Task ${TASK_ID} finished: $(date)"
 
-#=============================================================================
-# Step 5: Quick validation
-#=============================================================================
-
-echo ""
-echo "--- Output files ---"
 ls -lh "${OUTDIR}"/*.dat 2>/dev/null
-
-if [ -f "${OUTDIR}/HHG_bsv.dat" ]; then
-    echo ""
-    echo "--- BSV HHG (first 10 harmonics) ---"
-    awk '$1 ~ /^[0-9]/ && $1+0 >= 0.8 && $1+0 <= 10.2 && ($1+0)%1 < 0.15 {
-        printf "  H%-3d  HHG_bsv = %s\n", int($1+0.5), $3
-    }' "${OUTDIR}/HHG_bsv.dat"
-fi
-
-echo ""
-echo "All output in: ${OUTDIR}/"
-echo "Done."
