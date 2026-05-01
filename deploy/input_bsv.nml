@@ -10,8 +10,8 @@
 /
 
 &kgrid
-  nkx = 10
-  nky = 10
+  nkx = 120
+  nky = 120
 /
 
 &bands

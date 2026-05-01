@@ -1,7 +1,7 @@
 #!/bin/bash
 #=============================================================================
 # BSV (Bright Squeezed Vacuum) HHG Calculation Script
-# CrI3 bilayer AFM with SOC, 10x10 k-grid, 500 BSV samples
+# CrI3 bilayer AFM with SOC, 120x120 k-grid, 500 BSV samples
 #=============================================================================
 #
 # Usage:
@@ -18,7 +18,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
 #SBATCH --exclusive
-#SBATCH --time=04:00:00
+#SBATCH --time=7-00:00:00
 #SBATCH --output=bsv_%j.out
 #SBATCH --error=bsv_%j.err
 
@@ -111,7 +111,7 @@ export OMP_PLACES=cores
 
 echo "============================================="
 echo "  Starting BSV HHG calculation"
-echo "  k-grid:      10 x 10"
+echo "  k-grid:      120 x 120"
 echo "  BSV samples: 500"
 echo "  Ī (scale):   1.0e11 W/cm² (⟨I⟩ = 2Ī = 2e11)"
 echo "  Threads:     ${OMP_NUM_THREADS}"
