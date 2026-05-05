@@ -3,58 +3,62 @@
 # Combine BSV array job results
 # Averages HHG_bsv.dat from all task directories
 #
-# Usage: bash deploy/combine_bsv.sh
+# Usage: bash deploy/combine_bsv.sh [N_JOBS]
+#   Default N_JOBS=10. Automatically handles missing tasks.
 #=============================================================================
 
 WORKDIR="/public/home/wangjs/project/Quantum-light"
 BSV_DIR="${WORKDIR}/output_bsv"
-N_JOBS=10
+N_JOBS=${1:-10}
 
-echo "Combining BSV results from ${N_JOBS} tasks..."
+echo "Scanning for BSV results (up to ${N_JOBS} tasks)..."
 
-# Check all tasks completed
-MISSING=0
+FOUND=0
+FILES=""
 for i in $(seq 0 $((N_JOBS - 1))); do
-    if [ ! -f "${BSV_DIR}/task_${i}/HHG_bsv.dat" ]; then
-        echo "  MISSING: task_${i}/HHG_bsv.dat"
-        MISSING=$((MISSING + 1))
+    f="${BSV_DIR}/task_${i}/HHG_bsv.dat"
+    if [ -f "$f" ]; then
+        FILES="${FILES} ${f}"
+        FOUND=$((FOUND + 1))
+        echo "  Found: task_${i}/HHG_bsv.dat"
+    else
+        echo "  Missing: task_${i}/HHG_bsv.dat"
     fi
 done
 
-if [ "${MISSING}" -gt 0 ]; then
-    echo "ERROR: ${MISSING} tasks incomplete. Wait for all jobs to finish."
+if [ "${FOUND}" -eq 0 ]; then
+    echo "ERROR: No completed tasks found."
     exit 1
 fi
 
-echo "All ${N_JOBS} task files found."
+echo ""
+echo "Combining ${FOUND} task files..."
 
-# Average: read all files, sum column 3, divide by N_JOBS
-# Each task already averaged its own samples, so final = mean of means
-awk -v nj="${N_JOBS}" '
-BEGIN { n = 0 }
-FNR == 1 && NR > 1 { next_file = 1 }
-/^#/ { if (file_count == 0) header = $0; next }
+# Each file has 1 header line (# ...) then data lines.
+# FNR-1 gives a 1-based data index after skipping the header.
+awk '
+/^#/ { next }
 {
-    if (FNR == 1 || next_file) { file_count++; next_file = 0 }
-    idx = FNR
+    idx = FNR - 1
+    if (idx < 1) idx = 1
     col1[idx] = $1
     col2[idx] = $2
-    sum3[idx] += $3
-    if (idx > n) n = idx
+    sum3[idx] += $3 + 0
+    cnt[idx]++
+    if (idx > maxidx) maxidx = idx
 }
 END {
     print "# harmonic_order  omega(a.u.)  HHG_bsv_avg"
-    for (i = 1; i <= n; i++) {
-        if (col1[i] != "") {
-            printf "%10s %16s %16.8e\n", col1[i], col2[i], sum3[i] / nj
+    for (i = 1; i <= maxidx; i++) {
+        if (cnt[i] > 0) {
+            printf "%10s %16s %16.8e\n", col1[i], col2[i], sum3[i] / cnt[i]
         }
     }
 }
-' "${BSV_DIR}"/task_*/HHG_bsv.dat > "${BSV_DIR}/HHG_bsv_combined.dat"
+' ${FILES} > "${BSV_DIR}/HHG_bsv_combined.dat"
 
 NLINES=$(grep -c '^[^#]' "${BSV_DIR}/HHG_bsv_combined.dat")
-echo "Combined spectrum written to: ${BSV_DIR}/HHG_bsv_combined.dat"
-echo "  ${NLINES} frequency points"
+echo "Combined spectrum: ${BSV_DIR}/HHG_bsv_combined.dat (${NLINES} points, ${FOUND} tasks)"
 
 echo ""
 echo "--- Combined BSV HHG (first 10 harmonics) ---"

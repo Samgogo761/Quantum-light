@@ -78,6 +78,7 @@ source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
 cd "${WORKDIR}"
 
 if [ "${TASK_ID}" -eq 0 ]; then
+    rm -f "${WORKDIR}/.compile_done"
     if [ ! -f hhg_sbe ] || [ "$(find src/ -name '*.f90' -newer hhg_sbe 2>/dev/null)" ]; then
         export FC=ifort
         export FFLAGS="-O3 -qopenmp -mkl -fpp"
@@ -93,7 +94,15 @@ if [ "${TASK_ID}" -eq 0 ]; then
     touch "${WORKDIR}/.compile_done"
 else
     echo "Task ${TASK_ID}: Waiting for compilation..."
-    while [ ! -f "${WORKDIR}/.compile_done" ]; do sleep 5; done
+    WAIT_COUNT=0
+    while [ ! -f "${WORKDIR}/.compile_done" ]; do
+        sleep 5
+        WAIT_COUNT=$((WAIT_COUNT + 1))
+        if [ "${WAIT_COUNT}" -gt 120 ]; then
+            echo "ERROR: Timed out waiting for compilation (10 min)."
+            exit 1
+        fi
+    done
     sleep 2
 fi
 
