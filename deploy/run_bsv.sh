@@ -16,7 +16,7 @@
 #--- SLURM directives ---
 #SBATCH --job-name=hhg_bsv
 #SBATCH --partition=part_1
-#SBATCH --array=0-9
+#SBATCH --array=0-9%6
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
