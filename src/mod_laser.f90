@@ -42,6 +42,7 @@ contains
     real(dp) :: t, f_env, t_mid
     real(dp) :: ex_dir(3), ey_dir(3)
     real(dp) :: Ex_t, Ey_t
+    real(dp) :: A_end(3), frac
 
     if (allocated(Et_vec)) deallocate(Et_vec, At_vec)
     allocate(Et_vec(nt, 3), At_vec(nt, 3))
@@ -91,6 +92,19 @@ contains
         At_vec(it, a) = At_vec(it-1, a) - 0.5_dp * dt * (Et_vec(it-1, a) + Et_vec(it, a))
       end do
     end do
+
+    ! Remove the small numerical DC area left by finite time sampling so that
+    ! the velocity-gauge pulse starts and ends with the same vector potential.
+    if (nt > 1) then
+      A_end = At_vec(nt, :)
+      do it = 1, nt
+        frac = real(it - 1, dp) / real(nt - 1, dp)
+        At_vec(it, :) = At_vec(it, :) - frac * A_end
+      end do
+      if (maxval(abs(A_end)) > 1.0e-10_dp) then
+        write(*,'(A,3ES12.4)') '  Corrected residual A(T): ', A_end
+      end if
+    end if
   end subroutine generate_field_sample
 
 end module mod_laser

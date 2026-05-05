@@ -161,16 +161,17 @@ contains
 
   subroutine propagate(do_decompose)
     logical, intent(in), optional :: do_decompose
-    logical :: decompose, do_valley, gauge_vg
-    integer  :: it, ikx, iky, a, m, n, ir, info_d
+    logical :: decompose, do_valley, gauge_vg, advance_step
+    integer  :: it, ikx, iky, a, m, n, info_d
     real(dp) :: Jx_it, Jy_it, Nk_inv
     real(dp) :: Jx_intra_it, Jy_intra_it, Jx_inter_it, Jy_inter_it
     real(dp) :: Jx_K_it, Jy_K_it, Jx_Kp_it, Jy_Kp_it
+    real(dp) :: E_now(3), E_mid(3), E_next(3), A_mid(3)
     complex(dp) :: tr_val, tr_intra, tr_inter
-    complex(dp), allocatable :: phase_A(:)
+    complex(dp), allocatable :: phase_A(:), phase_A_mid(:), phase_A_next(:)
     integer :: lwork_d, lrwork_d, liwork_d
 
-    complex(dp), allocatable :: Ht(:,:), vk_a(:,:)
+    complex(dp), allocatable :: Ht(:,:), Ht_mid(:,:), Ht_next(:,:), vk_a(:,:)
     complex(dp), allocatable :: rho_k(:,:), rho_new(:,:)
     complex(dp), allocatable :: k1(:,:), k2(:,:), k3(:,:), k4(:,:)
     complex(dp), allocatable :: rho_tmp(:,:), AB(:,:)
@@ -201,7 +202,10 @@ contains
     end if
 
     Nk_inv = 1.0_dp / (real(nkx * nky, dp) * A_cell)
-    if (gauge_vg) allocate(phase_A(nrpts))
+    allocate(phase_A(nrpts), phase_A_mid(nrpts), phase_A_next(nrpts))
+    phase_A = C_1
+    phase_A_mid = C_1
+    phase_A_next = C_1
 
     lwork_d  = 2 * n_trunc + n_trunc * n_trunc
     lrwork_d = 1 + 5 * n_trunc + 2 * n_trunc * n_trunc
@@ -213,12 +217,32 @@ contains
       Jx_inter_it = 0.0_dp; Jy_inter_it = 0.0_dp
       Jx_K_it = 0.0_dp;     Jy_K_it = 0.0_dp
       Jx_Kp_it = 0.0_dp;    Jy_Kp_it = 0.0_dp
+      advance_step = (it < nt)
 
-      if (gauge_vg) call compute_phase_A(At_vec(it,:), phase_A)
+      E_now = Et_vec(it, :)
+      if (advance_step) then
+        E_mid = 0.5_dp * (Et_vec(it, :) + Et_vec(it+1, :))
+        E_next = Et_vec(it+1, :)
+      else
+        E_mid = E_now
+        E_next = E_now
+      end if
+
+      if (gauge_vg) then
+        call compute_phase_A(At_vec(it,:), phase_A)
+        if (advance_step) then
+          A_mid = 0.5_dp * (At_vec(it, :) + At_vec(it+1, :))
+          call compute_phase_A(A_mid, phase_A_mid)
+          call compute_phase_A(At_vec(it+1, :), phase_A_next)
+        else
+          phase_A_mid = phase_A
+          phase_A_next = phase_A
+        end if
+      end if
 
       !$OMP PARALLEL DEFAULT(shared) &
-      !$OMP PRIVATE(ikx, iky, a, m, n, ir, tr_val, tr_intra, tr_inter, info_d, &
-      !$OMP         Ht, vk_a, rho_k, rho_new, &
+      !$OMP PRIVATE(ikx, iky, a, m, n, tr_val, tr_intra, tr_inter, info_d, &
+      !$OMP         Ht, Ht_mid, Ht_next, vk_a, rho_k, rho_new, &
       !$OMP         k1, k2, k3, k4, rho_tmp, AB, &
       !$OMP         Wmat, eig_tmp, rho_band, v_band, tmp_mat, &
       !$OMP         work_d, rwork_d, iwork_d) &
@@ -226,7 +250,8 @@ contains
       !$OMP           Jx_intra_it, Jy_intra_it, Jx_inter_it, Jy_inter_it, &
       !$OMP           Jx_K_it, Jy_K_it, Jx_Kp_it, Jy_Kp_it)
 
-      allocate(Ht(n_trunc,n_trunc), vk_a(n_trunc,n_trunc))
+      allocate(Ht(n_trunc,n_trunc), Ht_mid(n_trunc,n_trunc), Ht_next(n_trunc,n_trunc))
+      allocate(vk_a(n_trunc,n_trunc))
       allocate(rho_k(n_trunc,n_trunc), rho_new(n_trunc,n_trunc))
       allocate(k1(n_trunc,n_trunc), k2(n_trunc,n_trunc))
       allocate(k3(n_trunc,n_trunc), k4(n_trunc,n_trunc))
@@ -242,82 +267,34 @@ contains
       do iky = 1, nky
         do ikx = 1, nkx
 
-          ! --- Build Ht (gauge-dependent) ---
-          if (gauge_vg) then
-            Ht = C_0
-            do ir = 1, nrpts
-              Ht = Ht + phase_A(ir) * HR_proj(:,:,ir,ikx,iky)
-            end do
-          else
-            Ht = Hk_eq(:,:,ikx,iky)
-            do a = 1, 3
-              if (abs(Et_vec(it,a)) > 1.0e-30_dp) then
-                Ht = Ht - Et_vec(it,a) * Dk_eq(:,:,a,ikx,iky)
-              end if
-            end do
-          end if
-
-          ! --- RK4 with inlined commutator ---
+          ! Current is evaluated at the labelled time t=(it-1)*dt,
+          ! before advancing rho to the next time node.
           rho_k = rho(:,:,ikx,iky)
+          call build_hamiltonian(ikx, iky, E_now, phase_A, gauge_vg, Ht)
 
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_k,n_trunc,C_0,AB,n_trunc)
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_k,n_trunc,Ht,n_trunc,C_0,k1,n_trunc)
-          k1 = -C_I * (AB - k1)
-
-          rho_tmp = rho_k + 0.5_dp * dt * k1
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k2,n_trunc)
-          k2 = -C_I * (AB - k2)
-
-          rho_tmp = rho_k + 0.5_dp * dt * k2
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k3,n_trunc)
-          k3 = -C_I * (AB - k3)
-
-          rho_tmp = rho_k + dt * k3
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_tmp,n_trunc,C_0,AB,n_trunc)
-          call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_tmp,n_trunc,Ht,n_trunc,C_0,k4,n_trunc)
-          k4 = -C_I * (AB - k4)
-
-          rho_new = rho_k + (dt / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
-
-          ! --- Dephasing ---
-          if (mod(it, n_dt_deph) == 0) then
-            do n = 1, n_trunc
-              do m = 1, n_trunc
-                if (m /= n) rho_new(m,n) = rho_new(m,n) * deph_factor
-              end do
-            end do
-          end if
-
-          rho(:,:,ikx,iky) = rho_new
-
-          ! --- Diagonalize for intra/inter decomposition ---
+          ! --- Diagonalize for intra/inter decomposition of J(t) ---
           if (decompose) then
             Wmat = Ht
             call zheevd('V', 'U', n_trunc, Wmat, n_trunc, eig_tmp, &
                         work_d, lwork_d, rwork_d, lrwork_d, iwork_d, liwork_d, info_d)
+            if (info_d /= 0) then
+              write(*,*) 'ERROR: zheevd failed during decomposition at k-point', ikx, iky, ' info=', info_d
+              error stop 1
+            end if
             call zgemm('C','N',n_trunc,n_trunc,n_trunc,C_1, &
-                       Wmat,n_trunc,rho_new,n_trunc,C_0,tmp_mat,n_trunc)
+                       Wmat,n_trunc,rho_k,n_trunc,C_0,tmp_mat,n_trunc)
             call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1, &
                        tmp_mat,n_trunc,Wmat,n_trunc,C_0,rho_band,n_trunc)
           end if
 
           ! --- Current (gauge-dependent velocity) ---
           do a = 1, 2
-            if (gauge_vg) then
-              vk_a = C_0
-              do ir = 1, nrpts
-                vk_a = vk_a + (C_I * Rvec_cart(a,ir) * phase_A(ir)) * HR_proj(:,:,ir,ikx,iky)
-              end do
-            else
-              vk_a = vk_eq(:,:,a,ikx,iky)
-            end if
+            call build_velocity_component(ikx, iky, a, phase_A, gauge_vg, vk_a)
 
             tr_val = C_0
             do n = 1, n_trunc
               do m = 1, n_trunc
-                tr_val = tr_val + vk_a(m,n) * rho_new(n,m)
+                tr_val = tr_val + vk_a(m,n) * rho_k(n,m)
               end do
             end do
 
@@ -366,11 +343,40 @@ contains
             end if
           end do
 
+          if (advance_step) then
+            ! Time-dependent RK4: H is evaluated at t, t+dt/2, and t+dt.
+            call commutator_rhs(Ht, rho_k, k1, AB)
+
+            call build_hamiltonian(ikx, iky, E_mid, phase_A_mid, gauge_vg, Ht_mid)
+            rho_tmp = rho_k + 0.5_dp * dt * k1
+            call commutator_rhs(Ht_mid, rho_tmp, k2, AB)
+
+            rho_tmp = rho_k + 0.5_dp * dt * k2
+            call commutator_rhs(Ht_mid, rho_tmp, k3, AB)
+
+            call build_hamiltonian(ikx, iky, E_next, phase_A_next, gauge_vg, Ht_next)
+            rho_tmp = rho_k + dt * k3
+            call commutator_rhs(Ht_next, rho_tmp, k4, AB)
+
+            rho_new = rho_k + (dt / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
+
+            ! --- Dephasing ---
+            if (mod(it, n_dt_deph) == 0) then
+              do n = 1, n_trunc
+                do m = 1, n_trunc
+                  if (m /= n) rho_new(m,n) = rho_new(m,n) * deph_factor
+                end do
+              end do
+            end if
+
+            rho(:,:,ikx,iky) = rho_new
+          end if
+
         end do
       end do
       !$OMP END DO
 
-      deallocate(Ht, vk_a, rho_k, rho_new)
+      deallocate(Ht, Ht_mid, Ht_next, vk_a, rho_k, rho_new)
       deallocate(k1, k2, k3, k4, rho_tmp, AB)
       if (decompose) then
         deallocate(Wmat, eig_tmp, rho_band, v_band, tmp_mat)
@@ -401,8 +407,58 @@ contains
       end if
     end do
 
-    if (gauge_vg) deallocate(phase_A)
+    deallocate(phase_A, phase_A_mid, phase_A_next)
   end subroutine propagate
+
+  subroutine build_hamiltonian(ikx, iky, E_now, phase_A, gauge_vg, Ht)
+    integer,     intent(in)  :: ikx, iky
+    real(dp),    intent(in)  :: E_now(3)
+    complex(dp), intent(in)  :: phase_A(nrpts)
+    logical,     intent(in)  :: gauge_vg
+    complex(dp), intent(out) :: Ht(n_trunc, n_trunc)
+    integer :: ir, a
+
+    if (gauge_vg) then
+      Ht = C_0
+      do ir = 1, nrpts
+        Ht = Ht + phase_A(ir) * HR_proj(:,:,ir,ikx,iky)
+      end do
+    else
+      Ht = Hk_eq(:,:,ikx,iky)
+      do a = 1, 3
+        if (abs(E_now(a)) > 1.0e-30_dp) then
+          Ht = Ht - E_now(a) * Dk_eq(:,:,a,ikx,iky)
+        end if
+      end do
+    end if
+  end subroutine build_hamiltonian
+
+  subroutine build_velocity_component(ikx, iky, a, phase_A, gauge_vg, vk_a)
+    integer,     intent(in)  :: ikx, iky, a
+    complex(dp), intent(in)  :: phase_A(nrpts)
+    logical,     intent(in)  :: gauge_vg
+    complex(dp), intent(out) :: vk_a(n_trunc, n_trunc)
+    integer :: ir
+
+    if (gauge_vg) then
+      vk_a = C_0
+      do ir = 1, nrpts
+        vk_a = vk_a + (C_I * Rvec_cart(a,ir) * phase_A(ir)) * HR_proj(:,:,ir,ikx,iky)
+      end do
+    else
+      vk_a = vk_eq(:,:,a,ikx,iky)
+    end if
+  end subroutine build_velocity_component
+
+  subroutine commutator_rhs(Ht, rho_in, rhs, AB)
+    complex(dp), intent(in)  :: Ht(n_trunc, n_trunc), rho_in(n_trunc, n_trunc)
+    complex(dp), intent(out) :: rhs(n_trunc, n_trunc)
+    complex(dp), intent(out) :: AB(n_trunc, n_trunc)
+
+    call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,Ht,n_trunc,rho_in,n_trunc,C_0,AB,n_trunc)
+    call zgemm('N','N',n_trunc,n_trunc,n_trunc,C_1,rho_in,n_trunc,Ht,n_trunc,C_0,rhs,n_trunc)
+    rhs = -C_I * (AB - rhs)
+  end subroutine commutator_rhs
 
   subroutine compute_phase_A(At_now, phase_A)
     real(dp),    intent(in)  :: At_now(3)

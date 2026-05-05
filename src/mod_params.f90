@@ -169,7 +169,7 @@ contains
       pol_vec_2 = [cos(theta_2), sin(theta_2), 0.0_dp]
     end if
 
-    nt = nint(T_total / dt)
+    nt = ceiling(T_total / dt) + 1
     if (nt < 1) nt = 1
 
     T2 = T2_fs * fs_to_au
