@@ -39,8 +39,9 @@ TB_FILE="/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat"
 # Working directory - set this to the actual project root
 WORKDIR="/public/home/wangjs/project/Quantum-light"
 
-# Output directory
-OUTDIR="${WORKDIR}/output_120x120"
+# Output directory. Keep the current-code validation run separate from older
+# 120x120 outputs so spectra from different code versions are not mixed.
+OUTDIR="${WORKDIR}/output_120x120_current_dt035"
 
 #=============================================================================
 # Step 0: Change to workdir and verify

@@ -15,6 +15,7 @@ tests/test_qlight_sampling
 # HHG outputs
 HHG/
 Jt/
+local_test_*/
 *.dat
 !input/*.nml
 

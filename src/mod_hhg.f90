@@ -13,11 +13,21 @@ contains
     integer,  intent(out) :: n_omega
 
     complex(dp), allocatable :: Jw_x(:), Jw_y(:), Jin(:)
-    real(dp) :: w_hann
+    real(dp) :: w_hann, spectrum_scale
     integer  :: it, iw
     integer(8) :: plan
 
+    if (dt_in <= 0.0_dp) then
+      write(*,*) 'ERROR: compute_hhg_spectrum requires dt_in > 0.'
+      error stop 1
+    end if
+    if (omega0_in <= 0.0_dp) then
+      write(*,*) 'ERROR: compute_hhg_spectrum requires omega0_in > 0.'
+      error stop 1
+    end if
+
     n_omega = nt_in / 2 + 1
+    spectrum_scale = dt_in * dt_in
 
     allocate(Jw_x(nt_in), Jw_y(nt_in), Jin(nt_in))
     allocate(hhg_x(n_omega), hhg_y(n_omega), hhg_tot(n_omega))
@@ -39,8 +49,8 @@ contains
     call dfftw_destroy_plan(plan)
 
     do iw = 1, n_omega
-      hhg_x(iw)   = abs(Jw_x(iw))**2
-      hhg_y(iw)   = abs(Jw_y(iw))**2
+      hhg_x(iw)   = spectrum_scale * abs(Jw_x(iw))**2
+      hhg_y(iw)   = spectrum_scale * abs(Jw_y(iw))**2
       hhg_tot(iw) = hhg_x(iw) + hhg_y(iw)
     end do
 
