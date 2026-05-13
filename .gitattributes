@@ -1,2 +1,5 @@
 # Force Unix line endings for shell scripts
 *.sh text eol=lf
+*.nml text eol=lf
+*.md text eol=lf
+.gitignore text eol=lf
