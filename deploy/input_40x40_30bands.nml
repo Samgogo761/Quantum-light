@@ -1,0 +1,57 @@
+&crystal
+  a1_ang = 6.998304941, -0.001225784, 0.000
+  a2_ang = -3.500214030, 6.062548544, 0.000
+  a3_ang = 0.000, 0.000, 25.000
+  E_fermi_eV = 0.0843
+  SOC = 1
+  wannier_tb_file = "../CrI3_tb.dat"
+  wannier_hr_file = ""
+  wannier_r_file  = ""
+/
+
+&kgrid
+  nkx = 40
+  nky = 40
+/
+
+&bands
+  nv_orig = 84
+  nb_start = 70
+  nb_end = 99
+/
+
+&laser
+  wvl_nm = 3200.0
+  intensity_Wcm2 = 2.0e11
+  theta_deg = 0.0
+  phi_cep_deg = 90.0
+  ncyc = 4.0
+  env_type = 2
+  ellipticity = 0.0
+  delta_phase_deg = 90.0
+/
+
+&laser2
+  wvl_nm_2 = 0.0
+  intensity_Wcm2_2 = 0.0
+/
+
+&timestep
+  dt = 0.35
+  n_dt_deph = 5
+/
+
+&dephasing
+  T2_fs = 0.5
+/
+
+&bsv
+  bsv_enabled = .false.
+  bsv_n_samples = 100
+  bsv_mean_intensity = 2.0e11
+  bsv_seed = 42
+/
+
+&method
+  gauge_method = 'vg'
+/

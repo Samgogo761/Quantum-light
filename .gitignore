@@ -9,6 +9,7 @@ mod/
 
 # Binaries
 hhg_sbe
+hhg_sbe.exe
 test_qlight
 tests/test_qlight_sampling
 
@@ -16,10 +17,24 @@ tests/test_qlight_sampling
 HHG/
 Jt/
 local_test_*/
+output_*/
+band_convergence_*/
+t2_sweep_*/
+compare_refs/
 *.dat
 !input/*.nml
+*.log
+*.err
+*.out
+exit_code.txt
+
+# Generated analysis figures/tables
+*.png
+*.csv
 
 # Wannier90 data (user-provided, large)
+local_data/
+CrI3_tb.dat
 wannier90_tb.dat
 wannier90_hr.dat
 wannier90_r.dat
