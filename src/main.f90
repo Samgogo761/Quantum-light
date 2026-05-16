@@ -41,12 +41,34 @@ program hhg_sbe_solver
   call setup_kgrid()
   call compute_valley_assignment()
   call compute_band_structure()
-  call precompute_projected_matrices()
-  if (trim(gauge_method) == 'lg') call precompute_lg_matrices()
-  call compute_berry_curvature()
+
+  if (run_pcenter_check) then
+    call print_params()
+    call write_bands("bands.dat")
+    call diagnose_pcenter_velocity(trim(pcenter_summary_file), trim(pcenter_kresolved_file))
+    if (stop_after_diagnostics) then
+      call cpu_time(t_end)
+      write(*,'(A,F10.2,A)') 'Total wall time: ', t_end - t_start, ' seconds'
+      stop
+    end if
+  end if
+
+  select case (trim(gauge_method))
+  case ('vg')
+    call precompute_projected_matrices()
+  case ('matrix_vg')
+    call precompute_matrix_vg_matrices()
+  case ('lg', 'lg_cov', 'houston_lg')
+    call precompute_lg_matrices()
+  case default
+    write(*,*) 'ERROR: gauge_method must be "vg", "matrix_vg", "lg", or "lg_cov", got: ', &
+               trim(gauge_method)
+    error stop 1
+  end select
+  if (allocated(HR_proj)) call compute_berry_curvature()
   call print_params()
   call write_bands("bands.dat")
-  call write_berry_curvature("berry_curvature.dat")
+  if (allocated(HR_proj)) call write_berry_curvature("berry_curvature.dat")
 
   ! === 4. Branch: classical or BSV ===
   if (.not. bsv_enabled) then

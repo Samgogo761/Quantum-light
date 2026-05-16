@@ -22,10 +22,66 @@ The current solver includes the numerical fixes used in the latest validation:
   uses linear polarization.
 - `src/mod_wannier.f90`: supports the standard Wannier90 `*_tb.dat` header with
   lattice vectors and checks lattice consistency against the input file.
+- `src/mod_sbe.f90`: adds `gauge_method = 'matrix_vg'`, a velocity-gauge path
+  that uses the real-space position matrix elements `rmn_R` to construct the
+  covariant momentum/velocity matrix before band truncation.
+- `src/mod_sbe.f90`: applies T2 dephasing in the instantaneous eigenbasis of
+  the Hamiltonian used at the end of each RK4 step, instead of damping
+  off-diagonal elements in a fixed truncated basis.
 
 No current validation result points to an obvious implementation bug in the
 velocity-gauge classical-light path. The main unresolved physics/numerics issue
 is convergence with respect to band-window size and k-grid density.
+
+## Gauge Methods
+
+The input variable `gauge_method` currently supports:
+
+| value | mathematical form | status |
+|---|---|---|
+| `'vg'` | Peierls-only velocity gauge, `H(k,t)=H(k+A(t))` | existing validated path |
+| `'matrix_vg'` | matrix velocity gauge, `H(k,t)=H0(k)+sum_a A_a(t) P_a(k)` | new rmn_R-based path |
+| `'lg'` | length gauge, `H(k,t)=H0(k)-sum_a E_a(t) D_a(k)` | available, less validated |
+
+For `matrix_vg`, the code first constructs in the full Wannier space:
+
+```math
+D_a(k) = \sum_R e^{i k\cdot R} r_a(R) / n_{\rm deg}(R)
+```
+
+```math
+P_a(k) = \partial_{k_a}H(k) - i [D_a(k), H(k)] .
+```
+
+It then projects `H(k)` and `P_a(k)` into the selected band window using the
+field-free eigenvectors `U_S(k)`:
+
+```math
+H^S_0(k)=U_S^\dagger(k)H(k)U_S(k), \quad
+P^S_a(k)=U_S^\dagger(k)P_a(k)U_S(k).
+```
+
+The propagated Hamiltonian is:
+
+```math
+H^S_{\rm matrix\_vg}(k,t)=H^S_0(k)+\sum_a A_a(t)P^S_a(k).
+```
+
+The T2 dephasing convention is also gauge-aware at the propagation level. At
+each dephasing step, the code diagonalizes the instantaneous Hamiltonian,
+`H(t+dt) W = W epsilon`, transforms `rho` to this basis, damps only
+off-diagonal coherences by `exp(-n_dt_deph dt / T2)`, and transforms back.
+
+The current uses the corresponding minimal-coupling velocity:
+
+```math
+J_a(t) = -\frac{1}{N_k A_{\rm cell}}\sum_k
+{\rm Tr}\{\rho^S_k(t)[P^S_a(k)+A_a(t)I]\}.
+```
+
+This branch is intended for controlled comparison with the old solver's
+velocity-gauge implementation. The older `'vg'` branch is kept unchanged as the
+Peierls-only path.
 
 ## Repository Layout
 
@@ -174,20 +230,34 @@ Numerical summary:
 - Increasing the band window from 20 to 30/40 bands changes low-order
   amplitudes, so a 20-band velocity-gauge truncation is efficient but not fully
   converged for absolute intensity.
+- The `10x10 / 112 bands` full-Wannier-window diagnostic does not continue the
+  20->30->40 monotonic increase. Instead, low-order amplitudes are strongly
+  suppressed, while H9-H25 are enhanced relative to 20/30/40. This points to a
+  finite-band velocity-gauge cancellation/gauge-truncation issue rather than a
+  simple "more bands gives a monotonic limit" picture.
 - T2 mainly affects the H9-H13 transition region; it does not by itself explain
-  the full high-order behavior.
+  the full high-order behavior. The 2026-05-14 `matrix_vg` local sweep with
+  instantaneous-basis dephasing gives, for 10x10/30 bands: H1 = 17.33, 17.07,
+  16.72 for T2 = 0.5, 1.0, 2.0 fs, respectively, while H9-H15 vary much more
+  strongly.
 - The old Houston-basis solver is not a strict equality benchmark because it
-  differs in gauge/basis, current definition, band space, SOC/magnetic model,
-  output cadence, and FFT/window conventions.
+  differs in gauge/basis, current definition, band space, dephasing-unit
+  convention, output cadence, and FFT/window conventions. In the old code,
+  `deph_t2 = 0.5` is interpreted as 0.5 optical cycles, not 0.5 fs. For the
+  3200 nm pulse this is about 5.34 fs.
 
 Current best interpretation:
 
 ```text
 The new velocity-gauge solver does not show an obvious implementation failure
 in the tested classical-light path. The remaining old/new discrepancy is most
-likely dominated by band-window truncation, finite-band gauge convergence,
-k-grid cancellation in the high-order tail, and methodological differences
-between the new velocity-gauge solver and the old Houston-basis solver.
+likely dominated by finite-band velocity-gauge behavior, k-grid cancellation in
+the high-order tail, and methodological differences between the new
+velocity-gauge solver and the old Houston-basis solver. The full 112-band
+diagnostic shows that the discrepancy is not explained by near-Fermi band
+truncation alone. The old solver should be treated as a historical qualitative
+reference until its exact Wannier input, SOC setting, current normalization, and
+dephasing convention are reproduced.
 ```
 
 ## Output Files
@@ -208,9 +278,17 @@ These files are generated data and are intentionally ignored by git.
 
 ## Recommended Next Checks
 
-1. Run `10x10 / 112 bands` with the new solver to isolate band-truncation
-   effects in the old/new comparison.
-2. If needed, run `40x40 / 40 bands` to test whether the low-order amplitude is
-   approaching a stable band-window limit.
-3. Keep BSV and length-gauge validation separate until the classical
+1. If needed, run `40x40 / 40 bands` or a low-cost `10x10` band-window scan
+   beyond 40 bands to map the non-monotonic band-window behavior.
+2. Compare old `var_method="vg"` against new `gauge_method='matrix_vg'` with
+   the same Wannier data, band window, dephasing convention, and current
+   normalization.
+3. Use an external bilayer-CrI3 HHG/SHG reference as the physics benchmark,
+   preferably with matched stacking, AFM configuration, SOC, laser field, and
+   spectrum convention. A directly relevant HHG paper is Liu/Zhang/Si,
+   Europhysics Letters 140, 25001 (2022), DOI `10.1209/0295-5075/ac9c26`.
+4. For absolute HHG amplitudes, review the length-gauge/Houston path or a more
+   gauge-consistent truncation strategy before committing to an expensive dense
+   k-grid production run.
+5. Keep BSV and length-gauge validation separate until the classical
    velocity-gauge reference is fixed.

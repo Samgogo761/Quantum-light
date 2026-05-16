@@ -25,7 +25,7 @@
   intensity_Wcm2 = 2.0e11
   theta_deg = 0.0
   phi_cep_deg = 90.0
-  ncyc = 4.0
+  ncyc = 8.0
   env_type = 2
   ellipticity = 0.0
   delta_phase_deg = 90.0
@@ -36,13 +36,18 @@
   intensity_Wcm2_2 = 0.0
 /
 
+&external_field
+  use_external_A = .true.
+  external_A_file = "/public/home/wangjs/project/New_SBEs/Quantum-light/external/old_vg_a_t.txt"
+/
+
 &timestep
   dt = 0.35
   n_dt_deph = 5
 /
 
 &dephasing
-  T2_fs = 0.5
+  T2_fs = 1.0e30
 /
 
 &bsv
@@ -53,5 +58,5 @@
 /
 
 &method
-  gauge_method = 'vg'
+  gauge_method = 'matrix_vg'
 /

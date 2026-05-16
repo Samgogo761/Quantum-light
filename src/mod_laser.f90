@@ -33,7 +33,11 @@ contains
   end function envelope
 
   subroutine generate_field()
-    call generate_field_sample(E0, phi_cep)
+    if (use_external_A) then
+      call read_external_A_field(trim(external_A_file))
+    else
+      call generate_field_sample(E0, phi_cep)
+    end if
   end subroutine generate_field
 
   subroutine generate_field_sample(E_peak, phi_0)
@@ -106,5 +110,92 @@ contains
       end if
     end if
   end subroutine generate_field_sample
+
+  subroutine read_external_A_field(filename)
+    character(*), intent(in) :: filename
+    integer :: u, ios, nrow, it, idx
+    real(dp) :: t_fs, ax, ay, step_au, max_step_err
+    real(dp), allocatable :: tvals_fs(:)
+
+    if (allocated(Et_vec)) deallocate(Et_vec, At_vec)
+
+    open(newunit=u, file=filename, status='old', action='read', iostat=ios)
+    if (ios /= 0) then
+      write(*,*) 'ERROR: cannot open external A(t) file: ', trim(filename)
+      error stop 1
+    end if
+
+    nrow = 0
+    do
+      read(u, *, iostat=ios) idx, t_fs, ax, ay
+      if (ios /= 0) exit
+      nrow = nrow + 1
+    end do
+    close(u)
+
+    if (nrow < 2) then
+      write(*,*) 'ERROR: external A(t) file has fewer than 2 readable rows.'
+      error stop 1
+    end if
+
+    allocate(Et_vec(nrow, 3), At_vec(nrow, 3), tvals_fs(nrow))
+    Et_vec = 0.0_dp
+    At_vec = 0.0_dp
+
+    open(newunit=u, file=filename, status='old', action='read', iostat=ios)
+    if (ios /= 0) then
+      write(*,*) 'ERROR: cannot reopen external A(t) file: ', trim(filename)
+      error stop 1
+    end if
+
+    do it = 1, nrow
+      read(u, *, iostat=ios) idx, tvals_fs(it), At_vec(it, 1), At_vec(it, 2)
+      if (ios /= 0) then
+        write(*,*) 'ERROR: failed while reading external A(t) row ', it
+        error stop 1
+      end if
+    end do
+    close(u)
+
+    dt = (tvals_fs(2) - tvals_fs(1)) * fs_to_au
+    if (dt <= 0.0_dp) then
+      write(*,*) 'ERROR: external A(t) file has non-positive time step.'
+      error stop 1
+    end if
+
+    max_step_err = 0.0_dp
+    do it = 2, nrow - 1
+      step_au = (tvals_fs(it + 1) - tvals_fs(it)) * fs_to_au
+      max_step_err = max(max_step_err, abs(step_au - dt))
+    end do
+    if (max_step_err > max(1.0e-8_dp, 1.0e-8_dp * dt)) then
+      write(*,'(A,ES12.4,A)') '  WARNING: external A(t) grid is not exactly uniform; max dt error = ', &
+        max_step_err, ' a.u.'
+    end if
+
+    nt = nrow
+    T_total = (tvals_fs(nrow) - tvals_fs(1)) * fs_to_au
+    T_total_1 = T_total
+    ncyc = T_total / T_cycle
+
+    ! For VG diagnostics the vector potential is primary.  E(t) is reconstructed
+    ! only for code paths or output that still expect an electric field array.
+    Et_vec(1, :) = -(At_vec(2, :) - At_vec(1, :)) / dt
+    do it = 2, nt - 1
+      Et_vec(it, :) = -(At_vec(it + 1, :) - At_vec(it - 1, :)) / (2.0_dp * dt)
+    end do
+    Et_vec(nt, :) = -(At_vec(nt, :) - At_vec(nt - 1, :)) / dt
+
+    write(*,'(A)')       '--- External A(t) loaded ------------------'
+    write(*,'(A,A)')     '  file         : ', trim(filename)
+    write(*,'(A,I0)')    '  nt           : ', nt
+    write(*,'(A,F10.4,A)') '  dt           : ', dt, ' a.u.'
+    write(*,'(A,F10.5,A)') '  dt           : ', dt * au_to_fs, ' fs'
+    write(*,'(A,F10.2,A)') '  T_total      : ', T_total * au_to_fs, ' fs'
+    write(*,'(A,3ES12.4)') '  A(t=0)       : ', At_vec(1, :)
+    write(*,'(A,3ES12.4)') '  A(t=end)     : ', At_vec(nt, :)
+
+    deallocate(tvals_fs)
+  end subroutine read_external_A_field
 
 end module mod_laser

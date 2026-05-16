@@ -53,5 +53,5 @@
 /
 
 &method
-  gauge_method = 'vg'
+  gauge_method = 'matrix_vg'
 /
