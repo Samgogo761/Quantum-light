@@ -19,12 +19,15 @@
 #SBATCH --output=hhg_10x10_112b_%j.out
 #SBATCH --error=hhg_10x10_112b_%j.err
 
+set -eo pipefail
+
 NTHREADS=36
 COMPILER="intel"
 
 TB_FILE="/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat"
 WORKDIR="/public/home/wangjs/project/New_SBEs/Quantum-light"
-OUTDIR="${WORKDIR}/output_10x10_112bands_dt035_T2fs05"
+EXTERNAL_A_FILE="${WORKDIR}/external/old_vg_a_t.txt"
+OUTDIR="${WORKDIR}/output_step1_matrixvg_10x10_112bands_externalA_nodeph"
 INPUT_TEMPLATE="deploy/input_10x10_112bands.nml"
 
 cd "${WORKDIR}" || { echo "ERROR: Cannot cd to ${WORKDIR}"; exit 1; }
@@ -38,6 +41,7 @@ echo "  Workdir:    ${WORKDIR}"
 echo "  Threads:    ${NTHREADS}"
 echo "  Compiler:   ${COMPILER}"
 echo "  Output:     ${OUTDIR}"
+echo "  A(t) file:  ${EXTERNAL_A_FILE}"
 
 if command -v free &>/dev/null; then
     TOTAL_MEM_GB=$(free -g | awk '/^Mem:/{print $2}')
@@ -71,6 +75,14 @@ if [ ! -f "${INPUT_TEMPLATE}" ]; then
     exit 1
 fi
 
+if [ ! -f "${EXTERNAL_A_FILE}" ]; then
+    echo "ERROR: external A(t) file not found: ${EXTERNAL_A_FILE}"
+    echo "Copy the old VG a_t.txt to this path before submitting:"
+    echo "  mkdir -p ${WORKDIR}/external"
+    echo "  cp /path/to/old/5.14test/a_t.txt ${EXTERNAL_A_FILE}"
+    exit 1
+fi
+
 export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:$LD_LIBRARY_PATH
 source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
@@ -78,7 +90,7 @@ source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
 
 if [ "${COMPILER}" = "intel" ]; then
     export FC=ifort
-    export FFLAGS="-O3 -qopenmp -mkl -fpp"
+    export FFLAGS="-O3 -qopenmp -mkl -fpp -heap-arrays"
     export LDFLAGS=""
     make clean
     make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"
@@ -96,11 +108,12 @@ if [ $? -ne 0 ]; then
 fi
 
 mkdir -p "${OUTDIR}"
-sed "s|wannier_tb_file = .*|wannier_tb_file = \"${TB_FILE}\"|" \
+sed -e "s|wannier_tb_file = .*|wannier_tb_file = \"${TB_FILE}\"|" \
+    -e "s|external_A_file = .*|external_A_file = \"${EXTERNAL_A_FILE}\"|" \
     "${INPUT_TEMPLATE}" > "${OUTDIR}/input.nml"
 
 echo "--- Effective run parameters ---"
-grep -E "nkx|nky|nb_start|nb_end|T2_fs|dt|wvl_nm|intensity_Wcm2|gauge_method|wannier_tb_file" "${OUTDIR}/input.nml"
+grep -E "nkx|nky|nb_start|nb_end|ncyc|T2_fs|dt|wvl_nm|intensity_Wcm2|gauge_method|wannier_tb_file|use_external_A|external_A_file" "${OUTDIR}/input.nml"
 
 cd "${OUTDIR}"
 export OMP_NUM_THREADS=${NTHREADS}
@@ -112,7 +125,9 @@ echo "============================================="
 echo "  Starting HHG-SBE calculation"
 echo "  k-grid:    10 x 10"
 echo "  Bands:     112 (1-112)"
-echo "  T2:        0.5 fs"
+echo "  Gauge:     matrix_vg"
+echo "  Pulse:     external A(t) copied from old VG a_t.txt"
+echo "  T2:        effectively off (1.0e30 fs)"
 echo "  Start:     $(date)"
 echo "============================================="
 

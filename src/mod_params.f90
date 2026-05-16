@@ -72,6 +72,10 @@ module mod_params
   real(dp) :: pol_vec_2(3)
   logical  :: dual_color = .false.
 
+  ! --- External field diagnostic ---
+  logical :: use_external_A = .false.
+  character(256) :: external_A_file = ''
+
   ! --- Time ---
   real(dp) :: dt         = 0.35_dp
   integer  :: nt         = 0
@@ -88,7 +92,13 @@ module mod_params
   integer  :: bsv_seed           = 42
 
   ! --- Method ---
-  character(8) :: gauge_method = 'vg'
+  character(16) :: gauge_method = 'vg'
+
+  ! --- Diagnostics ---
+  logical :: run_pcenter_check = .false.
+  logical :: stop_after_diagnostics = .true.
+  character(256) :: pcenter_summary_file = 'pcenter_check_summary.dat'
+  character(256) :: pcenter_kresolved_file = 'pcenter_check_kresolved.dat'
 
   ! --- Namelists ---
   namelist /crystal/   a1_ang, a2_ang, a3_ang, E_fermi_eV, SOC, &
@@ -99,10 +109,13 @@ module mod_params
                        ncyc, env_type, ellipticity, delta_phase_deg
   namelist /laser2/    wvl_nm_2, intensity_Wcm2_2, theta_deg_2, phi_cep_deg_2, &
                        ncyc_2, env_type_2, ellipticity_2, delta_phase_deg_2
+  namelist /external_field/ use_external_A, external_A_file
   namelist /timestep/  dt, n_dt_deph
   namelist /dephasing/ T2_fs
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
   namelist /method/    gauge_method
+  namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
+                         pcenter_summary_file, pcenter_kresolved_file
 
 contains
 
@@ -122,10 +135,12 @@ contains
     read(u, nml=bands,     iostat=ios); rewind(u)
     read(u, nml=laser,     iostat=ios); rewind(u)
     read(u, nml=laser2,    iostat=ios); rewind(u)
+    read(u, nml=external_field, iostat=ios); rewind(u)
     read(u, nml=timestep,  iostat=ios); rewind(u)
     read(u, nml=dephasing, iostat=ios); rewind(u)
     read(u, nml=bsv,       iostat=ios); rewind(u)
-    read(u, nml=method,    iostat=ios)
+    read(u, nml=method,    iostat=ios); rewind(u)
+    read(u, nml=diagnostics, iostat=ios)
     close(u)
 
     a1 = a1_ang * Ang_to_bohr
@@ -167,6 +182,11 @@ contains
       phi_cep_2     = phi_cep_deg_2     * PI / 180.0_dp
       delta_phase_2 = delta_phase_deg_2 * PI / 180.0_dp
       pol_vec_2 = [cos(theta_2), sin(theta_2), 0.0_dp]
+    end if
+
+    if (use_external_A .and. len_trim(external_A_file) == 0) then
+      write(*,*) 'ERROR: use_external_A=.true. but external_A_file is empty.'
+      error stop 1
     end if
 
     nt = ceiling(T_total / dt) + 1
@@ -235,8 +255,21 @@ contains
         write(*,'(A,F10.4)')   '  ellipticity_2: ', ellipticity_2
       end if
     end if
+    if (use_external_A) then
+      write(*,'(A)')       '--- External A(t) diagnostic --------------'
+      write(*,'(A,L1)')    '  use_external_A : ', use_external_A
+      write(*,'(A,A)')     '  external_A_file: ', trim(external_A_file)
+      write(*,'(A)')       '  NOTE: nt, dt, T_total are reset after reading A(t).'
+    end if
     write(*,'(A)')       '-------------------------------------------'
     write(*,'(A,A)')       '  gauge        : ', trim(gauge_method)
+    if (run_pcenter_check) then
+      write(*,'(A)')       '--- Diagnostics ---------------------------'
+      write(*,'(A,L1)')    '  run_pcenter_check    : ', run_pcenter_check
+      write(*,'(A,L1)')    '  stop_after_diagnostics: ', stop_after_diagnostics
+      write(*,'(A,A)')     '  pcenter_summary_file : ', trim(pcenter_summary_file)
+      write(*,'(A,A)')     '  pcenter_kresolved_file: ', trim(pcenter_kresolved_file)
+    end if
     write(*,'(A,F10.2,A)') '  T2           : ', T2_fs, ' fs'
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
     write(*,'(A)')       '==========================================='

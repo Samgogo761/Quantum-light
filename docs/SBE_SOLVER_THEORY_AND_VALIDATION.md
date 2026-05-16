@@ -163,7 +163,7 @@ A(t) = - integral^t E(t') dt'
 This matters in velocity gauge because the Hamiltonian is evaluated at
 `k + A(t)`.
 
-## 5. Velocity-gauge SBE used in the current tests
+## 5. Velocity-gauge SBE paths
 
 Implemented mainly in:
 
@@ -171,7 +171,9 @@ Implemented mainly in:
 src/mod_sbe.f90
 ```
 
-The current production/test path is velocity gauge:
+### 5.1 Peierls-only velocity gauge
+
+The original new-solver production/test path is:
 
 ```text
 gauge_method = 'vg'
@@ -195,6 +197,72 @@ This is the projected version of:
 H(k + A(t))
 ```
 
+This path uses `H(R)` but not the real-space position matrix `r(R)`. It is a
+Peierls-only approximation in the field-free truncated band subspace.
+
+### 5.2 Matrix velocity gauge using rmn_R
+
+The new rmn_R-based velocity-gauge path is:
+
+```text
+gauge_method = 'matrix_vg'
+```
+
+The code first reconstructs, in the full Wannier space:
+
+```math
+H(k)=\sum_R e^{ik\cdot R}H(R)/n_{\rm deg}(R),
+```
+
+```math
+D_a(k)=\sum_R e^{ik\cdot R}r_a(R)/n_{\rm deg}(R),
+```
+
+```math
+\partial_{k_a}H(k)=
+\sum_R iR_a e^{ik\cdot R}H(R)/n_{\rm deg}(R).
+```
+
+Here `D_a(k)` is the Wannier-gauge position/Berry-connection matrix and is
+built from the full real-space position matrix elements `rmn_R`, not only from
+Wannier centers. The covariant momentum/velocity matrix is then:
+
+```math
+P_a(k)=\partial_{k_a}H(k)-i[D_a(k),H(k)].
+```
+
+This is the same operator structure used by the old solver's velocity-gauge
+branch. After constructing `P_a(k)` in the full Wannier space, the code projects
+onto the chosen field-free band window `S`:
+
+```math
+H^S_0(k)=U_S^\dagger(k)H(k)U_S(k),
+```
+
+```math
+P^S_a(k)=U_S^\dagger(k)P_a(k)U_S(k).
+```
+
+The propagated Hamiltonian is:
+
+```math
+H^S_{\rm MVG}(k,t)=H^S_0(k)+\sum_a A_a(t)P^S_a(k).
+```
+
+The corresponding current uses the minimal-coupling velocity:
+
+```math
+J_a(t)=
+-\frac{1}{N_k A_{\rm cell}}\sum_k
+{\rm Tr}\left[\rho^S_k(t)\left(P^S_a(k)+A_a(t)I\right)\right].
+```
+
+This branch is intended for controlled old-VG/new-VG comparison and for testing
+how much of the previous discrepancy came from omitting `rmn_R` in the
+Peierls-only velocity gauge.
+
+### 5.3 Density-matrix propagation
+
 The density matrix evolves as:
 
 ```math
@@ -209,14 +277,34 @@ rho_{nn}(t=0) = 0 for n > nv
 rho_{mn}(t=0) = 0 for m != n
 ```
 
-Dephasing is applied to off-diagonal density-matrix elements every
-`n_dt_deph` steps:
+Dephasing is applied every `n_dt_deph` steps in the instantaneous eigenbasis
+of the Hamiltonian used at the end of the RK4 step. If
 
 ```math
-rho_{mn} -> rho_{mn} exp(-Delta t / T2), m != n
+H(k,t+dt) W(k,t+dt) = W(k,t+dt) epsilon(k,t+dt),
 ```
 
-with `T2_fs = 0.5` in the current tests.
+then the code transforms
+
+```math
+rho_inst(k,t+dt)=W^dagger(k,t+dt) rho(k,t+dt) W(k,t+dt),
+```
+
+damps only the coherences,
+
+```math
+(rho_inst)_{mn} -> (rho_inst)_{mn} exp(-Delta t / T2), m != n,
+```
+
+and transforms back,
+
+```math
+rho(k,t+dt) -> W rho_inst W^dagger.
+```
+
+Here `Delta t = n_dt_deph * dt`. This is closer to the old solver's
+instantaneous-band/Houston-style dephasing than damping fixed truncated-basis
+off-diagonal elements.
 
 ## 6. RK4 time stepping
 
@@ -256,18 +344,27 @@ src/mod_sbe.f90
 src/mod_hhg.f90
 ```
 
-The velocity-gauge current is computed as:
+The current is computed as:
 
 ```math
 J_a(t) = - 1 / (N_k A_{cell}) sum_k Tr[ rho_k(t) v_a(k,t) ]
 ```
 
-with:
+For the Peierls-only velocity gauge:
 
 ```math
 v_a(k,t) = partial H(k + A(t)) / partial k_a
          = sum_R i R_a exp(i A(t).R) H_R^{proj}(k)
 ```
+
+For `matrix_vg`:
+
+```math
+v_a(k,t)=P^S_a(k)+A_a(t)I.
+```
+
+For length gauge, the current diagnostic still uses the precomputed field-free
+velocity matrix and should be treated as less validated.
 
 `A_cell` is the in-plane cell area. It is meaningful for converting the
 discrete k average into a 2D current density. For bilayer CrI3, using the
@@ -323,12 +420,13 @@ the effective sampled mean intensity, not only the input variable name.
 
 Main execution flow in `src/main.f90`:
 
-1. Parse input namelists with `src/mod_input.f90`.
+1. Parse input namelists with `src/mod_params.f90`.
 2. Read Wannier data with `src/mod_wannier.f90`.
 3. Build reciprocal lattice and k mesh with `src/mod_crystal.f90`.
 4. Compute diagnostic valley assignment near K/K'.
 5. Diagonalize the Wannier Hamiltonian and truncate the band window.
-6. Precompute projected Hamiltonian/position/velocity matrices.
+6. Precompute the matrices required by the selected gauge:
+   Peierls `vg`, `matrix_vg`, or `lg`.
 7. Generate classical laser field with `src/mod_laser.f90`.
 8. Initialize `rho_k`.
 9. Propagate SBE with `src/mod_sbe.f90`.
@@ -355,16 +453,30 @@ Important differences:
 
 | item | old solver | new solver current test |
 |---|---|---|
-| basis/gauge | Houston-like (`var_method="ht"`) | velocity gauge (`gauge_method='vg'`) |
+| basis/gauge | Houston-like (`var_method="ht"`) or matrix VG (`var_method="vg"`) | Peierls VG (`gauge_method='vg'`) or matrix VG (`gauge_method='matrix_vg'`) |
 | band space | originally all 112 Wannier bands | truncated 20/30/40 near Fermi level |
-| SOC/magnetism | old reference noted as no SOC in comparison plot | current Wannier data includes SOC |
+| SOC/magnetism | input file says `SOC = 1`, but the exact old-run Wannier data are not present locally | current Wannier data include SOC |
+| dephasing convention | `deph_t2 = 0.5` is multiplied by one optical cycle | `T2_fs = 0.5` means 0.5 fs |
 | current output cadence | old `J_tot.txt` has 1010 rows over ~42.7 fs | new `Jt.dat` has 5045 rows over ~42.7 fs |
-| current formula | Houston-basis current matrix expression | trace of density matrix with `partial H(k+A)/partial k` |
+| current formula | Houston/current matrix expression; old VG uses `P(k)+A(t)I` | Peierls VG uses `partial H(k+A)/partial k`; matrix VG uses `P(k)+A(t)I` |
 | HHG normalization | old uses its own FFT/window convention | new has explicit `dt^2` FFT scaling |
 
 Therefore the old/new comparison is useful as a qualitative sanity check, but
 not a strict equality test. Differences can come from band truncation, gauge
-implementation, current definition, SOC/magnetic model, and FFT/window details.
+implementation, current definition, dephasing units, SOC/magnetic model, and
+FFT/window details.
+
+Important unit note from the old source:
+
+```fortran
+Tcyc = wvlength*1.0E-9_dp/C_v/Time_au
+deph_t2 = deph_t2*Tcyc
+```
+
+For the 3200 nm laser, `deph_t2 = 0.5` in the old input corresponds to about
+0.5 optical cycles, or about 5.34 fs. It is therefore not equivalent to
+`T2_fs = 0.5` in the new input. This alone can noticeably change the H9+
+transition/tail region.
 
 ## 12. Completed validation tests
 
@@ -556,7 +668,138 @@ old solver, the remaining discrepancy is more likely due to gauge/basis,
 current definition, SOC/magnetism, or normalization conventions rather than
 near-Fermi band truncation alone.
 
+Update after the 10x10 / 112-band run:
+
+```text
+C:\Users\26507\Documents\New_SBEs\Quantum-light\output_10x10_112bands_dt035_T2fs05
+```
+
+Run parameters:
+
+```text
+nkx=nky=10
+nb_start=1
+nb_end=112
+n_trunc=112
+nv=84
+T2=0.5 fs
+dt=0.35 a.u.
+velocity gauge
+```
+
+The run completed normally. The log reports:
+
+```text
+Pre-projection memory estimate: 11082 MB
+real wall time: 48m57.941s
+```
+
+Selected HHG values:
+
+| harmonic | 20 bands | 30 bands | 40 bands | 112 bands | old solver |
+|---:|---:|---:|---:|---:|---:|
+| H1 | 3.535e+01 | 5.673e+01 | 8.084e+01 | 1.675e-01 | 5.580e+02 |
+| H3 | 7.693e-01 | 1.230e+00 | 1.689e+00 | 4.073e-03 | 7.697e+00 |
+| H5 | 2.714e-03 | 4.224e-03 | 5.220e-03 | 5.009e-05 | 3.775e-02 |
+| H7 | 3.734e-06 | 5.180e-06 | 4.681e-06 | 6.562e-07 | 4.213e-03 |
+| H9 | 4.677e-10 | 2.268e-09 | 3.679e-09 | 1.402e-08 | 5.372e-04 |
+| H11 | 8.125e-11 | 1.888e-10 | 2.563e-10 | 1.751e-09 | 4.744e-05 |
+| H13 | 2.475e-11 | 7.235e-11 | 4.692e-11 | 6.616e-10 | 8.053e-06 |
+| H15 | 1.978e-10 | 1.927e-10 | 2.895e-10 | 1.205e-09 | 1.477e-05 |
+| H20 | 5.601e-11 | 1.266e-10 | 3.855e-10 | 9.317e-10 | 1.491e-06 |
+| H25 | 1.150e-12 | 4.568e-12 | 9.199e-12 | 2.116e-11 | 6.518e-09 |
+| H35 | 5.748e-18 | 4.695e-18 | 9.661e-18 | 3.800e-17 | 1.809e-09 |
+
+Time-domain current amplitudes:
+
+```text
+10x10 / 20 bands:  max |Jx| = 1.302e-02
+10x10 / 30 bands:  max |Jx| = 1.659e-02
+10x10 / 40 bands:  max |Jx| = 1.990e-02
+10x10 / 112 bands: max |Jx| = 4.240e-03
+old solver:         max |Jx| = 7.469e-02
+```
+
+Interpretation:
+
+```text
+The 112-band result is not close to the old solver, and it does not continue
+the monotonic low-order growth seen in the 20->30->40 band-window sequence.
+Instead, including the full 112-band Wannier window suppresses H1-H7 and the
+time-domain current amplitude while increasing parts of the H9-H25 tail
+relative to the smaller windows.
+```
+
+This means the old/new discrepancy cannot be explained by near-Fermi band
+truncation alone. The result points to finite-band velocity-gauge cancellation
+and gauge-truncation behavior. A likely contributing issue is that the 112-band
+Wannier model contains many occupied valence states but only the conduction
+states inside the Wannier disentanglement window; it is still not a complete
+QE band space for velocity-gauge f-sum-rule cancellation. Therefore adding
+more occupied bands without the corresponding high-energy unoccupied manifold
+does not necessarily produce a monotonic or physically converged velocity-gauge
+answer.
+
+A useful physical interpretation of the non-monotonic band-window behavior is
+deep-band screening. The 20->30->40 band windows add mostly near-Fermi
+transition channels, so low-order response amplitudes grow. Expanding to the
+full 112-band Wannier window also adds many deeper occupied bands. These bands
+are far from resonance and their occupations change little, but their velocity
+matrix elements can contribute virtual-transition and occupied-band current
+terms that partially cancel the near-Fermi current. This cancellation mostly
+affects the low-frequency and low-order response. Higher-order interband
+coherences can therefore look relatively enhanced even while H1-H7 and the
+time-domain current amplitude are suppressed.
+
+This interpretation is compatible with the f-sum-rule concern, not separate
+from it. In velocity gauge, correct low-frequency cancellation is a Hilbert
+space completeness problem. The 112 Wannier bands are the full current
+Wannier model, but not the full 200-band QE space and not an infinite band
+space. Thus the 112-band velocity-gauge result is a useful diagnostic, not an
+automatic ground truth.
+
+Estimated pre-projection memory, using the observed 40x40 / 30-band run as the
+reference, scales approximately as:
+
+```text
+memory ~ Nk * n_trunc^2 * nrpts
+```
+
+| run | estimated HR_proj memory |
+|---|---:|
+| 40x40 / 30 bands | 12.7 GB observed |
+| 40x40 / 40 bands | ~22.6 GB |
+| 40x40 / 50 bands | ~35.3 GB |
+| 40x40 / 112 bands | ~177 GB |
+| 80x80 / 30 bands | ~50.9 GB |
+| 80x80 / 40 bands | ~90.5 GB |
+| 80x80 / 50 bands | ~141 GB |
+| 120x120 / 30 bands | ~114 GB |
+| 120x120 / 40 bands | ~204 GB |
+| 120x120 / 50 bands | ~318 GB |
+| 120x120 / 112 bands | ~1.6 TB |
+
+Thus, a dense 120x120 / 112-band velocity-gauge run is not practical with the
+current preprojection strategy on ordinary shared-memory nodes.
+
 ## 14. Recommended next controlled checks
+
+### 14.0 External CrI3 benchmark target
+
+A directly relevant literature target is:
+
+```text
+Y. Q. Liu, Z. Zhang, M. S. Si,
+"Antiferromagnetic-configuration-dependent high harmonic generation in bilayer CrI3",
+Europhysics Letters 140, 25001 (2022), DOI: 10.1209/0295-5075/ac9c26.
+```
+
+The public abstract reports configuration-dependent HHG in bilayer CrI3 and,
+for AB stacking with intralayer moments along z, cancellation of 3n-order
+harmonics under circularly polarized driving. This is a better physics
+validation target than forcing equality with the local old solver, provided
+the structure, magnetic configuration, laser field, and analysis conventions
+can be matched closely enough.
 
 Priority 1:
 
