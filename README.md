@@ -111,7 +111,7 @@ Main modules:
 For the detailed theory and validation log, see:
 
 ```text
-docs/SBE_SOLVER_THEORY_AND_VALIDATION.md
+docs/SBE求解器理论与验证记录.md
 ```
 
 ## Required External Data

@@ -42,7 +42,7 @@
 /
 
 &dephasing
-  T2_fs = 0.5
+  T2_cycles = 0.5
 /
 
 &bsv

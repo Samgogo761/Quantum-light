@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="450.0" y="32.0" font-size="20" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="700" fill="#202124">Even harmonics: ratio to lg_cov full112 k40</text>
+<text x="18.0" y="274.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">ratio to full112</text>
+<line x1="82" y1="470" x2="868" y2="470" stroke="#333"/>
+<line x1="82" y1="78" x2="82" y2="470" stroke="#333"/>
+<line x1="77" y1="470.0" x2="868" y2="470.0" stroke="#e5e7eb"/>
+<text x="72.0" y="474.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">0</text>
+<line x1="77" y1="391.6" x2="868" y2="391.6" stroke="#e5e7eb"/>
+<text x="72.0" y="395.6" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">0.36</text>
+<line x1="77" y1="313.2" x2="868" y2="313.2" stroke="#e5e7eb"/>
+<text x="72.0" y="317.2" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">0.72</text>
+<line x1="77" y1="234.8" x2="868" y2="234.8" stroke="#e5e7eb"/>
+<text x="72.0" y="238.8" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1.1</text>
+<line x1="77" y1="156.4" x2="868" y2="156.4" stroke="#e5e7eb"/>
+<text x="72.0" y="160.4" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1.4</text>
+<line x1="77" y1="78.0" x2="868" y2="78.0" stroke="#e5e7eb"/>
+<text x="72.0" y="82.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1.8</text>
+<text x="160.6" y="494.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">H2</text>
+<rect x="121.6" y="247.3" width="21.3" height="222.7" fill="#0072b2"/>
+<rect x="147.6" y="248.9" width="21.3" height="221.1" fill="#009e73"/>
+<rect x="173.6" y="118.8" width="21.3" height="351.2" fill="#d55e00"/>
+<text x="317.8" y="494.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">H4</text>
+<rect x="278.8" y="250.8" width="21.3" height="219.2" fill="#0072b2"/>
+<rect x="304.8" y="252.7" width="21.3" height="217.3" fill="#009e73"/>
+<rect x="330.8" y="262.1" width="21.3" height="207.9" fill="#d55e00"/>
+<text x="475.0" y="494.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">H6</text>
+<rect x="436.0" y="253.8" width="21.3" height="216.2" fill="#0072b2"/>
+<rect x="462.0" y="252.6" width="21.3" height="217.4" fill="#009e73"/>
+<rect x="488.0" y="283.3" width="21.3" height="186.7" fill="#d55e00"/>
+<text x="632.2" y="494.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">H8</text>
+<rect x="593.2" y="257.7" width="21.3" height="212.3" fill="#0072b2"/>
+<rect x="619.2" y="249.4" width="21.3" height="220.6" fill="#009e73"/>
+<rect x="645.2" y="211.7" width="21.3" height="258.3" fill="#d55e00"/>
+<text x="789.4" y="494.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">H10</text>
+<rect x="750.4" y="205.3" width="21.3" height="264.7" fill="#0072b2"/>
+<rect x="776.4" y="258.0" width="21.3" height="212.0" fill="#009e73"/>
+<rect x="802.4" y="420.3" width="21.3" height="49.7" fill="#d55e00"/>
+<rect x="82" y="52" width="18" height="12" fill="#0072b2"/>
+<text x="106.0" y="63.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="start" font-weight="400" fill="#202124">nb1-94</text>
+<rect x="252" y="52" width="18" height="12" fill="#009e73"/>
+<text x="276.0" y="63.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="start" font-weight="400" fill="#202124">nb1-104</text>
+<rect x="422" y="52" width="18" height="12" fill="#d55e00"/>
+<text x="446.0" y="63.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="start" font-weight="400" fill="#202124">nb30-112</text>
+</svg>

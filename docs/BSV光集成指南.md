@@ -26,7 +26,7 @@ patches/
 examples/
   wannier_sbe_input.example.txt  # 新增 &quantum_light namelist 组
 docs/
-  BSV_INTEGRATION.md      # 本文档
+  BSV光集成指南.md       # 本文档
 ```
 
 `src/` 下两个 `.f90` 可以**直接拷到你的工程里**。`patches/` 下三个 `.f90` 是**参考片段**——因为你的私有求解器我看不到，需要你按片段对位替换/合并到自己的 `mod_laser.f90`、`mod_sbes.f90`、`main.f90` 里。

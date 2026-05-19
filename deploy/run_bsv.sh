@@ -1,11 +1,14 @@
 #!/bin/bash
 #=============================================================================
 # BSV (Bright Squeezed Vacuum) HHG - SLURM Array Job
-# CrI3 bilayer AFM with SOC, 120x120 k-grid
+# CrI3 bilayer AFM with SOC.
+# Current input_bsv.nml defaults to lg_cov / 40x40 / nb=1-104.
 #
 # Splits N_TOTAL BSV samples across N_JOBS array tasks.
 # Each task runs N_PER_JOB samples with a unique seed.
 # After all tasks complete, run deploy/combine_bsv.sh to merge results.
+#
+# Use only after the classical-light lg_cov/T2/truncation checks are locked.
 #
 # Usage:
 #   sbatch deploy/run_bsv.sh
@@ -66,10 +69,12 @@ fi
 # Step 1: Environment setup
 #=============================================================================
 
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:${LD_LIBRARY_PATH:-}
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:${LD_LIBRARY_PATH:-}
+set +u
 source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
 source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
+set -u
 
 #=============================================================================
 # Step 2: Compile (only task 0 compiles; others wait)

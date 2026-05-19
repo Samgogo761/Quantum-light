@@ -20,9 +20,9 @@ program hhg_sbe_solver
   real(dp), allocatable :: Jt_sample(:,:), hhg_accum(:)
   real(dp), allocatable :: hhg_x_s(:), hhg_y_s(:), hhg_tot_s(:)
   real(dp) :: I_sample, phi_sample, E_peak_sample
-  integer :: isamp, n_omega_s
+  integer :: isamp, n_omega_s, n_omega_sample
 
-  call cpu_time(t_start)
+  t_start = wall_time_seconds()
 
   ! === 1. Read input ===
   call resolve_input_file(input_file)
@@ -47,7 +47,7 @@ program hhg_sbe_solver
     call write_bands("bands.dat")
     call diagnose_pcenter_velocity(trim(pcenter_summary_file), trim(pcenter_kresolved_file))
     if (stop_after_diagnostics) then
-      call cpu_time(t_end)
+      t_end = wall_time_seconds()
       write(*,'(A,F10.2,A)') 'Total wall time: ', t_end - t_start, ' seconds'
       stop
     end if
@@ -80,6 +80,8 @@ program hhg_sbe_solver
     write(*,'(A)') 'Starting classical time evolution...'
     call propagate()
     write(*,'(A)') 'Time evolution complete.'
+    write(*,'(A,ES12.4,A,2ES12.4,A)') 'Initial current |J(t=0)|: ', &
+      sqrt(Jt(1,1)**2 + Jt(1,2)**2), '  (Jx,Jy)=(', Jt(1,1), Jt(1,2), ')'
 
     call write_current("Jt.dat", Jt, nt, dt)
     call write_current_decomposed("Jt_decomposed.dat", Jt, Jt_intra, Jt_inter, nt, dt)
@@ -93,7 +95,14 @@ program hhg_sbe_solver
   else
 
     ! --- BSV Monte Carlo ensemble path ---
+    if (bsv_n_samples <= 0) then
+      write(*,*) 'ERROR: bsv_n_samples must be positive when bsv_enabled = .true.'
+      error stop 1
+    end if
+
     write(*,'(A,I0,A)') 'Starting BSV ensemble with ', bsv_n_samples, ' trajectories...'
+    write(*,'(A,ES12.4,A)') '  BSV I_bar scale        : ', bsv_mean_intensity, ' W/cm^2'
+    write(*,'(A,ES12.4,A)') '  BSV sampled mean <I>   : ', 2.0_dp*bsv_mean_intensity, ' W/cm^2'
 
     qp%enabled   = .true.
     qp%I_bar     = bsv_mean_intensity
@@ -101,7 +110,10 @@ program hhg_sbe_solver
     qp%seed      = bsv_seed
     call qlight_init(qp)
 
+    n_omega_s = nt / 2 + 1
     allocate(Jt_sample(nt, 2))
+    allocate(hhg_accum(n_omega_s))
+    hhg_accum = 0.0_dp
 
     do isamp = 1, bsv_n_samples
       call qlight_sample_bsv(qp, I_sample, phi_sample)
@@ -111,11 +123,11 @@ program hhg_sbe_solver
       call run_single_trajectory(Jt_sample)
 
       call compute_hhg_spectrum(Jt_sample, nt, dt, omega0, &
-                                 hhg_x_s, hhg_y_s, hhg_tot_s, n_omega_s)
+                                 hhg_x_s, hhg_y_s, hhg_tot_s, n_omega_sample)
 
-      if (.not. allocated(hhg_accum)) then
-        allocate(hhg_accum(n_omega_s))
-        hhg_accum = 0.0_dp
+      if (n_omega_sample /= n_omega_s) then
+        write(*,*) 'ERROR: inconsistent HHG frequency grid in BSV ensemble.'
+        error stop 1
       end if
 
       hhg_accum = hhg_accum + hhg_tot_s
@@ -134,10 +146,17 @@ program hhg_sbe_solver
     write(*,'(A)') 'BSV ensemble complete.'
   end if
 
-  call cpu_time(t_end)
+  t_end = wall_time_seconds()
   write(*,'(A,F10.2,A)') 'Total wall time: ', t_end - t_start, ' seconds'
 
 contains
+
+  real(dp) function wall_time_seconds()
+    integer :: count, rate
+
+    call system_clock(count, rate)
+    wall_time_seconds = real(count, dp) / real(rate, dp)
+  end function wall_time_seconds
 
   subroutine resolve_input_file(path)
     character(*), intent(out) :: path

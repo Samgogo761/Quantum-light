@@ -456,7 +456,7 @@ Important differences:
 | basis/gauge | Houston-like (`var_method="ht"`) or matrix VG (`var_method="vg"`) | Peierls VG (`gauge_method='vg'`) or matrix VG (`gauge_method='matrix_vg'`) |
 | band space | originally all 112 Wannier bands | truncated 20/30/40 near Fermi level |
 | SOC/magnetism | input file says `SOC = 1`, but the exact old-run Wannier data are not present locally | current Wannier data include SOC |
-| dephasing convention | `deph_t2 = 0.5` is multiplied by one optical cycle | `T2_fs = 0.5` means 0.5 fs |
+| dephasing convention | `deph_t2 = 0.5` is multiplied by one optical cycle | `T2_fs` is explicit fs; `T2_cycles = 0.5` reproduces the old optical-cycle convention |
 | current output cadence | old `J_tot.txt` has 1010 rows over ~42.7 fs | new `Jt.dat` has 5045 rows over ~42.7 fs |
 | current formula | Houston/current matrix expression; old VG uses `P(k)+A(t)I` | Peierls VG uses `partial H(k+A)/partial k`; matrix VG uses `P(k)+A(t)I` |
 | HHG normalization | old uses its own FFT/window convention | new has explicit `dt^2` FFT scaling |
@@ -477,6 +477,12 @@ For the 3200 nm laser, `deph_t2 = 0.5` in the old input corresponds to about
 0.5 optical cycles, or about 5.34 fs. It is therefore not equivalent to
 `T2_fs = 0.5` in the new input. This alone can noticeably change the H9+
 transition/tail region.
+
+Implementation update, 2026-05-18: the new solver now accepts both `T2_fs`
+and `T2_cycles` in the `/dephasing/` namelist. If `T2_cycles > 0`, it
+overrides `T2_fs` and sets `T2 = T2_cycles * T_cycle`. Therefore old solver
+input `deph_t2 = 0.5` should be represented as `T2_cycles = 0.5`, not as
+`T2_fs = 0.5`.
 
 ## 12. Completed validation tests
 
