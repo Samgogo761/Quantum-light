@@ -82,8 +82,9 @@ module mod_params
   integer  :: n_dt_deph  = 5
 
   ! --- Dephasing ---
-  real(dp) :: T2_fs = 10.0_dp
-  real(dp) :: T2    = 0.0_dp
+  real(dp) :: T2_fs     = 10.0_dp
+  real(dp) :: T2_cycles = -1.0_dp
+  real(dp) :: T2        = 0.0_dp
 
   ! --- BSV ---
   logical  :: bsv_enabled        = .false.
@@ -111,7 +112,7 @@ module mod_params
                        ncyc_2, env_type_2, ellipticity_2, delta_phase_deg_2
   namelist /external_field/ use_external_A, external_A_file
   namelist /timestep/  dt, n_dt_deph
-  namelist /dephasing/ T2_fs
+  namelist /dephasing/ T2_fs, T2_cycles
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
   namelist /method/    gauge_method
   namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
@@ -192,7 +193,12 @@ contains
     nt = ceiling(T_total / dt) + 1
     if (nt < 1) nt = 1
 
-    T2 = T2_fs * fs_to_au
+    if (T2_cycles > 0.0_dp) then
+      T2 = T2_cycles * T_cycle
+      T2_fs = T2 * au_to_fs
+    else
+      T2 = T2_fs * fs_to_au
+    end if
   end subroutine read_input
 
   subroutine finalize_band_params()
@@ -270,7 +276,12 @@ contains
       write(*,'(A,A)')     '  pcenter_summary_file : ', trim(pcenter_summary_file)
       write(*,'(A,A)')     '  pcenter_kresolved_file: ', trim(pcenter_kresolved_file)
     end if
-    write(*,'(A,F10.2,A)') '  T2           : ', T2_fs, ' fs'
+    if (T2_cycles > 0.0_dp) then
+      write(*,'(A,F10.4,A)') '  T2 input     : ', T2_cycles, ' optical cycles'
+      write(*,'(A,ES12.4,A)') '  T2 effective : ', T2_fs, ' fs'
+    else
+      write(*,'(A,ES12.4,A)') '  T2 input     : ', T2_fs, ' fs'
+    end if
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
     write(*,'(A)')       '==========================================='
   end subroutine print_params

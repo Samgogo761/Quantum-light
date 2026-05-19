@@ -4,20 +4,20 @@
   a3_ang = 0.000, 0.000, 25.000
   E_fermi_eV = 0.0843
   SOC = 1
-  wannier_tb_file = "../CrI3_tb.dat"
+  wannier_tb_file = "../../CrI3_tb.dat"
   wannier_hr_file = ""
   wannier_r_file  = ""
 /
 
 &kgrid
-  nkx = 40
-  nky = 40
+  nkx = 10
+  nky = 10
 /
 
 &bands
   nv_orig = 84
-  nb_start = 1
-  nb_end = 104
+  nb_start = 70
+  nb_end = 99
 /
 
 &laser
@@ -36,23 +36,32 @@
   intensity_Wcm2_2 = 0.0
 /
 
+&external_field
+  use_external_A = .false.
+  external_A_file = ""
+/
+
 &timestep
   dt = 0.35
   n_dt_deph = 5
 /
 
 &dephasing
-  T2_cycles = 0.5
+  T2_fs = 1.0e30
 /
 
 &bsv
   bsv_enabled = .false.
   bsv_n_samples = 100
-  ! In the current BSV sampler, sampled mean <I> = 2*bsv_mean_intensity.
-  bsv_mean_intensity = 1.0e11
+  bsv_mean_intensity = 2.0e11
   bsv_seed = 42
 /
 
 &method
-  gauge_method = 'lg_cov'
+  gauge_method = 'vg'
+/
+
+&diagnostics
+  run_pcenter_check = .false.
+  stop_after_diagnostics = .true.
 /

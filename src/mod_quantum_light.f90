@@ -8,6 +8,7 @@
 ! collapses on the intensity (ponderomotive-energy) axis to an exponential:
 !
 !     Q_BSV(I) = 1 / (2 I_bar) * exp( -I / (2 I_bar) )
+!     <I>      = 2 I_bar
 !
 ! which is trivially sampled by inverse-CDF transform:
 !
@@ -30,7 +31,8 @@ module mod_quantum_light
   !-----------------------------------------------------------------------------
   ! qlight_params_t
   !   Runtime parameters read from the &quantum_light namelist.
-  !   I_bar is BSV mean intensity in W/cm^2 (user-facing unit).
+  !   I_bar is the BSV intensity scale in W/cm^2; the sampled mean intensity
+  !   is 2*I_bar.
   !-----------------------------------------------------------------------------
   type, public :: qlight_params_t
     logical  :: enabled   = .false.

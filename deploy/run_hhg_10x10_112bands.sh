@@ -83,10 +83,12 @@ if [ ! -f "${EXTERNAL_A_FILE}" ]; then
     exit 1
 fi
 
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:${LD_LIBRARY_PATH:-}
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:${LD_LIBRARY_PATH:-}
+set +u
 source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
 source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
+set -u
 
 if [ "${COMPILER}" = "intel" ]; then
     export FC=ifort
@@ -113,7 +115,7 @@ sed -e "s|wannier_tb_file = .*|wannier_tb_file = \"${TB_FILE}\"|" \
     "${INPUT_TEMPLATE}" > "${OUTDIR}/input.nml"
 
 echo "--- Effective run parameters ---"
-grep -E "nkx|nky|nb_start|nb_end|ncyc|T2_fs|dt|wvl_nm|intensity_Wcm2|gauge_method|wannier_tb_file|use_external_A|external_A_file" "${OUTDIR}/input.nml"
+grep -E "nkx|nky|nb_start|nb_end|ncyc|T2_fs|T2_cycles|dt|wvl_nm|intensity_Wcm2|gauge_method|wannier_tb_file|use_external_A|external_A_file" "${OUTDIR}/input.nml"
 
 cd "${OUTDIR}"
 export OMP_NUM_THREADS=${NTHREADS}

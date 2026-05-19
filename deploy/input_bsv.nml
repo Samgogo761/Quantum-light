@@ -10,14 +10,14 @@
 /
 
 &kgrid
-  nkx = 120
-  nky = 120
+  nkx = 40
+  nky = 40
 /
 
 &bands
   nv_orig = 84
-  nb_start = 75
-  nb_end = 94
+  nb_start = 1
+  nb_end = 104
 /
 
 &laser
@@ -42,16 +42,18 @@
 /
 
 &dephasing
-  T2_fs = 0.5
+  T2_cycles = 0.5
 /
 
 &bsv
   bsv_enabled = .true.
   bsv_n_samples = 500
+  ! In the current BSV sampler, sampled mean <I> = 2*bsv_mean_intensity.
+  ! Keep 1.0e11 here for comparison to a classical 2.0e11 W/cm^2 pulse.
   bsv_mean_intensity = 1.0e11
   bsv_seed = 42
 /
 
 &method
-  gauge_method = 'matrix_vg'
+  gauge_method = 'lg_cov'
 /

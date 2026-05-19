@@ -104,10 +104,12 @@ echo ""
 # Step 1: Environment setup (Intel oneAPI on CentOS 7)
 #=============================================================================
 
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/vtune/2023.2.0/lib64:${LD_LIBRARY_PATH:-}
+export LD_LIBRARY_PATH=/public/software/compiler/intel/oneapi/mkl/2023.2.0/lib/intel64:${LD_LIBRARY_PATH:-}
+set +u
 source /public/software/compiler/intel/oneapi/compiler/2023.2.0/env/vars.sh
 source /public/software/compiler/intel/oneapi/mpi/2021.10.0/env/vars.sh
+set -u
 
 #=============================================================================
 # Step 2: Compile
