@@ -32,9 +32,9 @@
 # CONFIGURATION
 #=============================================================================
 
-NTHREADS=36
-TB_FILE="/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat"
-WORKDIR="/public/home/wangjs/project/Quantum-light"
+NTHREADS=${BSV_NTHREADS:-36}
+TB_FILE="${BSV_TB_FILE:-/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat}"
+WORKDIR="${BSV_WORKDIR:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
 
 N_TOTAL=500
 N_JOBS=10
