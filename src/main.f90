@@ -1,4 +1,5 @@
 program hhg_sbe_solver
+  use iso_fortran_env, only: int64
   use mod_params
   use mod_wannier
   use mod_crystal
@@ -152,7 +153,7 @@ program hhg_sbe_solver
 contains
 
   real(dp) function wall_time_seconds()
-    integer :: count, rate
+    integer(int64) :: count, rate
 
     call system_clock(count, rate)
     wall_time_seconds = real(count, dp) / real(rate, dp)

@@ -19,6 +19,10 @@ OUT_DIR = REPO / "docs" / "figures" / "classical_validation"
 LG_SCAN = DATA_ROOT / "output_lg_cov_scan_nodeph"
 LG_VALDEPTH = DATA_ROOT / "output_lg_cov_valence_depth_nodeph"
 LG_FULLVAL = DATA_ROOT / "output_lg_cov_fullvalence_nodeph"
+LG_FULLVAL_T2 = DATA_ROOT / "output_lg_cov_fullvalence_T2_0p5cycle"
+LG_K60_T2 = DATA_ROOT / "output_lg_cov_k60_b112_T2_0p5cycle"
+LG_T2_KEY = DATA_ROOT / "output_lg_cov_t2_key_cases"
+LG_VTRIM104_T2 = DATA_ROOT / "output_lg_cov_valence_trim_104_T2_0p5cycle"
 PEIERLS_LOCAL = REPO / "local_runs" / "peierls_window_20260517_nodeph"
 PHASE0 = RUNS_ROOT / "output_phase0_gauge_10x10_112_nodeph"
 
@@ -670,6 +674,207 @@ def figure_even_harmonic_ratios() -> None:
     )
 
 
+def figure_spectra_fullvalence_t2() -> None:
+    colors = {
+        "nb1-104": "#009e73",
+        "full112": "#111111",
+    }
+    cases = [
+        ("nb1-104", LG_FULLVAL_T2 / "lgcov_k40_nb104", colors["nb1-104"], 2.3),
+        ("full112", LG_FULLVAL_T2 / "lgcov_k40_nb112", colors["full112"], 2.8),
+    ]
+    specs = [
+        (label, resample_spectrum(path), color, width)
+        for label, path, color, width in cases
+        if has_hhg(path)
+    ]
+    if len(specs) < 2:
+        return
+    spectrum_chart(
+        OUT_DIR / "fig13_hhg_spectrum_lgcov_fullvalence_T2_0p5cycle.svg",
+        "HHG spectra: lg_cov nb1-104 vs full112, T2=0.5 cycle",
+        specs,
+        xmax=30.0,
+    )
+
+    full = LG_FULLVAL_T2 / "lgcov_k40_nb112"
+    nb104 = LG_FULLVAL_T2 / "lgcov_k40_nb104"
+    orders = list(range(1, 12))
+    vals = []
+    for order in orders:
+        ref_val = nearest_hhg(full, order)
+        vals.append(nearest_hhg(nb104, order) / ref_val if ref_val > 0 else float("nan"))
+    grouped_bar_chart(
+        OUT_DIR / "fig14_hhg_ratio_lgcov_nb104_full112_T2_0p5cycle.svg",
+        "nb1-104 / full112: lg_cov 40x40, T2=0.5 cycle",
+        [f"H{o}" for o in orders],
+        [("nb1-104", vals, colors["nb1-104"])],
+        "ratio to full112",
+        y_min=0.9,
+        y_max=1.12,
+        width=980,
+    )
+
+
+def figure_full112_kconv_t2() -> None:
+    k40 = LG_FULLVAL_T2 / "lgcov_k40_nb112"
+    k60 = LG_K60_T2 / "lgcov_k60_b112_T2_0p5cycle"
+    if not has_hhg(k40) or not has_hhg(k60):
+        return
+    specs = [
+        ("k40 full112", resample_spectrum(k40), "#111111", 2.8),
+        ("k60 full112", resample_spectrum(k60), "#0072b2", 2.2),
+    ]
+    spectrum_chart(
+        OUT_DIR / "fig15_hhg_spectrum_lgcov_full112_k40_k60_T2_0p5cycle.svg",
+        "HHG spectra: lg_cov full112 k40 vs k60, T2=0.5 cycle",
+        specs,
+        xmax=30.0,
+    )
+    spectrum_ratio_chart(
+        OUT_DIR / "fig16_hhg_ratio_lgcov_full112_k60_k40_T2_0p5cycle.svg",
+        "k60 / k40 ratio: lg_cov full112, T2=0.5 cycle",
+        resample_spectrum(k40, xmax=15.0),
+        [("k60/k40", resample_spectrum(k60, xmax=15.0), "#0072b2")],
+        xmax=15.0,
+    )
+
+
+def figure_t2_scan() -> None:
+    cases = [
+        ("0.5 fs", LG_T2_KEY / "lgcov_k40_b112_T2_0p5fs", "#d55e00"),
+        ("1 fs", LG_T2_KEY / "lgcov_k40_b112_T2_1fs", "#cc79a7"),
+        ("2 fs", LG_T2_KEY / "lgcov_k40_b112_T2_2fs", "#0072b2"),
+        ("5 fs", LG_T2_KEY / "lgcov_k40_b112_T2_5fs", "#009e73"),
+        ("0.5 cycle", LG_FULLVAL_T2 / "lgcov_k40_nb112", "#111111"),
+        ("nodeph", LG_SCAN / "lgcov_k40_b112", "#999999"),
+    ]
+    specs = [
+        (label, resample_spectrum(path), color, 2.2 if label != "nodeph" else 2.8)
+        for label, path, color in cases
+        if has_hhg(path)
+    ]
+    if len(specs) >= 2:
+        spectrum_chart(
+            OUT_DIR / "fig17_hhg_spectrum_lgcov_full112_T2_scan.svg",
+            "HHG spectra: lg_cov full112 T2 scan",
+            specs,
+            xmax=30.0,
+            width=1200,
+        )
+
+    ref = LG_SCAN / "lgcov_k40_b112"
+    labels = ["0.5fs", "1fs", "2fs", "5fs", "0.5cyc"]
+    paths = [path for _, path, _ in cases[:5]]
+    colors = palette() + ["#111111"]
+    series = []
+    for idx, order in enumerate([1, 2, 3, 4, 5, 6, 8, 10, 11]):
+        ref_val = nearest_hhg(ref, order)
+        vals = [nearest_hhg(path, order) / ref_val if ref_val > 0 and has_hhg(path) else float("nan") for path in paths]
+        series.append((f"H{order}", vals, colors[idx % len(colors)]))
+    line_chart(
+        OUT_DIR / "fig18_hhg_ratio_lgcov_full112_T2_to_nodeph.svg",
+        "T2 scan: ratio to no-dephasing full112",
+        labels,
+        series,
+        "ratio to nodeph",
+        log_y=True,
+        y_min=1.0e-5,
+        y_max=5.0,
+        width=1320,
+    )
+
+    even_series = []
+    for idx, order in enumerate([2, 4, 6, 8, 10]):
+        vals = [nearest_hhg(path, order) if has_hhg(path) else float("nan") for _, path, _ in cases]
+        even_series.append((f"H{order}", vals, colors[idx % len(colors)]))
+    line_chart(
+        OUT_DIR / "fig19_even_harmonics_lgcov_full112_T2_scan.svg",
+        "Even harmonics vs T2: lg_cov full112",
+        ["0.5fs", "1fs", "2fs", "5fs", "0.5cyc", "nodeph"],
+        even_series,
+        "HHG total (log)",
+        log_y=True,
+        y_min=1.0e-13,
+        y_max=1.0e-5,
+        width=1120,
+    )
+
+
+def figure_band_economy_t2() -> None:
+    full = LG_FULLVAL_T2 / "lgcov_k40_nb112"
+    if not has_hhg(full):
+        return
+    colors = {
+        "nb1-94": "#0072b2",
+        "nb1-104": "#009e73",
+        "nb10-104": "#d55e00",
+        "nb20-104": "#cc79a7",
+        "full112": "#111111",
+    }
+    cases = [
+        ("nb1-94", LG_FULLVAL_T2 / "lgcov_k40_nb94", colors["nb1-94"], 2.1),
+        ("nb1-104", LG_FULLVAL_T2 / "lgcov_k40_nb104", colors["nb1-104"], 2.4),
+        ("nb10-104", LG_VTRIM104_T2 / "lgcov_k40_nb10_104", colors["nb10-104"], 1.9),
+        ("nb20-104", LG_VTRIM104_T2 / "lgcov_k40_nb20_104", colors["nb20-104"], 1.9),
+        ("full112", full, colors["full112"], 2.8),
+    ]
+    specs = [
+        (label, resample_spectrum(path), color, width)
+        for label, path, color, width in cases
+        if has_hhg(path)
+    ]
+    if len(specs) >= 2:
+        spectrum_chart(
+            OUT_DIR / "fig20_hhg_spectrum_lgcov_band_economy_T2_0p5cycle.svg",
+            "HHG spectra: band-window economy tests, T2=0.5 cycle",
+            specs,
+            xmax=30.0,
+            width=1200,
+        )
+
+    orders = list(range(1, 12))
+    ratio_series = []
+    for label, path, color, _ in cases:
+        if label == "full112" or not has_hhg(path):
+            continue
+        vals = []
+        for order in orders:
+            ref_val = nearest_hhg(full, order)
+            vals.append(nearest_hhg(path, order) / ref_val if ref_val > 0 else float("nan"))
+        ratio_series.append((label, vals, color))
+    grouped_bar_chart(
+        OUT_DIR / "fig21_hhg_ratio_lgcov_band_economy_T2_0p5cycle.svg",
+        "Band-window ratios to full112: T2=0.5 cycle",
+        [f"H{o}" for o in orders],
+        ratio_series,
+        "ratio to full112",
+        y_min=0.0,
+        y_max=3.0,
+        width=1180,
+    )
+
+    j0_cases = [
+        ("nb1-94", LG_FULLVAL_T2 / "lgcov_k40_nb94"),
+        ("nb1-104", LG_FULLVAL_T2 / "lgcov_k40_nb104"),
+        ("nb10-104", LG_VTRIM104_T2 / "lgcov_k40_nb10_104"),
+        ("nb20-104", LG_VTRIM104_T2 / "lgcov_k40_nb20_104"),
+        ("full112", full),
+    ]
+    vals = [read_j0(path) for _, path in j0_cases]
+    line_chart(
+        OUT_DIR / "fig22_initial_current_lgcov_band_economy_T2_0p5cycle.svg",
+        "Initial current check: band-window economy tests",
+        [label for label, _ in j0_cases],
+        [("|J(0)|", vals, "#d55e00")],
+        "|J(0)| (a.u., log)",
+        log_y=True,
+        y_min=1.0e-19,
+        y_max=1.0e-6,
+        width=980,
+    )
+
+
 def write_readme() -> None:
     text = """# Classical Validation Figures
 
@@ -689,6 +894,16 @@ Figures:
 - `fig10_hhg_spectrum_ratio_lgcov_full112_kgrid.svg`: spectral ratio to k40 full112 for full112 k-grid scan.
 - `fig11_hhg_spectrum_lgcov_fullvalence.svg`: full HHG spectra for full-valence conduction-cut windows.
 - `fig12_even_harmonic_ratios_lgcov_windows.svg`: even-harmonic ratios for candidate lg_cov windows.
+- `fig13_hhg_spectrum_lgcov_fullvalence_T2_0p5cycle.svg`: full-valence spectra for nb1-104 vs full112 at T2=0.5 cycle.
+- `fig14_hhg_ratio_lgcov_nb104_full112_T2_0p5cycle.svg`: H1-H11 ratio for nb1-104/full112 at T2=0.5 cycle.
+- `fig15_hhg_spectrum_lgcov_full112_k40_k60_T2_0p5cycle.svg`: full112 spectra for k40 vs k60 at T2=0.5 cycle.
+- `fig16_hhg_ratio_lgcov_full112_k60_k40_T2_0p5cycle.svg`: k60/k40 spectral ratio for full112 at T2=0.5 cycle.
+- `fig17_hhg_spectrum_lgcov_full112_T2_scan.svg`: full112 HHG spectra for the T2 scan.
+- `fig18_hhg_ratio_lgcov_full112_T2_to_nodeph.svg`: T2-scan harmonic ratios to no-dephasing full112.
+- `fig19_even_harmonics_lgcov_full112_T2_scan.svg`: even harmonics across T2 values.
+- `fig20_hhg_spectrum_lgcov_band_economy_T2_0p5cycle.svg`: spectra for band-window economy tests at T2=0.5 cycle.
+- `fig21_hhg_ratio_lgcov_band_economy_T2_0p5cycle.svg`: H1-H11 band-window ratios to full112 at T2=0.5 cycle.
+- `fig22_initial_current_lgcov_band_economy_T2_0p5cycle.svg`: initial-current check for band-window economy tests.
 
 Rerun this script after downloading new server outputs to overwrite the figures.
 """
@@ -707,6 +922,10 @@ def main() -> None:
     figure_spectra_full112_kgrid()
     figure_spectra_fullvalence()
     figure_even_harmonic_ratios()
+    figure_spectra_fullvalence_t2()
+    figure_full112_kconv_t2()
+    figure_t2_scan()
+    figure_band_economy_t2()
     write_readme()
     print(f"Wrote figures to: {OUT_DIR}")
 

@@ -16,5 +16,15 @@ Figures:
 - `fig10_hhg_spectrum_ratio_lgcov_full112_kgrid.svg`: spectral ratio to k40 full112 for full112 k-grid scan.
 - `fig11_hhg_spectrum_lgcov_fullvalence.svg`: full HHG spectra for full-valence conduction-cut windows.
 - `fig12_even_harmonic_ratios_lgcov_windows.svg`: even-harmonic ratios for candidate lg_cov windows.
+- `fig13_hhg_spectrum_lgcov_fullvalence_T2_0p5cycle.svg`: full-valence spectra for nb1-104 vs full112 at T2=0.5 cycle.
+- `fig14_hhg_ratio_lgcov_nb104_full112_T2_0p5cycle.svg`: H1-H11 ratio for nb1-104/full112 at T2=0.5 cycle.
+- `fig15_hhg_spectrum_lgcov_full112_k40_k60_T2_0p5cycle.svg`: full112 spectra for k40 vs k60 at T2=0.5 cycle.
+- `fig16_hhg_ratio_lgcov_full112_k60_k40_T2_0p5cycle.svg`: k60/k40 spectral ratio for full112 at T2=0.5 cycle.
+- `fig17_hhg_spectrum_lgcov_full112_T2_scan.svg`: full112 HHG spectra for the T2 scan.
+- `fig18_hhg_ratio_lgcov_full112_T2_to_nodeph.svg`: T2-scan harmonic ratios to no-dephasing full112.
+- `fig19_even_harmonics_lgcov_full112_T2_scan.svg`: even harmonics across T2 values.
+- `fig20_hhg_spectrum_lgcov_band_economy_T2_0p5cycle.svg`: spectra for band-window economy tests at T2=0.5 cycle.
+- `fig21_hhg_ratio_lgcov_band_economy_T2_0p5cycle.svg`: H1-H11 band-window ratios to full112 at T2=0.5 cycle.
+- `fig22_initial_current_lgcov_band_economy_T2_0p5cycle.svg`: initial-current check for band-window economy tests.
 
 Rerun this script after downloading new server outputs to overwrite the figures.

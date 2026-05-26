@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="490.0" y="32.0" font-size="20" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="700" fill="#202124">Initial current check: band-window economy tests</text>
+<text x="490.0" y="544.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">window / case</text>
+<text x="16.0" y="270.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">|J(0)| (a.u., log)</text>
+<line x1="86" y1="468" x2="946" y2="468" stroke="#333"/>
+<line x1="86" y1="72" x2="86" y2="468" stroke="#333"/>
+<line x1="81" y1="445.7" x2="946" y2="445.7" stroke="#e5e7eb"/>
+<text x="76.0" y="449.7" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-20</text>
+<line x1="81" y1="422.3" x2="946" y2="422.3" stroke="#e5e7eb"/>
+<text x="76.0" y="426.3" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-19</text>
+<line x1="81" y1="398.9" x2="946" y2="398.9" stroke="#e5e7eb"/>
+<text x="76.0" y="402.9" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-18</text>
+<line x1="81" y1="375.4" x2="946" y2="375.4" stroke="#e5e7eb"/>
+<text x="76.0" y="379.4" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-17</text>
+<line x1="81" y1="352.0" x2="946" y2="352.0" stroke="#e5e7eb"/>
+<text x="76.0" y="356.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-16</text>
+<line x1="81" y1="328.6" x2="946" y2="328.6" stroke="#e5e7eb"/>
+<text x="76.0" y="332.6" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-15</text>
+<line x1="81" y1="305.1" x2="946" y2="305.1" stroke="#e5e7eb"/>
+<text x="76.0" y="309.1" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-14</text>
+<line x1="81" y1="281.7" x2="946" y2="281.7" stroke="#e5e7eb"/>
+<text x="76.0" y="285.7" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-13</text>
+<line x1="81" y1="258.3" x2="946" y2="258.3" stroke="#e5e7eb"/>
+<text x="76.0" y="262.3" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-12</text>
+<line x1="81" y1="234.9" x2="946" y2="234.9" stroke="#e5e7eb"/>
+<text x="76.0" y="238.9" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-11</text>
+<line x1="81" y1="211.4" x2="946" y2="211.4" stroke="#e5e7eb"/>
+<text x="76.0" y="215.4" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-10</text>
+<line x1="81" y1="188.0" x2="946" y2="188.0" stroke="#e5e7eb"/>
+<text x="76.0" y="192.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-9</text>
+<line x1="81" y1="164.6" x2="946" y2="164.6" stroke="#e5e7eb"/>
+<text x="76.0" y="168.6" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-8</text>
+<line x1="81" y1="141.1" x2="946" y2="141.1" stroke="#e5e7eb"/>
+<text x="76.0" y="145.1" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-7</text>
+<line x1="81" y1="117.7" x2="946" y2="117.7" stroke="#e5e7eb"/>
+<text x="76.0" y="121.7" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-6</text>
+<line x1="81" y1="94.3" x2="946" y2="94.3" stroke="#e5e7eb"/>
+<text x="76.0" y="98.3" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="end" font-weight="400" fill="#202124">1e-5</text>
+<line x1="86.0" y1="468" x2="86.0" y2="473" stroke="#333"/>
+<text x="86.0" y="490.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">nb1-94</text>
+<line x1="301.0" y1="468" x2="301.0" y2="473" stroke="#333"/>
+<text x="301.0" y="490.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">nb1-104</text>
+<line x1="516.0" y1="468" x2="516.0" y2="473" stroke="#333"/>
+<text x="516.0" y="490.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">nb10-104</text>
+<line x1="731.0" y1="468" x2="731.0" y2="473" stroke="#333"/>
+<text x="731.0" y="490.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">nb20-104</text>
+<line x1="946.0" y1="468" x2="946.0" y2="473" stroke="#333"/>
+<text x="946.0" y="490.0" font-size="11" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-weight="400" fill="#202124">full112</text>
+<polyline points="86.0,383.8 301.0,383.8 516.0,140.2 731.0,157.6 946.0,383.8" fill="none" stroke="#d55e00" stroke-width="2.5"/>
+<circle cx="86.0" cy="383.8" r="4" fill="#d55e00" stroke="#fff" stroke-width="1"/>
+<circle cx="301.0" cy="383.8" r="4" fill="#d55e00" stroke="#fff" stroke-width="1"/>
+<circle cx="516.0" cy="140.2" r="4" fill="#d55e00" stroke="#fff" stroke-width="1"/>
+<circle cx="731.0" cy="157.6" r="4" fill="#d55e00" stroke="#fff" stroke-width="1"/>
+<circle cx="946.0" cy="383.8" r="4" fill="#d55e00" stroke="#fff" stroke-width="1"/>
+<line x1="96" y1="54" x2="120" y2="54" stroke="#d55e00" stroke-width="3"/>
+<text x="126.0" y="58.0" font-size="12" font-family="Arial, Helvetica, sans-serif" text-anchor="start" font-weight="400" fill="#202124">|J(0)|</text>
+</svg>
