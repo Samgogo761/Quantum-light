@@ -29,7 +29,7 @@ def find_peak(h_order, hhg, target_h, window=0.3):
 def main():
     base = sys.argv[1] if len(sys.argv) > 1 else 'output_weakfield'
 
-    I_full = 2.0e11  # W/cm^2
+    I_full = float(sys.argv[2]) if len(sys.argv) > 2 else 2.0e11  # W/cm^2
     configs = [
         ('E0',   I_full),
         ('E0_2', I_full / 4.0),
@@ -89,7 +89,28 @@ def main():
         print(f"  {ref_label}→{label:<10} {h1_ratio:<14.4f} {h2_ratio:<14.4f} {h3_ratio:<14.4f}")
 
     print()
+    print("  Empirical exponents p (HHG ~ E0^p, ideal: H1=2, H2=4, H3=6):")
+    print(f"  {'Pair':<16} {'H1 p':<10} {'H2 p':<10} {'H3 p':<10}")
+    print("-" * 70)
+
+    labels_sorted = [l for l in ['E0', 'E0_2', 'E0_4'] if l in results]
+    for i in range(len(labels_sorted) - 1):
+        l1, l2 = labels_sorted[i], labels_sorted[i+1]
+        r1, r2 = results[l1], results[l2]
+        log_e = np.log(r2['E0'] / r1['E0'])
+        if abs(log_e) < 1e-30:
+            continue
+        exps = []
+        for h_key in ['H1', 'H2', 'H3']:
+            if r1[h_key] > 0 and r2[h_key] > 0:
+                exps.append(np.log(r2[h_key] / r1[h_key]) / (2 * log_e))
+            else:
+                exps.append(float('nan'))
+        print(f"  {l1}→{l2:<10} {exps[0]:<10.4f} {exps[1]:<10.4f} {exps[2]:<10.4f}")
+
+    print()
     print("  Ratios near 1.0 = perturbative regime confirmed.")
+    print("  Empirical p near ideal = perturbative scaling holds.")
     print("  Large deviations = non-perturbative effects (expected for strong fields).")
     print("=" * 70)
 

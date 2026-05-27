@@ -1254,13 +1254,17 @@ contains
 
   subroutine diagnose_tb_quality()
     integer :: ikx, iky, ir, a
-    real(dp) :: kdotR, eps_H_max, eps_r_max, eps_v_max
-    real(dp) :: eps_H_rms, eps_r_rms, eps_v_rms
-    real(dp) :: err_val
-    integer  :: nk_total, cnt
+    real(dp) :: kdotR
+    real(dp) :: eps_H_max, eps_r_max(3), eps_v_max(3)
+    real(dp) :: frob_H_sum, frob_r_sum(3), frob_v_sum(3)
+    real(dp) :: antih_r_sum(3), antih_v_sum(3)
+    real(dp) :: err_val, frob_val, antih_val
+    integer  :: cnt
     complex(dp) :: ph0
     complex(dp), allocatable :: H_full(:,:), D_full(:,:,:)
     complex(dp), allocatable :: dH_full(:,:,:), P_full(:,:,:)
+    complex(dp), allocatable :: diff(:,:)
+    character(1), parameter :: axis_label(3) = ['x', 'y', 'z']
 
     if (.not. has_rmn) then
       write(*,'(A)') '  TB quality diagnostics skipped: no dipole matrix.'
@@ -1268,12 +1272,13 @@ contains
     end if
 
     eps_H_max = 0.0_dp; eps_r_max = 0.0_dp; eps_v_max = 0.0_dp
-    eps_H_rms = 0.0_dp; eps_r_rms = 0.0_dp; eps_v_rms = 0.0_dp
-    nk_total  = nkx * nky
+    frob_H_sum = 0.0_dp; frob_r_sum = 0.0_dp; frob_v_sum = 0.0_dp
+    antih_r_sum = 0.0_dp; antih_v_sum = 0.0_dp
     cnt = 0
 
     allocate(H_full(nwann,nwann), D_full(nwann,nwann,3))
     allocate(dH_full(nwann,nwann,3), P_full(nwann,nwann,3))
+    allocate(diff(nwann,nwann))
 
     do iky = 1, nky
       do ikx = 1, nkx
@@ -1289,37 +1294,58 @@ contains
           end do
         end do
 
-        err_val = maxval(abs(H_full - conjg(transpose(H_full))))
+        diff = H_full - conjg(transpose(H_full))
+        err_val = maxval(abs(diff))
         eps_H_max = max(eps_H_max, err_val)
-        eps_H_rms = eps_H_rms + err_val**2
+        frob_val = sqrt(real(sum(abs(H_full)**2), dp))
+        if (frob_val > 0.0_dp) frob_H_sum = frob_H_sum + err_val / frob_val
 
         do a = 1, 3
-          err_val = maxval(abs(D_full(:,:,a) - conjg(transpose(D_full(:,:,a)))))
-          eps_r_max = max(eps_r_max, err_val)
-          eps_r_rms = eps_r_rms + err_val**2
+          diff = D_full(:,:,a) - conjg(transpose(D_full(:,:,a)))
+          err_val = maxval(abs(diff))
+          eps_r_max(a) = max(eps_r_max(a), err_val)
+          antih_val = sqrt(real(sum(abs(diff)**2), dp))
+          frob_val  = sqrt(real(sum(abs(D_full(:,:,a))**2), dp))
+          if (frob_val > 0.0_dp) then
+            frob_r_sum(a) = frob_r_sum(a) + antih_val / frob_val
+          end if
+          antih_r_sum(a) = antih_r_sum(a) + antih_val
 
           P_full(:,:,a) = dH_full(:,:,a) - C_I * &
             (matmul(D_full(:,:,a), H_full) - matmul(H_full, D_full(:,:,a)))
-          err_val = maxval(abs(P_full(:,:,a) - conjg(transpose(P_full(:,:,a)))))
-          eps_v_max = max(eps_v_max, err_val)
-          eps_v_rms = eps_v_rms + err_val**2
+          diff = P_full(:,:,a) - conjg(transpose(P_full(:,:,a)))
+          err_val = maxval(abs(diff))
+          eps_v_max(a) = max(eps_v_max(a), err_val)
+          antih_val = sqrt(real(sum(abs(diff)**2), dp))
+          frob_val  = sqrt(real(sum(abs(P_full(:,:,a))**2), dp))
+          if (frob_val > 0.0_dp) then
+            frob_v_sum(a) = frob_v_sum(a) + antih_val / frob_val
+          end if
+          antih_v_sum(a) = antih_v_sum(a) + antih_val
         end do
         cnt = cnt + 1
       end do
     end do
 
-    eps_H_rms = sqrt(eps_H_rms / real(cnt, dp))
-    eps_r_rms = sqrt(eps_r_rms / real(3*cnt, dp))
-    eps_v_rms = sqrt(eps_v_rms / real(3*cnt, dp))
-
-    deallocate(H_full, D_full, dH_full, P_full)
+    deallocate(H_full, D_full, dH_full, P_full, diff)
 
     write(*,'(A)') '==========================================='
     write(*,'(A)') '  TB Matrix Quality Diagnostics'
     write(*,'(A)') '==========================================='
-    write(*,'(A,ES10.2,A,ES10.2)') '  H(k) Hermiticity:  max=', eps_H_max, '  rms=', eps_H_rms
-    write(*,'(A,ES10.2,A,ES10.2)') '  r(k) Hermiticity:  max=', eps_r_max, '  rms=', eps_r_rms
-    write(*,'(A,ES10.2,A,ES10.2)') '  v(k) Hermiticity:  max=', eps_v_max, '  rms=', eps_v_rms
+    write(*,'(A,ES10.2,A,ES10.2)') '  H(k)   max|H-H+|=', eps_H_max, &
+      '  avg rel_frob=', frob_H_sum / real(cnt, dp)
+    do a = 1, 3
+      write(*,'(A,A1,A,ES10.2,A,ES10.2,A,ES10.2)') &
+        '  r_', axis_label(a), '(k) max|r-r+|=', eps_r_max(a), &
+        '  avg |antiherm|_F=', antih_r_sum(a) / real(cnt, dp), &
+        '  avg rel_frob=', frob_r_sum(a) / real(cnt, dp)
+    end do
+    do a = 1, 3
+      write(*,'(A,A1,A,ES10.2,A,ES10.2,A,ES10.2)') &
+        '  v_', axis_label(a), '(k) max|v-v+|=', eps_v_max(a), &
+        '  avg |antiherm|_F=', antih_v_sum(a) / real(cnt, dp), &
+        '  avg rel_frob=', frob_v_sum(a) / real(cnt, dp)
+    end do
     write(*,'(A)') '==========================================='
   end subroutine diagnose_tb_quality
 
