@@ -11,6 +11,15 @@ SDIR = src
 ODIR = obj
 MDIR = mod
 
+FC_BASENAME := $(notdir $(FC))
+ifneq (,$(filter ifort ifx,$(FC_BASENAME)))
+	MODFLAG = -module $(MDIR)
+	MODINC  = -I$(MDIR)
+else
+	MODFLAG = -J$(MDIR)
+	MODINC  = -I$(MDIR)
+endif
+
 SRCS = mod_params.f90 mod_wannier.f90 mod_crystal.f90 \
        mod_laser.f90 mod_current.f90 mod_quantum_light.f90 \
        mod_sbe.f90 mod_hhg.f90 mod_berry.f90 mod_ensemble.f90 main.f90
@@ -29,7 +38,7 @@ $(PROG): $(OBJS)
 	$(FC) $(FFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(ODIR)/%.o: $(SDIR)/%.f90 | dirs
-	$(FC) $(FFLAGS) -c $< -o $@ -J$(MDIR)
+	$(FC) $(FFLAGS) $(MODINC) -c $< -o $@ $(MODFLAG)
 
 debug: FFLAGS = -O0 -g -fbacktrace -fcheck=all -fopenmp -Wall -std=f2008 -fall-intrinsics
 debug: clean all
@@ -58,6 +67,6 @@ $(ODIR)/main.o:               $(ODIR)/mod_params.o $(ODIR)/mod_wannier.o \
 
 # --- Sampler unit test (standalone, no LAPACK/FFTW needed) ---
 test: dirs
-	$(FC) -O2 -Wall -std=f2008 -J$(MDIR) -o test_qlight \
+	$(FC) -O2 -Wall -std=f2008 $(MODINC) $(MODFLAG) -o test_qlight \
 		$(SDIR)/mod_quantum_light.f90 tests/test_qlight_sampling.f90
 	./test_qlight
