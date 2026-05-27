@@ -29,15 +29,16 @@ WORKDIR="${WEAKFIELD_WORKDIR:-/public/home/wangjs/project/New_SBEs/Quantum-light
 
 TASK_ID=${SLURM_ARRAY_TASK_ID:-0}
 
-# E0 scales: full, half, quarter
-INTENSITY_FULL=2.0e11
+# E0 scales: full, half, quarter (I scales as E0^2)
+INTENSITY_FULL=${WEAKFIELD_INTENSITY_FULL:-2.0e11}
+OUTROOT="${WEAKFIELD_OUTROOT:-${WORKDIR}/output_weakfield}"
 case ${TASK_ID} in
   0) SCALE="E0";    INTENSITY=${INTENSITY_FULL} ;;
   1) SCALE="E0_2";  INTENSITY=$(awk "BEGIN{printf \"%.4e\", ${INTENSITY_FULL}/4.0}") ;;
   2) SCALE="E0_4";  INTENSITY=$(awk "BEGIN{printf \"%.4e\", ${INTENSITY_FULL}/16.0}") ;;
 esac
 
-OUTDIR="${WORKDIR}/output_weakfield/${SCALE}"
+OUTDIR="${OUTROOT}/${SCALE}"
 
 cd "${WORKDIR}" || { echo "ERROR: Cannot cd to ${WORKDIR}"; exit 1; }
 
