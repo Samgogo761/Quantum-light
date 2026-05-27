@@ -18,7 +18,7 @@ program hhg_sbe_solver
 
   ! BSV variables
   type(qlight_params_t) :: qp
-  real(dp), allocatable :: Jt_sample(:,:), hhg_accum(:)
+  real(dp), allocatable :: Jt_sample(:,:), hhg_accum(:), hhg_accum2(:)
   real(dp), allocatable :: hhg_x_s(:), hhg_y_s(:), hhg_tot_s(:)
   real(dp) :: I_sample, phi_sample, E_peak_sample
   integer :: isamp, n_omega_s, n_omega_sample
@@ -66,6 +66,7 @@ program hhg_sbe_solver
                trim(gauge_method)
     error stop 1
   end select
+  call diagnose_tb_quality()
   if (allocated(HR_proj)) call compute_berry_curvature()
   call print_params()
   call write_bands("bands.dat")
@@ -113,8 +114,9 @@ program hhg_sbe_solver
 
     n_omega_s = nt / 2 + 1
     allocate(Jt_sample(nt, 2))
-    allocate(hhg_accum(n_omega_s))
-    hhg_accum = 0.0_dp
+    allocate(hhg_accum(n_omega_s), hhg_accum2(n_omega_s))
+    hhg_accum  = 0.0_dp
+    hhg_accum2 = 0.0_dp
 
     do isamp = 1, bsv_n_samples
       call qlight_sample_bsv(qp, I_sample, phi_sample)
@@ -131,7 +133,8 @@ program hhg_sbe_solver
         error stop 1
       end if
 
-      hhg_accum = hhg_accum + hhg_tot_s
+      hhg_accum  = hhg_accum  + hhg_tot_s
+      hhg_accum2 = hhg_accum2 + hhg_tot_s**2
       deallocate(hhg_x_s, hhg_y_s, hhg_tot_s)
 
       if (mod(isamp, 50) == 0) then
@@ -139,11 +142,14 @@ program hhg_sbe_solver
       end if
     end do
 
-    hhg_accum = hhg_accum / real(bsv_n_samples, dp)
+    hhg_accum  = hhg_accum  / real(bsv_n_samples, dp)
+    hhg_accum2 = hhg_accum2 / real(bsv_n_samples, dp)
+    hhg_accum2 = sqrt(max(hhg_accum2 - hhg_accum**2, 0.0_dp) / real(bsv_n_samples, dp))
 
-    call write_bsv_hhg("HHG_bsv.dat", hhg_accum, n_omega_s, nt, dt, omega0)
+    call write_bsv_hhg("HHG_bsv.dat", hhg_accum, hhg_accum2, n_omega_s, &
+                        bsv_n_samples, nt, dt, omega0)
 
-    deallocate(Jt_sample, hhg_accum)
+    deallocate(Jt_sample, hhg_accum, hhg_accum2)
     write(*,'(A)') 'BSV ensemble complete.'
   end if
 
@@ -189,21 +195,22 @@ contains
     error stop 1
   end subroutine resolve_input_file
 
-  subroutine write_bsv_hhg(filename, hhg_avg, nw, nt_in, dt_in, omega0_in)
+  subroutine write_bsv_hhg(filename, hhg_avg, hhg_stderr, nw, n_samp, nt_in, dt_in, omega0_in)
     character(*), intent(in) :: filename
-    real(dp),     intent(in) :: hhg_avg(:)
-    integer,      intent(in) :: nw, nt_in
+    real(dp),     intent(in) :: hhg_avg(:), hhg_stderr(:)
+    integer,      intent(in) :: nw, n_samp, nt_in
     real(dp),     intent(in) :: dt_in, omega0_in
     integer  :: u, iw
     real(dp) :: domega, omega_n, h_order
 
     domega = TWOPI / (real(nt_in, dp) * dt_in)
     open(newunit=u, file=filename, status='replace', action='write')
-    write(u, '(A)') '# harmonic_order  omega(a.u.)  HHG_bsv_avg'
+    write(u, '(A,I0)') '# n_samples = ', n_samp
+    write(u, '(A)') '# harmonic_order  omega(a.u.)  HHG_bsv_avg  HHG_bsv_stderr'
     do iw = 1, nw
       omega_n = real(iw - 1, dp) * domega
       h_order = omega_n / omega0_in
-      write(u, '(F10.4, 2ES16.8)') h_order, omega_n, hhg_avg(iw)
+      write(u, '(F10.4, 3ES16.8)') h_order, omega_n, hhg_avg(iw), hhg_stderr(iw)
     end do
     close(u)
   end subroutine write_bsv_hhg

@@ -7,7 +7,7 @@
 #   Default N_JOBS=10. Automatically handles missing tasks.
 #=============================================================================
 
-WORKDIR="/public/home/wangjs/project/Quantum-light"
+WORKDIR="${BSV_WORKDIR:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
 BSV_DIR="${WORKDIR}/output_bsv"
 N_JOBS=${1:-10}
 
@@ -34,8 +34,8 @@ fi
 echo ""
 echo "Combining ${FOUND} task files..."
 
-# Each file has 1 header line (# ...) then data lines.
-# FNR-1 gives a 1-based data index after skipping the header.
+# Each file has header lines (# ...) then data lines.
+# Computes mean and standard error across task files.
 awk '
 /^#/ { next }
 {
@@ -44,14 +44,19 @@ awk '
     col1[idx] = $1
     col2[idx] = $2
     sum3[idx] += $3 + 0
+    sum3sq[idx] += ($3 + 0)^2
     cnt[idx]++
     if (idx > maxidx) maxidx = idx
 }
 END {
-    print "# harmonic_order  omega(a.u.)  HHG_bsv_avg"
+    print "# harmonic_order  omega(a.u.)  HHG_bsv_avg  HHG_bsv_stderr"
     for (i = 1; i <= maxidx; i++) {
         if (cnt[i] > 0) {
-            printf "%10s %16s %16.8e\n", col1[i], col2[i], sum3[i] / cnt[i]
+            avg = sum3[i] / cnt[i]
+            var = sum3sq[i] / cnt[i] - avg^2
+            if (var < 0) var = 0
+            se = (cnt[i] > 1) ? sqrt(var / (cnt[i] - 1)) : 0
+            printf "%10s %16s %16.8e %16.8e\n", col1[i], col2[i], avg, se
         }
     }
 }

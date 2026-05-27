@@ -131,17 +131,17 @@ contains
       error stop 1
     end if
 
-    read(u, nml=crystal,   iostat=ios); rewind(u)
-    read(u, nml=kgrid,     iostat=ios); rewind(u)
-    read(u, nml=bands,     iostat=ios); rewind(u)
-    read(u, nml=laser,     iostat=ios); rewind(u)
-    read(u, nml=laser2,    iostat=ios); rewind(u)
-    read(u, nml=external_field, iostat=ios); rewind(u)
-    read(u, nml=timestep,  iostat=ios); rewind(u)
-    read(u, nml=dephasing, iostat=ios); rewind(u)
-    read(u, nml=bsv,       iostat=ios); rewind(u)
-    read(u, nml=method,    iostat=ios); rewind(u)
-    read(u, nml=diagnostics, iostat=ios)
+    call read_required_nml(u, 'crystal');   rewind(u)
+    call read_required_nml(u, 'kgrid');     rewind(u)
+    call read_required_nml(u, 'bands');     rewind(u)
+    call read_required_nml(u, 'laser');     rewind(u)
+    call read_optional_nml(u, 'laser2');    rewind(u)
+    call read_optional_nml(u, 'external_field'); rewind(u)
+    call read_required_nml(u, 'timestep');  rewind(u)
+    call read_required_nml(u, 'dephasing'); rewind(u)
+    call read_optional_nml(u, 'bsv');       rewind(u)
+    call read_required_nml(u, 'method');    rewind(u)
+    call read_optional_nml(u, 'diagnostics')
     close(u)
 
     a1 = a1_ang * Ang_to_bohr
@@ -285,6 +285,48 @@ contains
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
     write(*,'(A)')       '==========================================='
   end subroutine print_params
+
+  subroutine read_required_nml(u, name)
+    integer,      intent(in) :: u
+    character(*), intent(in) :: name
+    integer :: ios
+    select case (trim(name))
+    case ('crystal');        read(u, nml=crystal,   iostat=ios)
+    case ('kgrid');          read(u, nml=kgrid,     iostat=ios)
+    case ('bands');          read(u, nml=bands,     iostat=ios)
+    case ('laser');          read(u, nml=laser,     iostat=ios)
+    case ('timestep');       read(u, nml=timestep,  iostat=ios)
+    case ('dephasing');      read(u, nml=dephasing, iostat=ios)
+    case ('method');         read(u, nml=method,    iostat=ios)
+    case default
+      write(*,*) 'ERROR: unknown required namelist: ', trim(name)
+      error stop 1
+    end select
+    if (ios /= 0) then
+      write(*,*) 'ERROR: failed to read required namelist &', trim(name), ' (iostat=', ios, ')'
+      write(*,*) '  Check for misspelled variable names or format errors.'
+      error stop 1
+    end if
+  end subroutine read_required_nml
+
+  subroutine read_optional_nml(u, name)
+    integer,      intent(in) :: u
+    character(*), intent(in) :: name
+    integer :: ios
+    select case (trim(name))
+    case ('laser2');         read(u, nml=laser2,    iostat=ios)
+    case ('external_field'); read(u, nml=external_field, iostat=ios)
+    case ('bsv');            read(u, nml=bsv,       iostat=ios)
+    case ('diagnostics');    read(u, nml=diagnostics, iostat=ios)
+    case default
+      write(*,*) 'ERROR: unknown optional namelist: ', trim(name)
+      error stop 1
+    end select
+    if (ios /= 0) then
+      write(*,'(A,A,A,I0,A)') '  WARNING: namelist &', trim(name), &
+        ' not found or has errors (iostat=', ios, '), using defaults.'
+    end if
+  end subroutine read_optional_nml
 
   subroutine cross3(a, b, c)
     real(dp), intent(in)  :: a(3), b(3)

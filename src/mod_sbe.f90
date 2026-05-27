@@ -1252,4 +1252,75 @@ contains
     Jt_out = Jt
   end subroutine run_single_trajectory
 
+  subroutine diagnose_tb_quality()
+    integer :: ikx, iky, ir, a
+    real(dp) :: kdotR, eps_H_max, eps_r_max, eps_v_max
+    real(dp) :: eps_H_rms, eps_r_rms, eps_v_rms
+    real(dp) :: err_val
+    integer  :: nk_total, cnt
+    complex(dp) :: ph0
+    complex(dp), allocatable :: H_full(:,:), D_full(:,:,:)
+    complex(dp), allocatable :: dH_full(:,:,:), P_full(:,:,:)
+
+    if (.not. has_rmn) then
+      write(*,'(A)') '  TB quality diagnostics skipped: no dipole matrix.'
+      return
+    end if
+
+    eps_H_max = 0.0_dp; eps_r_max = 0.0_dp; eps_v_max = 0.0_dp
+    eps_H_rms = 0.0_dp; eps_r_rms = 0.0_dp; eps_v_rms = 0.0_dp
+    nk_total  = nkx * nky
+    cnt = 0
+
+    allocate(H_full(nwann,nwann), D_full(nwann,nwann,3))
+    allocate(dH_full(nwann,nwann,3), P_full(nwann,nwann,3))
+
+    do iky = 1, nky
+      do ikx = 1, nkx
+        H_full = C_0; D_full = C_0; dH_full = C_0
+
+        do ir = 1, nrpts
+          kdotR = dot_product(kpts_cart(:, ikx, iky), Rvec_cart(:, ir))
+          ph0 = exp(C_I * kdotR) / real(ndegen(ir), dp)
+          H_full = H_full + ph0 * Hmn_R(:,:,ir)
+          do a = 1, 3
+            D_full(:,:,a) = D_full(:,:,a) + ph0 * rmn_R(:,:,a,ir)
+            dH_full(:,:,a) = dH_full(:,:,a) + (C_I * Rvec_cart(a,ir) * ph0) * Hmn_R(:,:,ir)
+          end do
+        end do
+
+        err_val = maxval(abs(H_full - conjg(transpose(H_full))))
+        eps_H_max = max(eps_H_max, err_val)
+        eps_H_rms = eps_H_rms + err_val**2
+
+        do a = 1, 3
+          err_val = maxval(abs(D_full(:,:,a) - conjg(transpose(D_full(:,:,a)))))
+          eps_r_max = max(eps_r_max, err_val)
+          eps_r_rms = eps_r_rms + err_val**2
+
+          P_full(:,:,a) = dH_full(:,:,a) - C_I * &
+            (matmul(D_full(:,:,a), H_full) - matmul(H_full, D_full(:,:,a)))
+          err_val = maxval(abs(P_full(:,:,a) - conjg(transpose(P_full(:,:,a)))))
+          eps_v_max = max(eps_v_max, err_val)
+          eps_v_rms = eps_v_rms + err_val**2
+        end do
+        cnt = cnt + 1
+      end do
+    end do
+
+    eps_H_rms = sqrt(eps_H_rms / real(cnt, dp))
+    eps_r_rms = sqrt(eps_r_rms / real(3*cnt, dp))
+    eps_v_rms = sqrt(eps_v_rms / real(3*cnt, dp))
+
+    deallocate(H_full, D_full, dH_full, P_full)
+
+    write(*,'(A)') '==========================================='
+    write(*,'(A)') '  TB Matrix Quality Diagnostics'
+    write(*,'(A)') '==========================================='
+    write(*,'(A,ES10.2,A,ES10.2)') '  H(k) Hermiticity:  max=', eps_H_max, '  rms=', eps_H_rms
+    write(*,'(A,ES10.2,A,ES10.2)') '  r(k) Hermiticity:  max=', eps_r_max, '  rms=', eps_r_rms
+    write(*,'(A,ES10.2,A,ES10.2)') '  v(k) Hermiticity:  max=', eps_v_max, '  rms=', eps_v_rms
+    write(*,'(A)') '==========================================='
+  end subroutine diagnose_tb_quality
+
 end module mod_sbe
