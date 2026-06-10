@@ -9,6 +9,8 @@ program hhg_sbe_solver
   use mod_hhg
   use mod_quantum_light, only: qlight_params_t, qlight_init, qlight_sample_bsv
   use mod_berry
+  use mod_geometry
+  use mod_spin
   implicit none
 
   real(dp) :: t_start, t_end
@@ -72,6 +74,21 @@ program hhg_sbe_solver
   call write_bands("bands.dat")
   if (allocated(HR_proj)) call write_berry_curvature("berry_curvature.dat")
 
+  ! Tier-0: band-resolved quantum geometry (Berry curvature + quantum metric).
+  ! Works in the production length-gauge path (uses Pk_eq); PT symmetry of the
+  ! AFM forces Omega ~ 0, which is the rigorous proof that j_anom vanishes.
+  if (save_geometry .and. allocated(Pk_eq)) then
+    call compute_quantum_geometry()
+    call write_quantum_geometry("quantum_geometry.dat")
+  end if
+
+  ! Tier-1b: build the spin-z velocity operator (pluggable S_z source).
+  if (spin_current .and. allocated(Pk_eq)) then
+    call setup_spin_operator(Pk_eq)
+  else if (spin_current) then
+    write(*,'(A)') '  NOTE: spin_current requires the lg_cov/matrix_vg path (Pk_eq); skipped.'
+  end if
+
   ! === 4. Branch: classical or BSV ===
   if (.not. bsv_enabled) then
 
@@ -93,6 +110,14 @@ program hhg_sbe_solver
     call compute_hhg_spectrum(Jt, nt, dt, omega0, hhg_x, hhg_y, hhg_tot, n_omega)
     call write_hhg("HHG.dat", hhg_x, hhg_y, hhg_tot, n_omega, nt, dt, omega0)
     deallocate(hhg_x, hhg_y, hhg_tot)
+
+    ! Tier-1b: spin-z current and its HHG spectrum
+    if (spin_current .and. spin_ready) then
+      call write_spin_current("Jt_spin.dat", nt, dt)
+      call compute_hhg_spectrum(Jt_spin, nt, dt, omega0, hhg_x, hhg_y, hhg_tot, n_omega)
+      call write_hhg("HHG_spin.dat", hhg_x, hhg_y, hhg_tot, n_omega, nt, dt, omega0)
+      deallocate(hhg_x, hhg_y, hhg_tot)
+    end if
 
   else
 

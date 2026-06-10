@@ -10,8 +10,8 @@
 /
 
 &kgrid
-  nkx = 10
-  nky = 10
+  nkx = 46
+  nky = 46
 /
 
 &bands
@@ -47,7 +47,12 @@
 /
 
 &dephasing
-  T2_fs = 1.0e30
+  T2_cycles = 0.1
+/
+
+&output
+  save_geometry   = .true.
+  save_occupation = .false.
 /
 
 &bsv

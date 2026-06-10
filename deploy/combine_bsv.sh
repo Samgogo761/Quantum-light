@@ -7,9 +7,9 @@
 #   Default N_JOBS=10. Automatically handles missing tasks.
 #=============================================================================
 
-WORKDIR="${BSV_WORKDIR:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
+WORKDIR="${BSV_WORKDIR:-$(pwd)}"
 BSV_DIR="${WORKDIR}/output_bsv"
-N_JOBS=${1:-10}
+N_JOBS=${1:-3}
 
 echo "Scanning for BSV results (up to ${N_JOBS} tasks)..."
 

@@ -101,6 +101,17 @@ module mod_params
   character(256) :: pcenter_summary_file = 'pcenter_check_summary.dat'
   character(256) :: pcenter_kresolved_file = 'pcenter_check_kresolved.dat'
 
+  ! --- Output / observables (Tier 0/1 diagnostics) ---
+  logical :: save_geometry             = .true.   ! Berry curvature + quantum metric (lg_cov)
+  logical :: save_occupation           = .false.  ! k-space occupation snapshots rho_nn(k,t)
+  integer :: occ_stride                = 0        ! snapshot every occ_stride steps (0 => ~40 auto)
+  logical :: occ_band_resolved         = .false.  ! also dump full per-band occupation
+
+  ! --- Spin-resolved current (Tier 1b; lg_cov path) ---
+  logical        :: spin_current = .false.        ! compute spin-z current Jt_spin
+  character(256) :: spin_sz_file = ''             ! optional: real S_z(Wannier) matrix file (.spn-derived)
+  character(16)  :: spin_order   = 'interleaved'  ! nominal S_z order: 'interleaved' (up,down,..) or 'blocked'
+
   ! --- Namelists ---
   namelist /crystal/   a1_ang, a2_ang, a3_ang, E_fermi_eV, SOC, &
                        wannier_tb_file, wannier_hr_file, wannier_r_file
@@ -117,6 +128,8 @@ module mod_params
   namelist /method/    gauge_method
   namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
                          pcenter_summary_file, pcenter_kresolved_file
+  namelist /output/    save_geometry, save_occupation, occ_stride, occ_band_resolved
+  namelist /spin/      spin_current, spin_sz_file, spin_order
 
 contains
 
@@ -141,7 +154,9 @@ contains
     call read_required_nml(u, 'dephasing'); rewind(u)
     call read_optional_nml(u, 'bsv');       rewind(u)
     call read_required_nml(u, 'method');    rewind(u)
-    call read_optional_nml(u, 'diagnostics')
+    call read_optional_nml(u, 'diagnostics'); rewind(u)
+    call read_optional_nml(u, 'output');     rewind(u)
+    call read_optional_nml(u, 'spin')
     close(u)
 
     a1 = a1_ang * Ang_to_bohr
@@ -318,6 +333,8 @@ contains
     case ('external_field'); read(u, nml=external_field, iostat=ios)
     case ('bsv');            read(u, nml=bsv,       iostat=ios)
     case ('diagnostics');    read(u, nml=diagnostics, iostat=ios)
+    case ('output');         read(u, nml=output,    iostat=ios)
+    case ('spin');           read(u, nml=spin,      iostat=ios)
     case default
       write(*,*) 'ERROR: unknown optional namelist: ', trim(name)
       error stop 1

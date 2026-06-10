@@ -19,12 +19,12 @@
 #--- SLURM directives ---
 #SBATCH --job-name=hhg_bsv
 #SBATCH --partition=part_1
-#SBATCH --array=0-9%6
+#SBATCH --array=0-2%3
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=36
 #SBATCH --exclusive
-#SBATCH --time=4-00:00:00
+#SBATCH --time=2-00:00:00
 #SBATCH --output=bsv_%A_%a.out
 #SBATCH --error=bsv_%A_%a.err
 
@@ -34,10 +34,12 @@
 
 NTHREADS=${BSV_NTHREADS:-36}
 TB_FILE="${BSV_TB_FILE:-/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat}"
-WORKDIR="${BSV_WORKDIR:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
+WORKDIR="${BSV_WORKDIR:-${SLURM_SUBMIT_DIR:-$(pwd)}}"
 
-N_TOTAL=500
-N_JOBS=10
+# BSV pilot for <=3 nodes: 51 samples split across 3 tasks (17 each, one wave).
+# Scale up later by editing N_TOTAL (and the #SBATCH --array range to match N_JOBS).
+N_TOTAL=${BSV_N_TOTAL:-51}
+N_JOBS=${BSV_N_JOBS:-3}
 N_PER_JOB=$((N_TOTAL / N_JOBS))
 
 TASK_ID=${SLURM_ARRAY_TASK_ID:-0}
@@ -84,17 +86,16 @@ cd "${WORKDIR}"
 
 if [ "${TASK_ID}" -eq 0 ]; then
     rm -f "${WORKDIR}/.compile_done"
-    if [ ! -f hhg_sbe ] || [ "$(find src/ -name '*.f90' -newer hhg_sbe 2>/dev/null)" ]; then
-        export FC=ifort
-        export FFLAGS="-O3 -qopenmp -mkl -fpp"
-        export LDFLAGS=""
-        echo "Task 0: Compiling..."
-        make clean
-        make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"
-        if [ $? -ne 0 ]; then
-            echo "ERROR: Compilation failed!"
-            exit 1
-        fi
+    # Always clean+build: a folder copied from Windows carries incompatible
+    # objects/.mod and a Windows hhg_sbe.exe that must not be reused on Linux.
+    export FC=ifort
+    export FFLAGS="-O3 -qopenmp -mkl -fpp -heap-arrays"
+    export LDFLAGS=""
+    echo "Task 0: Compiling (clean build)..."
+    make clean
+    if ! make FC="${FC}" FFLAGS="${FFLAGS}" LDFLAGS="${LDFLAGS}"; then
+        echo "ERROR: Compilation failed!"
+        exit 1
     fi
     touch "${WORKDIR}/.compile_done"
 else
