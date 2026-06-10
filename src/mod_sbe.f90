@@ -3,6 +3,7 @@ module mod_sbe
   use mod_wannier
   use mod_crystal
   use mod_laser
+  use mod_spin, only: SzVk_eq, Jt_spin, spin_ready
   implicit none
 
   integer, parameter :: MODE_PEIERLS_VG = 1
@@ -17,6 +18,7 @@ module mod_sbe
   real(dp),    allocatable :: Jt_K(:,:)         ! (nt, 2) K-valley current
   real(dp),    allocatable :: Jt_Kp(:,:)        ! (nt, 2) K'-valley current
   real(dp) :: deph_factor
+  integer  :: occ_snapshot_count = 0            ! number of occupation snapshots written
 
   ! Pre-projected Wannier matrices for O(n_trunc^2) Fourier sums
   complex(dp), allocatable :: HR_proj(:,:,:,:,:)    ! (n_trunc, n_trunc, nrpts, nkx, nky)
@@ -59,7 +61,82 @@ contains
     Jt_inter = 0.0_dp
     Jt_K     = 0.0_dp
     Jt_Kp    = 0.0_dp
+    occ_snapshot_count = 0
+
+    if (spin_current) then
+      if (.not. allocated(Jt_spin)) allocate(Jt_spin(nt, 2))
+      Jt_spin = 0.0_dp
+    end if
   end subroutine init_density_matrix
+
+  integer function occ_stride_eff()
+    ! Effective snapshot stride: user value if > 0, else ~40 evenly spaced.
+    if (occ_stride > 0) then
+      occ_stride_eff = occ_stride
+    else
+      occ_stride_eff = max(nt / 40, 1)
+    end if
+  end function occ_stride_eff
+
+  subroutine write_occupation_snapshot(filename, it, time_au, first_call)
+    !-------------------------------------------------------------------------
+    ! Dump the equilibrium-band-basis occupation rho_nn(k) at one time step.
+    ! Compact form: valence-summed and conduction-summed populations per k.
+    ! If occ_band_resolved, also append a band-resolved file.
+    ! rho is in the equilibrium band basis, so rho(n,n,k) is the population of
+    ! field-free band n (n<=nv valence, n>nv conduction).
+    !-------------------------------------------------------------------------
+    character(*), intent(in) :: filename
+    integer,      intent(in) :: it
+    real(dp),     intent(in) :: time_au
+    logical,      intent(in) :: first_call
+    integer  :: u, ub, ikx, iky, n
+    real(dp) :: n_val, n_cond
+
+    if (first_call) then
+      open(newunit=u, file=filename, status='replace', action='write')
+      write(u, '(A)') '# k-space occupation snapshots (equilibrium band basis)'
+      write(u, '(A)') '# it  time_fs  ikx iky  kx(1/bohr) ky(1/bohr)  n_val  n_cond'
+    else
+      open(newunit=u, file=filename, status='old', position='append', action='write')
+    end if
+
+    do iky = 1, nky
+      do ikx = 1, nkx
+        n_val  = 0.0_dp
+        n_cond = 0.0_dp
+        do n = 1, nv
+          n_val = n_val + real(rho(n, n, ikx, iky), dp)
+        end do
+        do n = nv + 1, n_trunc
+          n_cond = n_cond + real(rho(n, n, ikx, iky), dp)
+        end do
+        write(u, '(I7, ES14.6, 2I5, 2ES14.6, 2ES16.8)') it, time_au * au_to_fs, &
+          ikx, iky, kpts_cart(1, ikx, iky), kpts_cart(2, ikx, iky), n_val, n_cond
+      end do
+    end do
+    close(u)
+
+    if (occ_band_resolved) then
+      if (first_call) then
+        open(newunit=ub, file='occupation_band_kt.dat', status='replace', action='write')
+        write(ub, '(A)') '# band-resolved occupation rho_nn(k,t), equilibrium band basis'
+        write(ub, '(A)') '# it  time_fs  ikx iky  band  occupation'
+      else
+        open(newunit=ub, file='occupation_band_kt.dat', status='old', &
+             position='append', action='write')
+      end if
+      do iky = 1, nky
+        do ikx = 1, nkx
+          do n = 1, n_trunc
+            write(ub, '(I7, ES14.6, 2I5, I5, ES16.8)') it, time_au * au_to_fs, &
+              ikx, iky, n, real(rho(n, n, ikx, iky), dp)
+          end do
+        end do
+      end do
+      close(ub)
+    end if
+  end subroutine write_occupation_snapshot
 
   subroutine precompute_projected_matrices()
     integer :: ikx, iky, ir, ios
@@ -755,8 +832,9 @@ contains
     real(dp) :: Jx_it, Jy_it
     real(dp) :: Jx_intra_it, Jy_intra_it, Jx_inter_it, Jy_inter_it
     real(dp) :: Jx_K_it, Jy_K_it, Jx_Kp_it, Jy_Kp_it
+    real(dp) :: Jx_spin_it, Jy_spin_it
     real(dp) :: E_now(3), E_mid(3), E_next(3)
-    complex(dp) :: tr_val, tr_intra, tr_inter
+    complex(dp) :: tr_val, tr_intra, tr_inter, tr_spin
     integer :: lwork_d, lrwork_d, liwork_d
     complex(dp), allocatable :: k1(:,:,:,:), k2(:,:,:,:)
     complex(dp), allocatable :: k3(:,:,:,:), k4(:,:,:,:)
@@ -802,13 +880,26 @@ contains
         E_next = E_now
       end if
 
+      Jx_spin_it = 0.0_dp;  Jy_spin_it = 0.0_dp
+
+      ! --- Tier-0 diagnostic: k-space occupation snapshots rho_nn(k,t) ---
+      if (save_occupation) then
+        if (mod(it - 1, occ_stride_eff()) == 0 .or. it == nt) then
+          call write_occupation_snapshot('occupation_kt.dat', it, &
+                                         real(it - 1, dp) * dt, &
+                                         occ_snapshot_count == 0)
+          occ_snapshot_count = occ_snapshot_count + 1
+        end if
+      end if
+
       !$OMP PARALLEL DEFAULT(shared) &
-      !$OMP PRIVATE(ikx, iky, a, m, n, tr_val, tr_intra, tr_inter, info_d, &
+      !$OMP PRIVATE(ikx, iky, a, m, n, tr_val, tr_intra, tr_inter, tr_spin, info_d, &
       !$OMP         Ht, vk_a, Wmat, eig_tmp, rho_band, v_band, tmp_mat, &
       !$OMP         work_d, rwork_d, iwork_d) &
       !$OMP REDUCTION(+:Jx_it, Jy_it, &
       !$OMP           Jx_intra_it, Jy_intra_it, Jx_inter_it, Jy_inter_it, &
-      !$OMP           Jx_K_it, Jy_K_it, Jx_Kp_it, Jy_Kp_it)
+      !$OMP           Jx_K_it, Jy_K_it, Jx_Kp_it, Jy_Kp_it, &
+      !$OMP           Jx_spin_it, Jy_spin_it)
 
       allocate(Ht(n_trunc,n_trunc), vk_a(n_trunc,n_trunc))
       allocate(Wmat(n_trunc,n_trunc), eig_tmp(n_trunc))
@@ -862,12 +953,22 @@ contains
               end do
             end if
 
+            if (spin_current .and. spin_ready) then
+              tr_spin = C_0
+              do n = 1, n_trunc
+                do m = 1, n_trunc
+                  tr_spin = tr_spin + SzVk_eq(m,n,a,ikx,iky) * rho(n,m,ikx,iky)
+                end do
+              end do
+            end if
+
             if (a == 1) then
               Jx_it = Jx_it + real(tr_val, dp)
               if (decompose) then
                 Jx_intra_it = Jx_intra_it + real(tr_intra, dp)
                 Jx_inter_it = Jx_inter_it + real(tr_inter, dp)
               end if
+              if (spin_current .and. spin_ready) Jx_spin_it = Jx_spin_it + real(tr_spin, dp)
               if (do_valley) then
                 if (valley_id(ikx,iky) == 1) then
                   Jx_K_it = Jx_K_it + real(tr_val, dp)
@@ -881,6 +982,7 @@ contains
                 Jy_intra_it = Jy_intra_it + real(tr_intra, dp)
                 Jy_inter_it = Jy_inter_it + real(tr_inter, dp)
               end if
+              if (spin_current .and. spin_ready) Jy_spin_it = Jy_spin_it + real(tr_spin, dp)
               if (do_valley) then
                 if (valley_id(ikx,iky) == 1) then
                   Jy_K_it = Jy_K_it + real(tr_val, dp)
@@ -914,6 +1016,11 @@ contains
         Jt_K(it, 2)  = -Jy_K_it * Nk_inv
         Jt_Kp(it, 1) = -Jx_Kp_it * Nk_inv
         Jt_Kp(it, 2) = -Jy_Kp_it * Nk_inv
+      end if
+
+      if (spin_current .and. spin_ready) then
+        Jt_spin(it, 1) = -Jx_spin_it * Nk_inv
+        Jt_spin(it, 2) = -Jy_spin_it * Nk_inv
       end if
 
       if (advance_step) then
