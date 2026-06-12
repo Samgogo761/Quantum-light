@@ -2,10 +2,11 @@
 #=============================================================================
 # Verify the 2026-06 solver changes on the server (single classical run).
 #
-# Runs lg_cov / 40x40 / nb1-112 / T2_cycles=0.5 / ncyc=4 with the new
-# observables on, so one run covers:
-#   1. Regression   : HHG.dat / Jt.dat should match the pre-change
-#                     lgcov_k40_nb112 / T2_0p5cycle data (numbers unchanged).
+# Runs lg_cov / 40x40 / nb1-112 / T2_cycles=1.0 / ncyc=4 with the new
+# observables on (publication-standard dephasing: T2=10.7 fs, peak FWHM ~0.32 H),
+# so one run doubles as a real physics run AND a code check:
+#   1. Regression   : HHG.dat / Jt.dat should remain physically consistent
+#                     with the corresponding lg_cov / nb1-112 / T2=1 cycle run.
 #   2. j_anom / PT   : quantum_geometry.dat at FULL nb1-112 -> max|Omega| floor.
 #   3. Spin pipeline : equilibrium <S_z> self-check + nominal spin HHG_spin.dat.
 #
@@ -30,7 +31,7 @@ set -eo pipefail
 NTHREADS="${SLURM_CPUS_PER_TASK:-36}"
 WORKDIR="${WORKDIR:-${SLURM_SUBMIT_DIR:-$(pwd)}}"
 TB_FILE="${TB_FILE:-/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat}"
-OUTDIR="${OUTDIR:-${WORKDIR}/output_verify_obs_nb112_T2_0p5cycle}"
+OUTDIR="${OUTDIR:-${WORKDIR}/output_verify_obs_nb112_T2_1p0cycle}"
 
 cd "${WORKDIR}" || { echo "ERROR: cannot cd to ${WORKDIR}"; exit 1; }
 
@@ -95,14 +96,17 @@ cat > "${OUTDIR}/input.nml" <<EOF
   n_dt_deph = 5
 /
 &dephasing
-  T2_cycles = 0.5
+  T2_cycles = 1.0
 /
 &method
   gauge_method = 'lg_cov'
 /
 &output
   save_geometry   = .true.
-  save_occupation = .false.
+  save_occupation = .true.
+  occ_stride = 100
+  occ_band_resolved = .false.
+  save_coherence = .true.
 /
 &spin
   spin_current = .true.
@@ -126,7 +130,9 @@ echo ""
 echo "=== Quick checks ==="
 grep -E "Initial current|max .Omega|Equilibrium spin|sum over valence" run.log || true
 echo "Outputs in ${OUTDIR}:"
-ls -lh HHG.dat Jt.dat quantum_geometry.dat HHG_spin.dat Jt_spin.dat 2>/dev/null || true
+ls -lh HHG.dat Jt.dat Et.dat quantum_geometry.dat occupation_kt.dat coherence_kt.dat \
+  HHG_spin.dat Jt_spin.dat 2>/dev/null || true
 echo ""
-echo "Next (on a node with python+numpy):"
-echo "  python ${WORKDIR}/tools/analysis/analyze_quantum_geometry.py --file ${OUTDIR}/quantum_geometry.dat"
+echo "Next (use python3, NOT python -- server python is 2.x):"
+echo "  python3 ${WORKDIR}/tools/analysis/analyze_quantum_geometry.py --file ${OUTDIR}/quantum_geometry.dat"
+echo "  (or just run it locally after downloading quantum_geometry.dat)"

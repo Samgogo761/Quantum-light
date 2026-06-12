@@ -111,6 +111,24 @@ contains
     end if
   end subroutine generate_field_sample
 
+  subroutine write_field(filename)
+    character(*), intent(in) :: filename
+    integer :: u, it
+
+    if (.not. allocated(Et_vec)) return
+    if (.not. allocated(At_vec)) return
+
+    open(newunit=u, file=filename, status='replace', action='write')
+    write(u, '(A)') '# raw solver field after residual-DC correction'
+    write(u, '(A)') '# it  time_fs  Ex(a.u.)  Ey(a.u.)  Ax(a.u.)  Ay(a.u.)'
+    do it = 1, nt
+      write(u, '(I8, 5ES18.10)') it, real(it - 1, dp) * dt * au_to_fs, &
+        Et_vec(it, 1), Et_vec(it, 2), At_vec(it, 1), At_vec(it, 2)
+    end do
+    close(u)
+    write(*,'(A,A)') '  Field written to ', trim(filename)
+  end subroutine write_field
+
   subroutine read_external_A_field(filename)
     character(*), intent(in) :: filename
     integer :: u, ios, nrow, it, idx

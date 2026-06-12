@@ -90,32 +90,58 @@ contains
     integer,      intent(in) :: it
     real(dp),     intent(in) :: time_au
     logical,      intent(in) :: first_call
-    integer  :: u, ub, ikx, iky, n
-    real(dp) :: n_val, n_cond
+    integer  :: u, ub, uc, ikx, iky, m, n
+    real(dp) :: n_val, n_cond, coh2
 
-    if (first_call) then
-      open(newunit=u, file=filename, status='replace', action='write')
-      write(u, '(A)') '# k-space occupation snapshots (equilibrium band basis)'
-      write(u, '(A)') '# it  time_fs  ikx iky  kx(1/bohr) ky(1/bohr)  n_val  n_cond'
-    else
-      open(newunit=u, file=filename, status='old', position='append', action='write')
+    if (save_occupation) then
+      if (first_call) then
+        open(newunit=u, file=filename, status='replace', action='write')
+        write(u, '(A)') '# k-space occupation snapshots (equilibrium band basis)'
+        write(u, '(A)') '# it  time_fs  ikx iky  kx(1/bohr) ky(1/bohr)  n_val  n_cond'
+      else
+        open(newunit=u, file=filename, status='old', position='append', action='write')
+      end if
+    end if
+
+    if (save_coherence) then
+      if (first_call) then
+        open(newunit=uc, file='coherence_kt.dat', status='replace', action='write')
+        write(uc, '(A)') '# off-diagonal density-matrix Frobenius norm per k'
+        write(uc, '(A)') '# it  time_fs  ikx iky  kx(1/bohr) ky(1/bohr)  coherence_norm'
+      else
+        open(newunit=uc, file='coherence_kt.dat', status='old', position='append', action='write')
+      end if
     end if
 
     do iky = 1, nky
       do ikx = 1, nkx
-        n_val  = 0.0_dp
-        n_cond = 0.0_dp
-        do n = 1, nv
-          n_val = n_val + real(rho(n, n, ikx, iky), dp)
-        end do
-        do n = nv + 1, n_trunc
-          n_cond = n_cond + real(rho(n, n, ikx, iky), dp)
-        end do
-        write(u, '(I7, ES14.6, 2I5, 2ES14.6, 2ES16.8)') it, time_au * au_to_fs, &
-          ikx, iky, kpts_cart(1, ikx, iky), kpts_cart(2, ikx, iky), n_val, n_cond
+        if (save_occupation) then
+          n_val  = 0.0_dp
+          n_cond = 0.0_dp
+          do n = 1, nv
+            n_val = n_val + real(rho(n, n, ikx, iky), dp)
+          end do
+          do n = nv + 1, n_trunc
+            n_cond = n_cond + real(rho(n, n, ikx, iky), dp)
+          end do
+          write(u, '(I7, ES14.6, 2I5, 2ES14.6, 2ES16.8)') it, time_au * au_to_fs, &
+            ikx, iky, kpts_cart(1, ikx, iky), kpts_cart(2, ikx, iky), n_val, n_cond
+        end if
+
+        if (save_coherence) then
+          coh2 = 0.0_dp
+          do n = 1, n_trunc
+            do m = 1, n_trunc
+              if (m /= n) coh2 = coh2 + abs(rho(m, n, ikx, iky))**2
+            end do
+          end do
+          write(uc, '(I7, ES14.6, 2I5, 2ES14.6, ES16.8)') it, time_au * au_to_fs, &
+            ikx, iky, kpts_cart(1, ikx, iky), kpts_cart(2, ikx, iky), sqrt(coh2)
+        end if
       end do
     end do
-    close(u)
+    if (save_occupation) close(u)
+    if (save_coherence) close(uc)
 
     if (occ_band_resolved) then
       if (first_call) then
@@ -883,7 +909,7 @@ contains
       Jx_spin_it = 0.0_dp;  Jy_spin_it = 0.0_dp
 
       ! --- Tier-0 diagnostic: k-space occupation snapshots rho_nn(k,t) ---
-      if (save_occupation) then
+      if (save_occupation .or. save_coherence) then
         if (mod(it - 1, occ_stride_eff()) == 0 .or. it == nt) then
           call write_occupation_snapshot('occupation_kt.dat', it, &
                                          real(it - 1, dp) * dt, &

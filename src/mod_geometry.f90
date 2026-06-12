@@ -93,34 +93,37 @@ contains
   end subroutine compute_quantum_geometry
 
   subroutine report_geometry_summary()
-    ! Print BZ-summary numbers, in particular the PT check on Berry curvature.
-    real(dp) :: max_abs_omega, sum_abs_omega, max_trg, mean_trg
-    integer  :: ikx, iky, n, ncount
+    ! PT check on Berry curvature. With SOC+PT every band is Kramers-degenerate,
+    ! so per-band Omega_n diverges from its near-degenerate partner (1/dE^2) and
+    ! is meaningless. The PT-protected, j_anom-relevant quantity is the sum over
+    ! OCCUPIED bands (n=1..nv), where the degenerate-pair divergences cancel.
+    real(dp) :: max_pb_omega, om_occ, max_om_occ, sum_om_occ, max_pb_trg
+    integer  :: ikx, iky, n, nkpts
 
-    max_abs_omega = 0.0_dp
-    sum_abs_omega = 0.0_dp
-    max_trg       = 0.0_dp
-    mean_trg      = 0.0_dp
-    ncount        = 0
+    max_pb_omega = 0.0_dp
+    max_om_occ   = 0.0_dp
+    sum_om_occ   = 0.0_dp
+    max_pb_trg   = 0.0_dp
+    nkpts        = nkx * nky
     do iky = 1, nky
       do ikx = 1, nkx
+        om_occ = 0.0_dp
         do n = 1, n_trunc
-          max_abs_omega = max(max_abs_omega, abs(geo_berry(n, ikx, iky)))
-          sum_abs_omega = sum_abs_omega + abs(geo_berry(n, ikx, iky))
-          max_trg = max(max_trg, geo_gxx(n, ikx, iky) + geo_gyy(n, ikx, iky))
-          mean_trg = mean_trg + (geo_gxx(n, ikx, iky) + geo_gyy(n, ikx, iky))
-          ncount = ncount + 1
+          max_pb_omega = max(max_pb_omega, abs(geo_berry(n, ikx, iky)))
+          max_pb_trg   = max(max_pb_trg, geo_gxx(n, ikx, iky) + geo_gyy(n, ikx, iky))
+          if (n <= nv) om_occ = om_occ + geo_berry(n, ikx, iky)
         end do
+        max_om_occ = max(max_om_occ, abs(om_occ))
+        sum_om_occ = sum_om_occ + abs(om_occ)
       end do
     end do
-    if (ncount > 0) mean_trg = mean_trg / real(ncount, dp)
 
     write(*,'(A)')          '  Quantum geometry computed (Omega + quantum metric).'
-    write(*,'(A,ES12.4)')   '    max |Omega_n(k)|      (a.u.) : ', max_abs_omega
-    write(*,'(A,ES12.4)')   '    mean|Omega_n(k)|      (a.u.) : ', sum_abs_omega / real(max(ncount,1), dp)
-    write(*,'(A)')          '    (PT-symmetric AFM => max|Omega| should sit at the numerical floor)'
-    write(*,'(A,ES12.4)')   '    max  Tr g_n(k)        (a.u.) : ', max_trg
-    write(*,'(A,ES12.4)')   '    mean Tr g_n(k)        (a.u.) : ', mean_trg
+    write(*,'(A,ES12.4)')   '    max_k |Omega_occ(k)|  (a.u.) : ', max_om_occ
+    write(*,'(A,ES12.4)')   '    mean_k|Omega_occ(k)|  (a.u.) : ', sum_om_occ / real(max(nkpts,1), dp)
+    write(*,'(A)')          '    (occupied-manifold sum; PT-symmetric AFM => small => j_anom suppressed)'
+    write(*,'(A,ES12.4)')   '    per-band max|Omega_n|        : ', max_pb_omega
+    write(*,'(A)')          '    (per-band values are Kramers-divergent -- ignore; use Omega_occ)'
   end subroutine report_geometry_summary
 
   subroutine write_quantum_geometry(filename)

@@ -94,6 +94,7 @@ program hhg_sbe_solver
 
     ! --- Classical single-trajectory path ---
     call generate_field()
+    call write_field("Et.dat")
     call init_density_matrix()
 
     write(*,'(A)') 'Starting classical time evolution...'

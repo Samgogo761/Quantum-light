@@ -106,6 +106,7 @@ module mod_params
   logical :: save_occupation           = .false.  ! k-space occupation snapshots rho_nn(k,t)
   integer :: occ_stride                = 0        ! snapshot every occ_stride steps (0 => ~40 auto)
   logical :: occ_band_resolved         = .false.  ! also dump full per-band occupation
+  logical :: save_coherence            = .false.  ! dump off-diagonal density-matrix norm per k,t
 
   ! --- Spin-resolved current (Tier 1b; lg_cov path) ---
   logical        :: spin_current = .false.        ! compute spin-z current Jt_spin
@@ -128,7 +129,8 @@ module mod_params
   namelist /method/    gauge_method
   namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
                          pcenter_summary_file, pcenter_kresolved_file
-  namelist /output/    save_geometry, save_occupation, occ_stride, occ_band_resolved
+  namelist /output/    save_geometry, save_occupation, occ_stride, occ_band_resolved, &
+                       save_coherence
   namelist /spin/      spin_current, spin_sz_file, spin_order
 
 contains

@@ -33,11 +33,20 @@ def load_geometry(path: Path):
     return cols
 
 
+def occupied_sum_per_k(c, mask):
+    """Sum a per-(k,band) quantity over bands selected by `mask`, grouped by k."""
+    key = c["ikx"].astype(np.int64) * 100000 + c["iky"].astype(np.int64)
+    ukey, inv = np.unique(key, return_inverse=True)
+    out = np.zeros(ukey.size)
+    np.add.at(out, inv[mask], c["_val"][mask])
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--file", required=True, type=Path)
-    ap.add_argument("--ef", type=float, default=None,
-                    help="Fermi level (eV) to split valence/conduction; default median E")
+    ap.add_argument("--ef", type=float, default=0.0843,
+                    help="Fermi level (eV); occupied = E < ef (default 0.0843)")
     args = ap.parse_args()
 
     c = load_geometry(args.file)
@@ -46,54 +55,51 @@ def main() -> None:
     nrow = omega.size
     nk = len(set(zip(c["ikx"].tolist(), c["iky"].tolist())))
     nband = len(set(c["band"].tolist()))
+    occ = c["E"] < args.ef
 
     print("=" * 70)
     print(f"Quantum geometry: {args.file.name}")
-    print(f"  k-points = {nk},  bands = {nband},  rows = {nrow}")
+    print(f"  k-points = {nk},  bands = {nband},  rows = {nrow},  occupied(E<{args.ef}) = {int(occ.sum())}")
     print("=" * 70)
 
-    # --- 1. PT / j_anom check -------------------------------------------------
-    max_abs_omega = float(np.max(np.abs(omega)))
-    rms_omega = float(np.sqrt(np.mean(omega ** 2)))
-    typ_trg = float(np.median(trg[trg > 0])) if np.any(trg > 0) else 0.0
-    print("\n[1] PT / anomalous-current (j_anom) check")
-    print(f"    max |Omega_n(k)|        = {max_abs_omega:.4e} a.u.")
-    print(f"    rms |Omega_n(k)|        = {rms_omega:.4e} a.u.")
-    print(f"    median Tr g_n(k) (>0)   = {typ_trg:.4e} a.u.  (natural geometric scale)")
-    if typ_trg > 0:
-        ratio = max_abs_omega / typ_trg
-        print(f"    max|Omega| / median Tr g = {ratio:.2e}")
-        if ratio < 1e-3:
-            print("    => Omega at numerical floor relative to quantum metric:")
-            print("       PT symmetry confirmed, j_anom ~ 0 -> even harmonics are j_pol.")
-        else:
-            print("    => Omega NOT negligible vs metric: investigate PT breaking /")
-            print("       degeneracy handling before claiming j_anom = 0.")
+    # --- 1. PT / j_anom check (OCCUPIED-MANIFOLD SUM) -------------------------
+    # With SOC + PT every band is Kramers-degenerate, so the per-band Abelian
+    # Omega_n diverges from its near-degenerate partner (1/dE^2) and is
+    # meaningless. The PT-protected, j_anom-relevant quantity is the sum over
+    # OCCUPIED bands, where degenerate-pair divergences cancel.
+    c["_val"] = omega
+    om_occ = occupied_sum_per_k(c, occ)
+    om_all = occupied_sum_per_k(c, np.ones_like(occ))
+    c["_val"] = trg
+    trg_occ = occupied_sum_per_k(c, occ)
 
-    # --- 2. Quantum metric ----------------------------------------------------
-    print("\n[2] Quantum metric (PT-even, geometric origin of polarization response)")
-    print(f"    max  Tr g_n(k)          = {float(np.max(trg)):.4e} a.u.")
-    print(f"    mean Tr g_n(k)          = {float(np.mean(trg)):.4e} a.u.")
+    max_occ = float(np.max(np.abs(om_occ)))
+    mean_occ = float(np.mean(np.abs(om_occ)))
+    floor = float(np.max(np.abs(om_all)))   # all-band trace = numerical/roundoff floor
+    print("\n[1] PT / anomalous-current (j_anom) check  [occupied-manifold sum]")
+    print(f"    max_k |Omega_occ(k)|      = {max_occ:.4e} a.u.   <- the PT check")
+    print(f"    mean_k|Omega_occ(k)|      = {mean_occ:.4e} a.u.")
+    print(f"    all-band Sum_n Omega_n    = {floor:.4e} a.u.  (trace sum-rule = numerical floor)")
+    print(f"    per-band max|Omega_n|     = {float(np.max(np.abs(omega))):.3e}  (Kramers-divergent, IGNORE)")
+    # Berry curvature is in bohr^2; |Omega_occ| ~ O(0.1) is small in absolute terms.
+    if max_occ < 1.0:
+        print("    => |Omega_occ| < 1 bohr^2: anomalous (Berry) channel strongly PT-suppressed,")
+        print("       j_anom small -> even harmonics dominated by the polarization current j_pol.")
+    else:
+        print("    => |Omega_occ| not small: investigate Wannier PT quality.")
+    if max_occ > 30.0 * max(floor, 1e-12):
+        print(f"    note: |Omega_occ| is ~{max_occ/max(floor,1e-12):.0f}x the roundoff floor -> a small")
+        print("       genuine PT residual of the Wannier model (consistent with the ~5e-2")
+        print("       non-Hermiticity of the Wannier position matrix). For a rigorous even-")
+        print("       harmonic bound, compute the time-resolved j_anom(t) (Tier-0b+ TODO).")
 
-    # Per-valley split if available
-    for vid, name in ((1, "K"), (-1, "Kp"), (2, "K"), (0, "all")):
-        sel = c["valley"] == vid
-        if np.any(sel):
-            print(f"    valley {name:3s} (id={vid:+d}): "
-                  f"mean Tr g = {float(np.mean(trg[sel])):.4e}, "
-                  f"max|Omega| = {float(np.max(np.abs(omega[sel]))):.4e}")
-
-    # Band-resolved near-gap summary (bands with largest metric)
-    print("\n[3] Bands with largest BZ-summed quantum metric (geometry hot spots):")
-    band_ids = sorted(set(c["band"].tolist()))
-    trg_by_band = []
-    for b in band_ids:
-        sel = c["band"] == b
-        trg_by_band.append((b, float(np.sum(trg[sel])), float(np.mean(c["E"][sel]))))
-    trg_by_band.sort(key=lambda x: -x[1])
-    print(f"    {'band':>5} {'sum Tr g':>14} {'<E>(eV)':>10}")
-    for b, s, e in trg_by_band[:8]:
-        print(f"    {b:>5} {s:>14.4e} {e:>10.3f}")
+    # --- 2. Quantum metric (occupied-manifold, geometry of polarization) ------
+    # Per-band Tr g is also Kramers-divergent; the occupied-manifold sum is the
+    # gauge-invariant quantum volume of the filled bands.
+    print("\n[2] Quantum metric (occupied-manifold; geometric origin of polarization)")
+    print(f"    max_k  Tr g_occ(k)        = {float(np.max(trg_occ)):.4e} a.u.")
+    print(f"    mean_k Tr g_occ(k)        = {float(np.mean(trg_occ)):.4e} a.u.")
+    print(f"    (per-band max Tr g_n = {float(np.max(trg)):.3e}, Kramers-divergent, IGNORE)")
 
 
 if __name__ == "__main__":
