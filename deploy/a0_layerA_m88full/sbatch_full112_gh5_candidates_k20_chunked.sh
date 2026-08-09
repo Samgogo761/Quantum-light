@@ -242,10 +242,11 @@ NODES_SHA256_EXPECTED="$(sha256_file "${NODES_FILE}")"
 TB_SHA256_EXPECTED="$(sha256_file "${TB}")"
 TMPL_EXPECTED="${REPO}/deploy/a0_layerA_m88full/input_template_full112.nml"
 TEMPLATE_SHA256_EXPECTED="$(sha256_file "${TMPL_EXPECTED}")"
+# Content-only hashes (no paths): expected and actual must use the same order.
 VALIDATOR_BUNDLE_SHA256_EXPECTED="$({
-  sha256sum "${NODE_VALIDATOR}"
-  sha256sum "${RUN_VALIDATOR}"
-  sha256sum "${NODE_VALIDATOR_CORE}"
+  sha256_file "${NODE_VALIDATOR}"
+  sha256_file "${NODE_VALIDATOR_CORE}"
+  sha256_file "${RUN_VALIDATOR}"
 } | sha256sum | awk '{print $1}')"
 if [ -f "${OUTDIR}/SUCCESS" ] && [ -s "${OUTDIR}/HHG_nodes_modes.dat" ] \
    && [ -f "${OUTDIR}/run_metadata.txt" ] \
@@ -291,15 +292,15 @@ if [ -d "${OUTDIR}" ] && \
 fi
 
 cp -f "${NODE_VALIDATOR}" "${OUTDIR}/validator_snapshot/"
-cp -f "${RUN_VALIDATOR}" "${OUTDIR}/validator_snapshot/"
 cp -f "${NODE_VALIDATOR_CORE}" "${OUTDIR}/validator_snapshot/"
+cp -f "${RUN_VALIDATOR}" "${OUTDIR}/validator_snapshot/"
 NODE_VALIDATOR_SNAPSHOT="${OUTDIR}/validator_snapshot/validate_qlight_nodes_production.py"
-RUN_VALIDATOR_SNAPSHOT="${OUTDIR}/validator_snapshot/validate_a0_run_strict.py"
 VALIDATOR_CORE_SNAPSHOT="${OUTDIR}/validator_snapshot/validate_qlight_nodes_strict.py"
+RUN_VALIDATOR_SNAPSHOT="${OUTDIR}/validator_snapshot/validate_a0_run_strict.py"
 VALIDATOR_BUNDLE_SHA256="$({
-  sha256sum "${NODE_VALIDATOR_SNAPSHOT}"
-  sha256sum "${RUN_VALIDATOR_SNAPSHOT}"
-  sha256sum "${VALIDATOR_CORE_SNAPSHOT}"
+  sha256_file "${NODE_VALIDATOR_SNAPSHOT}"
+  sha256_file "${VALIDATOR_CORE_SNAPSHOT}"
+  sha256_file "${RUN_VALIDATOR_SNAPSHOT}"
 } | sha256sum | awk '{print $1}')"
 
 cp -f "${NODES_FILE}" "${OUTDIR}/nodes_manifest.input.dat"
