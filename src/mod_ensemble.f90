@@ -1,17 +1,16 @@
 !===============================================================================
 ! mod_ensemble
 !-------------------------------------------------------------------------------
-! Monte-Carlo driver for BSV quantum-light HHG.
-! Wraps the SBE solver: for each trajectory, sample (I, phi) from the
-! random-phase BSV distribution, run one time evolution, FFT, accumulate
-! |J(omega)|^2 with Welford online variance.
+! Monte-Carlo driver for quantum-light HHG (layer A).
+! Wraps the SBE solver: for each trajectory, sample (I, phi) from the selected
+! phase-space distribution, run one time evolution, FFT, accumulate
+! |J(omega)|^2 with Welford online variance, plus coherent-sum amplitudes.
 !
-! Integrated with the new hhg-sbe-solver modules (mod_laser, mod_sbe).
-! The new solver uses atomic units internally; the intensity-to-field
-! conversion (W/cm^2 → a.u.) is done here.
+! Naming (2026-07-29 theory note):
+!   ICS - CS  is classical_trajectory_variance, NOT "S_quant".
 !===============================================================================
 module mod_ensemble
-  use mod_quantum_light, only: dp, qlight_params_t, qlight_init, qlight_sample_bsv
+  use mod_quantum_light, only: dp, qlight_params_t, qlight_init, qlight_sample_drive
   implicit none
   private
 
@@ -67,23 +66,23 @@ contains
     character(len=*),   intent(in) :: prefix
     character(len=256) :: fname
     integer  :: iw, u, n
-    real(dp) :: s_total, s_coh, s_quant, sigma, inv_n, inv_n2
+    real(dp) :: s_total, s_coh, s_var, sigma, inv_n, inv_n2
 
     write(fname, '(A,"_ckpt_",I6.6,".dat")') trim(prefix), i_sample
     open(newunit=u, file=trim(fname), status='replace', action='write')
-    write(u,'(A,I0)') '# BSV ensemble checkpoint, N = ', accum%n
-    write(u,'(A)')    '# iw    S_total         S_coh           S_quant         sigma'
+    write(u,'(A,I0)') '# quantum-light ensemble checkpoint, N = ', accum%n
+    write(u,'(A)')    '# iw    ICS(S_total)    CS(S_coh)   classical_trajectory_variance  sigma'
     n = accum%n; inv_n = 1.0_dp/real(n,dp); inv_n2 = inv_n*inv_n
     do iw = 1, accum%nw
       s_total = accum%sum_Jw2(iw) * inv_n
       s_coh   = real(accum%sum_Jw(iw)*conjg(accum%sum_Jw(iw)), dp) * inv_n2
-      s_quant = s_total - s_coh
+      s_var   = s_total - s_coh
       if (n > 1) then
         sigma = sqrt((accum%M2(iw) / real(n-1, dp)) * inv_n)
       else
         sigma = 0.0_dp
       end if
-      write(u,'(I8,4ES16.8)') iw, s_total, s_coh, s_quant, sigma
+      write(u,'(I8,4ES16.8)') iw, s_total, s_coh, s_var, sigma
     end do
     close(u)
   end subroutine spec_accum_dump
@@ -114,7 +113,7 @@ contains
     allocate(Jt_i(nt_in, 2))
 
     do i = 1, qp%n_samples
-      call qlight_sample_bsv(qp, I_i, phi_i)
+      call qlight_sample_drive(qp, I_i, phi_i)
 
       E_peak_au = sqrt(I_i * Wcm2_to_au_loc)
 
@@ -122,7 +121,7 @@ contains
       call run_single_trajectory(Jt_i)
 
       ! TODO: FFT Jt_i → Jw_i, then spec_accum_add(accum, Jw_i)
-      ! For now the BSV path in main.f90 handles FFT directly.
+      ! Production ensemble path is in main.f90 (ICS/CS + complex amplitudes).
 
       if (mod(i, CKPT_EVERY) == 0) then
         write(*,'(A,I0,A,I0)') '  MC sample ', i, ' / ', qp%n_samples

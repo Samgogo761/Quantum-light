@@ -45,7 +45,7 @@ debug: FFLAGS = -O0 -g -fbacktrace -fcheck=all -fopenmp -Wall -std=f2008 -fall-i
 debug: clean all
 
 clean:
-	rm -rf $(ODIR) $(MDIR) $(PROG) *.mod
+	rm -rf $(ODIR) $(MDIR) $(PROG) *.mod tests/*.mod test_qlight test_parse_ids
 
 # --- Module dependencies ---
 $(ODIR)/mod_wannier.o:        $(ODIR)/mod_params.o
@@ -72,8 +72,15 @@ $(ODIR)/main.o:               $(ODIR)/mod_params.o $(ODIR)/mod_wannier.o \
                               $(ODIR)/mod_berry.o $(ODIR)/mod_geometry.o \
                               $(ODIR)/mod_spin.o
 
-# --- Sampler unit test (standalone, no LAPACK/FFTW needed) ---
+# --- Sampler + propagate_ids unit tests (standalone, no LAPACK/FFTW needed) ---
+# NOTE: remove tests/*.mod first — stale local .mod shadows -Imod/-Jmod.
 test: dirs
+	rm -f tests/*.mod
 	$(FC) -O2 -Wall -std=f2008 $(MODINC) $(MODFLAG) -o test_qlight \
 		$(SDIR)/mod_quantum_light.f90 tests/test_qlight_sampling.f90
 	./test_qlight
+	rm -f tests/*.mod
+	$(FC) -O2 -Wall -std=f2008 $(MODINC) $(MODFLAG) -o test_parse_ids \
+		$(SDIR)/mod_quantum_light.f90 tests/test_parse_propagate_ids.f90
+	./test_parse_ids
+	python tools/analysis/test_parse_propagate_ids_neg.py --bin ./test_parse_ids

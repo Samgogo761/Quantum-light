@@ -86,11 +86,28 @@ module mod_params
   real(dp) :: T2_cycles = -1.0_dp
   real(dp) :: T2        = 0.0_dp
 
-  ! --- BSV ---
+  ! --- Quantum-light / phase-space ensemble (legacy namelist name: &bsv) ---
+  ! Historical path: random_phase_exponential with I_bar scale (<I>=2*I_bar).
+  ! New A0 path: state_type selects Gaussian Husimi-Q samplers.
   logical  :: bsv_enabled        = .false.
   integer  :: bsv_n_samples      = 100
-  real(dp) :: bsv_mean_intensity = 0.0_dp
+  real(dp) :: bsv_mean_intensity = 0.0_dp   ! stored as I_bar; <I>_drive target = 2*I_bar
   integer  :: bsv_seed           = 42
+  character(64) :: bsv_state_type = 'random_phase_exponential'
+  real(dp) :: bsv_squeeze_r = 0.0_dp
+  real(dp) :: bsv_squeeze_theta_deg = 0.0_dp
+  real(dp) :: bsv_alpha0_abs = 0.0_dp
+  real(dp) :: bsv_alpha0_phase_deg = 0.0_dp
+  real(dp) :: bsv_thermal_nbar = 0.0_dp
+  logical  :: bsv_save_complex = .false.    ! write HHG_complex*.dat for ensemble/classical
+  logical  :: bsv_save_ics_cs  = .true.     ! write ICS/CS/variance for ensemble
+  character(32) :: bsv_sampling_mode = 'mc' ! mc | gauss_hermite | exponential_quad | from_file
+  integer  :: bsv_gh_order = 3              ! 3|5|7 for gauss_hermite
+  character(256) :: bsv_nodes_file = ''     ! read (from_file) and/or write path
+  logical  :: bsv_write_nodes = .true.
+  logical  :: bsv_save_all_complex = .false.
+  character(64) :: bsv_harmonics = '2,5,7,9,10'
+  character(256) :: bsv_propagate_ids = ''   ! comma-separated subset; empty = all nodes
 
   ! --- Method ---
   character(16) :: gauge_method = 'vg'
@@ -107,6 +124,7 @@ module mod_params
   integer :: occ_stride                = 0        ! snapshot every occ_stride steps (0 => ~40 auto)
   logical :: occ_band_resolved         = .false.  ! also dump full per-band occupation
   logical :: save_coherence            = .false.  ! dump off-diagonal density-matrix norm per k,t
+  logical :: save_complex_hhg          = .false.  ! write HHG_complex.dat (classical path)
 
   ! --- Spin-resolved current (Tier 1b; lg_cov path) ---
   logical        :: spin_current = .false.        ! compute spin-z current Jt_spin
@@ -125,12 +143,18 @@ module mod_params
   namelist /external_field/ use_external_A, external_A_file
   namelist /timestep/  dt, n_dt_deph
   namelist /dephasing/ T2_fs, T2_cycles
-  namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed
+  namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed, &
+                       bsv_state_type, bsv_squeeze_r, bsv_squeeze_theta_deg, &
+                       bsv_alpha0_abs, bsv_alpha0_phase_deg, bsv_thermal_nbar, &
+                       bsv_save_complex, bsv_save_ics_cs, &
+                       bsv_sampling_mode, bsv_gh_order, bsv_nodes_file, &
+                       bsv_write_nodes, bsv_save_all_complex, bsv_harmonics, &
+                       bsv_propagate_ids
   namelist /method/    gauge_method
   namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
                          pcenter_summary_file, pcenter_kresolved_file
   namelist /output/    save_geometry, save_occupation, occ_stride, occ_band_resolved, &
-                       save_coherence
+                       save_coherence, save_complex_hhg
   namelist /spin/      spin_current, spin_sz_file, spin_order
 
 contains
@@ -300,6 +324,27 @@ contains
       write(*,'(A,ES12.4,A)') '  T2 input     : ', T2_fs, ' fs'
     end if
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
+    if (bsv_enabled) then
+      write(*,'(A)')       '--- Quantum-light ensemble (/bsv) ---------'
+      write(*,'(A,L1)')    '  enabled      : ', bsv_enabled
+      write(*,'(A,A)')     '  state_type   : ', trim(bsv_state_type)
+      write(*,'(A,I0)')    '  n_samples    : ', bsv_n_samples
+      write(*,'(A,ES10.3,A)') '  I_bar        : ', bsv_mean_intensity, ' W/cm^2'
+      write(*,'(A,ES10.3,A)') '  <I>_drive    : ', 2.0_dp*bsv_mean_intensity, ' W/cm^2'
+      write(*,'(A,F10.4)') '  squeeze_r    : ', bsv_squeeze_r
+      write(*,'(A,F10.2,A)') '  squeeze_theta: ', bsv_squeeze_theta_deg, ' deg'
+      write(*,'(A,L1)')    '  save_complex : ', bsv_save_complex
+      write(*,'(A,L1)')    '  save_ics_cs  : ', bsv_save_ics_cs
+      write(*,'(A,A)')     '  sampling_mode: ', trim(bsv_sampling_mode)
+      write(*,'(A,I0)')    '  gh_order     : ', bsv_gh_order
+      if (len_trim(bsv_nodes_file) > 0) then
+        write(*,'(A,A)')   '  nodes_file   : ', trim(bsv_nodes_file)
+      end if
+      write(*,'(A,A)')     '  harmonics    : ', trim(bsv_harmonics)
+    end if
+    if (save_complex_hhg) then
+      write(*,'(A,L1)')    '  save_complex_hhg : ', save_complex_hhg
+    end if
     write(*,'(A)')       '==========================================='
   end subroutine print_params
 
