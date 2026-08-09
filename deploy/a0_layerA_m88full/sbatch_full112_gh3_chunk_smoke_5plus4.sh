@@ -226,15 +226,26 @@ NODES_SHA256_EXPECTED="$(sha256_file "${NODES_FILE}")"
 TB_SHA256_EXPECTED="$(sha256_file "${TB}")"
 TMPL_EXPECTED="${REPO}/deploy/a0_layerA_m88full/input_template_full112.nml"
 TEMPLATE_SHA256_EXPECTED="$(sha256_file "${TMPL_EXPECTED}")"
+VALIDATOR_BUNDLE_SHA256_EXPECTED="$({
+  sha256sum "${NODE_VALIDATOR}"
+  sha256sum "${NODE_VALIDATOR_CORE}"
+  sha256sum "${RUN_VALIDATOR}"
+} | sha256sum | awk '{print $1}')"
 if [ -f "${OUTDIR}/SUCCESS" ] && [ -s "${OUTDIR}/HHG_nodes_modes.dat" ] \
    && [ -f "${OUTDIR}/run_metadata.txt" ] \
    && grep -q 'status=PASS' "${OUTDIR}/run_status.txt" 2>/dev/null; then
   meta_get() { awk -F= -v k="$1" '$1==k{print $2; exit}' "${OUTDIR}/run_metadata.txt"; }
+  status_get() { awk -F= -v k="$1" '$1==k{print $2; exit}' "${OUTDIR}/run_status.txt"; }
   if [ "$(meta_get source_sha256)" = "${SOURCE_SHA256}" ] \
      && [ "$(meta_get binary_sha256)" = "${BINARY_SHA256}" ] \
      && [ "$(meta_get nodes_sha256)" = "${NODES_SHA256_EXPECTED}" ] \
      && [ "$(meta_get tb_sha256)" = "${TB_SHA256_EXPECTED}" ] \
      && [ "$(meta_get template_sha256)" = "${TEMPLATE_SHA256_EXPECTED}" ] \
+     && [ "$(meta_get validator_bundle_sha256)" = "${VALIDATOR_BUNDLE_SHA256_EXPECTED}" ] \
+     && [ "$(meta_get propagate_ids)" = "${PROP_IDS}" ] \
+     && [ "$(meta_get chunk_index)" = "${ICHUNK}" ] \
+     && [ "$(status_get propagate_ids)" = "${PROP_IDS}" ] \
+     && [ "$(status_get chunk_index)" = "${ICHUNK}" ] \
      && [ "$(meta_get nk)" = "${NK}" ] \
      && [ "$(meta_get dt)" = "0.35" ] \
      && [ "$(meta_get T2_cycles)" = "0.5" ] \
@@ -243,7 +254,13 @@ if [ -f "${OUTDIR}/SUCCESS" ] && [ -s "${OUTDIR}/HHG_nodes_modes.dat" ] \
      && [ "$(meta_get squeeze_theta_deg)" = "${THVAL}" ] \
      && [ "$(meta_get I_bar)" = "${I_BAR}" ] \
      && [ "$(meta_get harmonics)" = "${HARMONICS_CSV}" ]; then
-    echo "ALREADY_COMPLETE ${CASE}; full provenance matches; skipping"
+    if [ -f "${OUTDIR}/output_sha256.txt" ]; then
+      ( cd "${OUTDIR}" && sha256sum -c output_sha256.txt --status ) \
+        || die "SUCCESS reuse failed: output_sha256.txt mismatch in ${OUTDIR}"
+    else
+      die "SUCCESS present but missing output_sha256.txt: ${OUTDIR}"
+    fi
+    echo "ALREADY_COMPLETE ${CASE}; provenance+chunk+validator+outputs match; skipping"
     RUN_COMPLETED=1
     exit 0
   fi

@@ -6,7 +6,10 @@ Requires merged dir to contain:
   - run_metadata.txt (or merge_provenance.txt)
   - HHG_nodes_modes.dat, HHG_ics_cs.dat
 
-Vs Job 27992: physics provenance must match; source/binary must NOT be forced equal.
+Vs Job 27992:
+  - hard physics equality: TB/nodes/nk/dt/T2/r/θ/Ibar/harmonics/model
+  - build provenance (source/binary/template SHA) is recorded only, not forced equal
+  - continuum rows aligned by FFT index iw; allow F10.4/ES16.8 historical rounding
 """
 from __future__ import annotations
 
@@ -16,10 +19,10 @@ import json
 import math
 from pathlib import Path
 
+# Hard-equal when comparing chunked merge to a historical full run.
 PHYSICS_KEYS = (
     "tb_sha256",
     "nodes_sha256",
-    "template_sha256",
     "nk",
     "model",
     "wvl_nm",
@@ -30,8 +33,12 @@ PHYSICS_KEYS = (
     "I_bar",
     "harmonics",
 )
-# Informational only when comparing to an older full run.
-OPTIONAL_BUILD_KEYS = ("source_sha256", "binary_sha256")
+# Implementation provenance: record, do not force equal to Job 27992.
+BUILD_KEYS = ("source_sha256", "binary_sha256", "template_sha256")
+
+# Historical HHG_ics_cs.dat uses F10.4 / ES16.8; new merge uses ES25.17.
+H_ORDER_ATOL = 5.1e-5
+OMEGA_ATOL = 5.1e-9
 
 
 def sha256(path: Path) -> str:
@@ -83,8 +90,8 @@ def load_modes(path: Path) -> dict[tuple[int, int], dict]:
 
 
 def load_ics_cs_continuum(path: Path) -> list[dict]:
+    """Load continuum rows in file order = FFT bin order (iw = 1..n)."""
     rows: list[dict] = []
-    seen: set[tuple[float, float]] = set()
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not line or line.startswith("#"):
@@ -94,12 +101,9 @@ def load_ics_cs_continuum(path: Path) -> list[dict]:
             raise ValueError(f"{path}: expected >=4 columns in ICS/CS continuum")
         h, omega, ics, cs = (float(f[0]), float(f[1]), float(f[2]), float(f[3]))
         if not all(math.isfinite(x) for x in (h, omega, ics, cs)):
-            raise ValueError(f"{path}: NaN/Inf in continuum row h={h}")
-        key = (round(h, 12), round(omega, 12))
-        if key in seen:
-            raise ValueError(f"{path}: duplicate continuum key h={h} omega={omega}")
-        seen.add(key)
-        rows.append({"h_order": h, "omega": omega, "ICS": ics, "CS": cs})
+            raise ValueError(f"{path}: NaN/Inf in continuum row")
+        iw = len(rows) + 1
+        rows.append({"iw": iw, "h_order": h, "omega": omega, "ICS": ics, "CS": cs})
     if not rows:
         raise ValueError(f"{path}: empty continuum")
     return rows
@@ -119,6 +123,8 @@ def main() -> int:
     ap.add_argument("--full-run-dir", type=Path, required=True)
     ap.add_argument("--rtol-modes", type=float, default=1.0e-12)
     ap.add_argument("--rtol-continuum", type=float, default=2.0e-7)
+    ap.add_argument("--h-atol", type=float, default=H_ORDER_ATOL)
+    ap.add_argument("--omega-atol", type=float, default=OMEGA_ATOL)
     ap.add_argument("--report", type=Path)
     args = ap.parse_args()
 
@@ -152,7 +158,7 @@ def main() -> int:
     provenance_cmp: dict[str, dict[str, str]] = {}
     for key in PHYSICS_KEYS:
         a, b = meta_merged.get(key, ""), meta_full.get(key, "")
-        provenance_cmp[key] = {"merged": a, "full": b}
+        provenance_cmp[key] = {"merged": a, "full": b, "required_equal": True}
         if not a or not b:
             ok = False
             errors.append(f"missing physics provenance key {key}")
@@ -160,11 +166,15 @@ def main() -> int:
             ok = False
             errors.append(f"physics provenance mismatch {key}: {a!r} vs {b!r}")
 
-    build_note: dict[str, dict[str, str]] = {}
-    for key in OPTIONAL_BUILD_KEYS:
+    build_note: dict[str, dict[str, object]] = {}
+    for key in BUILD_KEYS:
         a, b = meta_merged.get(key, ""), meta_full.get(key, "")
-        build_note[key] = {"merged": a, "full": b, "required_equal": False}
-        # Intentionally NOT failing if source/binary differ (new code vs Job 27992).
+        build_note[key] = {
+            "merged": a,
+            "full": b,
+            "required_equal": False,
+            "equal": bool(a) and bool(b) and a == b,
+        }
 
     modes_m = load_modes(args.merged / "HHG_nodes_modes.dat")
     modes_f = load_modes(args.full_run_dir / "HHG_nodes_modes.dat")
@@ -203,6 +213,9 @@ def main() -> int:
     continuum_stats = {
         "n_omega_merged": len(cont_m),
         "n_omega_full": len(cont_f),
+        "align_by": "iw",
+        "h_atol": args.h_atol,
+        "omega_atol": args.omega_atol,
         "max_ICS_rel_err": 0.0,
         "max_CS_rel_err": 0.0,
         "max_h_abs_err": 0.0,
@@ -211,24 +224,27 @@ def main() -> int:
     n_cmp = min(len(cont_m), len(cont_f))
     for i in range(n_cmp):
         a, b = cont_m[i], cont_f[i]
-        continuum_stats["max_h_abs_err"] = max(
-            continuum_stats["max_h_abs_err"], abs(a["h_order"] - b["h_order"])
-        )
-        continuum_stats["max_omega_abs_err"] = max(
-            continuum_stats["max_omega_abs_err"], abs(a["omega"] - b["omega"])
-        )
+        if a["iw"] != b["iw"]:
+            ok = False
+            errors.append(f"continuum iw mismatch at row {i}: {a['iw']} vs {b['iw']}")
+            continue
+        dh = abs(a["h_order"] - b["h_order"])
+        dw = abs(a["omega"] - b["omega"])
+        continuum_stats["max_h_abs_err"] = max(continuum_stats["max_h_abs_err"], dh)
+        continuum_stats["max_omega_abs_err"] = max(continuum_stats["max_omega_abs_err"], dw)
+        if dh > args.h_atol or dw > args.omega_atol:
+            ok = False
+            errors.append(
+                f"continuum iw={a['iw']} grid roundoff too large "
+                f"dh={dh:.3e} dw={dw:.3e} (atol h={args.h_atol}, omega={args.omega_atol})"
+            )
         e_ics = rel_err(a["ICS"], b["ICS"])
         e_cs = rel_err(a["CS"], b["CS"])
         continuum_stats["max_ICS_rel_err"] = max(continuum_stats["max_ICS_rel_err"], e_ics)
         continuum_stats["max_CS_rel_err"] = max(continuum_stats["max_CS_rel_err"], e_cs)
         if e_ics > args.rtol_continuum or e_cs > args.rtol_continuum:
             ok = False
-            errors.append(f"continuum i={i} ICS/CS rel_err ICS={e_ics} CS={e_cs}")
-        if abs(a["h_order"] - b["h_order"]) > 1.0e-10 or abs(a["omega"] - b["omega"]) > 1.0e-12 * max(
-            abs(b["omega"]), 1.0
-        ):
-            ok = False
-            errors.append(f"continuum grid mismatch at i={i}")
+            errors.append(f"continuum iw={a['iw']} ICS/CS rel_err ICS={e_ics} CS={e_cs}")
 
     report = {
         "status": "PASS" if ok else "FAIL",
@@ -241,8 +257,8 @@ def main() -> int:
         "errors": errors[:50],
         "n_errors": len(errors),
         "note": (
-            "Merged must provide its own manifest+metadata. "
-            "source/binary may differ from Job 27992; physics keys must match."
+            "Aligned by FFT iw; h/omega atol allow F10.4/ES16.8 vs ES25.17. "
+            "template/source/binary SHA are informational vs historical jobs."
         ),
     }
     text = json.dumps(report, indent=2) + "\n"

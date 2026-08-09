@@ -86,3 +86,4 @@ test: dirs
 	python tools/analysis/test_parse_propagate_ids_neg.py --bin ./test_parse_ids
 	python tools/analysis/test_hhg_fft_utils.py
 	python tools/analysis/test_merge_compare_neg.py
+	python tools/analysis/test_merge_compare_pos.py

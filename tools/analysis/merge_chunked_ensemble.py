@@ -45,10 +45,10 @@ OMEGA_RTOL = 1.0e-12
 HORDER_ATOL = 1.0e-10
 NEG_VAR_RTOL = 1.0e-10
 NODE_SPECTRUM_RTOL = 2.0e-7
+# Hard physics keys written into merge provenance (template SHA is build-level).
 PHYSICS_KEYS = (
     "tb_sha256",
     "nodes_sha256",
-    "template_sha256",
     "nk",
     "model",
     "wvl_nm",
@@ -59,6 +59,7 @@ PHYSICS_KEYS = (
     "I_bar",
     "harmonics",
 )
+BUILD_KEYS = ("source_sha256", "binary_sha256", "template_sha256")
 
 
 def sha256(path: Path) -> str:
@@ -495,6 +496,7 @@ def merge_ensemble(
         "chunk_dirs": [str(p.resolve()) for p in chunk_dirs],
         "provenance_keys_checked": list(PROVENANCE_KEYS),
         "physics_keys": list(PHYSICS_KEYS),
+        "build_keys": list(BUILD_KEYS),
     }
 
 

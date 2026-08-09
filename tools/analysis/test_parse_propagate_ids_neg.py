@@ -44,6 +44,7 @@ def main() -> int:
     bin_path = args.bin
     if not bin_path.is_file() and Path(str(bin_path) + ".exe").is_file():
         bin_path = Path(str(bin_path) + ".exe")
+    bin_path = bin_path.resolve()
     if not bin_path.is_file():
         print(f"FAIL: missing binary {args.bin}", file=sys.stderr)
         return 2
