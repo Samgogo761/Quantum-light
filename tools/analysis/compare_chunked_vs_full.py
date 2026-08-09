@@ -7,8 +7,10 @@ Requires merged dir to contain:
   - HHG_nodes_modes.dat, HHG_ics_cs.dat
 
 Vs Job 27992:
-  - hard physics equality: TB/nodes/nk/dt/T2/r/θ/Ibar/harmonics/model
-  - build provenance (source/binary/template SHA) is recorded only, not forced equal
+  - hard physics equality: TB/nk/dt/T2/r/θ/Ibar/harmonics/model
+  - manifest: semantic 6-column equality (id,w,Reα,Imα,I,φ); raw SHA informational
+    (LF vs CRLF must not fail the gate)
+  - build provenance (source/binary/template/nodes byte SHA) recorded only
   - continuum rows aligned by FFT index iw; allow F10.4/ES16.8 historical rounding
 """
 from __future__ import annotations
@@ -20,9 +22,9 @@ import math
 from pathlib import Path
 
 # Hard-equal when comparing chunked merge to a historical full run.
+# nodes_sha256 is NOT here: raw bytes may differ by CRLF while values match.
 PHYSICS_KEYS = (
     "tb_sha256",
-    "nodes_sha256",
     "nk",
     "model",
     "wvl_nm",
@@ -33,20 +35,82 @@ PHYSICS_KEYS = (
     "I_bar",
     "harmonics",
 )
-# Implementation provenance: record, do not force equal to Job 27992.
-BUILD_KEYS = ("source_sha256", "binary_sha256", "template_sha256")
+# Implementation / byte-level provenance: record, do not force equal to Job 27992.
+BUILD_KEYS = ("source_sha256", "binary_sha256", "template_sha256", "nodes_sha256")
 
 # Historical HHG_ics_cs.dat uses F10.4 / ES16.8; new merge uses ES25.17.
 H_ORDER_ATOL = 5.1e-5
 OMEGA_ATOL = 5.1e-9
+# Exact semantic equality for parsed floats (same printed values across LF/CRLF).
+MANIFEST_FLOAT_ATOL = 0.0
+MANIFEST_FLOAT_RTOL = 0.0
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
 
 def sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
+    return sha256_bytes(path.read_bytes())
+
+
+def canonical_lf_sha256(path: Path) -> str:
+    """SHA of file bytes with CRLF normalized to LF (no other transforms)."""
+    raw = path.read_bytes()
+    return sha256_bytes(raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n"))
+
+
+def load_manifest_rows(path: Path) -> list[dict]:
+    """Parse 6-column nodes: id weight Re(alpha) Im(alpha) intensity phase."""
+    rows: list[dict] = []
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        f = line.split()
+        if len(f) != 6:
+            raise ValueError(f"{path}: expected 6 columns, got {len(f)}: {line!r}")
+        row = {
+            "id": int(f[0]),
+            "weight": float(f[1]),
+            "re_alpha": float(f[2]),
+            "im_alpha": float(f[3]),
+            "intensity": float(f[4]),
+            "phase": float(f[5]),
+        }
+        if not all(
+            math.isfinite(row[k])
+            for k in ("weight", "re_alpha", "im_alpha", "intensity", "phase")
+        ):
+            raise ValueError(f"{path}: non-finite values at id={row['id']}")
+        rows.append(row)
+    if not rows:
+        raise ValueError(f"{path}: empty manifest")
+    ids = [r["id"] for r in rows]
+    if len(ids) != len(set(ids)):
+        raise ValueError(f"{path}: duplicate node ids")
+    return rows
+
+
+def manifests_semantically_equal(
+    a: list[dict], b: list[dict]
+) -> tuple[bool, list[str]]:
+    errs: list[str] = []
+    if len(a) != len(b):
+        return False, [f"manifest length {len(a)} vs {len(b)}"]
+    for i, (ra, rb) in enumerate(zip(a, b)):
+        if ra["id"] != rb["id"]:
+            errs.append(f"manifest row {i}: id {ra['id']} vs {rb['id']}")
+            continue
+        for key in ("weight", "re_alpha", "im_alpha", "intensity", "phase"):
+            xa, xb = float(ra[key]), float(rb[key])
+            if not math.isclose(
+                xa, xb, rel_tol=MANIFEST_FLOAT_RTOL, abs_tol=MANIFEST_FLOAT_ATOL
+            ):
+                errs.append(
+                    f"manifest id={ra['id']} {key}: {xa!r} vs {xb!r}"
+                )
+    return (len(errs) == 0), errs
 
 
 def read_metadata(path: Path) -> dict[str, str]:
@@ -137,9 +201,39 @@ def main() -> int:
         raise SystemExit(f"FAIL: merged missing required manifest snapshot: {man_merged}")
     if not man_full.is_file():
         raise SystemExit(f"FAIL: full-run missing manifest: {man_full}")
-    if sha256(man_merged) != sha256(man_full):
+
+    raw_sha_merged = sha256(man_merged)
+    raw_sha_full = sha256(man_full)
+    lf_sha_merged = canonical_lf_sha256(man_merged)
+    lf_sha_full = canonical_lf_sha256(man_full)
+    rows_m: list[dict] | None = None
+    rows_f: list[dict] | None = None
+    try:
+        rows_m = load_manifest_rows(man_merged)
+        rows_f = load_manifest_rows(man_full)
+        manifest_semantic_equal, man_errs = manifests_semantically_equal(rows_m, rows_f)
+    except ValueError as exc:
         ok = False
-        errors.append("manifest SHA mismatch between merged and full")
+        manifest_semantic_equal = False
+        man_errs = [str(exc)]
+    if not manifest_semantic_equal:
+        ok = False
+        errors.extend(man_errs[:20])
+        errors.append("manifest semantic (6-column) mismatch between merged and full")
+
+    manifest_note = {
+        "raw_sha256_merged": raw_sha_merged,
+        "raw_sha256_full": raw_sha_full,
+        "raw_sha_equal": raw_sha_merged == raw_sha_full,
+        "canonical_lf_sha256_merged": lf_sha_merged,
+        "canonical_lf_sha256_full": lf_sha_full,
+        "canonical_lf_sha_equal": lf_sha_merged == lf_sha_full,
+        "manifest_semantic_equal": manifest_semantic_equal,
+        "n_nodes_merged": len(rows_m) if rows_m is not None else None,
+        "n_nodes_full": len(rows_f) if rows_f is not None else None,
+        "required_equal": "semantic_6col",
+        "note": "Raw SHA is byte provenance only (LF/CRLF may differ).",
+    }
 
     meta_merged_path = args.merged / "run_metadata.txt"
     if not meta_merged_path.is_file():
@@ -252,12 +346,14 @@ def main() -> int:
         "full_run_dir": str(args.full_run_dir.resolve()),
         "max_mode_rel_err": max(mode_diffs.values()) if mode_diffs else None,
         "continuum": continuum_stats,
+        "manifest": manifest_note,
         "physics_provenance": provenance_cmp,
         "build_provenance_informational": build_note,
         "errors": errors[:50],
         "n_errors": len(errors),
         "note": (
             "Aligned by FFT iw; h/omega atol allow F10.4/ES16.8 vs ES25.17. "
+            "Manifest gate is semantic 6-column equality; raw/nodes SHA informational. "
             "template/source/binary SHA are informational vs historical jobs."
         ),
     }
