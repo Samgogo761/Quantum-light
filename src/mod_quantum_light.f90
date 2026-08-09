@@ -888,15 +888,17 @@ contains
   end subroutine gh_nodes_weights
 
   subroutine qlight_parse_propagate_ids(list, ids)
-    ! Comma-separated positive integers. Rejects empty tokens ("1,,2", "1,"),
-    ! leading commas (",1"), and non-positive / non-integer entries.
+    ! Comma-separated positive integers. Each token must be pure digits only
+    ! (optional surrounding spaces). Rejects empty tokens, spaces inside a
+    ! token ("1 2,3"), signs, decimals, and scientific notation.
     ! Uses nested IF (not .and.) so buf(i:i) is never evaluated for i>n.
     character(*), intent(in) :: list
     integer, allocatable, intent(out) :: ids(:)
-    character(len=len(list)) :: buf
-    integer :: i, n, ios, v, start, cap, n_ids
+    character(len=len(list)) :: buf, token
+    integer :: i, n, ios, v, start, cap, n_ids, k, ntok
     integer, allocatable :: tmp(:)
     logical :: at_delim
+    character(1) :: ch
 
     buf = adjustl(list)
     n = len_trim(buf)
@@ -922,9 +924,23 @@ contains
         write(*,*) 'ERROR: empty token in bsv_propagate_ids: ', trim(list)
         error stop 1
       end if
-      read(buf(start:i-1), *, iostat=ios) v
+      token = adjustl(buf(start:i-1))
+      ntok = len_trim(token)
+      if (ntok <= 0) then
+        write(*,*) 'ERROR: empty token in bsv_propagate_ids: ', trim(list)
+        error stop 1
+      end if
+      do k = 1, ntok
+        ch = token(k:k)
+        if (ch < '0' .or. ch > '9') then
+          write(*,*) 'ERROR: bsv_propagate_ids token is not a pure positive integer: ', &
+                     trim(token)
+          error stop 1
+        end if
+      end do
+      read(token(1:ntok), *, iostat=ios) v
       if (ios /= 0 .or. v <= 0) then
-        write(*,*) 'ERROR: invalid bsv_propagate_ids entry near: ', trim(buf(start:i-1))
+        write(*,*) 'ERROR: invalid bsv_propagate_ids entry near: ', trim(token)
         error stop 1
       end if
       n_ids = n_ids + 1

@@ -17,6 +17,7 @@ import math
 import re
 from pathlib import Path
 
+from hhg_fft_utils import harmonic_fft_index, parse_input_nml
 from validate_qlight_nodes_production import load_manifest
 
 PROVENANCE_KEYS = (
@@ -36,12 +37,28 @@ PROVENANCE_KEYS = (
     "harmonics",
 )
 WEIGHT_TOL = 1.0e-12
-WEIGHT_SUM_TOL = 1.0e-10
+# Match Fortran nodes weight-sum gate (do NOT regenerate 27992 manifests).
+WEIGHT_SUM_TOL = 5.0e-8
 INTENSITY_RTOL = 1.0e-8
 PHASE_TOL = 1.0e-6
 OMEGA_RTOL = 1.0e-12
 HORDER_ATOL = 1.0e-10
 NEG_VAR_RTOL = 1.0e-10
+NODE_SPECTRUM_RTOL = 2.0e-7
+PHYSICS_KEYS = (
+    "tb_sha256",
+    "nodes_sha256",
+    "template_sha256",
+    "nk",
+    "model",
+    "wvl_nm",
+    "dt",
+    "T2_cycles",
+    "squeeze_r",
+    "squeeze_theta_deg",
+    "I_bar",
+    "harmonics",
+)
 
 
 def sha256(path: Path) -> str:
@@ -365,19 +382,48 @@ def merge_ensemble(
             f"{ics:25.17e}  {cs:25.17e}  {var:25.17e}"
         )
 
+    # Cross-check: reconstruct target-order ICS/CS from merged nodes, compare
+    # to continuum at the Fortran harmonic_fft_index bin.
+    input_nml = chunk_dirs[0] / "input.nml"
+    if not input_nml.is_file():
+        raise FileNotFoundError(f"missing {input_nml} for FFT-bin cross-check")
+    grid = parse_input_nml(input_nml)
+    nt = int(grid["nt"])
+    dt = float(grid["dt_au"])
+    omega0 = float(grid["omega0"])
+
     for h in harmonics:
-        best = min(merged_spec, key=lambda r: abs(r["h_order"] - float(h)))
-        ics = best["ics"]
-        cs = scale * (abs(best["jx"]) ** 2 + abs(best["jy"]) ** 2)
-        var = max(ics - cs, 0.0)
+        group = [merged[(nid, h)] for nid in manifest]
+        ics_nodes = sum(r["weight"] * r["power"] for r in group)
+        jx_nodes = sum(r["weight"] * r["jx"] for r in group)
+        jy_nodes = sum(r["weight"] * r["jy"] for r in group)
+        cs_nodes = scale * (abs(jx_nodes) ** 2 + abs(jy_nodes) ** 2)
+
+        iw = harmonic_fft_index(nt, dt, omega0, h)
+        if iw < 1 or iw > len(merged_spec):
+            raise ValueError(f"H{h}: FFT index {iw} out of continuum range")
+        row = merged_spec[iw - 1]
+        if row["iw"] != iw:
+            raise ValueError(f"H{h}: continuum iw mismatch at index {iw}")
+        ics_c = row["ics"]
+        cs_c = scale * (abs(row["jx"]) ** 2 + abs(row["jy"]) ** 2)
+        for label, a, b in (("ICS", ics_nodes, ics_c), ("CS", cs_nodes, cs_c)):
+            rel = abs(a - b) / max(abs(a), abs(b), 1.0e-300)
+            if rel > NODE_SPECTRUM_RTOL:
+                raise ValueError(
+                    f"H{h}: node vs continuum {label} mismatch rel={rel:.3e} "
+                    f"(nodes={a:.16e}, continuum_iw{iw}={b:.16e})"
+                )
         per_h[h] = {
-            "ICS": ics,
-            "CS": cs,
-            "variance": var,
-            "from": "merged_spectrum",
-            "iw": best["iw"],
-            "h_bin": best["h_order"],
-            "omega": best["omega"],
+            "ICS": ics_nodes,
+            "CS": cs_nodes,
+            "ICS_continuum": ics_c,
+            "CS_continuum": cs_c,
+            "variance": max(ics_nodes - cs_nodes, 0.0),
+            "from": "nodes_crosschecked_continuum",
+            "iw": iw,
+            "h_bin": row["h_order"],
+            "omega": row["omega"],
         }
 
     (outdir / "HHG_ics_cs.dat").write_text("\n".join(ics_lines) + "\n", encoding="utf-8")
@@ -398,7 +444,6 @@ def merge_ensemble(
         )
     (outdir / "merged_weighted_spectrum.dat").write_text("\n".join(spec_lines) + "\n", encoding="utf-8")
 
-    # Also write HHG_bsv.dat continuum (ICS only) for parity with full runs.
     bsv_lines = [
         f"# n_nodes = {len(manifest)}",
         "# NOTE: HHG_bsv.dat is the weighted ICS average (merged chunks).",
@@ -410,11 +455,36 @@ def merge_ensemble(
         )
     (outdir / "HHG_bsv.dat").write_text("\n".join(bsv_lines) + "\n", encoding="utf-8")
 
+    # Required artifacts for compare: manifest snapshot + merged provenance.
+    assert meta_ref is not None
+    man_out = outdir / "nodes_manifest.input.dat"
+    man_out.write_bytes(manifest_path.read_bytes())
+    if sha256(man_out) != manifest_sha:
+        raise ValueError("failed to snapshot manifest into outdir")
+
+    meta_lines = [
+        "campaign=merged_chunked_ensemble",
+        f"manifest_sha256={manifest_sha}",
+        f"n_chunks={len(chunk_dirs)}",
+        f"n_nodes={len(manifest)}",
+        f"weight_sum={wsum:.17e}",
+        f"spectrum_scale={scale:.17e}",
+        f"n_omega={len(merged_spec)}",
+        "status=PASS",
+    ]
+    for key in PROVENANCE_KEYS:
+        meta_lines.append(f"{key}={meta_ref[key]}")
+    # Prefer first chunk source/binary as informational; compare vs 27992
+    # must NOT require these to match (new code vs old job).
+    (outdir / "run_metadata.txt").write_text("\n".join(meta_lines) + "\n", encoding="utf-8")
+    (outdir / "merge_provenance.txt").write_text("\n".join(meta_lines) + "\n", encoding="utf-8")
+
     return {
         "status": "PASS",
         "manifest": str(manifest_path.resolve()),
         "manifest_sha256": manifest_sha,
         "weight_sum": wsum,
+        "weight_sum_tol": WEIGHT_SUM_TOL,
         "n_chunks": len(chunk_dirs),
         "n_nodes": len(manifest),
         "harmonics": harmonics,
@@ -424,6 +494,7 @@ def merge_ensemble(
         "per_harmonic": {f"H{h}": per_h[h] for h in harmonics},
         "chunk_dirs": [str(p.resolve()) for p in chunk_dirs],
         "provenance_keys_checked": list(PROVENANCE_KEYS),
+        "physics_keys": list(PHYSICS_KEYS),
     }
 
 

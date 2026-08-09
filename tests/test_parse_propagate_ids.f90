@@ -1,5 +1,7 @@
-! Positive + self-contained negative-driver tests for qlight_parse_propagate_ids.
-! Negatives are exercised by spawning this binary with --expect-fail <list>.
+! Positive + CLI driver for qlight_parse_propagate_ids.
+! --expect-fail semantics (IMPORTANT):
+!   - parse REJECTS  -> Fortran error stop (nonzero) => negative test PASS
+!   - parse ACCEPTS  -> stop 0 + PARSE_ACCEPTED     => negative test FAIL
 program test_parse_propagate_ids
   use mod_quantum_light, only: qlight_parse_propagate_ids, dp
   implicit none
@@ -18,10 +20,10 @@ program test_parse_propagate_ids
         stop 2
       end if
       call get_command_argument(2, arg2)
-      ! Must error-stop / non-zero for invalid lists.
       call qlight_parse_propagate_ids(trim(arg2), ids)
-      write(*,*) 'ERROR: expected failure for list: ', trim(arg2)
-      stop 1
+      ! Reached only if illegal input was wrongly accepted.
+      write(*,*) 'PARSE_ACCEPTED'
+      stop 0
     else if (trim(arg1) == '--expect-ok') then
       if (narg < 2) stop 2
       call get_command_argument(2, arg2)

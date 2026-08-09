@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Compare merged chunked ensemble outputs against a full (unchunked) run.
 
-Compares:
-  - per-node modes (reject NaN/Inf and duplicate keys)
-  - full ICS/CS continuum (not only H2/H5/H7/H9/H10)
-  - provenance: manifest hash, model, k, dt, T2, r, theta, TB, etc.
+Requires merged dir to contain:
+  - nodes_manifest.input.dat
+  - run_metadata.txt (or merge_provenance.txt)
+  - HHG_nodes_modes.dat, HHG_ics_cs.dat
+
+Vs Job 27992: physics provenance must match; source/binary must NOT be forced equal.
 """
 from __future__ import annotations
 
@@ -14,9 +16,7 @@ import json
 import math
 from pathlib import Path
 
-COMPARE_META_KEYS = (
-    "source_sha256",
-    "binary_sha256",
+PHYSICS_KEYS = (
     "tb_sha256",
     "nodes_sha256",
     "template_sha256",
@@ -30,6 +30,8 @@ COMPARE_META_KEYS = (
     "I_bar",
     "harmonics",
 )
+# Informational only when comparing to an older full run.
+OPTIONAL_BUILD_KEYS = ("source_sha256", "binary_sha256")
 
 
 def sha256(path: Path) -> str:
@@ -82,7 +84,7 @@ def load_modes(path: Path) -> dict[tuple[int, int], dict]:
 
 def load_ics_cs_continuum(path: Path) -> list[dict]:
     rows: list[dict] = []
-    seen_h_omega: set[tuple[float, float]] = set()
+    seen: set[tuple[float, float]] = set()
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not line or line.startswith("#"):
@@ -94,9 +96,9 @@ def load_ics_cs_continuum(path: Path) -> list[dict]:
         if not all(math.isfinite(x) for x in (h, omega, ics, cs)):
             raise ValueError(f"{path}: NaN/Inf in continuum row h={h}")
         key = (round(h, 12), round(omega, 12))
-        if key in seen_h_omega:
+        if key in seen:
             raise ValueError(f"{path}: duplicate continuum key h={h} omega={omega}")
-        seen_h_omega.add(key)
+        seen.add(key)
         rows.append({"h_order": h, "omega": omega, "ICS": ics, "CS": cs})
     if not rows:
         raise ValueError(f"{path}: empty continuum")
@@ -123,35 +125,46 @@ def main() -> int:
     ok = True
     errors: list[str] = []
 
-    # Provenance: prefer chunk/full run_metadata; merged may only have merge_report.
-    meta_full = read_metadata(args.full_run_dir / "run_metadata.txt")
-    # Merged dir may not have run_metadata; compare manifest hashes + full meta keys present.
     man_merged = args.merged / "nodes_manifest.input.dat"
     man_full = args.full_run_dir / "nodes_manifest.input.dat"
     if not man_merged.is_file():
-        # allow using full manifest path recorded next to merge, or copy expectation
-        cand = list(args.merged.glob("nodes_manifest*.dat"))
-        man_merged = cand[0] if cand else man_full
-    if man_merged.is_file() and man_full.is_file():
-        if sha256(man_merged) != sha256(man_full):
-            ok = False
-            errors.append("manifest SHA mismatch between merged and full")
-    for key in COMPARE_META_KEYS:
-        if not meta_full.get(key):
-            ok = False
-            errors.append(f"full-run missing provenance key {key}")
+        raise SystemExit(f"FAIL: merged missing required manifest snapshot: {man_merged}")
+    if not man_full.is_file():
+        raise SystemExit(f"FAIL: full-run missing manifest: {man_full}")
+    if sha256(man_merged) != sha256(man_full):
+        ok = False
+        errors.append("manifest SHA mismatch between merged and full")
 
-    # If merged has metadata (copied), compare shared physics keys.
     meta_merged_path = args.merged / "run_metadata.txt"
+    if not meta_merged_path.is_file():
+        meta_merged_path = args.merged / "merge_provenance.txt"
+    if not meta_merged_path.is_file():
+        raise SystemExit(
+            "FAIL: merged missing required run_metadata.txt / merge_provenance.txt"
+        )
+    meta_full_path = args.full_run_dir / "run_metadata.txt"
+    if not meta_full_path.is_file():
+        raise SystemExit(f"FAIL: full-run missing run_metadata.txt: {meta_full_path}")
+
+    meta_merged = read_metadata(meta_merged_path)
+    meta_full = read_metadata(meta_full_path)
+
     provenance_cmp: dict[str, dict[str, str]] = {}
-    if meta_merged_path.is_file():
-        meta_merged = read_metadata(meta_merged_path)
-        for key in COMPARE_META_KEYS:
-            a, b = meta_merged.get(key, ""), meta_full.get(key, "")
-            provenance_cmp[key] = {"merged": a, "full": b}
-            if not a or not b or a != b:
-                ok = False
-                errors.append(f"provenance mismatch {key}: {a!r} vs {b!r}")
+    for key in PHYSICS_KEYS:
+        a, b = meta_merged.get(key, ""), meta_full.get(key, "")
+        provenance_cmp[key] = {"merged": a, "full": b}
+        if not a or not b:
+            ok = False
+            errors.append(f"missing physics provenance key {key}")
+        elif a != b:
+            ok = False
+            errors.append(f"physics provenance mismatch {key}: {a!r} vs {b!r}")
+
+    build_note: dict[str, dict[str, str]] = {}
+    for key in OPTIONAL_BUILD_KEYS:
+        a, b = meta_merged.get(key, ""), meta_full.get(key, "")
+        build_note[key] = {"merged": a, "full": b, "required_equal": False}
+        # Intentionally NOT failing if source/binary differ (new code vs Job 27992).
 
     modes_m = load_modes(args.merged / "HHG_nodes_modes.dat")
     modes_f = load_modes(args.full_run_dir / "HHG_nodes_modes.dat")
@@ -210,7 +223,7 @@ def main() -> int:
         continuum_stats["max_CS_rel_err"] = max(continuum_stats["max_CS_rel_err"], e_cs)
         if e_ics > args.rtol_continuum or e_cs > args.rtol_continuum:
             ok = False
-            errors.append(f"continuum iw~{i+1} ICS/CS rel_err ICS={e_ics} CS={e_cs}")
+            errors.append(f"continuum i={i} ICS/CS rel_err ICS={e_ics} CS={e_cs}")
         if abs(a["h_order"] - b["h_order"]) > 1.0e-10 or abs(a["omega"] - b["omega"]) > 1.0e-12 * max(
             abs(b["omega"]), 1.0
         ):
@@ -223,10 +236,14 @@ def main() -> int:
         "full_run_dir": str(args.full_run_dir.resolve()),
         "max_mode_rel_err": max(mode_diffs.values()) if mode_diffs else None,
         "continuum": continuum_stats,
-        "provenance": provenance_cmp,
+        "physics_provenance": provenance_cmp,
+        "build_provenance_informational": build_note,
         "errors": errors[:50],
         "n_errors": len(errors),
-        "note": "Requires full continuum HHG_ics_cs.dat from merge; not harmonic-only stubs.",
+        "note": (
+            "Merged must provide its own manifest+metadata. "
+            "source/binary may differ from Job 27992; physics keys must match."
+        ),
     }
     text = json.dumps(report, indent=2) + "\n"
     if args.report:

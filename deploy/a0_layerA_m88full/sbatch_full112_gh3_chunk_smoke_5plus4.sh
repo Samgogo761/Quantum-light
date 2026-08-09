@@ -54,8 +54,17 @@ WORKDIR="${WORKDIR:-${SLURM_SUBMIT_DIR:-$(pwd)}}"
 REPO="${REPO:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
 TB="${TB:-/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat}"
 # Unique OUTROOT for this smoke campaign — do not mix with 27992 or GH5.
-# Fresh unique OUTROOT by default (override only if you intentionally resume).
-OUTROOT="${OUTROOT:-${WORKDIR}/output_a0_full112_k20_gh3_chunk_smoke_$(date +%Y%m%d_%H%M%S)}"
+# Shared OUTROOT for all array tasks (must NOT call date per task).
+# Prefer SLURM_ARRAY_JOB_ID so chunk c00/c01 land in the same tree.
+if [ -n "${OUTROOT:-}" ]; then
+  :
+elif [ -n "${SLURM_ARRAY_JOB_ID:-}" ]; then
+  OUTROOT="${WORKDIR}/output_a0_full112_k20_gh3_chunk_smoke_${SLURM_ARRAY_JOB_ID}"
+elif [ -n "${SLURM_JOB_ID:-}" ]; then
+  OUTROOT="${WORKDIR}/output_a0_full112_k20_gh3_chunk_smoke_${SLURM_JOB_ID}"
+else
+  die "OUTROOT unset and no SLURM_ARRAY_JOB_ID/SLURM_JOB_ID; export OUTROOT explicitly"
+fi
 NODES_DIR="${NODES_DIR:-${REPO}/deploy/a0_layerA_m88full/nodes_gh3_full112_candidates}"
 NK=20
 I_BAR=1.0e11

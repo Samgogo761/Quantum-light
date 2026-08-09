@@ -10,11 +10,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
+import shutil
 import tempfile
 from pathlib import Path
 
-from hhg_fft_utils import parse_input_nml, pick_ics_cs_at_order
+from hhg_fft_utils import harmonic_fft_index, parse_input_nml, pick_ics_cs_at_order
 from merge_chunked_ensemble import merge_ensemble
 from validate_qlight_nodes_production import load_manifest
 
@@ -49,7 +51,10 @@ def write_chunk(
     n_manifest: int,
     harmonics: list[int],
     scale: float,
-    continuum_h: list[float],
+    *,
+    nt: int,
+    dt: float,
+    omega0: float,
 ) -> None:
     outdir.mkdir(parents=True, exist_ok=True)
     header = [
@@ -87,23 +92,34 @@ def write_chunk(
         + "\n",
         encoding="utf-8",
     )
-    # Shared continuum grid across chunks; put mode power only at exact harmonic bins.
-    by_h = {h: [r for r in rows if r["order"] == h] for h in harmonics}
+    # Full FFT-length stub continuum; put mode power at Fortran harmonic bins.
+    n_omega = nt // 2 + 1
+    twopi = 2.0 * math.pi
+    domega = twopi / (float(nt) * dt)
+    bins: dict[int, dict[str, complex | float]] = {
+        iw: {"ics": 0.0, "jx": 0.0 + 0.0j, "jy": 0.0 + 0.0j}
+        for iw in range(1, n_omega + 1)
+    }
+    for h in harmonics:
+        iw = harmonic_fft_index(nt, dt, omega0, h)
+        group = [r for r in rows if r["order"] == h]
+        bins[iw]["ics"] = sum(r["weight"] * r["power"] for r in group)
+        bins[iw]["jx"] = sum(r["weight"] * r["jx"] for r in group)
+        bins[iw]["jy"] = sum(r["weight"] * r["jy"] for r in group)
     spec = [
-        "# stub continuum for offline merge-gate test (NOT Fortran continuum fidelity)",
+        "# stub continuum aligned to Fortran FFT bins (offline merge-gate only)",
         f"# spectrum_scale = {scale:.17e}",
         "# iw  harmonic_order  omega(a.u.)  weighted_ics  ReSumJx ImSumJx ReSumJy ImSumJy",
     ]
-    for iw, h in enumerate(continuum_h, start=1):
-        omega = float(h)  # stub ω∝h; shared across chunks
-        group = by_h.get(int(round(h)), []) if abs(h - round(h)) < 1.0e-12 else []
-        if abs(h - round(h)) < 1.0e-12 and int(round(h)) in by_h:
-            group = by_h[int(round(h))]
-        ics = sum(r["weight"] * r["power"] for r in group)
-        jx = sum(r["weight"] * r["jx"] for r in group)
-        jy = sum(r["weight"] * r["jy"] for r in group)
+    for iw in range(1, n_omega + 1):
+        omega = float(iw - 1) * domega
+        h_order = omega / omega0 if omega0 != 0 else 0.0
+        b = bins[iw]
+        jx = b["jx"]
+        jy = b["jy"]
+        assert isinstance(jx, complex) and isinstance(jy, complex)
         spec.append(
-            f"{iw:8d}{float(h):25.17e}{omega:25.17e}{ics:25.17e}"
+            f"{iw:8d}{h_order:25.17e}{omega:25.17e}{float(b['ics']):25.17e}"
             f"{jx.real:25.17e}{jx.imag:25.17e}{jy.real:25.17e}{jy.imag:25.17e}"
         )
     (outdir / "chunk_weighted_spectrum.dat").write_text("\n".join(spec) + "\n", encoding="utf-8")
@@ -179,16 +195,26 @@ def main() -> int:
         tmp_path = Path(tmp)
         meta_path = tmp_path / "run_metadata.txt"
         meta_path.write_text(meta_text, encoding="utf-8")
-        # Dense-enough stub continuum that includes all target harmonics.
-        continuum_h = sorted({float(h) for h in orders} | {0.0, 1.0, 3.0, 4.0, 6.0, 8.0, 11.0})
         chunk_dirs: list[Path] = []
         for ci, ids in enumerate(chunks):
             cdir = tmp_path / f"chunk_{ci:02d}"
             chunk_dirs.append(cdir)
             subset = [r for r in modes if r["id"] in ids]
             write_chunk(
-                cdir, subset, meta_path, ids, len(manifest), orders, scale, continuum_h
+                cdir,
+                subset,
+                meta_path,
+                ids,
+                len(manifest),
+                orders,
+                scale,
+                nt=nt,
+                dt=dt,
+                omega0=omega0,
             )
+            src_nml = args.full_run_dir / "input.nml"
+            if src_nml.is_file():
+                shutil.copyfile(src_nml, cdir / "input.nml")
 
         merged = tmp_path / "merged"
         merge_ensemble(args.manifest, chunk_dirs, merged, orders)
@@ -204,15 +230,23 @@ def main() -> int:
                 diffs[f"H{order}_{key}"] = {"ref": a, "merged": b, "rel_err": rel}
                 if rel > args.rtol:
                     ok = False
-        # Continuum file must contain more than just the five target harmonics.
         n_cont = sum(
             1
             for line in (merged / "HHG_ics_cs.dat").read_text(encoding="utf-8").splitlines()
             if line.strip() and not line.startswith("#")
         )
-        if n_cont < len(continuum_h):
+        n_omega = nt // 2 + 1
+        if n_cont != n_omega:
             ok = False
-            diffs["continuum_rows"] = {"ref": float(len(continuum_h)), "merged": float(n_cont), "rel_err": 1.0}
+            diffs["continuum_rows"] = {
+                "ref": float(n_omega),
+                "merged": float(n_cont),
+                "rel_err": 1.0,
+            }
+        if not (merged / "nodes_manifest.input.dat").is_file():
+            ok = False
+        if not (merged / "run_metadata.txt").is_file():
+            ok = False
 
         report = {
             "status": "PASS" if ok else "FAIL",

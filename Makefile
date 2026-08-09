@@ -84,3 +84,5 @@ test: dirs
 		$(SDIR)/mod_quantum_light.f90 tests/test_parse_propagate_ids.f90
 	./test_parse_ids
 	python tools/analysis/test_parse_propagate_ids_neg.py --bin ./test_parse_ids
+	python tools/analysis/test_hhg_fft_utils.py
+	python tools/analysis/test_merge_compare_neg.py

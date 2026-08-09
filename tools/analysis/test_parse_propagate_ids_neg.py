@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Negative tests for bsv_propagate_ids parsing (expects Fortran CLI helper)."""
+"""Negative tests for bsv_propagate_ids parsing (Fortran CLI helper).
+
+CLI contract for --expect-fail <list>:
+  - parser rejects  -> nonzero exit (error stop) => PASS for this case
+  - parser accepts  -> exit 0 and prints PARSE_ACCEPTED => FAIL for this case
+"""
 from __future__ import annotations
 
 import argparse
@@ -14,12 +19,16 @@ BAD_CASES = [
     ",1",
     "1,,2",
     "1, ,2",
+    "1 2,3",
+    "1,2 3",
     "0",
     "-1",
     "1,-2",
     "a",
     "1.5",
     "1,2,",
+    "1e2",
+    "+3",
 ]
 
 
@@ -38,11 +47,9 @@ def main() -> int:
     if not bin_path.is_file():
         print(f"FAIL: missing binary {args.bin}", file=sys.stderr)
         return 2
-    args.bin = bin_path
 
-    # Positive sanity via CLI
     r = subprocess.run(
-        [str(args.bin), "--expect-ok", "1,2,3"],
+        [str(bin_path), "--expect-ok", "1,2,3"],
         capture_output=True,
         text=True,
     )
@@ -51,15 +58,27 @@ def main() -> int:
         print(r.stdout, r.stderr, file=sys.stderr)
         return 1
 
+    # Sanity: the false-gate case must be rejected by the parser.
+    r_space = subprocess.run(
+        [str(bin_path), "--expect-fail", "1 2,3"],
+        capture_output=True,
+        text=True,
+    )
+    if r_space.returncode == 0 or "PARSE_ACCEPTED" in (r_space.stdout + r_space.stderr):
+        print("FAIL: '1 2,3' was accepted (false negative gate)", file=sys.stderr)
+        print(r_space.stdout, r_space.stderr, file=sys.stderr)
+        return 1
+
     failed: list[str] = []
     for case in BAD_CASES:
         r = subprocess.run(
-            [str(args.bin), "--expect-fail", case],
+            [str(bin_path), "--expect-fail", case],
             capture_output=True,
             text=True,
         )
-        # Must not return 0 (successful parse).
-        if r.returncode == 0:
+        out = (r.stdout or "") + (r.stderr or "")
+        # Accepted illegal input => exit 0 / PARSE_ACCEPTED.
+        if r.returncode == 0 or "PARSE_ACCEPTED" in out:
             failed.append(repr(case))
 
     if failed:
