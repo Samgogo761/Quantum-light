@@ -1,0 +1,70 @@
+{
+  "policy": "TB-v2: +N production; -N H=E18.8 prod, r=ES25.17; do not overwrite production",
+  "tb_plus": "/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat",
+  "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
+  "tb_minus_prod": "/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj.dat",
+  "tb_minus_prod_sha256": "d346f352d110ea27d659b2b339ed5bbed78af955115105be69625c205d8aaf9c",
+  "tb_minus_v2": "/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj_v2.dat",
+  "tb_minus_v2_sha256": "d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246",
+  "audit": {
+    "dH_prod_vs_exact": 0.0,
+    "dR_prod_vs_exact": 4.810319254033857e-09,
+    "hybrid_reread": {
+      "max_abs_dH_vs_prod": 0.0,
+      "max_abs_dR_vs_exact": 0.0
+    },
+    "k20_decomposition_Ang": {
+      "max_abs_qI": 1.3816287216682124e-09,
+      "max_abs_diag_TL": 5.430491300211079e-09,
+      "max_abs_off": 0.0,
+      "max_abs_dD": 4.810319254033857e-09,
+      "per_cartesian": [
+        {
+          "cart": "x",
+          "max_abs_qI": 1.3816287216682124e-09,
+          "max_abs_diag_TL": 5.430491300211079e-09,
+          "max_abs_off": 0.0,
+          "max_abs_dD": 4.048862578542867e-09,
+          "max_abs_dv": 5.0081341675298595e-09,
+          "max_abs_v_prod": 5.977072000484084,
+          "max_rel_dv": 8.378908882349502e-10
+        },
+        {
+          "cart": "y",
+          "max_abs_qI": 2.8183691749984625e-10,
+          "max_abs_diag_TL": 4.771518423087136e-09,
+          "max_abs_off": 0.0,
+          "max_abs_dD": 4.810319254033857e-09,
+          "max_abs_dv": 4.211182330476882e-09,
+          "max_abs_v_prod": 3.446598136756774,
+          "max_rel_dv": 1.2218373489981565e-09
+        },
+        {
+          "cart": "z",
+          "max_abs_qI": 7.216449660063518e-16,
+          "max_abs_diag_TL": 2.854859206178974e-15,
+          "max_abs_off": 0.0,
+          "max_abs_dD": 3.552713678800501e-15,
+          "max_abs_dv": 3.5783424429580304e-15,
+          "max_abs_v_prod": 20.343419182728102,
+          "max_rel_dv": 1.7589680529200825e-16
+        }
+      ]
+    },
+    "k20_velocity": {
+      "max_abs_dv": 5.0081341675298595e-09,
+      "max_abs_v_prod": 20.343419182728102,
+      "max_rel_dv": 2.461795690560143e-10,
+      "worst_k": {
+        "kfrac": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cart": 0,
+        "max_abs_dv": 5.0081341675298595e-09
+      },
+      "note": "\u0394v=-i[\u0394D,H] with H,D from TB (D in Angstrom as stored)"
+    }
+  }
+}

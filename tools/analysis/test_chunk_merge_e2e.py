@@ -123,6 +123,17 @@ def write_chunk(
             f"{jx.real:25.17e}{jx.imag:25.17e}{jy.real:25.17e}{jy.imag:25.17e}"
         )
     (outdir / "chunk_weighted_spectrum.dat").write_text("\n".join(spec) + "\n", encoding="utf-8")
+    hashed = (
+        "HHG_nodes_modes.dat",
+        "chunk_info.txt",
+        "chunk_weighted_spectrum.dat",
+        "run_metadata.txt",
+    )
+    sha_lines = []
+    for name in hashed:
+        digest = hashlib.sha256((outdir / name).read_bytes()).hexdigest()
+        sha_lines.append(f"{digest}  {name}")
+    (outdir / "output_sha256.txt").write_text("\n".join(sha_lines) + "\n", encoding="utf-8")
 
 
 def infer_scale(rows: list[dict]) -> float:
@@ -172,6 +183,8 @@ def main() -> int:
         "squeeze_theta_deg",
         "I_bar",
         "harmonics",
+        "omp_num_threads",
+        "mkl_num_threads",
     ]
     present = {line.split("=", 1)[0] for line in meta_text.splitlines() if "=" in line}
     for key in required:

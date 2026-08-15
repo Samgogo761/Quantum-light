@@ -1,0 +1,121 @@
+{
+  "policy": "TB-v2 GH3/GH5 manifests; ES25.17; exact antipodes; two selected states only",
+  "I_bar": 100000000000.0,
+  "states": [
+    {
+      "r": 2.5,
+      "theta_deg": 0.0
+    },
+    {
+      "r": 2.5,
+      "theta_deg": 180.0
+    }
+  ],
+  "files": [
+    {
+      "file": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/deploy/a0_layerA_m88full/nodes_tbv2_es25/gh3/nodes_sv_r2p5_th0_gh3.dat",
+      "name": "nodes_sv_r2p5_th0_gh3.dat",
+      "r": 2.5,
+      "theta_deg": 0.0,
+      "gh_order": 3,
+      "n_nodes": 9,
+      "sha256": "9f3d63812ca6f8ea8d693bc0e29386545a60f0b323c3873e355fd1af824ecdb7",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 9,
+        "weight_sum": 0.9999999999999999,
+        "mean_error": 6.938893903907228e-18,
+        "covariance_relative_error": 1.9022375124180458e-16,
+        "max_alpha_to_intensity_relative_error": 0.0,
+        "max_alpha_to_phase_absolute_error_rad": 2.220446049250313e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 599999999999.9999,
+        "weighted_mean_intensity_Wcm2": 199999999999.99994
+      },
+      "antipodes": {
+        "n_self_alpha0": 1,
+        "n_antipode_directed": 8,
+        "max_dphi": 0.0
+      }
+    },
+    {
+      "file": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/deploy/a0_layerA_m88full/nodes_tbv2_es25/gh5/nodes_sv_r2p5_th0_gh5.dat",
+      "name": "nodes_sv_r2p5_th0_gh5.dat",
+      "r": 2.5,
+      "theta_deg": 0.0,
+      "gh_order": 5,
+      "n_nodes": 25,
+      "sha256": "9f266680eef28b6e5c309f467a9529fe7dd275a55fa1be2097adbaf52e1201f3",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 25,
+        "weight_sum": 1.0,
+        "mean_error": 4.790161764288451e-17,
+        "covariance_relative_error": 3.80438923598971e-16,
+        "max_alpha_to_intensity_relative_error": 3.246461680341407e-16,
+        "max_alpha_to_phase_absolute_error_rad": 2.220446049250313e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 1632455532033.6768,
+        "weighted_mean_intensity_Wcm2": 200000000000.0
+      },
+      "antipodes": {
+        "n_self_alpha0": 1,
+        "n_antipode_directed": 24,
+        "max_dphi": 0.0
+      }
+    },
+    {
+      "file": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/deploy/a0_layerA_m88full/nodes_tbv2_es25/gh3/nodes_sv_r2p5_th180_gh3.dat",
+      "name": "nodes_sv_r2p5_th180_gh3.dat",
+      "r": 2.5,
+      "theta_deg": 180.0,
+      "gh_order": 3,
+      "n_nodes": 9,
+      "sha256": "7ea3a695f89d78813053fa00e5b0347fd3ed6c3afc634d1308d7a561e3d273da",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 9,
+        "weight_sum": 0.9999999999999999,
+        "mean_error": 4.443059973708341e-16,
+        "covariance_relative_error": 1.4943169816036027e-18,
+        "max_alpha_to_intensity_relative_error": 0.0,
+        "max_alpha_to_phase_absolute_error_rad": 2.914335439641036e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 599999999999.9999,
+        "weighted_mean_intensity_Wcm2": 199999999999.99997
+      },
+      "antipodes": {
+        "n_self_alpha0": 1,
+        "n_antipode_directed": 8,
+        "max_dphi": 4.440892098500626e-16
+      }
+    },
+    {
+      "file": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/deploy/a0_layerA_m88full/nodes_tbv2_es25/gh5/nodes_sv_r2p5_th180_gh5.dat",
+      "name": "nodes_sv_r2p5_th180_gh5.dat",
+      "r": 2.5,
+      "theta_deg": 180.0,
+      "gh_order": 5,
+      "n_nodes": 25,
+      "sha256": "aaca2b3b3aff1cd99c46801a103e8b3b13df11e0d6d918b03203c95778d094b2",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 25,
+        "weight_sum": 1.0,
+        "mean_error": 1.266996937735929e-16,
+        "covariance_relative_error": 1.9031101762833028e-16,
+        "max_alpha_to_intensity_relative_error": 3.246461680341407e-16,
+        "max_alpha_to_phase_absolute_error_rad": 2.914335439641036e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 1632455532033.6768,
+        "weighted_mean_intensity_Wcm2": 200000000000.00003
+      },
+      "antipodes": {
+        "n_self_alpha0": 1,
+        "n_antipode_directed": 24,
+        "max_dphi": 8.881784197001252e-16
+      }
+    }
+  ],
+  "sha256sums": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/deploy/a0_layerA_m88full/nodes_tbv2_es25/SHA256SUMS.txt"
+}

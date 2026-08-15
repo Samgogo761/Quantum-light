@@ -1,0 +1,32 @@
+{
+  "campaign": "full112_gh5_tbv2_omp36",
+  "policy": "Reuse 29175 binary; do not rebuild from dirty worktree. Prefer part_1/OMP=36 after C8↔C36 topology PASS.",
+  "gh3_v2_job": 29175,
+  "pinned_binary": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/.a0_build_cache_v2/8aaba35732b005dbd39f2639ba24d68e3db0a114c2924841184c4556c9a8d8fe/hhg_sbe",
+  "pinned_binary_sha256": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
+  "pinned_binary_source_sha256": "c6372e17457cb45d38233d81149b43fc07768978e5870c3e040d13205000110f",
+  "tb_plus": "/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat",
+  "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
+  "tb_minus_v2": "/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj_v2.dat",
+  "tb_minus_v2_sha256": "d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246",
+  "tb_minus_prod_forbidden_sha256": "d346f352d110ea27d659b2b339ed5bbed78af955115105be69625c205d8aaf9c",
+  "gh5_manifests": {
+    "nodes_sv_r2p5_th0_gh5.dat": "9f266680eef28b6e5c309f467a9529fe7dd275a55fa1be2097adbaf52e1201f3",
+    "nodes_sv_r2p5_th180_gh5.dat": "aaca2b3b3aff1cd99c46801a103e8b3b13df11e0d6d918b03203c95778d094b2"
+  },
+  "outroot_name": "output_a0_full112_k20_gh5_tbv2_omp36",
+  "omp_num_threads": 36,
+  "mkl_num_threads": 1,
+  "topology_audit": {
+    "gate": "C8_C36_TOPOLOGY_JONES",
+    "atol": 1e-4,
+    "c8_job": 29002,
+    "c36_job": 28861,
+    "same_binary_sha256": "589da472e6ec60cfa6eef41dd1e0bd9678f8647815f7d0ea2636ba0d8c96bf42",
+    "max_e_abs_vec_hard": 2.7659480373019044e-13,
+    "max_e_rel_vec_strong_hard": 1.1235416608074293e-08,
+    "status": "PASS",
+    "recommendation": "GH5-v2 prefer part_1/OMP=36"
+  },
+  "quadrature_gate": "gh3_gh5_quadrature_v1_20260815"
+}

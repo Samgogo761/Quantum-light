@@ -60,6 +60,7 @@ PHYSICS_KEYS = (
     "harmonics",
 )
 BUILD_KEYS = ("source_sha256", "binary_sha256", "template_sha256")
+RUNTIME_KEYS = ("omp_num_threads", "mkl_num_threads")
 
 
 def sha256(path: Path) -> str:
@@ -113,6 +114,34 @@ def require_provenance(meta: dict[str, str], cdir: Path) -> None:
     missing = [k for k in PROVENANCE_KEYS if not meta.get(k)]
     if missing:
         raise ValueError(f"{cdir}: empty/missing provenance keys: {missing}")
+    runtime_missing = [k for k in RUNTIME_KEYS if not meta.get(k)]
+    if runtime_missing:
+        raise ValueError(f"{cdir}: empty/missing runtime keys: {runtime_missing}")
+
+
+def verify_output_sha256(cdir: Path) -> dict[str, str]:
+    manifest = cdir / "output_sha256.txt"
+    if not manifest.is_file():
+        raise FileNotFoundError(f"{cdir}: missing output_sha256.txt")
+    checked: dict[str, str] = {}
+    for raw in manifest.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split()
+        if len(parts) < 2:
+            raise ValueError(f"{cdir}: malformed output_sha256.txt line: {line!r}")
+        digest, name = parts[0], parts[-1]
+        path = cdir / name
+        if not path.is_file():
+            raise FileNotFoundError(f"{cdir}: output_sha256 lists missing file {name}")
+        got = sha256(path)
+        if got != digest:
+            raise ValueError(f"{cdir}: output_sha256 mismatch {name}: {got} != {digest}")
+        checked[name] = digest
+    if not checked:
+        raise ValueError(f"{cdir}: output_sha256.txt has no entries")
+    return checked
 
 
 def require_chunk_success(cdir: Path) -> None:
@@ -247,6 +276,7 @@ def merge_ensemble(
     spectrum_scale: float | None = None
     merged_spec: list[dict] | None = None
     seen_ids: set[int] = set()
+    chunk_output_sha256: dict[str, dict[str, str]] = {}
 
     for cdir in chunk_dirs:
         require_chunk_success(cdir)
@@ -256,6 +286,13 @@ def merge_ensemble(
             meta_ref = meta
         else:
             validate_provenance(meta_ref, meta, cdir)
+            for key in RUNTIME_KEYS:
+                if meta_ref.get(key) != meta.get(key):
+                    raise ValueError(
+                        f"runtime mismatch {key} in {cdir}: "
+                        f"{meta_ref.get(key)!r} vs {meta.get(key)!r}"
+                    )
+        chunk_output_sha256[str(cdir.resolve())] = verify_output_sha256(cdir)
         if meta["nodes_sha256"] != manifest_sha:
             raise ValueError(f"{cdir}: nodes_sha256 != manifest file hash")
 
@@ -475,6 +512,8 @@ def merge_ensemble(
     ]
     for key in PROVENANCE_KEYS:
         meta_lines.append(f"{key}={meta_ref[key]}")
+    for key in RUNTIME_KEYS:
+        meta_lines.append(f"{key}={meta_ref[key]}")
     # Prefer first chunk source/binary as informational; compare vs 27992
     # must NOT require these to match (new code vs old job).
     (outdir / "run_metadata.txt").write_text("\n".join(meta_lines) + "\n", encoding="utf-8")
@@ -495,8 +534,10 @@ def merge_ensemble(
         "per_harmonic": {f"H{h}": per_h[h] for h in harmonics},
         "chunk_dirs": [str(p.resolve()) for p in chunk_dirs],
         "provenance_keys_checked": list(PROVENANCE_KEYS),
+        "runtime_keys_checked": list(RUNTIME_KEYS),
         "physics_keys": list(PHYSICS_KEYS),
         "build_keys": list(BUILD_KEYS),
+        "chunk_output_sha256": chunk_output_sha256,
     }
 
 

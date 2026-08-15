@@ -1,17 +1,21 @@
 #!/bin/bash
 #=============================================================================
-# full112 @ k20, GH5, TWO selected states × ±N × 5-node chunks => 20 array tasks.
+# full112 @ k20, GH5-v2, TWO selected states × ±N × 5-node chunks => 20 tasks.
 #
-# Selected states (post 27992):
+# Selected states (post 27992 / GH3-v2 29175):
 #   0: r=2.5, theta=0
 #   1: r=2.5, theta=180
 #
-# DO NOT auto-submit. Requires:
-#   - nodes_gh5_full112_candidates/nodes_sv_r2p5_th{0,180}_gh5.dat
-#   - merge via tools/analysis/merge_chunked_ensemble.py after all chunks complete
-#
-# Array 0-19 = 2 candidates × 2 domains × 5 chunks (25 nodes / 5).
-# Walltime 14 h (27992 measured ~4.9 h × 25/9 ≈ 13.6 h per domain full GH5).
+# Production pins (hard-fail on mismatch; do NOT rebuild from dirty tree):
+#   - binary = 29175 cache, SHA 34edab1d…
+#   - +N TB 66382a51… ; −N TB-v2 d61034e1…
+#   - GH5 ES25 manifests 9f266680… / aaca2b3b…
+# C8↔C36 topology audit PASS (τ=1e-4) → prefer part_1 / OMP=36.
+# Unique OUTROOT: output_a0_full112_k20_gh5_tbv2_omp36
+# WORKDIR is job cwd (--chdir), never login SLURM_SUBMIT_DIR.
+# Formal quadrature: tools/analysis/gh3_gh5_quadrature_gate.py
+#   (ICS/CS/Je 5%, Jo mixed 10%, strong phase <0.1 rad; NOT CEP 1e-3).
+# Merge must verify each chunk output_sha256.txt and record OMP/MKL.
 #=============================================================================
 #SBATCH --job-name=a0_f112_gh5
 #SBATCH --partition=part_1
@@ -51,12 +55,21 @@ source_tree_digest() {
 }
 
 NTHREADS="${SLURM_CPUS_PER_TASK:-36}"
-WORKDIR="${WORKDIR:-${SLURM_SUBMIT_DIR:-$(pwd)}}"
-REPO="${REPO:-/public/home/wangjs/project/New_SBEs/Quantum-light}"
+# Job cwd is sbatch --chdir / SLURM WorkDir. Do not inherit login WORKDIR
+# or SLURM_SUBMIT_DIR (those dumped 29175 into $HOME).
+WORKDIR="$(pwd)"
+REPO="${REPO:-/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3}"
 TB_PLUS="${TB_PLUS:-/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat}"
-TB_MINUS="${TB_MINUS:-/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj.dat}"
-OUTROOT="${OUTROOT:-${WORKDIR}/output_a0_full112_k20_gh5_candidates}"
-NODES_DIR="${NODES_DIR:-${REPO}/deploy/a0_layerA_m88full/nodes_gh5_full112_candidates}"
+TB_MINUS="${TB_MINUS:-/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj_v2.dat}"
+TB_MINUS_PROD_FORBIDDEN="${TB_MINUS_PROD_FORBIDDEN:-/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj.dat}"
+OUTROOT="${OUTROOT:-${WORKDIR}/output_a0_full112_k20_gh5_tbv2_omp36}"
+NODES_DIR="${NODES_DIR:-${REPO}/deploy/a0_layerA_m88full/nodes_tbv2_es25/gh5}"
+PINNED_BINARY_SHA256="34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a"
+PINNED_BINARY="${PINNED_BINARY:-${REPO}/.a0_build_cache_v2/8aaba35732b005dbd39f2639ba24d68e3db0a114c2924841184c4556c9a8d8fe/hhg_sbe}"
+PINNED_TB_PLUS_SHA256="66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18"
+PINNED_TB_MINUS_V2_SHA256="d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246"
+PINNED_GH5_TH0_SHA256="9f266680eef28b6e5c309f467a9529fe7dd275a55fa1be2097adbaf52e1201f3"
+PINNED_GH5_TH180_SHA256="aaca2b3b3aff1cd99c46801a103e8b3b13df11e0d6d918b03203c95778d094b2"
 NK=20
 I_BAR=1.0e11
 HARMONICS_CSV="2,5,7,9,10"
@@ -88,6 +101,10 @@ if [ "${IDOM}" -eq 0 ]; then
 else
   DOM="minusN"
   TB="${TB_MINUS}"
+  case "${TB}" in
+    *Pconj_v2.dat) ;;
+    *) die "GH5-v2 refuses non-v2 minus TB: ${TB}" ;;
+  esac
 fi
 
 START=$(( ICHUNK * CHUNK_SIZE + 1 ))
@@ -112,6 +129,25 @@ PYTHON3="${A0_PYTHON3}"
 
 [ -f "${NODES_FILE}" ] || die "missing GH5 manifest ${NODES_FILE}"
 [ -f "${TB}" ] || die "TB not found: ${TB}"
+if [ "${IDOM}" -eq 1 ]; then
+  [ "${TB}" != "${TB_MINUS_PROD_FORBIDDEN}" ] \
+    || die "GH5-v2 refuses production E18.8 -N TB: ${TB}"
+  TB_SHA_NOW="$(sha256_file "${TB}")"
+  [ "${TB_SHA_NOW}" = "${PINNED_TB_MINUS_V2_SHA256}" ] \
+    || die "minus TB-v2 SHA mismatch: ${TB_SHA_NOW} != ${PINNED_TB_MINUS_V2_SHA256}"
+else
+  TB_SHA_NOW="$(sha256_file "${TB}")"
+  [ "${TB_SHA_NOW}" = "${PINNED_TB_PLUS_SHA256}" ] \
+    || die "plus TB SHA mismatch: ${TB_SHA_NOW} != ${PINNED_TB_PLUS_SHA256}"
+fi
+NODES_SHA_NOW="$(sha256_file "${NODES_FILE}")"
+if [ "${THVAL}" -eq 0 ]; then
+  [ "${NODES_SHA_NOW}" = "${PINNED_GH5_TH0_SHA256}" ] \
+    || die "GH5 th0 manifest SHA mismatch: ${NODES_SHA_NOW}"
+else
+  [ "${NODES_SHA_NOW}" = "${PINNED_GH5_TH180_SHA256}" ] \
+    || die "GH5 th180 manifest SHA mismatch: ${NODES_SHA_NOW}"
+fi
 [ -f "${REPO}/Makefile" ] || die "Makefile not found under REPO=${REPO}"
 [ -f "${NODE_VALIDATOR}" ] || die "missing node validator: ${NODE_VALIDATOR}"
 [ -f "${RUN_VALIDATOR}" ] || die "missing run validator: ${RUN_VALIDATOR}"
@@ -164,78 +200,22 @@ BUILD_LDFLAGS=""
 require_cmd "${BUILD_FC}"
 FC_PATH="$(command -v "${BUILD_FC}")"
 COMPILER_VERSION="$(${BUILD_FC} --version 2>&1 | head -n 1)"
-SOURCE_SHA256="$(source_tree_digest)"
+WORKTREE_SOURCE_SHA256="$(source_tree_digest)"
 
-BUILD_KEY="$({
-  printf 'source_sha256=%s\n' "${SOURCE_SHA256}"
-  printf 'FC=%s\n' "${BUILD_FC}"
-  printf 'FC_path=%s\n' "${FC_PATH}"
-  printf 'compiler_version=%s\n' "${COMPILER_VERSION}"
-  printf 'FFLAGS=%s\n' "${BUILD_FFLAGS}"
-  printf 'LDFLAGS=%s\n' "${BUILD_LDFLAGS}"
-} | sha256sum | awk '{print $1}')"
-
-BUILD_ROOT="${REPO}/.a0_build_cache_v2"
-LOCK="${BUILD_ROOT}/.compile.lockdir"
-CACHE_DIR="${BUILD_ROOT}/${BUILD_KEY}"
-CACHED_BIN="${CACHE_DIR}/hhg_sbe"
-mkdir -p "${BUILD_ROOT}"
-
-if [ ! -x "${CACHED_BIN}" ]; then
-  WAITED=0
-  while true; do
-    if mkdir "${LOCK}" 2>/dev/null; then
-      LOCK_HELD=1
-      break
-    fi
-    if [ -x "${CACHED_BIN}" ]; then
-      break
-    fi
-    sleep 10
-    WAITED=$((WAITED+10))
-    [ "${WAITED}" -le 2400 ] || die "compile lock timeout"
-  done
-
-  if [ "${LOCK_HELD}" -eq 1 ]; then
-    CURRENT_SOURCE_SHA256="$(source_tree_digest)"
-    [ "${CURRENT_SOURCE_SHA256}" = "${SOURCE_SHA256}" ] \
-      || die "source tree changed while waiting for compile lock; resubmit task"
-
-    echo "Compiling hhg_sbe for build key ${BUILD_KEY}..."
-    TMP_CACHE="$(mktemp -d "${BUILD_ROOT}/build.${BUILD_KEY}.XXXXXX")"
-    (
-      cd "${REPO}"
-      make clean
-      make FC="${BUILD_FC}" FFLAGS="${BUILD_FFLAGS}" LDFLAGS="${BUILD_LDFLAGS}"
-    ) 2>&1 | tee "${TMP_CACHE}/build.log"
-
-    POST_BUILD_SOURCE_SHA256="$(source_tree_digest)"
-    [ "${POST_BUILD_SOURCE_SHA256}" = "${SOURCE_SHA256}" ] \
-      || die "source tree changed during compilation; refusing mixed build"
-    [ -x "${REPO}/hhg_sbe" ] \
-      || die "compiler returned without executable ${REPO}/hhg_sbe"
-
-    cp -f "${REPO}/hhg_sbe" "${TMP_CACHE}/hhg_sbe"
-    chmod 0555 "${TMP_CACHE}/hhg_sbe"
-    {
-      echo "build_key=${BUILD_KEY}"
-      echo "source_sha256=${SOURCE_SHA256}"
-      echo "FC=${BUILD_FC}"
-      echo "FC_path=${FC_PATH}"
-      echo "compiler_version=${COMPILER_VERSION}"
-      echo "FFLAGS=${BUILD_FFLAGS}"
-      echo "LDFLAGS=${BUILD_LDFLAGS}"
-      echo "binary_sha256=$(sha256_file "${TMP_CACHE}/hhg_sbe")"
-      echo "built_at=$(date --iso-8601=seconds 2>/dev/null || date)"
-    } > "${TMP_CACHE}/build_metadata.txt"
-    mv "${TMP_CACHE}" "${CACHE_DIR}"
-    rmdir "${LOCK}" 2>/dev/null || true
-    LOCK_HELD=0
-  fi
-fi
-
-[ -x "${CACHED_BIN}" ] || die "missing build-keyed executable ${CACHED_BIN}"
+# Reuse the 29175 binary. Never compile from the current dirty worktree.
+[ -x "${PINNED_BINARY}" ] || die "pinned 29175 binary missing: ${PINNED_BINARY}"
+CACHED_BIN="${PINNED_BINARY}"
+CACHE_DIR="$(dirname "${CACHED_BIN}")"
+[ -f "${CACHE_DIR}/build_metadata.txt" ] \
+  || die "pinned binary cache lacks build_metadata.txt: ${CACHE_DIR}"
 BINARY_SHA256="$(sha256_file "${CACHED_BIN}")"
+[ "${BINARY_SHA256}" = "${PINNED_BINARY_SHA256}" ] \
+  || die "pinned binary SHA mismatch: ${BINARY_SHA256} != ${PINNED_BINARY_SHA256}"
+SOURCE_SHA256="$(awk -F= '$1=="source_sha256"{print $2; exit}' "${CACHE_DIR}/build_metadata.txt")"
+BUILD_KEY="$(awk -F= '$1=="build_key"{print $2; exit}' "${CACHE_DIR}/build_metadata.txt")"
+[ -n "${SOURCE_SHA256}" ] || die "pinned build_metadata missing source_sha256"
+[ -n "${BUILD_KEY}" ] || die "pinned build_metadata missing build_key"
+echo "USING_PINNED_29175_BINARY sha=${BINARY_SHA256} worktree_source=${WORKTREE_SOURCE_SHA256}"
 
 # Skip only when SUCCESS exists AND provenance+chunk+validator+output hashes match.
 NODES_SHA256_EXPECTED="$(sha256_file "${NODES_FILE}")"
@@ -345,7 +325,9 @@ PYTHON_VERSION="$("${PYTHON3}" --version 2>&1)"
 
 {
   echo "case=${CASE}"
-  echo "campaign=full112_gh5_candidates_k20_chunked"
+  echo "campaign=full112_gh5_tbv2_omp36"
+  echo "binary_policy=pinned_29175"
+  echo "worktree_source_sha256=${WORKTREE_SOURCE_SHA256}"
   echo "model=full112"
   echo "nv_orig=84"
   echo "nb_start=1"
