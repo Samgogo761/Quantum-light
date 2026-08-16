@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "deploy" / "a0_laye
 
 from diagnose_gh5_quadrature import jones_decomp
 from gh7_nodes import case_name, expected_case_names, peer_k_name
-from validate_a0_run_strict import load_chunk_info
+from validate_a0_run_strict import load_chunk_info, moment_passed
 from validate_qlight_nodes_production import load_manifest
 from rank_full112_gh3_candidates import amp as jones_amp
 from rank_full112_gh3_candidates import load_node_modes
@@ -43,7 +43,9 @@ JONES_ETA = 1.0e-4
 JONES_ATOL = JONES_ETA * JONES_RTOL  # 5e-6; independent weak absolute threshold
 EXC_FLOOR = 1.0e-6
 H10_RTOL = 0.10
-GATE_VERSION = "gh7_tail_model_v4_20260816"
+GATE_VERSION = "gh7_tail_model_v5_20260816"
+OMP_THREADS = 36
+MKL_THREADS = 1
 REQUIRED_META_KEYS = (
     "freeze_pin_base_head",
     "campaign_actual_head",
@@ -185,9 +187,9 @@ def parse_band_occupation(
             rec["n_rows"] += 1
             rec["trace"] += occ
             if band > nv:
-                rec["exc"] += occ
+                rec["exc"] += max(occ, 0.0)
             if band > nb - N_EDGE_BANDS:
-                rec["edge"] += occ
+                rec["edge"] += max(occ, 0.0)
                 rec["edge_max"] = max(rec["edge_max"], occ)
 
     if not snaps:
@@ -343,8 +345,20 @@ def verify_output_sha256(path: Path, required: tuple[str, ...] = REQUIRED_OUTPUT
         raise ValueError(f"output_sha256 missing required files: {missing}")
 
 
+def required_output_files(probe: dict) -> tuple[str, ...]:
+    return REQUIRED_OUTPUT_FILES + (f"Jt_node_{int(probe['id']):04d}.dat",)
+
+
 def _csv_ints(raw: str) -> list[int]:
     return [int(x) for x in str(raw).replace(",", " ").split() if x]
+
+
+def _require_json_status(path: Path, label: str) -> None:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError(f"{label} is not a JSON object")
+    if payload.get("status") != "PASS":
+        raise ValueError(f"{label} status={payload.get('status')}")
 
 
 def _require_meta(meta: dict[str, str], freeze: dict, probe: dict, nk: int) -> None:
@@ -387,8 +401,11 @@ def _require_meta(meta: dict[str, str], freeze: dict, probe: dict, nk: int) -> N
             raise ValueError(f"FREEZE missing {key}")
         if meta[key] != want:
             raise ValueError(f"{key} {meta[key]} != {want}")
-    if meta["source_sha256"] != meta["worktree_source_sha256"]:
-        raise ValueError("source_sha256 != worktree_source_sha256")
+    want_src = freeze.get("pinned_binary_source_sha256")
+    if not want_src:
+        raise ValueError("FREEZE missing pinned_binary_source_sha256")
+    if meta["source_sha256"] != want_src:
+        raise ValueError(f"source_sha256 {meta['source_sha256']} != pinned {want_src}")
     if meta["nk"] != str(nk):
         raise ValueError(f"metadata nk={meta['nk']} != {nk}")
     if meta["dt"] != str(freeze.get("dt", "0.35")):
@@ -404,16 +421,20 @@ def _require_meta(meta: dict[str, str], freeze: dict, probe: dict, nk: int) -> N
     want_h = freeze.get("harmonics", [2, 5, 7, 9, 10])
     if _csv_ints(meta["harmonics"]) != [int(x) for x in want_h]:
         raise ValueError(f"metadata harmonics={meta['harmonics']} != {want_h}")
-    if not str(meta["omp_num_threads"]).isdigit() or int(meta["omp_num_threads"]) < 1:
-        raise ValueError(f"bad omp_num_threads={meta['omp_num_threads']}")
-    if not str(meta["mkl_num_threads"]).isdigit() or int(meta["mkl_num_threads"]) < 1:
-        raise ValueError(f"bad mkl_num_threads={meta['mkl_num_threads']}")
+    if str(meta["omp_num_threads"]) != str(OMP_THREADS):
+        raise ValueError(f"omp_num_threads={meta['omp_num_threads']} != {OMP_THREADS}")
+    if str(meta["mkl_num_threads"]) != str(MKL_THREADS):
+        raise ValueError(f"mkl_num_threads={meta['mkl_num_threads']} != {MKL_THREADS}")
 
 
 def _require_chunk_counts(outdir: Path, probe: dict) -> None:
     snap = outdir / "nodes_manifest.input.dat"
     info = load_chunk_info(outdir / "chunk_info.txt")
     rows = load_manifest(snap)
+    got_sha = sha256_file(snap)
+    want_sha = probe["manifest_sha256"]
+    if got_sha != want_sha:
+        raise ValueError(f"snapshot manifest SHA {got_sha} != freeze {want_sha}")
     try:
         n_manifest = int(info["n_manifest_nodes"])
         n_propagate = int(info["n_propagate_nodes"])
@@ -452,7 +473,10 @@ def audit_k20_dir(outdir: Path, freeze: dict, probe: dict, nk: int) -> dict:
     try:
         if not (outdir / "SUCCESS").is_file():
             raise ValueError("missing SUCCESS")
-        missing_files = [name for name in REQUIRED_OUTPUT_FILES if not (outdir / name).is_file()]
+        required = required_output_files(probe)
+        missing_files = [
+            name for name in required if not (outdir / name).is_file() or (outdir / name).stat().st_size == 0
+        ]
         if missing_files:
             raise ValueError(f"missing required outputs: {missing_files}")
         run_status = _kv_file(outdir / "run_status.txt")
@@ -461,12 +485,16 @@ def audit_k20_dir(outdir: Path, freeze: dict, probe: dict, nk: int) -> dict:
         sha_list = outdir / "output_sha256.txt"
         if not sha_list.is_file():
             raise ValueError("missing output_sha256.txt")
-        verify_output_sha256(sha_list)
+        verify_output_sha256(sha_list, required)
         meta = _kv_file(outdir / "run_metadata.txt")
         _require_meta(meta, freeze, probe, nk)
         status["campaign_actual_head"] = meta["campaign_actual_head"]
         status["freeze_pin_base_head"] = meta["freeze_pin_base_head"]
         _require_chunk_counts(outdir, probe)
+        if not moment_passed(outdir / "nodes_moment_check.txt"):
+            raise ValueError("nodes_moment_check.txt did not report PASS")
+        _require_json_status(outdir / "node_preflight.json", "node_preflight")
+        _require_json_status(outdir / "run_validator.json", "run_validator")
         modes = outdir / "HHG_nodes_modes.dat"
         _finite_tokens(modes)
         nml = outdir / "input.nml"
@@ -611,49 +639,53 @@ def main() -> int:
             found = [p.name for p in list_case_dirs(args.k40_root)]
             report["expected_cases"] = expected
             report["found_cases"] = found
-            by_name = {case_name(p, args.k40_nk): p for p in probes}
+            by_name40 = {case_name(p, args.k40_nk): p for p in probes}
             pairs = []
             if not same_case_set(found, expected):
                 report["missing_cases"] = sorted(set(expected) - set(found))
                 report["extra_cases"] = sorted(set(found) - set(expected))
             jones_pairs: list[tuple[dict, dict]] = []
-            ready: list[tuple[str, dict, dict, dict]] = []
+            ready: list[tuple[str, dict, dict, dict, dict]] = []
             for name in expected:
+                probe = by_name40[name]
                 d40 = args.k40_root / name
                 d20 = args.k20_root / peer_k_name(name, args.k40_nk, args.nk)
                 if name not in found:
                     pairs.append({"case": name, "status": "INCOMPLETE", "pass": False, "reason": "k40 directory missing"})
                     continue
-                audit = audit_k20_dir(d40, freeze, by_name[name], args.k40_nk)
-                if audit.get("status") != "PASS":
-                    pairs.append({"case": name, "k20": str(d20), **audit})
+                audit40 = audit_k20_dir(d40, freeze, probe, args.k40_nk)
+                if audit40.get("status") != "PASS":
+                    pairs.append({"case": name, "k20": str(d20), **audit40})
                     continue
-                if not (d20 / "HHG_nodes_modes.dat").is_file():
+                audit20 = audit_k20_dir(d20, freeze, probe, args.nk)
+                if audit20.get("status") != "PASS":
                     pairs.append({
                         "case": name,
                         "k20": str(d20),
-                        "status": "INCOMPLETE",
+                        "status": audit20.get("status", "FAIL"),
                         "pass": False,
-                        "reason": "k20 peer missing",
-                        "campaign_actual_head": audit.get("campaign_actual_head"),
-                        "freeze_pin_base_head": audit.get("freeze_pin_base_head"),
+                        "reason": f"k20 peer audit: {audit20.get('reason', audit20.get('status'))}",
+                        "campaign_actual_head": audit40.get("campaign_actual_head"),
+                        "k20_campaign_actual_head": audit20.get("campaign_actual_head"),
+                        "freeze_pin_base_head": audit40.get("freeze_pin_base_head"),
                     })
                     continue
                 j20 = jones_from_modes(d20 / "HHG_nodes_modes.dat")
                 j40 = jones_from_modes(d40 / "HHG_nodes_modes.dat")
                 jones_pairs.append((j20, j40))
-                ready.append((name, j20, j40, audit))
+                ready.append((name, j20, j40, audit40, audit20))
             scales = jones_scales_from_pairs(jones_pairs) if jones_pairs else {}
             report["jones_A_H"] = scales
-            for name, j20, j40, audit in ready:
+            for name, j20, j40, audit40, audit20 in ready:
                 cmpj = compare_jones(j20, j40, scales)
                 pairs.append({
                     **cmpj,
                     "case": name,
                     "k20": str(args.k20_root / peer_k_name(name, args.k40_nk, args.nk)),
                     "status": "PASS" if cmpj["pass"] else "FAIL",
-                    "campaign_actual_head": audit.get("campaign_actual_head"),
-                    "freeze_pin_base_head": audit.get("freeze_pin_base_head"),
+                    "campaign_actual_head": audit40.get("campaign_actual_head"),
+                    "k20_campaign_actual_head": audit20.get("campaign_actual_head"),
+                    "freeze_pin_base_head": audit40.get("freeze_pin_base_head"),
                 })
             report["pairs"] = pairs
             if not same_case_set(found, expected):
@@ -666,11 +698,13 @@ def main() -> int:
                 report["status"] = "PASS"
             else:
                 report["status"] = "FAIL"
-            heads = sorted({p.get("campaign_actual_head") for p in pairs if p.get("campaign_actual_head")})
-            report["campaign_actual_heads"] = heads
-            if report["status"] == "PASS" and len(heads) != 1:
+            heads40 = sorted({p.get("campaign_actual_head") for p in pairs if p.get("campaign_actual_head")})
+            heads20 = sorted({p.get("k20_campaign_actual_head") for p in pairs if p.get("k20_campaign_actual_head")})
+            report["campaign_actual_heads"] = heads40
+            report["k20_campaign_actual_heads"] = heads20
+            if report["status"] == "PASS" and (len(heads40) != 1 or len(heads20) != 1):
                 report["status"] = "FAIL"
-                report["reason"] = f"campaign_actual_head not unique: {heads}"
+                report["reason"] = f"campaign_actual_head not unique: k40={heads40} k20={heads20}"
     text = json.dumps(report, indent=2) + "\n"
     print(text)
     if args.report:

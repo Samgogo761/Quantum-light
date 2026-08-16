@@ -23,11 +23,13 @@ from gh7_nodes import (
     select_wide_axis_antinode_pair,
 )
 from gh7_tail_model_gate import (
+    EDGE_REL,
     JONES_ATOL,
     REQUIRED_OUTPUT_FILES,
     compare_jones,
     gate_exit_code,
     parse_band_occupation,
+    required_output_files,
     same_case_set,
 )
 from validate_a0_run_strict import validate as validate_run
@@ -256,6 +258,27 @@ def test_occupation_exc_floor() -> None:
         assert rec["pass_edge_rel"] is True
 
 
+def test_occupation_negative_cancel_fails() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        path = Path(td) / "cancel.dat"
+        lines = ["# it time ikx iky band occ\n"]
+        for it in (1, 2):
+            for ikx, iky in ((1, 1), (1, 2), (2, 1), (2, 2)):
+                for band in range(1, 113):
+                    if it == 1 or band <= 84:
+                        occ = 1.0 if band <= 84 else 0.0
+                    elif band >= 105:
+                        occ = 8.0e-4 if (ikx, iky, band) == (1, 1, 112) else -1.0e-8
+                    else:
+                        occ = -1.0e-8
+                    lines.append(f"{it} 0.0 {ikx} {iky} {band} {occ}\n")
+        path.write_text("".join(lines), encoding="utf-8")
+        rec = parse_band_occupation(path, nk=2, expected_its=[1, 2])
+        assert rec["pass_edge_abs"] is True
+        assert rec["pass_edge_rel"] is False
+        assert rec["max_edge_rel"] > EDGE_REL
+
+
 def test_same_case_set_ignores_order() -> None:
     expected = [
         "sv_r2p5_th000_plusN_id01_corner_k20",
@@ -285,10 +308,11 @@ PROBES_8 = [
 ]
 PIN_SHAS = {
     "template_sha256": "a" * 64,
-    "worktree_source_sha256": "b" * 64,
+    "worktree_source_sha256": "78d24f" + "b" * 58,
     "sbatch_sha256": "c" * 64,
     "validator_run_sha256": "d" * 64,
 }
+PINNED_SRC = "c6372e" + "e" * 58
 
 
 def _dump_freeze(path: Path, payload: dict) -> str:
@@ -331,9 +355,9 @@ def _modes_text(node_id: int, *, jx: float = 1.0) -> str:
     return "".join(lines)
 
 
-def _write_output_sha256(out: Path) -> None:
+def _write_output_sha256(out: Path, probe: dict) -> None:
     (out / "output_sha256.txt").write_text(
-        "\n".join(f"{_sha(out / name)}  {name}" for name in REQUIRED_OUTPUT_FILES) + "\n",
+        "\n".join(f"{_sha(out / name)}  {name}" for name in required_output_files(probe)) + "\n",
         encoding="utf-8",
     )
 
@@ -357,7 +381,7 @@ def _write_prod_case(
     (out / "SUCCESS").write_text("", encoding="utf-8")
     (out / "run_status.txt").write_text("status=PASS\n", encoding="utf-8")
     (out / "input.nml").write_text(_nml_text(nk), encoding="utf-8")
-    (out / "nodes_manifest.input.dat").write_text(man_text, encoding="utf-8")
+    (out / "nodes_manifest.input.dat").write_bytes(man_text.encode("utf-8"))
     (out / "HHG_nodes_modes.dat").write_text(_modes_text(int(probe["id"])), encoding="utf-8")
     (out / "chunk_info.txt").write_text(
         f"n_manifest_nodes = 49\nn_propagate_nodes = 1\npropagate_ids = {probe['id']}\n",
@@ -377,6 +401,7 @@ def _write_prod_case(
     (out / "node_preflight.json").write_text('{"status":"PASS"}\n', encoding="utf-8")
     (out / "run_validator.json").write_text('{"status":"PASS","mode":"chunk"}\n', encoding="utf-8")
     (out / "occupation_kt.dat").write_text("# occupation\n", encoding="utf-8")
+    (out / f"Jt_node_{int(probe['id']):04d}.dat").write_text("0.0 0.0 0.0\n", encoding="utf-8")
     _write_occ(out / "occupation_band_kt.dat", nk=nk, its=(1, 2, 3))
     (out / "run_metadata.txt").write_text(
         "\n".join(
@@ -391,11 +416,11 @@ def _write_prod_case(
                 f"freeze_sha256={freeze_sha}",
                 f"template_sha256={PIN_SHAS['template_sha256']}",
                 f"worktree_source_sha256={PIN_SHAS['worktree_source_sha256']}",
-                f"source_sha256={PIN_SHAS['worktree_source_sha256']}",
+                f"source_sha256={PINNED_SRC}",
                 f"sbatch_sha256={PIN_SHAS['sbatch_sha256']}",
                 f"validator_run_sha256={PIN_SHAS['validator_run_sha256']}",
-                f"omp_num_threads=36",
-                f"mkl_num_threads=36",
+                "omp_num_threads=36",
+                "mkl_num_threads=1",
                 f"nk={nk}",
                 "dt=0.35",
                 "T2_cycles=0.5",
@@ -408,7 +433,7 @@ def _write_prod_case(
         + "\n",
         encoding="utf-8",
     )
-    _write_output_sha256(out)
+    _write_output_sha256(out, probe)
     return out
 
 
@@ -424,6 +449,7 @@ def _freeze_payload(probes: list[dict], man_sha: str, base_head: str = "basehead
         "dt": 0.35,
         "T2_cycles": 0.5,
         "harmonics": [2, 5, 7, 9, 10],
+        "pinned_binary_source_sha256": PINNED_SRC,
         **PIN_SHAS,
     }
 
@@ -472,6 +498,7 @@ def test_eight_cases_pass_lexical_mismatch() -> None:
         assert rc == 0, payload
         assert payload["status"] == "PASS"
         assert payload["campaign_actual_heads"] == ["actualhead"]
+        assert PINNED_SRC != PIN_SHAS["worktree_source_sha256"]
 
 
 def test_k40_cli_pass() -> None:
@@ -541,7 +568,9 @@ def test_k40_cli_pass() -> None:
         assert rc == 0, payload
         assert payload["status"] == "PASS"
         assert payload["campaign_actual_heads"] == ["actualhead"]
+        assert payload["k20_campaign_actual_heads"] == ["actualhead"]
         assert all(row.get("campaign_actual_head") == "actualhead" for row in payload["pairs"])
+        assert all(row.get("k20_campaign_actual_head") == "actualhead" for row in payload["pairs"])
 
 
 def test_missing_input_fails() -> None:
@@ -615,7 +644,7 @@ def test_missing_meta_fields_fail() -> None:
             if not line.startswith("freeze_pin_base_head=") and not line.startswith("freeze_sha256=")
         ]
         meta.write_text("\n".join(kept) + "\n", encoding="utf-8")
-        _write_output_sha256(cases[0])
+        _write_output_sha256(cases[0], probes[0])
         rc, payload = _run_gate(
             ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
         )
@@ -689,7 +718,7 @@ def test_chunk_count_mismatch_fails() -> None:
             "n_manifest_nodes = 777\nn_propagate_nodes = 2\npropagate_ids = 1\n",
             encoding="utf-8",
         )
-        _write_output_sha256(cases[0])
+        _write_output_sha256(cases[0], probes[0])
         rc, payload = _run_gate(
             ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
         )
@@ -744,6 +773,7 @@ def test_tampered_k20_modes_fails_k40() -> None:
             _modes_text(int(probes[0]["id"]), jx=10.0),
             encoding="utf-8",
         )
+        _write_output_sha256(cases20[0], probes[0])
         (k20 / "GH7_TAIL_K20.json").write_text(json.dumps({"status": "PASS"}) + "\n", encoding="utf-8")
         rc, payload = _run_gate(
             [
@@ -802,6 +832,147 @@ def test_output_hash_missing_required_fails() -> None:
         )
         rc, payload = _run_gate(
             ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
+        )
+        assert rc != 0
+        assert payload["status"] != "PASS"
+
+
+def _eight_prod(root: Path) -> tuple[Path, Path, list[dict], str, list[Path]]:
+    probes = list(PROBES_8)
+    expected = expected_case_names(probes, 2)
+    man_text = _manifest_49()
+    man_sha = hashlib.sha256(man_text.encode("utf-8")).hexdigest()
+    freeze = root / "FREEZE.json"
+    digest = _dump_freeze(freeze, _freeze_payload(probes, man_sha))
+    k20 = root / "k20"
+    k20.mkdir()
+    cases = []
+    for name, probe in zip(expected, probes, strict=True):
+        cases.append(
+            _write_prod_case(
+                k20,
+                name,
+                probe,
+                nk=2,
+                actual_head="actualhead",
+                base_head="basehead",
+                freeze_sha=digest,
+                bin_sha="bin",
+                tb_sha="tb",
+                man_text=man_text,
+                man_sha=man_sha,
+            )
+        )
+    return freeze, k20, probes, digest, cases
+
+
+def test_source_sha_must_match_pinned_binary() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        freeze, k20, probes, _digest, cases = _eight_prod(root)
+        meta = cases[0] / "run_metadata.txt"
+        text = meta.read_text(encoding="utf-8").replace(
+            f"source_sha256={PINNED_SRC}",
+            f"source_sha256={PIN_SHAS['worktree_source_sha256']}",
+        )
+        meta.write_text(text, encoding="utf-8")
+        _write_output_sha256(cases[0], probes[0])
+        rc, payload = _run_gate(
+            ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
+        )
+        assert rc != 0
+        assert payload["status"] != "PASS"
+
+
+def test_mkl_threads_must_be_one() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        freeze, k20, probes, _digest, cases = _eight_prod(root)
+        meta = cases[0] / "run_metadata.txt"
+        text = meta.read_text(encoding="utf-8").replace("mkl_num_threads=1", "mkl_num_threads=36")
+        meta.write_text(text, encoding="utf-8")
+        _write_output_sha256(cases[0], probes[0])
+        rc, payload = _run_gate(
+            ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
+        )
+        assert rc != 0
+        assert payload["status"] != "PASS"
+
+
+def test_missing_jt_fails() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        freeze, k20, probes, _digest, cases = _eight_prod(root)
+        cases[0].joinpath(f"Jt_node_{int(probes[0]['id']):04d}.dat").unlink()
+        rc, payload = _run_gate(
+            ["--stage", "k20", "--freeze", str(freeze), "--k20-root", str(k20), "--nk", "2", "--report", str(root / "report.json")]
+        )
+        assert rc != 0
+        assert payload["status"] != "PASS"
+
+
+def test_k40_reaudits_k20_peer() -> None:
+    probes = list(PROBES_8)
+    names = expected_case_names(probes, 2)
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        man_text = _manifest_49()
+        man_sha = hashlib.sha256(man_text.encode("utf-8")).hexdigest()
+        freeze = root / "FREEZE.json"
+        digest = _dump_freeze(freeze, _freeze_payload(probes, man_sha))
+        k20 = root / "k20"
+        k40 = root / "k40"
+        k20.mkdir()
+        k40.mkdir()
+        cases20 = []
+        for name, probe in zip(names, probes, strict=True):
+            cases20.append(
+                _write_prod_case(
+                    k20,
+                    name,
+                    probe,
+                    nk=2,
+                    actual_head="actualhead",
+                    base_head="basehead",
+                    freeze_sha=digest,
+                    bin_sha="bin",
+                    tb_sha="tb",
+                    man_text=man_text,
+                    man_sha=man_sha,
+                )
+            )
+            _write_prod_case(
+                k40,
+                name,
+                probe,
+                nk=2,
+                actual_head="actualhead",
+                base_head="basehead",
+                freeze_sha=digest,
+                bin_sha="bin",
+                tb_sha="tb",
+                man_text=man_text,
+                man_sha=man_sha,
+            )
+        cases20[0].joinpath("SUCCESS").unlink()
+        (k20 / "GH7_TAIL_K20.json").write_text(json.dumps({"status": "PASS"}) + "\n", encoding="utf-8")
+        rc, payload = _run_gate(
+            [
+                "--stage",
+                "k40",
+                "--freeze",
+                str(freeze),
+                "--k20-root",
+                str(k20),
+                "--k40-root",
+                str(k40),
+                "--nk",
+                "2",
+                "--k40-nk",
+                "2",
+                "--report",
+                str(root / "report.json"),
+            ]
         )
         assert rc != 0
         assert payload["status"] != "PASS"
@@ -870,6 +1041,7 @@ if __name__ == "__main__":
     test_dt2_not_accepted_stage()
     test_mixed_jones_weak_absolute()
     test_occupation_exc_floor()
+    test_occupation_negative_cancel_fails()
     test_same_case_set_ignores_order()
     test_eight_cases_pass_lexical_mismatch()
     test_k40_cli_pass()
@@ -879,6 +1051,10 @@ if __name__ == "__main__":
     test_chunk_count_mismatch_fails()
     test_tampered_k20_modes_fails_k40()
     test_output_hash_missing_required_fails()
+    test_source_sha_must_match_pinned_binary()
+    test_mkl_threads_must_be_one()
+    test_missing_jt_fails()
+    test_k40_reaudits_k20_peer()
     test_validate_chunk_ics()
     test_validate_chunk_count_mismatch()
     print("test_gh7_tail_model_gate: PASS")
