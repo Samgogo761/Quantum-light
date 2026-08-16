@@ -87,3 +87,16 @@ test: dirs
 	python tools/analysis/test_hhg_fft_utils.py
 	python tools/analysis/test_merge_compare_neg.py
 	python tools/analysis/test_merge_compare_pos.py
+	python tools/analysis/test_gh3_gh5_quadrature_gate.py
+	python tools/analysis/test_diagnose_gh5_quadrature.py
+	python tools/analysis/test_gh7_tail_model_gate.py
+	$(MAKE) test-field-cep
+
+# Production generate_field_sample antipode gate (mod_params + mod_laser only).
+.PHONY: test-field-cep
+test-field-cep: dirs
+	rm -f tests/*.mod
+	$(FC) $(FFLAGS) $(MODINC) $(MODFLAG) -o test_field_cep_pi \
+		$(SDIR)/mod_params.f90 $(SDIR)/mod_laser.f90 tests/test_field_cep_pi.f90
+	./test_field_cep_pi
+	rm -f tests/*.mod

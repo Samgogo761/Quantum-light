@@ -1,0 +1,160 @@
+{
+  "campaign": "full112_gh7_tail_k20",
+  "do_not_submit": true,
+  "do_not_blind_submit_full_gh7": true,
+  "policy": "Pinned 29175 binary; TB-v2; no rebuild. Staged k20 only until occupation gate PASS.",
+  "gh_order": 7,
+  "n_nodes": 49,
+  "precision": "ES25.17",
+  "I_bar": 100000000000.0,
+  "squeeze_r": 2.5,
+  "thetas_deg": [
+    0,
+    180
+  ],
+  "pinned_binary_sha256": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
+  "pinned_binary_source_sha256": "c6372e17457cb45d38233d81149b43fc07768978e5870c3e040d13205000110f",
+  "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
+  "tb_minus_v2_sha256": "d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246",
+  "manifests": {
+    "nodes_sv_r2p5_th0_gh7.dat": {
+      "path": "deploy/a0_layerA_m88full/nodes_tbv2_es25/gh7/nodes_sv_r2p5_th0_gh7.dat",
+      "sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 49,
+        "weight_sum": 1.0,
+        "mean_error": 1.333492746608349e-16,
+        "covariance_relative_error": 3.8043881899990477e-16,
+        "max_alpha_to_intensity_relative_error": 2.1574053806115116e-16,
+        "max_alpha_to_phase_absolute_error_rad": 4.440892098500626e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 2813159615258.948,
+        "weighted_mean_intensity_Wcm2": 199999999999.99997
+      },
+      "wide_axis_pair": {
+        "theta_deg": 0.0,
+        "ids": [
+          1,
+          49
+        ],
+        "I_max": 2813159615258.948,
+        "weights": [
+          3.005987384290855e-07,
+          3.005987384290855e-07
+        ],
+        "alphas": [
+          [
+            -1.8815268187188199,
+            -22.921689105943642
+          ],
+          [
+            1.8815268187188199,
+            22.921689105943642
+          ]
+        ],
+        "major_axis": [
+          0.0,
+          1.0
+        ],
+        "minor_axis": [
+          1.0,
+          0.0
+        ],
+        "n_maxI_nodes": 8,
+        "n_maxI_pairs": 4,
+        "note": "max-I antipode pair on the wide-axis GH extreme; IDs from manifest"
+      }
+    },
+    "nodes_sv_r2p5_th180_gh7.dat": {
+      "path": "deploy/a0_layerA_m88full/nodes_tbv2_es25/gh7/nodes_sv_r2p5_th180_gh7.dat",
+      "sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 49,
+        "weight_sum": 1.0,
+        "mean_error": 2.645236422304017e-16,
+        "covariance_relative_error": 3.804363601867986e-16,
+        "max_alpha_to_intensity_relative_error": 2.1574053806115116e-16,
+        "max_alpha_to_phase_absolute_error_rad": 8.881784197001252e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 2813159615258.948,
+        "weighted_mean_intensity_Wcm2": 199999999999.99997
+      },
+      "wide_axis_pair": {
+        "theta_deg": 180.0,
+        "ids": [
+          1,
+          49
+        ],
+        "I_max": 2813159615258.948,
+        "weights": [
+          3.005987384290855e-07,
+          3.005987384290855e-07
+        ],
+        "alphas": [
+          [
+            -22.921689105943642,
+            -1.8815268187188186
+          ],
+          [
+            22.921689105943642,
+            1.8815268187188186
+          ]
+        ],
+        "major_axis": [
+          1.0,
+          -6.123233995736765e-17
+        ],
+        "minor_axis": [
+          -0.4210913303181853,
+          -0.9070182421158138
+        ],
+        "n_maxI_nodes": 8,
+        "n_maxI_pairs": 4,
+        "note": "max-I antipode pair on the wide-axis GH extreme; IDs from manifest"
+      }
+    }
+  },
+  "plusN_probes": [
+    {
+      "theta_deg": 0,
+      "id": 1,
+      "I_max": 2813159615258.948,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 49,
+      "I_max": 2813159615258.948,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 180,
+      "id": 1,
+      "I_max": 2813159615258.948,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 49,
+      "I_max": 2813159615258.948,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    }
+  ],
+  "stages": [
+    "k20_tail",
+    "occupation_post",
+    "approve_k40",
+    "then_decide_full_gh7"
+  ],
+  "renormalize_subset_weights": false,
+  "use_full_manifest_moment_check": true,
+  "propagate_ids_only": true,
+  "occ_stride": 336,
+  "n_occupation_snapshots_approx": 16
+}

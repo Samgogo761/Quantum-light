@@ -28,5 +28,13 @@
     "status": "PASS",
     "recommendation": "GH5-v2 prefer part_1/OMP=36"
   },
-  "quadrature_gate": "gh3_gh5_quadrature_v1_20260815"
+  "quadrature_gate": "gh3_gh5_quadrature_v1_20260815",
+  "quadrature_v1_status": "FAIL",
+  "quadrature_v1_permanent": true,
+  "label": "GH5 estimate / quadrature not closed",
+  "a1_quantitative": "NOT_FROZEN",
+  "diag": "gh3_gh5_quadrature_diag_v1_20260816",
+  "do_not_rerun_gh5": true,
+  "do_not_blind_submit_gh7": true,
+  "wall_h_per_chunk_from_runlog": [2.54, 2.97]
 }

@@ -4,8 +4,10 @@
 Frozen 2026-08-15:
   hard harmonics H2/H5/H7/H9; H10 diagnostic only
   ICS/CS and resolved Je: 5% relative
-  Jo: mixed abs/rel, 10%
+  Jo: mixed abs/rel, 10% on SCALAR amplitude ||J_o|| only
+      (NOT the full complex Jones vector; see diagnose_gh5_quadrature.py)
   strong-signal Jones phase: < 0.1 rad
+  Verdict FAIL is permanent; do not retune this file to force PASS.
 """
 from __future__ import annotations
 
@@ -110,6 +112,7 @@ def compare_state(stem: str, gh3_root: Path, gh5_root: Path) -> dict:
             "Jo_gh3": jo3,
             "Jo_gh5": jo5,
             "d_Jo": abs(jo5 - jo3),
+            "note_Jo": "scalar ||J_o|| only; not ||J5-J3||",
             "Je_gh3": je3,
             "Je_gh5": je5,
             "d_Je": abs(je5 - je3),
@@ -170,6 +173,9 @@ def frozen_thresholds() -> dict:
         "jo_je_eta": JO_JE_ETA,
         "phase_strong_atol_rad": PHASE_ATOL_RAD,
         "not_the_cep_rel_1e-3_gate": True,
+        "jo_compares_scalar_amplitude_only": True,
+        "je_is_neel_even_mean_not_cep_even": True,
+        "je_5pct_rel_is_known_misspec_do_not_retune": True,
     }
 
 
