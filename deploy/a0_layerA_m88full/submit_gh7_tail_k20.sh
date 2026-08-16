@@ -25,20 +25,22 @@ PINNED_SHA="34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a"
 [ -x "${PINNED_BIN}" ] || { echo "missing pinned binary" >&2; exit 1; }
 got="$(sha256sum "${PINNED_BIN}" | awk '{print $1}')"
 [ "${got}" = "${PINNED_SHA}" ] || { echo "binary SHA mismatch" >&2; exit 1; }
-HEAD="$(git -C "${REPO}" rev-parse HEAD)"
+git_in_repo() {
+  git --git-dir="${REPO}/.git" --work-tree="${REPO}" "$@"
+}
+HEAD="$(git_in_repo rev-parse HEAD)"
 PIN_BASE="$("${PYTHON3}" -c 'import json,sys; print(json.load(open(sys.argv[1],encoding="utf-8"))["freeze_pin_base_head"])' "${FREEZE}")"
 [ "${PIN_BASE}" != "TO_BE_PINNED" ] || { echo "REFUSED: FREEZE.freeze_pin_base_head is not pinned" >&2; exit 1; }
 if [ "${HEAD}" != "${PIN_BASE}" ]; then
-  if git -C "${REPO}" diff --quiet "${PIN_BASE}" HEAD -- . \
-      ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.json' \
-      ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.sha256'; then
-    echo "HEAD ${HEAD} is a freeze_pin_base_head pin-successor of ${PIN_BASE}"
-  else
+  extra="$(git_in_repo diff --name-only "${PIN_BASE}" HEAD | grep -v -E '^deploy/a0_layerA_m88full/gh7_tail/FREEZE\.(json|sha256)$' || true)"
+  if [ -n "${extra}" ]; then
     echo "REFUSED: git HEAD ${HEAD} is not freeze_pin_base_head ${PIN_BASE} or a FREEZE-only successor" >&2
+    echo "${extra}" >&2
     exit 1
   fi
+  echo "HEAD ${HEAD} is a freeze_pin_base_head pin-successor of ${PIN_BASE}"
 fi
-SHORT="$(git -C "${REPO}" rev-parse --short=12 HEAD)"
+SHORT="$(git_in_repo rev-parse --short=12 HEAD)"
 OUTROOT="${RUNDIR}/output_a0_full112_k20_gh7_tail_${SHORT}"
 mkdir -p "${RUNDIR}"
 if ! mkdir "${OUTROOT}"; then

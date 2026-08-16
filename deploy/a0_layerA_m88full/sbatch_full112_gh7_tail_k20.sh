@@ -72,7 +72,10 @@ FREEZE_SHA_NOW="$("${PYTHON3}" -c 'from pathlib import Path; import hashlib,sys;
 FREEZE_SHA_PIN="$(tr -d '[:space:]' < "${FREEZE_SHA_FILE}")"
 [ "${FREEZE_SHA_NOW}" = "${FREEZE_SHA_PIN}" ] || die "FREEZE.json SHA mismatch vs FREEZE.sha256"
 
-GIT_HEAD="$(git -C "${REPO}" rev-parse HEAD)"
+git_in_repo() {
+  git --git-dir="${REPO}/.git" --work-tree="${REPO}" "$@"
+}
+GIT_HEAD="$(git_in_repo rev-parse HEAD)"
 PINS="$("${PYTHON3}" - "${FREEZE}" "${SBATCH_SELF}" "${TMPL_EXPECTED}" "${REPO}" <<'PY'
 import json, hashlib, sys
 from pathlib import Path
@@ -135,13 +138,11 @@ GOT_VAL_NODE="${14}"
 GOT_VAL_CORE="${15}"
 
 if [ "${GIT_HEAD}" != "${PIN_GIT_HEAD}" ]; then
-  if git -C "${REPO}" diff --quiet "${PIN_GIT_HEAD}" HEAD -- . \
-      ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.json' \
-      ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.sha256'; then
-    echo "HEAD ${GIT_HEAD} is a freeze_pin_base_head pin-successor of ${PIN_GIT_HEAD}"
-  else
+  extra="$(git_in_repo diff --name-only "${PIN_GIT_HEAD}" HEAD | grep -v -E '^deploy/a0_layerA_m88full/gh7_tail/FREEZE\.(json|sha256)$' || true)"
+  if [ -n "${extra}" ]; then
     die "git HEAD ${GIT_HEAD} is not freeze_pin_base_head ${PIN_GIT_HEAD} or a FREEZE-only successor"
   fi
+  echo "HEAD ${GIT_HEAD} is a freeze_pin_base_head pin-successor of ${PIN_GIT_HEAD}"
 fi
 [ "${GOT_SBATCH}" = "${PIN_SBATCH}" ] || die "sbatch SHA mismatch"
 [ "${GOT_TMPL}" = "${PIN_TMPL}" ] || die "template SHA mismatch"
@@ -151,7 +152,7 @@ fi
 [ "${PIN_BIN}" = "${PINNED_BINARY_SHA256}" ] || die "FREEZE binary pin drifted"
 [ "${PIN_TB}" = "${PINNED_TB_PLUS_SHA256}" ] || die "FREEZE TB pin drifted"
 
-SHORT="$(git -C "${REPO}" rev-parse --short=12 HEAD)"
+SHORT="$(git_in_repo rev-parse --short=12 HEAD)"
 CAMPAIGN="${DEFAULT_CAMPAIGN}_${SHORT}"
 if [ -z "${OUTROOT:-}" ]; then
   OUTROOT="${WORKDIR}/output_a0_full112_k${NK}_gh7_tail_${SHORT}"

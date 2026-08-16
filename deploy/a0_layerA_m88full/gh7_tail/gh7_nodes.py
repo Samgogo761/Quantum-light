@@ -415,7 +415,17 @@ def source_tree_digest(repo: Path, *, src_from_git_head: bool = False) -> str:
     chunks: list[str] = []
     for rel in rels:
         if src_from_git_head and rel.startswith("src/"):
-            raw = subprocess.check_output(["git", "-C", str(repo), "show", f"HEAD:{rel}"])
+            raw = subprocess.check_output(
+                [
+                    "git",
+                    "--git-dir",
+                    str(Path(repo) / ".git"),
+                    "--work-tree",
+                    str(repo),
+                    "show",
+                    f"HEAD:{rel}",
+                ]
+            )
         else:
             raw = (repo / rel).read_bytes()
         raw = raw.replace(b"\r\n", b"\n")
