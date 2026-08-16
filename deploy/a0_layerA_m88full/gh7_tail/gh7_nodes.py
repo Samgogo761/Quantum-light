@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Pure-Python GH7 ES25.17 manifests + wide-axis antinode selection.
+"""Pure-Python GH7 ES25.17 manifests + corner / wide-axis antinode selection.
 
-Does not hardcode node IDs. Wide-axis extremes are selected from the
-generated manifest (major-axis projection, then minimum minor-axis).
+Does not hardcode node IDs. Two deterministic selectors:
+
+- corner: absolute-max-I antipode pair (worst-field stress)
+- wide: max |proj_major|, then min |proj_minor| (quadrature-weight tail)
 """
 from __future__ import annotations
 
@@ -74,6 +76,11 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: fh.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def sha256_text_file(path: Path) -> str:
+    """Hash a text file after normalizing CRLF to LF (git/server checkout)."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def build_VQ_sv(r: float, theta_s: float) -> tuple[tuple[float, float], tuple[float, float]]:
@@ -237,33 +244,75 @@ def write_manifest(path: Path, rows: list[tuple], r: float, theta_deg: float, i_
 
 
 def e2_axes(r: float, theta_rad: float) -> tuple[tuple[float, float], tuple[float, float]]:
-    """Return (major, minor) unit eigenvectors of VQ."""
+    """Return orthonormal (major, minor) unit axes of VQ.
+
+    Minor is constructed as a +90° rotation of major so the pair is exactly
+    orthogonal even when the off-diagonal of VQ is a tiny float residue.
+    Near-diagonal VQ is aligned to the coordinate axes.
+    """
     ((a, b), (_, c)) = build_VQ_sv(r, theta_rad)
     tr = a + c
     det = a * c - b * b
     disc = max(tr * tr - 4.0 * det, 0.0)
     l_hi = 0.5 * (tr + math.sqrt(disc))
-    l_lo = 0.5 * (tr - math.sqrt(disc))
-
-    def evec(lam: float) -> tuple[float, float]:
-        if abs(b) >= 1.0e-15:
-            vx, vy = lam - c, b
-        elif abs(lam - a) <= abs(lam - c):
-            vx, vy = 1.0, 0.0
+    if abs(b) < 1.0e-12:
+        if abs(l_hi - a) <= abs(l_hi - c):
+            major = (1.0, 0.0)
         else:
-            vx, vy = 0.0, 1.0
+            major = (0.0, 1.0)
+    else:
+        vx, vy = l_hi - c, b
         nrm = math.hypot(vx, vy)
-        return (vx / nrm, vy / nrm)
+        if nrm <= 0.0:
+            raise ValueError("degenerate VQ major axis")
+        major = (vx / nrm, vy / nrm)
+    minor = (-major[1], major[0])
+    return major, minor
 
-    return evec(l_hi), evec(l_lo)
+
+def _pair_payload(
+    left: tuple,
+    right: tuple,
+    major: tuple[float, float],
+    minor: tuple[float, float],
+    theta_deg: float,
+    *,
+    kind: str,
+    note: str,
+    extra: dict | None = None,
+) -> dict:
+    i_left = float(left[4])
+    i_glob = extra.get("I_global_max", i_left) if extra else i_left
+    payload = {
+        "kind": kind,
+        "theta_deg": theta_deg,
+        "ids": [int(left[0]), int(right[0])],
+        "I_max": i_left,
+        "I_over_Imax": i_left / max(i_glob, 1.0e-300),
+        "weights": [float(left[1]), float(right[1])],
+        "alphas": [[float(left[2]), float(left[3])], [float(right[2]), float(right[3])]],
+        "major_axis": list(major),
+        "minor_axis": list(minor),
+        "axis_dot": major[0] * minor[0] + major[1] * minor[1],
+        "note": note,
+    }
+    if extra:
+        payload.update(extra)
+    return payload
 
 
-def select_wide_axis_antinode_pair(rows: list[tuple], r: float, theta_deg: float) -> dict:
-    """Pick one max-I antipode pair on the wide-axis GH extreme.
+def _antipode_row(rows: list[tuple], row: tuple) -> tuple:
+    by_key = {_alpha_key(complex(item[2], item[3])): item for item in rows}
+    partner = by_key.get(_alpha_key(-complex(row[2], row[3])))
+    if partner is None:
+        raise ValueError(f"no antipode for id={int(row[0])}")
+    ids = sorted((int(row[0]), int(partner[0])))
+    by_id = {int(row[0]): row, int(partner[0]): partner}
+    return by_id[ids[0]], by_id[ids[1]]
 
-    The four corners share I_max; this returns the antipode pair with the
-    lowest node id (deterministic, not a hardcoded ID list).
-    """
+
+def select_corner_antinode_pair(rows: list[tuple], r: float, theta_deg: float) -> dict:
+    """Absolute-max-I corner antinode pair (worst-field stress), lowest IDs."""
     major, minor = e2_axes(r, math.radians(theta_deg))
     i_peak = max(float(row[4]) for row in rows)
     hot = [row for row in rows if abs(float(row[4]) - i_peak) <= I_MAX_RTOL * i_peak]
@@ -289,21 +338,85 @@ def select_wide_axis_antinode_pair(rows: list[tuple], r: float, theta_deg: float
     ids, a, b = pairs[0]
     by_id = {int(a[0]): a, int(b[0]): b}
     left, right = by_id[ids[0]], by_id[ids[1]]
-    i_max = float(left[4])
-    if abs(i_max - EXPECTED_I_MAX) / EXPECTED_I_MAX > I_MAX_RTOL:
-        raise ValueError(f"I_max={i_max:.6e} not within {I_MAX_RTOL} of {EXPECTED_I_MAX:.6e}")
-    return {
-        "theta_deg": theta_deg,
-        "ids": ids,
-        "I_max": i_max,
-        "weights": [float(left[1]), float(right[1])],
-        "alphas": [[float(left[2]), float(left[3])], [float(right[2]), float(right[3])]],
-        "major_axis": list(major),
-        "minor_axis": list(minor),
-        "n_maxI_nodes": len(hot),
-        "n_maxI_pairs": len(pairs),
-        "note": "max-I antipode pair on the wide-axis GH extreme; IDs from manifest",
-    }
+    if abs(float(left[4]) - EXPECTED_I_MAX) / EXPECTED_I_MAX > I_MAX_RTOL:
+        raise ValueError(f"I_max={left[4]:.6e} not within {I_MAX_RTOL} of {EXPECTED_I_MAX:.6e}")
+    return _pair_payload(
+        left,
+        right,
+        major,
+        minor,
+        theta_deg,
+        kind="corner",
+        note="corner antinode: absolute max I (worst-field); not a pure wide-axis node",
+        extra={"I_global_max": i_peak, "n_maxI_nodes": len(hot), "n_maxI_pairs": len(pairs)},
+    )
+
+
+def select_wide_axis_antinode_pair(rows: list[tuple], r: float, theta_deg: float) -> dict:
+    """Pure wide-axis antinode: max |proj_major|, then min |proj_minor|."""
+    major, minor = e2_axes(r, math.radians(theta_deg))
+    i_peak = max(float(row[4]) for row in rows)
+
+    def score(row: tuple) -> tuple[float, float, int]:
+        ax, ay = float(row[2]), float(row[3])
+        pmaj = abs(ax * major[0] + ay * major[1])
+        pmin = abs(ax * minor[0] + ay * minor[1])
+        return (pmaj, -pmin, -int(row[0]))
+
+    best = max(rows, key=score)
+    left, right = _antipode_row(rows, best)
+    return _pair_payload(
+        left,
+        right,
+        major,
+        minor,
+        theta_deg,
+        kind="wide",
+        note="pure wide-axis antinode: max |proj_major|, then min |proj_minor|; IDs from manifest",
+        extra={"I_global_max": i_peak},
+    )
+
+
+def case_name(probe: dict, nk: int) -> str:
+    return "sv_r2p5_th{:03d}_plusN_id{:02d}_{}_k{}".format(
+        int(probe["theta_deg"]), int(probe["id"]), probe["kind"], int(nk)
+    )
+
+
+def peer_k20_name(k40_name: str) -> str:
+    if not k40_name.endswith("_k40"):
+        raise ValueError(f"not a k40 case name: {k40_name}")
+    return k40_name[: -len("_k40")] + "_k20"
+
+
+def expected_case_names(probes: list[dict], nk: int) -> list[str]:
+    names = [case_name(p, nk) for p in probes]
+    if len(set(names)) != len(names):
+        raise ValueError("duplicate expected case names")
+    return names
+
+
+def source_tree_digest(repo: Path, *, src_from_git_head: bool = False) -> str:
+    """SHA256 of Makefile + src/*.f90 listings (CRLF normalized to LF).
+
+    ``src_from_git_head=True`` hashes ``HEAD:src/*.f90`` so a dirty worktree
+    cannot poison the freeze pin. Makefile is always taken from the filesystem
+    (the copy being committed with this checkpoint).
+    """
+    import subprocess
+
+    src_names = sorted(path.name for path in (repo / "src").glob("*.f90"))
+    rels = ["Makefile"] + [f"src/{name}" for name in src_names]
+    chunks: list[str] = []
+    for rel in rels:
+        if src_from_git_head and rel.startswith("src/"):
+            raw = subprocess.check_output(["git", "-C", str(repo), "show", f"HEAD:{rel}"])
+        else:
+            raw = (repo / rel).read_bytes()
+        raw = raw.replace(b"\r\n", b"\n")
+        digest = hashlib.sha256(raw).hexdigest()
+        chunks.append(f"{digest}  {rel}\n")
+    return hashlib.sha256("".join(chunks).encode("ascii")).hexdigest()
 
 
 def load_rows(path: Path) -> list[tuple]:
@@ -323,3 +436,20 @@ def select_from_manifest(path: Path, r: float, theta_deg: float) -> dict:
 
 def dump_selection(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def main(argv: list[str] | None = None) -> int:
+    import argparse
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--source-digest", type=Path, metavar="REPO")
+    args = ap.parse_args(argv)
+    if args.source_digest is not None:
+        print(source_tree_digest(args.source_digest))
+        return 0
+    ap.error("specify --source-digest REPO")
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

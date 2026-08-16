@@ -83,7 +83,13 @@ def moment_passed(path: Path) -> bool:
     return False
 
 
-def validate(run_dir: Path, manifest_path: Path, harmonics: list[int], rtol: float) -> dict:
+def validate(
+    run_dir: Path,
+    manifest_path: Path,
+    harmonics: list[int],
+    rtol: float,
+    node_id: int | None = None,
+) -> dict:
     required = ["HHG_nodes_modes.dat", "HHG_ics_cs.dat", "nodes_moment_check.txt", "run.log"]
     for name in required:
         path = run_dir / name
@@ -93,6 +99,10 @@ def validate(run_dir: Path, manifest_path: Path, harmonics: list[int], rtol: flo
         raise ValueError("nodes_moment_check.txt did not report PASS")
 
     manifest = {int(row["id"]): row for row in load_manifest(manifest_path)}
+    if node_id is not None:
+        if node_id not in manifest:
+            raise ValueError(f"node_id={node_id} is not in manifest {manifest_path}")
+        manifest = {node_id: manifest[node_id]}
     modes = load_modes(run_dir / "HHG_nodes_modes.dat")
     expected_keys = {(node_id, order) for node_id in manifest for order in harmonics}
     actual_keys = {(int(row["id"]), int(row["order"])) for row in modes}
@@ -154,6 +164,7 @@ def validate(run_dir: Path, manifest_path: Path, harmonics: list[int], rtol: flo
         "run_dir": str(run_dir.resolve()),
         "manifest": str(manifest_path.resolve()),
         "n_nodes": len(manifest),
+        "node_id": node_id,
         "harmonics": harmonics,
         "comparisons": comparisons,
     }
@@ -165,11 +176,12 @@ def main() -> int:
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--harmonics", default="2,5,7,9,10")
     parser.add_argument("--rtol", type=float, default=2.0e-7)
+    parser.add_argument("--node-id", type=int, default=None)
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
     try:
         harmonics = [int(x.strip()) for x in args.harmonics.split(",") if x.strip()]
-        result = validate(args.run_dir, args.manifest, harmonics, args.rtol)
+        result = validate(args.run_dir, args.manifest, harmonics, args.rtol, args.node_id)
     except (OSError, ValueError) as exc:
         print(f"A0_RUN_VALIDATION=FAIL: {exc}")
         return 1

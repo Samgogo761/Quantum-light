@@ -1,8 +1,12 @@
 {
   "campaign": "full112_gh7_tail_k20",
+  "n_probes": 8,
   "do_not_submit": true,
   "do_not_blind_submit_full_gh7": true,
-  "policy": "Pinned 29175 binary; TB-v2; no rebuild. Staged k20 only until occupation gate PASS.",
+  "cep_pi_tested": false,
+  "cep_pi_note": "+N-only probes do not test GH7 CEP-\u03c0 covariance",
+  "dt2_stage": "not_implemented",
+  "policy": "Pinned 29175 binary; TB-v2; no rebuild. Eight k20 probes (corner + pure wide-axis). Staged until occupation gate PASS.",
   "gh_order": 7,
   "n_nodes": 49,
   "precision": "ES25.17",
@@ -12,10 +16,19 @@
     0,
     180
   ],
+  "git_head": "TO_BE_PINNED",
   "pinned_binary_sha256": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
   "pinned_binary_source_sha256": "c6372e17457cb45d38233d81149b43fc07768978e5870c3e040d13205000110f",
   "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
   "tb_minus_v2_sha256": "d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246",
+  "template_sha256": "95440c2a896ac146952366c55e461bc2c01030dc341db322e8438710f6b0f7ff",
+  "sbatch_sha256": "f88be4f2a6c8e0a61d54d34b42ce7abfc37a243e2da8f200a1ec8d1d3025b9d2",
+  "submit_sha256": "4697b7c81b4814fe0924c6d480acc45549f4a79adb220846ddeed472f0cf5736",
+  "validator_run_sha256": "4a32a07bb80b25538bcc77c03a2aeb6d8aa9e1f515bdeee416d771882b7f6577",
+  "validator_node_sha256": "2da37375340707c2c3b2ef483dd42bf91043a13116d6ec8be35afd5e0f1dec7f",
+  "validator_node_core_sha256": "aec40987b70b082490b0d8f6a15fdc7cb6ab00a58dd40de9468cc027e0ce2573",
+  "gate_sha256": "fd4b832c425cb942e86a2ce860ff8e123480bf6058d899db16af3a2a3c39c6e2",
+  "worktree_source_sha256": "78d24fbbd10200968513817e77df14bcc966e9d441a0b69a0970a816a0f6bfbb",
   "manifests": {
     "nodes_sv_r2p5_th0_gh7.dat": {
       "path": "deploy/a0_layerA_m88full/nodes_tbv2_es25/gh7/nodes_sv_r2p5_th0_gh7.dat",
@@ -32,13 +45,15 @@
         "max_intensity_Wcm2": 2813159615258.948,
         "weighted_mean_intensity_Wcm2": 199999999999.99997
       },
-      "wide_axis_pair": {
+      "corner_pair": {
+        "kind": "corner",
         "theta_deg": 0.0,
         "ids": [
           1,
           49
         ],
         "I_max": 2813159615258.948,
+        "I_over_Imax": 1.0,
         "weights": [
           3.005987384290855e-07,
           3.005987384290855e-07
@@ -58,12 +73,49 @@
           1.0
         ],
         "minor_axis": [
-          1.0,
+          -1.0,
           0.0
         ],
+        "axis_dot": 0.0,
+        "note": "corner antinode: absolute max I (worst-field); not a pure wide-axis node",
+        "I_global_max": 2813159615258.948,
         "n_maxI_nodes": 8,
-        "n_maxI_pairs": 4,
-        "note": "max-I antipode pair on the wide-axis GH extreme; IDs from manifest"
+        "n_maxI_pairs": 4
+      },
+      "wide_axis_pair": {
+        "kind": "wide",
+        "theta_deg": 0.0,
+        "ids": [
+          22,
+          28
+        ],
+        "I_max": 2794331557327.8013,
+        "I_over_Imax": 0.993307149075715,
+        "weights": [
+          0.0002506371913015858,
+          0.0002506371913015858
+        ],
+        "alphas": [
+          [
+            0.0,
+            -22.921689105943642
+          ],
+          [
+            -0.0,
+            22.921689105943642
+          ]
+        ],
+        "major_axis": [
+          0.0,
+          1.0
+        ],
+        "minor_axis": [
+          -1.0,
+          0.0
+        ],
+        "axis_dot": 0.0,
+        "note": "pure wide-axis antinode: max |proj_major|, then min |proj_minor|; IDs from manifest",
+        "I_global_max": 2813159615258.948
       }
     },
     "nodes_sv_r2p5_th180_gh7.dat": {
@@ -81,13 +133,15 @@
         "max_intensity_Wcm2": 2813159615258.948,
         "weighted_mean_intensity_Wcm2": 199999999999.99997
       },
-      "wide_axis_pair": {
+      "corner_pair": {
+        "kind": "corner",
         "theta_deg": 180.0,
         "ids": [
           1,
           49
         ],
         "I_max": 2813159615258.948,
+        "I_over_Imax": 1.0,
         "weights": [
           3.005987384290855e-07,
           3.005987384290855e-07
@@ -104,15 +158,52 @@
         ],
         "major_axis": [
           1.0,
-          -6.123233995736765e-17
+          0.0
         ],
         "minor_axis": [
-          -0.4210913303181853,
-          -0.9070182421158138
+          -0.0,
+          1.0
         ],
+        "axis_dot": 0.0,
+        "note": "corner antinode: absolute max I (worst-field); not a pure wide-axis node",
+        "I_global_max": 2813159615258.948,
         "n_maxI_nodes": 8,
-        "n_maxI_pairs": 4,
-        "note": "max-I antipode pair on the wide-axis GH extreme; IDs from manifest"
+        "n_maxI_pairs": 4
+      },
+      "wide_axis_pair": {
+        "kind": "wide",
+        "theta_deg": 180.0,
+        "ids": [
+          4,
+          46
+        ],
+        "I_max": 2794331557327.8013,
+        "I_over_Imax": 0.993307149075715,
+        "weights": [
+          0.0002506371913015858,
+          0.0002506371913015858
+        ],
+        "alphas": [
+          [
+            -22.921689105943642,
+            1.3940916232523183e-15
+          ],
+          [
+            22.921689105943642,
+            -1.3940916232523183e-15
+          ]
+        ],
+        "major_axis": [
+          1.0,
+          0.0
+        ],
+        "minor_axis": [
+          -0.0,
+          1.0
+        ],
+        "axis_dot": 0.0,
+        "note": "pure wide-axis antinode: max |proj_major|, then min |proj_minor|; IDs from manifest",
+        "I_global_max": 2813159615258.948
       }
     }
   },
@@ -120,28 +211,72 @@
     {
       "theta_deg": 0,
       "id": 1,
+      "kind": "corner",
       "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
       "manifest": "nodes_sv_r2p5_th0_gh7.dat",
       "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
     },
     {
       "theta_deg": 0,
       "id": 49,
+      "kind": "corner",
       "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 22,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 28,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
       "manifest": "nodes_sv_r2p5_th0_gh7.dat",
       "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
     },
     {
       "theta_deg": 180,
       "id": 1,
+      "kind": "corner",
       "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
       "manifest": "nodes_sv_r2p5_th180_gh7.dat",
       "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
     },
     {
       "theta_deg": 180,
       "id": 49,
+      "kind": "corner",
       "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 4,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 46,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
       "manifest": "nodes_sv_r2p5_th180_gh7.dat",
       "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
     }
@@ -156,5 +291,7 @@
   "use_full_manifest_moment_check": true,
   "propagate_ids_only": true,
   "occ_stride": 336,
-  "n_occupation_snapshots_approx": 16
+  "n_occupation_snapshots_approx": 16,
+  "nk_valence": 84,
+  "nk_bands": 112
 }

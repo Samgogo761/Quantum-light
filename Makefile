@@ -89,6 +89,7 @@ test: dirs
 	python tools/analysis/test_merge_compare_pos.py
 	python tools/analysis/test_gh3_gh5_quadrature_gate.py
 	python tools/analysis/test_diagnose_gh5_quadrature.py
+	python tools/analysis/test_cep_pi_gate_v2.py
 	python tools/analysis/test_gh7_tail_model_gate.py
 	$(MAKE) test-field-cep
 
