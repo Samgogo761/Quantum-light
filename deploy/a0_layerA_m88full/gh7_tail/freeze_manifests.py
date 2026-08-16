@@ -152,6 +152,9 @@ def build_freeze(git_head: str) -> dict:
         "n_occupation_snapshots_approx": 40,
         "nk_valence": 84,
         "nk_bands": 112,
+        "dt": 0.35,
+        "T2_cycles": 0.5,
+        "harmonics": [2, 5, 7, 9, 10],
     }
     return freeze
 

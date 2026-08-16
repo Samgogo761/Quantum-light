@@ -313,6 +313,7 @@ cp -f "${CACHE_DIR}/build_metadata.txt" "${OUTDIR}/build_metadata.snapshot.txt"
   echo "input_sha256=$(sha256_file "${OUTDIR}/input.nml")"
   echo "template_sha256=$(sha256_file "${TMPL_EXPECTED}")"
   echo "sbatch_sha256=${GOT_SBATCH}"
+  echo "validator_run_sha256=${GOT_VAL_RUN}"
   echo "freeze_sha256=${FREEZE_SHA_NOW}"
   echo "nk=${NK}"
   echo "dt=0.35"
@@ -350,6 +351,8 @@ CRITICAL_OUTPUTS=(
   run_metadata.txt
   occupation_kt.dat
   occupation_band_kt.dat
+  input.nml
+  nodes_manifest.input.dat
 )
 JT_FILE=$(printf 'Jt_node_%04d.dat' "${NID}")
 CRITICAL_OUTPUTS+=("${JT_FILE}")
@@ -412,6 +415,8 @@ PY
   --report "${OUTDIR}/run_validator.json" \
   2>&1 | tee "${OUTDIR}/run_validator.log"
 grep -q 'A0_RUN_VALIDATION=PASS' "${OUTDIR}/run_validator.log" || die "run validator failed"
+[ -s "${OUTDIR}/run_validator.json" ] || die "missing or empty run_validator.json"
+CRITICAL_OUTPUTS+=(run_validator.json)
 
 NONFINITE_RE='(^|[^[:alpha:]])[+-]?(nan|inf(inity)?)([^[:alpha:]]|$)'
 for output_file in "${CRITICAL_OUTPUTS[@]}"; do

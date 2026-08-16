@@ -383,10 +383,15 @@ def case_name(probe: dict, nk: int) -> str:
     )
 
 
+def peer_k_name(name: str, from_nk: int, to_nk: int) -> str:
+    tail = f"_k{int(from_nk)}"
+    if not name.endswith(tail):
+        raise ValueError(f"not a k{from_nk} case name: {name}")
+    return name[: -len(tail)] + f"_k{int(to_nk)}"
+
+
 def peer_k20_name(k40_name: str) -> str:
-    if not k40_name.endswith("_k40"):
-        raise ValueError(f"not a k40 case name: {k40_name}")
-    return k40_name[: -len("_k40")] + "_k20"
+    return peer_k_name(k40_name, 40, 20)
 
 
 def expected_case_names(probes: list[dict], nk: int) -> list[str]:

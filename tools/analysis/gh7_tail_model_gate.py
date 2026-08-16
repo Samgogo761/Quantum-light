@@ -22,7 +22,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "deploy" / "a0_layerA_m88full" / "gh7_tail"))
 
 from diagnose_gh5_quadrature import jones_decomp
-from gh7_nodes import case_name, expected_case_names, peer_k20_name
+from gh7_nodes import case_name, expected_case_names, peer_k_name
+from validate_a0_run_strict import load_chunk_info
+from validate_qlight_nodes_production import load_manifest
 from rank_full112_gh3_candidates import amp as jones_amp
 from rank_full112_gh3_candidates import load_node_modes
 
@@ -41,7 +43,44 @@ JONES_ETA = 1.0e-4
 JONES_ATOL = JONES_ETA * JONES_RTOL  # 5e-6; independent weak absolute threshold
 EXC_FLOOR = 1.0e-6
 H10_RTOL = 0.10
-GATE_VERSION = "gh7_tail_model_v3_20260816"
+GATE_VERSION = "gh7_tail_model_v4_20260816"
+REQUIRED_META_KEYS = (
+    "freeze_pin_base_head",
+    "campaign_actual_head",
+    "freeze_sha256",
+    "template_sha256",
+    "worktree_source_sha256",
+    "source_sha256",
+    "sbatch_sha256",
+    "validator_run_sha256",
+    "binary_sha256",
+    "tb_sha256",
+    "nodes_sha256",
+    "propagate_ids",
+    "omp_num_threads",
+    "mkl_num_threads",
+    "nk",
+    "dt",
+    "T2_cycles",
+    "squeeze_r",
+    "squeeze_theta_deg",
+    "I_bar",
+    "harmonics",
+)
+REQUIRED_OUTPUT_FILES = (
+    "HHG_nodes_modes.dat",
+    "chunk_info.txt",
+    "chunk_weighted_spectrum.dat",
+    "nodes_moment_check.txt",
+    "run.log",
+    "node_preflight.json",
+    "occupation_kt.dat",
+    "occupation_band_kt.dat",
+    "input.nml",
+    "nodes_manifest.input.dat",
+    "run_metadata.txt",
+    "run_validator.json",
+)
 IGNORE_ROOT_NAMES = {
     "GH7_TAIL_K20.json",
     "GH7_TAIL_K40.json",
@@ -284,9 +323,9 @@ def _kv_file(path: Path) -> dict[str, str]:
     return out
 
 
-def verify_output_sha256(path: Path) -> None:
+def verify_output_sha256(path: Path, required: tuple[str, ...] = REQUIRED_OUTPUT_FILES) -> None:
     root = path.parent
-    checked = 0
+    listed: set[str] = set()
     for raw in path.read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if not line:
@@ -298,9 +337,95 @@ def verify_output_sha256(path: Path) -> None:
         got = sha256_file(target)
         if got != digest:
             raise ValueError(f"output SHA mismatch for {name}: {got} != {digest}")
-        checked += 1
-    if checked < 1:
-        raise ValueError(f"empty output_sha256.txt: {path}")
+        listed.add(name)
+    missing = [name for name in required if name not in listed]
+    if missing:
+        raise ValueError(f"output_sha256 missing required files: {missing}")
+
+
+def _csv_ints(raw: str) -> list[int]:
+    return [int(x) for x in str(raw).replace(",", " ").split() if x]
+
+
+def _require_meta(meta: dict[str, str], freeze: dict, probe: dict, nk: int) -> None:
+    missing = [key for key in REQUIRED_META_KEYS if not str(meta.get(key, "")).strip()]
+    if missing:
+        raise ValueError(f"run_metadata missing required fields: {missing}")
+    want_bin = freeze["pinned_binary_sha256"]
+    want_tb = freeze["tb_plus_sha256"]
+    want_man = probe["manifest_sha256"]
+    if meta["binary_sha256"] != want_bin:
+        raise ValueError(f"binary SHA {meta['binary_sha256']} != {want_bin}")
+    if meta["tb_sha256"] != want_tb:
+        raise ValueError(f"TB SHA {meta['tb_sha256']} != {want_tb}")
+    if meta["nodes_sha256"] != want_man:
+        raise ValueError(f"manifest SHA {meta['nodes_sha256']} != {want_man}")
+    if meta["propagate_ids"] != str(probe["id"]):
+        raise ValueError(f"propagate_ids={meta['propagate_ids']} != {probe['id']}")
+    base_head = freeze.get("freeze_pin_base_head")
+    if not base_head or base_head == "TO_BE_PINNED":
+        raise ValueError("FREEZE freeze_pin_base_head is not pinned")
+    if meta["freeze_pin_base_head"] != base_head:
+        raise ValueError(f"freeze_pin_base_head {meta['freeze_pin_base_head']} != {base_head}")
+    want_freeze_sha = freeze.get("freeze_sha256")
+    if not want_freeze_sha:
+        raise ValueError("missing freeze_sha256 (FREEZE.sha256 sidecar required)")
+    if meta["freeze_sha256"] != want_freeze_sha:
+        raise ValueError(f"freeze_sha256 {meta['freeze_sha256']} != {want_freeze_sha}")
+    actual_head = meta["campaign_actual_head"]
+    if actual_head == "UNAVAILABLE":
+        raise ValueError("campaign_actual_head=UNAVAILABLE")
+    pin_keys = (
+        "template_sha256",
+        "worktree_source_sha256",
+        "sbatch_sha256",
+        "validator_run_sha256",
+    )
+    for key in pin_keys:
+        want = freeze.get(key)
+        if not want:
+            raise ValueError(f"FREEZE missing {key}")
+        if meta[key] != want:
+            raise ValueError(f"{key} {meta[key]} != {want}")
+    if meta["source_sha256"] != meta["worktree_source_sha256"]:
+        raise ValueError("source_sha256 != worktree_source_sha256")
+    if meta["nk"] != str(nk):
+        raise ValueError(f"metadata nk={meta['nk']} != {nk}")
+    if meta["dt"] != str(freeze.get("dt", "0.35")):
+        raise ValueError(f"metadata dt={meta['dt']} != {freeze.get('dt', 0.35)}")
+    if meta["T2_cycles"] != str(freeze.get("T2_cycles", "0.5")):
+        raise ValueError(f"metadata T2_cycles={meta['T2_cycles']} != {freeze.get('T2_cycles', 0.5)}")
+    if abs(float(meta["squeeze_r"]) - float(freeze["squeeze_r"])) > 1.0e-12:
+        raise ValueError(f"metadata squeeze_r={meta['squeeze_r']} != {freeze['squeeze_r']}")
+    if int(float(meta["squeeze_theta_deg"])) != int(probe["theta_deg"]):
+        raise ValueError(f"metadata theta={meta['squeeze_theta_deg']} != {probe['theta_deg']}")
+    if abs(float(meta["I_bar"]) - float(freeze["I_bar"])) > 1.0e-6:
+        raise ValueError(f"metadata I_bar={meta['I_bar']} != {freeze['I_bar']}")
+    want_h = freeze.get("harmonics", [2, 5, 7, 9, 10])
+    if _csv_ints(meta["harmonics"]) != [int(x) for x in want_h]:
+        raise ValueError(f"metadata harmonics={meta['harmonics']} != {want_h}")
+    if not str(meta["omp_num_threads"]).isdigit() or int(meta["omp_num_threads"]) < 1:
+        raise ValueError(f"bad omp_num_threads={meta['omp_num_threads']}")
+    if not str(meta["mkl_num_threads"]).isdigit() or int(meta["mkl_num_threads"]) < 1:
+        raise ValueError(f"bad mkl_num_threads={meta['mkl_num_threads']}")
+
+
+def _require_chunk_counts(outdir: Path, probe: dict) -> None:
+    snap = outdir / "nodes_manifest.input.dat"
+    info = load_chunk_info(outdir / "chunk_info.txt")
+    rows = load_manifest(snap)
+    try:
+        n_manifest = int(info["n_manifest_nodes"])
+        n_propagate = int(info["n_propagate_nodes"])
+    except (KeyError, ValueError) as exc:
+        raise ValueError("chunk_info missing n_manifest_nodes/n_propagate_nodes") from exc
+    if n_manifest != len(rows):
+        raise ValueError(f"chunk_info n_manifest_nodes={n_manifest} != snapshot rows={len(rows)}")
+    prop_ids = [int(x) for x in info.get("propagate_ids", "").replace(",", " ").split() if x]
+    if n_propagate != len(prop_ids):
+        raise ValueError(f"chunk_info n_propagate_nodes={n_propagate} != |propagate_ids|={len(prop_ids)}")
+    if prop_ids != [int(probe["id"])]:
+        raise ValueError(f"chunk_info propagate_ids={prop_ids} != [{probe['id']}]")
 
 
 def list_case_dirs(root: Path) -> list[Path]:
@@ -327,6 +452,9 @@ def audit_k20_dir(outdir: Path, freeze: dict, probe: dict, nk: int) -> dict:
     try:
         if not (outdir / "SUCCESS").is_file():
             raise ValueError("missing SUCCESS")
+        missing_files = [name for name in REQUIRED_OUTPUT_FILES if not (outdir / name).is_file()]
+        if missing_files:
+            raise ValueError(f"missing required outputs: {missing_files}")
         run_status = _kv_file(outdir / "run_status.txt")
         if run_status.get("status") != "PASS":
             raise ValueError(f"run_status={run_status.get('status')}")
@@ -335,49 +463,21 @@ def audit_k20_dir(outdir: Path, freeze: dict, probe: dict, nk: int) -> dict:
             raise ValueError("missing output_sha256.txt")
         verify_output_sha256(sha_list)
         meta = _kv_file(outdir / "run_metadata.txt")
-        want_bin = freeze["pinned_binary_sha256"]
-        want_tb = freeze["tb_plus_sha256"]
-        want_man = probe["manifest_sha256"]
-        if meta.get("binary_sha256") != want_bin:
-            raise ValueError(f"binary SHA {meta.get('binary_sha256')} != {want_bin}")
-        if meta.get("tb_sha256") != want_tb:
-            raise ValueError(f"TB SHA {meta.get('tb_sha256')} != {want_tb}")
-        if meta.get("nodes_sha256") != want_man:
-            raise ValueError(f"manifest SHA {meta.get('nodes_sha256')} != {want_man}")
-        if meta.get("propagate_ids") != str(probe["id"]):
-            raise ValueError(f"propagate_ids={meta.get('propagate_ids')} != {probe['id']}")
-        base_head = freeze.get("freeze_pin_base_head") or freeze.get("git_head")
-        if base_head and base_head != "TO_BE_PINNED":
-            if meta.get("freeze_pin_base_head") not in {None, base_head}:
-                raise ValueError(
-                    f"freeze_pin_base_head {meta.get('freeze_pin_base_head')} != {base_head}"
-                )
-        want_freeze_sha = freeze.get("freeze_sha256")
-        if want_freeze_sha and meta.get("freeze_sha256") not in {None, want_freeze_sha}:
-            raise ValueError(f"freeze_sha256 {meta.get('freeze_sha256')} != {want_freeze_sha}")
-        actual_head = meta.get("campaign_actual_head") or meta.get("git_head")
-        if not actual_head or actual_head == "UNAVAILABLE":
-            raise ValueError("missing campaign_actual_head/git_head in run_metadata")
-        status["campaign_actual_head"] = actual_head
-        status["freeze_pin_base_head"] = meta.get("freeze_pin_base_head") or base_head
+        _require_meta(meta, freeze, probe, nk)
+        status["campaign_actual_head"] = meta["campaign_actual_head"]
+        status["freeze_pin_base_head"] = meta["freeze_pin_base_head"]
+        _require_chunk_counts(outdir, probe)
         modes = outdir / "HHG_nodes_modes.dat"
-        if not modes.is_file():
-            raise ValueError("missing HHG_nodes_modes.dat")
         _finite_tokens(modes)
-        band = outdir / "occupation_band_kt.dat"
-        if not band.is_file():
-            raise ValueError("missing occupation_band_kt.dat")
         nml = outdir / "input.nml"
-        parsed = parse_run_nml(nml) if nml.is_file() else {"nk": nk, "occ_stride": int(freeze.get("occ_stride", 336))}
+        parsed = parse_run_nml(nml)
         if parsed["nk"] != nk:
             raise ValueError(f"nml nk={parsed['nk']} != {nk}")
-        expected_its = None
-        if nml.is_file():
-            from hhg_fft_utils import parse_input_nml
+        from hhg_fft_utils import parse_input_nml
 
-            nt = int(parse_input_nml(nml)["nt"])
-            expected_its = expected_occ_its(nt, parsed["occ_stride"])
-        occ = parse_band_occupation(band, nk=nk, expected_its=expected_its)
+        nt = int(parse_input_nml(nml)["nt"])
+        expected_its = expected_occ_its(nt, parsed["occ_stride"])
+        occ = parse_band_occupation(outdir / "occupation_band_kt.dat", nk=nk, expected_its=expected_its)
         status["occupation"] = occ
         if not (occ["pass_trace"] and occ["pass_edge_abs"] and occ["pass_edge_rel"] and occ["pass_grid"]):
             raise ValueError("occupation gate failed")
@@ -418,6 +518,7 @@ def main() -> int:
     ap.add_argument("--k20-root", type=Path)
     ap.add_argument("--k40-root", type=Path)
     ap.add_argument("--nk", type=int, default=20)
+    ap.add_argument("--k40-nk", type=int, default=40)
     ap.add_argument("--report", type=Path)
     args = ap.parse_args()
     freeze = load_freeze(args.freeze)
@@ -446,8 +547,27 @@ def main() -> int:
         },
     }
     sha_file = args.freeze.with_name("FREEZE.sha256")
-    if sha_file.is_file():
-        freeze["freeze_sha256"] = sha_file.read_text(encoding="utf-8").strip()
+    freeze_digest = hashlib.sha256(args.freeze.read_bytes()).hexdigest()
+    if not sha_file.is_file():
+        report["status"] = "FAIL"
+        report["reason"] = "missing FREEZE.sha256"
+        text = json.dumps(report, indent=2) + "\n"
+        print(text)
+        if args.report:
+            args.report.parent.mkdir(parents=True, exist_ok=True)
+            args.report.write_text(text, encoding="utf-8")
+        return gate_exit_code("FAIL")
+    sidecar = sha_file.read_text(encoding="utf-8").strip().split()[0]
+    if sidecar != freeze_digest:
+        report["status"] = "FAIL"
+        report["reason"] = f"FREEZE.sha256 sidecar {sidecar} != json {freeze_digest}"
+        text = json.dumps(report, indent=2) + "\n"
+        print(text)
+        if args.report:
+            args.report.parent.mkdir(parents=True, exist_ok=True)
+            args.report.write_text(text, encoding="utf-8")
+        return gate_exit_code("FAIL")
+    freeze["freeze_sha256"] = freeze_digest
     if args.stage == "k20":
         if args.k20_root is None:
             raise SystemExit("--k20-root required")
@@ -487,39 +607,54 @@ def main() -> int:
             report["status"] = "BLOCKED"
             report["reason"] = "k20 occupation gate is not PASS; do not run/score k40"
         else:
-            expected = expected_case_names(probes, 40)
+            expected = expected_case_names(probes, args.k40_nk)
             found = [p.name for p in list_case_dirs(args.k40_root)]
             report["expected_cases"] = expected
             report["found_cases"] = found
-            by_name = {case_name(p, 40): p for p in probes}
+            by_name = {case_name(p, args.k40_nk): p for p in probes}
             pairs = []
             if not same_case_set(found, expected):
                 report["missing_cases"] = sorted(set(expected) - set(found))
                 report["extra_cases"] = sorted(set(found) - set(expected))
             jones_pairs: list[tuple[dict, dict]] = []
-            ready: list[tuple[str, dict, dict]] = []
+            ready: list[tuple[str, dict, dict, dict]] = []
             for name in expected:
                 d40 = args.k40_root / name
-                d20 = args.k20_root / peer_k20_name(name)
+                d20 = args.k20_root / peer_k_name(name, args.k40_nk, args.nk)
                 if name not in found:
                     pairs.append({"case": name, "status": "INCOMPLETE", "pass": False, "reason": "k40 directory missing"})
                     continue
-                audit = audit_k20_dir(d40, freeze, by_name[name], 40)
+                audit = audit_k20_dir(d40, freeze, by_name[name], args.k40_nk)
                 if audit.get("status") != "PASS":
                     pairs.append({"case": name, "k20": str(d20), **audit})
                     continue
                 if not (d20 / "HHG_nodes_modes.dat").is_file():
-                    pairs.append({"case": name, "k20": str(d20), "status": "INCOMPLETE", "pass": False, "reason": "k20 peer missing"})
+                    pairs.append({
+                        "case": name,
+                        "k20": str(d20),
+                        "status": "INCOMPLETE",
+                        "pass": False,
+                        "reason": "k20 peer missing",
+                        "campaign_actual_head": audit.get("campaign_actual_head"),
+                        "freeze_pin_base_head": audit.get("freeze_pin_base_head"),
+                    })
                     continue
                 j20 = jones_from_modes(d20 / "HHG_nodes_modes.dat")
                 j40 = jones_from_modes(d40 / "HHG_nodes_modes.dat")
                 jones_pairs.append((j20, j40))
-                ready.append((name, j20, j40))
+                ready.append((name, j20, j40, audit))
             scales = jones_scales_from_pairs(jones_pairs) if jones_pairs else {}
             report["jones_A_H"] = scales
-            for name, j20, j40 in ready:
+            for name, j20, j40, audit in ready:
                 cmpj = compare_jones(j20, j40, scales)
-                pairs.append({"case": name, "k20": str(args.k20_root / peer_k20_name(name)), "status": "PASS" if cmpj["pass"] else "FAIL", **cmpj})
+                pairs.append({
+                    **cmpj,
+                    "case": name,
+                    "k20": str(args.k20_root / peer_k_name(name, args.k40_nk, args.nk)),
+                    "status": "PASS" if cmpj["pass"] else "FAIL",
+                    "campaign_actual_head": audit.get("campaign_actual_head"),
+                    "freeze_pin_base_head": audit.get("freeze_pin_base_head"),
+                })
             report["pairs"] = pairs
             if not same_case_set(found, expected):
                 report["status"] = "INCOMPLETE" if set(found) != set(expected) or len(found) < len(expected) else "FAIL"

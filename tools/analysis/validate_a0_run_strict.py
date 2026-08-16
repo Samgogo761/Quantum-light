@@ -180,16 +180,29 @@ def validate_chunk(
         raise ValueError("nodes_moment_check.txt did not report PASS")
 
     info = load_chunk_info(run_dir / "chunk_info.txt")
-    if int(info.get("n_propagate_nodes", "0")) < 1:
-        raise ValueError("chunk_info: n_propagate_nodes < 1")
+    full_rows = load_manifest(manifest_path)
+    n_manifest = len(full_rows)
+    try:
+        n_manifest_info = int(info["n_manifest_nodes"])
+        n_propagate_info = int(info["n_propagate_nodes"])
+    except (KeyError, ValueError) as exc:
+        raise ValueError("chunk_info missing n_manifest_nodes/n_propagate_nodes") from exc
+    if n_manifest_info != n_manifest:
+        raise ValueError(
+            f"chunk_info n_manifest_nodes={n_manifest_info} != manifest rows={n_manifest}"
+        )
     prop_ids = [int(x) for x in info.get("propagate_ids", "").replace(",", " ").split() if x]
+    if n_propagate_info != len(prop_ids):
+        raise ValueError(
+            f"chunk_info n_propagate_nodes={n_propagate_info} != |propagate_ids|={len(prop_ids)}"
+        )
+    if len(prop_ids) != 1:
+        raise ValueError(f"chunk/subset must propagate exactly one id, got {prop_ids}")
     if node_id is not None and prop_ids != [node_id]:
         raise ValueError(f"chunk_info propagate_ids={prop_ids} != [{node_id}]")
-    if node_id is None and len(prop_ids) != 1:
-        raise ValueError("chunk validation expects a single propagate id")
-    nid = node_id if node_id is not None else prop_ids[0]
+    nid = prop_ids[0]
 
-    manifest = {int(row["id"]): row for row in load_manifest(manifest_path)}
+    manifest = {int(row["id"]): row for row in full_rows}
     if nid not in manifest:
         raise ValueError(f"node_id={nid} is not in manifest {manifest_path}")
     manifest = {nid: manifest[nid]}

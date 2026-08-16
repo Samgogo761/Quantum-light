@@ -40,13 +40,23 @@ if [ "${HEAD}" != "${PIN_BASE}" ]; then
 fi
 SHORT="$(git -C "${REPO}" rev-parse --short=12 HEAD)"
 OUTROOT="${RUNDIR}/output_a0_full112_k20_gh7_tail_${SHORT}"
-if [ -e "${OUTROOT}" ] && [ -n "$(ls -A "${OUTROOT}" 2>/dev/null || true)" ]; then
-  echo "REFUSED: campaign OUTROOT already exists: ${OUTROOT}" >&2
+mkdir -p "${RUNDIR}"
+if ! mkdir "${OUTROOT}"; then
+  echo "REFUSED: campaign OUTROOT already reserved: ${OUTROOT}" >&2
   exit 1
 fi
-mkdir -p "${RUNDIR}"
 cd "${RUNDIR}"
 unset WORKDIR || true
+set +e
 JOBID="$(sbatch --parsable --chdir="${RUNDIR}" --export=ALL,OUTROOT="${OUTROOT}",REPO="${REPO}",NK=20,GH7_TAIL_SUBMIT="${GH7_TAIL_SUBMIT}",A0_PYTHON3="${PYTHON3}" "${SCRIPT}")"
+SBATCH_RC=$?
+set -e
+if [ "${SBATCH_RC}" -ne 0 ] || [ -z "${JOBID}" ]; then
+  if [ -d "${OUTROOT}" ] && [ -z "$(ls -A "${OUTROOT}" 2>/dev/null || true)" ]; then
+    rmdir "${OUTROOT}"
+  fi
+  echo "REFUSED: sbatch failed" >&2
+  exit 1
+fi
 echo "${JOBID}" | tee "${RUNDIR}/job_id.txt"
 echo "submitted ${JOBID} chdir=${RUNDIR} outroot=${OUTROOT}"
