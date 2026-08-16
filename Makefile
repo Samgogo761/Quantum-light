@@ -91,6 +91,7 @@ test: dirs
 	python tools/analysis/test_diagnose_gh5_quadrature.py
 	python tools/analysis/test_cep_pi_gate_v2.py
 	python tools/analysis/test_gh7_tail_model_gate.py
+	python tools/analysis/test_gh7_tail_edge_band_audit.py
 	$(MAKE) test-field-cep
 
 # Production generate_field_sample antipode gate (mod_params + mod_laser only).
