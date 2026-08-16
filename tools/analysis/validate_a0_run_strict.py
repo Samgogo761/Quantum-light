@@ -83,7 +83,163 @@ def moment_passed(path: Path) -> bool:
     return False
 
 
-def validate(
+def load_chunk_info(path: Path) -> dict[str, str]:
+    info: dict[str, str] = {}
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, val = line.split("=", 1)
+        info[key.strip()] = val.strip()
+    return info
+
+
+def load_chunk_spectrum(path: Path) -> tuple[float | None, list[dict]]:
+    scale = None
+    rows: list[dict] = []
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line:
+            continue
+        if line.startswith("#"):
+            compact = line.lstrip("#").strip().replace(" ", "")
+            if compact.lower().startswith("spectrum_scale="):
+                scale = float(compact.split("=", 1)[1])
+            continue
+        fields = line.split()
+        if len(fields) < 8:
+            raise ValueError(f"{path}: expected iw h omega ics ReJx ImJx ReJy ImJy")
+        rows.append(
+            {
+                "iw": int(fields[0]),
+                "h": float(fields[1]),
+                "omega": float(fields[2]),
+                "ics": float(fields[3]),
+                "jx": complex(float(fields[4]), float(fields[5])),
+                "jy": complex(float(fields[6]), float(fields[7])),
+            }
+        )
+    if not rows:
+        raise ValueError(f"{path}: no spectrum rows")
+    return scale, rows
+
+
+def _check_modes_vs_manifest(
+    modes: list[dict[str, float | int | complex]],
+    manifest: dict[int, dict],
+    harmonics: list[int],
+    rtol: float,
+) -> None:
+    expected_keys = {(nid, order) for nid in manifest for order in harmonics}
+    actual_keys = {(int(row["id"]), int(row["order"])) for row in modes}
+    if actual_keys != expected_keys:
+        missing = sorted(expected_keys - actual_keys)[:10]
+        extra = sorted(actual_keys - expected_keys)[:10]
+        raise ValueError(f"node/harmonic coverage mismatch; missing={missing}, extra={extra}")
+    for row in modes:
+        ref = manifest[int(row["id"])]
+        if not close(float(row["weight"]), float(ref["weight"]), rtol):
+            raise ValueError(f"node {row['id']}: propagated weight differs from manifest")
+        if not close(float(row["intensity"]), float(ref["intensity"]), rtol):
+            raise ValueError(f"node {row['id']}: propagated intensity differs from manifest")
+        dphi = abs(
+            math.atan2(
+                math.sin(float(row["phase"]) - float(ref["phase"])),
+                math.cos(float(row["phase"]) - float(ref["phase"])),
+            )
+        )
+        if dphi > 2.0e-6:
+            raise ValueError(f"node {row['id']}: propagated phase differs from manifest")
+
+
+def validate_chunk(
+    run_dir: Path,
+    manifest_path: Path,
+    harmonics: list[int],
+    rtol: float,
+    node_id: int | None,
+) -> dict:
+    """Subset/chunk acceptance: no ensemble HHG_ics_cs.dat.
+
+    Checks ICS_s = w_s S_s and Jbar_s = w_s J_s against chunk_weighted_spectrum.dat.
+    """
+    required = [
+        "HHG_nodes_modes.dat",
+        "chunk_info.txt",
+        "chunk_weighted_spectrum.dat",
+        "nodes_moment_check.txt",
+        "run.log",
+    ]
+    for name in required:
+        path = run_dir / name
+        if not path.is_file() or path.stat().st_size == 0:
+            raise ValueError(f"missing/empty required chunk output: {path}")
+    if (run_dir / "HHG_ics_cs.dat").is_file():
+        raise ValueError("chunk/subset run must not write ensemble HHG_ics_cs.dat")
+    if not moment_passed(run_dir / "nodes_moment_check.txt"):
+        raise ValueError("nodes_moment_check.txt did not report PASS")
+
+    info = load_chunk_info(run_dir / "chunk_info.txt")
+    if int(info.get("n_propagate_nodes", "0")) < 1:
+        raise ValueError("chunk_info: n_propagate_nodes < 1")
+    prop_ids = [int(x) for x in info.get("propagate_ids", "").replace(",", " ").split() if x]
+    if node_id is not None and prop_ids != [node_id]:
+        raise ValueError(f"chunk_info propagate_ids={prop_ids} != [{node_id}]")
+    if node_id is None and len(prop_ids) != 1:
+        raise ValueError("chunk validation expects a single propagate id")
+    nid = node_id if node_id is not None else prop_ids[0]
+
+    manifest = {int(row["id"]): row for row in load_manifest(manifest_path)}
+    if nid not in manifest:
+        raise ValueError(f"node_id={nid} is not in manifest {manifest_path}")
+    manifest = {nid: manifest[nid]}
+    modes = load_modes(run_dir / "HHG_nodes_modes.dat")
+    _check_modes_vs_manifest(modes, manifest, harmonics, rtol)
+
+    _scale, spectrum = load_chunk_spectrum(run_dir / "chunk_weighted_spectrum.dat")
+    comparisons: dict[str, dict[str, float]] = {}
+    for order in harmonics:
+        group = [row for row in modes if int(row["order"]) == order]
+        if len(group) != 1:
+            raise ValueError(f"H{order}: expected one mode row, got {len(group)}")
+        row = group[0]
+        weight = float(row["weight"])
+        ics_s = weight * float(row["power"])
+        jbar_x = weight * complex(row["jx"])
+        jbar_y = weight * complex(row["jy"])
+        spec = min(spectrum, key=lambda item: abs(item["h"] - order))
+        if abs(spec["h"] - order) > 0.51:
+            raise ValueError(f"H{order}: no nearby chunk spectrum bin (h={spec['h']})")
+        if not close(ics_s, spec["ics"], 5.0 * rtol, atol=1.0e-280):
+            raise ValueError(f"H{order}: ICS_s=w_s S_s disagrees with chunk weighted_ics")
+        if not close(jbar_x.real, spec["jx"].real, 5.0 * rtol, atol=1.0e-280):
+            raise ValueError(f"H{order}: Re(w_s Jx) disagrees with chunk SumJx")
+        if not close(jbar_x.imag, spec["jx"].imag, 5.0 * rtol, atol=1.0e-280):
+            raise ValueError(f"H{order}: Im(w_s Jx) disagrees with chunk SumJx")
+        if not close(jbar_y.real, spec["jy"].real, 5.0 * rtol, atol=1.0e-280):
+            raise ValueError(f"H{order}: Re(w_s Jy) disagrees with chunk SumJy")
+        if not close(jbar_y.imag, spec["jy"].imag, 5.0 * rtol, atol=1.0e-280):
+            raise ValueError(f"H{order}: Im(w_s Jy) disagrees with chunk SumJy")
+        comparisons[f"H{order}"] = {
+            "ICS_s": ics_s,
+            "chunk_weighted_ics": spec["ics"],
+            "Jbar_x_re": jbar_x.real,
+            "Jbar_y_re": jbar_y.real,
+        }
+    return {
+        "status": "PASS",
+        "mode": "chunk",
+        "run_dir": str(run_dir.resolve()),
+        "manifest": str(manifest_path.resolve()),
+        "n_nodes": 1,
+        "node_id": nid,
+        "n_manifest_nodes": int(info.get("n_manifest_nodes", 0)),
+        "harmonics": harmonics,
+        "comparisons": comparisons,
+    }
+
+
+def validate_ensemble(
     run_dir: Path,
     manifest_path: Path,
     harmonics: list[int],
@@ -161,6 +317,7 @@ def validate(
 
     return {
         "status": "PASS",
+        "mode": "ensemble",
         "run_dir": str(run_dir.resolve()),
         "manifest": str(manifest_path.resolve()),
         "n_nodes": len(manifest),
@@ -170,6 +327,21 @@ def validate(
     }
 
 
+def validate(
+    run_dir: Path,
+    manifest_path: Path,
+    harmonics: list[int],
+    rtol: float,
+    node_id: int | None = None,
+    chunk: bool | None = None,
+) -> dict:
+    chunk_info = run_dir / "chunk_info.txt"
+    use_chunk = bool(chunk) if chunk is not None else chunk_info.is_file()
+    if use_chunk:
+        return validate_chunk(run_dir, manifest_path, harmonics, rtol, node_id)
+    return validate_ensemble(run_dir, manifest_path, harmonics, rtol, node_id)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("run_dir", type=Path)
@@ -177,11 +349,19 @@ def main() -> int:
     parser.add_argument("--harmonics", default="2,5,7,9,10")
     parser.add_argument("--rtol", type=float, default=2.0e-7)
     parser.add_argument("--node-id", type=int, default=None)
+    parser.add_argument("--chunk", action="store_true")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
     try:
         harmonics = [int(x.strip()) for x in args.harmonics.split(",") if x.strip()]
-        result = validate(args.run_dir, args.manifest, harmonics, args.rtol, args.node_id)
+        result = validate(
+            args.run_dir,
+            args.manifest,
+            harmonics,
+            args.rtol,
+            args.node_id,
+            True if args.chunk else None,
+        )
     except (OSError, ValueError) as exc:
         print(f"A0_RUN_VALIDATION=FAIL: {exc}")
         return 1

@@ -34,6 +34,18 @@ def _write_minimal_chunk(
     if success:
         (cdir / "SUCCESS").write_text("", encoding="utf-8")
     (cdir / "run_status.txt").write_text(f"status={status}\n", encoding="utf-8")
+    hashed = [
+        "run_metadata.txt",
+        "chunk_info.txt",
+        "HHG_nodes_modes.dat",
+        "chunk_weighted_spectrum.dat",
+        "input.nml",
+        "run_status.txt",
+    ]
+    (cdir / "output_sha256.txt").write_text(
+        "\n".join(f"{sha256(cdir / name)}  {name}" for name in hashed if (cdir / name).is_file()) + "\n",
+        encoding="utf-8",
+    )
 
 
 def main() -> int:
@@ -69,6 +81,8 @@ def main() -> int:
                 "squeeze_theta_deg=180",
                 "I_bar=1.0e11",
                 "harmonics=2",
+                "omp_num_threads=36",
+                "mkl_num_threads=1",
             ]
         )
         # NaN in modes must fail

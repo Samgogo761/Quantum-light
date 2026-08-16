@@ -63,9 +63,10 @@ def pin_head() -> int:
     dest = HERE / "FREEZE.json"
     payload = json.loads(dest.read_text(encoding="utf-8"))
     head = subprocess.check_output(["git", "-C", str(REPO), "rev-parse", "HEAD"], text=True).strip()
-    payload["git_head"] = head
+    payload["freeze_pin_base_head"] = head
+    payload.pop("git_head", None)
     _write_freeze(payload)
-    print("PINNED git_head", head)
+    print("PINNED freeze_pin_base_head", head)
     return 0
 
 
@@ -135,7 +136,7 @@ def build_freeze(git_head: str) -> dict:
         "I_bar": I_BAR,
         "squeeze_r": SQUEEZE_R,
         "thetas_deg": [0, 180],
-        "git_head": git_head,
+        "freeze_pin_base_head": git_head,
         "pinned_binary_sha256": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
         "pinned_binary_source_sha256": "c6372e17457cb45d38233d81149b43fc07768978e5870c3e040d13205000110f",
         "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
@@ -147,8 +148,8 @@ def build_freeze(git_head: str) -> dict:
         "renormalize_subset_weights": False,
         "use_full_manifest_moment_check": True,
         "propagate_ids_only": True,
-        "occ_stride": 336,
-        "n_occupation_snapshots_approx": 16,
+        "occ_stride": 126,
+        "n_occupation_snapshots_approx": 40,
         "nk_valence": 84,
         "nk_bands": 112,
     }
@@ -160,7 +161,7 @@ def main() -> int:
     ap.add_argument(
         "--pin-head",
         action="store_true",
-        help="Rewrite FREEZE.git_head to the current Git HEAD after the checkpoint commit.",
+        help="Rewrite FREEZE.freeze_pin_base_head to the current Git HEAD after the checkpoint commit.",
     )
     args = ap.parse_args()
     if args.pin_head:

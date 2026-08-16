@@ -37,7 +37,7 @@ NK="${NK:-20}"
 I_BAR=1.0e11
 HARMONICS_CSV="2,5,7,9,10"
 HARMONIC_COUNT=5
-OCC_STRIDE="${OCC_STRIDE:-336}"
+OCC_STRIDE="${OCC_STRIDE:-126}"
 PINNED_BINARY_SHA256="34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a"
 PINNED_BINARY="${PINNED_BINARY:-${REPO}/.a0_build_cache_v2/8aaba35732b005dbd39f2639ba24d68e3db0a114c2924841184c4556c9a8d8fe/hhg_sbe}"
 PINNED_TB_PLUS_SHA256="66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18"
@@ -58,7 +58,7 @@ fi
 IDX="${SLURM_ARRAY_TASK_ID:-0}"
 [ "${IDX}" -ge 0 ] && [ "${IDX}" -le 7 ] || die "bad array index ${IDX}"
 
-for command_name in sha256sum git find xargs awk grep python3; do
+for command_name in sha256sum git find xargs awk grep; do
   require_cmd "${command_name}"
 done
 # shellcheck disable=SC1091
@@ -80,7 +80,7 @@ fr = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
 def sha(p):
     return hashlib.sha256(Path(p).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 need = [
-    "git_head",
+    "freeze_pin_base_head",
     "sbatch_sha256",
     "template_sha256",
     "validator_run_sha256",
@@ -95,11 +95,11 @@ need = [
 for key in need:
     if key not in fr:
         raise SystemExit(f"FREEZE missing {key}")
-if fr["git_head"] in {"", "TO_BE_PINNED", None}:
-    raise SystemExit("FREEZE.git_head is not pinned; refuse production submit")
+if fr["freeze_pin_base_head"] in {"", "TO_BE_PINNED", None}:
+    raise SystemExit("FREEZE.freeze_pin_base_head is not pinned; refuse production submit")
 if int(fr["n_probes"]) != 8 or len(fr["plusN_probes"]) != 8:
     raise SystemExit(f"FREEZE must have 8 probes, got {fr.get('n_probes')}")
-print(fr["git_head"])
+print(fr["freeze_pin_base_head"])
 print(fr["sbatch_sha256"])
 print(fr["template_sha256"])
 print(fr["validator_run_sha256"])
@@ -138,9 +138,9 @@ if [ "${GIT_HEAD}" != "${PIN_GIT_HEAD}" ]; then
   if git -C "${REPO}" diff --quiet "${PIN_GIT_HEAD}" HEAD -- . \
       ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.json' \
       ':!deploy/a0_layerA_m88full/gh7_tail/FREEZE.sha256'; then
-    echo "HEAD ${GIT_HEAD} is a FREEZE.git_head pin-successor of ${PIN_GIT_HEAD}"
+    echo "HEAD ${GIT_HEAD} is a freeze_pin_base_head pin-successor of ${PIN_GIT_HEAD}"
   else
-    die "git HEAD ${GIT_HEAD} != FREEZE.git_head ${PIN_GIT_HEAD}"
+    die "git HEAD ${GIT_HEAD} is not freeze_pin_base_head ${PIN_GIT_HEAD} or a FREEZE-only successor"
   fi
 fi
 [ "${GOT_SBATCH}" = "${PIN_SBATCH}" ] || die "sbatch SHA mismatch"
@@ -294,6 +294,9 @@ cp -f "${CACHE_DIR}/build_metadata.txt" "${OUTDIR}/build_metadata.snapshot.txt"
   echo "propagate_ids=${PROP_IDS}"
   echo "note=full_gh7_manifest_moment_check; subset_not_renormalized; plusN_only_no_cep_pi"
   echo "cep_pi_tested=false"
+  echo "chunk_mode=true"
+  echo "freeze_pin_base_head=${PIN_GIT_HEAD}"
+  echo "campaign_actual_head=${GIT_HEAD}"
   echo "slurm_job_id=${SLURM_JOB_ID:-NA}"
   echo "started_at=$(date --iso-8601=seconds 2>/dev/null || date)"
   echo "host=$(hostname)"
@@ -339,7 +342,8 @@ grep -Eq '^pass[[:space:]]*=[[:space:]]*T[[:space:]]*$' nodes_moment_check.txt \
 
 CRITICAL_OUTPUTS=(
   HHG_nodes_modes.dat
-  HHG_ics_cs.dat
+  chunk_info.txt
+  chunk_weighted_spectrum.dat
   nodes_moment_check.txt
   run.log
   node_preflight.json
@@ -403,6 +407,7 @@ PY
   "${OUTDIR}" \
   --manifest "${OUTDIR}/nodes_manifest.input.dat" \
   --node-id "${NID}" \
+  --chunk \
   --harmonics "${HARMONICS_CSV}" \
   --report "${OUTDIR}/run_validator.json" \
   2>&1 | tee "${OUTDIR}/run_validator.log"

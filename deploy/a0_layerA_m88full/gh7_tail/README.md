@@ -8,6 +8,8 @@
 4. 尾部门全部通过后，再决定全量 GH7 或 \(P\) 共轭降本
 
 这些 `+N` 探针**不检验** GH7 的 CEP‑π 协变性。`dt/2` 尚未实现，不是已验收阶段。
+单节点 subset 走 chunk 输出（`chunk_info.txt` / `chunk_weighted_spectrum.dat`），不要求系综 `HHG_ics_cs.dat`。
+后处理比较排序后的案例集合；`campaign_actual_head` 八例必须相同，且不必等于 `freeze_pin_base_head`。
 
 提交包装器与 batch 本体都拒绝，除非：
 

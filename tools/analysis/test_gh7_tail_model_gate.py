@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import subprocess
@@ -21,10 +22,13 @@ from gh7_nodes import (
     select_wide_axis_antinode_pair,
 )
 from gh7_tail_model_gate import (
+    JONES_ATOL,
     compare_jones,
     gate_exit_code,
     parse_band_occupation,
+    same_case_set,
 )
+from validate_a0_run_strict import validate as validate_run
 
 GATE = Path(__file__).resolve().parent / "gh7_tail_model_gate.py"
 
@@ -160,8 +164,8 @@ def test_incomplete_set_is_nonzero() -> None:
                     ],
                     "pinned_binary_sha256": "bin",
                     "tb_plus_sha256": "tb",
-                    "git_head": "TO_BE_PINNED",
-                    "occ_stride": 336,
+                    "freeze_pin_base_head": "TO_BE_PINNED",
+                    "occ_stride": 126,
                 }
             ),
             encoding="utf-8",
@@ -197,15 +201,189 @@ def test_dt2_not_accepted_stage() -> None:
 
 
 def test_mixed_jones_weak_absolute() -> None:
+    scales = {n: 1.0e-2 for n in (2, 5, 7, 9, 10)}
     weak_a = {n: (1e-16 + 0j, 0j) for n in (2, 5, 7, 9, 10)}
     weak_b = {n: (2e-16 + 0j, 0j) for n in (2, 5, 7, 9, 10)}
-    weak = compare_jones(weak_a, weak_b)
+    weak = compare_jones(weak_a, weak_b, scales)
     assert weak["orders"]["2"]["mixed"]["strong"] is False
     assert weak["pass"] is True
+    zero = {n: (0j, 0j) for n in (2, 5, 7, 9, 10)}
+    drift = {n: (4.9e-5 + 0j, 0j) for n in (2, 5, 7, 9, 10)}
+    counter = compare_jones(zero, drift, scales)
+    assert counter["pass"] is False
+    assert counter["orders"]["2"]["mixed"]["e_abs"] > JONES_ATOL
     strong_a = {n: (1 + 0j, 0j) for n in (2, 5, 7, 9, 10)}
     strong_b = {n: (1.2 + 0j, 0j) for n in (2, 5, 7, 9, 10)}
-    strong = compare_jones(strong_a, strong_b)
+    strong = compare_jones(strong_a, strong_b, {n: 1.0 for n in (2, 5, 7, 9, 10)})
     assert strong["pass"] is False
+
+
+def test_occupation_exc_floor() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        path = Path(td) / "floor.dat"
+        lines = ["# it time ikx iky band occ\n"]
+        for it in (1, 2):
+            for ikx, iky in ((1, 1), (1, 2), (2, 1), (2, 2)):
+                for band in range(1, 113):
+                    if it == 1 or band <= 84:
+                        occ = 1.0 if band <= 84 else 0.0
+                    else:
+                        occ = 1.0e-15 if band >= 105 else 0.0
+                    lines.append(f"{it} 0.0 {ikx} {iky} {band} {occ}\n")
+        path.write_text("".join(lines), encoding="utf-8")
+        rec = parse_band_occupation(path, nk=2, expected_its=[1, 2])
+        assert rec["pass_edge_abs"] is True
+        assert rec["pass_edge_rel"] is True
+
+
+def test_same_case_set_ignores_order() -> None:
+    expected = [
+        "sv_r2p5_th000_plusN_id01_corner_k20",
+        "sv_r2p5_th000_plusN_id49_corner_k20",
+        "sv_r2p5_th000_plusN_id22_wide_k20",
+        "sv_r2p5_th000_plusN_id28_wide_k20",
+    ]
+    found = sorted(expected)
+    assert found != expected
+    assert same_case_set(found, expected)
+    assert not same_case_set(found + [found[0]], expected)
+
+
+def _sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _write_pass_case(
+    root: Path,
+    name: str,
+    probe: dict,
+    *,
+    actual_head: str,
+    base_head: str,
+    freeze_sha: str,
+    bin_sha: str,
+    tb_sha: str,
+) -> None:
+    out = root / name
+    out.mkdir()
+    (out / "SUCCESS").write_text("", encoding="utf-8")
+    (out / "run_status.txt").write_text("status=PASS\n", encoding="utf-8")
+    (out / "HHG_nodes_modes.dat").write_text(
+        f"{probe['id']} 0.1 1.0 0.0 2 1.0 0.0 0.0 0.0 1.0\n",
+        encoding="utf-8",
+    )
+    _write_occ(out / "occupation_band_kt.dat", nk=2, its=(1, 2))
+    (out / "run_metadata.txt").write_text(
+        "\n".join(
+            [
+                f"binary_sha256={bin_sha}",
+                f"tb_sha256={tb_sha}",
+                f"nodes_sha256={probe['manifest_sha256']}",
+                f"propagate_ids={probe['id']}",
+                f"freeze_pin_base_head={base_head}",
+                f"campaign_actual_head={actual_head}",
+                f"git_head={actual_head}",
+                f"freeze_sha256={freeze_sha}",
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    listed = ("HHG_nodes_modes.dat", "occupation_band_kt.dat", "run_metadata.txt")
+    (out / "output_sha256.txt").write_text(
+        "\n".join(f"{_sha(out / name)}  {name}" for name in listed) + "\n",
+        encoding="utf-8",
+    )
+
+
+def test_eight_cases_pass_lexical_mismatch() -> None:
+    probes = [
+        {"theta_deg": 0, "id": 1, "kind": "corner"},
+        {"theta_deg": 0, "id": 49, "kind": "corner"},
+        {"theta_deg": 0, "id": 22, "kind": "wide"},
+        {"theta_deg": 0, "id": 28, "kind": "wide"},
+        {"theta_deg": 180, "id": 1, "kind": "corner"},
+        {"theta_deg": 180, "id": 49, "kind": "corner"},
+        {"theta_deg": 180, "id": 4, "kind": "wide"},
+        {"theta_deg": 180, "id": 46, "kind": "wide"},
+    ]
+    expected = expected_case_names(probes, 2)
+    assert sorted(expected) != expected
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        freeze_sha = "f" * 64
+        freeze = root / "FREEZE.json"
+        payload = {
+            "plusN_probes": [{**p, "manifest_sha256": "abc", "I_max": 1.0} for p in probes],
+            "pinned_binary_sha256": "bin",
+            "tb_plus_sha256": "tb",
+            "freeze_pin_base_head": "basehead",
+            "occ_stride": 126,
+        }
+        freeze.write_text(json.dumps(payload), encoding="utf-8")
+        (root / "FREEZE.sha256").write_text(freeze_sha + "\n", encoding="utf-8")
+        k20 = root / "k20"
+        k20.mkdir()
+        for name, probe in zip(expected, probes, strict=True):
+            _write_pass_case(
+                k20,
+                name,
+                {**probe, "manifest_sha256": "abc"},
+                actual_head="actualhead",
+                base_head="basehead",
+                freeze_sha=freeze_sha,
+                bin_sha="bin",
+                tb_sha="tb",
+            )
+        report = root / "report.json"
+        proc = subprocess.run(
+            [
+                sys.executable,
+                str(GATE),
+                "--stage",
+                "k20",
+                "--freeze",
+                str(freeze),
+                "--k20-root",
+                str(k20),
+                "--nk",
+                "2",
+                "--report",
+                str(report),
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        payload = json.loads(report.read_text(encoding="utf-8"))
+        assert proc.returncode == 0, payload
+        assert payload["status"] == "PASS"
+        assert payload["campaign_actual_heads"] == ["actualhead"]
+
+
+def test_validate_chunk_ics() -> None:
+    with tempfile.TemporaryDirectory() as td:
+        run = Path(td)
+        man = run / "man.dat"
+        man.write_text("1 1.00000000000000000E-01 0.0 0.0 1.0 0.0\n", encoding="utf-8")
+        (run / "HHG_nodes_modes.dat").write_text(
+            "1 1.00000000000000000E-01 1.0 0.0 2 1.0 0.0 0.0 0.0 1.0\n",
+            encoding="utf-8",
+        )
+        (run / "chunk_info.txt").write_text(
+            "n_manifest_nodes = 49\nn_propagate_nodes = 1\npropagate_ids = 1\n",
+            encoding="utf-8",
+        )
+        (run / "chunk_weighted_spectrum.dat").write_text(
+            "# spectrum_scale = 1.0\n"
+            "1 2.0 0.1 0.1 0.1 0.0 0.0 0.0\n",
+            encoding="utf-8",
+        )
+        (run / "nodes_moment_check.txt").write_text("pass = T\n", encoding="utf-8")
+        (run / "run.log").write_text("ok\n", encoding="utf-8")
+        result = validate_run(run, man, [2], 2.0e-7, 1, True)
+        assert result["status"] == "PASS"
+        assert result["mode"] == "chunk"
 
 
 if __name__ == "__main__":
@@ -217,4 +395,8 @@ if __name__ == "__main__":
     test_incomplete_set_is_nonzero()
     test_dt2_not_accepted_stage()
     test_mixed_jones_weak_absolute()
+    test_occupation_exc_floor()
+    test_same_case_set_ignores_order()
+    test_eight_cases_pass_lexical_mismatch()
+    test_validate_chunk_ics()
     print("test_gh7_tail_model_gate: PASS")
