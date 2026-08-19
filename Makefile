@@ -92,6 +92,11 @@ test: dirs
 	python tools/analysis/test_cep_pi_gate_v2.py
 	python tools/analysis/test_gh7_tail_model_gate.py
 	python tools/analysis/test_gh7_tail_edge_band_audit.py
+	python tools/analysis/test_audit_isafe_occ.py
+	python tools/analysis/test_q_to_field_mean.py
+	python tools/analysis/test_finite_bandwidth_modes.py
+	python tools/b0_small_model/test_b0_gates.py
+	python tools/b0_small_model/test_b0_open_gaussian.py
 	$(MAKE) test-field-cep
 
 # Production generate_field_sample antipode gate (mod_params + mod_laser only).
