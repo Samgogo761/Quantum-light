@@ -1,0 +1,19 @@
+{
+  "campaign": "full112_gh5_node_occ_k20",
+  "slurm_array_job_id": "29458",
+  "partition": "part_1",
+  "array": "0-7",
+  "nk": 20,
+  "approve_k40": false,
+  "approve_k50": false,
+  "approve_full_gh7": false,
+  "label": "FULL112_K20_SAFE_INTENSITY_BRACKET_BY_CEP",
+  "repo": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-d1a1431",
+  "campaign_actual_head": "d1a14318015378df32fad6bbd7e3c95445263bb3",
+  "local_checkpoint": "68157c4",
+  "outroot": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-d1a1431/runs/a0_full112_gh5_node_occ_k20/output_a0_full112_k20_node_occ_d1a143180153",
+  "sbatch_sha256": "3098372fb393ec3899ab7324dd3df9c0419d98505d2340fcd6365f8529116e3c",
+  "submit_sha256": "2e11cb6d1c1ef5031248913af9819f5fa537dbd762caa93a1cef2e15ad499b88",
+  "pinned_binary": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
+  "note": "Real GH5 node intensities/CEPs plus classical 2e11 baseline and dt/2 positivity diagnostic. Not a uniform I-grid. Scripts scp'd into d1a1431 worktree; local git checkpoint is 68157c4."
+}
