@@ -1,0 +1,50 @@
+{
+  "model_id": "Q_M0_eightband_v1",
+  "algorithm": "midpoint_unitary_exponential_v1",
+  "dtype": "complex128",
+  "params": {
+    "t_h": 1.0,
+    "lam_so": 0.1,
+    "delta": 0.8,
+    "u": 0.1,
+    "v": 0.1,
+    "label": "R0"
+  },
+  "protocol": {
+    "hbar_omega0": 0.05,
+    "n_cycles": 8,
+    "a0_dimless": 0.4,
+    "polarization": "x",
+    "envelope": "sin2_on_vector_potential",
+    "carrier": "cos",
+    "cep": 0.0,
+    "label": "P1_A0.4"
+  },
+  "protocol_id": "P1_A0.4_w0.05_A0.4_ncyc8_x_sin2_on_vector_potential_cos_cep0",
+  "nk": 48,
+  "nt_per_cycle": 400,
+  "mu": -0.009010620372198276,
+  "grid_shift": 0.0,
+  "subspace": true,
+  "k_orders": [],
+  "neel": -1,
+  "field_sign": 1,
+  "a_nn_ang": 4.040881841019413,
+  "a_cell_ang2": 42.423272924173006,
+  "source_hashes": {
+    "scf_input": {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\deploy\\a0_layerA_m88full\\a1_fewk_nscf\\CrI3_scf_soc_a1h_clean.in",
+      "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+    },
+    "model_module": {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_model.py",
+      "sha256": "0dbcb90fad134a48f3b005022eee1f16b74a8529d195a494ecbdc68860e5509f"
+    },
+    "geometry_source_module": {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_tperp_static_audit.py",
+      "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b"
+    }
+  },
+  "classical_module_sha256": "18836bbb7e82bb3cf4d8cd62f3140c268410705aee9eeb26e3a5a2231a67c813",
+  "identity_sha256": "195c1541e9df3e0cbb32b92490775552a2f9d6cfce0064a3af48eb34f4e964a6"
+}

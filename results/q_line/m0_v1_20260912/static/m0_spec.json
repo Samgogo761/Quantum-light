@@ -1,0 +1,285 @@
+{
+  "model_id": "Q_M0_eightband_v1",
+  "basis": [
+    "tA_up",
+    "tA_dn",
+    "tB_up",
+    "tB_dn",
+    "bA_up",
+    "bA_dn",
+    "bB_up",
+    "bB_dn"
+  ],
+  "bloch_convention": "embedded: H_ab(k)=Σ_R t_ab(R) exp(i k·(R+τ_b−τ_a)); k Cartesian Å^-1; kz=0",
+  "units": {
+    "hbar": 1,
+    "e": 1,
+    "energy": "t_h (=1 eV at R0)",
+    "length": "Å",
+    "time": "ħ/t_h (0.6582 fs at t_h=1 eV)"
+  },
+  "hamiltonian": {
+    "h_layer": "t_h[Re f σx − Im f σy] s0 + λ_SO g σz sz + N η_ℓ Δ σ0 sz, η_t=+1, η_b=−1",
+    "f": "exp(i k·d)[1 + exp(−i k·a1) + exp(i k·a2)], d = τ_tB − τ_tA",
+    "g": "2{sin[k·(a1+a2)] − sin(k·a1) − sin(k·a2)}  (not normalised; |g(K)| = 3√3)",
+    "T0": "exp(i k·q) [[u, v exp(i k·(d+a2))], [v exp(−i k·d), u]], q = τ_bA − τ_tA",
+    "H8": "[[h_t, T0⊗s0], [T0†⊗s0, h_b]]",
+    "H_R": 0,
+    "interlayer_SOC": 0,
+    "extra_interlayer_hopping": 0,
+    "energy_zero": "Tr-free onsite 0; no k-dependent scalar dispersion (choice, not omission)"
+  },
+  "parameters": {
+    "t_h": 1.0,
+    "lam_so": 0.1,
+    "delta": 0.8,
+    "u": 0.1,
+    "v": 0.1,
+    "label": "R0"
+  },
+  "symmetry_operators": {
+    "P": "τx σx s0 (k→−k, N→−N); common scalar phase e^{2ik·c} dropped",
+    "Theta": "τ0 σ0 (i sy) K (k→−k, N→−N)",
+    "PTheta_squared": -1,
+    "spin_conservation": "[H, sz] = 0 (model assumption)",
+    "mirror_a2": "τ0 σx (−i n̂·s): H_N(k) → H_{−N}(Mk)",
+    "C2_nhat": "τx σ0 (−i n̂·s): H_N(k) → H_N(−Mk); requires u_AA=u_BB and v_AB=v_BA"
+  },
+  "geometry": {
+    "lattice_ang": [
+      [
+        6.998304941,
+        -0.001225784,
+        0.0
+      ],
+      [
+        -3.50021403,
+        6.062548544,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        25.0
+      ]
+    ],
+    "sites_orig_frac": {
+      "tA": [
+        0.3332837875,
+        0.6661373591,
+        0.2388666379
+      ],
+      "tB": [
+        0.6667162125,
+        0.3328525716,
+        0.2388666379
+      ],
+      "bA": [
+        0.3332866218,
+        0.3338153968,
+        0.505142894
+      ],
+      "bB": [
+        0.6667133782,
+        0.0005287749,
+        0.505142894
+      ]
+    },
+    "sites_paired_frac": {
+      "tA": [
+        0.3332837875,
+        0.6661373591,
+        0.2388666379
+      ],
+      "tB": [
+        0.6667162125,
+        0.3328525716,
+        0.2388666379
+      ],
+      "bA": [
+        0.3332809535,
+        0.3338135624,
+        0.5051428941
+      ],
+      "bB": [
+        0.6667133785,
+        0.0005287748999999176,
+        0.5051428941
+      ]
+    },
+    "inversion_center_frac": [
+      0.499998583,
+      0.333333067,
+      0.372004766
+    ],
+    "d_cart": [
+      3.500029876560181,
+      -2.020963919327121,
+      0.0
+    ],
+    "q_cart": [
+      1.1631845825160045,
+      -2.0147291463462658,
+      6.656906405000001
+    ],
+    "a1_cart": [
+      6.998304941,
+      -0.001225784,
+      0.0
+    ],
+    "a2_cart": [
+      -3.50021403,
+      6.062548544,
+      0.0
+    ],
+    "nn_deltas_cart": [
+      [
+        3.500029876560181,
+        -2.020963919327121,
+        0.0
+      ],
+      [
+        -3.498275064439819,
+        -2.0197381353271213,
+        0.0
+      ],
+      [
+        -0.00018415343981903476,
+        4.041584624672879,
+        0.0
+      ]
+    ],
+    "nnn_terms": [
+      [
+        1.0,
+        [
+          3.498090911,
+          6.06132276,
+          0.0
+        ]
+      ],
+      [
+        -1.0,
+        [
+          6.998304941,
+          -0.001225784,
+          0.0
+        ]
+      ],
+      [
+        -1.0,
+        [
+          -3.50021403,
+          6.062548544,
+          0.0
+        ]
+      ]
+    ],
+    "interlayer_bonds": [
+      {
+        "channel": "AA",
+        "from": "tA",
+        "to": "bA",
+        "R": [
+          0,
+          0,
+          0
+        ],
+        "delta_cart": [
+          1.1631845825160045,
+          -2.0147291463462658,
+          6.656906405000001
+        ],
+        "amplitude": "u"
+      },
+      {
+        "channel": "BB",
+        "from": "tB",
+        "to": "bB",
+        "R": [
+          0,
+          0,
+          0
+        ],
+        "delta_cart": [
+          1.1631845825160054,
+          -2.0147291463462653,
+          6.656906405000001
+        ],
+        "amplitude": "u"
+      },
+      {
+        "channel": "AB",
+        "from": "tA",
+        "to": "bB",
+        "R": [
+          0,
+          1,
+          0
+        ],
+        "delta_cart": [
+          1.1630004290761864,
+          2.0268554783266133,
+          6.656906405000001
+        ],
+        "amplitude": "v"
+      },
+      {
+        "channel": "BA",
+        "from": "tB",
+        "to": "bA",
+        "R": [
+          0,
+          0,
+          0
+        ],
+        "delta_cart": [
+          -2.3368452940441764,
+          0.0062347729808553964,
+          6.656906405000001
+        ],
+        "amplitude": "v"
+      }
+    ],
+    "a_nn_mean_ang": 4.040881841019413,
+    "a_cell_ang2": 42.423272924173006,
+    "reciprocal_2d": [
+      [
+        0.8979061093143217,
+        0.5184063333488917
+      ],
+      [
+        0.0001815472378178365,
+        1.0364982178307658
+      ]
+    ],
+    "mirror_normal_inplane": [
+      0.8660254040228021,
+      0.4999999995871423
+    ],
+    "source_hashes": {
+      "scf_input": {
+        "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\deploy\\a0_layerA_m88full\\a1_fewk_nscf\\CrI3_scf_soc_a1h_clean.in",
+        "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+      },
+      "model_module": {
+        "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_model.py",
+        "sha256": "28cc0584ef99e7802939e586d4cbdfa62bcf9daf0032182ab511490ec8d4c6f7"
+      },
+      "geometry_source_module": {
+        "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_tperp_static_audit.py",
+        "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b"
+      }
+    },
+    "pairing_rule": "keep production tA,tB and INV_C; bA=(2c-tB) mod 1; bB=(2c-tA) mod 1",
+    "idealization": "production lattice metric kept; only bA moved ~3.5e-5 Å to the exact inversion image; no 120° forcing, no relabeling, no stacking change"
+  },
+  "not_claimed": [
+    "material fit",
+    "downfold",
+    "Rashba",
+    "interlayer SOC",
+    "HHG mechanism",
+    "quantum input/output"
+  ]
+}

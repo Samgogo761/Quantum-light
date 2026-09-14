@@ -1,0 +1,17 @@
+{
+  "unknowns": 64,
+  "equations": 832,
+  "smallest_singular_values": [
+    2.1491531607545693,
+    2.149153160754569,
+    2.0168235740795364,
+    2.016823574079535,
+    0.6371646054165132,
+    0.6371646054165121,
+    0.39598588601751483,
+    0.3959858860175146
+  ],
+  "n_below_1e-8": 0,
+  "conclusion": "no constant same-k intertwiner U with U H_+N(k) = H_-N(k) U on the sample; the 64-unknown SVD already spans all constant linear combinations, so the Pauli list is not enlarged",
+  "isospectral_note": "H_+N(k) and H_-N(k) are exactly isospectral at every k (spec even in \u0394) because T0(k) is a normal matrix and both layers share h; the relating map is k-dependent and involves transposition, hence it is neither a constant unitary nor a same-drive dynamical symmetry."
+}

@@ -1,0 +1,30 @@
+{
+  "model_id": "Q_M0_eightband_v1",
+  "stage": "P0_P1_classical_campaign",
+  "date": "2026-09-14",
+  "quantum_input": "not_run",
+  "quantum_output": "not_run",
+  "old_p0_archive": "results/q_line/m0_v1_20260912/classical/classical_report.json",
+  "new_tree": "results/q_line/m0_p0p1_20260914",
+  "docs": [
+    "docs/04_BSV量子光/线Q_P0P1对照试验报告_20260914.md",
+    "docs/04_BSV量子光/线Q_P0P1物理解读一页_20260914.md"
+  ],
+  "key_table": "campaign_key_table.json",
+  "field_resources": "field_resources.json",
+  "gap_coarse_check": "gap_coarse_check.json",
+  "recommended_classical_candidate": "P1_A*=0.8 with P0 retained as resonant control",
+  "not_a_pass_criterion": "non-zero Jo, plateau, or maximum harmonic intensity were not required",
+  "jobs_completed": [
+    "p1_A0.8_nk48_nt400",
+    "p1_A0.4_nk48_nt400",
+    "p1_A1.6_nk48_nt400",
+    "p0_nk48_nt400",
+    "p0_nk48_nt400_shift",
+    "p0_nk48_nt800",
+    "p1_A0.8_nk48_nt800",
+    "p1_A0.8_rev_nk24",
+    "p0_nk96_nt400",
+    "p1_A0.8_nk96_nt400"
+  ]
+}
