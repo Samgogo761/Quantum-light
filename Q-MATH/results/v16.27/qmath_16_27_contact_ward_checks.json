@@ -1,0 +1,166 @@
+{
+  "contact_audit": [
+    {
+      "L": 201,
+      "Delta": 0.4,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        -0.605734619637436,
+        -0.01634101978894062
+      ],
+      "retarded_output_terms": [
+        [
+          -0.6069412503790574,
+          -0.017871879383332682
+        ],
+        [
+          0.0012066307416300213,
+          0.0015308595943919593
+        ],
+        [
+          0.0,
+          -1.7249721814829213e-17
+        ]
+      ],
+      "min_gap": 0.29276239695279943,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.4,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -0.46433727088562543,
+        0.8481558595277302
+      ],
+      "retarded_output_terms": [
+        [
+          -0.46594959941255193,
+          0.847553762905762
+        ],
+        [
+          0.0016123285269264806,
+          0.0006020966219680799
+        ],
+        [
+          0.0,
+          -1.7249721814829213e-17
+        ]
+      ],
+      "min_gap": 0.29276239695279943,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.29651750496973894,
+        -2.5985761191658066
+      ],
+      "retarded_output_terms": [
+        [
+          0.3127123856018222,
+          -2.636791973415462
+        ],
+        [
+          -0.01619488063208613,
+          0.03821585424965586
+        ],
+        [
+          0.0,
+          -1.175817401168987e-17
+        ]
+      ],
+      "min_gap": 0.09283304829414372,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.1243472894487265,
+        -3.469776728338435
+      ],
+      "retarded_output_terms": [
+        [
+          -1.1173326750075545,
+          -3.5095998618902913
+        ],
+        [
+          -0.007014614441189322,
+          0.03982313355185967
+        ],
+        [
+          0.0,
+          -1.175817401168987e-17
+        ]
+      ],
+      "min_gap": 0.09283304829414372,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    }
+  ],
+  "soft_frequency_ward": [
+    {
+      "frequency_and_eta": 0.08,
+      "chi12": [
+        0.0033090220532687765,
+        -0.7207093000514827
+      ],
+      "abs_chi": 0.7207168964355194
+    },
+    {
+      "frequency_and_eta": 0.04,
+      "chi12": [
+        -0.08807968050928304,
+        -0.09466052896582411
+      ],
+      "abs_chi": 0.12930060271594637
+    },
+    {
+      "frequency_and_eta": 0.02,
+      "chi12": [
+        -0.010726120714451602,
+        -0.0028782110592503493
+      ],
+      "abs_chi": 0.011105573577379008
+    },
+    {
+      "frequency_and_eta": 0.01,
+      "chi12": [
+        -0.0007155262227451057,
+        -4.803246435195996e-05
+      ],
+      "abs_chi": 0.0007171365930334339
+    },
+    {
+      "frequency_and_eta": 0.005,
+      "chi12": [
+        -4.491180898004577e-05,
+        -7.131030760278447e-07
+      ],
+      "abs_chi": 4.4917469895989913e-05
+    }
+  ]
+}

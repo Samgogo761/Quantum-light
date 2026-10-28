@@ -1,0 +1,18 @@
+# Small inspected research artifacts are admitted only by manage.py's explicit list.
+!/results/
+!/results/**
+!**/*.png
+!**/*.svg
+!**/*.csv
+!**/*.tsv
+*.zip
+*.docx
+*.pdf
+*.log
+__pycache__/
+*.pyc
+.env*
+*credential*
+*.pem
+*.key
+scratch/

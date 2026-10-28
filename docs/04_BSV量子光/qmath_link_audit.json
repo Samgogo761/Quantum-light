@@ -1,0 +1,135 @@
+{
+  "pack": {
+    "pack_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\qmath_pack_16_11_20261023",
+    "original_names": [
+      "0\tQMATH_研究总档案_完整恢复至16_10.docx\t7735ce61bddaf608e16afbabf93ad805a2492901567129b6e13a2b288b5b2d95\t46889",
+      "1\tQMATH_研究总档案_完整恢复至16_10.md\tc4bd87c96065ea7bbc028994b0a9ec2db73ff9805f4cbf68a9c7206607212cf4\t53746",
+      "2\tQMATH_研究总档案_早期补全及16_10研究接续包.zip\tc937ceb81b5a66e68339e64e57c76a58bc1506897daeca01fed432b5e939b4e6\t157702",
+      "3\tQ-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md\tccd63a9c0edde898abff6227b4f517c49eaf507e093af4821608811cea4cadcf\t17220",
+      "4\tQ-MATH-16.11_早期底稿文献AI与能量加权经典界.md\t0b0a567de9ef5f084639654cc21bf510e54291a94d04d4fbdf7a1f2de8cb7104\t12359",
+      "5\tQ-MATH-16.11_早期底稿文献AI与能量加权经典界.docx\t76366b661ab28054ab16707883884d629924bc9e58614ab766de3ece47dee014\t43829",
+      "6\tqmath_16_11_weighted_bound.py\t2af853f18302bd95ebfbb3dc53f8a7c8988a0de33f67ef8d85dce2b7f84586c1\t1409",
+      "7\tqmath_16_11_weighted_bound_results.json\tf50fe7435411078a23f914ed4fc744b22e44c787899f00765bd839c76ff7a3f7\t1286"
+    ],
+    "inner_16_10_names": [
+      "inner_00.docx",
+      "inner_01.md",
+      "inner_02.md",
+      "inner_03.md",
+      "inner_04.py",
+      "inner_05.json",
+      "inner_06.md",
+      "inner_07.md",
+      "inner_08.zip",
+      "inner_manifest.json"
+    ],
+    "inner_16_9_extracted_names": [
+      "i9_00.docx",
+      "i9_01.md",
+      "i9_02.md",
+      "i9_03.md",
+      "i9_04.py",
+      "i9_05.json"
+    ],
+    "Q-MATH-16.2_source_in_pack": false,
+    "inner_08_is_16_9_archive_not_16_2": true,
+    "downloads_zip_exists": true,
+    "downloads_zip_sha256": "1575d35daec2dc3ecdca0f69fd22d5ee4e0c84fdaebd9a29ca0661ac4e780154",
+    "repo_zip_exists": false,
+    "repo_zip_sha256": null,
+    "do_not_claim_16_2_reproduced": true,
+    "theorem_A": "zero-mean nonnegative Glauber-Sudarshan P can realize M iff ||M||_* <= E",
+    "theorem_B": "at leading two-photon coherent conversion, the normalized output pattern can be copied by M_cl = t M with t=E/||M||_*. Forbidden to claim quantum advantage from a normalized H2 pattern.",
+    "theorem_B_does_not_directly_apply": [
+      "current protocol is displaced squeezed, not zero-mean BSV",
+      "observable is finite-gate QED current Fourier, not elastic two-photon S-matrix",
+      "g=0.005 nonperturbative joint evolution, not lowest-order scattering"
+    ],
+    "positive_P_means_Glauber_Sudarshan_not_SDE": true,
+    "input_is_displaced_squeezed_not_pure_BSV": true
+  },
+  "expected_model_hashes": {
+    "q8_m0_model.py": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+    "q8_m0_qinput_dynamics_20261026.py": "bf6d4e407bf55f1e6ebc3767f1b2bd6075ac7ef564f195abc1217c7d51671f94"
+  },
+  "observed_model_hashes": {
+    "q8_m0_model.py": {
+      "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+      "matches_expected": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_model.py"
+    },
+    "q8_m0_qinput_dynamics_20261026.py": {
+      "sha256": "bf6d4e407bf55f1e6ebc3767f1b2bd6075ac7ef564f195abc1217c7d51671f94",
+      "matches_expected": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_qinput_dynamics_20261026.py"
+    },
+    "q8_m0_qinput_minimal_20261020.py": {
+      "sha256": "b60c3b7e53e413e614d4a8ec784956f4d16001a906465314dea963a17ae9bc97",
+      "matches_expected": null,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_qinput_minimal_20261020.py"
+    }
+  },
+  "frozen_json_hashes": {
+    "thermal": {
+      "sha256": "909ca504142c56bc44b634a26f67852802ebed7ee9801b7db094a055cf0e7d88",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_thermal_20261120\\gh5_thermal.json"
+    },
+    "qed_theta_pi": {
+      "sha256": "b2518827ef9ff0b1deddd6f2ceabdfa302927a241a42aee10590554d837c0dfa",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_theta_pi_20261120\\qed_theta_pi.json"
+    },
+    "mech": {
+      "sha256": "dfd4827f7d0d7b48c17bee3635c5267364f434b264382d1a18d693b1e81ee56c",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_theta_pi_mech_20261120\\mech.json"
+    },
+    "q1a": {
+      "sha256": "aaf5daf013ee84a70afb1cd29824d9da3d7af0694cc2f6cfcd9611dc895c5c87",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_q1a_20261120\\q1a.json"
+    },
+    "gh5": {
+      "sha256": "94bf3c0e645b00d12bf490e728a2b5049e4088dfc2cb8d1cd3ee28f8129898ea",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_20261120\\gh5.json"
+    },
+    "gh5_theta_pi": {
+      "sha256": "95758b9dde46721b554a7f6e80d84619eeaaaede33b579cda371887d319a25c2",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_theta_pi_20261120\\gh5_theta_pi.json"
+    }
+  },
+  "lambda_eff_summary": {
+    "GH5": {
+      "re": -1.4962448414822378e-07,
+      "im": 4.600970363541524e-08,
+      "abs": 1.56538746274655e-07,
+      "arg": 2.8432683400847503
+    },
+    "QED": {
+      "re": -1.4902046599841956e-07,
+      "im": 5.144011825572519e-08,
+      "abs": 1.5764892975389688e-07,
+      "arg": 2.809210859519342
+    },
+    "eps2": 0.0017097636193748964,
+    "eps2_vs_mix": 0.0043842722799825855,
+    "qed_vs_gh5_rel_vec": 0.034658677703234435,
+    "rear_window_missing": true
+  },
+  "contact_consistency": {
+    "neel_j_independence": {
+      "max_abs_j_plus_minus_j_minus": 0.0,
+      "conclusion": "current operators are Neel-independent at this k; magnetic-odd current comes from rho, not from j_a(N)"
+    },
+    "V_identity_plus": 0.0,
+    "W_identity_plus_1e-4": 4.091214726997805e-07,
+    "j2_contact_nonzero": true
+  },
+  "do_not_run_R2": true,
+  "do_not_claim_certified_HHG": true,
+  "do_not_claim_output_entanglement": true,
+  "do_not_claim_quantum_advantage": true
+}

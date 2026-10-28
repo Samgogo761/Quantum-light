@@ -1,0 +1,44 @@
+[
+  {
+    "index": 0,
+    "orig": "QMATH_τáöτ⌐╢µÇ╗µíúµíê_µê¬Φç│16_9.docx",
+    "alias": "i9_00.docx",
+    "sha256": "baf469a7da2186e8e53086c4832dc3f293d9312e71e9cfbbdd6c7b19f22927a6",
+    "bytes": 31809
+  },
+  {
+    "index": 1,
+    "orig": "QMATH_τáöτ⌐╢µÇ╗µíúµíê_µê¬Φç│16_9.md",
+    "alias": "i9_01.md",
+    "sha256": "2d513bf46a68ba13b19cddcb97ce73f665689a12403bf07555e95bd7d4334c52",
+    "bytes": 30045
+  },
+  {
+    "index": 2,
+    "orig": "µû░σ»╣Φ»¥µÄÑτ╗¡Φ»┤µÿÄ.md",
+    "alias": "i9_02.md",
+    "sha256": "e107fe65abeaacd4af9299087e5b90ffff9c54cf30ac3a0520aa54f7732b0ff5",
+    "bytes": 3431
+  },
+  {
+    "index": 3,
+    "orig": "README_τáöτ⌐╢σîàΦ»┤µÿÄ.md",
+    "alias": "i9_03.md",
+    "sha256": "2bc9af042a338c118903836907412a874074e82325cedc7165d70f90120676a7",
+    "bytes": 1489
+  },
+  {
+    "index": 4,
+    "orig": "qmath_16_9_verify.py",
+    "alias": "i9_04.py",
+    "sha256": "05ce98058e1e85daad09ebe776dad4f3fe5cf2c713a7d6c25e65414f08192fdb",
+    "bytes": 3832
+  },
+  {
+    "index": 5,
+    "orig": "qmath_16_9_verification.json",
+    "alias": "i9_05.json",
+    "sha256": "6117dd92b4100eb8c2f37555a057d78d8081a44471e44823cd92123d0b2badc8",
+    "bytes": 1525
+  }
+]

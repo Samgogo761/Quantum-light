@@ -1,0 +1,125 @@
+{
+  "scope": "original M0 reduced Peierls third-order T, single k, not BZ converged; false positive without Neel order",
+  "tests": [
+    {
+      "Delta": 0.0,
+      "lambda": 0,
+      "kfrac": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "minimum_electron_excitation": 0.19999999999999973,
+      "inelastic_positive_kernel_norm2": 12.400450744283503
+    },
+    {
+      "Delta": 0.0,
+      "lambda": 0,
+      "kfrac": [
+        0.34,
+        0.33
+      ],
+      "minimum_electron_excitation": 0.18781496464482617,
+      "inelastic_positive_kernel_norm2": 302497.3686450316
+    },
+    {
+      "Delta": 0.0,
+      "lambda": 0,
+      "kfrac": [
+        0.36,
+        0.31
+      ],
+      "minimum_electron_excitation": 0.1334651435611428,
+      "inelastic_positive_kernel_norm2": 274277410.90924317
+    },
+    {
+      "Delta": 0.0,
+      "lambda": 0,
+      "kfrac": [
+        0.42,
+        0.18
+      ],
+      "minimum_electron_excitation": 1.1397440469443616,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.4,
+      "lambda": 0,
+      "kfrac": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "minimum_electron_excitation": 0.8246211251235314,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.4,
+      "lambda": 0,
+      "kfrac": [
+        0.34,
+        0.33
+      ],
+      "minimum_electron_excitation": 0.773874669278567,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.4,
+      "lambda": 0,
+      "kfrac": [
+        0.36,
+        0.31
+      ],
+      "minimum_electron_excitation": 0.5338881531646538,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.4,
+      "lambda": 0,
+      "kfrac": [
+        0.42,
+        0.18
+      ],
+      "minimum_electron_excitation": 0.5398462501304393,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.8,
+      "lambda": 0,
+      "kfrac": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "minimum_electron_excitation": 1.6124515496597096,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.8,
+      "lambda": 0,
+      "kfrac": [
+        0.34,
+        0.33
+      ],
+      "minimum_electron_excitation": 1.5514022659781375,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.8,
+      "lambda": 0,
+      "kfrac": [
+        0.36,
+        0.31
+      ],
+      "minimum_electron_excitation": 1.3069685197702328,
+      "inelastic_positive_kernel_norm2": 0.0
+    },
+    {
+      "Delta": 0.8,
+      "lambda": 0,
+      "kfrac": [
+        0.42,
+        0.18
+      ],
+      "minimum_electron_excitation": 0.2383000285101513,
+      "inelastic_positive_kernel_norm2": 59.28999619235306
+    }
+  ]
+}

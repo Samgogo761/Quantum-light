@@ -1,0 +1,554 @@
+{
+  "checks": {
+    "coincident_freq_vs_2times_q16_26_rel": 2.6647905134712877e-15,
+    "neel_odd_relative": 9.070978339812403e-13,
+    "pump_permutation_relative": 8.6814840489934e-15,
+    "dt_refine_relative": 2.310243831436422e-05,
+    "zero_N_or_SOC_magnitudes": [
+      1.003728015741477e-15,
+      6.769256109837273e-13
+    ],
+    "independent_full_peierls_fd_relative": 0.00012779410942971405
+  },
+  "data": [
+    {
+      "L": 5,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.5646645446148963,
+        -0.01711049215444473
+      ],
+      "difference_frequency": [
+        -0.04867974998018777,
+        0.12355947697392032
+      ],
+      "contact_contributions": [
+        [
+          0.6071677776392331,
+          -0.01502953238474564
+        ],
+        [
+          -0.022221463861213958,
+          -0.0013458540541265874
+        ],
+        [
+          -0.020281769163124203,
+          -0.0007351057155724413
+        ],
+        [
+          1.494027754988393e-15,
+          2.2598943071398087e-17
+        ]
+      ],
+      "min_direct_gap": 0.4042305103790629,
+      "max_trace_error_11": 9.947598300641403e-14,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.3054026120902113,
+        -0.5421041478838241
+      ],
+      "difference_frequency": [
+        0.03939350447827012,
+        0.04575678865678421
+      ],
+      "contact_contributions": [
+        [
+          0.30534856284116213,
+          -0.5696771353770261
+        ],
+        [
+          -0.0014678650746301034,
+          0.012153890141715125
+        ],
+        [
+          0.0015219143236800243,
+          0.01541909735148695
+        ],
+        [
+          -7.083404132653999e-16,
+          -1.1743906257002914e-17
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947712,
+      "max_trace_error_11": 3.410605131648481e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window.",
+      "direct_mixed": [
+        0.3053488825808853,
+        -0.5420455323758933
+      ],
+      "relative_mixed_fd_error": 0.00012779410942971405
+    },
+    {
+      "L": 13,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.2966641892683355,
+        0.0025035109345220774
+      ],
+      "difference_frequency": [
+        0.10320377998630974,
+        0.12780994337502055
+      ],
+      "contact_contributions": [
+        [
+          0.25428682174577943,
+          -0.0680363351914442
+        ],
+        [
+          0.014162465733988648,
+          0.04279944646481324
+        ],
+        [
+          0.02821490178856828,
+          0.02774039966115303
+        ],
+        [
+          -9.16754947158147e-16,
+          6.142416521959546e-18
+        ]
+      ],
+      "min_direct_gap": 0.12332978453199134,
+      "max_trace_error_11": 6.821210263296962e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 17,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        -0.17244895934059148,
+        -0.3230363814184077
+      ],
+      "difference_frequency": [
+        0.03780128004668953,
+        0.2863439519970031
+      ],
+      "contact_contributions": [
+        [
+          -0.1696162849531679,
+          -0.3461432951583512
+        ],
+        [
+          -0.002012905933243444,
+          0.010243588730039528
+        ],
+        [
+          -0.0008197684541803326,
+          0.012863325009903892
+        ],
+        [
+          2.0751079274853728e-16,
+          4.6434861970960815e-17
+        ]
+      ],
+      "min_direct_gap": 0.12396301496738102,
+      "max_trace_error_11": 9.094947017729282e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 25,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.03275415205283859,
+        -0.5128331906833214
+      ],
+      "difference_frequency": [
+        0.057016378338847463,
+        0.07017143707457958
+      ],
+      "contact_contributions": [
+        [
+          0.01981478530535125,
+          -0.49546924302005957
+        ],
+        [
+          0.00931216431030573,
+          -0.006720857999998187
+        ],
+        [
+          0.003627202437181536,
+          -0.01064308966326376
+        ],
+        [
+          7.56597837938792e-17,
+          -9.702524828966702e-19
+        ]
+      ],
+      "min_direct_gap": 0.10288839631287697,
+      "max_trace_error_11": 2.2737367544323206e-12,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 33,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        -0.3138255910643822,
+        -0.46411488405138884
+      ],
+      "difference_frequency": [
+        -0.00230821520698092,
+        0.26516526177278277
+      ],
+      "contact_contributions": [
+        [
+          -0.300848665340371,
+          -0.471560244492
+        ],
+        [
+          -0.007284508823359506,
+          0.0011282077764005033
+        ],
+        [
+          -0.005692416900651751,
+          0.0063171526642106695
+        ],
+        [
+          3.1884831690468584e-17,
+          -1.4628547906669185e-18
+        ]
+      ],
+      "min_direct_gap": 0.09435891062088322,
+      "max_trace_error_11": 1.5916157281026244e-12,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": -0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        -0.305402612090226,
+        0.5421041478843883
+      ],
+      "difference_frequency": [
+        -0.03939350447827413,
+        -0.04575678865857663
+      ],
+      "contact_contributions": [
+        [
+          -0.30534856284117057,
+          0.5696771353775719
+        ],
+        [
+          0.0014678650746267317,
+          -0.012153890141707601
+        ],
+        [
+          -0.0015219143236816324,
+          -0.015419097351475836
+        ],
+        [
+          -5.224388418794174e-16,
+          -3.375302456842047e-17
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947718,
+      "max_trace_error_11": 2.2737367544323206e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        9.314961150769391e-16,
+        3.738782116958574e-16
+      ],
+      "difference_frequency": [
+        -2.0744207124050473e-15,
+        1.5903046366778848e-15
+      ],
+      "contact_contributions": [
+        [
+          1.5389931419184727e-15,
+          1.2078879424591127e-15
+        ],
+        [
+          -1.2793151371011227e-16,
+          -3.2618953569953115e-16
+        ],
+        [
+          -2.253312400858793e-16,
+          -5.107437682103262e-16
+        ],
+        [
+          -2.5423427304553864e-16,
+          2.9235731465949e-18
+        ]
+      ],
+      "min_direct_gap": 1.009287731501551,
+      "max_trace_error_11": 2.1126329852183545e-14,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        -6.169566577304436e-13,
+        2.785547796893328e-13
+      ],
+      "difference_frequency": [
+        2.2179874911980734e-13,
+        4.552904346234903e-13
+      ],
+      "contact_contributions": [
+        [
+          -6.275244452640063e-13,
+          2.639435811575521e-13
+        ],
+        [
+          4.1779507484745196e-15,
+          8.554565598834932e-15
+        ],
+        [
+          6.261060123630427e-15,
+          6.0437747397484046e-15
+        ],
+        [
+          1.2877666145776627e-16,
+          1.2858193197432186e-17
+        ]
+      ],
+      "min_direct_gap": 0.1003868548922604,
+      "max_trace_error_11": 1.7053025658242404e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.2,
+      "w2": 0.16,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.30540261209021335,
+        -0.5421041478838291
+      ],
+      "difference_frequency": [
+        0.03939350447826645,
+        0.045756788656787874
+      ],
+      "contact_contributions": [
+        [
+          0.3053485628411642,
+          -0.5696771353770311
+        ],
+        [
+          0.0015219143236800243,
+          0.01541909735148695
+        ],
+        [
+          -0.0014678650746301034,
+          0.012153890141715125
+        ],
+        [
+          -7.083404132653999e-16,
+          -1.1743906257002914e-17
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947712,
+      "max_trace_error_11": 3.979039320256561e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.18,
+      "w2": 0.18,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.32460225218158717,
+        -0.5598124224956882
+      ],
+      "difference_frequency": [
+        0.09883944726800388,
+        0.0
+      ],
+      "contact_contributions": [
+        [
+          0.32461128908394454,
+          -0.5864696814957866
+        ],
+        [
+          -4.518451178346899e-06,
+          0.013328629500049104
+        ],
+        [
+          -4.518451178346899e-06,
+          0.013328629500049104
+        ],
+        [
+          -7.419783328780522e-16,
+          1.4909936904999755e-17
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947712,
+      "max_trace_error_11": 4.547473508864641e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 420,
+      "dt": 0.12466637514245212,
+      "phase2": 1.5707963267948966,
+      "sum_frequency": [
+        -0.5839852217321618,
+        -0.26548300731472174
+      ],
+      "difference_frequency": [
+        -0.0057558221978251745,
+        -0.14214389220557788
+      ],
+      "contact_contributions": [
+        [
+          -0.6117387334375866,
+          -0.26544268555262107
+        ],
+        [
+          0.011828870418049196,
+          0.0015740677133537176
+        ],
+        [
+          0.01592464128737559,
+          -0.0016143894754551266
+        ],
+        [
+          1.6214160514707236e-17,
+          7.155488651642677e-16
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947712,
+      "max_trace_error_11": 2.8421709430404007e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "lambda": 0.1,
+      "N": 1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "T": 52.35987755982989,
+      "steps": 840,
+      "dt": 0.06233318757122606,
+      "phase2": 0.0,
+      "sum_frequency": [
+        0.30541056416523127,
+        -0.5420921733422926
+      ],
+      "difference_frequency": [
+        0.039388305369716485,
+        0.045763029273754724
+      ],
+      "contact_contributions": [
+        [
+          0.30535651260590585,
+          -0.5696651615954612
+        ],
+        [
+          -0.0014678634497643805,
+          0.01215389090910929
+        ],
+        [
+          0.001521915009090088,
+          0.015419097344059132
+        ],
+        [
+          -3.352398029882392e-16,
+          1.1951103662849546e-17
+        ]
+      ],
+      "min_direct_gap": 0.12568323268947712,
+      "max_trace_error_11": 3.979039320256561e-13,
+      "source": "Two-tone causal mixed derivative of prescribed classical Peierls source, not a quantum-light response; finite T window."
+    }
+  ],
+  "scope": "Finite-time exact 8band M0 causal mixed derivative; not continuum stationary susceptibility; not quantized BSV."
+}

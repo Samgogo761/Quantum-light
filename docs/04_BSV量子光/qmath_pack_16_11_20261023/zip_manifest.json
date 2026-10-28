@@ -1,0 +1,66 @@
+[
+  {
+    "index": 0,
+    "orig": "QMATH_研究总档案_完整恢复至16_10.docx",
+    "alias": "item_00.docx",
+    "sha256": "7735ce61bddaf608e16afbabf93ad805a2492901567129b6e13a2b288b5b2d95",
+    "bytes": 46889,
+    "flag_bits": 2048
+  },
+  {
+    "index": 1,
+    "orig": "QMATH_研究总档案_完整恢复至16_10.md",
+    "alias": "item_01.md",
+    "sha256": "c4bd87c96065ea7bbc028994b0a9ec2db73ff9805f4cbf68a9c7206607212cf4",
+    "bytes": 53746,
+    "flag_bits": 2048
+  },
+  {
+    "index": 2,
+    "orig": "QMATH_研究总档案_早期补全及16_10研究接续包.zip",
+    "alias": "item_02.zip",
+    "sha256": "c937ceb81b5a66e68339e64e57c76a58bc1506897daeca01fed432b5e939b4e6",
+    "bytes": 157702,
+    "flag_bits": 2048
+  },
+  {
+    "index": 3,
+    "orig": "Q-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md",
+    "alias": "item_03.md",
+    "sha256": "ccd63a9c0edde898abff6227b4f517c49eaf507e093af4821608811cea4cadcf",
+    "bytes": 17220,
+    "flag_bits": 2048
+  },
+  {
+    "index": 4,
+    "orig": "Q-MATH-16.11_早期底稿文献AI与能量加权经典界.md",
+    "alias": "item_04.md",
+    "sha256": "0b0a567de9ef5f084639654cc21bf510e54291a94d04d4fbdf7a1f2de8cb7104",
+    "bytes": 12359,
+    "flag_bits": 2048
+  },
+  {
+    "index": 5,
+    "orig": "Q-MATH-16.11_早期底稿文献AI与能量加权经典界.docx",
+    "alias": "item_05.docx",
+    "sha256": "76366b661ab28054ab16707883884d629924bc9e58614ab766de3ece47dee014",
+    "bytes": 43829,
+    "flag_bits": 2048
+  },
+  {
+    "index": 6,
+    "orig": "qmath_16_11_weighted_bound.py",
+    "alias": "item_06.py",
+    "sha256": "2af853f18302bd95ebfbb3dc53f8a7c8988a0de33f67ef8d85dce2b7f84586c1",
+    "bytes": 1409,
+    "flag_bits": 0
+  },
+  {
+    "index": 7,
+    "orig": "qmath_16_11_weighted_bound_results.json",
+    "alias": "item_07.json",
+    "sha256": "f50fe7435411078a23f914ed4fc744b22e44c787899f00765bd839c76ff7a3f7",
+    "bytes": 1286,
+    "flag_bits": 0
+  }
+]

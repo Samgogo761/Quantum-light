@@ -1,0 +1,360 @@
+{
+  "task": "R0_R1_readonly_independent_recompute",
+  "no_new_propagation": true,
+  "protocol": "Qin_a2_1_4_1",
+  "g": 0.005,
+  "omega0": 0.05,
+  "nmax": 8,
+  "n_full_steps": 11154,
+  "dt_approx": 0.067597,
+  "moments": {
+    "alpha": 0.5,
+    "r": 0.3,
+    "mean_X": 1.0,
+    "mean_P": 0.0,
+    "ns_sinh2r": 0.09273260912113383,
+    "nbar": 0.34273260912113385,
+    "M0": -0.31832679107412065,
+    "Mpi": 0.31832679107412065,
+    "dM": 0.6366535821482413,
+    "dM_is_sinh_2r": true,
+    "sinh_2r": 0.6366535821482413,
+    "VarX_theta0": 0.5488116360940265,
+    "VarX_theta_pi": 1.8221188003905089,
+    "VarX_thermal": 1.1854652182422676,
+    "VarP_theta0": 1.8221188003905089,
+    "VarP_theta_pi": 0.5488116360940265,
+    "VarP_thermal": 1.1854652182422676,
+    "X4_thermal": 4.215983350986561,
+    "X4_mix": 5.431966701973124,
+    "X4_rel_to_th": 0.28842223741277745,
+    "classical_P_abs_M_bound": 0.09273260912113385,
+    "squeezed_abs_M": 0.31832679107412065,
+    "squeezed_M_outside_classical_bound": true,
+    "classical_P_VarX_interval": [
+      1.0,
+      1.3709304364845354
+    ],
+    "theta0_VarX_outside_classical": true,
+    "thetapi_VarX_outside_classical": true,
+    "note_M_theta": "M_theta = -0.5 * exp(i theta) * sinh(2r) for D(alpha)S(r e^{i theta})|0>",
+    "X_normalization": "X=a+a^dagger, vacuum Var(X)=1"
+  },
+  "finite_difference_contact": {
+    "K_FRAC": [
+      0.173,
+      0.271
+    ],
+    "k_cart": [
+      0.15538695621282628,
+      0.3705753127014958
+    ],
+    "e_a2": [
+      -0.4999999995871423,
+      0.8660254040228021
+    ],
+    "R0": {
+      "t_h": 1.0,
+      "lam_so": 0.1,
+      "delta": 0.8,
+      "u": 0.1,
+      "v": 0.1,
+      "label": "R0"
+    },
+    "peierls_rule": "P exp(i eta X) P, not exp(i eta P X P)",
+    "A_operator": "A_hat = g s(t) X, X=a+a^dagger, Schrodinger picture",
+    "j_definition": "j_a = - dH/dk_a  (e=hbar=1)",
+    "dh8_drops_neel": true,
+    "eps_list": [
+      0.0001,
+      3e-05,
+      1e-05
+    ],
+    "per_neel": {
+      "1": {
+        "H0_herm_err": 0.0,
+        "j0_herm_err": [
+          0.0,
+          0.0
+        ],
+        "V_from_dh_minus_minus_j0_dot_e_max": 0.0,
+        "eps": {
+          "0.0001": {
+            "V_fd_minus_V_dh_max": 1.075206299499758e-07,
+            "W_fd_minus_minus_j1_dot_e_max": 4.091214726997805e-07,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477060510489,
+            "||W_fd||_F": 55.346897324055035,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70827840753634,
+            "||j2||_F": 213.2999945461341,
+            "contact_j2_nonzero": true
+          },
+          "3e-05": {
+            "V_fd_minus_V_dh_max": 9.683682094698426e-09,
+            "W_fd_minus_minus_j1_dot_e_max": 9.042030344669703e-07,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477336447893,
+            "||W_fd||_F": 55.34689632112409,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70828034867439,
+            "||j2||_F": 213.2999975779024,
+            "contact_j2_nonzero": true
+          },
+          "1e-05": {
+            "V_fd_minus_V_dh_max": 1.0964472911557887e-09,
+            "W_fd_minus_minus_j1_dot_e_max": 6.922657565542726e-06,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477360666735,
+            "||W_fd||_F": 55.34688434772544,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70828051925493,
+            "||j2||_F": 213.30001236766344,
+            "contact_j2_nonzero": true
+          }
+        }
+      },
+      "-1": {
+        "H0_herm_err": 0.0,
+        "j0_herm_err": [
+          0.0,
+          0.0
+        ],
+        "V_from_dh_minus_minus_j0_dot_e_max": 0.0,
+        "eps": {
+          "0.0001": {
+            "V_fd_minus_V_dh_max": 1.075206299499758e-07,
+            "W_fd_minus_minus_j1_dot_e_max": 4.091214726997805e-07,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477060510489,
+            "||W_fd||_F": 55.346897324055035,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70827840753634,
+            "||j2||_F": 213.2999945461341,
+            "contact_j2_nonzero": true
+          },
+          "3e-05": {
+            "V_fd_minus_V_dh_max": 9.683682094698426e-09,
+            "W_fd_minus_minus_j1_dot_e_max": 9.042030344669703e-07,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477336447893,
+            "||W_fd||_F": 55.34689632112409,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70828034867439,
+            "||j2||_F": 213.2999975779024,
+            "contact_j2_nonzero": true
+          },
+          "1e-05": {
+            "V_fd_minus_V_dh_max": 1.0964472911557887e-09,
+            "W_fd_minus_minus_j1_dot_e_max": 6.922657565542726e-06,
+            "j1_herm_err": [
+              0.0,
+              0.0
+            ],
+            "j2_herm_err": [
+              0.0,
+              0.0
+            ],
+            "||V_fd||_F": 14.917477360666735,
+            "||W_fd||_F": 55.346884347725435,
+            "||j0||_F": 22.251707523474845,
+            "||j1||_F": 64.70828051925493,
+            "||j2||_F": 213.30001236766344,
+            "contact_j2_nonzero": true
+          }
+        }
+      }
+    },
+    "neel_j_independence": {
+      "max_abs_j_plus_minus_j_minus": 0.0,
+      "conclusion": "current operators are Neel-independent at this k; magnetic-odd current comes from rho, not from j_a(N)"
+    }
+  },
+  "lambda_eff": {
+    "window": "[2 T0, 4 T0] rectangular Fourier of J_{2,x}^odd",
+    "fourier_convention": "J_q = 1/(t1-t0) int exp(+i q omega0 t) J(t) dt",
+    "not_certified_HHG": true,
+    "GH5": {
+      "J_theta0": {
+        "re": 9.709178242104636e-09,
+        "im": -6.127141222528224e-09,
+        "abs": 1.148085370073858e-08,
+        "arg": -0.5629501543476052
+      },
+      "J_thetapi": {
+        "re": -8.554978556794479e-08,
+        "im": 2.3165101410537846e-08,
+        "abs": 8.863062526058267e-08,
+        "arg": 2.877154717520405
+      },
+      "J_mix": {
+        "re": -3.792030366292008e-08,
+        "im": 8.518980094004809e-09,
+        "abs": 3.8865440325951796e-08,
+        "arg": 2.9206067551913093
+      },
+      "J_thermal": {
+        "re": -3.808069737663727e-08,
+        "im": 8.576502982120298e-09,
+        "abs": 3.903454772497495e-08,
+        "arg": 2.920069613725965
+      },
+      "R2": {
+        "re": -1.6039371371719192e-10,
+        "im": 5.7522888115486426e-11,
+        "abs": 1.7039667267038782e-10,
+        "arg": 2.797245501255369
+      },
+      "dtheta": {
+        "re": -9.525896381004942e-08,
+        "im": 2.929224263306607e-08,
+        "abs": 9.966095356075377e-08,
+        "arg": 2.8432683400847503
+      },
+      "eps2_R2_over_dtheta": 0.0017097636193748964,
+      "eps2_R2_over_mix": 0.0043842722799825855,
+      "eps2_is_not_quadrature_error_bound": true,
+      "eps2_is_not_strict_higher_moment_bound": true,
+      "Lambda_eff_secant": {
+        "re": -1.4962448414822378e-07,
+        "im": 4.600970363541524e-08,
+        "abs": 1.56538746274655e-07,
+        "arg": 2.8432683400847503
+      },
+      "Lambda_eff_is_not_microscopic_chi2": true
+    },
+    "QED": {
+      "J_theta0": {
+        "re": 1.1642067504247123e-08,
+        "im": -6.7164544092279215e-09,
+        "abs": 1.3440554140536172e-08,
+        "arg": -0.523270395502854
+      },
+      "J_thetapi": {
+        "re": -8.323234598704688e-08,
+        "im": 2.603308114440866e-08,
+        "abs": 8.720862762581947e-08,
+        "arg": 2.838456350331002
+      },
+      "dtheta": {
+        "re": -9.487441349129401e-08,
+        "im": 3.274953555363658e-08,
+        "abs": 1.0036775584965491e-07,
+        "arg": 2.809210859519342
+      },
+      "amp_ratio_2d": 6.4884696504292,
+      "dphi_rad": 2.9214585613457302,
+      "Lambda_eff_secant": {
+        "re": -1.4902046599841956e-07,
+        "im": 5.144011825572519e-08,
+        "abs": 1.5764892975389688e-07,
+        "arg": 2.809210859519342
+      },
+      "coverage_t_over_T0": 4.756858526089295,
+      "covers_4T0": true,
+      "covers_5T0": false,
+      "rear_window_missing": true,
+      "abs_back_is_data_gap_not_physical_zero": true,
+      "qed_vs_gh5_rel_vec": 0.034658677703234435,
+      "job_status": {
+        "ds_p": "timeout_partial",
+        "ds_m": "timeout_partial"
+      }
+    },
+    "Lambda_eff_GH5_minus_QED": {
+      "re": -6.040181498042179e-10,
+      "im": -5.43041462030995e-09,
+      "abs": 5.463903446600147e-09,
+      "arg": -1.6815697361126187
+    },
+    "two_real_M_cannot_split_M_and_Mstar": true,
+    "thermal_json_eps2": 0.0017097636193748964
+  },
+  "source_hashes": {
+    "q8_m0_model.py": {
+      "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+      "matches_expected": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_model.py"
+    },
+    "q8_m0_qinput_dynamics_20261026.py": {
+      "sha256": "bf6d4e407bf55f1e6ebc3767f1b2bd6075ac7ef564f195abc1217c7d51671f94",
+      "matches_expected": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_qinput_dynamics_20261026.py"
+    },
+    "q8_m0_qinput_minimal_20261020.py": {
+      "sha256": "b60c3b7e53e413e614d4a8ec784956f4d16001a906465314dea963a17ae9bc97",
+      "matches_expected": null,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\q8_m0_qinput_minimal_20261020.py"
+    },
+    "thermal": {
+      "sha256": "909ca504142c56bc44b634a26f67852802ebed7ee9801b7db094a055cf0e7d88",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_thermal_20261120\\gh5_thermal.json"
+    },
+    "qed_theta_pi": {
+      "sha256": "b2518827ef9ff0b1deddd6f2ceabdfa302927a241a42aee10590554d837c0dfa",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_theta_pi_20261120\\qed_theta_pi.json"
+    },
+    "mech": {
+      "sha256": "dfd4827f7d0d7b48c17bee3635c5267364f434b264382d1a18d693b1e81ee56c",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_theta_pi_mech_20261120\\mech.json"
+    },
+    "q1a": {
+      "sha256": "aaf5daf013ee84a70afb1cd29824d9da3d7af0694cc2f6cfcd9611dc895c5c87",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_q1a_20261120\\q1a.json"
+    },
+    "gh5": {
+      "sha256": "94bf3c0e645b00d12bf490e728a2b5049e4088dfc2cb8d1cd3ee28f8129898ea",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_20261120\\gh5.json"
+    },
+    "gh5_theta_pi": {
+      "sha256": "95758b9dde46721b554a7f6e80d84619eeaaaede33b579cda371887d319a25c2",
+      "exists": true,
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_theta_pi_20261120\\gh5_theta_pi.json"
+    }
+  },
+  "answers": {
+    "affine_M_response": "compatible_not_proven",
+    "eightband_derives_magnetic_odd_H2": "parity_yes_quantitative_K2_not_derived",
+    "strict_classical_negative_control": "input_nonclassical_yes_output_not_proven"
+  }
+}

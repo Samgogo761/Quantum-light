@@ -1,0 +1,689 @@
+{
+  "scope": "Classical prescribed finite pump vector potential, exact eight-band M0, full Peierls current. NOT a monochromatic causal chi3 tensor, NOT quantized BSV, NOT physical output photon count.",
+  "peierls_derivative_check": {
+    "h4_abs_max_fd_error": 0.0011041825951565443,
+    "h4_abs_max": 441.96507860057557,
+    "h4_relative_fd_error": 2.498348056486258e-06,
+    "exact_peierls_first_three_vertices": {
+      "h0": 2.220446049250313e-16,
+      "first_parallel": 6.280369834735101e-16,
+      "first_perp": 4.440892098500626e-16,
+      "second_fd": 7.478283041706391e-07,
+      "third_fd": 8.729423570726094e-07
+    }
+  },
+  "checks": {
+    "opposite_neel_chi2_even_sum": 4.631049190012111e-13,
+    "opposite_neel_chi3_difference": 3.457650183405701e-13,
+    "zero_delta_chi2_abs": 2.5847675345861206e-15,
+    "zero_soc_chi2_abs": 3.2924826869292484e-13,
+    "dt_refinement_chi2_relative": 2.5957922504548813e-05,
+    "dt_refinement_chi3_relative": 1.3414299258470271e-05,
+    "fourth_contact_term_nonzero": true,
+    "third_order_direct_vs_tangent_relative": 0.00023885183499184996,
+    "second_order_direct_vs_tangent_relative": 5.6512300443758045e-05
+  },
+  "configurations": [
+    {
+      "L": 3,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        1791.2809578612616,
+        -2056.979291061442
+      ],
+      "sum_cubic_components": [
+        1791.2809578612616,
+        -2056.979291061442
+      ],
+      "direct_fd_cubic": [
+        1790.7403969937986,
+        -2056.5339467520466
+      ],
+      "fourth_vertex_term": [
+        -4.356564173523167,
+        -5.970961322000842e-15
+      ],
+      "without_fourth_vertex": [
+        1795.6375220347845,
+        -2056.979291061442
+      ],
+      "component_fourier": [
+        [
+          1801.6064075339436,
+          -2053.1250885906816
+        ],
+        [
+          -21.400498706785196,
+          -4.0015589711652515
+        ],
+        [
+          15.43161320762623,
+          0.1473565004049515
+        ],
+        [
+          -4.356564173523167,
+          -5.970961322000842e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.0002827500896506769,
+      "fourier_fd_error_relative": 0.000256775761819135,
+      "fourth_vertex_fraction": 0.0015972098828827815,
+      "transverse_second_harmonic": [
+        0.46878613972875843,
+        -0.1317541586706476
+      ],
+      "transverse_second_fd": [
+        0.46873691028022024,
+        -0.13171617357330245
+      ],
+      "transverse_second_fd_rel": 0.000127693858718203,
+      "transverse_mixed_third_vertex_fraction": 5.041989553771827e-17,
+      "third_order_trace_max": 1.8189894035458565e-12,
+      "min_direct_gap": 0.4361121431021617,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 0.538
+    },
+    {
+      "L": 5,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        792.5516074352004,
+        -886.8909520083151
+      ],
+      "sum_cubic_components": [
+        792.5516074352004,
+        -886.8909520083151
+      ],
+      "direct_fd_cubic": [
+        792.3531001287242,
+        -886.6849603030173
+      ],
+      "fourth_vertex_term": [
+        -3.989425466022692,
+        -5.156739323546181e-15
+      ],
+      "without_fourth_vertex": [
+        796.5410329012232,
+        -886.8909520083153
+      ],
+      "component_fourier": [
+        [
+          796.4332606102249,
+          -893.8184518161819
+        ],
+        [
+          -11.7869755819171,
+          6.853770901281769
+        ],
+        [
+          11.894747872915385,
+          0.07372890658485258
+        ],
+        [
+          -3.989425466022692,
+          -5.156739323546181e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.0002518270848350453,
+      "fourier_fd_error_relative": 0.0002405152012410542,
+      "fourth_vertex_fraction": 0.003354100640977818,
+      "transverse_second_harmonic": [
+        0.27820212324931454,
+        -0.008735831729834633
+      ],
+      "transverse_second_fd": [
+        0.2781819856415046,
+        -0.00871703258272164
+      ],
+      "transverse_second_fd_rel": 9.897528268805192e-05,
+      "transverse_mixed_third_vertex_fraction": 2.373071076727898e-15,
+      "third_order_trace_max": 1.8189894035458565e-12,
+      "min_direct_gap": 0.4042305103790629,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 0.87
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        589.1593714707161,
+        -373.32434555201297
+      ],
+      "sum_cubic_components": [
+        589.1593714707161,
+        -373.32434555201297
+      ],
+      "direct_fd_cubic": [
+        589.0277179432351,
+        -373.22226166511695
+      ],
+      "fourth_vertex_term": [
+        -4.069190050912827,
+        -5.156739323546181e-15
+      ],
+      "without_fourth_vertex": [
+        593.228561521629,
+        -373.3243455520129
+      ],
+      "component_fourier": [
+        [
+          597.2221226088111,
+          -380.4823178267421
+        ],
+        [
+          -14.678059338524744,
+          5.196139310715997
+        ],
+        [
+          10.68449825134265,
+          1.9618329640131829
+        ],
+        [
+          -4.069190050912827,
+          -5.156739323546181e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.00016527801093824406,
+      "fourier_fd_error_relative": 0.00023885183499184996,
+      "fourth_vertex_fraction": 0.005834122633698416,
+      "transverse_second_harmonic": [
+        0.16229948248630804,
+        -0.2799087353567837
+      ],
+      "transverse_second_fd": [
+        0.16228868106736472,
+        -0.27989398165888274
+      ],
+      "transverse_second_fd_rel": 5.6512300443758045e-05,
+      "transverse_mixed_third_vertex_fraction": 1.5714051048275295e-15,
+      "third_order_trace_max": 2.1827872842550278e-11,
+      "min_direct_gap": 0.12568323268947712,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 2.175
+    },
+    {
+      "L": 13,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        440.75834239525614,
+        -630.7390903475879
+      ],
+      "sum_cubic_components": [
+        440.75834239525614,
+        -630.7390903475879
+      ],
+      "direct_fd_cubic": [
+        440.6507793308483,
+        -630.6222570935979
+      ],
+      "fourth_vertex_term": [
+        -4.046711732093824,
+        -5.4281466563644015e-15
+      ],
+      "without_fourth_vertex": [
+        444.80505412735,
+        -630.7390903475879
+      ],
+      "component_fourier": [
+        [
+          446.4076508871744,
+          -626.0479197079877
+        ],
+        [
+          -12.963065054801326,
+          -6.226327956908378
+        ],
+        [
+          11.360468294977002,
+          1.5351573173082043
+        ],
+        [
+          -4.046711732093824,
+          -5.4281466563644015e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.00017693933895111116,
+      "fourier_fd_error_relative": 0.00020638283908502,
+      "fourth_vertex_fraction": 0.005259020235956162,
+      "transverse_second_harmonic": [
+        0.16716013602375493,
+        -0.005884595214711079
+      ],
+      "transverse_second_fd": [
+        0.16714570308854595,
+        -0.00589060362205907
+      ],
+      "transverse_second_fd_rel": 9.346700878709089e-05,
+      "transverse_mixed_third_vertex_fraction": 2.8079730355764814e-15,
+      "third_order_trace_max": 1.6370904631912708e-11,
+      "min_direct_gap": 0.12332978453199134,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 3.66
+    },
+    {
+      "L": 17,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        526.2760766768677,
+        782.2505843282297
+      ],
+      "sum_cubic_components": [
+        526.2760766768677,
+        782.2505843282297
+      ],
+      "direct_fd_cubic": [
+        526.1235124333392,
+        781.9845336091671
+      ],
+      "fourth_vertex_term": [
+        -4.056464488827961,
+        -5.156739323546181e-15
+      ],
+      "without_fourth_vertex": [
+        530.3325411656958,
+        782.2505843282302
+      ],
+      "component_fourier": [
+        [
+          524.3111428083944,
+          793.4279520874481
+        ],
+        [
+          -4.855801039991796,
+          -13.904575492907178
+        ],
+        [
+          10.87719939729296,
+          2.727207733689205
+        ],
+        [
+          -4.056464488827961,
+          -5.156739323546181e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.0002910341970699343,
+      "fourier_fd_error_relative": 0.0003252951736263481,
+      "fourth_vertex_fraction": 0.004302545818778091,
+      "transverse_second_harmonic": [
+        -0.10155181191142199,
+        -0.1602188411622539
+      ],
+      "transverse_second_fd": [
+        -0.10155031571290363,
+        -0.16022190856964647
+      ],
+      "transverse_second_fd_rel": 1.7991626399162044e-05,
+      "transverse_mixed_third_vertex_fraction": 2.883596633766006e-16,
+      "third_order_trace_max": 1.0186340659856796e-10,
+      "min_direct_gap": 0.12396301496738102,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 6.243
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "N": -1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        589.1593714707165,
+        -373.3243455520129
+      ],
+      "sum_cubic_components": [
+        589.1593714707165,
+        -373.3243455520129
+      ],
+      "direct_fd_cubic": [
+        589.0277179569024,
+        -373.22226131283924
+      ],
+      "fourth_vertex_term": [
+        -4.069190050912827,
+        -5.156739323546181e-15
+      ],
+      "without_fourth_vertex": [
+        593.2285615216293,
+        -373.32434555201286
+      ],
+      "component_fourier": [
+        [
+          597.2221226088114,
+          -380.482317826742
+        ],
+        [
+          -14.67805933852475,
+          5.196139310715985
+        ],
+        [
+          10.684498251342653,
+          1.9618329640131824
+        ],
+        [
+          -4.069190050912827,
+          -5.156739323546181e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.00016527769200550048,
+      "fourier_fd_error_relative": 0.0002388521289987938,
+      "fourth_vertex_fraction": 0.005834122633698415,
+      "transverse_second_harmonic": [
+        -0.16229948248632775,
+        0.27990873535724636
+      ],
+      "transverse_second_fd": [
+        -0.16228868074644928,
+        0.27989398070933613
+      ],
+      "transverse_second_fd_rel": 5.651525547090991e-05,
+      "transverse_mixed_third_vertex_fraction": 8.636677277044156e-16,
+      "third_order_trace_max": 4.547473508864641e-12,
+      "min_direct_gap": 0.12568323268947718,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 2.21
+    },
+    {
+      "L": 9,
+      "Delta": 0.4,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        60.838135755376065,
+        77.28547449809764
+      ],
+      "sum_cubic_components": [
+        60.838135755376065,
+        77.28547449809764
+      ],
+      "direct_fd_cubic": [
+        60.839405059142706,
+        77.26832760435755
+      ],
+      "fourth_vertex_term": [
+        -4.733840064938729,
+        -6.513775987637282e-15
+      ],
+      "without_fourth_vertex": [
+        65.57197582031479,
+        77.28547449809767
+      ],
+      "component_fourier": [
+        [
+          67.30515382355097,
+          81.23673998838655
+        ],
+        [
+          -16.153737493127487,
+          -3.9535196726900894
+        ],
+        [
+          14.420559489891303,
+          0.002254182401205728
+        ],
+        [
+          -4.733840064938729,
+          -6.513775987637282e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.00016791142627557335,
+      "fourier_fd_error_relative": 0.00017480820781133561,
+      "fourth_vertex_fraction": 0.048128605892321624,
+      "transverse_second_harmonic": [
+        0.17382769311528637,
+        0.2377978857446488
+      ],
+      "transverse_second_fd": [
+        0.17382804497632046,
+        0.23778638385909484
+      ],
+      "transverse_second_fd_rel": 3.906633116802121e-05,
+      "transverse_mixed_third_vertex_fraction": 1.963320217701416e-16,
+      "third_order_trace_max": 7.389644451905042e-13,
+      "min_direct_gap": 0.42189279025692406,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 2.118
+    },
+    {
+      "L": 9,
+      "Delta": 0,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        0.9459109667617259,
+        0.03170226328605543
+      ],
+      "sum_cubic_components": [
+        0.9459109667617259,
+        0.03170226328605543
+      ],
+      "direct_fd_cubic": [
+        0.9460706251874822,
+        0.031735843376562545
+      ],
+      "fourth_vertex_term": [
+        -4.751976871771014,
+        -6.513775987637282e-15
+      ],
+      "without_fourth_vertex": [
+        5.69788783853274,
+        0.03170226328606188
+      ],
+      "component_fourier": [
+        [
+          5.4054477832474594,
+          0.02968754305508135
+        ],
+        [
+          -14.147688650514914,
+          0.003052911588036756
+        ],
+        [
+          14.440128705800198,
+          -0.0010381913570573127
+        ],
+        [
+          -4.751976871771014,
+          -6.513775987637282e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.0001842380538628492,
+      "fourier_fd_error_relative": 0.00017238410794615652,
+      "fourth_vertex_fraction": 5.0208850873402096,
+      "transverse_second_harmonic": [
+        -1.9199831989666146e-15,
+        1.7305166059695402e-15
+      ],
+      "transverse_second_fd": [
+        1.7760215349688996e-10,
+        1.7024698105014306e-10
+      ],
+      "transverse_second_fd_rel": 246.02164995371373,
+      "transverse_mixed_third_vertex_fraction": 9.206485708122124e-05,
+      "third_order_trace_max": 6.572520305780927e-14,
+      "min_direct_gap": 1.009287731501551,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 2.129
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.0,
+      "steps": 360,
+      "dt": 0.1454441043328608,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        499.2082305124578,
+        1342.0766179769837
+      ],
+      "sum_cubic_components": [
+        499.2082305124578,
+        1342.0766179769837
+      ],
+      "direct_fd_cubic": [
+        499.20048971358335,
+        1341.7352335984892
+      ],
+      "fourth_vertex_term": [
+        -3.2518943130092186,
+        -4.071109992273301e-15
+      ],
+      "without_fourth_vertex": [
+        502.4601248254672,
+        1342.0766179769835
+      ],
+      "component_fourier": [
+        [
+          505.4601889028192,
+          1350.4920782012891
+        ],
+        [
+          -9.064489043986356,
+          -8.634006832245358
+        ],
+        [
+          6.0644249666342285,
+          0.21854660793995717
+        ],
+        [
+          -3.2518943130092186,
+          -4.071109992273301e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.00023192688023609314,
+      "fourier_fd_error_relative": 0.00023847246458564544,
+      "fourth_vertex_fraction": 0.002271011860069353,
+      "transverse_second_harmonic": [
+        -2.7390801508026744e-13,
+        1.8269871841935953e-13
+      ],
+      "transverse_second_fd": [
+        -2.3762109973516116e-10,
+        1.0901148037801159e-09
+      ],
+      "transverse_second_fd_rel": 1115.475541220707,
+      "transverse_mixed_third_vertex_fraction": 3.457474990495391e-05,
+      "third_order_trace_max": 5.4569682106375694e-12,
+      "min_direct_gap": 0.1003868548922604,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 2.271
+    },
+    {
+      "L": 9,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "steps": 720,
+      "dt": 0.0727220521664304,
+      "T": 52.35987755982989,
+      "omega": 0.18,
+      "a_fd": 0.0003,
+      "fundamental_to_third_harmonic_coefficient": [
+        589.1617449190978,
+        -373.3152954206838
+      ],
+      "sum_cubic_components": [
+        589.1617449190978,
+        -373.3152954206838
+      ],
+      "direct_fd_cubic": [
+        589.030087449876,
+        -373.213206670088
+      ],
+      "fourth_vertex_term": [
+        -4.069190050912827,
+        -5.4281466563644015e-15
+      ],
+      "without_fourth_vertex": [
+        593.2309349700106,
+        -373.3152954206837
+      ],
+      "component_fourier": [
+        [
+          597.2244704807116,
+          -380.4732666031952
+        ],
+        [
+          -14.678025156676604,
+          5.19613865094431
+        ],
+        [
+          10.684489645975503,
+          1.96183253156713
+        ],
+        [
+          -4.069190050912827,
+          -5.4281466563644015e-15
+        ]
+      ],
+      "max_timeseries_fd_error_relative": 0.0001652927929701244,
+      "fourier_fd_error_relative": 0.00023886154636916366,
+      "fourth_vertex_fraction": 0.005834146382060223,
+      "transverse_second_harmonic": [
+        0.162304200689856,
+        -0.2799017870806124
+      ],
+      "transverse_second_fd": [
+        0.16229339843021368,
+        -0.27988703401965404
+      ],
+      "transverse_second_fd_rel": 5.651288352631291e-05,
+      "transverse_mixed_third_vertex_fraction": 1.3094486163328216e-15,
+      "third_order_trace_max": 2.4556356947869062e-11,
+      "min_direct_gap": 0.12568323268947712,
+      "pump_only_no_output_source": "classical finite pulse; NO BSV or physical H2 Maxwell output",
+      "runtime_s": 4.341
+    }
+  ],
+  "continuation": "Q-MATH-16.27: full multitone causal current kernel + Ward tests in dressed input-output quantum optics."
+}

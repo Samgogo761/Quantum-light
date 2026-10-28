@@ -1,0 +1,59 @@
+{
+  "model": "Q_M0_eightband_v1",
+  "k_cart_Ainv": [
+    0.18861837807210927,
+    0.44054475970911233
+  ],
+  "n_electrons": 4,
+  "exterior_dim": 70,
+  "field_Aplus": [
+    0.0,
+    0.048,
+    -0.025,
+    0.033
+  ],
+  "field_Aminus": [
+    0.0,
+    0.037,
+    -0.025,
+    0.041
+  ],
+  "branch_overlap": {
+    "det4": [
+      0.9999081793963986,
+      -0.007591408069073964
+    ],
+    "det8": [
+      0.9999081793963995,
+      -0.007591408069074068
+    ],
+    "wedge70": [
+      0.999908179396398,
+      -0.007591408069074268
+    ]
+  },
+  "max_det_wedge_error": 8.942562614587554e-16,
+  "normalization_error": 1.3877787807814506e-17,
+  "hermiticity_swap_error": 3.9933696130060543e-16,
+  "physical_overlap_bound_error": 0.0,
+  "branch_variation_derivative": {
+    "frechet": [
+      -1.249000902703301e-16,
+      -1.4771970967804855
+    ],
+    "finite_difference": [
+      -9.992007221626407e-10,
+      -1.477197096077763
+    ],
+    "difference": 1.2215649026465865e-09
+  },
+  "scope": "Exact free-fermion field-history influence at this k, not photon emission or full output field.",
+  "inversion_on_both_histories": {
+    "F_inv_real_imag": [
+      0.9999081793963978,
+      -0.007591408069073809
+    ],
+    "error": 9.014972532117565e-16,
+    "meaning": "Compare (N,k,Aplus,Aminus) against (-N,-k,-Aplus,-Aminus); does NOT compare same applied optical field."
+  }
+}

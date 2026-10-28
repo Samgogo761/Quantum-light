@@ -1,0 +1,17 @@
+{
+  "q8_m0_model.py": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+  "q8_tperp_static_audit.py": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+  "CrI3_scf_soc_a1h_clean.in": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07",
+  "check_m0_uploaded.py": "2ff234febde88566730a4397312c2416d64e4b7684003a467c9365b8fc73b219",
+  "M0_geometry_reference_uploaded.json": "967b7052f85907eeac565e7d861d4a04095e1a16336832f5fe63851e8df0ed25",
+  "M0_independent_equation_crosscheck.py": "3da22c7125dd19d526ecb82d9e68557c131ee44416537b52ce3378c71dff6445",
+  "M0_independent_equation_results.json": "768d03f32f60c746f8a342b498b73e5c03c8a9effba5c25543f3d3993f03326f",
+  "M0_contact_derivative_validation.py": "39961ae6566f4d2da5b2cc2020cab3741569bfbff0c38d27c5329de075e30a7d",
+  "M0_contact_derivative_results.json": "b7bd39d25d26020154e993d7e8f5febc4a13abda85959e2d76c8ec1a8d391474",
+  "M0_influence_exterior_validation.py": "cc366f10580f914534c2a4fe88ad1b3b6c15fd8e9d596624e08871d47e65297d",
+  "M0_influence_exterior_results.json": "9a0c93138624b0f59bc78620ec51ccc5771f8e3e61c25bac28611cc8e33b4a1a",
+  "M0_Wolfram_independent_validation.wl": "693f0c5bcfed76b658a6d7c8aa3a69235787c924a2e43b1cd3a9075aafc3659b",
+  "M0_数学重构_联合验收报告_20261021.md": "840fba97e3681256ce3799f79cb757bb101be1482fec876ad384ec35b89bd4ba",
+  "README_M0联合验证.txt": "38c72206daf932244a28e568210b7e329ab7d3bcdea08c1d93a80f2a2d0382bd",
+  "qhhg_math_reconstruction/研究底稿_八带量子光HHG_数学重构_v1.md": "aa39f81df793b02f1cfdf96649d7ab26aa9f2f22db491fccca280f8f1d646ecc"
+}

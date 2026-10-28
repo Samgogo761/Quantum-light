@@ -82,6 +82,11 @@ class M0Geometry:
         kf = np.asarray(kfrac, dtype=float)
         return kf[..., :2] @ self.recip()
 
+    def k_frac(self, kcart) -> np.ndarray:
+        """Cartesian 2D -> fractional (n1,n2), not reduced to the first cell."""
+        kc = np.asarray(kcart, dtype=float)
+        return kc[..., :2] @ np.linalg.inv(self.recip())
+
     def site_cart(self, name: str) -> np.ndarray:
         return np.array(self.sites_paired_frac[name], dtype=float) @ self.lat()
 

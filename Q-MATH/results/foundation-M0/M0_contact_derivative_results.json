@@ -1,0 +1,5 @@
+{
+  "max_contact_F": 9.995790783875699e-08,
+  "eps_k_Ainv": 2e-05,
+  "diagnostic": "analytic contact matrix = second k derivative, including NN, NNN, interlayer bonds"
+}

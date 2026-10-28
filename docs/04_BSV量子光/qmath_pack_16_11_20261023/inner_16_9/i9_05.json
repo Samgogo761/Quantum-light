@@ -1,0 +1,60 @@
+{
+  "caveat": "Toy and analytic numerical audit only. Original M0 raw code/complex-frequency arrays were not available as executable bytes in this session.",
+  "M0_reported_41grid_second_mode_fraction": 0.00028518,
+  "tail_test": {
+    "E": 0.7,
+    "model_singular_values": [
+      0.9998573998325961,
+      0.016887273314540745
+    ],
+    "exact_relative_gain_percent": 0.005943264423313721,
+    "leading_relative_gain_percent": 0.00594294480900063,
+    "certified_dual_upper_percent": 0.005943295093003209,
+    "lambda": 1.0998926817367636,
+    "primal_dual_gap": 9.547918011776346e-15,
+    "modes_n": [
+      0.6999410565923816,
+      5.8943407627021216e-05
+    ],
+    "previous_M0_reported_61grid_relative_gain_percent": 0.005844
+  },
+  "single_mode_photon_number_universal_ratio": 1.5583874449479593,
+  "fixed_physical_energy_examples": {
+    "A": {
+      "omega": [
+        2.0,
+        1.0
+      ],
+      "k": [
+        2.0,
+        1.1
+      ],
+      "classical_opt": 1.1,
+      "bsv_opt": 1.7320508075688772,
+      "bsv_x_high_frequency": 1.0,
+      "ratio": 1.5745916432444338
+    },
+    "B": {
+      "omega": [
+        2.0,
+        1.0
+      ],
+      "k": [
+        0.0,
+        1.1
+      ],
+      "classical_opt": 1.1,
+      "bsv_opt": 1.5556349186104048,
+      "ratio": 1.4142135623730951
+    }
+  },
+  "electronic_channel_operator_schmidt_ranks": {
+    "rank_one": 1,
+    "rank_two": 2
+  },
+  "classical_dark_mode_counterexample": {
+    "E": 0.7,
+    "F2": 2.1700000000000004,
+    "coherent_fraction": 1.0
+  }
+}

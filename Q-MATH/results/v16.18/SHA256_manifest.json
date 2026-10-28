@@ -1,0 +1,74 @@
+{
+  "Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.docx": {
+    "size": 257355,
+    "sha256": "50b4a82e5bef5401ed98ae5da6f7e9b2b1739c0dd26e0010adb4b334d9d5bf02"
+  },
+  "Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.md": {
+    "size": 14972,
+    "sha256": "2424c330e96e16feb80b870c8d05f3c963484c45985e9e040d931e505384582d"
+  },
+  "Q-MATH-16.19_下一步严格数学与M0验证.md": {
+    "size": 2223,
+    "sha256": "a14ea3d6b35046df175dff210bf18f25407ff442a8e2d40ef7125540670d573f"
+  },
+  "README_复现证据与文件说明.md": {
+    "size": 2582,
+    "sha256": "a77f40135421524e11729d8e87a0bf293924054c7e1a47efbabdcc55660f0be0"
+  },
+  "qmath_16_18_keldysh_determinant.py": {
+    "size": 6940,
+    "sha256": "06e4274d4fab084ea5dd5d25f548eb05496428d66d3a39de49690c37f01fa3f6"
+  },
+  "qmath_16_18_causal_rank_and_inverse.py": {
+    "size": 5177,
+    "sha256": "433d4540baf3ef45fac3cb8f82c377e0e0301276a4266727c76cf653534e699b"
+  },
+  "qmath_16_18_quick_verify.py": {
+    "size": 1727,
+    "sha256": "617d79c44d2d4bdffe22e7e7390fd9e3aaaeb948b2a641141f81db01c602ed2d"
+  },
+  "qmath_16_18_compile_results.py": {
+    "size": 4797,
+    "sha256": "3c606190156a76788807a674d96b8889c3c2a2b4141b79f25b5e75b4fe0c3a1a"
+  },
+  "qmath_16_18_results.json": {
+    "size": 7440,
+    "sha256": "505595a8638e16dfa1757de3b7f1aef3a48eff15975f36fa2281c52eda5bb079"
+  },
+  "qmath_16_18_causal_partial.json": {
+    "size": 4245,
+    "sha256": "930104cb82537d8a772040b761c4d055188c2e091b851e71d357248324c09a97"
+  },
+  "qmath_16_18_final_results.json": {
+    "size": 9306,
+    "sha256": "762cddf2796845a000eabd680071663ec0e84ba3fbd13a15706223141686439d"
+  },
+  "qmath_16_18_causal_M0_BZ.png": {
+    "size": 105582,
+    "sha256": "3d1cb77f73affdca2bb3fee3931d3b837b96cae27896a46609bf225b4db0fd35"
+  },
+  "qmath_16_18_inverse_and_rank.png": {
+    "size": 155760,
+    "sha256": "f5ec7982824567100ef85e4db3e436dea63f268e170b40a1ee8f15f86ea1bc52"
+  },
+  "work/src_0/q167_m0_three_photon_T.py": {
+    "size": 8262,
+    "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017"
+  },
+  "work/src_0/q167_slater_condon_direct.py": {
+    "size": 4085,
+    "sha256": "630cf8c8659ead7e0b9e04c336eec6f8a898eff412ed5bb408793b66f7c71295"
+  },
+  "work/src_0/deps/q8_tperp_static_audit.py": {
+    "size": 37002,
+    "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b"
+  },
+  "work/src_0/deps/q8_m0_model.py": {
+    "size": 17386,
+    "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3"
+  },
+  "work/src_0/deps/CrI3_scf_soc_a1h_clean.in": {
+    "size": 2284,
+    "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+  }
+}

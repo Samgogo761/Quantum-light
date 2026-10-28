@@ -1,0 +1,91 @@
+{
+  "phase_counterexample": {
+    "classical_alpha": 0.1,
+    "2pi_complex": [
+      6.042784629817222e-06,
+      -0.06302852978628082
+    ],
+    "2pi_modulus": 0.06302853007595317,
+    "4pi_modulus": 0.0,
+    "C_K_for_K01_only": 0
+  },
+  "K_source": "true production M0 finite single k, 23 pump Fock, 96 steps, H2 perp magnetic odd K",
+  "K02_odd": [
+    -0.31776598168006087,
+    0.6759351742679568
+  ],
+  "finite_Cstar_exact": 0.528139933599868,
+  "all_coefficientwise_ratios_below_one": true,
+  "largest_other_ratio": 0.5663121848385533,
+  "affine_certificate": {
+    "A": 0.098,
+    "B": 0.25,
+    "interval_0_7_decimal_min_margin": "0.0059557527683092335871432942719564209872546781593633374",
+    "interval_width": 0.005,
+    "tail_operator_shift_bound": 1.3965373261071994,
+    "tail_line_at_7": 1.848,
+    "statement": "for all x>=0, |<alpha|K_plus2|alpha>|<=.098+.25*x"
+  },
+  "scans": [
+    {
+      "target_mean": 0.001,
+      "actual_BSV_mean": 0.0010000000000000002,
+      "BSV_winding_abs": 0.016687810803952693,
+      "linear_classic_tight_23Fock": 0.000528139933599868,
+      "affine_classic_23Fock": 0.09825,
+      "numerical_concave_envelope_noncertified": 0.0005279056943402759
+    },
+    {
+      "target_mean": 0.01,
+      "actual_BSV_mean": 0.010000000000000005,
+      "BSV_winding_abs": 0.05239197930905534,
+      "linear_classic_tight_23Fock": 0.00528139933599868,
+      "affine_classic_23Fock": 0.1005,
+      "numerical_concave_envelope_noncertified": 0.0052579823380022464
+    },
+    {
+      "target_mean": 0.1,
+      "actual_BSV_mean": 0.09999999999870728,
+      "BSV_winding_abs": 0.15455037099281244,
+      "linear_classic_tight_23Fock": 0.0528139933599868,
+      "affine_classic_23Fock": 0.123,
+      "numerical_concave_envelope_noncertified": 0.05048184071676907
+    },
+    {
+      "target_mean": 0.7,
+      "actual_BSV_mean": 0.6998801773042871,
+      "BSV_winding_abs": 0.2851050319055196,
+      "linear_classic_tight_23Fock": 0.3696979535199076,
+      "affine_classic_23Fock": 0.273,
+      "numerical_concave_envelope_noncertified": 0.26260344245675954
+    }
+  ],
+  "full_infinite_Fock_operator_norm_bound": 1760.2181543590432,
+  "full_infinite_Fock_Cstar_universal_bound": 1244.6621933149484,
+  "ultralow_input_conditional": [
+    {
+      "n": 1e-08,
+      "BSV_lower_if_true_K02_matches_finite": 5.2813230635037134e-05,
+      "classic_universal_bound": 1.2446621933149485e-05,
+      "ratio_lower": 4.2431778613262106
+    },
+    {
+      "n": 1e-07,
+      "BSV_lower_if_true_K02_matches_finite": 0.0001669883918684985,
+      "classic_universal_bound": 0.00012446621933149486,
+      "ratio_lower": 1.3416362509071877
+    },
+    {
+      "n": 1e-06,
+      "BSV_lower_if_true_K02_matches_finite": 0.0005273772095625106,
+      "classic_universal_bound": 0.0012446621933149486,
+      "ratio_lower": 0.4237111180809068
+    }
+  ],
+  "limits": [
+    "The numerical kernel is finite 23 Fock single k; the decimal certificate is for its saved entries, allowing coefficient outward margin 1e-14.",
+    "The norm bound for infinite boson Peierls K is rigorous for the chosen finite M0 bond model, envelope and integration time, but the actual infinite K02 has not been rigorously certified.",
+    "The numerical concave envelope is grid-based and not a certified global optimum.",
+    "Emission-mode normalization and physical single-sided boundary are not yet included."
+  ]
+}

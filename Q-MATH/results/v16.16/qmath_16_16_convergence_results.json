@@ -1,0 +1,278 @@
+{
+  "scope": "gamma in virtual denominators only; on-shell final state exact; numbers not absolute rates",
+  "quadrature": [
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "nq": 7,
+      "local_inelastic_norm2": 7258.826268288401
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "nq": 11,
+      "local_inelastic_norm2": 7258.771378683488
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "nq": 17,
+      "local_inelastic_norm2": 7258.771377589169
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "nq": 25,
+      "local_inelastic_norm2": 7258.771377589189
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "nq": 7,
+      "local_inelastic_norm2": 19702.66749914149
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "nq": 11,
+      "local_inelastic_norm2": 19702.527138575297
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "nq": 17,
+      "local_inelastic_norm2": 19702.527135926448
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "nq": 25,
+      "local_inelastic_norm2": 19702.527135926503
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "nq": 7,
+      "local_inelastic_norm2": 33248.21427724372
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "nq": 11,
+      "local_inelastic_norm2": 33246.153856606106
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "nq": 17,
+      "local_inelastic_norm2": 33246.1536963272
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "nq": 25,
+      "local_inelastic_norm2": 33246.153696327296
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "nq": 7,
+      "local_inelastic_norm2": 95339.96957617774
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "nq": 11,
+      "local_inelastic_norm2": 95334.91989589157
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "nq": 17,
+      "local_inelastic_norm2": 95334.91957025975
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "nq": 25,
+      "local_inelastic_norm2": 95334.91957026004
+    }
+  ],
+  "BZ": [
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "L": 9,
+      "active_k": 4,
+      "average_positive_inelastic_norm2": 15959.428344354634,
+      "seconds": 0.2647359970001162
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "L": 13,
+      "active_k": 12,
+      "average_positive_inelastic_norm2": 625050.6577805225,
+      "seconds": 0.6277726199998597
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "L": 17,
+      "active_k": 24,
+      "average_positive_inelastic_norm2": 2002554.6432853893,
+      "seconds": 1.0311984639999991
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "L": 25,
+      "active_k": 60,
+      "average_positive_inelastic_norm2": 425163.25715528906,
+      "seconds": 2.6187366009999096
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.25,
+      "L": 33,
+      "active_k": 98,
+      "average_positive_inelastic_norm2": 1219661.176115176,
+      "seconds": 4.810818991000133
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "L": 9,
+      "active_k": 4,
+      "average_positive_inelastic_norm2": 11473.58270634598,
+      "seconds": 0.2543702259999918
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "L": 13,
+      "active_k": 12,
+      "average_positive_inelastic_norm2": 840362.8364784044,
+      "seconds": 0.6365698370000246
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "L": 17,
+      "active_k": 24,
+      "average_positive_inelastic_norm2": 3169297.555924683,
+      "seconds": 1.2020168700000795
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "L": 25,
+      "active_k": 60,
+      "average_positive_inelastic_norm2": 754139.5389535531,
+      "seconds": 2.592551391999905
+    },
+    {
+      "lambda": 0.0,
+      "gamma": 0.1,
+      "L": 33,
+      "active_k": 98,
+      "average_positive_inelastic_norm2": 1846536.0730646283,
+      "seconds": 4.708978422999962
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "L": 9,
+      "active_k": 6,
+      "average_positive_inelastic_norm2": 186047.9235187751,
+      "seconds": 0.3253741529999843
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "L": 13,
+      "active_k": 22,
+      "average_positive_inelastic_norm2": 14213.022010074057,
+      "seconds": 0.7642362320000302
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "L": 17,
+      "active_k": 24,
+      "average_positive_inelastic_norm2": 123887.04391082995,
+      "seconds": 1.1614564270000756
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "L": 25,
+      "active_k": 62,
+      "average_positive_inelastic_norm2": 67039.24714706457,
+      "seconds": 2.778293814000108
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.25,
+      "L": 33,
+      "active_k": 106,
+      "average_positive_inelastic_norm2": 100256.003001719,
+      "seconds": 4.52481241800001
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "L": 9,
+      "active_k": 6,
+      "average_positive_inelastic_norm2": 400675.19887037564,
+      "seconds": 0.29582904500011864
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "L": 13,
+      "active_k": 22,
+      "average_positive_inelastic_norm2": 33036.29138822498,
+      "seconds": 0.7194327550000708
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "L": 17,
+      "active_k": 24,
+      "average_positive_inelastic_norm2": 290798.04037513945,
+      "seconds": 1.157950253000081
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "L": 25,
+      "active_k": 62,
+      "average_positive_inelastic_norm2": 136073.27942696313,
+      "seconds": 2.5591484110000238
+    },
+    {
+      "lambda": 0.1,
+      "gamma": 0.1,
+      "L": 33,
+      "active_k": 106,
+      "average_positive_inelastic_norm2": 227930.85054722024,
+      "seconds": 4.203745486999878
+    }
+  ],
+  "positive_p_control": {
+    "E": 0.7,
+    "F2": 2.17,
+    "P_vacuum": 0.7741935483870968,
+    "P_plus_coherent": 0.1129032258064516,
+    "P_minus_coherent": 0.1129032258064516,
+    "coherent_amplitudes": [
+      1.760681686165901,
+      -1.760681686165901
+    ],
+    "E_classical": 0.7,
+    "F2_classical": 2.17,
+    "BSV_to_classical_count_all_bins": 1.0,
+    "note": "same fixed spectral mode u, weak 2 photon annihilation only"
+  }
+}

@@ -1,0 +1,3090 @@
+{
+  "schema": 1,
+  "sources": [
+    {
+      "name": "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip",
+      "sha256": "3292f6fb21bd53ea33e12ee5fd2c8fd54da67a25395cc61677be21941e25e78f",
+      "bytes": 135178
+    },
+    {
+      "name": "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip",
+      "sha256": "dfe5f48a52db2858ce7789019a8ef95a25c2cfc026bc4e1ab4091fc731f8abf0",
+      "bytes": 135439
+    },
+    {
+      "name": "Q-MATH-16.30.zip",
+      "sha256": "5219cc273f3e330dd305059ea3bb6c908f3c7a022e97af233a9da50efc140237",
+      "bytes": 481032
+    },
+    {
+      "name": "Q-MATH-16.29.zip",
+      "sha256": "c7666b2dd8735f733a9764a1ed92a76c39d755af7b7a1380b3954cd259fd1d9e",
+      "bytes": 550864
+    },
+    {
+      "name": "Q-MATH-16.28.zip",
+      "sha256": "a5ec8df45ecbbae29476454ad1b8b48401ee3c359df4343f4011257805092e30",
+      "bytes": 387844
+    },
+    {
+      "name": "Q-MATH-16.27.zip",
+      "sha256": "9a416bd4e8c1a7529e54d5694d8dfa222151d0f8d411d1d545f69380ddfab4f9",
+      "bytes": 573984
+    },
+    {
+      "name": "Q-MATH-16.26.zip",
+      "sha256": "a9fa5ad1adb5139c27d38f75d2f6d4b8e1dec72f2c583deb1a526d9bb5c6aef4",
+      "bytes": 1886577
+    },
+    {
+      "name": "Q-MATH-16.19_下一步严格数学与M0验证.md",
+      "sha256": "a14ea3d6b35046df175dff210bf18f25407ff442a8e2d40ef7125540670d573f",
+      "bytes": 2223
+    },
+    {
+      "name": "Q-MATH-16.18.zip",
+      "sha256": "00418e30a6ad4d5c8de04729bd5d1fc57eded246ea564d46acdad669653b5445",
+      "bytes": 542753
+    },
+    {
+      "name": "Q-MATH-16.18_连通散射与磁性逆问题验收任务.md",
+      "sha256": "d1cc0d3acf578521792877fcff256347161930c93656842e8958e7b3386a72ba",
+      "bytes": 3024
+    },
+    {
+      "name": "Q-MATH-16.17_截断Stieltjes矩问题与M0非经典读出禁戒.md",
+      "sha256": "176c27916f664489e3528e3c1d7be8bfaa5064a26fb2f60bfdda5818ea006b95",
+      "bytes": 14565
+    },
+    {
+      "name": "Q-MATH-16.16数学.md",
+      "sha256": "7be00bc79899f901f6f7db462b160b728fd815b9aeacbc84f53dfa843525cd72",
+      "bytes": 12815
+    },
+    {
+      "name": "Q-MATH-16.16.zip",
+      "sha256": "1b79211c5c4a3a826e818356cad21b7ac709c84fa20d6fb4d5fdfc47321c415e",
+      "bytes": 225479
+    },
+    {
+      "name": "Q-MATH-16.15.zip",
+      "sha256": "96d816af5a64bfc57d61fda80fc06245a99a0b35c16a2fac493a85adaed31e62",
+      "bytes": 244851
+    },
+    {
+      "name": "Q-MATH-16.14_高阶异常矩界与Néel磁性门控.md",
+      "sha256": "19c2e7f82ee10f0e4649ab73cd81a8dfb182c36979100023ba82439a918d9ad0",
+      "bytes": 14909
+    },
+    {
+      "name": "Q-MATH-16.13_五光子Fock结构与M0复核.md",
+      "sha256": "f77c45ea16280e9ba8fadc98c25e57ceb465e96e6c3b2b6565dfecae225786e9",
+      "bytes": 11766
+    },
+    {
+      "name": "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip",
+      "sha256": "b3684dd05f9011d0b8689d588e33ddca7921731c7331cf5f07ac3bf96e117d0d",
+      "bytes": 515497
+    },
+    {
+      "name": "Q-MATH_完整研究接续包_截至16_11.zip",
+      "sha256": "1575d35daec2dc3ecdca0f69fd22d5ee4e0c84fdaebd9a29ca0661ac4e780154",
+      "bytes": 288483
+    },
+    {
+      "name": "check_m0_uploaded.py",
+      "sha256": "2ff234febde88566730a4397312c2416d64e4b7684003a467c9365b8fc73b219",
+      "bytes": 3475
+    },
+    {
+      "name": "M0_数学重构_联合验收报告_20261021.md",
+      "sha256": "840fba97e3681256ce3799f79cb757bb101be1482fec876ad384ec35b89bd4ba",
+      "bytes": 6787
+    },
+    {
+      "name": "M0_contact_derivative_results.json",
+      "sha256": "b7bd39d25d26020154e993d7e8f5febc4a13abda85959e2d76c8ec1a8d391474",
+      "bytes": 169
+    },
+    {
+      "name": "M0_contact_derivative_validation.py",
+      "sha256": "39961ae6566f4d2da5b2cc2020cab3741569bfbff0c38d27c5329de075e30a7d",
+      "bytes": 1704
+    },
+    {
+      "name": "M0_geometry_reference_uploaded.json",
+      "sha256": "967b7052f85907eeac565e7d861d4a04095e1a16336832f5fe63851e8df0ed25",
+      "bytes": 4137
+    },
+    {
+      "name": "M0_independent_equation_crosscheck.py",
+      "sha256": "3da22c7125dd19d526ecb82d9e68557c131ee44416537b52ce3378c71dff6445",
+      "bytes": 1612
+    },
+    {
+      "name": "M0_independent_equation_results.json",
+      "sha256": "768d03f32f60c746f8a342b498b73e5c03c8a9effba5c25543f3d3993f03326f",
+      "bytes": 104
+    },
+    {
+      "name": "M0_influence_exterior_results.json",
+      "sha256": "9a0c93138624b0f59bc78620ec51ccc5771f8e3e61c25bac28611cc8e33b4a1a",
+      "bytes": 1366
+    },
+    {
+      "name": "M0_influence_exterior_validation.py",
+      "sha256": "cc366f10580f914534c2a4fe88ad1b3b6c15fd8e9d596624e08871d47e65297d",
+      "bytes": 4770
+    },
+    {
+      "name": "M0_joint_manifest.json",
+      "sha256": "49308c8ef079c25fd963e507dbc1546bfbe481a8b83a13a512e0e48d1f0c95da",
+      "bytes": 1623
+    },
+    {
+      "name": "M0_Wolfram_independent_validation.wl",
+      "sha256": "693f0c5bcfed76b658a6d7c8aa3a69235787c924a2e43b1cd3a9075aafc3659b",
+      "bytes": 8311
+    },
+    {
+      "name": "q8_m0_model.py",
+      "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+      "bytes": 17386
+    },
+    {
+      "name": "q8_tperp_static_audit.py",
+      "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+      "bytes": 37002
+    },
+    {
+      "name": "README_M0联合验证.txt",
+      "sha256": "38c72206daf932244a28e568210b7e329ab7d3bcdea08c1d93a80f2a2d0382bd",
+      "bytes": 1367
+    },
+    {
+      "name": "研究底稿_八带量子光HHG_数学重构_v1.md",
+      "sha256": "aa39f81df793b02f1cfdf96649d7ab26aa9f2f22db491fccca280f8f1d646ecc",
+      "bytes": 27905
+    }
+  ],
+  "packages": {
+    "v05": {
+      "source": "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip",
+      "sha256": "3292f6fb21bd53ea33e12ee5fd2c8fd54da67a25395cc61677be21941e25e78f",
+      "files": {
+        "QMATH05_shared/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "QMATH05_shared/README_QMATH05_数学审计与实算报告.md": "Q-MATH/reports/v05/QMATH05_shared/README_QMATH05_数学审计与实算报告.md",
+        "QMATH05_shared/SUMMARY.json": "Q-MATH/results/v05/QMATH05_shared/SUMMARY.json",
+        "QMATH05_shared/cutoff_convergence.png": "Q-MATH/results/v05/QMATH05_shared/cutoff_convergence.png",
+        "QMATH05_shared/make_report.py": "Q-MATH/code/v05/QMATH05_shared/make_report.py",
+        "QMATH05_shared/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "QMATH05_shared/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "QMATH05_shared/qmath03_exact_unitary.py": "Q-MATH/code/v05/QMATH05_shared/qmath03_exact_unitary.py",
+        "QMATH05_shared/qmath04_two_pol.py": "Q-MATH/code/v05/QMATH05_shared/qmath04_two_pol.py",
+        "QMATH05_shared/results_coherent0_11_3_80.json": "Q-MATH/results/v05/QMATH05_shared/results_coherent0_11_3_80.json",
+        "QMATH05_shared/results_coherent_13_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_coherent_13_4_100.json",
+        "QMATH05_shared/results_coherent_minus_13_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_coherent_minus_13_4_100.json",
+        "QMATH05_shared/results_even_11_3_80.json": "Q-MATH/results/v05/QMATH05_shared/results_even_11_3_80.json",
+        "QMATH05_shared/results_inversion_11_3_80.json": "Q-MATH/results/v05/QMATH05_shared/results_inversion_11_3_80.json",
+        "QMATH05_shared/results_seeded_11_3_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_100.json",
+        "QMATH05_shared/results_seeded_11_3_120.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_120.json",
+        "QMATH05_shared/results_seeded_11_3_80.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_80.json",
+        "QMATH05_shared/results_seeded_11_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_4_100.json",
+        "QMATH05_shared/results_seeded_13_3_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_13_3_100.json",
+        "QMATH05_shared/results_seeded_13_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_13_4_100.json",
+        "QMATH05_shared/results_seeded_minus_15_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_minus_15_4_100.json",
+        "QMATH05_shared/results_seeded_plus_15_4_100.json": "Q-MATH/results/v05/QMATH05_shared/results_seeded_plus_15_4_100.json",
+        "QMATH05_shared/run_cases.py": "Q-MATH/code/v05/QMATH05_shared/run_cases.py",
+        "QMATH05_shared/shared.py": "Q-MATH/code/v05/QMATH05_shared/shared.py",
+        "QMATH05_shared/shared_two_k_odd.png": "Q-MATH/results/v05/QMATH05_shared/shared_two_k_odd.png",
+        "QMATH05_shared/smoke.json": "Q-MATH/results/v05/QMATH05_shared/smoke.json",
+        "QMATH05_shared/test_qmath05.py": "Q-MATH/code/v05/QMATH05_shared/test_qmath05.py",
+        "QMATH05_shared/unit_test_output.json": "Q-MATH/results/v05/QMATH05_shared/unit_test_output.json"
+      },
+      "excluded": []
+    },
+    "v03": {
+      "source": "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip",
+      "sha256": "dfe5f48a52db2858ce7789019a8ef95a25c2cfc026bc4e1ab4091fc731f8abf0",
+      "files": {
+        "README_研究报告.md": "Q-MATH/reports/v03/README_研究报告.md",
+        "qmath03_exact_unitary.py": "Q-MATH/code/v05/QMATH05_shared/qmath03_exact_unitary.py",
+        "production_benchmark.py": "Q-MATH/code/v03/production_benchmark.py",
+        "symmetry_pair_validation.py": "Q-MATH/code/v03/symmetry_pair_validation.py",
+        "plot_results.py": "Q-MATH/code/v03/plot_results.py",
+        "QMATH03_RESULTS.json": "Q-MATH/results/v03/QMATH03_RESULTS.json",
+        "SYMMETRY_PAIR_RESULT.json": "Q-MATH/results/v03/SYMMETRY_PAIR_RESULT.json",
+        "mean_H2_results.png": "Q-MATH/results/v03/mean_H2_results.png",
+        "timestep_convergence.png": "Q-MATH/results/v03/timestep_convergence.png",
+        "q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in"
+      },
+      "excluded": []
+    },
+    "v16.30": {
+      "source": "Q-MATH-16.30.zip",
+      "sha256": "5219cc273f3e330dd305059ea3bb6c908f3c7a022e97af233a9da50efc140237",
+      "files": {
+        "qmath_16_30_flat_null_calibration.png": "Q-MATH/results/v16.30/qmath_16_30_flat_null_calibration.png",
+        "qmath_16_29_results.json": "Q-MATH/results/v16.30/qmath_16_29_results.json",
+        "qmath_16_30_clean_results.json": "Q-MATH/results/v16.30/qmath_16_30_clean_results.json",
+        "qmath_16_28_photon_normalized_results.json": "Q-MATH/results/v16.30/qmath_16_28_photon_normalized_results.json",
+        "qmath_16_29_same_state_readout.py": "Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py",
+        "qmath_16_30_bareT_bz_instability.png": "Q-MATH/results/v16.30/qmath_16_30_bareT_bz_instability.png",
+        "qmath_16_30_output_mode_gram.py": "Q-MATH/code/v16.30/qmath_16_30_output_mode_gram.py",
+        "qmath_16_29_material_null_results.json": "Q-MATH/results/v16.30/qmath_16_29_material_null_results.json",
+        "SHA256_MANIFEST.json": "Q-MATH/results/v16.30/SHA256_MANIFEST.json",
+        "Q-MATH-16.30_量子散射核桥接与材料证书稳定性审计.md": "Q-MATH/reports/v16.30/Q-MATH-16.30_量子散射核桥接与材料证书稳定性审计.md",
+        "qmath_16_30_bridge_audit.py": "Q-MATH/code/v16.30/qmath_16_30_bridge_audit.py",
+        "qmath_16_29_material_dual_results.json": "Q-MATH/results/v16.30/qmath_16_29_material_dual_results.json",
+        "README_reproduce.md": "Q-MATH/reports/v16.30/README_reproduce.md",
+        "q16_27_reference/qmath_16_27_retarded_kernel.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "q16_27_reference/qmath_16_26_cubic_audit.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py",
+        "q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "q16_27_reference/source/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.30_量子散射核桥接与材料证书稳定性审计.docx",
+          "sha256": "5d75ea44d08f598dc987a8f5937b2492aae456814ed9e8d42c01fefffa34b8a8",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.29": {
+      "source": "Q-MATH-16.29.zip",
+      "sha256": "c7666b2dd8735f733a9764a1ed92a76c39d755af7b7a1380b3954cd259fd1d9e",
+      "files": {
+        "Q-MATH-16.29_同磁态多输出量子关联_经典反例与材料双重证书.md": "Q-MATH/reports/v16.29/Q-MATH-16.29_同磁态多输出量子关联_经典反例与材料双重证书.md",
+        "Q-MATH-16.30_量子出射认证与材料曲率验收任务.md": "Q-MATH/reports/v16.29/Q-MATH-16.30_量子出射认证与材料曲率验收任务.md",
+        "README_复现与证据分级.md": "Q-MATH/reports/v16.29/README_复现与证据分级.md",
+        "build_package.py": "Q-MATH/code/v16.29/build_package.py",
+        "make_figures.py": "Q-MATH/code/v16.29/make_figures.py",
+        "q16_27_reference/qmath_16_26_cubic_audit.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py",
+        "q16_27_reference/qmath_16_27_retarded_kernel.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "q16_27_reference/qmath_16_27_shape_scan.json": "Q-MATH/results/v16.29/q16_27_reference/qmath_16_27_shape_scan.json",
+        "q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "q16_27_reference/source/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "qmath_16_28_photon_normalized_results.json": "Q-MATH/results/v16.30/qmath_16_28_photon_normalized_results.json",
+        "qmath_16_29_cross_mode_kernel.png": "Q-MATH/results/v16.29/qmath_16_29_cross_mode_kernel.png",
+        "qmath_16_29_explicit_classical_P.json": "Q-MATH/results/v16.29/qmath_16_29_explicit_classical_P.json",
+        "qmath_16_29_kernel_cache.json": "Q-MATH/results/v16.29/qmath_16_29_kernel_cache.json",
+        "qmath_16_29_material_dual_certificate.py": "Q-MATH/code/v16.29/qmath_16_29_material_dual_certificate.py",
+        "qmath_16_29_material_dual_results.json": "Q-MATH/results/v16.30/qmath_16_29_material_dual_results.json",
+        "qmath_16_29_material_null.py": "Q-MATH/code/v16.29/qmath_16_29_material_null.py",
+        "qmath_16_29_material_null_results.json": "Q-MATH/results/v16.30/qmath_16_29_material_null_results.json",
+        "qmath_16_29_material_only_dual.png": "Q-MATH/results/v16.29/qmath_16_29_material_only_dual.png",
+        "qmath_16_29_modal_occupation_certificate.py": "Q-MATH/code/v16.29/qmath_16_29_modal_occupation_certificate.py",
+        "qmath_16_29_modal_occupation_results.json": "Q-MATH/results/v16.29/qmath_16_29_modal_occupation_results.json",
+        "qmath_16_29_positive_P_certificate.py": "Q-MATH/code/v16.29/qmath_16_29_positive_P_certificate.py",
+        "qmath_16_29_results.json": "Q-MATH/results/v16.30/qmath_16_29_results.json",
+        "qmath_16_29_same_state_readout.py": "Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py",
+        "qmath_16_29_two_bin_classical_mimic.png": "Q-MATH/results/v16.29/qmath_16_29_two_bin_classical_mimic.png",
+        "SHA256_MANIFEST.json": "Q-MATH/results/v16.29/SHA256_MANIFEST.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.29_同磁态多输出量子关联_经典反例与材料双重证书.docx",
+          "sha256": "1e9057774c393ca71cb0d80c8cf727417a3511b22d3410ba0c5df8b5da73ffd8",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.28": {
+      "source": "Q-MATH-16.28.zip",
+      "sha256": "a5ec8df45ecbbae29476454ad1b8b48401ee3c359df4343f4011257805092e30",
+      "files": {
+        "Q-MATH-16.28_双模BSV磁性频率选择性与经典凸界.md": "Q-MATH/reports/v16.28/Q-MATH-16.28_双模BSV磁性频率选择性与经典凸界.md",
+        "README_复算及证据分级.md": "Q-MATH/reports/v16.28/README_复算及证据分级.md",
+        "kernel_cache.json": "Q-MATH/results/v16.28/kernel_cache.json",
+        "make_qmath_16_28_report.py": "Q-MATH/code/v16.28/make_qmath_16_28_report.py",
+        "q16_27_reference/qmath_16_26_cubic_audit.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py",
+        "q16_27_reference/qmath_16_27_retarded_kernel.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "q16_27_reference/qmath_16_27_shape_scan.json": "Q-MATH/results/v16.29/q16_27_reference/qmath_16_27_shape_scan.json",
+        "q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "q16_27_reference/source/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "qmath_16_28_classical_dual_audit.py": "Q-MATH/code/v16.28/qmath_16_28_classical_dual_audit.py",
+        "qmath_16_28_classical_dual_bound.png": "Q-MATH/results/v16.28/qmath_16_28_classical_dual_bound.png",
+        "qmath_16_28_classical_dual_results.json": "Q-MATH/results/v16.28/qmath_16_28_classical_dual_results.json",
+        "qmath_16_28_inverse_condition.png": "Q-MATH/results/v16.28/qmath_16_28_inverse_condition.png",
+        "qmath_16_28_magnetic_dark_channel.png": "Q-MATH/results/v16.28/qmath_16_28_magnetic_dark_channel.png",
+        "qmath_16_28_multimode_screen.py": "Q-MATH/code/v16.28/qmath_16_28_multimode_screen.py",
+        "qmath_16_28_photon_normalized_results.json": "Q-MATH/results/v16.30/qmath_16_28_photon_normalized_results.json",
+        "qmath_16_28_photon_weighting.py": "Q-MATH/code/v16.28/qmath_16_28_photon_weighting.py",
+        "qmath_16_28_results.json": "Q-MATH/results/v16.28/qmath_16_28_results.json",
+        "SHA256_manifest.json": "Q-MATH/results/v16.28/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.28_双模BSV磁性频率选择性与经典凸界.docx",
+          "sha256": "9dc98546b9746cbce9e2c4cf85487d9c27cedba8e77d44dca0269c6fb3d64eac",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.27": {
+      "source": "Q-MATH-16.27.zip",
+      "sha256": "9a416bd4e8c1a7529e54d5694d8dfa222151d0f8d411d1d545f69380ddfab4f9",
+      "files": {
+        "Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.md": "Q-MATH/reports/v16.27/Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.md",
+        "Q-MATH-16.28_下一步研究任务.md": "Q-MATH/reports/v16.27/Q-MATH-16.28_下一步研究任务.md",
+        "README_复算与证据范围.md": "Q-MATH/reports/v16.27/README_复算与证据范围.md",
+        "retarded_BZ_convergence.png": "Q-MATH/results/v16.27/retarded_BZ_convergence.png",
+        "magnetic_frequency_shape.png": "Q-MATH/results/v16.27/magnetic_frequency_shape.png",
+        "soft_frequency_Ward_check.png": "Q-MATH/results/v16.27/soft_frequency_Ward_check.png",
+        "qmath_16_27_reproduce.py": "Q-MATH/code/v16.27/qmath_16_27_reproduce.py",
+        "qmath_16_27_two_tone.py": "Q-MATH/code/v16.27/qmath_16_27_two_tone.py",
+        "qmath_16_27_retarded_kernel.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "qmath_16_26_cubic_audit.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py",
+        "qmath_16_26_run_verified.py": "Q-MATH/code/v16.27/qmath_16_26_run_verified.py",
+        "qmath_16_27_results.json": "Q-MATH/results/v16.27/qmath_16_27_results.json",
+        "qmath_16_27_retarded_results.json": "Q-MATH/results/v16.27/qmath_16_27_retarded_results.json",
+        "qmath_16_27_shape_scan.json": "Q-MATH/results/v16.29/q16_27_reference/qmath_16_27_shape_scan.json",
+        "qmath_16_27_contact_ward_checks.json": "Q-MATH/results/v16.27/qmath_16_27_contact_ward_checks.json",
+        "qmath_16_27_mixed_timeseries.npz": "Q-MATH/results/v16.27/qmath_16_27_mixed_timeseries.npz",
+        "source/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "source/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "source/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "SHA256_manifest.json": "Q-MATH/results/v16.27/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.docx",
+          "sha256": "cce9ec6decad074787a86d3df4e5cb64f421845d5ae78ec457ec24ce6eb66fab",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.26": {
+      "source": "Q-MATH-16.26.zip",
+      "sha256": "a9fa5ad1adb5139c27d38f75d2f6d4b8e1dec72f2c583deb1a526d9bb5c6aef4",
+      "files": {
+        "qmath_16_26_run_verified.py": "Q-MATH/code/v16.27/qmath_16_26_run_verified.py",
+        "Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.md": "Q-MATH/reports/v16.26/Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.md",
+        "README_QMATH_16_26_复算说明.md": "Q-MATH/reports/v16.26/README_QMATH_16_26_复算说明.md",
+        "qmath_16_26_cubic_bz_nonconvergence.png": "Q-MATH/results/v16.26/qmath_16_26_cubic_bz_nonconvergence.png",
+        "qmath_16_26_independent_method_comparison.png": "Q-MATH/results/v16.26/qmath_16_26_independent_method_comparison.png",
+        "qmath_16_26_verified_results.json": "Q-MATH/results/v16.26/qmath_16_26_verified_results.json",
+        "qmath_16_26_cubic_audit.py": "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py",
+        "qmath_16_26_primary_timeseries.npz": "Q-MATH/results/v16.26/qmath_16_26_primary_timeseries.npz",
+        "qmath_16_26_h2_bz_nonconvergence.png": "Q-MATH/results/v16.26/qmath_16_26_h2_bz_nonconvergence.png",
+        "source/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "source/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "source/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "SHA256_manifest.json": "Q-MATH/results/v16.26/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.docx",
+          "sha256": "9726a1998ba50059e0884ce1d45bfcf6b782dae3d73f0b9b5779034deba77519",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "baseline_16_25.zip",
+          "sha256": "76c84ba450a9b22a63b2b7cddee62046a0400fc40ba779ace89f0668344a35b4",
+          "reason": "nested package catalogued",
+          "package": "v16.25"
+        }
+      ]
+    },
+    "v16.25": {
+      "source": "Q-MATH-16.26.zip!baseline_16_25.zip",
+      "sha256": "76c84ba450a9b22a63b2b7cddee62046a0400fc40ba779ace89f0668344a35b4",
+      "files": {
+        "Q-MATH-16.25/Q-MATH-16.25_动态Ward核与低能有效响应审计.md": "Q-MATH/reports/v16.25/Q-MATH-16.25/Q-MATH-16.25_动态Ward核与低能有效响应审计.md",
+        "Q-MATH-16.25/README_复现说明.md": "Q-MATH/reports/v16.25/Q-MATH-16.25/README_复现说明.md",
+        "Q-MATH-16.25/SHA256_manifest.json": "Q-MATH/results/v16.25/Q-MATH-16.25/SHA256_manifest.json",
+        "Q-MATH-16.25/base/Q-MATH-16.24_共享量子场与静态Ward求和规则.md": "Q-MATH/reports/v16.24/Q-MATH-16.24_共享量子场与静态Ward求和规则.md",
+        "Q-MATH-16.25/base/README_研究复现说明.md": "Q-MATH/reports/v16.24/README_研究复现说明.md",
+        "Q-MATH-16.25/base/SHA256_manifest.json": "Q-MATH/results/v16.24/SHA256_manifest.json",
+        "Q-MATH-16.25/base/qmath_16_24_make_figures.py": "Q-MATH/code/v16.24/qmath_16_24_make_figures.py",
+        "Q-MATH-16.25/base/qmath_16_24_manybody_crosscheck.json": "Q-MATH/results/v16.24/qmath_16_24_manybody_crosscheck.json",
+        "Q-MATH-16.25/base/qmath_16_24_manybody_crosscheck.py": "Q-MATH/code/v16.24/qmath_16_24_manybody_crosscheck.py",
+        "Q-MATH-16.25/base/qmath_16_24_regression_tests.py": "Q-MATH/code/v16.24/qmath_16_24_regression_tests.py",
+        "Q-MATH-16.25/base/qmath_16_24_shared_pair_cavity.py": "Q-MATH/code/v16.24/qmath_16_24_shared_pair_cavity.py",
+        "Q-MATH-16.25/base/qmath_16_24_shared_pair_toy_results.json": "Q-MATH/results/v16.24/qmath_16_24_shared_pair_toy_results.json",
+        "Q-MATH-16.25/base/qmath_16_24_twist_and_stiffness.json": "Q-MATH/results/v16.24/qmath_16_24_twist_and_stiffness.json",
+        "Q-MATH-16.25/base/qmath_16_24_twist_and_stiffness.py": "Q-MATH/code/v16.24/qmath_16_24_twist_and_stiffness.py",
+        "Q-MATH-16.25/base/qmath_16_24_ward_sumrule.py": "Q-MATH/code/v16.24/qmath_16_24_ward_sumrule.py",
+        "Q-MATH-16.25/base/qmath_16_24_ward_sumrule_results.json": "Q-MATH/results/v16.24/qmath_16_24_ward_sumrule_results.json",
+        "Q-MATH-16.25/base/shared_pair_toy_fock_convergence.png": "Q-MATH/results/v16.24/shared_pair_toy_fock_convergence.png",
+        "Q-MATH-16.25/base/source/deps/q19/qmath_16_19_quantum_pump.py": "Q-MATH/code/v16.24/source/deps/q19/qmath_16_19_quantum_pump.py",
+        "Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "Q-MATH-16.25/base/source/deps/q19/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.25/base/source/deps/q19/reference_q167/q167_slater_condon_direct.py": "Q-MATH/code/v16.24/source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "Q-MATH-16.25/base/source/deps/qmath_16_22_projected_pump.py": "Q-MATH/code/v16.24/source/deps/qmath_16_22_projected_pump.py",
+        "Q-MATH-16.25/base/ward_static_virtual_truncation.png": "Q-MATH/results/v16.24/ward_static_virtual_truncation.png",
+        "Q-MATH-16.25/qmath_16_25_bz_convergence.png": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_bz_convergence.png",
+        "Q-MATH-16.25/qmath_16_25_dynamic_kernel_comparison.png": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_dynamic_kernel_comparison.png",
+        "Q-MATH-16.25/qmath_16_25_dynamic_ward.py": "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_dynamic_ward.py",
+        "Q-MATH-16.25/qmath_16_25_omitted_channel_share.png": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_omitted_channel_share.png",
+        "Q-MATH-16.25/qmath_16_25_parameter_scan.py": "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_parameter_scan.py",
+        "Q-MATH-16.25/qmath_16_25_regression_results.json": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_regression_results.json",
+        "Q-MATH-16.25/qmath_16_25_regression_tests.py": "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_regression_tests.py",
+        "Q-MATH-16.25/qmath_16_25_retarded_downfolding.py": "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_retarded_downfolding.py",
+        "Q-MATH-16.25/qmath_16_25_retarded_downfolding_results.json": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_retarded_downfolding_results.json",
+        "Q-MATH-16.25/qmath_16_25_static_subtracted_kernel.py": "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_static_subtracted_kernel.py",
+        "Q-MATH-16.25/qmath_16_25_static_subtracted_results.json": "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_static_subtracted_results.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip",
+          "sha256": "515bff165942096d63918fa9a630887c6f26f347a11fe3c4c53653c0efd7e07d",
+          "reason": "nested package catalogued",
+          "package": "v16.24"
+        },
+        {
+          "name": "Q-MATH-16.25/Q-MATH-16.25_动态Ward核与低能有效响应审计.docx",
+          "sha256": "843d743399fee7f5ab8468bb9c07e91682bed54aa2a1471fb6e58f5b99b53f57",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "Q-MATH-16.25/base/Q-MATH-16.24_共享量子场与静态Ward求和规则.docx",
+          "sha256": "8da282daab9c0815e6d3e5aa0b5c2853a53275f4ada7aa7ecad4b8a560dfb43d",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "Q-MATH-16.25/base/source/deps/q19/reference_q167/__pycache__/q167_m0_three_photon_T.cpython-313.pyc",
+          "sha256": "675627fef4adf47efd05757417612dcf2f3ed533c91852959bf993aeb39db32e",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/__pycache__/q8_m0_model.cpython-313.pyc",
+          "sha256": "704b90b63b3aa43588ce6a2f7fc66f0b66f832394d476320936f539fff1d0317",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/__pycache__/q8_tperp_static_audit.cpython-313.pyc",
+          "sha256": "c39ed5c3e71ad569c909e1e2c53c842d760b1e13cb8198519aab1a798eeac0a5",
+          "reason": "cache-or-hidden"
+        }
+      ]
+    },
+    "v16.24": {
+      "source": "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip",
+      "sha256": "515bff165942096d63918fa9a630887c6f26f347a11fe3c4c53653c0efd7e07d",
+      "files": {
+        "ward_static_virtual_truncation.png": "Q-MATH/results/v16.24/ward_static_virtual_truncation.png",
+        "README_研究复现说明.md": "Q-MATH/reports/v16.24/README_研究复现说明.md",
+        "qmath_16_24_manybody_crosscheck.py": "Q-MATH/code/v16.24/qmath_16_24_manybody_crosscheck.py",
+        "qmath_16_24_shared_pair_toy_results.json": "Q-MATH/results/v16.24/qmath_16_24_shared_pair_toy_results.json",
+        "Q-MATH-16.24_共享量子场与静态Ward求和规则.md": "Q-MATH/reports/v16.24/Q-MATH-16.24_共享量子场与静态Ward求和规则.md",
+        "qmath_16_24_manybody_crosscheck.json": "Q-MATH/results/v16.24/qmath_16_24_manybody_crosscheck.json",
+        "qmath_16_24_regression_tests.py": "Q-MATH/code/v16.24/qmath_16_24_regression_tests.py",
+        "shared_pair_toy_fock_convergence.png": "Q-MATH/results/v16.24/shared_pair_toy_fock_convergence.png",
+        "qmath_16_24_make_figures.py": "Q-MATH/code/v16.24/qmath_16_24_make_figures.py",
+        "qmath_16_24_shared_pair_cavity.py": "Q-MATH/code/v16.24/qmath_16_24_shared_pair_cavity.py",
+        "qmath_16_24_twist_and_stiffness.py": "Q-MATH/code/v16.24/qmath_16_24_twist_and_stiffness.py",
+        "qmath_16_24_ward_sumrule.py": "Q-MATH/code/v16.24/qmath_16_24_ward_sumrule.py",
+        "qmath_16_24_twist_and_stiffness.json": "Q-MATH/results/v16.24/qmath_16_24_twist_and_stiffness.json",
+        "qmath_16_24_ward_sumrule_results.json": "Q-MATH/results/v16.24/qmath_16_24_ward_sumrule_results.json",
+        "source/deps/qmath_16_22_projected_pump.py": "Q-MATH/code/v16.24/source/deps/qmath_16_22_projected_pump.py",
+        "source/deps/q19/qmath_16_19_quantum_pump.py": "Q-MATH/code/v16.24/source/deps/q19/qmath_16_19_quantum_pump.py",
+        "source/deps/q19/reference_q167/q167_slater_condon_direct.py": "Q-MATH/code/v16.24/source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "source/deps/q19/reference_q167/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "source/deps/q19/reference_q167/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "source/deps/q19/reference_q167/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "source/deps/q19/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "SHA256_manifest.json": "Q-MATH/results/v16.24/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.24_共享量子场与静态Ward求和规则.docx",
+          "sha256": "8da282daab9c0815e6d3e5aa0b5c2853a53275f4ada7aa7ecad4b8a560dfb43d",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.18": {
+      "source": "Q-MATH-16.18.zip",
+      "sha256": "00418e30a6ad4d5c8de04729bd5d1fc57eded246ea564d46acdad669653b5445",
+      "files": {
+        "Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.md": "Q-MATH/reports/v16.18/Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.md",
+        "Q-MATH-16.19_下一步严格数学与M0验证.md": "Q-MATH/reports/v16.19/Q-MATH-16.19_下一步严格数学与M0验证.md",
+        "README_复现证据与文件说明.md": "Q-MATH/reports/v16.18/README_复现证据与文件说明.md",
+        "qmath_16_18_keldysh_determinant.py": "Q-MATH/code/v16.18/qmath_16_18_keldysh_determinant.py",
+        "qmath_16_18_causal_rank_and_inverse.py": "Q-MATH/code/v16.18/qmath_16_18_causal_rank_and_inverse.py",
+        "qmath_16_18_quick_verify.py": "Q-MATH/code/v16.18/qmath_16_18_quick_verify.py",
+        "qmath_16_18_compile_results.py": "Q-MATH/code/v16.18/qmath_16_18_compile_results.py",
+        "qmath_16_18_results.json": "Q-MATH/results/v16.18/qmath_16_18_results.json",
+        "qmath_16_18_causal_partial.json": "Q-MATH/results/v16.18/qmath_16_18_causal_partial.json",
+        "qmath_16_18_final_results.json": "Q-MATH/results/v16.18/qmath_16_18_final_results.json",
+        "qmath_16_18_causal_M0_BZ.png": "Q-MATH/results/v16.18/qmath_16_18_causal_M0_BZ.png",
+        "qmath_16_18_inverse_and_rank.png": "Q-MATH/results/v16.18/qmath_16_18_inverse_and_rank.png",
+        "work/src_0/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "work/src_0/q167_slater_condon_direct.py": "Q-MATH/code/v16.24/source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "work/src_0/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "work/src_0/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "work/src_0/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "SHA256_manifest.json": "Q-MATH/results/v16.18/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.docx",
+          "sha256": "50b4a82e5bef5401ed98ae5da6f7e9b2b1739c0dd26e0010adb4b334d9d5bf02",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.16": {
+      "source": "Q-MATH-16.16.zip",
+      "sha256": "1b79211c5c4a3a826e818356cad21b7ac709c84fa20d6fb4d5fdfc47321c415e",
+      "files": {
+        "Q-MATH-16.16_数学定理_能量壳与经典负控.md": "Q-MATH/reports/v16.16/Q-MATH-16.16数学.md",
+        "README_复现实验与下一步.md": "Q-MATH/reports/v16.16/README_复现实验与下一步.md",
+        "qmath_16_16_bz_nonconvergence.png": "Q-MATH/results/v16.16/qmath_16_16_bz_nonconvergence.png",
+        "qmath_16_16_classical_theorem.wl": "Q-MATH/code/v16.16/qmath_16_16_classical_theorem.wl",
+        "qmath_16_16_convergence.py": "Q-MATH/code/v16.16/qmath_16_16_convergence.py",
+        "qmath_16_16_convergence_results.json": "Q-MATH/results/v16.16/qmath_16_16_convergence_results.json",
+        "qmath_16_16_invariant_results.json": "Q-MATH/results/v16.16/qmath_16_16_invariant_results.json",
+        "qmath_16_16_invariant_tests.py": "Q-MATH/code/v16.16/qmath_16_16_invariant_tests.py",
+        "qmath_16_16_magnetism_null.json": "Q-MATH/results/v16.16/qmath_16_16_magnetism_null.json",
+        "qmath_16_16_magnetism_null.py": "Q-MATH/code/v16.16/qmath_16_16_magnetism_null.py",
+        "qmath_16_16_nonmagnetic_k_control.json": "Q-MATH/results/v16.16/qmath_16_16_nonmagnetic_k_control.json",
+        "qmath_16_16_nonmagnetic_k_control.py": "Q-MATH/code/v16.16/qmath_16_16_nonmagnetic_k_control.py",
+        "qmath_16_16_on_shell_m0.py": "Q-MATH/code/v16.16/qmath_16_16_on_shell_m0.py",
+        "qmath_16_16_on_shell_results.json": "Q-MATH/results/v16.16/qmath_16_16_on_shell_results.json",
+        "src/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "src/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "src/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "src/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "SHA256_manifest.json": "Q-MATH/results/v16.16/SHA256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.16_数学定理_能量壳与经典负控.docx",
+          "sha256": "d607750f96d6610060fef0dcd0c1e55af4dba614284f5915e1f0b7c7b7719e09",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v16.15": {
+      "source": "Q-MATH-16.15.zip",
+      "sha256": "96d816af5a64bfc57d61fda80fc06245a99a0b35c16a2fac493a85adaed31e62",
+      "files": {
+        "Q-MATH-16.15_自旋空间复合对称性_量子光Ward恒等式与谱秩审计.md": "Q-MATH/reports/v16.15/Q-MATH-16.15_自旋空间复合对称性_量子光Ward恒等式与谱秩审计.md",
+        "README_研究接续与验收说明.md": "Q-MATH/reports/v16.15/README_研究接续与验收说明.md",
+        "log_deriv.txt": "Q-MATH/reports/v16.15/log_deriv.txt",
+        "log_five.txt": "Q-MATH/reports/v16.15/log_five.txt",
+        "log_freq.txt": "Q-MATH/reports/v16.15/log_freq.txt",
+        "log_soc.txt": "Q-MATH/reports/v16.15/log_soc.txt",
+        "qmath_16_15_five_soc_check.py": "Q-MATH/code/v16.15/qmath_16_15_five_soc_check.py",
+        "qmath_16_15_five_soc_results.json": "Q-MATH/results/v16.15/qmath_16_15_five_soc_results.json",
+        "qmath_16_15_frequency_scan_trap.json": "Q-MATH/results/v16.15/qmath_16_15_frequency_scan_trap.json",
+        "qmath_16_15_frequency_scan_trap.py": "Q-MATH/code/v16.15/qmath_16_15_frequency_scan_trap.py",
+        "qmath_16_15_parity_count_toy.json": "Q-MATH/results/v16.15/qmath_16_15_parity_count_toy.json",
+        "qmath_16_15_parity_count_toy.py": "Q-MATH/code/v16.15/qmath_16_15_parity_count_toy.py",
+        "qmath_16_15_soc_derivative.json": "Q-MATH/results/v16.15/qmath_16_15_soc_derivative.json",
+        "qmath_16_15_soc_derivative.py": "Q-MATH/code/v16.15/qmath_16_15_soc_derivative.py",
+        "qmath_16_15_soc_symmetry.py": "Q-MATH/code/v16.15/qmath_16_15_soc_symmetry.py",
+        "qmath_16_15_soc_symmetry_results.json": "Q-MATH/results/v16.15/qmath_16_15_soc_symmetry_results.json",
+        "qmath_16_15_vertices_symmetry.json": "Q-MATH/results/v16.15/qmath_16_15_vertices_symmetry.json",
+        "qmath_16_15_vertices_symmetry.py": "Q-MATH/code/v16.15/qmath_16_15_vertices_symmetry.py",
+        "soc_gate_three_photon.png": "Q-MATH/results/v16.15/soc_gate_three_photon.png",
+        "soc_slope_bz_warning.png": "Q-MATH/results/v16.15/soc_slope_bz_warning.png",
+        "sources/QMATH_16_14/Q16_13_original/qmath_16_13_singlemode_five_photon.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/qmath_16_13_singlemode_five_photon.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "sources/QMATH_16_14/Q16_13_original/src_0/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_exact_one_ph_reduction.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_exact_one_ph_reduction.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_figures.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_figures.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_frequency_scan.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_frequency_scan.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_full_peierls_weak_coupling.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_full_peierls_weak_coupling.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_independent_photon_check.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_independent_photon_check.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_m0_three_photon_T.py": "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_reduced_bz_scan.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_reduced_bz_scan.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_slater_condon_direct.py": "Q-MATH/code/v16.24/source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "sources/QMATH_16_14/Q16_13_original/src_0/q167_verify_saved.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_verify_saved.py",
+        "sources/QMATH_16_14/qmath_16_14_math_and_m0.py": "Q-MATH/code/v16.15/sources/QMATH_16_14/qmath_16_14_math_and_m0.py",
+        "sha256_manifest.json": "Q-MATH/results/v16.15/sha256_manifest.json"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-16.15_自旋空间复合对称性_量子光Ward恒等式与谱秩审计.docx",
+          "sha256": "68ddd316fd06d6116bcd0a302bc6ef6df7a8e5cfbb7ce8d492e9b95b1073f185",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "v15": {
+      "source": "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip",
+      "sha256": "b3684dd05f9011d0b8689d588e33ddca7921731c7331cf5f07ac3bf96e117d0d",
+      "files": {
+        "Q-MATH-15/q15_duhamel_probe_23.json": "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_23.json",
+        "Q-MATH-15/q15_global_affine_witness.png": "Q-MATH/results/v15/Q-MATH-15/q15_global_affine_witness.png",
+        "Q-MATH-15/q15_classical_bounds.png": "Q-MATH/results/v15/Q-MATH-15/q15_classical_bounds.png",
+        "Q-MATH-15/q15_duhamel_probe_17.json": "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_17.json",
+        "Q-MATH-15/q15_source_norm_bound.py": "Q-MATH/code/v15/Q-MATH-15/q15_source_norm_bound.py",
+        "Q-MATH-15/shared_2k_5.json": "Q-MATH/results/v15/Q-MATH-15/shared_2k_5.json",
+        "Q-MATH-15/q15_duhamel_tail_certificate.json": "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_tail_certificate.json",
+        "Q-MATH-15/shared_2k_7.json": "Q-MATH/results/v15/Q-MATH-15/shared_2k_7.json",
+        "Q-MATH-15/q15_duhamel_residual_probe.py": "Q-MATH/code/v15/Q-MATH-15/q15_duhamel_residual_probe.py",
+        "Q-MATH-15/q15_duhamel_probe_23_extra30.json": "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_23_extra30.json",
+        "Q-MATH-15/SHA256_manifest.txt": "Q-MATH/reports/v15/Q-MATH-15/SHA256_manifest.txt",
+        "Q-MATH-15/README_复现与证据分级.txt": "Q-MATH/reports/v15/Q-MATH-15/README_复现与证据分级.txt",
+        "Q-MATH-15/q15_concave_envelope_exploration.py": "Q-MATH/code/v15/Q-MATH-15/q15_concave_envelope_exploration.py",
+        "Q-MATH-15/q15_duhamel_tail_certificate.py": "Q-MATH/code/v15/Q-MATH-15/q15_duhamel_tail_certificate.py",
+        "Q-MATH-15/Q-MATH-15_数学框架纠错_经典光最优界_共享k验证_研究报告.md": "Q-MATH/reports/v15/Q-MATH-15/Q-MATH-15_数学框架纠错_经典光最优界_共享k验证_研究报告.md",
+        "Q-MATH-15/single_pair_32.json": "Q-MATH/results/v15/Q-MATH-15/single_pair_32.json",
+        "Q-MATH-15/q15_single_pair_lowfock.py": "Q-MATH/code/v15/Q-MATH-15/q15_single_pair_lowfock.py",
+        "Q-MATH-15/q15_shared_lowfock.py": "Q-MATH/code/v15/Q-MATH-15/q15_shared_lowfock.py",
+        "Q-MATH-15/q15_figures.py": "Q-MATH/code/v15/Q-MATH-15/q15_figures.py",
+        "Q-MATH-15/q15_certified_results.json": "Q-MATH/results/v15/Q-MATH-15/q15_certified_results.json",
+        "Q-MATH-15/q15_null_coupling.py": "Q-MATH/code/v15/Q-MATH-15/q15_null_coupling.py",
+        "Q-MATH-15/q15_audit_certificate.py": "Q-MATH/code/v15/Q-MATH-15/q15_audit_certificate.py",
+        "Q-MATH-15/q15_duhamel_probe.json": "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe.json",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nplus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nplus.npz",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nminus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nminus.npz",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nminus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nminus.npz",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_response_kernel.py": "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_response_kernel.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_M0_BSV_weak_radiation.py": "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_M0_BSV_weak_radiation.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nplus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nplus.npz",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/qmath04_two_pol.py": "Q-MATH/code/v05/QMATH05_shared/qmath04_two_pol.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/qmath07_projected_shared.py": "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/deps/qmath07_projected_shared.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/q8_m0_model.py": "tools/b0_small_model/q8_m0_model.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/qmath03_exact_unitary.py": "Q-MATH/code/v05/QMATH05_shared/qmath03_exact_unitary.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/spin_exterior_solver.py": "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/deps/spin_exterior_solver.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/q8_tperp_static_audit.py": "tools/b0_small_model/q8_tperp_static_audit.py",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/CrI3_scf_soc_a1h_clean.in": "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-15/QMATH13_M0_H2H4/deps/shared.py": "Q-MATH/code/v05/QMATH05_shared/shared.py",
+        "Q-MATH-15/data/q13_kernel_23_96_Nminus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nminus.npz",
+        "Q-MATH-15/data/q13_kernel_23_96_Nplus.npz": "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nplus.npz"
+      },
+      "excluded": [
+        {
+          "name": "Q-MATH-15/q15_audit_run.log",
+          "sha256": "51ff63932eba6afe20a656d2648a4e9f19aafe1a0590849bb137d7b033513835",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "Q-MATH-15/__pycache__/q15_duhamel_residual_probe.cpython-313.pyc",
+          "sha256": "d87ae3ebd612ee813f9cd2e0c3fca8bb54b885f170286493d3f5edbdb4eb66ba",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/__pycache__/q13_M0_BSV_weak_radiation.cpython-313.pyc",
+          "sha256": "8c74d0c6bbccb7d26fa4df2211021f9e4b761657050715f4a6a9e22f6daaef25",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/qmath04_two_pol.cpython-313.pyc",
+          "sha256": "59ec6612d905173e1a27c095663baa8387102c43e32b0ce41777559299a79bd7",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/q8_tperp_static_audit.cpython-313.pyc",
+          "sha256": "41523badf14236c8ba326fd813285ff54bb42248cef784ce9fe057e009d2945c",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/q8_m0_model.cpython-313.pyc",
+          "sha256": "1b571cc41ab427ba3dfe316ad98a30925e1ca13a11659f209a4575599d9e60fd",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/qmath07_projected_shared.cpython-313.pyc",
+          "sha256": "b1c3a18f1948b690e07b6964f2e432b150416c6922d054166b61fd12864c3e2c",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/shared.cpython-313.pyc",
+          "sha256": "6dd073e7db117921255458109186b72e86eb3509e8df856b9a61baed16a1e3d8",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/spin_exterior_solver.cpython-313.pyc",
+          "sha256": "dabcd09bbcc3bac230ca0061ed35b5e6620e6c4d6491e96f9279fb5c0661dec9",
+          "reason": "cache-or-hidden"
+        },
+        {
+          "name": "Q-MATH-15/QMATH13_M0_H2H4/deps/__pycache__/qmath03_exact_unitary.cpython-313.pyc",
+          "sha256": "d4ddfe3f6c31004b5c19ab969b6e9f3794ba504e48ab638963c0b56f74796a32",
+          "reason": "cache-or-hidden"
+        }
+      ]
+    },
+    "history-to-16.11": {
+      "source": "Q-MATH_完整研究接续包_截至16_11.zip",
+      "sha256": "1575d35daec2dc3ecdca0f69fd22d5ee4e0c84fdaebd9a29ca0661ac4e780154",
+      "files": {
+        "QMATH_研究总档案_完整恢复至16_10.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_01.md",
+        "Q-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_03.md",
+        "Q-MATH-16.11_早期底稿文献AI与能量加权经典界.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_04.md",
+        "qmath_16_11_weighted_bound.py": "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_06.py",
+        "qmath_16_11_weighted_bound_results.json": "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_07.json"
+      },
+      "excluded": [
+        {
+          "name": "QMATH_研究总档案_完整恢复至16_10.docx",
+          "sha256": "7735ce61bddaf608e16afbabf93ad805a2492901567129b6e13a2b288b5b2d95",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "QMATH_研究总档案_早期补全及16_10研究接续包.zip",
+          "sha256": "c937ceb81b5a66e68339e64e57c76a58bc1506897daeca01fed432b5e939b4e6",
+          "reason": "nested package catalogued",
+          "package": "history-to-16.10"
+        },
+        {
+          "name": "Q-MATH-16.11_早期底稿文献AI与能量加权经典界.docx",
+          "sha256": "76366b661ab28054ab16707883884d629924bc9e58614ab766de3ece47dee014",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    },
+    "history-to-16.10": {
+      "source": "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip",
+      "sha256": "c937ceb81b5a66e68339e64e57c76a58bc1506897daeca01fed432b5e939b4e6",
+      "files": {
+        "QMATH_研究总档案_完整恢复至16_10.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_01.md",
+        "Q-MATH-早期档案_01到05_来源与纠错.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_02.md",
+        "Q-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_03.md",
+        "qmath_16_10_reproduce.py": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_04.py",
+        "qmath_16_10_verification.json": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_05.json",
+        "新对话接续说明_16_10.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_06.md",
+        "QMATH_研究总档案_截至16_9.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_07.md"
+      },
+      "excluded": [
+        {
+          "name": "QMATH_研究总档案_完整恢复至16_10.docx",
+          "sha256": "7735ce61bddaf608e16afbabf93ad805a2492901567129b6e13a2b288b5b2d95",
+          "reason": "format-not-selected (original retained externally)"
+        },
+        {
+          "name": "QMATH_量子光磁性HHG_总档案与16_9接续包.zip",
+          "sha256": "c2cf3cd608638920ae59d7b8875e1ec0d7a47b9b2ecddc1b537caa2c01008660",
+          "reason": "nested package catalogued",
+          "package": "history-to-16.9"
+        }
+      ]
+    },
+    "history-to-16.9": {
+      "source": "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip",
+      "sha256": "c2cf3cd608638920ae59d7b8875e1ec0d7a47b9b2ecddc1b537caa2c01008660",
+      "files": {
+        "QMATH_τáöτ⌐╢µÇ╗µíúµíê_µê¬Φç│16_9.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_07.md",
+        "µû░σ»╣Φ»¥µÄÑτ╗¡Φ»┤µÿÄ.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_02.md",
+        "README_τáöτ⌐╢σîàΦ»┤µÿÄ.md": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_03.md",
+        "qmath_16_9_verify.py": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_04.py",
+        "qmath_16_9_verification.json": "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_05.json"
+      },
+      "excluded": [
+        {
+          "name": "QMATH_τáöτ⌐╢µÇ╗µíúµíê_µê¬Φç│16_9.docx",
+          "sha256": "baf469a7da2186e8e53086c4832dc3f293d9312e71e9cfbbdd6c7b19f22927a6",
+          "reason": "format-not-selected (original retained externally)"
+        }
+      ]
+    }
+  },
+  "artifacts": {
+    "tools/b0_small_model/qmath_r1_compact.py": {
+      "sha256": "cae69a51cbafa9781b34f80d750d76b15c1d3255b20bd10f1d32b363eeeea6ff",
+      "bytes": 3745,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/qmath_r1_compact.py"
+      ]
+    },
+    "tools/b0_small_model/qmath_r1_extract_h2.py": {
+      "sha256": "67be5420d01df0ccef7ff08fc3be03a6211da630fa2f7acd78c6ccc4ef759d7e",
+      "bytes": 4285,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/qmath_r1_extract_h2.py"
+      ]
+    },
+    "tools/b0_small_model/qmath_r1_independent_recompute.py": {
+      "sha256": "1befedbec73c84cafd073d1cfa9dc62e1f3e270ebe2e81d4f12c33d3c6acf45d",
+      "bytes": 15211,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/qmath_r1_independent_recompute.py"
+      ]
+    },
+    "tools/b0_small_model/qmath_r1_readonly_audit.py": {
+      "sha256": "189b7bdb5e378fe8d096f8d06ef665d4c722bae5632a28631d396835376c7a0f",
+      "bytes": 5227,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/qmath_r1_readonly_audit.py"
+      ]
+    },
+    "tools/b0_small_model/q8_m0_model.py": {
+      "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+      "bytes": 17386,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/q8_m0_model.py",
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/q8_m0_model.py",
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!q8_m0_model.py",
+        "Q-MATH-16.30.zip!q16_27_reference/source/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.29.zip!q16_27_reference/source/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.28.zip!q16_27_reference/source/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.27.zip!source/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.26.zip!source/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/q8_m0_model.py",
+        "Q-MATH-16.18.zip!work/src_0/deps/q8_m0_model.py",
+        "Q-MATH-16.16.zip!src/deps/q8_m0_model.py",
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/deps/q8_m0_model.py",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/q8_m0_model.py",
+        "q8_m0_model.py"
+      ]
+    },
+    "tools/b0_small_model/q8_tperp_static_audit.py": {
+      "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+      "bytes": 37002,
+      "kind": "code",
+      "origins": [
+        "existing-repository:tools/b0_small_model/q8_tperp_static_audit.py",
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/q8_tperp_static_audit.py",
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!q8_tperp_static_audit.py",
+        "Q-MATH-16.30.zip!q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.29.zip!q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.28.zip!q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.27.zip!source/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.26.zip!source/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.18.zip!work/src_0/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.16.zip!src/deps/q8_tperp_static_audit.py",
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/deps/q8_tperp_static_audit.py",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/q8_tperp_static_audit.py",
+        "q8_tperp_static_audit.py"
+      ]
+    },
+    "docs/04_BSV量子光/线Q_QMATH_R1.5_正P经典可达界_20261023.md": {
+      "sha256": "9ca4d06ee65416488167eee0208057e2193b53371fb9327f28629aeadbc42cdf",
+      "bytes": 15140,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/线Q_QMATH_R1.5_正P经典可达界_20261023.md"
+      ]
+    },
+    "docs/04_BSV量子光/线Q_QMATH数学成果收割_响应算符与正P经典界_R1.md": {
+      "sha256": "c7ee8b3eaacf001f3b0e49c5ddf3f03c49f5670885ce3627d5a898819d91a0cd",
+      "bytes": 23654,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/线Q_QMATH数学成果收割_响应算符与正P经典界_R1.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_link_audit.json": {
+      "sha256": "d5930921e931ede62b0d71578fcdd1371769bba045e6dac0f85f56f8c2ba1183",
+      "bytes": 6597,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_link_audit.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_r1_h2_extract.json": {
+      "sha256": "1d0581affd9fe65e21339b03b7c7b12384d62762c91275d93883f6d429c40823",
+      "bytes": 744188,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_r1_h2_extract.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_r1_independent.json": {
+      "sha256": "8e997a74167dc0707b8a482b091e94738c01b9f1cda7ef8c064429e95aa63c99",
+      "bytes": 12294,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_r1_independent.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_r1_recompute.json": {
+      "sha256": "3d97fe5e57fa26c310cc60d0c1d929a2f4e7a7887ce197bf84485eb0db140d77",
+      "bytes": 241596,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_r1_recompute.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_r1_compact.txt": {
+      "sha256": "8e0df6a8aa340f90d0852bca2c6737f932669b6c6eaf4c9556807a932d39236d",
+      "bytes": 48649,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_r1_compact.txt"
+      ]
+    },
+    "docs/04_BSV量子光/PHYSICS_CONTRACT.md": {
+      "sha256": "a574a18744f8d64521cfa4b91a919e161b6a57e1174d0b3b7825fa0883284bf6",
+      "bytes": 5393,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/PHYSICS_CONTRACT.md"
+      ]
+    },
+    "docs/04_BSV量子光/SOURCES_PROVENANCE.md": {
+      "sha256": "41de16962f31255d60c644d76ec0bef1b35b1643153280bf417ac5fd8a25dd1e",
+      "bytes": 10448,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/SOURCES_PROVENANCE.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_01.md": {
+      "sha256": "c4bd87c96065ea7bbc028994b0a9ec2db73ff9805f4cbf68a9c7206607212cf4",
+      "bytes": 53746,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_01.md",
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/item_01.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_完整恢复至16_10.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_研究总档案_完整恢复至16_10.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_02.md": {
+      "sha256": "d52801a3ce056f4b91a66b723642d666d3caf3cd87f76a7ee8139fbd31ff0c77",
+      "bytes": 6274,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_02.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!Q-MATH-早期档案_01到05_来源与纠错.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_03.md": {
+      "sha256": "ccd63a9c0edde898abff6227b4f517c49eaf507e093af4821608811cea4cadcf",
+      "bytes": 17220,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_03.md",
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/item_03.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!Q-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!Q-MATH-16.10_二光子异常矩阵的严格经典仿真_能量壳禁戒_磁性张量判据.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_04.py": {
+      "sha256": "d14336af3c51677cfa26951e1cc624f0ce324fbb59406f66e97f0d1561007475",
+      "bytes": 4789,
+      "kind": "code",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_04.py",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!qmath_16_10_reproduce.py"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_05.json": {
+      "sha256": "2e307dbc6af89062b4bfdfc96cc34edf8c0f64e7f16ae301121006ff9b2e26f7",
+      "bytes": 2138,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_05.json",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!qmath_16_10_verification.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_06.md": {
+      "sha256": "7d4582e172805ca7bb3c8e8b8ec8521ba1a53893085654c0b1008b3e53364804",
+      "bytes": 4009,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_06.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!新对话接续说明_16_10.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_07.md": {
+      "sha256": "2d513bf46a68ba13b19cddcb97ce73f665689a12403bf07555e95bd7d4334c52",
+      "bytes": 30045,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_07.md",
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_01.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_研究总档案_截至16_9.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip!QMATH_τáöτ⌐╢µÇ╗µíúµíê_µê¬Φç│16_9.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_manifest.json": {
+      "sha256": "0f8568de2f850ba80a83ec8fdade590d0ba7a9d1a87edd503d7498e9715dd483",
+      "bytes": 2210,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_10/inner_manifest.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_02.md": {
+      "sha256": "e107fe65abeaacd4af9299087e5b90ffff9c54cf30ac3a0520aa54f7732b0ff5",
+      "bytes": 3431,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_02.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip!µû░σ»╣Φ»¥µÄÑτ╗¡Φ»┤µÿÄ.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_03.md": {
+      "sha256": "2bc9af042a338c118903836907412a874074e82325cedc7165d70f90120676a7",
+      "bytes": 1489,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_03.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip!README_τáöτ⌐╢σîàΦ»┤µÿÄ.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_04.py": {
+      "sha256": "05ce98058e1e85daad09ebe776dad4f3fe5cf2c713a7d6c25e65414f08192fdb",
+      "bytes": 3832,
+      "kind": "code",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_04.py",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip!qmath_16_9_verify.py"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_05.json": {
+      "sha256": "6117dd92b4100eb8c2f37555a057d78d8081a44471e44823cd92123d0b2badc8",
+      "bytes": 1525,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/i9_05.json",
+        "Q-MATH_完整研究接续包_截至16_11.zip!QMATH_研究总档案_早期补全及16_10研究接续包.zip!QMATH_量子光磁性HHG_总档案与16_9接续包.zip!qmath_16_9_verification.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/inner_manifest.json": {
+      "sha256": "95c58b710eeb81e0de826c84fbd6c66bb46d71b000b9f1a30079e18c34ce8723",
+      "bytes": 1309,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/inner_16_9/inner_manifest.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_04.md": {
+      "sha256": "0b0a567de9ef5f084639654cc21bf510e54291a94d04d4fbdf7a1f2de8cb7104",
+      "bytes": 12359,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/item_04.md",
+        "Q-MATH_完整研究接续包_截至16_11.zip!Q-MATH-16.11_早期底稿文献AI与能量加权经典界.md"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_06.py": {
+      "sha256": "2af853f18302bd95ebfbb3dc53f8a7c8988a0de33f67ef8d85dce2b7f84586c1",
+      "bytes": 1409,
+      "kind": "code",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/item_06.py",
+        "Q-MATH_完整研究接续包_截至16_11.zip!qmath_16_11_weighted_bound.py"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/item_07.json": {
+      "sha256": "f50fe7435411078a23f914ed4fc744b22e44c787899f00765bd839c76ff7a3f7",
+      "bytes": 1286,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/item_07.json",
+        "Q-MATH_完整研究接续包_截至16_11.zip!qmath_16_11_weighted_bound_results.json"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/original_names.txt": {
+      "sha256": "131209c198473014b37e1263fb1c9eb9522396e4c5ad4cb70fb6247c4f3d3457",
+      "bytes": 1035,
+      "kind": "reports",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/original_names.txt"
+      ]
+    },
+    "docs/04_BSV量子光/qmath_pack_16_11_20261023/zip_manifest.json": {
+      "sha256": "22352e97788f988178e6f3cd16da7fa59ae8aa69a41ed8de3b31c7b716b49b8c",
+      "bytes": 2039,
+      "kind": "results",
+      "origins": [
+        "existing-repository:docs/04_BSV量子光/qmath_pack_16_11_20261023/zip_manifest.json"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/CrI3_scf_soc_a1h_clean.in": {
+      "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07",
+      "bytes": 2284,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/CrI3_scf_soc_a1h_clean.in",
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.30.zip!q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.29.zip!q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.28.zip!q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.27.zip!source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.26.zip!source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.18.zip!work/src_0/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.16.zip!src/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/deps/CrI3_scf_soc_a1h_clean.in",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/CrI3_scf_soc_a1h_clean.in"
+      ]
+    },
+    "Q-MATH/reports/v05/QMATH05_shared/README_QMATH05_数学审计与实算报告.md": {
+      "sha256": "02ecad9ceffa1a1081eebfc7cba93b508c1758e7f6f9bcfa6faffbe104767646",
+      "bytes": 11256,
+      "kind": "reports",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/README_QMATH05_数学审计与实算报告.md"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/SUMMARY.json": {
+      "sha256": "7aa7d7c525e546218903b7fa74dbcb8bb61079cf5da1dbe2b65ef2ae5eba569b",
+      "bytes": 4259,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/SUMMARY.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/cutoff_convergence.png": {
+      "sha256": "06a1d842302c7876001e16b031497e66865bbf1f0c1327b21f444aeb0aba33e5",
+      "bytes": 52273,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/cutoff_convergence.png"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/make_report.py": {
+      "sha256": "a0b7b90dc00c62c0ddad0503b882599ce28dcc3eca2007f2baa4a654fdb72e11",
+      "bytes": 3373,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/make_report.py"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/qmath03_exact_unitary.py": {
+      "sha256": "461b8e54764ba96243674c1bb52c1e4fd867d0753987616b52150d572fffd705",
+      "bytes": 7745,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/qmath03_exact_unitary.py",
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!qmath03_exact_unitary.py",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/qmath03_exact_unitary.py"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/qmath04_two_pol.py": {
+      "sha256": "598f9b14a367b056961085366f01855d8b944e082e6235d6a9325c16640d6ff4",
+      "bytes": 7516,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/qmath04_two_pol.py",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/qmath04_two_pol.py"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_coherent0_11_3_80.json": {
+      "sha256": "971b9b076a092857f0807cbd183afcfc2e069f3e0aec5a2c2fdf4e1a13f61340",
+      "bytes": 1645,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_coherent0_11_3_80.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_coherent_13_4_100.json": {
+      "sha256": "8ebbabb26499d1f220fa0d6d93099581d6b7db85e03526fd9c24cfd318181c54",
+      "bytes": 834,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_coherent_13_4_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_coherent_minus_13_4_100.json": {
+      "sha256": "a60663986b1bfc64f9d6c1cf04777572acfb922eab9b0f70469f2dd5b60e7114",
+      "bytes": 840,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_coherent_minus_13_4_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_even_11_3_80.json": {
+      "sha256": "3cb4988b2931e5c0914b3cfb8fdfd2e1efd4f347dd31b87309c961e4530a7998",
+      "bytes": 3195,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_even_11_3_80.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_inversion_11_3_80.json": {
+      "sha256": "f703c36ead83bfc664aedc9fee693bebd33863d328eadb11b53f99fde7643988",
+      "bytes": 3327,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_inversion_11_3_80.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_100.json": {
+      "sha256": "0db806de930a41f78dfd23f036d017c23b5917caf36e4a31a627d1811716abc8",
+      "bytes": 1668,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_11_3_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_120.json": {
+      "sha256": "3e4f01412806d686dd32f03c5e22b61784fad07cba7263f03309cf0ffec72802",
+      "bytes": 1668,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_11_3_120.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_3_80.json": {
+      "sha256": "c617b04b73ce3862fd215b5a00e8949eb52642b5c7ecef0b8066c666f822402b",
+      "bytes": 3298,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_11_3_80.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_11_4_100.json": {
+      "sha256": "80d7b1dd7d7e0c53ba44d5906f270997134f71e0699ba119e926b5b483754a18",
+      "bytes": 1666,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_11_4_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_13_3_100.json": {
+      "sha256": "38eb80f9cc856ac10d3b1d0bf73b749f1e506a4104e3c834507b02f3f38a3cd5",
+      "bytes": 1665,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_13_3_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_13_4_100.json": {
+      "sha256": "94cfda00dbdd984fec20b5df2cfe1c54748701e672fc864363c5270009b4c850",
+      "bytes": 1670,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_13_4_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_minus_15_4_100.json": {
+      "sha256": "0c03392f5fb5a24c2d457d52df1324dda105b092cea46ddde776e8c05d0d8bd1",
+      "bytes": 838,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_minus_15_4_100.json"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/results_seeded_plus_15_4_100.json": {
+      "sha256": "4532d5ad98e5cee07208fcd26a9b6c96be5ad0d8f0c339ec37eb3f9e50f1662f",
+      "bytes": 835,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/results_seeded_plus_15_4_100.json"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/run_cases.py": {
+      "sha256": "8b430fa30120e7036916f157928168814eccbb7fdf47a348266f852ecac9fda1",
+      "bytes": 456,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/run_cases.py"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/shared.py": {
+      "sha256": "2280ea38eec18ff823e8547c4e0c07d980206589ab44ee8cccc0cb428c4b60fd",
+      "bytes": 4974,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/shared.py",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/shared.py"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/shared_two_k_odd.png": {
+      "sha256": "00512e1b5300765ac744c411752fb550636d25b2e7ebb9b8162441c127403ecd",
+      "bytes": 47873,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/shared_two_k_odd.png"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/smoke.json": {
+      "sha256": "73605d7defda2b10071a051cb6959a3aa3aa02eb994b9f203a08591227e2251c",
+      "bytes": 8096,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/smoke.json"
+      ]
+    },
+    "Q-MATH/code/v05/QMATH05_shared/test_qmath05.py": {
+      "sha256": "28bb004b4a067cca9d713b7c9c5f1e0fd86dc2236ec1180cb6640448c68d94fc",
+      "bytes": 1089,
+      "kind": "code",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/test_qmath05.py"
+      ]
+    },
+    "Q-MATH/results/v05/QMATH05_shared/unit_test_output.json": {
+      "sha256": "57dd75255405596e3cdf38731b174ac60af0aef3bca03f3784e57512808e6e68",
+      "bytes": 110,
+      "kind": "results",
+      "origins": [
+        "QMATH05_共享量子光场_数学审计与数值结果_20261021.zip!QMATH05_shared/unit_test_output.json"
+      ]
+    },
+    "Q-MATH/reports/v03/README_研究报告.md": {
+      "sha256": "6c4984034b1146eda2a4169975206009fd667216255ceee09afdbd2ceacce30c",
+      "bytes": 8812,
+      "kind": "reports",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!README_研究报告.md"
+      ]
+    },
+    "Q-MATH/code/v03/production_benchmark.py": {
+      "sha256": "81e005d84f98c8ba9e34ed15a677051db3dfd496c501e0712d76e91d6e74970f",
+      "bytes": 2050,
+      "kind": "code",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!production_benchmark.py"
+      ]
+    },
+    "Q-MATH/code/v03/symmetry_pair_validation.py": {
+      "sha256": "71e6377bea0d005c1db9995a3926769a827b9195b1102ec29201c9d7e6161bca",
+      "bytes": 975,
+      "kind": "code",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!symmetry_pair_validation.py"
+      ]
+    },
+    "Q-MATH/code/v03/plot_results.py": {
+      "sha256": "207d7a1ff6359ffc584f62d83b9ddc1582d84ddf53e28c3bea2eba40cecea969",
+      "bytes": 1296,
+      "kind": "code",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!plot_results.py"
+      ]
+    },
+    "Q-MATH/results/v03/QMATH03_RESULTS.json": {
+      "sha256": "8d92e03cb9f0110f45e32420cec3c160db1f3ae97c6cac24e437d0e591e2917c",
+      "bytes": 32652,
+      "kind": "results",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!QMATH03_RESULTS.json"
+      ]
+    },
+    "Q-MATH/results/v03/SYMMETRY_PAIR_RESULT.json": {
+      "sha256": "f71cce482584abf0b0cb63c9f28043ac8db8f6eddb510ea572ad40c6c493b49e",
+      "bytes": 2411,
+      "kind": "results",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!SYMMETRY_PAIR_RESULT.json"
+      ]
+    },
+    "Q-MATH/results/v03/mean_H2_results.png": {
+      "sha256": "e8a96331379807ff9d0f9f48ae264952c06e32b92e113b96c38ca1f4bda0aca4",
+      "bytes": 69748,
+      "kind": "results",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!mean_H2_results.png"
+      ]
+    },
+    "Q-MATH/results/v03/timestep_convergence.png": {
+      "sha256": "6b84c0608f0df451049ea83a6a7ac996d52cc59744c6be51e0c399786cd07784",
+      "bytes": 50523,
+      "kind": "results",
+      "origins": [
+        "QMATH03_85E5A687E59085E989BCE596_A6E8AEAEE797BBE69C_20261021.zip!timestep_convergence.png"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_30_flat_null_calibration.png": {
+      "sha256": "f20f2796bf21bf948c67027c1dc816e17f09a010cac003f8701affb53538c3e3",
+      "bytes": 100718,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_30_flat_null_calibration.png"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_29_results.json": {
+      "sha256": "a5cb41d68694adc4752422cc7d3278392a36ac3ab835bf296779aab599d6670c",
+      "bytes": 76994,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_29_results.json",
+        "Q-MATH-16.29.zip!qmath_16_29_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_30_clean_results.json": {
+      "sha256": "56e4334d66d01540effc2d673b539fdaa8838a3c53319c97d1a9ec62e7a4ef3b",
+      "bytes": 43064,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_30_clean_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_28_photon_normalized_results.json": {
+      "sha256": "d0e7605dcae44b8588e0eb21f30b9e1a8d8d1d36b53d844dc3682c0ef23f6a21",
+      "bytes": 10348,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_28_photon_normalized_results.json",
+        "Q-MATH-16.29.zip!qmath_16_28_photon_normalized_results.json",
+        "Q-MATH-16.28.zip!qmath_16_28_photon_normalized_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py": {
+      "sha256": "a3d3866067e088d9bbcac806d4d9218d92ca36e6a37e8ac8a2f157c00cd3959e",
+      "bytes": 8949,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_29_same_state_readout.py",
+        "Q-MATH-16.29.zip!qmath_16_29_same_state_readout.py"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_30_bareT_bz_instability.png": {
+      "sha256": "cc28b465f3310e66c02bcbfe413b6a7b6ff70f198c082eb06547df0b643c1f2f",
+      "bytes": 97894,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_30_bareT_bz_instability.png"
+      ]
+    },
+    "Q-MATH/code/v16.30/qmath_16_30_output_mode_gram.py": {
+      "sha256": "ed8b9acc19f747ba4f71b2e046b2d39b031462f9323dbcfa9065b13db7d7008f",
+      "bytes": 1458,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_30_output_mode_gram.py"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_29_material_null_results.json": {
+      "sha256": "2bd70bf92c88161cc77e8cff556716aafefa6b5d64d4412e9dfbba9179a52d0d",
+      "bytes": 30867,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_29_material_null_results.json",
+        "Q-MATH-16.29.zip!qmath_16_29_material_null_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.30/SHA256_MANIFEST.json": {
+      "sha256": "b8d6329a75814fce9a50c4b2aaf0e5fca305bf8c0634f0f4b708711ec9a02aea",
+      "bytes": 2444,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!SHA256_MANIFEST.json"
+      ]
+    },
+    "Q-MATH/reports/v16.30/Q-MATH-16.30_量子散射核桥接与材料证书稳定性审计.md": {
+      "sha256": "ceecddc4e42860f0303772fabf4e88999d71fb12a2056078ad44a37367b4d1b1",
+      "bytes": 12214,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.30.zip!Q-MATH-16.30_量子散射核桥接与材料证书稳定性审计.md"
+      ]
+    },
+    "Q-MATH/code/v16.30/qmath_16_30_bridge_audit.py": {
+      "sha256": "f41b5c60fcbdbf30f4a7cda0175edd6ec061ada6c769660f664b3916d3c5b40d",
+      "bytes": 8953,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_30_bridge_audit.py"
+      ]
+    },
+    "Q-MATH/results/v16.30/qmath_16_29_material_dual_results.json": {
+      "sha256": "a079b9dd8502c15783f63b3b521f001f59aaee2cb8939a840b9d8f57ed9f1eda",
+      "bytes": 33726,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.30.zip!qmath_16_29_material_dual_results.json",
+        "Q-MATH-16.29.zip!qmath_16_29_material_dual_results.json"
+      ]
+    },
+    "Q-MATH/reports/v16.30/README_reproduce.md": {
+      "sha256": "5719c0aa094d8368b959ffd13f44c1be32ce8ac9419b7f169ea96ca820db2670",
+      "bytes": 979,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.30.zip!README_reproduce.md"
+      ]
+    },
+    "Q-MATH/code/v16.30/q16_27_reference/qmath_16_27_retarded_kernel.py": {
+      "sha256": "dc1ee1cae4aa6f4702d5787ce4d2e47106f9c6379c8c7c711c052ef18e2e94b8",
+      "bytes": 4629,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "Q-MATH-16.29.zip!q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "Q-MATH-16.28.zip!q16_27_reference/qmath_16_27_retarded_kernel.py",
+        "Q-MATH-16.27.zip!qmath_16_27_retarded_kernel.py"
+      ]
+    },
+    "Q-MATH/code/v16.30/q16_27_reference/qmath_16_26_cubic_audit.py": {
+      "sha256": "233c8c9c1ca0877b5783eda942dd7bfa58dec4afa68d7bc02a9c8a42576ff73e",
+      "bytes": 8785,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!q16_27_reference/qmath_16_26_cubic_audit.py",
+        "Q-MATH-16.29.zip!q16_27_reference/qmath_16_26_cubic_audit.py",
+        "Q-MATH-16.28.zip!q16_27_reference/qmath_16_26_cubic_audit.py",
+        "Q-MATH-16.27.zip!qmath_16_26_cubic_audit.py",
+        "Q-MATH-16.26.zip!qmath_16_26_cubic_audit.py"
+      ]
+    },
+    "Q-MATH/code/v16.30/q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": {
+      "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017",
+      "bytes": 8262,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.30.zip!q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.29.zip!q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.28.zip!q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.27.zip!source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.26.zip!source/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/reference_q167/q167_m0_three_photon_T.py",
+        "Q-MATH-16.18.zip!work/src_0/q167_m0_three_photon_T.py",
+        "Q-MATH-16.16.zip!src/q167_m0_three_photon_T.py",
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_m0_three_photon_T.py"
+      ]
+    },
+    "Q-MATH/reports/v16.29/Q-MATH-16.29_同磁态多输出量子关联_经典反例与材料双重证书.md": {
+      "sha256": "703f28666d39c59394163246a545573cc8d444217da6265718bd61c6a72de3ca",
+      "bytes": 14253,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.29.zip!Q-MATH-16.29_同磁态多输出量子关联_经典反例与材料双重证书.md"
+      ]
+    },
+    "Q-MATH/reports/v16.29/Q-MATH-16.30_量子出射认证与材料曲率验收任务.md": {
+      "sha256": "a1db5c0a1017bc0261d6e57f7e65b38176a1b9f0baf544bbbbd1410f1a969b81",
+      "bytes": 3902,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.29.zip!Q-MATH-16.30_量子出射认证与材料曲率验收任务.md"
+      ]
+    },
+    "Q-MATH/reports/v16.29/README_复现与证据分级.md": {
+      "sha256": "194a1f6c6a27af93e79e29da828a01e54b57ec735cbdbbe20daf948dfac544eb",
+      "bytes": 2428,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.29.zip!README_复现与证据分级.md"
+      ]
+    },
+    "Q-MATH/code/v16.29/build_package.py": {
+      "sha256": "61466732e6a47f6bb5f51aae3f6759b35ac499c0eadd59e96106758e3f5b32e5",
+      "bytes": 1128,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!build_package.py"
+      ]
+    },
+    "Q-MATH/code/v16.29/make_figures.py": {
+      "sha256": "612e6719d7db9f9cf7a022fdde22eb97512cd23ba9a7d9edec599facbe5a2ffb",
+      "bytes": 2439,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!make_figures.py"
+      ]
+    },
+    "Q-MATH/results/v16.29/q16_27_reference/qmath_16_27_shape_scan.json": {
+      "sha256": "0ed054f8a5261b1b8a52271a24844e150b096a99c2a1d407d53c64374fe16d20",
+      "bytes": 17265,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!q16_27_reference/qmath_16_27_shape_scan.json",
+        "Q-MATH-16.28.zip!q16_27_reference/qmath_16_27_shape_scan.json",
+        "Q-MATH-16.27.zip!qmath_16_27_shape_scan.json"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_cross_mode_kernel.png": {
+      "sha256": "8923848cbf0ca1543d17f5aa361e1b9abb0f22a31b5274f656742c0fc2d987ee",
+      "bytes": 109205,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_cross_mode_kernel.png"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_explicit_classical_P.json": {
+      "sha256": "54437eebc7975b2f524802dc541c8ede1e73aff96d96fad9c8f495a7a970d51c",
+      "bytes": 21558,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_explicit_classical_P.json"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_kernel_cache.json": {
+      "sha256": "00ecf13a750fd0dc5e334689d7c16d450c62d4e6b5f7ee281475cd374057362d",
+      "bytes": 29316,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_kernel_cache.json"
+      ]
+    },
+    "Q-MATH/code/v16.29/qmath_16_29_material_dual_certificate.py": {
+      "sha256": "0285a4f4e6845744b8997939208ae7661afe41e17e143067abf24df4c7c1cdc8",
+      "bytes": 2634,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_material_dual_certificate.py"
+      ]
+    },
+    "Q-MATH/code/v16.29/qmath_16_29_material_null.py": {
+      "sha256": "4fe17dcdc027f448f31bd5a65d1df79463a099ad9e6a1b4efd2156c9004c717b",
+      "bytes": 3322,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_material_null.py"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_material_only_dual.png": {
+      "sha256": "d332eaf7a47abc4caad130dcce3251dc5800a73c87d43819f688895781330c37",
+      "bytes": 59567,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_material_only_dual.png"
+      ]
+    },
+    "Q-MATH/code/v16.29/qmath_16_29_modal_occupation_certificate.py": {
+      "sha256": "06cb7c953d0e3c3b1dc891a9a8dc964f3ce89d7998beaeacc03465eaa8183d88",
+      "bytes": 3417,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_modal_occupation_certificate.py"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_modal_occupation_results.json": {
+      "sha256": "d94dee4d11ee1d95870e51dd9b8f8a1f2b3d91df7a0b76c38889d429ecf68b33",
+      "bytes": 22734,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_modal_occupation_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.29/qmath_16_29_positive_P_certificate.py": {
+      "sha256": "758576fd718d5fe034aea83163136eab50b7880661bf743be8be13bf5fe870dd",
+      "bytes": 3305,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_positive_P_certificate.py"
+      ]
+    },
+    "Q-MATH/results/v16.29/qmath_16_29_two_bin_classical_mimic.png": {
+      "sha256": "5af3c4edd47d750b0674879aa6e5c28ca7dcf203f5ee8ce4ce734c541ab585f9",
+      "bytes": 71638,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!qmath_16_29_two_bin_classical_mimic.png"
+      ]
+    },
+    "Q-MATH/results/v16.29/SHA256_MANIFEST.json": {
+      "sha256": "1657f18bde28b633867003f652f4b0e64bca0cba4d966c1dcf6d758ebbad6b8a",
+      "bytes": 3480,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.29.zip!SHA256_MANIFEST.json"
+      ]
+    },
+    "Q-MATH/reports/v16.28/Q-MATH-16.28_双模BSV磁性频率选择性与经典凸界.md": {
+      "sha256": "3c58afeb74106c7c0e26deed2d380bc143e166484d944d6a5790677be8baf9ee",
+      "bytes": 14226,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.28.zip!Q-MATH-16.28_双模BSV磁性频率选择性与经典凸界.md"
+      ]
+    },
+    "Q-MATH/reports/v16.28/README_复算及证据分级.md": {
+      "sha256": "ca1073e69c1afbc5769ffaee731f99b4baf430b3bfd617151d9afa472bb4196f",
+      "bytes": 2110,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.28.zip!README_复算及证据分级.md"
+      ]
+    },
+    "Q-MATH/results/v16.28/kernel_cache.json": {
+      "sha256": "a614bce147042d0a1c5af49122913bb5d45cc4f68a147719a5b07efd8dcc1397",
+      "bytes": 9053,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!kernel_cache.json"
+      ]
+    },
+    "Q-MATH/code/v16.28/make_qmath_16_28_report.py": {
+      "sha256": "329092faa14404efbe78e1625ef0010da23774d0e1f36d2d633158a36994898c",
+      "bytes": 16953,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.28.zip!make_qmath_16_28_report.py"
+      ]
+    },
+    "Q-MATH/code/v16.28/qmath_16_28_classical_dual_audit.py": {
+      "sha256": "9b312d10a25561328b6c0ca4560fe0025a785a9372e044ae1f258e3aaa15c86a",
+      "bytes": 3475,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_classical_dual_audit.py"
+      ]
+    },
+    "Q-MATH/results/v16.28/qmath_16_28_classical_dual_bound.png": {
+      "sha256": "1654af64883ef3689ee4feb8b0217da476f6d2cf920adb1790211fc1141e0019",
+      "bytes": 51569,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_classical_dual_bound.png"
+      ]
+    },
+    "Q-MATH/results/v16.28/qmath_16_28_classical_dual_results.json": {
+      "sha256": "3c81f24daa2976bc04133d0e053011a098c25c135741af6d2854a95ca852fd99",
+      "bytes": 7709,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_classical_dual_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.28/qmath_16_28_inverse_condition.png": {
+      "sha256": "739188f1d9e74b5314d1ff0be6f739747b1ba5dcc0b68ca3b75ab03dfc00a247",
+      "bytes": 48643,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_inverse_condition.png"
+      ]
+    },
+    "Q-MATH/results/v16.28/qmath_16_28_magnetic_dark_channel.png": {
+      "sha256": "92680ff2c3a727ad5c86d83a2610cb522d6ce8466337562ae0adee7aa7794b62",
+      "bytes": 77045,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_magnetic_dark_channel.png"
+      ]
+    },
+    "Q-MATH/code/v16.28/qmath_16_28_multimode_screen.py": {
+      "sha256": "c90e9e59e4cc76aaf6f74595bef20507de4927e31dbd3d5527df31c37951eeaa",
+      "bytes": 7011,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_multimode_screen.py"
+      ]
+    },
+    "Q-MATH/code/v16.28/qmath_16_28_photon_weighting.py": {
+      "sha256": "f3883a189f5a8e2a08b4466fdad3a56d494cb4ed4733959b20a49386278c26ab",
+      "bytes": 5289,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_photon_weighting.py"
+      ]
+    },
+    "Q-MATH/results/v16.28/qmath_16_28_results.json": {
+      "sha256": "77f5cb0f047a118c6a81fdfb6c8c100ed9a42a7e8d3ce517286ff7f3c24e9589",
+      "bytes": 12482,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!qmath_16_28_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.28/SHA256_manifest.json": {
+      "sha256": "2c0d206d6d7ca32b8d80b00bc1e18cff278279668c539bcfd527888ee1253ca9",
+      "bytes": 2560,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.28.zip!SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.27/Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.md": {
+      "sha256": "fbb71fc7d2fca1f4405a9913eb8ca0539ab4eb7f1e8923213c172eda449bcff0",
+      "bytes": 13353,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.27.zip!Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.md"
+      ]
+    },
+    "Q-MATH/reports/v16.27/Q-MATH-16.28_下一步研究任务.md": {
+      "sha256": "db09914072ba3bb09cdf69896b421d5114942c1ddcb8d4182b1e48d1a20f25ad",
+      "bytes": 1665,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.27.zip!Q-MATH-16.28_下一步研究任务.md"
+      ]
+    },
+    "Q-MATH/reports/v16.27/README_复算与证据范围.md": {
+      "sha256": "012d81e8621f9bf77977d4e8bf59da0307c48f043516b05e65321fba0da5c471",
+      "bytes": 1441,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.27.zip!README_复算与证据范围.md"
+      ]
+    },
+    "Q-MATH/results/v16.27/retarded_BZ_convergence.png": {
+      "sha256": "4a2f82d2cb5207494cc7dd7dab85e35ddb560b762569785d5f26344ee4584a5f",
+      "bytes": 96142,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!retarded_BZ_convergence.png"
+      ]
+    },
+    "Q-MATH/results/v16.27/magnetic_frequency_shape.png": {
+      "sha256": "2769c533b0e188dd58e323919aaac29676cd9a3da5d8f59baaabc9a4c04e1ecf",
+      "bytes": 105950,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!magnetic_frequency_shape.png"
+      ]
+    },
+    "Q-MATH/results/v16.27/soft_frequency_Ward_check.png": {
+      "sha256": "07650b69a487bc381b1c09778ccd55dac197ea47e1d2ad60346d7b3c23db1ced",
+      "bytes": 61015,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!soft_frequency_Ward_check.png"
+      ]
+    },
+    "Q-MATH/code/v16.27/qmath_16_27_reproduce.py": {
+      "sha256": "b3cb5feb8d27de3bc88ca68a84fe1f283854a772c5757da72d29140768ee2f2a",
+      "bytes": 2687,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_reproduce.py"
+      ]
+    },
+    "Q-MATH/code/v16.27/qmath_16_27_two_tone.py": {
+      "sha256": "32946ffbc6e994ef8087a8532fc253049bd0c013ba3c22d7b0fe3429dc7ca227",
+      "bytes": 7603,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_two_tone.py"
+      ]
+    },
+    "Q-MATH/code/v16.27/qmath_16_26_run_verified.py": {
+      "sha256": "124955be545f8343e9c49800ab31c66eac94582bdfaf853455fcc839c94aa233",
+      "bytes": 3711,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_26_run_verified.py",
+        "Q-MATH-16.26.zip!qmath_16_26_run_verified.py"
+      ]
+    },
+    "Q-MATH/results/v16.27/qmath_16_27_results.json": {
+      "sha256": "690a73d93041c51df1a438ab9bd4ffb0d2728bec988e8264f5318fe6d0c9692d",
+      "bytes": 14072,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.27/qmath_16_27_retarded_results.json": {
+      "sha256": "a40965ade0a3c432e6e5a71d3e4c588f6c50005a80743c5873ad0abad1b03d65",
+      "bytes": 19603,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_retarded_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.27/qmath_16_27_contact_ward_checks.json": {
+      "sha256": "8a7b0e12310e7ed2c9b215bb7dca168a738caf6e421d80118bde590760ddfaaa",
+      "bytes": 3946,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_contact_ward_checks.json"
+      ]
+    },
+    "Q-MATH/results/v16.27/qmath_16_27_mixed_timeseries.npz": {
+      "sha256": "edd97c7f7ce4701cbe4ea551d7de5118a2177110b6b5f4a5797d1054bb4728d2",
+      "bytes": 22741,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!qmath_16_27_mixed_timeseries.npz"
+      ]
+    },
+    "Q-MATH/results/v16.27/SHA256_manifest.json": {
+      "sha256": "b0d7e661361b3b867ac131c3992c66c5b44ab8fced5400a0435e56922b8b6ac5",
+      "bytes": 3387,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.27.zip!SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.26/Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.md": {
+      "sha256": "fd7cdc1e2f294c919789b9bc76dde640a39fb0d0617026a109262cc99a21ff11",
+      "bytes": 10830,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.md"
+      ]
+    },
+    "Q-MATH/reports/v16.26/README_QMATH_16_26_复算说明.md": {
+      "sha256": "66bfee07b7b3ef52f71f7633a816c9ae64de5bf809fccb5536475963895dc68d",
+      "bytes": 2183,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!README_QMATH_16_26_复算说明.md"
+      ]
+    },
+    "Q-MATH/results/v16.26/qmath_16_26_cubic_bz_nonconvergence.png": {
+      "sha256": "aee0b783771e12a55f4ffd28bc54f6a5c256b24c79747313c2c8174710ed8723",
+      "bytes": 97892,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!qmath_16_26_cubic_bz_nonconvergence.png"
+      ]
+    },
+    "Q-MATH/results/v16.26/qmath_16_26_independent_method_comparison.png": {
+      "sha256": "2e34f6cbce4e135a1ed8988933f9e8ba1a7b480dee18e9c8932497f9a3f3adb7",
+      "bytes": 115491,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!qmath_16_26_independent_method_comparison.png"
+      ]
+    },
+    "Q-MATH/results/v16.26/qmath_16_26_verified_results.json": {
+      "sha256": "a9416dfb051057b8ea133d26969c9eff89def8a1b911810a6761b297039571c4",
+      "bytes": 19317,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!qmath_16_26_verified_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.26/qmath_16_26_primary_timeseries.npz": {
+      "sha256": "451344c613eb28110d63b014e1d534507864a21ce92176d71c91bb7d782594f7",
+      "bytes": 32326,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!qmath_16_26_primary_timeseries.npz"
+      ]
+    },
+    "Q-MATH/results/v16.26/qmath_16_26_h2_bz_nonconvergence.png": {
+      "sha256": "334228613617cb122111d6cf70dded82c1bd0a3c37bf981cd8761d162ecf7986",
+      "bytes": 105339,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!qmath_16_26_h2_bz_nonconvergence.png"
+      ]
+    },
+    "Q-MATH/results/v16.26/SHA256_manifest.json": {
+      "sha256": "505b0190265b3a64839d637a2adf851f7d7284381f704ce1714d03d74c616408",
+      "bytes": 2513,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.19/Q-MATH-16.19_下一步严格数学与M0验证.md": {
+      "sha256": "a14ea3d6b35046df175dff210bf18f25407ff442a8e2d40ef7125540670d573f",
+      "bytes": 2223,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.19_下一步严格数学与M0验证.md",
+        "Q-MATH-16.18.zip!Q-MATH-16.19_下一步严格数学与M0验证.md"
+      ]
+    },
+    "Q-MATH/reports/v16.18/Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.md": {
+      "sha256": "2424c330e96e16feb80b870c8d05f3c963484c45985e9e040d931e505384582d",
+      "bytes": 14972,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.18.zip!Q-MATH-16.18_精确Keldysh行列式与磁性量子矩逆问题.md"
+      ]
+    },
+    "Q-MATH/reports/v16.18/README_复现证据与文件说明.md": {
+      "sha256": "a77f40135421524e11729d8e87a0bf293924054c7e1a47efbabdcc55660f0be0",
+      "bytes": 2582,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.18.zip!README_复现证据与文件说明.md"
+      ]
+    },
+    "Q-MATH/code/v16.18/qmath_16_18_keldysh_determinant.py": {
+      "sha256": "06e4274d4fab084ea5dd5d25f548eb05496428d66d3a39de49690c37f01fa3f6",
+      "bytes": 6940,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_keldysh_determinant.py"
+      ]
+    },
+    "Q-MATH/code/v16.18/qmath_16_18_causal_rank_and_inverse.py": {
+      "sha256": "433d4540baf3ef45fac3cb8f82c377e0e0301276a4266727c76cf653534e699b",
+      "bytes": 5177,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_causal_rank_and_inverse.py"
+      ]
+    },
+    "Q-MATH/code/v16.18/qmath_16_18_quick_verify.py": {
+      "sha256": "617d79c44d2d4bdffe22e7e7390fd9e3aaaeb948b2a641141f81db01c602ed2d",
+      "bytes": 1727,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_quick_verify.py"
+      ]
+    },
+    "Q-MATH/code/v16.18/qmath_16_18_compile_results.py": {
+      "sha256": "3c606190156a76788807a674d96b8889c3c2a2b4141b79f25b5e75b4fe0c3a1a",
+      "bytes": 4797,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_compile_results.py"
+      ]
+    },
+    "Q-MATH/results/v16.18/qmath_16_18_results.json": {
+      "sha256": "505595a8638e16dfa1757de3b7f1aef3a48eff15975f36fa2281c52eda5bb079",
+      "bytes": 7440,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.18/qmath_16_18_causal_partial.json": {
+      "sha256": "930104cb82537d8a772040b761c4d055188c2e091b851e71d357248324c09a97",
+      "bytes": 4245,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_causal_partial.json"
+      ]
+    },
+    "Q-MATH/results/v16.18/qmath_16_18_final_results.json": {
+      "sha256": "762cddf2796845a000eabd680071663ec0e84ba3fbd13a15706223141686439d",
+      "bytes": 9306,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_final_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.18/qmath_16_18_causal_M0_BZ.png": {
+      "sha256": "3d1cb77f73affdca2bb3fee3931d3b837b96cae27896a46609bf225b4db0fd35",
+      "bytes": 105582,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_causal_M0_BZ.png"
+      ]
+    },
+    "Q-MATH/results/v16.18/qmath_16_18_inverse_and_rank.png": {
+      "sha256": "f5ec7982824567100ef85e4db3e436dea63f268e170b40a1ee8f15f86ea1bc52",
+      "bytes": 155760,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!qmath_16_18_inverse_and_rank.png"
+      ]
+    },
+    "Q-MATH/results/v16.18/SHA256_manifest.json": {
+      "sha256": "b2b185d41e466f3297e6a49a515821d4c42e876601c3fa14ed3c81e13754c4cb",
+      "bytes": 2704,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.18.zip!SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.18/Q-MATH-16.18_连通散射与磁性逆问题验收任务.md": {
+      "sha256": "d1cc0d3acf578521792877fcff256347161930c93656842e8958e7b3386a72ba",
+      "bytes": 3024,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.18_连通散射与磁性逆问题验收任务.md"
+      ]
+    },
+    "Q-MATH/reports/v16.17/Q-MATH-16.17_截断Stieltjes矩问题与M0非经典读出禁戒.md": {
+      "sha256": "176c27916f664489e3528e3c1d7be8bfaa5064a26fb2f60bfdda5818ea006b95",
+      "bytes": 14565,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.17_截断Stieltjes矩问题与M0非经典读出禁戒.md"
+      ]
+    },
+    "Q-MATH/reports/v16.16/Q-MATH-16.16数学.md": {
+      "sha256": "7be00bc79899f901f6f7db462b160b728fd815b9aeacbc84f53dfa843525cd72",
+      "bytes": 12815,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.16数学.md",
+        "Q-MATH-16.16.zip!Q-MATH-16.16_数学定理_能量壳与经典负控.md"
+      ]
+    },
+    "Q-MATH/reports/v16.16/README_复现实验与下一步.md": {
+      "sha256": "9c0683e4498582b0f9a6b6eb8223d2d21d877ef9b41975c46ad0e1d147d0847a",
+      "bytes": 2411,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.16.zip!README_复现实验与下一步.md"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_bz_nonconvergence.png": {
+      "sha256": "1f62006445f6d56d005fa722976ba059d4ad77e1f2f2a1f836267103601108c8",
+      "bytes": 86072,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_bz_nonconvergence.png"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_classical_theorem.wl": {
+      "sha256": "16113f3e5112b9582db7d7e034ddcb1bb4a99b9a456e4ffc6aef83e6f82008ab",
+      "bytes": 759,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_classical_theorem.wl"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_convergence.py": {
+      "sha256": "f3165f1248b95887f81020884652c3db39214e8037fccda6f1ce724aec2655f8",
+      "bytes": 2353,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_convergence.py"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_convergence_results.json": {
+      "sha256": "84da160063a8d24c3302d730bbe4ddf36c8bea20038749345576c98af577a54a",
+      "bytes": 6259,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_convergence_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_invariant_results.json": {
+      "sha256": "2be8f10b63cb34f9e3e930d897bd7574e4c1b6416a4f53d628471e4b7947caa3",
+      "bytes": 2202,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_invariant_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_invariant_tests.py": {
+      "sha256": "9a6da585414428e225fabea69152d34f29c4e884be6dd78326481fa20d4a7f1b",
+      "bytes": 1529,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_invariant_tests.py"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_magnetism_null.json": {
+      "sha256": "5b43552fed33f72dc4e8f044e13c314d590db2ca5713bd7603c775a1e3e3bb23",
+      "bytes": 3923,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_magnetism_null.json"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_magnetism_null.py": {
+      "sha256": "4ba4a8c69b4ec0e296bd4875a097de9fd69e83934e46762d7179f5338f613543",
+      "bytes": 1065,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_magnetism_null.py"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_nonmagnetic_k_control.json": {
+      "sha256": "cd046bf138fdc90cafaeef5e596670b194746de525d6a2c9cb6af21b1d5c8db3",
+      "bytes": 2765,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_nonmagnetic_k_control.json"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_nonmagnetic_k_control.py": {
+      "sha256": "e0a5e5af3f22fceab40d54480424f9a14e68aafba9e0a20257c8b445d8fa9f6a",
+      "bytes": 1048,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_nonmagnetic_k_control.py"
+      ]
+    },
+    "Q-MATH/code/v16.16/qmath_16_16_on_shell_m0.py": {
+      "sha256": "0cda11e5552edf5aa940dc2d4f9a52dc57d1632a0f6ccebde0be0ac8a84f8a81",
+      "bytes": 5848,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_on_shell_m0.py"
+      ]
+    },
+    "Q-MATH/results/v16.16/qmath_16_16_on_shell_results.json": {
+      "sha256": "49be47a9f0b788abb1ae2fe5a54a72fdea5644031e65846430404b6c6e4ef6e9",
+      "bytes": 17745,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!qmath_16_16_on_shell_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.16/SHA256_manifest.json": {
+      "sha256": "404426f3a3904810ee61c0524c36ec87bfff52035e3b57f5998bd09d690beac0",
+      "bytes": 2799,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.16.zip!SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.15/Q-MATH-16.15_自旋空间复合对称性_量子光Ward恒等式与谱秩审计.md": {
+      "sha256": "eefa66a1e57c46676d82d7c006076a7277663a37a49750bebf424d17b4c5a2b4",
+      "bytes": 17029,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!Q-MATH-16.15_自旋空间复合对称性_量子光Ward恒等式与谱秩审计.md"
+      ]
+    },
+    "Q-MATH/reports/v16.15/README_研究接续与验收说明.md": {
+      "sha256": "3541c3ac3b4b0fef5fa72e22b72a80d506865d4cfde85b228d29de918ac6e7f4",
+      "bytes": 2674,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!README_研究接续与验收说明.md"
+      ]
+    },
+    "Q-MATH/reports/v16.15/log_deriv.txt": {
+      "sha256": "6f308f3cfda1096c9b5165163995f1cafce78123adc3c9c16cc6ac0bd6fcb0d7",
+      "bytes": 578,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!log_deriv.txt"
+      ]
+    },
+    "Q-MATH/reports/v16.15/log_five.txt": {
+      "sha256": "f611660df5333fe0cd6b11f92bb8458ba8a55a8095475e38b3d57ed656aee603",
+      "bytes": 587,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!log_five.txt"
+      ]
+    },
+    "Q-MATH/reports/v16.15/log_freq.txt": {
+      "sha256": "8e8ae815b8f26d18e68cb33cc78baed2ca0401cd3c558936efee7c410087deb1",
+      "bytes": 473,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!log_freq.txt"
+      ]
+    },
+    "Q-MATH/reports/v16.15/log_soc.txt": {
+      "sha256": "8723a865cf7e289a1cd2026003370e75930eb768fe3d4dd5465dbe5913d93c32",
+      "bytes": 2000,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.15.zip!log_soc.txt"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_five_soc_check.py": {
+      "sha256": "accdc63702570b9ddd3a601449d5e8c8607f2c1387c00b06fe287a883d655034",
+      "bytes": 2264,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_five_soc_check.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_five_soc_results.json": {
+      "sha256": "4e63813522dbcaa428f81e1e5b60689a414a19183d7451abc7cf0cff7e85cd3f",
+      "bytes": 3590,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_five_soc_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_frequency_scan_trap.json": {
+      "sha256": "dd878360e5fce4b3575c03f02304e2f1dbc29880a0c5e7278803c7788d503a24",
+      "bytes": 2970,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_frequency_scan_trap.json"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_frequency_scan_trap.py": {
+      "sha256": "e9d82b0261c1692831198092bff46aeb78fa2e408a14f6f057a95515169377e0",
+      "bytes": 1951,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_frequency_scan_trap.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_parity_count_toy.json": {
+      "sha256": "6d0a4e16dc590b97855087241dc560fb5aacf74d70ebe432e38a093d49ae44f1",
+      "bytes": 1330,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_parity_count_toy.json"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_parity_count_toy.py": {
+      "sha256": "967e25632a257416d84b92339ed0601ca0a9b4afcb1159e8bfbf027b4d897618",
+      "bytes": 2246,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_parity_count_toy.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_soc_derivative.json": {
+      "sha256": "8c5473706f71092c580d1ae868ca328dc0d21d92a6d1c21eeea44f99a1d6cffb",
+      "bytes": 3645,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_soc_derivative.json"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_soc_derivative.py": {
+      "sha256": "dc30b7d315eab1db51966ad686a5e994bc665c1812d492b3416cd3c1f79a3bef",
+      "bytes": 1310,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_soc_derivative.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_soc_symmetry.py": {
+      "sha256": "66cb31a7f864fbb259d2861624c0c8a3473aefe72ae77e90d599e6bed365ab48",
+      "bytes": 3744,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_soc_symmetry.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_soc_symmetry_results.json": {
+      "sha256": "c63717e8498752278925b701d371aa32f7d873753d3b19bb307b7bc89661a6ed",
+      "bytes": 8112,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_soc_symmetry_results.json"
+      ]
+    },
+    "Q-MATH/results/v16.15/qmath_16_15_vertices_symmetry.json": {
+      "sha256": "e89e66c15f287636e86be9ec68d48d9461c8c3347ae248d3b7bf328f7c0b8ada",
+      "bytes": 22071,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_vertices_symmetry.json"
+      ]
+    },
+    "Q-MATH/code/v16.15/qmath_16_15_vertices_symmetry.py": {
+      "sha256": "02d2ce489d76088fb65cc46bbc2c2f656568d99ba211b1810cf0e4a631aa298b",
+      "bytes": 1644,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!qmath_16_15_vertices_symmetry.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/soc_gate_three_photon.png": {
+      "sha256": "9054672e14df9f057a84b2168bf356b137a31cec9b557125daf82847655a937f",
+      "bytes": 90765,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!soc_gate_three_photon.png"
+      ]
+    },
+    "Q-MATH/results/v16.15/soc_slope_bz_warning.png": {
+      "sha256": "b52561173fc88336fb15237ed2cb0ae036863722ce27ab0fbea5be46cb7a2a8c",
+      "bytes": 82672,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!soc_slope_bz_warning.png"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/qmath_16_13_singlemode_five_photon.py": {
+      "sha256": "c72ce3716362f5d67ee5c99f889d21eb5b0b6ba9a957ec30800461552b65bbb7",
+      "bytes": 3356,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/qmath_16_13_singlemode_five_photon.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_exact_one_ph_reduction.py": {
+      "sha256": "abe2a76b75f7bd0c62b6a5d7f5c9e05401ed322941d4471199ac4a8df4c2d370",
+      "bytes": 3821,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_exact_one_ph_reduction.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_figures.py": {
+      "sha256": "19670730492ec5b5ab8147075153d39228882101d7402c9f6d28aaa78a86609d",
+      "bytes": 2397,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_figures.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_frequency_scan.py": {
+      "sha256": "de2acb828d92b9320a87605325835dfc45b223834634af08a5b65d1134cb7487",
+      "bytes": 1354,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_frequency_scan.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_full_peierls_weak_coupling.py": {
+      "sha256": "9b385b8ec453d41313ba71cfc4bfd43cacbf8e92c8bb99175c866cb05211de64",
+      "bytes": 2476,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_full_peierls_weak_coupling.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_independent_photon_check.py": {
+      "sha256": "fbe9a804985e3015ae8fe7b1f7ca5dc2b86e093f3ec4bd0fa690852c0c59c50c",
+      "bytes": 2420,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_independent_photon_check.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_reduced_bz_scan.py": {
+      "sha256": "51582ebd8ce638266e16288ffb525a374d6674538082a256f46eb02172b2b718",
+      "bytes": 1500,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_reduced_bz_scan.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/Q16_13_original/src_0/q167_verify_saved.py": {
+      "sha256": "0cfbe6f0741dc6436f331d01269d79d47979ea0e04475699390b56d6bfd11e1e",
+      "bytes": 815,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_verify_saved.py"
+      ]
+    },
+    "Q-MATH/code/v16.15/sources/QMATH_16_14/qmath_16_14_math_and_m0.py": {
+      "sha256": "688d07c269ed53e353625f3f6010256eb9157e990ba76f523f09487485e50f3a",
+      "bytes": 4970,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/qmath_16_14_math_and_m0.py"
+      ]
+    },
+    "Q-MATH/results/v16.15/sha256_manifest.json": {
+      "sha256": "33190323b3562301e341ed0ee0c03c013f587a2e23d347cb40afa38a20efc553",
+      "bytes": 4206,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.15.zip!sha256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.14/Q-MATH-16.14_高阶异常矩界与Néel磁性门控.md": {
+      "sha256": "19c2e7f82ee10f0e4649ab73cd81a8dfb182c36979100023ba82439a918d9ad0",
+      "bytes": 14909,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.14_高阶异常矩界与Néel磁性门控.md"
+      ]
+    },
+    "Q-MATH/reports/v16.13/Q-MATH-16.13_五光子Fock结构与M0复核.md": {
+      "sha256": "f77c45ea16280e9ba8fadc98c25e57ceb465e96e6c3b2b6565dfecae225786e9",
+      "bytes": 11766,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.13_五光子Fock结构与M0复核.md"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_23.json": {
+      "sha256": "4bb8aa74bd99a86ad49ab37ae1502c2db9fb630bffad6707c3e80859ec088dc3",
+      "bytes": 403,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_probe_23.json"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_global_affine_witness.png": {
+      "sha256": "d04aa1f6e987beadb5e2c8252778606aeb93d137bffb8933a217f87ade7b20f5",
+      "bytes": 99641,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_global_affine_witness.png"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_classical_bounds.png": {
+      "sha256": "570c50340222619410228cffc7934e95d4ba1cccecbb5f63ab837615d81f9315",
+      "bytes": 92575,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_classical_bounds.png"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_17.json": {
+      "sha256": "c2b82b9585798a07af1c052251a373cecde813ac1c5d3256922a5d3606da6eec",
+      "bytes": 402,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_probe_17.json"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_source_norm_bound.py": {
+      "sha256": "9939101ce1ef5f4fa628a4132327bab7ecb98c3a1e5854c95008eef7df29cd16",
+      "bytes": 502,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_source_norm_bound.py"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/shared_2k_5.json": {
+      "sha256": "c459a83af8ab90451e92b7316a45c5b7c6c6d0417de86c408097597481d9767c",
+      "bytes": 409,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/shared_2k_5.json"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_tail_certificate.json": {
+      "sha256": "04594da89c19b320b4fedb0ad14746f5fbb1d6b537cce0decd9ac6707017881c",
+      "bytes": 1254,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_tail_certificate.json"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/shared_2k_7.json": {
+      "sha256": "d7a98a5e0d1c2b485ee7534feba4e8da276b03178ef6365b81ad9271484a5261",
+      "bytes": 409,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/shared_2k_7.json"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_duhamel_residual_probe.py": {
+      "sha256": "e65715c1815735be49e78e82d0c5b9997b227a69801635ef1b722016f847c40e",
+      "bytes": 2020,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_residual_probe.py"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe_23_extra30.json": {
+      "sha256": "a2e004a5b423328e3edf2d1f20cf5d86baee99fdb393e10de38bc8229552a305",
+      "bytes": 403,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_probe_23_extra30.json"
+      ]
+    },
+    "Q-MATH/reports/v15/Q-MATH-15/SHA256_manifest.txt": {
+      "sha256": "23891f1f3ec99873067b0ddadb6941e5caec88b6e3b5cc6d53c45e80af476b6e",
+      "bytes": 5065,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/SHA256_manifest.txt"
+      ]
+    },
+    "Q-MATH/reports/v15/Q-MATH-15/README_复现与证据分级.txt": {
+      "sha256": "76c6b0b89cf720c8a47ab7d8dab2256dde82690704836c51c01bf6ad2829f023",
+      "bytes": 1251,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/README_复现与证据分级.txt"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_concave_envelope_exploration.py": {
+      "sha256": "f45efd129f09e8e896d1022886a2938ea92dd790f54fee552ff258065446637a",
+      "bytes": 2054,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_concave_envelope_exploration.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_duhamel_tail_certificate.py": {
+      "sha256": "dab68907bff02ae326de71c81d553d2723e5025e854ceec4cebcf09596e0c4ba",
+      "bytes": 1253,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_tail_certificate.py"
+      ]
+    },
+    "Q-MATH/reports/v15/Q-MATH-15/Q-MATH-15_数学框架纠错_经典光最优界_共享k验证_研究报告.md": {
+      "sha256": "a7d0f6cbc400009fa3acaa4a90f2a748d5a4534d68d0ef1ea2b4ca38c8a0eadc",
+      "bytes": 17968,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/Q-MATH-15_数学框架纠错_经典光最优界_共享k验证_研究报告.md"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/single_pair_32.json": {
+      "sha256": "5c34005a2e7ce272f49e8943bb744824d0ee4a8ae3f8b0338b714465d7ae6ac9",
+      "bytes": 893,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/single_pair_32.json"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_single_pair_lowfock.py": {
+      "sha256": "738956d79fe4d8530a3a6bdfdf33b0b42a6cb7999a29f57b3f62af868d826b9a",
+      "bytes": 1112,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_single_pair_lowfock.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_shared_lowfock.py": {
+      "sha256": "c383bd3ee390e1b2e3e8b78198301ec438620017147e0a94b72875b0b821d68c",
+      "bytes": 1485,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_shared_lowfock.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_figures.py": {
+      "sha256": "8e00540a1ecbbf2f5a6e5782690a086d7353ecafd1ed619f18da2bad7ba16813",
+      "bytes": 1762,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_figures.py"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_certified_results.json": {
+      "sha256": "21dab179e890960a9f04e349995b3ca0cd06b4c539ad172d4b34ea28404a5334",
+      "bytes": 3396,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_certified_results.json"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_null_coupling.py": {
+      "sha256": "703b004314386676c17fbe249e7ab5462eccf21cb8168efabbbf28066850a6d4",
+      "bytes": 810,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_null_coupling.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/q15_audit_certificate.py": {
+      "sha256": "5e16dba20980f42e1b4a5f0147774142cd90e59556a42c0ee44facd145531a26",
+      "bytes": 5383,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_audit_certificate.py"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/q15_duhamel_probe.json": {
+      "sha256": "0e9b574aa6b38ace9188e7140e7ecc0b3d6354ae02a4ae07e6f79b8d2bf6a27b",
+      "bytes": 398,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/q15_duhamel_probe.json"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nplus.npz": {
+      "sha256": "edef63c5a9394831c3746917b79abd065edb8ccfd8d6114f3001de812ce60272",
+      "bytes": 18165,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nplus.npz"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nminus.npz": {
+      "sha256": "8a9a44eaf594fc5acd5bae9fcea4cc50fbdf69dd18e3aac59be3993bfef800e4",
+      "bytes": 32964,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nminus.npz",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/data/q13_kernel_23_96_Nminus.npz"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nminus.npz": {
+      "sha256": "6999582c43916cdfe5bc01403f58ef15678abb6a3072b2b21da85642f2f1a9ec",
+      "bytes": 18165,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_17_96_Nminus.npz"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_response_kernel.py": {
+      "sha256": "355da172f229200a21d13aed2e9bd60eb8d3384d0c4fca9203133e823eb916ef",
+      "bytes": 4792,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_response_kernel.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_M0_BSV_weak_radiation.py": {
+      "sha256": "b5316106bcbac18932de6f11d726ddb265cd0e193d6094de54a94ace381ec8c0",
+      "bytes": 6878,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_M0_BSV_weak_radiation.py"
+      ]
+    },
+    "Q-MATH/results/v15/Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nplus.npz": {
+      "sha256": "0d341846db527aba76b4b87a4ddf4d4380ebe8d1e8f5d7056b3136cb67f1060f",
+      "bytes": 32957,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/q13_kernel_23_96_Nplus.npz",
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/data/q13_kernel_23_96_Nplus.npz"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/deps/qmath07_projected_shared.py": {
+      "sha256": "2d29b0c42fa6d867406a87ca8bd0f9d1b53c78f6f46e3a8c8a9d79a5b6512cbe",
+      "bytes": 12267,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/qmath07_projected_shared.py"
+      ]
+    },
+    "Q-MATH/code/v15/Q-MATH-15/QMATH13_M0_H2H4/deps/spin_exterior_solver.py": {
+      "sha256": "2c12aeb11a3b1877a6c375aecaa20a71fd48609cdc6e0f0c6730ee119ff18f06",
+      "bytes": 7848,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-15_纯数学纠错_经典正P全局证书_共享双k核验_20261022.zip!Q-MATH-15/QMATH13_M0_H2H4/deps/spin_exterior_solver.py"
+      ]
+    },
+    "Q-MATH/results/v16.24/ward_static_virtual_truncation.png": {
+      "sha256": "325086451f7103812b22004060027b970948fd3682edc838125e851c37408de6",
+      "bytes": 95402,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!ward_static_virtual_truncation.png",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/ward_static_virtual_truncation.png"
+      ]
+    },
+    "Q-MATH/reports/v16.24/README_研究复现说明.md": {
+      "sha256": "dfe767f4075afdcef4c8622ff72da1cecb6fa1e0ee25df23fb4c4810c31e8829",
+      "bytes": 1170,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!README_研究复现说明.md",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/README_研究复现说明.md"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_manybody_crosscheck.py": {
+      "sha256": "de4c32a83cf4aec8ff6a0b76f0610c27350a7d6288ce57eaa2c13d4c55d4e8e9",
+      "bytes": 1222,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_manybody_crosscheck.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_manybody_crosscheck.py"
+      ]
+    },
+    "Q-MATH/results/v16.24/qmath_16_24_shared_pair_toy_results.json": {
+      "sha256": "9a0f4e2f3a61eb9099bbd4adea5ea51facec80d68ef33b5deb5ab85d9e378f3e",
+      "bytes": 6839,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_shared_pair_toy_results.json",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_shared_pair_toy_results.json"
+      ]
+    },
+    "Q-MATH/reports/v16.24/Q-MATH-16.24_共享量子场与静态Ward求和规则.md": {
+      "sha256": "adf7544973e5d1928db96013cf4cdf558118ca0223a682afc4c9554fa69f74f1",
+      "bytes": 10870,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!Q-MATH-16.24_共享量子场与静态Ward求和规则.md",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/Q-MATH-16.24_共享量子场与静态Ward求和规则.md"
+      ]
+    },
+    "Q-MATH/results/v16.24/qmath_16_24_manybody_crosscheck.json": {
+      "sha256": "285dee259c98adb66eefff0ee76dbb76b6bf43b77aed97765ad30baa71191d7b",
+      "bytes": 1214,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_manybody_crosscheck.json",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_manybody_crosscheck.json"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_regression_tests.py": {
+      "sha256": "116c4b6d5487ff0b7ed588f76e5e5f52d805d1e3069d1c6a9a826f13aa2558f5",
+      "bytes": 1138,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_regression_tests.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_regression_tests.py"
+      ]
+    },
+    "Q-MATH/results/v16.24/shared_pair_toy_fock_convergence.png": {
+      "sha256": "00bdfa20aee025f0c24479c3f5dcba1a6a146f37c4d91dd406da263b96fac9bf",
+      "bytes": 66080,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!shared_pair_toy_fock_convergence.png",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/shared_pair_toy_fock_convergence.png"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_make_figures.py": {
+      "sha256": "6eccc9ffd0b11e5c1b42e9f4380f1be2800fe362369947eaebf950514bac9f58",
+      "bytes": 1371,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_make_figures.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_make_figures.py"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_shared_pair_cavity.py": {
+      "sha256": "ba480c6fa4845a7827bcaec6e4c80bbb6463e6510ae3b8d91690df5ebe2e38f2",
+      "bytes": 3201,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_shared_pair_cavity.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_shared_pair_cavity.py"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_twist_and_stiffness.py": {
+      "sha256": "8d6fd3a58cb381a4591f6847eec5886ae32993877346406dd6bb85f620f9df7d",
+      "bytes": 1943,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_twist_and_stiffness.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_twist_and_stiffness.py"
+      ]
+    },
+    "Q-MATH/code/v16.24/qmath_16_24_ward_sumrule.py": {
+      "sha256": "328a84a339168d723ee9f35e2ebb3f470fbaee0559e4d203160b8336ceb4f834",
+      "bytes": 4906,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_ward_sumrule.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_ward_sumrule.py"
+      ]
+    },
+    "Q-MATH/results/v16.24/qmath_16_24_twist_and_stiffness.json": {
+      "sha256": "098d2dd83b075cd9734576487b611a6a6aea2afb5b8d8cdfa095f5548bdea24a",
+      "bytes": 2559,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_twist_and_stiffness.json",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_twist_and_stiffness.json"
+      ]
+    },
+    "Q-MATH/results/v16.24/qmath_16_24_ward_sumrule_results.json": {
+      "sha256": "023607e8684185086c112ff08f7e3c0ed23ec0cda4902a63adf889f9752d77b1",
+      "bytes": 7662,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!qmath_16_24_ward_sumrule_results.json",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/qmath_16_24_ward_sumrule_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.24/source/deps/qmath_16_22_projected_pump.py": {
+      "sha256": "387beaef2ee65199b1c5e559a660e87490a1836e6843c5afa81b09330167a919",
+      "bytes": 4983,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/qmath_16_22_projected_pump.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/qmath_16_22_projected_pump.py"
+      ]
+    },
+    "Q-MATH/code/v16.24/source/deps/q19/qmath_16_19_quantum_pump.py": {
+      "sha256": "dce3ece2ab3a24104ed119eeef1e678366556eb7dc3d2372c970f36e60c2b678",
+      "bytes": 7283,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/qmath_16_19_quantum_pump.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/qmath_16_19_quantum_pump.py"
+      ]
+    },
+    "Q-MATH/code/v16.24/source/deps/q19/reference_q167/q167_slater_condon_direct.py": {
+      "sha256": "630cf8c8659ead7e0b9e04c336eec6f8a898eff412ed5bb408793b66f7c71295",
+      "bytes": 4085,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+        "Q-MATH-16.18.zip!work/src_0/q167_slater_condon_direct.py",
+        "Q-MATH-16.15.zip!sources/QMATH_16_14/Q16_13_original/src_0/q167_slater_condon_direct.py"
+      ]
+    },
+    "Q-MATH/results/v16.24/SHA256_manifest.json": {
+      "sha256": "ed297db15c18179513ea8bbec8db68609423a56f028c1e64e43be4184167b6d1",
+      "bytes": 4056,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.24_原始基准包.zip!SHA256_manifest.json",
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/base/SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/reports/v16.25/Q-MATH-16.25/Q-MATH-16.25_动态Ward核与低能有效响应审计.md": {
+      "sha256": "f4d43d7cb1b68fb14f6a01dad49ab5841e80ae4c76e86408ac29f96eaa8ce7d8",
+      "bytes": 7500,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/Q-MATH-16.25_动态Ward核与低能有效响应审计.md"
+      ]
+    },
+    "Q-MATH/reports/v16.25/Q-MATH-16.25/README_复现说明.md": {
+      "sha256": "940a65f1f5d6e5bd889304aebe4adca1b6e192ed70f0d8d1616f760151e27b95",
+      "bytes": 1069,
+      "kind": "reports",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/README_复现说明.md"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/SHA256_manifest.json": {
+      "sha256": "3dd30519bf581562884fa9210afb7953a04ca83c7a30d4ebd32de7d03e63e276",
+      "bytes": 4804,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/SHA256_manifest.json"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_bz_convergence.png": {
+      "sha256": "07f9ea18dc9a9c006cadd081fe1f2e87b61faa0517f99f58ff6cc3e0488f8d3f",
+      "bytes": 54094,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_bz_convergence.png"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_dynamic_kernel_comparison.png": {
+      "sha256": "15845190675582e68bbe8dff5d115b6a34897c3c53d251738dc703648c94000f",
+      "bytes": 135038,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_dynamic_kernel_comparison.png"
+      ]
+    },
+    "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_dynamic_ward.py": {
+      "sha256": "fc56aaa63950cb69e1381818649b14be0a840f7974a08a8af173a78249849bc6",
+      "bytes": 5528,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_dynamic_ward.py"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_omitted_channel_share.png": {
+      "sha256": "b93b304061427f331446acafc01ef660f5861684835f95fe75e18ebc86f1d34d",
+      "bytes": 49161,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_omitted_channel_share.png"
+      ]
+    },
+    "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_parameter_scan.py": {
+      "sha256": "82f0fc68428fb76c73b3ead759ffcef3e8471022000d80ad0bd668fe50001d60",
+      "bytes": 1885,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_parameter_scan.py"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_regression_results.json": {
+      "sha256": "58b3aae980ddf639732d592174c19a5bc38313a38e6b7a40afd03d04948d4e2f",
+      "bytes": 306,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_regression_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_regression_tests.py": {
+      "sha256": "b1ab0ba0395fe88660dd15662f038ee02139d2d05a0565e5471c31301b6d237f",
+      "bytes": 1761,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_regression_tests.py"
+      ]
+    },
+    "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_retarded_downfolding.py": {
+      "sha256": "3f2ebe6b4a773a54237d62c17004e00ce4c963c89dbc9bbbc7973243f4663dfe",
+      "bytes": 4476,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_retarded_downfolding.py"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_retarded_downfolding_results.json": {
+      "sha256": "938308ccf777797090ed57cea3f51601c4ec8a28438ee38cae18675f105c6225",
+      "bytes": 21255,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_retarded_downfolding_results.json"
+      ]
+    },
+    "Q-MATH/code/v16.25/Q-MATH-16.25/qmath_16_25_static_subtracted_kernel.py": {
+      "sha256": "8d6371648c92486ff17f4d655651d0b1554141f269ae3459c2470a39afef3b97",
+      "bytes": 3086,
+      "kind": "code",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_static_subtracted_kernel.py"
+      ]
+    },
+    "Q-MATH/results/v16.25/Q-MATH-16.25/qmath_16_25_static_subtracted_results.json": {
+      "sha256": "737225f8e3e5522c48b5f17e4625f6c817e8b6dc89c5d4d71735833fb7fe6c60",
+      "bytes": 23992,
+      "kind": "results",
+      "origins": [
+        "Q-MATH-16.26.zip!baseline_16_25.zip!Q-MATH-16.25/qmath_16_25_static_subtracted_results.json"
+      ]
+    },
+    "Q-MATH/code/foundation-M0/check_m0_uploaded.py": {
+      "sha256": "2ff234febde88566730a4397312c2416d64e4b7684003a467c9365b8fc73b219",
+      "bytes": 3475,
+      "kind": "code",
+      "origins": [
+        "check_m0_uploaded.py"
+      ]
+    },
+    "Q-MATH/reports/foundation-M0/M0_数学重构_联合验收报告_20261021.md": {
+      "sha256": "840fba97e3681256ce3799f79cb757bb101be1482fec876ad384ec35b89bd4ba",
+      "bytes": 6787,
+      "kind": "reports",
+      "origins": [
+        "M0_数学重构_联合验收报告_20261021.md"
+      ]
+    },
+    "Q-MATH/results/foundation-M0/M0_contact_derivative_results.json": {
+      "sha256": "b7bd39d25d26020154e993d7e8f5febc4a13abda85959e2d76c8ec1a8d391474",
+      "bytes": 169,
+      "kind": "results",
+      "origins": [
+        "M0_contact_derivative_results.json"
+      ]
+    },
+    "Q-MATH/code/foundation-M0/M0_contact_derivative_validation.py": {
+      "sha256": "39961ae6566f4d2da5b2cc2020cab3741569bfbff0c38d27c5329de075e30a7d",
+      "bytes": 1704,
+      "kind": "code",
+      "origins": [
+        "M0_contact_derivative_validation.py"
+      ]
+    },
+    "Q-MATH/results/foundation-M0/M0_geometry_reference_uploaded.json": {
+      "sha256": "967b7052f85907eeac565e7d861d4a04095e1a16336832f5fe63851e8df0ed25",
+      "bytes": 4137,
+      "kind": "results",
+      "origins": [
+        "M0_geometry_reference_uploaded.json"
+      ]
+    },
+    "Q-MATH/code/foundation-M0/M0_independent_equation_crosscheck.py": {
+      "sha256": "3da22c7125dd19d526ecb82d9e68557c131ee44416537b52ce3378c71dff6445",
+      "bytes": 1612,
+      "kind": "code",
+      "origins": [
+        "M0_independent_equation_crosscheck.py"
+      ]
+    },
+    "Q-MATH/results/foundation-M0/M0_independent_equation_results.json": {
+      "sha256": "768d03f32f60c746f8a342b498b73e5c03c8a9effba5c25543f3d3993f03326f",
+      "bytes": 104,
+      "kind": "results",
+      "origins": [
+        "M0_independent_equation_results.json"
+      ]
+    },
+    "Q-MATH/results/foundation-M0/M0_influence_exterior_results.json": {
+      "sha256": "9a0c93138624b0f59bc78620ec51ccc5771f8e3e61c25bac28611cc8e33b4a1a",
+      "bytes": 1366,
+      "kind": "results",
+      "origins": [
+        "M0_influence_exterior_results.json"
+      ]
+    },
+    "Q-MATH/code/foundation-M0/M0_influence_exterior_validation.py": {
+      "sha256": "cc366f10580f914534c2a4fe88ad1b3b6c15fd8e9d596624e08871d47e65297d",
+      "bytes": 4770,
+      "kind": "code",
+      "origins": [
+        "M0_influence_exterior_validation.py"
+      ]
+    },
+    "Q-MATH/results/foundation-M0/M0_joint_manifest.json": {
+      "sha256": "49308c8ef079c25fd963e507dbc1546bfbe481a8b83a13a512e0e48d1f0c95da",
+      "bytes": 1623,
+      "kind": "results",
+      "origins": [
+        "M0_joint_manifest.json"
+      ]
+    },
+    "Q-MATH/code/foundation-M0/M0_Wolfram_independent_validation.wl": {
+      "sha256": "693f0c5bcfed76b658a6d7c8aa3a69235787c924a2e43b1cd3a9075aafc3659b",
+      "bytes": 8311,
+      "kind": "code",
+      "origins": [
+        "M0_Wolfram_independent_validation.wl"
+      ]
+    },
+    "Q-MATH/reports/foundation-M0/README_M0联合验证.txt": {
+      "sha256": "38c72206daf932244a28e568210b7e329ab7d3bcdea08c1d93a80f2a2d0382bd",
+      "bytes": 1367,
+      "kind": "reports",
+      "origins": [
+        "README_M0联合验证.txt"
+      ]
+    },
+    "Q-MATH/reports/foundation-M0/研究底稿_八带量子光HHG_数学重构_v1.md": {
+      "sha256": "aa39f81df793b02f1cfdf96649d7ab26aa9f2f22db491fccca280f8f1d646ecc",
+      "bytes": 27905,
+      "kind": "reports",
+      "origins": [
+        "研究底稿_八带量子光HHG_数学重构_v1.md"
+      ]
+    }
+  }
+}
