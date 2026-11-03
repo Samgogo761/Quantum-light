@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-04",
+  "scope": "800nm zero-bias baseline single-intensity numerical validation",
+  "baseline_intensity_inc_W_cm2": 100000000000.0,
+  "baseline_intensity_apex_W_cm2": 900000000000.0,
+  "baseline_yield": 2.7336829427627555e-08,
+  "nofield_signed_yield": 1.420171367756237e-26,
+  "controls": [
+    {
+      "case": "dx96",
+      "yield_right": 2.7185701206910482e-08,
+      "absolute_change": 1.5112822071707295e-10,
+      "relative_change": -0.0055283741341392535,
+      "pass_5percent": true
+    },
+    {
+      "case": "dt01",
+      "yield_right": 2.7468026782245025e-08,
+      "absolute_change": 1.3119735461746994e-10,
+      "relative_change": 0.00479928936034101,
+      "pass_5percent": true
+    },
+    {
+      "case": "box70",
+      "yield_right": 2.7336829427628683e-08,
+      "absolute_change": 1.1282743555223297e-21,
+      "relative_change": 4.127305101381129e-14,
+      "pass_5percent": true
+    },
+    {
+      "case": "cap_shift",
+      "yield_right": 2.7336829428199448e-08,
+      "absolute_change": 5.718928231844621e-19,
+      "relative_change": 2.0920232344373017e-11,
+      "pass_5percent": true
+    },
+    {
+      "case": "cap_half",
+      "yield_right": 2.728766974870983e-08,
+      "absolute_change": 4.9159678917726074e-11,
+      "relative_change": -0.0017982948259553312,
+      "pass_5percent": true
+    },
+    {
+      "case": "time100",
+      "yield_right": 2.733684181867886e-08,
+      "absolute_change": 1.2391051306005814e-14,
+      "relative_change": 4.532731690341157e-07,
+      "pass_5percent": true
+    },
+    {
+      "case": "detector3",
+      "yield_right": 2.733682749020235e-08,
+      "absolute_change": 1.9374252034311147e-15,
+      "relative_change": -7.087234489136056e-08,
+      "pass_5percent": true
+    },
+    {
+      "case": "start60",
+      "yield_right": 2.733682242354415e-08,
+      "absolute_change": 7.0040834057950466e-15,
+      "relative_change": -2.562141825678027e-07,
+      "pass_5percent": true
+    }
+  ],
+  "gate_b_at_baseline_pass": true,
+  "max_observed_absolute_control_change": 1.5112822071707295e-10,
+  "max_observed_relative_control_change": 0.0055283741341392535,
+  "saved_runs": 12,
+  "validated_manifest_entries": 90,
+  "cpu_propagation_seconds": 432.8993079997599,
+  "source_resolution": {
+    "stage2_20261103_baseline": {
+      "scripts/run_stage2.py": "validation/stage2_baseline_source_v1.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_box70": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_cap_half": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_cap_shift": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_detector3": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_dt01": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_dx96": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_I2e11": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_I5e10": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_nofield": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_start60": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    },
+    "stage2_20261103_time100": {
+      "scripts/run_stage2.py": "scripts/run_stage2.py",
+      "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py",
+      "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"
+    }
+  },
+  "limitations": [
+    "Only I_inc=1e11 has full control suite.",
+    "I_inc=5e10 and 2e11 are unrefined pilot points, not slope-fit data.",
+    "800nm curve refinement stopped on 2026-11-04 user direction change.",
+    "No 1600nm, static bias, electron spectrum, CEP pi, BSV or thermal results.",
+    "Observed parameter differences are convergence evidence, not statistical confidence intervals."
+  ]
+}

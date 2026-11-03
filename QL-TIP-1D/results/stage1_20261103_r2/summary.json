@@ -1,0 +1,161 @@
+{
+  "run_id": "stage1_20261103_r2",
+  "analytic": {
+    "energy_au": -0.20244225649918363,
+    "z0": 1.1364600728684717,
+    "z": 0.795466847039689,
+    "k_au": 0.6236191514025086,
+    "kappa_au": 0.6363053614408473,
+    "half_width_au": 1.2755651349877533,
+    "amplitude_per_sqrt_bohr": 0.5926465626809346,
+    "bound_state_count": 1,
+    "energy_eV": -5.508734434107243,
+    "normalization_integral_quad": 0.9999999999996216,
+    "normalization_quadrature_error": 3.893519811844007e-12
+  },
+  "bound_convergence_rows": [
+    [
+      12,
+      356,
+      0.011250000000000001,
+      -5.525550773470119,
+      -0.016816339362875965,
+      1,
+      1.0,
+      0.9999962368728893
+    ],
+    [
+      24,
+      712,
+      0.005625000000000001,
+      -5.512941818824378,
+      -0.004207384717134666,
+      1,
+      1.0,
+      0.9999997638944609
+    ],
+    [
+      48,
+      1424,
+      0.0028125000000000003,
+      -5.509786485102814,
+      -0.00105205099557093,
+      1,
+      1.0,
+      0.9999999852292374
+    ],
+    [
+      96,
+      2846,
+      0.0014062500000000002,
+      -5.508997459632814,
+      -0.0002630255255713365,
+      1,
+      1.0,
+      0.9999999990766062
+    ],
+    [
+      192,
+      5690,
+      0.0007031250000000001,
+      -5.508800191271056,
+      -6.575716381274077e-05,
+      1,
+      1.0000000000000004,
+      0.9999999999422848
+    ]
+  ],
+  "nofield": [
+    {
+      "requested_dt_au": 0.2,
+      "actual_dt_au": 0.19995827489804185,
+      "steps": 4135,
+      "duration_fs": 20.0,
+      "norm_drift_max": 1.729727472365994e-13,
+      "density_L1_drift_max": 1.7311720276654913e-13,
+      "right_probability_initial": 4.709074100824411e-12,
+      "right_probability_change_max": 3.046474126628193e-20,
+      "phase_error_rad": -0.022864302098228702,
+      "cn_predicted_phase_error_rad": -0.022864302090902892,
+      "phase_prediction_residual_rad": -7.325810097436047e-12,
+      "elapsed_seconds": 0.10138910007663071
+    },
+    {
+      "requested_dt_au": 0.1,
+      "actual_dt_au": 0.09999122828678232,
+      "steps": 8269,
+      "duration_fs": 20.0,
+      "norm_drift_max": 9.678924328682115e-13,
+      "density_L1_drift_max": 9.67858564652007e-13,
+      "right_probability_initial": 4.709074100824411e-12,
+      "right_probability_change_max": 1.6670628095940058e-20,
+      "phase_error_rad": -0.00571851231905399,
+      "cn_predicted_phase_error_rad": -0.005718512318980434,
+      "phase_prediction_residual_rad": -7.355574482836857e-14,
+      "elapsed_seconds": 0.20770390005782247
+    },
+    {
+      "requested_dt_au": 0.05,
+      "actual_dt_au": 0.0499986374011854,
+      "steps": 16537,
+      "duration_fs": 20.0,
+      "norm_drift_max": 3.126388037344441e-13,
+      "density_L1_drift_max": 3.1282591879607115e-13,
+      "right_probability_initial": 4.709074100824411e-12,
+      "right_probability_change_max": 2.535322794641808e-20,
+      "phase_error_rad": -0.0014298669156284898,
+      "cn_predicted_phase_error_rad": -0.0014298669164906248,
+      "phase_prediction_residual_rad": 8.621350161552854e-13,
+      "elapsed_seconds": 0.40314879990182817
+    }
+  ],
+  "free_gaussian": [
+    {
+      "method": "fft",
+      "nx": 2048,
+      "dx_nm": 0.011718750000000187,
+      "dt_au": 0.19990992908689628,
+      "steps": 1034,
+      "final_centroid_error_nm": -1.4118913509212804e-13,
+      "final_sigma_error_nm": -1.9364155678414363e-14,
+      "norm_drift_max": 1.6253665080512292e-13,
+      "initial_momentum_au": 0.39999999999999986,
+      "momentum_error_au": -1.6653345369377348e-16,
+      "elapsed_seconds": 0.07762319990433753
+    },
+    {
+      "method": "cn",
+      "nx": 8534,
+      "dx_nm": 0.0028125000000000003,
+      "dt_au": 0.19990992908689628,
+      "steps": 1034,
+      "final_centroid_error_nm": -0.0006768138544466966,
+      "final_sigma_error_nm": -0.0002554994882997618,
+      "norm_drift_max": 6.410427744185654e-13,
+      "initial_momentum_au": 0.4000000000000001,
+      "momentum_error_au": 5.551115123125783e-17,
+      "elapsed_seconds": 0.12521370011381805
+    }
+  ],
+  "gate_a_checks": {
+    "one_bound_state_all_grids": true,
+    "analytic_normalization": true,
+    "finest_energy": true,
+    "no_field_norm": true,
+    "no_field_density": true,
+    "no_field_right_probability": true,
+    "no_field_finest_phase": true,
+    "fft_free_centroid": true,
+    "fft_free_width": true,
+    "cn_free_centroid": true,
+    "cn_free_width": true
+  },
+  "gate_a_pass": true,
+  "elapsed_seconds": 1.36354640009813,
+  "limitations": [
+    "No CAP or driven emission validated in Stage1.",
+    "CN phase error is reported, not removed from propagated state.",
+    "FD initial state is not interchangeable with a spectral-kinetic FFT initial state.",
+    "Two-sided finite well is an effective one-electron model, not a metal Fermi sea."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "model": "finite_square_well_no_bias",
+  "width_nm": 0.135,
+  "depth_eV": 10.8,
+  "well_cells_scan": [12, 24, 48, 96, 192],
+  "xmin_nm": -2.0,
+  "xmax_nm": 2.0,
+  "no_field_well_cells": 48,
+  "no_field_duration_fs": 20.0,
+  "no_field_dt_au": [0.2, 0.1, 0.05],
+  "detector_nm": 1.0,
+  "free_packet": {
+    "xmin_nm": -12.0,
+    "xmax_nm": 12.0,
+    "nx_fft": 2048,
+    "x0_nm": -3.0,
+    "density_sigma_nm": 0.5,
+    "momentum_au": 0.4,
+    "duration_fs": 5.0,
+    "dt_au": 0.2
+  },
+  "gate_a_tolerances": {
+    "finest_energy_absolute_error_eV": 0.001,
+    "maximum_norm_drift": 1e-8,
+    "maximum_density_L1_drift": 1e-8,
+    "maximum_no_field_right_probability_change": 1e-10,
+    "finest_phase_absolute_error_rad": 0.002,
+    "fft_free_centroid_absolute_error_nm": 1e-9,
+    "fft_free_sigma_absolute_error_nm": 1e-9,
+    "cn_free_centroid_absolute_error_nm": 0.002,
+    "cn_free_sigma_absolute_error_nm": 0.002
+  }
+}

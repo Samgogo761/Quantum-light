@@ -1,0 +1,72 @@
+{
+  "run_id": "stage1_20261103_r1",
+  "started_at": "2026-11-03T17:44:36.253064+08:00",
+  "config": {
+    "model": "finite_square_well_no_bias",
+    "width_nm": 0.135,
+    "depth_eV": 10.8,
+    "well_cells_scan": [
+      12,
+      24,
+      48,
+      96,
+      192
+    ],
+    "xmin_nm": -2.0,
+    "xmax_nm": 2.0,
+    "no_field_well_cells": 48,
+    "no_field_duration_fs": 20.0,
+    "no_field_dt_au": [
+      0.2,
+      0.1,
+      0.05
+    ],
+    "detector_nm": 1.0,
+    "free_packet": {
+      "xmin_nm": -12.0,
+      "xmax_nm": 12.0,
+      "nx_fft": 2048,
+      "x0_nm": -3.0,
+      "density_sigma_nm": 0.5,
+      "momentum_au": 0.4,
+      "duration_fs": 5.0,
+      "dt_au": 0.2
+    },
+    "gate_a_tolerances": {
+      "finest_energy_absolute_error_eV": 0.001,
+      "maximum_norm_drift": 1e-08,
+      "maximum_density_L1_drift": 1e-08,
+      "maximum_no_field_right_probability_change": 1e-10,
+      "finest_phase_absolute_error_rad": 0.002,
+      "fft_free_centroid_absolute_error_nm": 1e-09,
+      "fft_free_sigma_absolute_error_nm": 1e-09,
+      "cn_free_centroid_absolute_error_nm": 0.002,
+      "cn_free_sigma_absolute_error_nm": 0.002
+    }
+  },
+  "config_sha256": "09415b38a86848c9cb515abfe23b54730ba09f71036b5c010d4759c779014601",
+  "base_git_commit": "63dc3ea02e923b0c3507fb5a45d0f710f98f3e68",
+  "source_sha256": {
+    "scripts\\run_stage1.py": "0c4adca3e725696f1c4c8ea8c41e7f376e83eb8c87e25cb8984def6b095cc002",
+    "src\\ql_tip_1d\\core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src\\ql_tip_1d\\__init__.py": "b5b8948d99c7a5e9d115b236bf90ab3a7efe721fd73bd0579e923b8af03bf515"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "CPU",
+  "dtype": "float64 eigenvectors; complex128 propagation",
+  "renormalization_after_initialization": false,
+  "units": {
+    "x": "nm in CSV; bohr in NPZ x_au",
+    "energy": "eV",
+    "time": "fs and atomic units",
+    "density": "1/nm in CSV"
+  },
+  "constants": {
+    "bohr_nm": 0.0529177210544,
+    "hartree_eV": 27.211386245981,
+    "time_au_fs": 0.024188843265864
+  }
+}

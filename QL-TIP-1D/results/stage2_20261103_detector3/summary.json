@@ -1,0 +1,32 @@
+{
+  "run_id": "stage2_20261103_detector3",
+  "energy_eV": -5.509786485101641,
+  "nx": 21334,
+  "dx_nm": 0.0028125000000000003,
+  "actual_dt_au": 0.1999985809401499,
+  "steps": 24805,
+  "initial_right_tail": 6.118268266697628e-33,
+  "yield_right": 2.733682749020235e-08,
+  "right_flux": 2.733682749019486e-08,
+  "final_right_retained": 2.0143336387012227e-08,
+  "right_CAP_loss": 7.1934911031901234e-09,
+  "left_CAP_loss": 2.5493811796132808e-08,
+  "final_norm": 0.9999999673072958,
+  "bound_survival": 0.9999999471638934,
+  "max_total_budget_error": 5.4012350148013866e-12,
+  "max_right_budget_error": 7.490947627280219e-21,
+  "plateau_interval_fs": [
+    60.0,
+    75.0
+  ],
+  "plateau_absolute_range": 6.580561083339221e-14,
+  "plateau_relative_range": 2.4072146212641993e-06,
+  "numeric_sanity_pass": true,
+  "plateau_pass": true,
+  "gate_b_pass": null,
+  "gate_b_note": "Requires comparison with dx, dt, box, CAP and no-field controls.",
+  "propagation_seconds": 30.950332900043577,
+  "elapsed_seconds": 31.419561199843884,
+  "algorithm": "second-order centered FD + midpoint CN; cubic left/right CAP",
+  "no_renormalization": true
+}

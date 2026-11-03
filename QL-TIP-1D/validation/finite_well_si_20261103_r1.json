@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-03T17:55:01.298376+08:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "script_sha256": "5eeb1b96adacf25869a14aa9b6b01eadbf5754ae73f7369efef29aad68f6bfd0",
+  "finite_well_SI": {
+    "width_nm": 0.135,
+    "depth_eV": 10.8,
+    "constants_SI": {
+      "hbar_J_s": 1.0545718176461565e-34,
+      "electron_mass_kg": 9.1093837139e-31,
+      "electron_volt_J": 1.602176634e-19
+    },
+    "method": "100 bisection iterations in SI, independent of production code",
+    "z0": 1.1364600728687224,
+    "z": 0.7954668470397859,
+    "dimensionless_equation_residual": 3.3306690738754696e-16,
+    "energy_eV": -5.5087344341082884,
+    "bound_state_count": 1,
+    "analytic_vacuum_probability": 0.135217145986938,
+    "analytic_total_outside_probability": 0.270434291973876,
+    "normalization_constant_per_sqrt_m": 81469.5286241183
+  },
+  "saved_artifacts": {
+    "run_id": "stage1_20261103_r2",
+    "finest_eigen_residual_L2_au": 1.237717013798468e-12,
+    "finest_norm": 1.0000000000005729,
+    "finest_initial_right_half_probability": 0.135212189129882,
+    "saved_nofield_L2_error_to_cn_formula": 1.8976353446839397e-12,
+    "saved_nofield_L2_error_to_exact_exp": 0.0014298667938204353,
+    "saved_free_cn_centroid_error_nm": -0.0006768138544455686,
+    "saved_free_cn_sigma_error_nm": -0.0002554994882989158,
+    "saved_manifest_file_count": 20,
+    "saved_manifest_hashes_ok": true,
+    "independent_SI_vs_production_analytic_difference_eV": -1.0453859999870474e-12
+  }
+}

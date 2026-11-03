@@ -1,0 +1,99 @@
+Saved-run audit, generated 2026-11-04 from metadata and completed summaries.
+This is not a captured process stdout log. Process exit codes were not retained here.
+No propagation or new intensity runs were launched by this audit.
+
+stage2_20261103_baseline
+started_at=2026-11-03T17:51:32.130056+08:00
+config_sha256=62e763971c13a66aeea80a647870e686c61337278a796b0627ea1dea552ad9a7
+propagation_seconds=30.521321599837393
+numeric_sanity_pass=True
+right_yield=2.7336829427627555e-08
+source_resolution={"scripts/run_stage2.py": "validation/stage2_baseline_source_v1.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_box70
+started_at=2026-11-03T17:54:29.934061+08:00
+config_sha256=3b26f442ab70024ead770dea5d7a32d9f83084ae5e2d18a28e042c6ae5675011
+propagation_seconds=36.90309359994717
+numeric_sanity_pass=True
+right_yield=2.7336829427628683e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_cap_half
+started_at=2026-11-03T17:55:39.298641+08:00
+config_sha256=1c96e35b9b86ad58eb215e9cbbd75efabdd108dece601df15a241e599958f8fb
+propagation_seconds=28.742683300049976
+numeric_sanity_pass=True
+right_yield=2.728766974870983e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_cap_shift
+started_at=2026-11-03T17:55:05.437551+08:00
+config_sha256=a7d166a2419b19466113a502c7383778404cdbb6730eb86df25ecdec25633ebc
+propagation_seconds=25.063071900047362
+numeric_sanity_pass=True
+right_yield=2.7336829428199448e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_detector3
+started_at=2026-11-03T17:56:31.761697+08:00
+config_sha256=b9474fff5db3b1878cf5198e271a3510ee854c773d3faf4717d198bd1e6bd326
+propagation_seconds=30.950332900043577
+numeric_sanity_pass=True
+right_yield=2.733682749020235e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_dt01
+started_at=2026-11-03T17:53:56.751664+08:00
+config_sha256=77e481b12b99fd1bc3b71dd24814b484890d1ece6cecc8b30fc1c17cff394028
+propagation_seconds=53.2011442000512
+numeric_sanity_pass=True
+right_yield=2.7468026782245025e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_dx96
+started_at=2026-11-03T17:52:58.762973+08:00
+config_sha256=f6b5979db5847cf87eaaa118e7a167ac5200411d68e150c8a5cbf3e1660e4eab
+propagation_seconds=65.18331749993376
+numeric_sanity_pass=True
+right_yield=2.7185701206910482e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_I2e11
+started_at=2026-11-03T17:58:17.698463+08:00
+config_sha256=26405670ab8b52440e62ba4ec21594da92458db658608df422aff249ccc9b290
+propagation_seconds=32.24531970010139
+numeric_sanity_pass=True
+right_yield=6.667447844916932e-07
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_I5e10
+started_at=2026-11-03T17:58:17.699462+08:00
+config_sha256=afed5a7629b509a51192fc7bbd8e2a66e6e6eb86cb7022442d260d4f81ebac48
+propagation_seconds=36.055305999936536
+numeric_sanity_pass=True
+right_yield=1.331481275669267e-09
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_nofield
+started_at=2026-11-03T17:52:58.755462+08:00
+config_sha256=80b322315e257ff23c4068bd7f25852c7e34b9d277e6e11fdf101d59909a909b
+propagation_seconds=27.62863409984857
+numeric_sanity_pass=True
+right_yield=1.420171367756237e-26
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_start60
+started_at=2026-11-03T17:57:03.957381+08:00
+config_sha256=c66cf65b82608457162236a6eea00d4945e1fc4d993d6960e241627b1b78d8bd
+propagation_seconds=33.76012700004503
+numeric_sanity_pass=True
+right_yield=2.733682242354415e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}
+
+stage2_20261103_time100
+started_at=2026-11-03T17:56:07.218399+08:00
+config_sha256=c197649b3e152b0f646294293cf4397da0c5eecadf4e295c901ea44fbef8c992
+propagation_seconds=32.64495619991794
+numeric_sanity_pass=True
+right_yield=2.733684181867886e-08
+source_resolution={"scripts/run_stage2.py": "scripts/run_stage2.py", "src/ql_tip_1d/core.py": "src/ql_tip_1d/core.py", "src/ql_tip_1d/__init__.py": "src/ql_tip_1d/__init__.py"}

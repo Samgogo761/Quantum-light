@@ -1,0 +1,17 @@
+Run: stage1_20261103_r1
+Date: 2026-11-03 Asia/Shanghai
+Command: QL-TIP-1D/.venv/Scripts/python.exe QL-TIP-1D/scripts/run_stage1.py --run-id stage1_20261103_r1
+Exit: 1
+The numerical calculations completed, but summary JSON serialization failed on
+a numpy scalar boolean in the final report. The partially written summary.json
+and all raw data remain in the r1 paths, unmodified. This run is NOT an accepted
+Gate A result. The serializer was corrected to convert numpy scalars to Python
+scalars and to encode before opening the output file. A fresh r2 run will repeat
+all calculations. No failed or partial data are silently promoted to success.
+
+Traceback end:
+  File "run_stage1.py", line 218, in main
+    json_write(results/'summary.json',summary)
+  File "run_stage1.py", line 37, in json_write
+    json.dump(obj, out, indent=2, ensure_ascii=False, allow_nan=False)
+TypeError: Object of type bool is not JSON serializable

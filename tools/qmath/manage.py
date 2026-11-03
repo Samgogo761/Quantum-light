@@ -30,7 +30,8 @@ GENERATED = {'Q-MATH/manifest.json', 'Q-MATH/INDEX.md'}
 CONTROL = {'AGENTS.md', 'tools/qmath/manage.py', 'Q-MATH/README.md',
            'Q-MATH/SYNC.md', 'Q-MATH/REPRODUCE.md', 'Q-MATH/.gitignore',
            'Q-MATH/.gitattributes', 'Q-MATH/VALIDATION.md',
-           'docs/04_BSV量子光/.gitattributes'}
+           'docs/04_BSV量子光/.gitattributes',
+           'QL-TIP-1D/.gitignore', 'QL-TIP-1D/.gitattributes'}
 
 
 def digest(data):
@@ -165,7 +166,7 @@ def import_archive(m, known, data, package, label, depth=0):
             record['files'][name] = retain(m, known, package, name, raw, origin)
 
 
-def import_paths(m, paths):
+def import_paths(m, paths, package_override=None):
     known, candidates = existing_hashes(m)
     # Register original in-repository Q-MATH reports and audits as authoritative paths.
     for p in candidates:
@@ -182,6 +183,10 @@ def import_paths(m, paths):
         match = re.search(r'(?:Q-?MATH[-_]?)(\d+(?:\.\d+)?)', label, re.I)
         package = ('v' + match.group(1)) if match else (
             'history-to-16.11' if label.startswith('Q-MATH_') else 'foundation-M0')
+        if package_override is not None:
+            package = safe_name(package_override)
+            if '/' in package:
+                raise ValueError('Import package must be a single directory name')
         if p.suffix.lower() == '.zip':
             import_archive(m, known, data, package, label)
         else:
@@ -279,6 +284,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     p = sub.add_parser('import'); p.add_argument('paths', nargs='+', type=Path)
+    p.add_argument('--package', help='Explicit independent-project/version archive label')
     p = sub.add_parser('register'); p.add_argument('paths', nargs='+', type=Path)
     sub.add_parser('refresh'); sub.add_parser('check')
     p = sub.add_parser('finish'); p.add_argument('--message', required=True)
@@ -288,7 +294,7 @@ def main():
     args = parser.parse_args()
     m = load()
     if args.command == 'import':
-        import_paths(m, args.paths); refresh(m)
+        import_paths(m, args.paths, args.package); refresh(m)
     elif args.command == 'register':
         known, _ = existing_hashes(m)
         for p in args.paths:
