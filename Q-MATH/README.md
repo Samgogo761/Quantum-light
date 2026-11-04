@@ -4,7 +4,9 @@
 
 **2026-11-04新增独立项目入口：** [QL-TIP-1D](../QL-TIP-1D/README.md)已完成有限方阱、无场及800 nm单强度数值基线，并将后续候选主线收窄为[偏压×BSV高能响应](../QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md)。新项目没有继承下述M0 Hamiltonian或科学结论；仅复用本仓库的归档和本地提交机制。尚未计算1600 nm偏压谱或BSV平均，不构成发表/量子优势结论。
 
-**2026-11-04外审后计划更新：** 已制定[单人后续执行任务书](../QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md)及[下一位Agent首轮指令](../QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md)。收缩为静态能谱验收→两偏压先导→两偏压统计积分→有证据后补点，设240条TDSE与72小时累计计算上限；建议首次执行范围仅P0–P2。**本轮仅计划和归档，没有新科研计算**；新谱方法、参数和预算均不是已验证成果。历史文件保留，师妹分工由本轮单人计划替代。
+**2026-11-04外审后计划更新：** 已制定[单人后续执行任务书](../QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md)及[下一位Agent首轮指令](../QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md)。收缩为静态能谱验收→两偏压先导→两偏压统计积分→有证据后补点，设240条TDSE与72小时累计计算上限；建议首次执行范围仅P0–P2。历史文件保留，师妹分工由本轮单人计划替代。
+
+**2026-11-04 P0–P2执行结果：** [P0协议](../QL-TIP-1D/reports/P0_protocol.md)、[P1能谱验收](../QL-TIP-1D/reports/P1_spectrum_validation.md)、[P2两偏压先导](../QL-TIP-1D/reports/P2_two_bias_pilot.md)和[继续/停止建议](../QL-TIP-1D/reports/decision.md)已完成。48条TDSE、累计13.12 h；P1/P2均PASS。四相位下`q(μ)=1.97575`、`q(4μ)=2.01937`，端点差2.21%，与dx/dt/η误差同量级，**不能认定统计依赖的偏压响应**；未启动BSV/热光积分、四偏压库、服务器或远程推送。
 
 Q-MATH 研究纯 BSV 等量子光与现象学八带 PT-AFM M0 的相互作用。M0 **不是** CrI₃ 的 full112/M88/M52 Wannier 材料拟合。本文“正 P”均指非负 Glauber–Sudarshan P 概率测度。
 

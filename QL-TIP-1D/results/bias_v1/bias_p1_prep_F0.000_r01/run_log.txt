@@ -1,0 +1,14 @@
+run_id=bias_p1_prep_F0.000_r01
+status=FAIL
+Traceback (most recent call last):
+  File "C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_bias_v1.py", line 315, in main
+    summary = run_preparation(config, args.run_id, results, raw, start_clock)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_bias_v1.py", line 164, in run_preparation
+    grid = make_grid(config)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\src\ql_tip_1d\bias_v1.py", line 41, in make_grid
+    model = config["model"]
+            ~~~~~~^^^^^^^^^
+KeyError: 'model'
+

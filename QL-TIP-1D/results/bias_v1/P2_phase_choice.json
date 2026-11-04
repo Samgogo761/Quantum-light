@@ -1,0 +1,7 @@
+{
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 4.0,
+  "key": "F1_I4",
+  "relative_change_two_to_four": -0.00016853083938312896,
+  "reason": "largest absolute 2->4 phase-average change; selected before any eight-phase result"
+}

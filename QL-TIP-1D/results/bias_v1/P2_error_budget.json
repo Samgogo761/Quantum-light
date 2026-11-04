@@ -1,0 +1,30 @@
+{
+  "q_mu": 1.9757521804293112,
+  "q_4mu": 2.0193710994428944,
+  "relative_q4mu_minus_qmu": 0.022077120524348966,
+  "q4mu_change_resolved": false,
+  "reason": "The 2.21% endpoint difference is not larger than the conservative dx/dt/eta error scale. This is not a confidence interval.",
+  "single_factor_relative_changes": {
+    "F1_4mu_dx048": 0.016388322569627994,
+    "F1_4mu_dt005": -0.02141851609539044,
+    "F1_4mu_box900": 1.956033499924566e-12,
+    "F1_4mu_caphalf": -9.224098899783917e-07,
+    "F1_1mu_dx048": 0.01649209530836417,
+    "F1_1mu_dt005": -0.0045754900387384185,
+    "F0_1mu_dx048": 0.0037779250927578683,
+    "F0_1mu_dt005": -0.00012491557428335922
+  },
+  "eta_residual_from_0p1_to_0p05": {
+    "F0": -0.01751267817189635,
+    "F1": -0.032585513521087024
+  },
+  "phase_average_changes": {
+    "F0_I1_2to4": -4.844371749684522e-10,
+    "F0_I4_2to4": -0.00015776027487770405,
+    "F1_I1_2to4": 1.548739148583633e-10,
+    "F1_I4_2to4": -0.00016853083938312896,
+    "F1_I4_4to8": 2.4879327661202805e-11
+  },
+  "missing_controls": "F0/4mu dx and dt were not run separately; F0/mu values are shown only as scale checks.",
+  "interpretation": "q is approximately 2 at both intensities; no reliable intensity-dependent bias response is established in this pilot. No BSV/thermal weighting or D(F) is present."
+}

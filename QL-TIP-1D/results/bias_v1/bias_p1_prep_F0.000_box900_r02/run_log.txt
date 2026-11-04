@@ -1,0 +1,6 @@
+run_id=bias_p1_prep_F0.000_box900_r02
+command=['C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\QL-TIP-1D\\scripts\\run_bias_v1.py', '--config', 'C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\QL-TIP-1D\\configs\\generated_bias_v1\\bias_p1_prep_F0.000_box900_r02.json', '--run-id', 'bias_p1_prep_F0.000_box900_r02']
+started_utc=2026-11-04T09:10:41.354934+00:00
+finished_utc=2026-11-04T09:19:32.162830+00:00
+status=PASS
+wall_seconds=530.80558839999139

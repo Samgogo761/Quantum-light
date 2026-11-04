@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "conditions": {
+    "F0_I1": {
+      "F_dc_V_per_nm": 0.0,
+      "I_over_mu": 1.0,
+      "Y_by_phase": {
+        "0": 2.884415979289559e-09,
+        "1": 2.883503757781368e-09,
+        "2": 2.883542743527031e-09,
+        "3": 2.884454959446794e-09
+      },
+      "Y_two_phase": 2.883979361408295e-09,
+      "Y_four_phase": 2.8839793600111883e-09,
+      "relative_change_two_to_four": -4.844371749684522e-10,
+      "phase_spread_only_two": 8.732357625280264e-13
+    },
+    "F0_I4": {
+      "F_dc_V_per_nm": 0.0,
+      "I_over_mu": 4.0,
+      "Y_by_phase": {
+        "0": 9.011640510979256e-06,
+        "1": 9.505203802693529e-06,
+        "2": 9.674366441310664e-06,
+        "3": 9.17490826038941e-06
+      },
+      "Y_two_phase": 9.34300347614496e-06,
+      "Y_four_phase": 9.341529753843215e-06,
+      "relative_change_two_to_four": -0.00015776027487770405,
+      "phase_spread_only_two": 6.627259303314087e-07
+    },
+    "F1_I1": {
+      "F_dc_V_per_nm": 1.0,
+      "I_over_mu": 1.0,
+      "Y_by_phase": {
+        "0": 5.697994724785954e-09,
+        "1": 5.697090878221702e-09,
+        "2": 5.698062291159564e-09,
+        "3": 5.698966141253717e-09
+      },
+      "Y_two_phase": 5.698028507972759e-09,
+      "Y_four_phase": 5.698028508855235e-09,
+      "relative_change_two_to_four": 1.548739148583633e-10,
+      "phase_spread_only_two": 6.756637361011787e-14
+    },
+    "F1_I4": {
+      "F_dc_V_per_nm": 1.0,
+      "I_over_mu": 4.0,
+      "Y_by_phase": {
+        "0": 1.898256664687565e-05,
+        "1": 1.9353321788584903e-05,
+        "2": 1.8751822108752904e-05,
+        "3": 1.836835029377408e-05
+      },
+      "Y_two_phase": 1.8867194377814277e-05,
+      "Y_four_phase": 1.8864015209496885e-05,
+      "relative_change_two_to_four": -0.00016853083938312896,
+      "phase_spread_only_two": 2.3074453812274668e-07
+    }
+  },
+  "q_by_intensity": {
+    "two_phase": {
+      "1.0": 1.975752179166191,
+      "4.0": 2.0193928457788735
+    },
+    "four_phase": {
+      "1.0": 1.9757521804293112,
+      "4.0": 2.0193710994428944
+    },
+    "relative_q4mu_minus_qmu": 0.022077120524348966
+  },
+  "phase_acceptance_2to4_relative": 0.02,
+  "phase_pass": true,
+  "eight_phase_representative": {
+    "F_dc_V_per_nm": 1.0,
+    "I_over_mu": 4.0,
+    "Y_four_phase": 1.8864015209496885e-05,
+    "Y_eight_phase": 1.886401520996621e-05,
+    "relative_change_four_to_eight": 2.4879327661202805e-11,
+    "extra_Y_by_phase_deg": {
+      "45": 1.929796936282653e-05,
+      "135": 1.912652326194206e-05,
+      "225": 1.8438385438907234e-05,
+      "315": 1.859318277806632e-05
+    },
+    "acceptance_relative": 0.02,
+    "pass": true
+  },
+  "eight_phase_missing_runs": [],
+  "highest_intensity_controls": {
+    "dx048": {
+      "Y_H": 1.929365907228411e-05,
+      "relative_change": 0.016388322569627994,
+      "pass": true
+    },
+    "dt005": {
+      "Y_H": 1.8575988237617723e-05,
+      "relative_change": -0.02141851609539044,
+      "pass": true
+    },
+    "box900": {
+      "Y_H": 1.898256664691278e-05,
+      "relative_change": 1.956033499924566e-12,
+      "pass": true
+    },
+    "caphalf": {
+      "Y_H": 1.8982549137168438e-05,
+      "relative_change": -9.224098899783917e-07,
+      "pass": true
+    }
+  },
+  "highest_controls_pass": true,
+  "missing_runs": [],
+  "interpretation_limit": "This is a minimal numerical response check, not a BSV or thermal average, not a D(F) result, and not evidence for or against quantum advantage."
+}

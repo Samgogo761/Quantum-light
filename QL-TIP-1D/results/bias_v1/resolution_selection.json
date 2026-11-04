@@ -1,0 +1,18 @@
+{
+  "decision": "Use eta=0.1 eV and dE=0.025 eV for production high-energy integrals; retain eta=0.2 and eta=0.05 as saved controls.",
+  "physics_parameters_changed": false,
+  "E_star_eV": 0.7170816000000001,
+  "reason": "The frozen starting eta=0.2 eV changed Y_H by +6.00% (F=0) and +8.19% (F=1) relative to eta=0.1 eV. Post-processing the same saved states at eta=0.05 eV changed Y_H by -1.75% (F=0) and -3.26% (F=1) relative to eta=0.1 eV, bounding the remaining eta residual below the 5% pilot target.",
+  "values_eV": {
+    "F0": {"eta0p2": 3.0575768008691364e-09, "eta0p1": 2.884415979289559e-09, "eta0p05": 2.833902130530386e-09},
+    "F1": {"eta0p2": 6.164772350959087e-09, "eta0p1": 5.697994724785954e-09, "eta0p05": 5.512322640638359e-09}
+  },
+  "relative_changes": {
+    "F0_eta0p2_to_eta0p1": 0.06003323474245459,
+    "F0_eta0p1_to_eta0p05": -0.01751267817189639,
+    "F1_eta0p2_to_eta0p1": 0.08191963115421586,
+    "F1_eta0p1_to_eta0p05": -0.03258551352108707
+  },
+  "not_done": "No fixed-box comb smoothing, no threshold change, no TDSE rerun, and no post-hoc adjustment based on q or any statistical contrast.",
+  "note": "This is a numerical-resolution calibration performed identically at both biased and unbiased points before P2."
+}

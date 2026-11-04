@@ -1,0 +1,30 @@
+{
+  "run_kind": "preparation",
+  "status": "PASS",
+  "initial_ground_energy_eV": -5.51294181882463,
+  "ramp_start_fs": -160.0,
+  "ramp_end_fs": -120.0,
+  "prep_end_fs": -100.0,
+  "actual_dt_au": 0.0499986374011854,
+  "steps": 49611,
+  "N_initial": 1.0,
+  "N_prep": 1.0000000000011449,
+  "left_CAP_loss_prep": 1.5791174013074962e-18,
+  "right_CAP_loss_prep": 2.861111824061433e-29,
+  "pre_laser_population_loss": 1.5791174013361072e-18,
+  "max_probability_budget_residual": 1.1448619829934614e-12,
+  "state_prep_path": "data/raw/bias_v1/bias_p1_prep_F1.000_dt005_r02/state_prep.npz",
+  "run_id": "bias_p1_prep_F1.000_dt005_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 424.48720329999924,
+  "peak_working_set_bytes": 121356288
+}
