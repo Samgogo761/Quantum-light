@@ -185,6 +185,11 @@
       "name": "QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md",
       "sha256": "70b2131f0d0393a51937851c4dc84f85500b6acb11ad5f1b55bc135b07c2e47f",
       "bytes": 14714
+    },
+    {
+      "name": "已粘贴的文本.txt",
+      "sha256": "cb6360825b4718232986d9d0ff701fa779dc9f28f25e919961f427d561062adb",
+      "bytes": 11917
     }
   ],
   "packages": {
@@ -4568,6 +4573,46 @@
       "kind": "code",
       "origins": [
         "registered:QL-TIP-1D/validation/stage2_baseline_source_v1.py"
+      ]
+    },
+    "Q-MATH/reports/QL-TIP-1D-external-review-20261104/已粘贴的文本.txt": {
+      "sha256": "cb6360825b4718232986d9d0ff701fa779dc9f28f25e919961f427d561062adb",
+      "bytes": 11917,
+      "kind": "reports",
+      "origins": [
+        "已粘贴的文本.txt"
+      ]
+    },
+    "QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md": {
+      "sha256": "3932679f223170d1c6a3867465fd55b133076adfb2b31ca2f7f93228790abaaf",
+      "bytes": 40491,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md": {
+      "sha256": "7c887f0d19f48d1d9413bc3d37bab6e8eaf137f905b25ad0c3049fa5df33dbb1",
+      "bytes": 2927,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md": {
+      "sha256": "7920539fbfba12e9030e0f73e8e8026f290826199137ce26ce09fced9a77aff5",
+      "bytes": 3466,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json": {
+      "sha256": "a59ad6f2b5d9aefc8935018ab9babb7876ca0a36c661e938197cd58bb235281e",
+      "bytes": 1370,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json"
       ]
     }
   }

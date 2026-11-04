@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 37 个；独立文件 456 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 461 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -100,6 +100,7 @@
 | reports | [Q-MATH/reports/QL-TIP-1D-direction-20261103/QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md](reports/QL-TIP-1D-direction-20261103/QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md) | 14714 | `70b2131f0d03` |
 | reports | [Q-MATH/reports/QL-TIP-1D-discussion-01/已粘贴的文本.txt](reports/QL-TIP-1D-discussion-01/已粘贴的文本.txt) | 21695 | `a54c095828ff` |
 | reports | [Q-MATH/reports/QL-TIP-1D-discussion-02/已粘贴的文本.txt](reports/QL-TIP-1D-discussion-02/已粘贴的文本.txt) | 12310 | `4acb6f91e461` |
+| reports | [Q-MATH/reports/QL-TIP-1D-external-review-20261104/已粘贴的文本.txt](reports/QL-TIP-1D-external-review-20261104/已粘贴的文本.txt) | 11917 | `cb6360825b47` |
 | reports | [Q-MATH/reports/foundation-M0/M0_数学重构_联合验收报告_20261021.md](reports/foundation-M0/M0_数学重构_联合验收报告_20261021.md) | 6787 | `840fba97e368` |
 | reports | [Q-MATH/reports/foundation-M0/README_M0联合验证.txt](reports/foundation-M0/README_M0联合验证.txt) | 1367 | `38c72206daf9` |
 | reports | [Q-MATH/reports/foundation-M0/研究底稿_八带量子光HHG_数学重构_v1.md](reports/foundation-M0/研究底稿_八带量子光HHG_数学重构_v1.md) | 27905 | `aa39f81df793` |
@@ -370,6 +371,10 @@
 | results | [QL-TIP-1D/file_inventory.json](../QL-TIP-1D/file_inventory.json) | 65098 | `8e46f75340ba` |
 | reports | [QL-TIP-1D/logs/stage1_20261103_r1_failure.txt](../QL-TIP-1D/logs/stage1_20261103_r1_failure.txt) | 923 | `bfeefa4af71c` |
 | reports | [QL-TIP-1D/logs/stage2_saved_runs_audit_20261104.txt](../QL-TIP-1D/logs/stage2_saved_runs_audit_20261104.txt) | 5413 | `9c85fa01864a` |
+| reports | [QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md](../QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md) | 40491 | `3932679f2231` |
+| reports | [QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md](../QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md) | 3466 | `7920539fbfba` |
+| reports | [QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md](../QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md) | 2927 | `7c887f0d19f4` |
+| results | [QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json](../QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json) | 1370 | `a59ad6f2b5d9` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |

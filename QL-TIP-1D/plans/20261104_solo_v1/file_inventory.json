@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-04",
+  "scope": "planning_only_no_research_computation",
+  "inherited_commit": "11eb7c882ea6e87ec88c9e693d6911f5057abb9f",
+  "excludes": [
+    "this_inventory",
+    "generated_global_index_and_manifest"
+  ],
+  "files": [
+    {
+      "path": "QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md",
+      "bytes": 40491,
+      "sha256": "3932679f223170d1c6a3867465fd55b133076adfb2b31ca2f7f93228790abaaf",
+      "role": "round_artifact"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md",
+      "bytes": 2927,
+      "sha256": "7c887f0d19f48d1d9413bc3d37bab6e8eaf137f905b25ad0c3049fa5df33dbb1",
+      "role": "round_artifact"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md",
+      "bytes": 3466,
+      "sha256": "7920539fbfba12e9030e0f73e8e8026f290826199137ce26ce09fced9a77aff5",
+      "role": "round_artifact"
+    },
+    {
+      "path": "Q-MATH/reports/QL-TIP-1D-external-review-20261104/已粘贴的文本.txt",
+      "bytes": 11917,
+      "sha256": "cb6360825b4718232986d9d0ff701fa779dc9f28f25e919961f427d561062adb",
+      "role": "round_artifact"
+    },
+    {
+      "path": "Q-MATH/README.md",
+      "bytes": 10392,
+      "sha256": "bfef2092edad3ddff9616f1cabf43f5c323467fe6c04917285e576aeb6c4afa5",
+      "role": "mutable_control_snapshot"
+    }
+  ]
+}
