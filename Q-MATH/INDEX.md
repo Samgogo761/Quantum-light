@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 840 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 842 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -435,6 +435,8 @@
 | reports | [QL-TIP-1D/reports/STAGE_0.md](../QL-TIP-1D/reports/STAGE_0.md) | 2145 | `48396dd77315` |
 | reports | [QL-TIP-1D/reports/STAGE_1.md](../QL-TIP-1D/reports/STAGE_1.md) | 3196 | `14ca18c42fb1` |
 | reports | [QL-TIP-1D/reports/STAGE_2.md](../QL-TIP-1D/reports/STAGE_2.md) | 3911 | `c06e1db97e20` |
+| reports | [QL-TIP-1D/reports/STATUS_REVIEW_20261105.md](../QL-TIP-1D/reports/STATUS_REVIEW_20261105.md) | 11141 | `95c87b8e92df` |
+| results | [QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json](../QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json) | 3672 | `34ff0a191cb0` |
 | reports | [QL-TIP-1D/reports/decision.md](../QL-TIP-1D/reports/decision.md) | 3282 | `fef8de6b22a1` |
 | reports | [QL-TIP-1D/reports/figure_data_map.md](../QL-TIP-1D/reports/figure_data_map.md) | 1717 | `ea3b377f20f1` |
 | reports | [QL-TIP-1D/requirements-lock.txt](../QL-TIP-1D/requirements-lock.txt) | 199 | `00710d223d3c` |

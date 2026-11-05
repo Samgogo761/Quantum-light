@@ -7646,6 +7646,22 @@
       "origins": [
         "registered:QL-TIP-1D/tests/test_spectrum_v1.py"
       ]
+    },
+    "QL-TIP-1D/reports/STATUS_REVIEW_20261105.md": {
+      "sha256": "95c87b8e92df37c34611f455fde73cc571a2ffd63db124f354e017d9d759c08f",
+      "bytes": 11141,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/STATUS_REVIEW_20261105.md"
+      ]
+    },
+    "QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json": {
+      "sha256": "34ff0a191cb0bc1b46419b192521f8259b5a23ef9666ea6800c7adf2c3e1ab8d",
+      "bytes": 3672,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json"
+      ]
     }
   }
 }

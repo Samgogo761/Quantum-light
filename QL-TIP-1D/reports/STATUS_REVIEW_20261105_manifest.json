@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-05",
+  "scope": "read_only_scientific_review_and_report_no_new_simulation",
+  "inherited_execution_commit": "41e26d1",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/STATUS_REVIEW_20261105.md",
+      "bytes": 11141,
+      "sha256": "95c87b8e92df37c34611f455fde73cc571a2ffd63db124f354e017d9d759c08f",
+      "role": "new_review"
+    },
+    {
+      "path": "QL-TIP-1D/configs/protocol_v1.json",
+      "bytes": 4515,
+      "sha256": "bb7a61f1fcd8a4723a6b785feb13d2a1dfde75e2a0182a1bd36acf16fd415d67",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/reports/P0_protocol.md",
+      "bytes": 4083,
+      "sha256": "6113c8398e63120e94d6137c9586ddc73a7c286df4ceab2033d01403a05fb111",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/reports/P1_spectrum_validation.md",
+      "bytes": 4689,
+      "sha256": "bbf86234b5e3f8c7c1e3fcd7731d70b99952108bff0a8874f6c03db28647c6cb",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/reports/P2_two_bias_pilot.md",
+      "bytes": 3670,
+      "sha256": "7d6f14901760db3a7d59a3362f17c74b9510f7a5fe3b7355b3f25fa3128b9965",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/reports/decision.md",
+      "bytes": 3282,
+      "sha256": "fef8de6b22a1c8e5594d590c6347d0d1de25b7990d1696e658168e5fb99cdf44",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/P1_gate.json",
+      "bytes": 5316,
+      "sha256": "886755c54b1e81273c7d88163f46fac49221b736cc19b4b0f362dc5cb80568ba",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/P2_error_budget.json",
+      "bytes": 1324,
+      "sha256": "e3387ce38db086ae98b1be7c823b743628536ed4fc27caf803c8d41dc1b11246",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/P2_q_table.csv",
+      "bytes": 486,
+      "sha256": "b51caedea0cfc7a3ec064c26082e6b54d50746dc340a573f5286181afc27839f",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/resolution_selection.json",
+      "bytes": 1253,
+      "sha256": "4690e9e6bb781e38f2ac7ab836d283603ebe9d92e4bf7c397f466308af2fadfc",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/budget_status.json",
+      "bytes": 12986,
+      "sha256": "d788a67b4671cfd12d2279fd0a081eaa03eafad6bd56389abdbb02c51a74efa8",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/bias_p1_F0.000_I1_phi000_dt005_r02/summary.json",
+      "bytes": 2002,
+      "sha256": "5c2b9376346cccfa7b909252124fb0ca690d24ae6580d3fc6e9eabb41449e154",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/budget_status.py",
+      "bytes": 2809,
+      "sha256": "c70be3f548db0a90a5ab78c60c03a79f3569383aa56251b402f42bf628cdba5a",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_p1.py",
+      "bytes": 10922,
+      "sha256": "f891a233b8e523da1e5c670352d7544a2096e82e20e713c34d9822e2f8b5c3b3",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_solo_v1.py",
+      "bytes": 13211,
+      "sha256": "82d22c6d15cef2bc87541e1a113bd1a9c428eaf18a64eb1b3722ece3af7ba112",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/src/ql_tip_1d/bias_v1.py",
+      "bytes": 6357,
+      "sha256": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+      "role": "read_only_evidence"
+    }
+  ],
+  "inventory_excludes_itself": true
+}

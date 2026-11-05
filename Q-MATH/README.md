@@ -8,6 +8,8 @@
 
 **2026-11-04 P0–P2执行结果：** [P0协议](../QL-TIP-1D/reports/P0_protocol.md)、[P1能谱验收](../QL-TIP-1D/reports/P1_spectrum_validation.md)、[P2两偏压先导](../QL-TIP-1D/reports/P2_two_bias_pilot.md)和[继续/停止建议](../QL-TIP-1D/reports/decision.md)已完成。48条TDSE、累计13.12 h；P1/P2均PASS。四相位下`q(μ)=1.97575`、`q(4μ)=2.01937`，端点差2.21%，与dx/dt/η误差同量级，**不能认定统计依赖的偏压响应**；未启动BSV/热光积分、四偏压库、服务器或远程推送。
 
+**2026-11-05现状复核（当前解释）：** [模型、参数、结果与验证范围](../QL-TIP-1D/reports/STATUS_REVIEW_20261105.md)核实上述产额和q，但将PASS限定为先导可行及已测单项达标：尚未证明总误差≤5%，4μ的部分dx/dt/η控制和准备变化后的激光主量对照仍缺。13.12 h是run账本累计，全程最长记录约44.65 min。本轮只读复核并写报告，保留所有旧结果与标记，没有新科研计算或P3启动。
+
 Q-MATH 研究纯 BSV 等量子光与现象学八带 PT-AFM M0 的相互作用。M0 **不是** CrI₃ 的 full112/M88/M52 Wannier 材料拟合。本文“正 P”均指非负 Glauber–Sudarshan P 概率测度。
 
 ## 从哪里开始
