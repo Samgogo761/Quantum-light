@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 842 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 848 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -425,6 +425,12 @@
 | reports | [QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md](../QL-TIP-1D/plans/20261104_solo_v1/PLAN_AUDIT.md) | 3466 | `7920539fbfba` |
 | reports | [QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md](../QL-TIP-1D/plans/20261104_solo_v1/START_HERE.md) | 2927 | `7c887f0d19f4` |
 | results | [QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json](../QL-TIP-1D/plans/20261104_solo_v1/file_inventory.json) | 1370 | `a59ad6f2b5d9` |
+| reports | [QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md](../QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md) | 40898 | `3619e5fc5bd2` |
+| reports | [QL-TIP-1D/plans/20261105_continuation_v2/PLAN_REVIEW.md](../QL-TIP-1D/plans/20261105_continuation_v2/PLAN_REVIEW.md) | 5114 | `bb73c2fbffbb` |
+| reports | [QL-TIP-1D/plans/20261105_continuation_v2/START_HERE.md](../QL-TIP-1D/plans/20261105_continuation_v2/START_HERE.md) | 4472 | `5dcf83f574b8` |
+| results | [QL-TIP-1D/plans/20261105_continuation_v2/TASK_MANIFEST.json](../QL-TIP-1D/plans/20261105_continuation_v2/TASK_MANIFEST.json) | 64342 | `2cc408950a3e` |
+| code | [QL-TIP-1D/plans/20261105_continuation_v2/build_plan_manifest.py](../QL-TIP-1D/plans/20261105_continuation_v2/build_plan_manifest.py) | 10399 | `c5436d410bf0` |
+| results | [QL-TIP-1D/plans/20261105_continuation_v2/file_inventory.json](../QL-TIP-1D/plans/20261105_continuation_v2/file_inventory.json) | 2023 | `2ac0a7d9eee0` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
