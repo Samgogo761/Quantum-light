@@ -12,6 +12,10 @@
 
 **2026-11-05续接计划（最新执行入口，尚未运行）：** [交给下一位Agent的指令](../QL-TIP-1D/plans/20261105_continuation_v2/START_HERE.md)、[完整任务书v2](../QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md)及[计划审阅记录](../QL-TIP-1D/plans/20261105_continuation_v2/PLAN_REVIEW.md)已完成。先重用保存态并补四条验证传播，通过新总误差门槛后才做两偏压BSV/热光积分；续接上限112条/40小时，修复最多12条/8小时，仍受原全局240条/72小时约束。不自动执行四偏压或服务器。本轮仅编制文档、核验154项旧输入哈希，未启动科研任务；先前2.21%仍未分辨。
 
+**2026-11-05材料模型外审复核：** [钨材料模型升级评议](../QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md)确认当前方阱已有钨针尖文献依据，同时强调原文已指出单态模型对偏压总产额的局限。建议先完成有限模型内统计判定；改功函数或增加表面势不自动获得真实钨电子结构，数值误差不包含材料误差。本轮仅审阅、记录建议，不修改物理协议或运行新计算。
+
+**2026-11-05晚间最新讨论入口：** [研究决定与执行调整](../QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md)、[转交指令](../QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md)。落实用户/导师保留单电子的决定；−5.6eV变体仅作有上限的可选敏感性筛查，不强制替换主模型。只读快照发现执行Agent已有R1报告PASS并进入R2；新η下q端点差约8.95%，经验审计区间仍含1，不是BSV结果。本讨论轮未启动或终止科研任务，执行证据仍由原Agent单独归档。
+
 Q-MATH 研究纯 BSV 等量子光与现象学八带 PT-AFM M0 的相互作用。M0 **不是** CrI₃ 的 full112/M88/M52 Wannier 材料拟合。本文“正 P”均指非负 Glauber–Sudarshan P 概率测度。
 
 ## 从哪里开始

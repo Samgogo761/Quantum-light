@@ -7710,6 +7710,46 @@
       "origins": [
         "registered:QL-TIP-1D/plans/20261105_continuation_v2/file_inventory.json"
       ]
+    },
+    "QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md": {
+      "sha256": "426a5397f25dc55369814cde86bf7a10d98bab9ebc99e9b76c749916791edee3",
+      "bytes": 7960,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md": {
+      "sha256": "19ccca5837f7e05696300f7081896759a6330fd8b2f40c320cf608509a70089e",
+      "bytes": 17611,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md": {
+      "sha256": "03665db729daa0121e748a8b8a8c535b711998be12c2e22d90d9bb928334816e",
+      "bytes": 2261,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261105_evening_decision/evidence_snapshot.json": {
+      "sha256": "81ae46ba8f758056b9a711f146297ac5d2393fa4039f126692a934662773cd75",
+      "bytes": 10376,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261105_evening_decision/evidence_snapshot.json"
+      ]
+    },
+    "QL-TIP-1D/plans/20261105_evening_decision/file_inventory.json": {
+      "sha256": "80cf41861d8e1423e1008880253784008d91544c2df9bfbc90cb833878e08141",
+      "bytes": 884,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261105_evening_decision/file_inventory.json"
+      ]
     }
   }
 }

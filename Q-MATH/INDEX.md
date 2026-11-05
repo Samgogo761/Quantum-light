@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 848 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 853 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -431,10 +431,15 @@
 | results | [QL-TIP-1D/plans/20261105_continuation_v2/TASK_MANIFEST.json](../QL-TIP-1D/plans/20261105_continuation_v2/TASK_MANIFEST.json) | 64342 | `2cc408950a3e` |
 | code | [QL-TIP-1D/plans/20261105_continuation_v2/build_plan_manifest.py](../QL-TIP-1D/plans/20261105_continuation_v2/build_plan_manifest.py) | 10399 | `c5436d410bf0` |
 | results | [QL-TIP-1D/plans/20261105_continuation_v2/file_inventory.json](../QL-TIP-1D/plans/20261105_continuation_v2/file_inventory.json) | 2023 | `2ac0a7d9eee0` |
+| reports | [QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md](../QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md) | 17611 | `19ccca5837f7` |
+| reports | [QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md](../QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md) | 2261 | `03665db729da` |
+| results | [QL-TIP-1D/plans/20261105_evening_decision/evidence_snapshot.json](../QL-TIP-1D/plans/20261105_evening_decision/evidence_snapshot.json) | 10376 | `81ae46ba8f75` |
+| results | [QL-TIP-1D/plans/20261105_evening_decision/file_inventory.json](../QL-TIP-1D/plans/20261105_evening_decision/file_inventory.json) | 884 | `80cf41861d8e` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
 | reports | [QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md](../QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md) | 7629 | `74e7a4c3a3e2` |
+| reports | [QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md](../QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md) | 7960 | `426a5397f25d` |
 | reports | [QL-TIP-1D/reports/P0_protocol.md](../QL-TIP-1D/reports/P0_protocol.md) | 4083 | `6113c8398e63` |
 | reports | [QL-TIP-1D/reports/P1_spectrum_validation.md](../QL-TIP-1D/reports/P1_spectrum_validation.md) | 4689 | `bbf86234b5e3` |
 | reports | [QL-TIP-1D/reports/P2_two_bias_pilot.md](../QL-TIP-1D/reports/P2_two_bias_pilot.md) | 3670 | `7d6f14901760` |

@@ -1,0 +1,25 @@
+{
+  "scope": "documentation and read-only snapshot",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md",
+      "bytes": 7960,
+      "sha256": "426a5397f25dc55369814cde86bf7a10d98bab9ebc99e9b76c749916791edee3"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md",
+      "bytes": 17611,
+      "sha256": "19ccca5837f7e05696300f7081896759a6330fd8b2f40c320cf608509a70089e"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md",
+      "bytes": 2261,
+      "sha256": "03665db729daa0121e748a8b8a8c535b711998be12c2e22d90d9bb928334816e"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_evening_decision/evidence_snapshot.json",
+      "bytes": 10376,
+      "sha256": "81ae46ba8f758056b9a711f146297ac5d2393fa4039f126692a934662773cd75"
+    }
+  ]
+}
