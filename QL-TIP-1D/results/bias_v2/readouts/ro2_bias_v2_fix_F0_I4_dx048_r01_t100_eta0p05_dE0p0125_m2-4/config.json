@@ -1,0 +1,39 @@
+{
+  "schema": "continuation-v2-readout",
+  "readout_id": "ro2_bias_v2_fix_F0_I4_dx048_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "new_repair_control",
+  "run_id": "bias_v2_fix_F0_I4_dx048_r01",
+  "config_path": "results/bias_v2/runs/bias_v2_fix_F0_I4_dx048_r01/config.json",
+  "state_path": "data/raw/bias_v2/bias_v2_fix_F0_I4_dx048_r01/state_100fs.npz",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 4.0,
+  "CEP_rad": 0.0,
+  "expected_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_start_nm": 2.0,
+  "mask_end_nm": 4.0,
+  "energy_max_mode": "base",
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "note": "",
+  "state_sha256": "8548494e0812c5a734405b2b8bde076019a0b3e9a84b5e5b8fb0b58baeb45b45",
+  "run_config_sha256": "7a9e275b54a706abbca965fcb0ef65f599f42032b1c47917843801b19cf1cdad",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825",
+    "src/ql_tip_1d/continuation_v2.py": "a1c9e0d2a58ec3507bbaec18c9dd9b3ddf7ed90c1ee953924da105ee2628bfdb",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "actual_readout_fs": 100.0,
+  "energy_range_eV": [
+    -2.0,
+    38.6875
+  ],
+  "energy_points": 3256
+}

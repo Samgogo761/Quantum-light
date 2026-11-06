@@ -1,0 +1,234 @@
+{
+  "run_kind": "laser",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "I_apex_W_per_cm2": 48000000000000.0,
+  "CEP_rad": 0.0,
+  "protocol": {
+    "protocol_id": "solo-v1-p0-p2-20261104",
+    "status": "P0 frozen numerical starting point; production acceptance pending P1",
+    "inherited_git_commit": "6f8798e",
+    "units": {
+      "internal": "atomic units (hbar=e=m_e=1)",
+      "length": "nm",
+      "time": "fs",
+      "energy": "eV",
+      "static_field": "V/nm",
+      "intensity": "W/cm^2"
+    },
+    "model": {
+      "well_width_nm": 0.135,
+      "well_depth_eV": 10.8,
+      "well_bounds_nm": [
+        -0.135,
+        0.0
+      ],
+      "surface_x_nm": 0.0,
+      "electron_interaction_sign": "U=+e integral E dx; in atomic units e=1",
+      "dc_field_formula": "x>=0: E_dc=-F_dc/(1+x/L_dc)^2; x<0: 0",
+      "dc_potential_formula": "x>=0: U_dc=-F_dc*L_dc*x/(x+L_dc); x<0: 0",
+      "L_dc_nm": 20.0,
+      "near_field_xi": "x>=0: 1+2 exp(-x/ell); x<0: 0",
+      "near_field_integrated_G": "x>=0: x+2 ell[1-exp(-x/ell)]; x<0: 0",
+      "ell_nm": 20.0,
+      "intensity_enhancement_apex_over_incident": 9.0,
+      "new_physics_models_allowed": false
+    },
+    "optics": {
+      "wavelength_nm": 1600.0,
+      "intensity_envelope_fwhm_fs": 25.0,
+      "pulse_formula": "E0_inc exp[-2 ln(2)(t/25 fs)^2] cos(omega t+phi)",
+      "mu_I_apex_W_per_cm2": 1500000000000.0,
+      "mu_I_inc_W_per_cm2": 166666666666.66666,
+      "allowed_one_time_mu_calibration_W_per_cm2": 3000000000000.0,
+      "mu_calibration_condition": "Only if coherent reference high-energy window is below the validated error floor; freeze before any BSV response",
+      "laser_window_fs": [
+        -100.0,
+        100.0
+      ],
+      "readout_fs": [
+        100.0,
+        125.0
+      ],
+      "production_cep_rad": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "pilot_initial_cep_rad": [
+        0.0,
+        3.141592653589793
+      ],
+      "cep_weights": "equal",
+      "phase_acceptance_relative_change": 0.02
+    },
+    "preparation": {
+      "initial_state": "single no-DC finite-well ground state, normalized once",
+      "renormalize_after_preparation": false,
+      "ramp_start_fs": -160.0,
+      "ramp_end_fs": -120.0,
+      "ramp_duration_fs": 40.0,
+      "wait_end_fs": -100.0,
+      "wait_duration_fs": 20.0,
+      "ramp_function": "10 s^3-15 s^4+6 s^5",
+      "required_F1_controls": [
+        {
+          "ramp_duration_fs": 80.0,
+          "wait_duration_fs": 20.0
+        },
+        {
+          "ramp_duration_fs": 40.0,
+          "wait_duration_fs": 40.0
+        }
+      ],
+      "pre_laser_population_loss_target": 0.01,
+      "dc_only_high_energy_fraction_of_laser_mu_max": 0.01
+    },
+    "spectrum": {
+      "method": "static H_dc right-mask resolvent energy-window filter",
+      "mask": "0 for x<=2 nm; sin^2[pi(x-2 nm)/(4 nm)] for 2<x<4 nm; 1 for x>=4 nm",
+      "mask_alternative_nm": [
+        3.0,
+        5.0
+      ],
+      "eta_base_eV": 0.2,
+      "energy_step_base_eV": 0.05,
+      "eta_control_eV": [
+        0.1,
+        0.05
+      ],
+      "energy_step_control_eV": 0.025,
+      "lower_energy_rule": "U_dc(infinity)-2 eV",
+      "upper_energy_rule": "max(30 eV,20 Up(I)+abs(U_dc(infinity))+10 eV), expand until integral and Y_H stabilize",
+      "E_star_rule": "2 Up(mu), Up[eV]=9.337e-14 I_apex[W/cm^2] lambda[um]^2",
+      "Up_mu_eV": 0.35854080000000005,
+      "E_star_eV": 0.7170816000000001,
+      "auxiliary_threshold_offsets_eV": [
+        -0.2,
+        0.0,
+        0.2
+      ],
+      "free_fft_for_dc_spectra_allowed": false,
+      "dense_production_matrix_allowed": false
+    },
+    "numerics": {
+      "well_cells": 24,
+      "well_cells_control": 48,
+      "dt_au": 0.1,
+      "dt_control_au": 0.05,
+      "xmin_nm": -12.0,
+      "xmax_nm": 600.0,
+      "box_control_scale": 1.5,
+      "xmax_max_nm": 2000.0,
+      "left_cap_interval_nm": [
+        -12.0,
+        -8.0
+      ],
+      "right_cap_interval_nm": [
+        500.0,
+        600.0
+      ],
+      "cap_strength_au": 1.0,
+      "cap_power": 3,
+      "probability_budget_max_residual": 1e-08,
+      "right_cap_warning_fraction": 0.0001,
+      "single_worker": true
+    },
+    "pilot": {
+      "F_dc_V_per_nm": [
+        0.0,
+        1.0
+      ],
+      "I_over_mu": [
+        1.0,
+        4.0
+      ],
+      "maximum_production_propagations_including_reuse": 16,
+      "P1_P2_compute_stop_hours": 8.0,
+      "preliminary_total_relative_error_target": 0.05
+    },
+    "budget": {
+      "maximum_new_research_tdse_runs": 240,
+      "maximum_production_propagations": 192,
+      "maximum_control_propagations": 48,
+      "maximum_cumulative_wall_hours": 72.0,
+      "maximum_single_run_minutes": 90.0,
+      "maximum_peak_working_set_GiB": 6.0,
+      "maximum_new_disk_GiB": 20.0,
+      "accounting": "sum of propagation, spectrum and test wall times across all tasks; concurrency does not multiply the allowance"
+    },
+    "scope": {
+      "first_execution_stages": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "P1_must_pass_before_P2": true,
+      "BSV_or_thermal_integration_in_first_execution": false,
+      "four_bias_library_in_first_execution": false,
+      "server_submission_in_first_execution": false,
+      "remote_push_allowed": false
+    }
+  },
+  "protocol_sha256": "bb7a61f1fcd8a4723a6b785feb13d2a1dfde75e2a0182a1bd36acf16fd415d67",
+  "numerics": {
+    "well_cells": 24,
+    "well_cells_control": 48,
+    "dt_au": 0.1,
+    "dt_control_au": 0.05,
+    "xmin_nm": -12.0,
+    "xmax_nm": 600.0,
+    "box_control_scale": 1.5,
+    "xmax_max_nm": 2000.0,
+    "left_cap_interval_nm": [
+      -12.0,
+      -8.0
+    ],
+    "right_cap_interval_nm": [
+      500.0,
+      600.0
+    ],
+    "cap_strength_au": 1.0,
+    "cap_power": 3,
+    "probability_budget_max_residual": 1e-08,
+    "right_cap_warning_fraction": 0.0001,
+    "single_worker": true
+  },
+  "preparation": {
+    "initial_state": "single no-DC finite-well ground state, normalized once",
+    "renormalize_after_preparation": false,
+    "ramp_start_fs": -160.0,
+    "ramp_end_fs": -120.0,
+    "ramp_duration_fs": 40.0,
+    "wait_end_fs": -100.0,
+    "wait_duration_fs": 20.0,
+    "ramp_function": "10 s^3-15 s^4+6 s^5",
+    "required_F1_controls": [
+      {
+        "ramp_duration_fs": 80.0,
+        "wait_duration_fs": 20.0
+      },
+      {
+        "ramp_duration_fs": 40.0,
+        "wait_duration_fs": 40.0
+      }
+    ],
+    "pre_laser_population_loss_target": 0.01,
+    "dc_only_high_energy_fraction_of_laser_mu_max": 0.01
+  },
+  "full_spectrum_controls": false,
+  "late_readout": false,
+  "detector_nm": 10.0,
+  "prep_state_path": "data/raw/bias_v1/bias_p1_prep_F1.000_r02/state_prep.npz",
+  "prep_summary_path": "results/bias_v1/bias_p1_prep_F1.000_r02/summary.json",
+  "prep_state_sha256": "6840c4eef023c82f4f857946c83348b82040a9ccc908e50e6fa4b2a322768d52",
+  "parent_config_path": "results/bias_v1/bias_p1_F1.000_I1_phi000_r02/config.json",
+  "parent_config_sha256": "1aec728e17c071d2c6f1bb5285066009c3fe59b3c5e598a1c987a48567deb2fb",
+  "continuation": {
+    "schema": "continuation-v2",
+    "task_id": "bias_v2_probe_F1_I32_phi000_r01",
+    "phase": "R2_probe",
+    "baseline_run_id": ""
+  }
+}

@@ -8,6 +8,8 @@
 
 **2026-11-04 P0–P2执行结果：** [P0协议](../QL-TIP-1D/reports/P0_protocol.md)、[P1能谱验收](../QL-TIP-1D/reports/P1_spectrum_validation.md)、[P2两偏压先导](../QL-TIP-1D/reports/P2_two_bias_pilot.md)和[继续/停止建议](../QL-TIP-1D/reports/decision.md)已完成。48条TDSE、累计13.12 h；P1/P2均PASS。四相位下`q(μ)=1.97575`、`q(4μ)=2.01937`，端点差2.21%，与dx/dt/η误差同量级，**不能认定统计依赖的偏压响应**；未启动BSV/热光积分、四偏压库、服务器或远程推送。
 
+**2026-11-05续接v2检查点：** R1统一η=.05读出、四条补验证传播和R2的8μ/32μ验证已执行，本地账本为15条新增TDSE、约10.44 h；[R1续接报告](../QL-TIP-1D/reports/R1_continuation_validation.md)与[晚间状态判断](../QL-TIP-1D/reports/evening_status.md)已保存。R2统一读出尚缺、F0 CAP控制未生成，R2仍为INCOMPLETE；**未启动两偏压响应库或BSV/热光积分**。晚间复核确认单活性电子与W针尖文献方阱继续作为主模型；−5.6 eV仅为可选敏感性，不设门槛，本轮DEFERRED_PRIORITY。
+
 **2026-11-05现状复核（当前解释）：** [模型、参数、结果与验证范围](../QL-TIP-1D/reports/STATUS_REVIEW_20261105.md)核实上述产额和q，但将PASS限定为先导可行及已测单项达标：尚未证明总误差≤5%，4μ的部分dx/dt/η控制和准备变化后的激光主量对照仍缺。13.12 h是run账本累计，全程最长记录约44.65 min。本轮只读复核并写报告，保留所有旧结果与标记，没有新科研计算或P3启动。
 
 **2026-11-05续接计划（最新执行入口，尚未运行）：** [交给下一位Agent的指令](../QL-TIP-1D/plans/20261105_continuation_v2/START_HERE.md)、[完整任务书v2](../QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md)及[计划审阅记录](../QL-TIP-1D/plans/20261105_continuation_v2/PLAN_REVIEW.md)已完成。先重用保存态并补四条验证传播，通过新总误差门槛后才做两偏压BSV/热光积分；续接上限112条/40小时，修复最多12条/8小时，仍受原全局240条/72小时约束。不自动执行四偏压或服务器。本轮仅编制文档、核验154项旧输入哈希，未启动科研任务；先前2.21%仍未分辨。

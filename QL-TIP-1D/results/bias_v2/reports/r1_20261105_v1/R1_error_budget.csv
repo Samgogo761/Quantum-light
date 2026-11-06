@@ -1,0 +1,37 @@
+condition,component,reference_id,control_id,reference_Y,control_Y,relative_change,abs_relative,coverage,note
+F0_I1,dx,ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p1_F0.000_I1_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4,2.8335779855715571e-09,2.8416630955417894e-09,0.0028533218465845293,0.0028533218465845293,direct,
+F0_I1,dt,ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p1_F0.000_I1_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4,2.8335779855715571e-09,2.833711477595896e-09,4.7110764206491072e-05,4.7110764206491072e-05,direct,
+F0_I1,box,mixed,mixed,,,,3.2905300735804187e-10,direct/transferred,F0/4mu transferred as allowed by plan
+F0_I1,cap,mixed,mixed,,,,7.8692328512171393e-06,direct/transferred,F0/4mu transferred as allowed by plan
+F0_I1,mask,F0/F1 mu,mixed,,,,4.0727241048156057e-09,direct,
+F0_I1,time,F0/F1 mu,mixed,,,,1.3418375620569802e-08,direct,
+F0_I1,preparation,F1 mu CEP0,ramp080;wait040,,,,0,not_applicable_DC_zero,
+F0_I1,cep,four-phase mean,two-phase or representative eight-phase,2.8329603617305314e-09,,9.1020630932602886e-10,9.1020630932602886e-10,two_to_four_only,representative 4->8 available only at F1/4mu
+F0_I1,energy_range,ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,,2.8335779855715571e-09,,0,0,not_applicable_at_mu,
+F1_I1,dx,ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p1_F1.000_I1_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4,5.5095733336579517e-09,5.5950089323056962e-09,0.01550675405767247,0.01550675405767247,direct,
+F1_I1,dt,ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p1_F1.000_I1_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4,5.5095733336579517e-09,5.4855684269952957e-09,-0.0043569447594081559,0.0043569447594081559,direct,
+F1_I1,box,mixed,mixed,,,,3.2905300735804187e-10,direct/transferred,F0/4mu transferred as allowed by plan
+F1_I1,cap,mixed,mixed,,,,7.8692328512171393e-06,direct/transferred,F0/4mu transferred as allowed by plan
+F1_I1,mask,F0/F1 mu,mixed,,,,4.0727241048156057e-09,direct,
+F1_I1,time,F0/F1 mu,mixed,,,,1.3418375620569802e-08,direct,
+F1_I1,preparation,F1 mu CEP0,ramp080;wait040,,,,2.947705679477801e-08,direct_at_mu,
+F1_I1,cep,four-phase mean,two-phase or representative eight-phase,5.5097897122208327e-09,,8.1460582954299385e-11,8.1460582954299385e-11,two_to_four_only,representative 4->8 available only at F1/4mu
+F1_I1,energy_range,ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,,5.5095733336579517e-09,,0,0,not_applicable_at_mu,
+F0_I4,dx,ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_v2_fix_F0_I4_dx048_r01_t100_eta0p05_dE0p0125_m2-4,8.5225152024363338e-06,8.6129015813816001e-06,0.010605599027787887,0.010605599027787887,direct,
+F0_I4,dt,ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_v2_fix_F0_I4_dt005_r01_t100_eta0p05_dE0p0125_m2-4,8.5225152024363338e-06,8.4173026264254662e-06,-0.012345249437723554,0.012345249437723554,direct,
+F0_I4,box,mixed,mixed,,,,3.2905300735804187e-10,direct/transferred,F0/4mu transferred as allowed by plan
+F0_I4,cap,mixed,mixed,,,,7.8692328512171393e-06,direct/transferred,F0/4mu transferred as allowed by plan
+F0_I4,mask,F0/F1 mu,mixed,,,,4.0727241048156057e-09,transferred_to_4mu,
+F0_I4,time,F0/F1 mu,mixed,,,,1.3418375620569802e-08,transferred_to_4mu,
+F0_I4,preparation,F1 mu CEP0,ramp080;wait040,,,,0,not_applicable_DC_zero,
+F0_I4,cep,four-phase mean,two-phase or representative eight-phase,8.9267955924903278e-06,,0.00031293236628900914,0.00031293236628900914,two_to_four_only,representative 4->8 available only at F1/4mu
+F0_I4,energy_range,ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4_emaxplus,8.5225152024363338e-06,8.5225152154604056e-06,1.5281957803821957e-09,1.5281957803821957e-09,direct,
+F1_I4,dx,ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p2_F1.000_I4_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4,1.9181158525779612e-05,1.9498033793793964e-05,0.016520131856919355,0.016520131856919355,direct,
+F1_I4,dt,ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p2_F1.000_I4_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4,1.9181158525779612e-05,1.8742270382310299e-05,-0.022881211417936215,0.022881211417936215,direct,
+F1_I4,box,mixed,mixed,,,,3.2905300735804187e-10,direct/transferred,F0/4mu transferred as allowed by plan
+F1_I4,cap,mixed,mixed,,,,7.8692328512171393e-06,direct/transferred,F0/4mu transferred as allowed by plan
+F1_I4,mask,F0/F1 mu,mixed,,,,4.0727241048156057e-09,transferred_to_4mu,
+F1_I4,time,F0/F1 mu,mixed,,,,1.3418375620569802e-08,transferred_to_4mu,
+F1_I4,preparation,F1 mu CEP0,ramp080;wait040,,,,2.947705679477801e-08,direct_at_mu;transferred_to_4mu,
+F1_I4,cep,four-phase mean,two-phase or representative eight-phase,1.8916056753220843e-05,,0.00034226618201672952,0.00034226618201672952,direct_2to4; representative_4to8,representative 4->8 available only at F1/4mu
+F1_I4,energy_range,ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4_emaxplus,1.9181158525779612e-05,1.9181158537548146e-05,6.1354654109130673e-10,6.1354654109130673e-10,direct,

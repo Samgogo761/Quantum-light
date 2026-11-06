@@ -1,0 +1,60 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.999999999995358,
+  "left_CAP_loss_prep": 2.4738460797976965e-20,
+  "right_CAP_loss_prep": 1.5061062314392798e-28,
+  "N_100fs": 0.9999999985699914,
+  "N_125fs": 0.9999999985699914,
+  "left_CAP_loss_observation_100fs": 1.4161024044422019e-09,
+  "right_CAP_loss_observation_100fs": 9.669427469093446e-20,
+  "left_CAP_loss_total_125fs": 1.4161024044669404e-09,
+  "right_CAP_loss_total_125fs": 9.669427484154508e-20,
+  "signed_flux_100fs": 2.3821488565003272e-07,
+  "signed_flux_125fs": 2.3821488565003272e-07,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3906098494942398e-11,
+  "Y_H": 5.697994885586034e-09,
+  "Y_H_lower": 8.454271540120395e-09,
+  "Y_H_upper": 5.257832194729915e-09,
+  "masked_norm": 2.382148906942812e-07,
+  "spectrum_integral": 2.3821488438439157e-07,
+  "propagation_seconds": 947.3786204999778,
+  "spectrum_seconds": 29.37931489991024,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        37.175000000000004
+      ],
+      "energy_points": 2368,
+      "masked_norm": 2.382148906942812e-07,
+      "spectrum_integral": 2.3821488438439157e-07,
+      "spectrum_norm_absolute_difference": 6.309889619556349e-15,
+      "Y_H_lower": 8.454271540120395e-09,
+      "Y_H_main": 5.697994885586034e-09,
+      "Y_H_upper": 5.257832194729915e-09
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_fix_F1_I1_ramp080_r01",
+  "I_over_mu": 1.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "wall_seconds": 977.0440192001406,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "prep_state_sha256": "83890897657ecfbf8c681edc7ce40a431f51ba51333b1810570c17f890041e4e",
+  "prep_config_sha256": "9c4f213f96ef8b38be7c45aea5d0e58d76d9122ee01dbfed1f23fa35e670a61e",
+  "prep_summary_sha256": "e0806b4a056374b8d6ae37442949f461306c0bf6bc7cc7d449941bf928cd5d96",
+  "state_100fs_sha256": "4779aa1098cd658b6025f0cafeb1bfed5cc52a00a412796221d9a97c7cd5352b"
+}
