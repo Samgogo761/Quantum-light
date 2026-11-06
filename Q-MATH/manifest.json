@@ -7750,6 +7750,46 @@
       "origins": [
         "registered:QL-TIP-1D/plans/20261105_evening_decision/file_inventory.json"
       ]
+    },
+    "QL-TIP-1D/plans/20261106_execution_review/REVIEW_AND_NEXT_ACTIONS.md": {
+      "sha256": "e287371042f53f19a6036086d1b729bdf3162ae590350bb7c53b666aad275a3f",
+      "bytes": 11771,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261106_execution_review/REVIEW_AND_NEXT_ACTIONS.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261106_execution_review/START_HERE.md": {
+      "sha256": "6d7c5084df3e3401aadf7a4a2b6cb60f4fa867a76bb63706f6a28a1090325245",
+      "bytes": 1979,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261106_execution_review/START_HERE.md"
+      ]
+    },
+    "QL-TIP-1D/plans/20261106_execution_review/collect_readonly_evidence.py": {
+      "sha256": "dbf49f84a9a727719c2db8281a5f3a9a2a7c3eeaf7655c29460c2fba4cf0ae73",
+      "bytes": 5471,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261106_execution_review/collect_readonly_evidence.py"
+      ]
+    },
+    "QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json": {
+      "sha256": "8c25e278a80710d6070f4acf68d950a1c4d1b021ecf17b8a8105539828894679",
+      "bytes": 41882,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json"
+      ]
+    },
+    "QL-TIP-1D/plans/20261106_execution_review/file_inventory.json": {
+      "sha256": "682dc7e5248f806db551f696c215aee0ec1accb56e175f57c19587db21d6c229",
+      "bytes": 913,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261106_execution_review/file_inventory.json"
+      ]
     }
   }
 }

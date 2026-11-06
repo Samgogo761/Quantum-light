@@ -16,6 +16,8 @@
 
 **2026-11-05晚间最新讨论入口：** [研究决定与执行调整](../QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md)、[转交指令](../QL-TIP-1D/plans/20261105_evening_decision/START_HERE.md)。落实用户/导师保留单电子的决定；−5.6eV变体仅作有上限的可选敏感性筛查，不强制替换主模型。只读快照发现执行Agent已有R1报告PASS并进入R2；新η下q端点差约8.95%，经验审计区间仍含1，不是BSV结果。本讨论轮未启动或终止科研任务，执行证据仍由原Agent单独归档。
 
+**2026-11-06执行记录复核（最新审阅入口）：** [复核与最短续接建议](../QL-TIP-1D/plans/20261106_execution_review/REVIEW_AND_NEXT_ACTIONS.md)、[转交指令](../QL-TIP-1D/plans/20261106_execution_review/START_HERE.md)。核实15条新增TDSE、账本10.438h；R2的11条传播完成，但17项读出仅完成6项，仍未产生BSV/热光结果。发现F0 CAP清单不一致、R3入口/旧态复用/统计误差与门槛实现缺陷，建议一次集中修复并完成已有态读出，暂缓材料敏感性。本轮仅静态审阅与元数据快照，不运行科研计算、不修改执行源码；v2实现仍由执行Agent单独归档。
+
 Q-MATH 研究纯 BSV 等量子光与现象学八带 PT-AFM M0 的相互作用。M0 **不是** CrI₃ 的 full112/M88/M52 Wannier 材料拟合。本文“正 P”均指非负 Glauber–Sudarshan P 概率测度。
 
 ## 从哪里开始
