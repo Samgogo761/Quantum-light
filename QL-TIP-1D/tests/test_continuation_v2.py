@@ -66,3 +66,62 @@ def test_weight_moments_and_truncation_normalisation() -> None:
         assert abs(mean - expected_mean) < 1e-5
         assert abs(bsv_pdf(2.0) - __import__("math").exp(-1.0) / __import__("math").sqrt(4.0 * __import__("math").pi)) < 1e-15
         assert abs(thermal_pdf(2.0) - __import__("math").exp(-2.0)) < 1e-15
+
+
+def test_old_mu_readout_is_visible_to_statistics_index() -> None:
+    """The merged index must find frozen v1 states through v2 readouts."""
+    from analyze_statistics_v2 import find_readout
+    item = find_readout("bias_p1_F0.000_I1_phi000_r02")
+    assert item is not None
+    assert item["eta_eV"] == 0.05
+
+
+def test_midpoint_tasks_have_complete_fields() -> None:
+    """Midpoint tasks must expose F, intensity and CEP used by the runner."""
+    from ql_tip_1d.continuation_v2 import midpoint_tasks
+    plan = {"intervals": [{"left": 4.0, "right": 8.0, "midpoint_I_over_mu": 6.0},
+                          {"left": 8.0, "right": 12.0, "midpoint_I_over_mu": 10.0}]}
+    tasks = midpoint_tasks(plan)
+    assert len(tasks) == 16
+    assert {task["F_dc_V_per_nm"] for task in tasks} == {0.0, 1.0}
+    assert {task["I_over_mu"] for task in tasks} == {6.0, 10.0}
+    assert all("CEP_rad" in task for task in tasks)
+
+
+def test_explicit_energy_range_has_distinct_readout_id() -> None:
+    """Manual energy-range changes must not collide with the default identity."""
+    from ql_tip_1d.continuation_v2 import readout_id
+    base = {"run_id": "r", "expected_readout_fs": 100.0, "eta_eV": 0.05,
+            "step_eV": 0.0125, "mask_start_nm": 2.0, "mask_end_nm": 4.0,
+            "energy_max_mode": "explicit"}
+    a = readout_id({**base, "energy_min_eV": -2.0, "energy_max_eV": 60.0})
+    b = readout_id({**base, "energy_min_eV": -2.0, "energy_max_eV": 80.0})
+    assert a != b
+
+
+def test_library_refuses_when_r2_is_incomplete(tmp_path, monkeypatch) -> None:
+    """The library entry must not bypass an explicitly incomplete R2 gate."""
+    import run_continuation_v2 as runner
+    import pytest
+    monkeypatch.setattr(runner, "REPORT_DIR", tmp_path)
+    (tmp_path / "R1_gate_r1_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
+    (tmp_path / "R2_gate_r2_20261106_v2.json").write_text('{"status":"INCOMPLETE"}', encoding="utf-8")
+    with pytest.raises(RuntimeError, match="R2 gate"):
+        runner.stage_library(True, 1, 0)
+
+
+def test_library_success_paths_without_tdse(tmp_path, monkeypatch) -> None:
+    """Both library dry-run paths must work when mocked gates are PASS."""
+    import json
+    import run_continuation_v2 as runner
+    import ql_tip_1d.continuation_v2 as common
+    monkeypatch.setattr(runner, "REPORT_DIR", tmp_path)
+    (tmp_path / "R1_gate_r1_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
+    (tmp_path / "R2_gate_r2_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
+    (tmp_path / "midpoint_plan.json").write_text('{"intervals":[]}', encoding="utf-8")
+    task = {"run_id": "mock", "F_dc_V_per_nm": 0.0, "I_over_mu": 1.0,
+            "CEP_rad": 0.0, "config": {}, "parent_config_sha256": "x"}
+    monkeypatch.setattr(common, "library_tasks", lambda: [{**task, "existing": False}])
+    monkeypatch.setattr(common, "midpoint_tasks", lambda plan: [task])
+    assert runner.stage_library(True, 1, 0) == 0
+    assert runner.stage_library(True, 1, 0, midpoint=True) == 0

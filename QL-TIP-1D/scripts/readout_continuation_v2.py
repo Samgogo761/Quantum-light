@@ -61,6 +61,13 @@ def run_readout(spec: dict[str, Any], output_dir: Path | None = None) -> dict[st
     start = time.perf_counter()
     config_path = project_path(spec["config_path"])
     state_path = project_path(spec["state_path"])
+    resolved_output = (V2_RESULTS / "readouts" / spec["readout_id"]) if output_dir is None else output_dir
+    cached = resolved_output / "summary.json"
+    if cached.exists():
+        previous = json.loads(cached.read_text(encoding="utf-8"))
+        if (previous.get("state_sha256") == sha256(state_path)
+                and previous.get("readout_id") == spec["readout_id"]):
+            return {**previous, "reused": True}
     config = json.loads(config_path.read_text(encoding="utf-8"))
     if int(round(float(spec["F_dc_V_per_nm"]) * 1000)) != int(round(float(config["F_dc_V_per_nm"]) * 1000)):
         raise ValueError("Readout/spec F mismatch")
@@ -101,14 +108,8 @@ def run_readout(spec: dict[str, Any], output_dir: Path | None = None) -> dict[st
     yields = {f"Y_at_E_{name}": integrate_above(energies, spectrum, threshold)
               for name, threshold in zip(["low", "main", "high"], THRESHOLDS_EV)}
     elapsed = time.perf_counter() - start
-    output_dir = (V2_RESULTS / "readouts" / spec["readout_id"]) if output_dir is None else output_dir
+    output_dir = resolved_output
     if output_dir.exists():
-        summary_path = output_dir / "summary.json"
-        if summary_path.exists():
-            previous = json.loads(summary_path.read_text(encoding="utf-8"))
-            if (previous.get("state_sha256") == sha256(state_path)
-                    and previous.get("readout_id") == spec["readout_id"]):
-                return {**previous, "reused": True}
         raise FileExistsError(f"Incomplete readout refuses overwrite: {output_dir}")
     output_dir.mkdir(parents=True, exist_ok=False)
     config_record = {

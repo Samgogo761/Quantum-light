@@ -45,6 +45,8 @@ def readout_id(spec: dict[str, Any]) -> str:
     base += f"_m{tag(float(spec['mask_start_nm']))}-{tag(float(spec['mask_end_nm']))}"
     if spec.get("energy_max_mode") == "extended":
         base += "_emaxplus"
+    if spec.get("energy_min_eV") is not None and spec.get("energy_max_eV") is not None:
+        base += f"_er{tag(float(spec['energy_min_eV']))}-{tag(float(spec['energy_max_eV']))}"
     return base
 
 
@@ -170,6 +172,9 @@ def high_intensity_tasks() -> list[dict[str, Any]]:
     parent = "results/bias_v1/bias_p1_F0.000_I1_phi000_box900_r02/config.json"
     tasks.append(_derive_observation(parent, "bias_v2_probe_F0_I32_phi000_box900_r01",
                                      32.0, 0.0, "R2_control"))
+    parent = "results/bias_v1/bias_p1_F0.000_I1_phi000_caphalf_r02/config.json"
+    tasks.append(_derive_observation(parent, "bias_v2_probe_F0_I32_phi000_caphalf_r01",
+                                     32.0, 0.0, "R2_control"))
     return tasks
 
 
@@ -253,7 +258,9 @@ def midpoint_tasks(plan: dict[str, Any]) -> list[dict[str, Any]]:
             parent = f"results/bias_v1/bias_p1_F{F:.3f}_I1_phi000_r02/config.json"
             for degrees, cep in [(0, 0.0), (90, math.pi / 2.0), (180, math.pi), (270, 3.0 * math.pi / 2.0)]:
                 run_id = f"bias_v2_mid_F{F:g}_I{intensity:g}_phi{degrees:03d}_r01"
-                tasks.append(_derive_observation(parent, run_id, intensity, cep, "R3_midpoint"))
+                task = _derive_observation(parent, run_id, intensity, cep, "R3_midpoint")
+                task.update({"F_dc_V_per_nm": F, "I_over_mu": intensity, "CEP_rad": cep})
+                tasks.append(task)
     return tasks
 
 

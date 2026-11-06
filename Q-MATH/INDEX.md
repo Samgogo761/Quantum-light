@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1186 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1241 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -10,7 +10,6 @@
 
 | 类型 | 文件 | 字节 | SHA-256 前 12 位 |
 |---|---|---:|---|
-| reports | [Q-MATH/README.md](README.md) | 14295 | `612b75b42bdd` |
 | code | [Q-MATH/code/foundation-M0/M0_Wolfram_independent_validation.wl](code/foundation-M0/M0_Wolfram_independent_validation.wl) | 8311 | `693f0c5bcfed` |
 | code | [Q-MATH/code/foundation-M0/M0_contact_derivative_validation.py](code/foundation-M0/M0_contact_derivative_validation.py) | 1704 | `39961ae6566f` |
 | code | [Q-MATH/code/foundation-M0/M0_independent_equation_crosscheck.py](code/foundation-M0/M0_independent_equation_crosscheck.py) | 1612 | `3da22c7125dd` |
@@ -97,6 +96,15 @@
 | code | [Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py](code/v16.30/qmath_16_29_same_state_readout.py) | 8949 | `a3d3866067e0` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_bridge_audit.py](code/v16.30/qmath_16_30_bridge_audit.py) | 8953 | `f41b5c60fcbd` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_output_mode_gram.py](code/v16.30/qmath_16_30_output_mode_gram.py) | 1458 | `ed8b9acc19f7` |
+| reports | [Q-MATH/history/by_sha256/612b75b42bddc193d376d614c9e2d2b9b01398f03e2d735dc8442dca9c91c873.md](history/by_sha256/612b75b42bddc193d376d614c9e2d2b9b01398f03e2d735dc8442dca9c91c873.md) | 14295 | `612b75b42bdd` |
+| reports | [Q-MATH/history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md](history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md) | 3601 | `622c23829ef2` |
+| code | [Q-MATH/history/by_sha256/629750fd25aabec14b51202d2cfaa6f5dc5320ad12c1aeec6279ae8c9a372c3f.py](history/by_sha256/629750fd25aabec14b51202d2cfaa6f5dc5320ad12c1aeec6279ae8c9a372c3f.py) | 3117 | `629750fd25aa` |
+| code | [Q-MATH/history/by_sha256/7c526cd66197be9d9360a4bf7647f4623a0c215a68e5861c096e4c328597e567.py](history/by_sha256/7c526cd66197be9d9360a4bf7647f4623a0c215a68e5861c096e4c328597e567.py) | 36287 | `7c526cd66197` |
+| code | [Q-MATH/history/by_sha256/90d6a678fba285fd0f2262ffec9fe35d546495c6b00c83af1cb249411ae9b646.py](history/by_sha256/90d6a678fba285fd0f2262ffec9fe35d546495c6b00c83af1cb249411ae9b646.py) | 16479 | `90d6a678fba2` |
+| code | [Q-MATH/history/by_sha256/9d33c6282f7dbeaaef9c0f51800059f752588e66b0dec015c1f49f173b7b1695.py](history/by_sha256/9d33c6282f7dbeaaef9c0f51800059f752588e66b0dec015c1f49f173b7b1695.py) | 16932 | `9d33c6282f7d` |
+| code | [Q-MATH/history/by_sha256/b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825.py](history/by_sha256/b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825.py) | 9296 | `b452f742e0a6` |
+| results | [Q-MATH/history/by_sha256/b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351.csv](history/by_sha256/b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351.csv) | 31537 | `b6eebb1f0282` |
+| code | [Q-MATH/history/by_sha256/ff41877e1d5e73058365a8466d7fdd07adf557d91e2d207ab572e0f8a4890a78.py](history/by_sha256/ff41877e1d5e73058365a8466d7fdd07adf557d91e2d207ab572e0f8a4890a78.py) | 5554 | `ff41877e1d5e` |
 | reports | [Q-MATH/reports/QL-TIP-1D-contract-20261103/QL-TIP-1D_本地Agent科研执行任务书.md](reports/QL-TIP-1D-contract-20261103/QL-TIP-1D_本地Agent科研执行任务书.md) | 22716 | `f8f66a3ba9da` |
 | reports | [Q-MATH/reports/QL-TIP-1D-direction-20261103/QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md](reports/QL-TIP-1D-direction-20261103/QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md) | 14714 | `70b2131f0d03` |
 | reports | [Q-MATH/reports/QL-TIP-1D-discussion-01/已粘贴的文本.txt](reports/QL-TIP-1D-discussion-01/已粘贴的文本.txt) | 21695 | `a54c095828ff` |
@@ -262,6 +270,7 @@
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_fix_F1_I1_ramp080_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_fix_F1_I1_ramp080_r01.json) | 8128 | `329f757458a0` |
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_fix_F1_I1_wait040_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_fix_F1_I1_wait040_r01.json) | 8128 | `11736ebb3057` |
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_box900_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_box900_r01.json) | 7487 | `a881d372e123` |
+| results | [QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_caphalf_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_caphalf_r01.json) | 7524 | `755b6eb9c69c` |
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_dt005_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_dt005_r01.json) | 7484 | `4b2fc4dea17c` |
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_dx048_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_dx048_r01.json) | 7483 | `971c92ea6b67` |
 | results | [QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_r01.json](../QL-TIP-1D/configs/continuation_v2/bias_v2_probe_F0_I32_phi000_r01.json) | 7457 | `54fd3bb9917b` |
@@ -460,6 +469,7 @@
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
+| reports | [QL-TIP-1D/reports/COST_PLAN_20261106.md](../QL-TIP-1D/reports/COST_PLAN_20261106.md) | 2944 | `e77c7e019f1a` |
 | reports | [QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md](../QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md) | 7629 | `74e7a4c3a3e2` |
 | reports | [QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md](../QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md) | 7960 | `426a5397f25d` |
 | reports | [QL-TIP-1D/reports/P0_protocol.md](../QL-TIP-1D/reports/P0_protocol.md) | 4083 | `6113c8398e63` |
@@ -472,7 +482,7 @@
 | reports | [QL-TIP-1D/reports/STATUS_REVIEW_20261105.md](../QL-TIP-1D/reports/STATUS_REVIEW_20261105.md) | 11141 | `95c87b8e92df` |
 | results | [QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json](../QL-TIP-1D/reports/STATUS_REVIEW_20261105_manifest.json) | 3672 | `34ff0a191cb0` |
 | reports | [QL-TIP-1D/reports/decision.md](../QL-TIP-1D/reports/decision.md) | 3282 | `fef8de6b22a1` |
-| reports | [QL-TIP-1D/reports/evening_status.md](../QL-TIP-1D/reports/evening_status.md) | 3601 | `622c23829ef2` |
+| reports | [QL-TIP-1D/reports/evening_status.md](../QL-TIP-1D/reports/evening_status.md) | 3885 | `e95766d4ecb0` |
 | reports | [QL-TIP-1D/reports/figure_data_map.md](../QL-TIP-1D/reports/figure_data_map.md) | 1717 | `ea3b377f20f1` |
 | reports | [QL-TIP-1D/requirements-lock.txt](../QL-TIP-1D/requirements-lock.txt) | 199 | `00710d223d3c` |
 | reports | [QL-TIP-1D/results/bias_v1/ARCHIVE_NOTE.md](../QL-TIP-1D/results/bias_v1/ARCHIVE_NOTE.md) | 868 | `42a044c581cb` |
@@ -786,7 +796,7 @@
 | results | [QL-TIP-1D/results/bias_v1/run_ledger.csv](../QL-TIP-1D/results/bias_v1/run_ledger.csv) | 4264 | `c5ed465a5ae9` |
 | results | [QL-TIP-1D/results/bias_v1/run_manifest.csv](../QL-TIP-1D/results/bias_v1/run_manifest.csv) | 32469 | `0c6de5849586` |
 | results | [QL-TIP-1D/results/bias_v1/spectrum_method_validation.json](../QL-TIP-1D/results/bias_v1/spectrum_method_validation.json) | 1526 | `894f4b984dae` |
-| results | [QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv](../QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv) | 31537 | `b6eebb1f0282` |
+| results | [QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv](../QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv) | 36211 | `a1c8fd342bbe` |
 | results | [QL-TIP-1D/results/bias_v2/local_artifact_hashes.csv](../QL-TIP-1D/results/bias_v2/local_artifact_hashes.csv) | 75684 | `0570f3ee72a4` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p1_F0.000_I1_phi000_box900_r02_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p1_F0.000_I1_phi000_box900_r02_t100_eta0p05_dE0p0125_m2-4/config.json) | 1652 | `d02ba2a934cc` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p1_F0.000_I1_phi000_box900_r02_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p1_F0.000_I1_phi000_box900_r02_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 259 | `9d30e0a82eee` |
@@ -1007,6 +1017,9 @@
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1661 | `bb83a2fc4dbc` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 265 | `72eae3098563` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1791 | `eb57ca1d1d85` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1665 | `ba1e3ca88bdd` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 267 | `45a27a71310a` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1792 | `7f07011775b8` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1657 | `e3138092f48e` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 263 | `8ee7cb7f2f37` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1789 | `8dd11cba5667` |
@@ -1016,15 +1029,51 @@
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/config.json) | 1632 | `03be013b3569` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/run_log.txt) | 253 | `cab7df98aff5` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/summary.json) | 1775 | `68e6a923d356` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/config.json) | 1631 | `ae77a719505d` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/run_log.txt) | 252 | `754c809acf67` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/summary.json) | 1772 | `ea7e7948e24e` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1633 | `9febd49bd021` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 251 | `7e12b3c523fa` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1775 | `f8f958bd2a5b` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/config.json) | 1639 | `7fc03e2d3771` |
 | reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/run_log.txt) | 260 | `7993455f3ebd` |
 | results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/summary.json) | 1778 | `a82a5862de93` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1615 | `654e206ef23b` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 249 | `e3bb65d2d118` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1771 | `1e90d0eb4887` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1651 | `7f6ce2cb16a9` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 264 | `bb976c11b969` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1778 | `deffafaa33ce` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1655 | `80ea869825a0` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 267 | `88dd843da0d0` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1780 | `c58f0483ae80` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1647 | `60ccd1c74a25` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 263 | `47f189506262` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1773 | `6768c634298b` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1647 | `5e44d1640ec7` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 263 | `61924eeecbe7` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1775 | `b17ed47cb102` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/config.json) | 1633 | `db82328240e3` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/run_log.txt) | 253 | `a270ceda8183` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/summary.json) | 1772 | `eed942ed8c83` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/config.json) | 1632 | `c6d1f8dcf332` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/run_log.txt) | 252 | `644bde1477ff` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4/summary.json) | 1772 | `3084e160bc8e` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1623 | `eecff90aa71b` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 251 | `f649427df152` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1763 | `7be1952cb4cc` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/config.json) | 1640 | `dd154f4a258b` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/run_log.txt) | 260 | `b41c36e252bd` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/summary.json) | 1777 | `634faf3a8de3` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/config.json) | 1616 | `4cb393f0cae3` |
+| reports | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/run_log.txt) | 249 | `f75700af4a5f` |
+| results | [QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json](../QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json) | 1770 | `be869925d177` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_error_budget.csv](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_error_budget.csv) | 5255 | `6e79010349aa` |
+| results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_evidence_sources_v2.csv](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_evidence_sources_v2.csv) | 23064 | `abdb89d11a21` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json) | 18509 | `7496deaa8139` |
+| results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261106_v2.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261106_v2.json) | 60809 | `1d10422bd2c8` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json) | 1579 | `d61a0b4a5088` |
+| results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json) | 3921 | `ee3313babeec` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/inventory.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/inventory.json) | 63743 | `1f4f5c02ef8b` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/config.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/config.json) | 7927 | `2194548f23e0` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/provenance.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/provenance.json) | 1594 | `e5c39c2c0947` |
@@ -1046,6 +1095,10 @@
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/provenance.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/provenance.json) | 1481 | `fca4509e3835` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/summary.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/summary.json) | 2030 | `33c792323335` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/trace.csv](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/trace.csv) | 61245 | `7229d9446674` |
+| results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/config.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/config.json) | 7524 | `755b6eb9c69c` |
+| results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/provenance.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/provenance.json) | 1482 | `9722fdcdb942` |
+| results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/summary.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/summary.json) | 2037 | `1cb80c042bdc` |
+| results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/trace.csv](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_caphalf_r01/trace.csv) | 61248 | `6892a427147d` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/config.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/config.json) | 7484 | `4b2fc4dea17c` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/provenance.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/provenance.json) | 1480 | `8ec66bbcac73` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/summary.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/summary.json) | 2035 | `16fbc4125021` |
@@ -1129,21 +1182,23 @@
 | results | [QL-TIP-1D/results/stage2_20261103_time100/summary.json](../QL-TIP-1D/results/stage2_20261103_time100/summary.json) | 1166 | `18423cbcb406` |
 | results | [QL-TIP-1D/results/stage2_audit_20261104/summary.json](../QL-TIP-1D/results/stage2_audit_20261104/summary.json) | 5413 | `47661fe6c75e` |
 | code | [QL-TIP-1D/scripts/analyze_continuation_v2.py](../QL-TIP-1D/scripts/analyze_continuation_v2.py) | 18245 | `b0bb1158c59f` |
-| code | [QL-TIP-1D/scripts/analyze_high_intensity_v2.py](../QL-TIP-1D/scripts/analyze_high_intensity_v2.py) | 5554 | `ff41877e1d5e` |
+| code | [QL-TIP-1D/scripts/analyze_high_intensity_v2.py](../QL-TIP-1D/scripts/analyze_high_intensity_v2.py) | 7751 | `a9ab78f94e02` |
 | code | [QL-TIP-1D/scripts/analyze_p1.py](../QL-TIP-1D/scripts/analyze_p1.py) | 10922 | `f891a233b8e5` |
 | code | [QL-TIP-1D/scripts/analyze_p2.py](../QL-TIP-1D/scripts/analyze_p2.py) | 8764 | `dd6e1cb68047` |
-| code | [QL-TIP-1D/scripts/analyze_statistics_v2.py](../QL-TIP-1D/scripts/analyze_statistics_v2.py) | 16479 | `90d6a678fba2` |
+| code | [QL-TIP-1D/scripts/analyze_statistics_v2.py](../QL-TIP-1D/scripts/analyze_statistics_v2.py) | 18841 | `52667c8a042b` |
 | code | [QL-TIP-1D/scripts/audit_environment.py](../QL-TIP-1D/scripts/audit_environment.py) | 3550 | `15e608104bca` |
 | code | [QL-TIP-1D/scripts/budget_status.py](../QL-TIP-1D/scripts/budget_status.py) | 2809 | `c70be3f548db` |
 | code | [QL-TIP-1D/scripts/build_manifest.py](../QL-TIP-1D/scripts/build_manifest.py) | 4424 | `eb6c779a910f` |
+| code | [QL-TIP-1D/scripts/build_r1_v2_gate.py](../QL-TIP-1D/scripts/build_r1_v2_gate.py) | 2718 | `e15423357cee` |
 | code | [QL-TIP-1D/scripts/export_bias_data.py](../QL-TIP-1D/scripts/export_bias_data.py) | 4949 | `ea65fa25600c` |
 | code | [QL-TIP-1D/scripts/hash_bias_artifacts.py](../QL-TIP-1D/scripts/hash_bias_artifacts.py) | 1465 | `e100625cb00b` |
 | code | [QL-TIP-1D/scripts/hash_bias_v2.py](../QL-TIP-1D/scripts/hash_bias_v2.py) | 1435 | `ae4b83f21afd` |
 | code | [QL-TIP-1D/scripts/inspect_inputs.py](../QL-TIP-1D/scripts/inspect_inputs.py) | 2649 | `81475334648e` |
+| code | [QL-TIP-1D/scripts/migrate_artifact_versions.py](../QL-TIP-1D/scripts/migrate_artifact_versions.py) | 4169 | `ea7de6048803` |
 | code | [QL-TIP-1D/scripts/postprocess_spectrum_eta.py](../QL-TIP-1D/scripts/postprocess_spectrum_eta.py) | 3057 | `bde552aa815a` |
-| code | [QL-TIP-1D/scripts/readout_continuation_v2.py](../QL-TIP-1D/scripts/readout_continuation_v2.py) | 9296 | `b452f742e0a6` |
+| code | [QL-TIP-1D/scripts/readout_continuation_v2.py](../QL-TIP-1D/scripts/readout_continuation_v2.py) | 9482 | `2b0af6349916` |
 | code | [QL-TIP-1D/scripts/run_bias_v1.py](../QL-TIP-1D/scripts/run_bias_v1.py) | 20600 | `a9920174a983` |
-| code | [QL-TIP-1D/scripts/run_continuation_v2.py](../QL-TIP-1D/scripts/run_continuation_v2.py) | 36287 | `7c526cd66197` |
+| code | [QL-TIP-1D/scripts/run_continuation_v2.py](../QL-TIP-1D/scripts/run_continuation_v2.py) | 36863 | `5750293a843d` |
 | code | [QL-TIP-1D/scripts/run_solo_v1.py](../QL-TIP-1D/scripts/run_solo_v1.py) | 13211 | `82d22c6d15ce` |
 | code | [QL-TIP-1D/scripts/run_stage1.py](../QL-TIP-1D/scripts/run_stage1.py) | 12978 | `febaeebcc08e` |
 | code | [QL-TIP-1D/scripts/run_stage2.py](../QL-TIP-1D/scripts/run_stage2.py) | 9256 | `65752073a982` |
@@ -1151,13 +1206,13 @@
 | code | [QL-TIP-1D/scripts/validate_spectrum_v1.py](../QL-TIP-1D/scripts/validate_spectrum_v1.py) | 6663 | `fdd3776f7880` |
 | code | [QL-TIP-1D/src/ql_tip_1d/__init__.py](../QL-TIP-1D/src/ql_tip_1d/__init__.py) | 64 | `b5b8948d99c7` |
 | code | [QL-TIP-1D/src/ql_tip_1d/bias_v1.py](../QL-TIP-1D/src/ql_tip_1d/bias_v1.py) | 6357 | `1faff033af6b` |
-| code | [QL-TIP-1D/src/ql_tip_1d/continuation_v2.py](../QL-TIP-1D/src/ql_tip_1d/continuation_v2.py) | 16932 | `9d33c6282f7d` |
+| code | [QL-TIP-1D/src/ql_tip_1d/continuation_v2.py](../QL-TIP-1D/src/ql_tip_1d/continuation_v2.py) | 17470 | `5cccab65d948` |
 | code | [QL-TIP-1D/src/ql_tip_1d/core.py](../QL-TIP-1D/src/ql_tip_1d/core.py) | 6196 | `8ee6f60e73c6` |
 | code | [QL-TIP-1D/src/ql_tip_1d/spectrum_v1.py](../QL-TIP-1D/src/ql_tip_1d/spectrum_v1.py) | 6982 | `5477ee1a8f6a` |
 | code | [QL-TIP-1D/src/ql_tip_1d/statistics_v2.py](../QL-TIP-1D/src/ql_tip_1d/statistics_v2.py) | 6378 | `2f4f46383b80` |
 | code | [QL-TIP-1D/tests/test_baseline.py](../QL-TIP-1D/tests/test_baseline.py) | 3552 | `70015fb68ba1` |
 | code | [QL-TIP-1D/tests/test_bias_v1.py](../QL-TIP-1D/tests/test_bias_v1.py) | 1748 | `59edc0a3a95b` |
-| code | [QL-TIP-1D/tests/test_continuation_v2.py](../QL-TIP-1D/tests/test_continuation_v2.py) | 3117 | `629750fd25aa` |
+| code | [QL-TIP-1D/tests/test_continuation_v2.py](../QL-TIP-1D/tests/test_continuation_v2.py) | 6297 | `16f4199ba005` |
 | code | [QL-TIP-1D/tests/test_spectrum_v1.py](../QL-TIP-1D/tests/test_spectrum_v1.py) | 5823 | `4a7b8de8a1be` |
 | code | [QL-TIP-1D/validation/finite_well_si.py](../QL-TIP-1D/validation/finite_well_si.py) | 5752 | `5eeb1b96adac` |
 | results | [QL-TIP-1D/validation/finite_well_si_20261103_r1.json](../QL-TIP-1D/validation/finite_well_si_20261103_r1.json) | 1611 | `d236da72df17` |

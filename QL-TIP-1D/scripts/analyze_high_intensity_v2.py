@@ -86,8 +86,16 @@ def compute() -> dict[str, Any]:
         grid = find_readout(run_id, eta=READOUT_ETA, step=0.00625)
         if base and grid:
             grid32[f"F{F:g}"] = rel(float(base["Y_at_E_main"]), float(grid["Y_at_E_main"]))
+    range32 = {}
+    for F in [0.0, 1.0]:
+        run_id = f"bias_v2_probe_F{F:g}_I32_phi000_r01"
+        base = base_F.get(F)
+        extended = find_readout(run_id, eta=READOUT_ETA, step=READOUT_STEP, emax="extended")
+        if base and extended:
+            range32[f"F{F:g}"] = rel(float(base["Y_at_E_main"]), float(extended["Y_at_E_main"]))
     result["eta32_relative"] = eta32
     result["grid32_relative"] = grid32
+    result["range32_relative"] = range32
     result["controls_pass"] = all(item.get("pass", False) for item in result["controls"].values())
     cap_warning = any(item.get("cap_warning", False) for item in result["probes"].values())
     box_mitigation = {}
@@ -96,13 +104,37 @@ def compute() -> dict[str, Any]:
         box_mitigation[f"F{F:g}"] = item.get("pass", False)
     result["cap_warning_present"] = cap_warning
     result["cap_mitigated_by_box"] = (not cap_warning) or all(box_mitigation.values())
-    result["estimated_library_hours"] = None
-    result["status"] = "PASS" if (result["controls_pass"]
-        and result["cap_mitigated_by_box"]
-        and all(item.get("execution_status") == "PASS" for item in result["probes"].values())
-        and all(abs(value) < 0.05 for value in eta32.values())
-        and all(abs(value) < 0.05 for value in grid32.values())
-        and len(eta32) == 2 and len(grid32) == 2) else "INCOMPLETE"
+    total_error = {}
+    for F in [0.0, 1.0]:
+        values = []
+        for label in ["dx048", "dt005", "box900", "caphalf"]:
+            item = result["controls"].get(f"F{F:g}_{label}", {})
+            if isinstance(item.get("relative_change"), (int, float)):
+                values.append(abs(float(item["relative_change"])))
+        for mapping in [eta32, grid32, range32]:
+            if f"F{F:g}" in mapping:
+                values.append(abs(float(mapping[f"F{F:g}"])))
+        total_error[f"F{F:g}"] = sum(values)
+    result["total_high_intensity_error"] = total_error
+    probe_runs = [load(V2_RESULTS / "runs" / f"bias_v2_probe_F{F:g}_I{intensity:g}_phi000_r01" / "summary.json")
+                  for intensity in [8.0, 32.0] for F in [0.0, 1.0]]
+    propagation_seconds = sorted(float(item["wall_seconds"]) for item in probe_runs if item)
+    median_propagation = propagation_seconds[len(propagation_seconds) // 2] if propagation_seconds else 960.0
+    planned_propagations = 52 + 16 + 8
+    planned_readouts = planned_propagations
+    estimated_seconds = planned_propagations * median_propagation + planned_readouts * 120.0 + 3600.0
+    result["estimated_library_hours"] = estimated_seconds / 3600.0
+    result["estimated_library_note"] = (
+        f"{planned_propagations} propagations at measured median {median_propagation/60:.2f} min "
+        f"+ {planned_readouts} readouts at 2 min + 1 h reserve; scheduling estimate, not guarantee")
+    required_ok = (result["controls_pass"] and result["cap_mitigated_by_box"]
+                   and all(item.get("execution_status") == "PASS" for item in result["probes"].values())
+                   and len(eta32) == 2 and len(grid32) == 2 and len(range32) == 2
+                   and all(abs(value) < 0.05 for value in eta32.values())
+                   and all(abs(value) < 0.05 for value in grid32.values())
+                   and all(abs(value) < 0.05 for value in range32.values()))
+    result["high_risk_flag"] = any(value > 0.05 for value in total_error.values())
+    result["status"] = "PASS" if required_ok else "INCOMPLETE"
     return result
 
 
@@ -110,7 +142,7 @@ def main() -> int:
     """Write and print the R2 gate snapshot."""
     result = compute()
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    path = REPORT_DIR / "R2_gate_r1_20261105_v1.json"
+    path = REPORT_DIR / "R2_gate_r2_20261106_v2.json"
     path.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return 0 if result["status"] == "PASS" else 2

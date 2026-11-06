@@ -20,7 +20,7 @@ PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 from ql_tip_1d.bias_v1 import sha256
 from ql_tip_1d.continuation_v2 import (READOUT_ETA, READOUT_STEP, THRESHOLDS_EV, V2_RESULTS,
-                                       project_path, v2_readout_specs)
+                                       project_path, readout_plan, v2_readout_specs)
 from ql_tip_1d.statistics_v2 import (bsv_pdf, linear_average, linear_weights, tail_bound,
                                      thermal_pdf, tight_quadrature_error)
 
@@ -37,10 +37,13 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def find_readout(run_id: str) -> dict[str, Any] | None:
     """Find the common eta=.05/dE=.0125 readout for a v2 run."""
-    for spec in v2_readout_specs():
+    candidates = readout_plan(include_new=True) + v2_readout_specs()
+    for spec in candidates:
         if (spec["run_id"] == run_id and abs(spec["eta_eV"] - READOUT_ETA) < 1e-12
                 and abs(spec["step_eV"] - READOUT_STEP) < 1e-12
-                and spec["energy_max_mode"] == "base"):
+                and spec.get("energy_max_mode", "base") == "base"
+                and abs(spec.get("mask_start_nm", 2.0) - 2.0) < 1e-12
+                and abs(spec.get("mask_end_nm", 4.0) - 4.0) < 1e-12):
             path = V2_RESULTS / "readouts" / spec["readout_id"] / "summary.json"
             return load_json(path) or None
     return None
@@ -89,14 +92,20 @@ def response_error_envelope(F: float, intensity: float) -> tuple[float, str]:
         item = r2.get("controls", {}).get(key, {})
         if isinstance(item.get("relative_change"), (int, float)):
             high_components.append(abs(float(item["relative_change"])))
-    high = max(high_components + [mu or 0.0, four or 0.0])
+    for mapping_name in ["eta32_relative", "grid32_relative", "range32_relative"]:
+        value = r2.get(mapping_name, {}).get(f"F{F:g}")
+        if isinstance(value, (int, float)):
+            high_components.append(abs(float(value)))
+    # Use one representative R1 envelope, not both μ and 4μ totals: their
+    # components overlap and adding both double-counts the same numerical classes.
+    high = float(sum(high_components) + max(mu or 0.0, four or 0.0))
     if intensity in {0.0}:
         return 0.0, "zero_light_endpoint"
     if intensity in {0.25, 0.5, 1.0, 2.0} and mu is not None:
         return float(mu), "transferred_from_R1_mu"
     if intensity in {4.0} and four is not None:
         return float(four), "direct_R1_F1I4" if F == 1.0 else "direct_R1_F0I4"
-    return high, "envelope_from_R1_and_32mu_controls"
+    return high, "direct_32mu_controls_plus_one_R1_envelope"
 
 
 def interval_contributions(nodes: list[float], yields: list[float], state: str) -> list[dict[str, Any]]:
@@ -125,9 +134,18 @@ def build_response(include_midpoints: bool = False) -> tuple[dict[str, Any], lis
         errors = []
         for intensity in nodes:
             if intensity == 0.0:
-                values.append(0.0)
-                errors.append(0.0)
-                csv_rows.append([F, 0.0, 0.0, 0.0, 0.0, 0.0, "zero_light_endpoint"])
+                dc = find_readout(f"bias_p1_dc_F{F:.3f}_r02")
+                if dc is None:
+                    result["status"] = "INCOMPLETE"
+                    values.append(None)
+                    errors.append(None)
+                    csv_rows.append([F, 0.0, "", "", "", "", "missing_DC_only"])
+                    continue
+                values.append(float(dc["Y_at_E_main"]))
+                dc_error, _origin = response_error_envelope(F, 1.0)
+                errors.append(dc_error if dc_error is not None else 0.05)
+                csv_rows.append([F, 0.0, float(dc["Y_at_E_main"]), float(dc["Y_at_E_low"]),
+                                 float(dc["Y_at_E_high"]), errors[-1], "direct_DC_only_readout"])
                 continue
             item = node_values(F, intensity, midpoint=intensity in mid_nodes)
             if item is None or item.get("status") != "PASS":
@@ -193,6 +211,9 @@ def final_statistics() -> int:
         return 2
     plan = load_json(REPORT_DIR / "midpoint_plan.json")
     mid_nodes = [float(item["midpoint_I_over_mu"]) for item in plan.get("intervals", [])]
+    if len(mid_nodes) != 2:
+        print("INCOMPLETE: two real midpoint intervals are required")
+        return 2
     nodes = response["nodes"]
     Imax = max(nodes)
     results = {}
@@ -217,11 +238,13 @@ def final_statistics() -> int:
                 tail = tail_bound(Imax, state)
                 quad_err = tight_quadrature_error(nodes, values, state, Imax)
                 response_err = float(np.dot(weights, values * errors))
-                pre_nodes = [node for node in nodes if node not in mid_nodes]
-                pre_values = [values[nodes.index(node)] for node in pre_nodes]
-                w_pre = linear_weights(pre_nodes, state, Imax)
-                y_pre = linear_average(pre_nodes, pre_values, w_pre)
-                node_change = abs(y - y_pre)
+                node_change = 0.0
+                for midpoint in mid_nodes:
+                    reduced = [node for node in nodes if node != midpoint]
+                    reduced_values = [values[nodes.index(node)] for node in reduced]
+                    w_reduced = linear_weights(reduced, state, Imax)
+                    y_reduced = linear_average(reduced, reduced_values, w_reduced)
+                    node_change += abs(y - y_reduced)
                 rel_err = (response_err + node_change) / y if y else math.inf
             tail_ok = tail <= 0.01 * y if state != "coherent" else True
             delta = y * rel_err + quad_err
@@ -252,17 +275,25 @@ def final_statistics() -> int:
 
     q = {state: q_and_d(state) for state in ["coherent", "bsv", "thermal"]}
     b, c = q["bsv"], q["coherent"]
-    if b["Y_F0"] and b["Y_F1"] and c["Y_F0"] and c["Y_F1"]:
-        d = (b["Q"] / c["Q"]) if b["Q"] is not None and c["Q"] else None
+    denominator_ok = all(value > 0.0 for value in [b["F0_interval"][0], c["F0_interval"][0], c["F1_interval"][0]])
+    if denominator_ok and None not in [b["Q"], c["Q"]]:
+        d = b["Q"] / c["Q"]
         d_lo = (b["F1_interval"][0] * c["F0_interval"][0]) / (b["F0_interval"][1] * c["F1_interval"][1])
         d_hi = (b["F1_interval"][1] * c["F0_interval"][1]) / (b["F0_interval"][0] * c["F1_interval"][0])
     else:
         d = d_lo = d_hi = None
-    valid = d_lo is not None and d_lo > 0.0 and all(item["Y"] > 10.0 * (item["Y_hi"] - item["Y_lo"] + 1e-300)
-                                                    for key, item in results.items() if key != "coherent_F0")
+    signal_ok = all(item["Y"] > 10.0 * (item["Y_hi"] - item["Y_lo"]) for item in results.values())
+    statistical_ok = all(item["relative_response_error"] <= 0.05 and item["tail_ok"]
+                         and item["node_change"] <= 0.01 * item["Y"]
+                         and item["quadrature_error"] <= 0.001 * item["Y"]
+                         for key, item in results.items() if key.startswith(("bsv_", "thermal_")))
+    valid = denominator_ok and signal_ok and statistical_ok and d_lo is not None and d_lo > 0.0
+    status = "PASS" if valid else "INCOMPLETE"
     output = {"schema": "continuation-v2-statistics", "revision": REVISION, "Imax_over_mu": Imax,
               "nodes": nodes, "midpoints": mid_nodes, "yields": results, "Q": q,
               "D": {"value": d, "lo": d_lo, "hi": d_hi, "valid": valid},
+              "status": status, "signal_ok": signal_ok, "statistical_gate_ok": statistical_ok,
+              "denominator_ok": denominator_ok,
               "interpretation": "D interval is a conservative audit interval, not a statistical confidence interval."}
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     (REPORT_DIR / "R3_statistics.json").write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n",
@@ -294,7 +325,7 @@ def final_statistics() -> int:
         writer.writerow(["state", "F", "interval_left", "interval_right", "weighted_contribution", "cumulative_fraction"])
         writer.writerows(contribution_rows)
     print(json.dumps(output, indent=2, ensure_ascii=False)[:12000])
-    return 0
+    return 0 if status == "PASS" else 2
 
 
 def main() -> int:

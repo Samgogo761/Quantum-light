@@ -102,6 +102,10 @@ def budget_snapshot() -> dict[str, Any]:
 def check_budget(add_tdse: int = 0, add_seconds: float = 0.0, phase: str = "R1") -> dict[str, Any]:
     """Refuse a task when either continuation or repair hard limits would be exceeded."""
     snap = budget_snapshot()
+    if 48 + snap["new_tdse_attempts"] + add_tdse > 240:
+        raise RuntimeError("Global TDSE limit 240 would be exceeded")
+    if 14.117235553083 + snap["new_science_hours"] + add_seconds / 3600.0 > 72.0:
+        raise RuntimeError("Global science limit 72 h would be exceeded")
     if snap["new_tdse_attempts"] + add_tdse > 112:
         raise RuntimeError("Continuation TDSE limit 112 would be exceeded")
     if snap["new_science_hours"] + add_seconds / 3600.0 > 40.0:
@@ -478,6 +482,7 @@ def stage_v2_readouts(dry_run: bool, max_events: int) -> int:
         return 0
     for spec in selected:
         validate_readout_spec(spec)
+        check_budget(add_seconds=1800.0, phase="R2")
         started = datetime.now(timezone.utc).isoformat()
         start = time.perf_counter()
         summary = run_readout(spec)
@@ -519,13 +524,17 @@ def execute_legacy_observation(config: dict[str, Any], run_id: str, result_dir: 
         legacy.spectrum_for_state = original
 
 
-def stage_library(dry_run: bool, max_new_runs: int, offset: int) -> int:
+def stage_library(dry_run: bool, max_new_runs: int, offset: int, midpoint: bool = False) -> int:
     """Run the remaining two-bias production phases in explicit batches."""
-    from ql_tip_1d.continuation_v2 import library_tasks
-    if not (REPORT_DIR / "R1_gate_r1_20261105_v1.json").exists():
-        raise RuntimeError("R1 gate file is missing")
-    if read_json(REPORT_DIR / "R1_gate_r1_20261105_v1.json").get("status") != "PASS":
+    from ql_tip_1d.continuation_v2 import library_tasks, midpoint_tasks
+    r1_path = REPORT_DIR / "R1_gate_r1_20261106_v2.json"
+    r2_path = REPORT_DIR / "R2_gate_r2_20261106_v2.json"
+    if not r1_path.exists() or not r2_path.exists():
+        raise RuntimeError("R1/R2 gate files are required before the library")
+    if read_json(r1_path).get("status") != "PASS":
         raise RuntimeError("R1 gate is not PASS")
+    if read_json(r2_path).get("status") != "PASS":
+        raise RuntimeError("R2 gate is not PASS")
     if midpoint:
         plan = read_json(REPORT_DIR / "midpoint_plan.json")
         tasks = [task for task in midpoint_tasks(plan)]

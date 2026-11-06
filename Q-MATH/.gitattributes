@@ -2,3 +2,5 @@
 reports/** -text
 code/** -text
 results/** -text
+
+history/** -text
