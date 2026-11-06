@@ -26,6 +26,7 @@ from ql_tip_1d.statistics_v2 import (bsv_pdf, linear_average, linear_weights, ta
 
 REVISION = "r1_20261105_v1"
 REPORT_DIR = V2_RESULTS / "reports" / REVISION
+ACTIVE_EVIDENCE = PROJECT / "results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
 INITIAL_NODES = [0.0, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 12.0, 20.0, 32.0]
 PHASES = [0, 90, 180, 270]
 
@@ -33,6 +34,18 @@ PHASES = [0, 90, 180, 270]
 def load_json(path: Path) -> dict[str, Any]:
     """Read JSON or an empty mapping."""
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def load_active() -> dict[str, Any]:
+    """Load and verify the shared active-evidence pointer and both gate hashes."""
+    active = load_json(ACTIVE_EVIDENCE)
+    if not active:
+        raise RuntimeError("active_evidence.json is missing")
+    for key, path_key in [("r1_sha256", "r1_gate"), ("r2_sha256", "r2_gate")]:
+        path = project_path(active[path_key])
+        if not path.exists() or sha256(path) != active[key]:
+            raise RuntimeError(f"Active evidence hash mismatch: {path_key}")
+    return active
 
 
 def find_readout(run_id: str) -> dict[str, Any] | None:
@@ -82,11 +95,13 @@ def node_values(F: float, intensity: float, *, midpoint: bool = False) -> dict[s
 
 def response_error_envelope(F: float, intensity: float) -> tuple[float, str]:
     """Return a labelled relative response-error envelope for one node."""
-    r1 = load_json(REPORT_DIR / "R1_gate_r1_20261105_v1.json")
-    conditions = r1.get("conditions", {})
+    active = load_active()
+    r1 = load_json(project_path(active["r1_gate"]))
+    conditions = r1.get("components", {})
+    conditions = {key: {"estimated_total_rel_error": value["total"]} for key, value in conditions.items()}
     mu = conditions.get(f"F{F:g}_I1", {}).get("estimated_total_rel_error")
     four = conditions.get(f"F{F:g}_I4", {}).get("estimated_total_rel_error")
-    r2 = load_json(REPORT_DIR / "R2_gate_r1_20261105_v1.json")
+    r2 = load_json(project_path(active["r2_gate"]))
     high_components = []
     for key in [f"F{F:g}_dx048", f"F{F:g}_dt005", f"F{F:g}_box900", f"F{F:g}_caphalf"]:
         item = r2.get("controls", {}).get(key, {})
@@ -165,6 +180,9 @@ def build_response(include_midpoints: bool = False) -> tuple[dict[str, Any], lis
 
 def plan_midpoints() -> int:
     """Choose the two largest weighted intervals and write a real-TDSE midpoint plan."""
+    active = load_active()
+    if active.get("allowed_stage") not in {"INITIAL_LIBRARY", "FINAL_STATISTICS"}:
+        raise RuntimeError(f"Midpoint planning requires INITIAL_LIBRARY, got {active.get('allowed_stage')}")
     response, rows = build_response(include_midpoints=False)
     if response["status"] != "PASS":
         print(json.dumps(response, indent=2))
@@ -205,6 +223,9 @@ def plan_midpoints() -> int:
 
 def final_statistics() -> int:
     """Integrate BSV/thermal responses, apply midpoint/tail/quadrature errors and D."""
+    active = load_active()
+    if active.get("allowed_stage") not in {"INITIAL_LIBRARY", "FINAL_STATISTICS"}:
+        raise RuntimeError(f"Final statistics require INITIAL_LIBRARY/FINAL_STATISTICS, got {active.get('allowed_stage')}")
     response, rows = build_response(include_midpoints=True)
     if response["status"] != "PASS":
         print(json.dumps(response, indent=2))

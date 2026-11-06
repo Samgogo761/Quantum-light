@@ -99,13 +99,13 @@ def test_explicit_energy_range_has_distinct_readout_id() -> None:
     assert a != b
 
 
-def test_library_refuses_when_r2_is_incomplete(tmp_path, monkeypatch) -> None:
-    """The library entry must not bypass an explicitly incomplete R2 gate."""
+def test_library_refuses_when_active_evidence_disallows(monkeypatch) -> None:
+    """The library entry must not bypass the active-evidence permission."""
     import run_continuation_v2 as runner
     import pytest
-    monkeypatch.setattr(runner, "REPORT_DIR", tmp_path)
-    (tmp_path / "R1_gate_r1_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
-    (tmp_path / "R2_gate_r2_20261106_v2.json").write_text('{"status":"INCOMPLETE"}', encoding="utf-8")
+    def denied(stage):
+        raise RuntimeError("R2 gate is not allowed")
+    monkeypatch.setattr(runner, "load_active", denied)
     with pytest.raises(RuntimeError, match="R2 gate"):
         runner.stage_library(True, 1, 0)
 
@@ -116,9 +116,8 @@ def test_library_success_paths_without_tdse(tmp_path, monkeypatch) -> None:
     import run_continuation_v2 as runner
     import ql_tip_1d.continuation_v2 as common
     monkeypatch.setattr(runner, "REPORT_DIR", tmp_path)
-    (tmp_path / "R1_gate_r1_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
-    (tmp_path / "R2_gate_r2_20261106_v2.json").write_text('{"status":"PASS"}', encoding="utf-8")
     (tmp_path / "midpoint_plan.json").write_text('{"intervals":[]}', encoding="utf-8")
+    monkeypatch.setattr(runner, "load_active", lambda stage: {"allowed_task_ids": ["mock"]})
     task = {"run_id": "mock", "F_dc_V_per_nm": 0.0, "I_over_mu": 1.0,
             "CEP_rad": 0.0, "config": {}, "parent_config_sha256": "x"}
     monkeypatch.setattr(common, "library_tasks", lambda: [{**task, "existing": False}])

@@ -1,0 +1,16 @@
+{
+  "schema": "ql-tip-1d-v3-start-state",
+  "created_local": "2026-11-06T16:33:42+08:00",
+  "git_head": "84edec95",
+  "checkpoint_parent": "05dd5154",
+  "active_code_version": "post-05dd515 working tree registered in 84edec9",
+  "source_changes": ["run_continuation_v2.py", "readout_continuation_v2.py", "analyze_high_intensity_v2.py", "analyze_statistics_v2.py", "continuation_v2.py", "test_continuation_v2.py"],
+  "running_tasks": [],
+  "ledger": {"tdse": 16, "readout": 90, "hours": 12.23303721922291},
+  "r1_gate_path": "results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261106_v2.json",
+  "r2_gate_path": "results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json",
+  "r2_status": "PASS_with_high_risk_flag",
+  "library_started": false,
+  "bsv_integration_started": false,
+  "material_sensitivity": "DEFERRED_PRIORITY"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "ql-tip-1d-active-evidence-v3",
+  "r1_gate": "results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json",
+  "r1_sha256": "c16220bfadbce626d5ecb3260ef40ca592a802bf52061cbca3c9012f74b78e03",
+  "r2_gate": "results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json",
+  "r2_sha256": "ee3313babeec7d80198a4812407bf99497f83c55297c127a0dc1b0c8e85c5fdd",
+  "allowed_stage": "NONE",
+  "allowed_task_ids": [],
+  "budget_tdse": 22,
+  "budget_hours": 8.0,
+  "material_sensitivity": "DEFERRED_PRIORITY",
+  "s3_completed_task_ids": [
+    "bias_v2_lib_F0_I8_phi090_r01",
+    "bias_v2_lib_F0_I8_phi180_r01",
+    "bias_v2_lib_F0_I8_phi270_r01",
+    "bias_v2_lib_F0_I12_phi000_r01",
+    "bias_v2_lib_F0_I12_phi090_r01",
+    "bias_v2_lib_F0_I12_phi180_r01",
+    "bias_v2_lib_F0_I12_phi270_r01",
+    "bias_v2_lib_F1_I8_phi090_r01",
+    "bias_v2_lib_F1_I8_phi180_r01",
+    "bias_v2_lib_F1_I8_phi270_r01",
+    "bias_v2_lib_F1_I12_phi000_r01",
+    "bias_v2_lib_F1_I12_phi090_r01",
+    "bias_v2_lib_F1_I12_phi180_r01",
+    "bias_v2_lib_F1_I12_phi270_r01"
+  ],
+  "note": "S3 stopped after 14/22 tasks; 8mu/12mu four-phase complete but phase span large; 20mu/S4-S6 blocked by budget.",
+  "s3_status": "PARTIAL_BUDGET_INCOMPLETE"
+}

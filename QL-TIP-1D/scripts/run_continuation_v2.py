@@ -524,22 +524,34 @@ def execute_legacy_observation(config: dict[str, Any], run_id: str, result_dir: 
         legacy.spectrum_for_state = original
 
 
-def stage_library(dry_run: bool, max_new_runs: int, offset: int, midpoint: bool = False) -> int:
+def load_active(stage: str) -> dict[str, Any]:
+    """Verify the shared active-evidence pointer before a library action."""
+    path = PROJECT / "results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
+    active = read_json(path) if path.exists() else {}
+    if not active:
+        raise RuntimeError("active_evidence.json is missing")
+    for sha_key, path_key in [("r1_sha256", "r1_gate"), ("r2_sha256", "r2_gate")]:
+        gate = project_path(active[path_key])
+        if not gate.exists() or sha256(gate) != active[sha_key]:
+            raise RuntimeError(f"Active evidence hash mismatch: {path_key}")
+    if active.get("allowed_stage") != stage:
+        raise RuntimeError(f"Active evidence allows {active.get('allowed_stage')}, not {stage}")
+    return active
+
+
+def stage_library(dry_run: bool, max_new_runs: int, offset: int, midpoint: bool = False,
+                  scout: bool = False) -> int:
     """Run the remaining two-bias production phases in explicit batches."""
     from ql_tip_1d.continuation_v2 import library_tasks, midpoint_tasks
-    r1_path = REPORT_DIR / "R1_gate_r1_20261106_v2.json"
-    r2_path = REPORT_DIR / "R2_gate_r2_20261106_v2.json"
-    if not r1_path.exists() or not r2_path.exists():
-        raise RuntimeError("R1/R2 gate files are required before the library")
-    if read_json(r1_path).get("status") != "PASS":
-        raise RuntimeError("R1 gate is not PASS")
-    if read_json(r2_path).get("status") != "PASS":
-        raise RuntimeError("R2 gate is not PASS")
+    active = load_active("SCOUT_BATCHES" if scout else "INITIAL_LIBRARY")
     if midpoint:
         plan = read_json(REPORT_DIR / "midpoint_plan.json")
         tasks = [task for task in midpoint_tasks(plan)]
     else:
         tasks = [task for task in library_tasks() if not task.get("existing")]
+        if scout:
+            allowed = set(active.get("allowed_task_ids", []))
+            tasks = [task for task in tasks if task["run_id"] in allowed]
     selected = tasks[offset:offset + max_new_runs]
     print(f"library new={len(tasks)} selected={len(selected)}")
     for task in selected:
@@ -618,7 +630,7 @@ def main() -> int:
     parser.add_argument("--stage", required=True,
                         choices=["inventory", "repair-readouts", "repair-tdse", "repair-gate",
                                  "high-intensity-check", "high-intensity-readouts", "library",
-                                 "library-midpoints", "library-readouts", "statistics"])
+                                 "scout", "library-midpoints", "library-readouts", "statistics"])
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--max-new-runs", type=int, default=8)
@@ -638,6 +650,8 @@ def main() -> int:
         return stage_v2_readouts(args.dry_run, args.max_events)
     if args.stage == "library":
         return stage_library(args.dry_run, args.max_new_runs, args.offset)
+    if args.stage == "scout":
+        return stage_library(args.dry_run, args.max_new_runs, args.offset, scout=True)
     if args.stage == "library-midpoints":
         return stage_library(args.dry_run, args.max_new_runs, args.offset, midpoint=True)
     if args.stage == "statistics":

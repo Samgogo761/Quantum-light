@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/local_artifact_hashes.csv",
+      "old_sha256": "0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383",
+      "current_sha256": "21285a25c85374edd7a62b840e77ebef6cff2555bade57335a8bcaf40cb64c38",
+      "history_path": "Q-MATH/history/by_sha256/0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383.csv",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "old_sha256": "5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057",
+      "current_sha256": "12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0",
+      "history_path": "Q-MATH/history/by_sha256/5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
+      "old_sha256": "52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0",
+      "current_sha256": "1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0",
+      "history_path": "Q-MATH/history/by_sha256/52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/tests/test_continuation_v2.py",
+      "old_sha256": "16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d",
+      "current_sha256": "b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6",
+      "history_path": "Q-MATH/history/by_sha256/16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "old_sha256": "a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5",
+      "current_sha256": "6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d",
+      "history_path": "Q-MATH/history/by_sha256/a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5.csv",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    }
+  ]
+}
