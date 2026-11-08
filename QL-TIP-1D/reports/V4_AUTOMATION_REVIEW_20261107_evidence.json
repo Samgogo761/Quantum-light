@@ -1,0 +1,315 @@
+{
+  "schema": "ql-tip-v4-readonly-review-evidence",
+  "observed_at_Asia_Shanghai": "2026-11-07T01:20:47.518835+08:00",
+  "HEAD": "a5e35138d5e901177719a8e7d32dd7377657ff7d",
+  "scope": "static source review and saved scalar arithmetic only; no TDSE, spectra, project tests, or process mutation",
+  "sources": [
+    {
+      "path": "QL-TIP-1D/scripts/run_v3_full_v4.py",
+      "sha256": "d49101ebf0058ed927088890e1fbd4465cef501bfadd4c7f24eae4b8617ba09c",
+      "bytes": 10889
+    },
+    {
+      "path": "QL-TIP-1D/scripts/v3_stage_v4.py",
+      "sha256": "9601bcb4eab230e25d7e8a6b0a673dd261674f9055f5a85fd9dffd2243c6953a",
+      "bytes": 20773
+    },
+    {
+      "path": "QL-TIP-1D/scripts/build_r1_components_v3.py",
+      "sha256": "4bc004b27d5da733ed64c80ca2dfb8b69ea26fc0de60509447bbe820567874fb",
+      "bytes": 11313
+    },
+    {
+      "path": "QL-TIP-1D/scripts/build_error_component_map_v4.py",
+      "sha256": "5568e9492209c52b84fec338703fb1adbf72f9599ea016061fafe685b230c0d4",
+      "bytes": 8138
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
+      "sha256": "1e434c57f54c6cb8c7ad877cf91cf61356c62cebc5138518c936926178628344",
+      "bytes": 24294
+    },
+    {
+      "path": "QL-TIP-1D/scripts/build_budget_reallocation_v4.py",
+      "sha256": "06377f203b62b728621016e19865d89299a8614f98aa41a73c0a99a2c1f21291",
+      "bytes": 9273
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "sha256": "247ccbd2b507c00e635ec9e330f51522ce2a64c34fadf1d10b792b6f3b660b07",
+      "bytes": 40907
+    },
+    {
+      "path": "QL-TIP-1D/scripts/readout_continuation_v2.py",
+      "sha256": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+      "bytes": 9482
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_bias_v1.py",
+      "sha256": "a9920174a983671ccff101b6fd0ddc1a6a44cf973da3c2af5ba0cc5a0d297335",
+      "bytes": 20600
+    },
+    {
+      "path": "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py",
+      "sha256": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+      "bytes": 18781
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_components.csv",
+      "sha256": "34338c9a236d3e1473a2fa4e9d36ac9016359ea12eb771b49b80537a9b186fe2",
+      "bytes": 14550
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json",
+      "sha256": "c16220bfadbce626d5ecb3260ef40ca592a802bf52061cbca3c9012f74b78e03",
+      "bytes": 2622
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json",
+      "sha256": "22e2838f19fb25ba6f188f00269eb18a6c99f575686f02b0dc2b7770b2ce5f7b",
+      "bytes": 3637
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/cost_remaining.csv",
+      "sha256": "7716e4c849601fed2a6af355f07a77c2811cd2e480f5c16db6c0df5e49df2f0d",
+      "bytes": 5941
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json",
+      "sha256": "df8652e99780eed825635e03895b10284bdb0e06047dcc2baf332e790ec4c666",
+      "bytes": 1601
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/START_STATE_v4.json",
+      "sha256": "6896306fbd926eff68070b31b610c0fd40750f40a42e78602b76d3e47efbfd7b",
+      "bytes": 739
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+      "sha256": "831477ecbe0e8671c6ed57f537fa6132cae833c253b9d05f72cadd0de1c290d6",
+      "bytes": 12671
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "sha256": "100348faa94e50393c41e5a6049d2468c5492b8e0c11edef5233077d0c62b1fe",
+      "bytes": 45303
+    }
+  ],
+  "ledger_snapshot": {
+    "event_count": 136,
+    "new_TDSE": 32,
+    "readouts": 104,
+    "hours": 19.039991732750686,
+    "last_event_id": "tdse:bias_v2_lib_F0_I20_phi090_r01",
+    "inflight_time_not_yet_included": true
+  },
+  "S3C_summary_snapshot": [
+    {
+      "run_id": "bias_v2_lib_F0_I20_phi000_r01",
+      "summary_exists": true,
+      "execution_status": "PASS"
+    },
+    {
+      "run_id": "bias_v2_lib_F0_I20_phi090_r01",
+      "summary_exists": true,
+      "execution_status": "PASS"
+    },
+    {
+      "run_id": "bias_v2_lib_F0_I20_phi180_r01",
+      "summary_exists": false,
+      "execution_status": null
+    },
+    {
+      "run_id": "bias_v2_lib_F0_I20_phi270_r01",
+      "summary_exists": false,
+      "execution_status": null
+    },
+    {
+      "run_id": "bias_v2_lib_F1_I20_phi000_r01",
+      "summary_exists": false,
+      "execution_status": null
+    },
+    {
+      "run_id": "bias_v2_lib_F1_I20_phi090_r01",
+      "summary_exists": false,
+      "execution_status": null
+    },
+    {
+      "run_id": "bias_v2_lib_F1_I20_phi180_r01",
+      "summary_exists": false,
+      "execution_status": null
+    },
+    {
+      "run_id": "bias_v2_lib_F1_I20_phi270_r01",
+      "summary_exists": false,
+      "execution_status": null
+    }
+  ],
+  "phase_arithmetic": [
+    {
+      "F": 0,
+      "I_over_mu": 8,
+      "Y_phases_0_90_180_270": [
+        0.00044320308517670725,
+        0.0004563789409206756,
+        0.00034131352781763903,
+        0.0003465834552305187
+      ],
+      "Y2": 0.00039225830649717317,
+      "Y4": 0.00039686975228638515,
+      "relative_2_to_4_with_Y4_denominator": 0.011619544605365432,
+      "phase_span_over_Y4": 0.2899324336010476,
+      "inputs": [
+        {
+          "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "1e90d0eb4887b46987ddbd561f8b60c3f0c488395a5534990f7cb28379abe545"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I8_phi090_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I8_phi090_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "f50361c8520558cbc0f953487fe6b85f061f40ab8658ecd30387376f45359d98"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I8_phi180_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I8_phi180_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "14c297469fd3ae21b3ff659a27c16828abd5725f0ce117ef0173bb06251e701f"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I8_phi270_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I8_phi270_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "7686f8a22c97d9e3a6413b7bdfcd38fec647d72b4fd6dd2c91c4de118a4915f3"
+        }
+      ]
+    },
+    {
+      "F": 0,
+      "I_over_mu": 12,
+      "Y_phases_0_90_180_270": [
+        0.002537890165226936,
+        0.0030341622222956792,
+        0.003677629612519028,
+        0.0030029309719800286
+      ],
+      "Y2": 0.003107759888872982,
+      "Y4": 0.0030631532430054178,
+      "relative_2_to_4_with_Y4_denominator": -0.014562329184614477,
+      "phase_span_over_Y4": 0.3720804533350199,
+      "inputs": [
+        {
+          "run_id": "bias_v2_lib_F0_I12_phi000_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I12_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "0dc2ea669f35549bc477a86cd1057e712287e0901598eafbb3408121c846b07c"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I12_phi090_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I12_phi090_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "1119cba62341e316d9e54b0616d29810f9fc20dbc96fba3d3f29d7d1ecdd18f5"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I12_phi180_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I12_phi180_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "279300b60e9d4e4d02b36630f2a6984db2bad7bfae1a7b28e04579d9edf58623"
+        },
+        {
+          "run_id": "bias_v2_lib_F0_I12_phi270_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F0_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "7d0d33371421b5716bbc815019bdf70c2f1d212f4df460a9d0c8bf29c10b7b24"
+        }
+      ]
+    },
+    {
+      "F": 1,
+      "I_over_mu": 8,
+      "Y_phases_0_90_180_270": [
+        0.0006502063538353673,
+        0.000570002819673607,
+        0.0008011212027071663,
+        0.0008881034781277508
+      ],
+      "Y2": 0.0007256637782712667,
+      "Y4": 0.0007273584635859729,
+      "relative_2_to_4_with_Y4_denominator": 0.002329917639716617,
+      "phase_span_over_Y4": 0.43733684885698004,
+      "inputs": [
+        {
+          "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "be869925d177234250523ef53165e56d4de076a46315f1753ef503b4cb85e5dd"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I8_phi090_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I8_phi090_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "3245aade302b909e8fed9164267e92373e4b54050ae2ae302a92acb189c6f662"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I8_phi180_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I8_phi180_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "d4c2ea6549b64f352f7af8456908b877b5c902a7f0379fd378c61a248f16aa30"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I8_phi270_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I8_phi270_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "69ed2585ba9457ff59bb48df12791aa1360e9b1ba06605bdcc8d693d6fa83800"
+        }
+      ]
+    },
+    {
+      "F": 1,
+      "I_over_mu": 12,
+      "Y_phases_0_90_180_270": [
+        0.004185957844778924,
+        0.0037222598269562725,
+        0.0046227952970655335,
+        0.0050397006628145925
+      ],
+      "Y2": 0.0044043765709222285,
+      "Y4": 0.00439267840790383,
+      "relative_2_to_4_with_Y4_denominator": -0.002663104814900545,
+      "phase_span_over_Y4": 0.29991743385717096,
+      "inputs": [
+        {
+          "run_id": "bias_v2_lib_F1_I12_phi000_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I12_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "00ae2e4fb339a372425336153f3c9314d686d57f12349785ab9b90ed9f54125d"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I12_phi090_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I12_phi090_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "668f301768c6de6b7c690fefa76e94073ab9b21903a029084e8b1924036a7d7c"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I12_phi180_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I12_phi180_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "9e6ff4fedfa3cb050478ddfc548e8b00ec29267418f41413a046bb27786b6e5f"
+        },
+        {
+          "run_id": "bias_v2_lib_F1_I12_phi270_r01",
+          "readout_path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_lib_F1_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4/summary.json",
+          "summary_sha256": "5a26e798d9de4cc40569cae5fe50a3fcd795bc2298535aedc60fd3de9e5bd74b"
+        }
+      ]
+    }
+  ],
+  "budget_snapshot_interpretation": {
+    "earlier_original_plan_hours": 30.53111111111111,
+    "after_14_completed_nominal_remaining_tasks": 66,
+    "after_14_completed_nominal_remaining_plan_hours": 24.09111111111111,
+    "legacy_baseline_hours": 14.117235553083,
+    "legacy_baseline_includes_conservative_reserve_hours": 1.0,
+    "not_a_guaranteed_time_to_certification": true
+  },
+  "dynamic_state_warning": "All process and run status statements are snapshots; runtime ledger may subsequently change.",
+  "additional_source_snapshot": {
+    "path": "QL-TIP-1D/src/ql_tip_1d/statistics_v2.py",
+    "sha256": "e21303c7df5079fae632bdc02969c37e7a2f07d7a9bd0b865906ffffbe789954",
+    "captured_at_Asia_Shanghai": "2026-11-07T01:24:20.268511+08:00"
+  },
+  "archive_closeout": {
+    "register_exit_code": 1,
+    "finish_exit_code": 1,
+    "blocking_original": "QL-TIP-1D/src/ql_tip_1d/statistics_v2.py",
+    "new_commit": null,
+    "no_original_hashes_modified": true
+  }
+}

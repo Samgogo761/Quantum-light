@@ -7919,14 +7919,6 @@
         "registered:QL-TIP-1D/configs/continuation_v2/protocol_v2.json"
       ]
     },
-    "QL-TIP-1D/src/ql_tip_1d/statistics_v2.py": {
-      "sha256": "2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673",
-      "bytes": 6378,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/src/ql_tip_1d/statistics_v2.py"
-      ]
-    },
     "QL-TIP-1D/scripts/analyze_continuation_v2.py": {
       "sha256": "b0bb1158c59f6dae1631db52d810bb00b41fc0e21d618d0e2edead0234a3ace4",
       "bytes": 18245,
@@ -10407,14 +10399,6 @@
         "migrated-from:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
       ]
     },
-    "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py": {
-      "sha256": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
-      "bytes": 17470,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/src/ql_tip_1d/continuation_v2.py"
-      ]
-    },
     "QL-TIP-1D/scripts/readout_continuation_v2.py": {
       "sha256": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
       "bytes": 9482,
@@ -10869,30 +10853,6 @@
         "migrated-from:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
       ]
     },
-    "QL-TIP-1D/scripts/run_continuation_v2.py": {
-      "sha256": "12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0",
-      "bytes": 37595,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/run_continuation_v2.py"
-      ]
-    },
-    "QL-TIP-1D/scripts/analyze_statistics_v2.py": {
-      "sha256": "1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0",
-      "bytes": 20039,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py"
-      ]
-    },
-    "QL-TIP-1D/tests/test_continuation_v2.py": {
-      "sha256": "b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6",
-      "bytes": 6067,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/tests/test_continuation_v2.py"
-      ]
-    },
     "QL-TIP-1D/scripts/build_r1_components_v3.py": {
       "sha256": "4bc004b27d5da733ed64c80ca2dfb8b69ea26fc0de60509447bbe820567874fb",
       "bytes": 11313,
@@ -10925,14 +10885,6 @@
         "registered:QL-TIP-1D/reports/S3_SCOUT_v3.md"
       ]
     },
-    "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv": {
-      "sha256": "6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d",
-      "bytes": 44779,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
-      ]
-    },
     "QL-TIP-1D/results/bias_v2/local_artifact_hashes.csv": {
       "sha256": "21285a25c85374edd7a62b840e77ebef6cff2555bade57335a8bcaf40cb64c38",
       "bytes": 108353,
@@ -10955,14 +10907,6 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json": {
-      "sha256": "329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b",
-      "bytes": 1264,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
       ]
     },
     "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout.json": {
@@ -10995,14 +10939,6 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout_response.csv"
-      ]
-    },
-    "Q-MATH/version_migration.json": {
-      "sha256": "8ae5449b8c20cf495940da0c526c36f745d0488f860f16b6b80d1bd5d2c470bb",
-      "bytes": 2578,
-      "kind": "results",
-      "origins": [
-        "registered:Q-MATH/version_migration.json"
       ]
     },
     "QL-TIP-1D/results/bias_v2/runs/bias_v2_lib_F0_I12_phi000_r01/config.json": {
@@ -11899,6 +11835,557 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/configs/continuation_v2/bias_v2_lib_F1_I8_phi270_r01.json"
+      ]
+    },
+    "Q-MATH/history/by_sha256/2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673.py": {
+      "sha256": "2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673",
+      "bytes": 6378,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/src/ql_tip_1d/statistics_v2.py",
+        "migrated-from:QL-TIP-1D/src/ql_tip_1d/statistics_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py": {
+      "sha256": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+      "bytes": 17470,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/src/ql_tip_1d/continuation_v2.py",
+        "migrated-from:QL-TIP-1D/src/ql_tip_1d/continuation_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py": {
+      "sha256": "12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0",
+      "bytes": 37595,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/run_continuation_v2.py",
+        "migrated-from:QL-TIP-1D/scripts/run_continuation_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0.py": {
+      "sha256": "1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0",
+      "bytes": 20039,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py",
+        "migrated-from:QL-TIP-1D/scripts/analyze_statistics_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6.py": {
+      "sha256": "b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6",
+      "bytes": 6067,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_continuation_v2.py",
+        "migrated-from:QL-TIP-1D/tests/test_continuation_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d.csv": {
+      "sha256": "6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d",
+      "bytes": 44779,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+        "migrated-from:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
+      ]
+    },
+    "Q-MATH/history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json": {
+      "sha256": "329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b",
+      "bytes": 1264,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json",
+        "migrated-from:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107.md": {
+      "sha256": "830e79bbbe1e8cc5a3b5372720259598e2d2eeb6599fa00bb6593964785d47bf",
+      "bytes": 13397,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107.md"
+      ]
+    },
+    "QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107_evidence.json": {
+      "sha256": "35151e3908339f98795e94c52ea447a1fee206a2c67200ff6762db1c69cd3bfe",
+      "bytes": 12880,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/src/ql_tip_1d/statistics_v2.py": {
+      "sha256": "e21303c7df5079fae632bdc02969c37e7a2f07d7a9bd0b865906ffffbe789954",
+      "bytes": 6628,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/src/ql_tip_1d/statistics_v2.py"
+      ]
+    },
+    "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py": {
+      "sha256": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+      "bytes": 18781,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/src/ql_tip_1d/continuation_v2.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/run_continuation_v2.py": {
+      "sha256": "c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3",
+      "bytes": 43825,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/run_continuation_v2.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/analyze_statistics_v2.py": {
+      "sha256": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
+      "bytes": 35185,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/v3_stage_v4.py": {
+      "sha256": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
+      "bytes": 41765,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/v3_stage_v4.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/run_v3_full_v4.py": {
+      "sha256": "44652988f4b336a7ef5618825d77ca3ce5f00cccac67992cd41b824cb20dffa8",
+      "bytes": 22708,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/run_v3_full_v4.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/build_error_component_map_v4.py": {
+      "sha256": "04be6381c62e7dfe848c1b8f083970840ebc2d87deadc3efa71e05a09b2e3130",
+      "bytes": 13089,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/build_error_component_map_v4.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/build_budget_reallocation_v4.py": {
+      "sha256": "06377f203b62b728621016e19865d89299a8614f98aa41a73c0a99a2c1f21291",
+      "bytes": 9273,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/build_budget_reallocation_v4.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/rebuild_r1_pairs_v5.py": {
+      "sha256": "6097cd5a42b4fb6e7c102272ae2747f19c7aaacd3a41cf342fe84446b8fd626f",
+      "bytes": 20114,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/rebuild_r1_pairs_v5.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/apply_r1_v5.py": {
+      "sha256": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
+      "bytes": 3227,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/apply_r1_v5.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/build_tail_extension_v5.py": {
+      "sha256": "0e5033f6a76a2d5015dac39e6bacab949205c46ec308401ff25773067cf62b3e",
+      "bytes": 4155,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/build_tail_extension_v5.py"
+      ]
+    },
+    "QL-TIP-1D/tests/test_continuation_v2.py": {
+      "sha256": "da6859d2edc56ab25cc5000ea9913385b6ede78b5380b99d75769a67b0ec41e6",
+      "bytes": 6123,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_continuation_v2.py"
+      ]
+    },
+    "QL-TIP-1D/tests/test_statistics_gate_v4.py": {
+      "sha256": "66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958",
+      "bytes": 5637,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_statistics_gate_v4.py"
+      ]
+    },
+    "QL-TIP-1D/tests/test_v4_review_fixes.py": {
+      "sha256": "65ab978ccead31395711d4cfb5f87bf7741a90ae61897f83e77ff4ae67fb0598",
+      "bytes": 10720,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_v4_review_fixes.py"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json": {
+      "sha256": "c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1",
+      "bytes": 25929,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics_preliminary.json": {
+      "sha256": "13915605d378eb5e43c7aaaf1b65c5a631bdb6ae3300f52841a2674f43c004bc",
+      "bytes": 9833,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics_preliminary.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/midpoint_plan.json": {
+      "sha256": "3547dee821def08bedbef77fb9df42cab39c115770da4badb30a108109e15a27",
+      "bytes": 4058,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/midpoint_plan.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv": {
+      "sha256": "f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732",
+      "bytes": 4199,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_prelim.csv": {
+      "sha256": "c2b208f9a0da177f31886d93667febe418ddec6b105671f454517a5119d43f3f",
+      "bytes": 3369,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_prelim.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_preliminary.csv": {
+      "sha256": "c2b208f9a0da177f31886d93667febe418ddec6b105671f454517a5119d43f3f",
+      "bytes": 3369,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_preliminary.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv": {
+      "sha256": "d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3",
+      "bytes": 1224,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit_preliminary.csv": {
+      "sha256": "102699ab58a41aa5c1da5b2e8fa2eb8bee49458909a1a0b7b23e5e81531477bc",
+      "bytes": 1151,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit_preliminary.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights.csv": {
+      "sha256": "05f8c06ddd9e44edea3081c1cd05712f7bc71eebbcbaf9e5568e081d3c860c8d",
+      "bytes": 3900,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights_preliminary.csv": {
+      "sha256": "ef3c5df90afe5e473951791f426dfadc771e559f86751e34cb551fdb0e0a3a57",
+      "bytes": 3252,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights_preliminary.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions.csv": {
+      "sha256": "2e8466cf781cdd7cd48e25da457b51275231a81c2d8d11508566e9344e3a35d4",
+      "bytes": 1982,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions_preliminary.csv": {
+      "sha256": "403e43b072f2d098764f30bc5a6689114ff0976f5579ad2c64c819903dfcb513",
+      "bytes": 1631,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions_preliminary.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv": {
+      "sha256": "0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce",
+      "bytes": 1205,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields_preliminary.csv": {
+      "sha256": "3c029c949b2635ef73341b28c57f7c8ad69431ccf2fc9cd9c9425f1513cae68d",
+      "bytes": 1132,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields_preliminary.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/START_STATE_v4.json": {
+      "sha256": "6896306fbd926eff68070b31b610c0fd40750f40a42e78602b76d3e47efbfd7b",
+      "bytes": 739,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/START_STATE_v4.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/active_evidence_v3_r1_before_reallocation.json": {
+      "sha256": "329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b",
+      "bytes": 1264,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/active_evidence_v3_r1_before_reallocation.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json": {
+      "sha256": "df8652e99780eed825635e03895b10284bdb0e06047dcc2baf332e790ec4c666",
+      "bytes": 1601,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json": {
+      "sha256": "f5f213b2796c341252c9ad7e5cdcca93e3ac07348ca1b71fe92bd2a66e9744c6",
+      "bytes": 323,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json": {
+      "sha256": "7cf6d614a3ac23e525f03258d207594c0a4adcfe99f3dd56770f8a196fd9acaf",
+      "bytes": 3815,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.json": {
+      "sha256": "58cb2b8de771c9f15efc64e0b9a60084dce9f3836def6c17dd4b7b0e03d9fd30",
+      "bytes": 18061,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/response_v4.json": {
+      "sha256": "93e4b97b608b66fcefeec2fc579439f7b25b6cf786245d5c13e4c0031ef97e1e",
+      "bytes": 16947,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/response_v4.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s3_stage_budget.json": {
+      "sha256": "f3ebb0a35e5976a18be2bba56256087e336494c61a4f6f0c0b458faef5f737c2",
+      "bytes": 1208,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s3_stage_budget.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_controls.json": {
+      "sha256": "e9ca9284d63cf2312a67e30e5969cf8918a6d18b22b5f3c9a64164388e2a2dd8",
+      "bytes": 2703,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_controls.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_gate.json": {
+      "sha256": "1f35bf8106b3fd4ad20e19568862b03d1244cfafc78312c722af2852a2dec6fa",
+      "bytes": 2262,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_gate.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_readout_controls.json": {
+      "sha256": "5cb514de271fc480c6274a075e34a27341b64314098a9c0368fbf4509a597eea",
+      "bytes": 2459,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_readout_controls.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_selection.json": {
+      "sha256": "cd1d29c975c8aa4286c854f994ac0140f2d35f04d95ee35960eb8333599bbe6b",
+      "bytes": 2421,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_selection.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_audit.json": {
+      "sha256": "72dc4ff4aec7fc0896eed670ae19309f23580714f3d3c2c808aa2be49f9a544e",
+      "bytes": 18380,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_audit.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_extension_status.json": {
+      "sha256": "97a53e8eec832088c2283b18143ad5268e1921e3549e44d1b11ea20a5dff5f26",
+      "bytes": 350,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_extension_status.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_precheck.json": {
+      "sha256": "3b0baaab0a0f26f68739447e60e994fb589516145ce086ea9a9fc0f11ec93134",
+      "bytes": 15561,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_precheck.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/v3_progress.json": {
+      "sha256": "6cc84688fd36295442fa2af65ad7e05af633226ee3c22bb4ec7e6fe896dc352c",
+      "bytes": 6052,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/v3_progress.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv": {
+      "sha256": "282d465a2e7ed4cd60142488281e3d5aad326debc964fe8e6d3922a6cd854765",
+      "bytes": 2363,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv": {
+      "sha256": "0e46a8497d5d504605cf05d134a9b8dabdf8ac698fa4975b2c067dfa15bd9464",
+      "bytes": 11106,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.csv": {
+      "sha256": "4aa14c3c0049889556195600a72d1e8d2d17bfd5ba863b6b4fe0d3ce94d0a737",
+      "bytes": 260,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s3_contributions_v4.csv": {
+      "sha256": "fb417a93c50704f95b53e9857f22937855adc4a701a766f6b558676a7b224457",
+      "bytes": 3168,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s3_contributions_v4.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_controls.csv": {
+      "sha256": "3349fbd9486e086c5d7f23c49cbcb382f1f9240258961ffc5fde6d0d2abd3a54",
+      "bytes": 687,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_controls.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_readout_controls.csv": {
+      "sha256": "2d3a7e6c4545a719d2ad491c33c133300d6ee41c77ac859afc2076bbb5345763",
+      "bytes": 1185,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/s4_readout_controls.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_audit.csv": {
+      "sha256": "e479c3dc9409e0e68c9f99152f6166b1f537fa011f52dec494bdb481b68df1cd",
+      "bytes": 620,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/tail_audit.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/BUDGET_REALLOCATION.md": {
+      "sha256": "44b6b873fb08c11464b4a4b96b9b31bc15182224eaaa0a7bc0017d63e86868c1",
+      "bytes": 2415,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/BUDGET_REALLOCATION.md"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md": {
+      "sha256": "e793d6703045a23e6f110e1b7c21af9b4a83357f9163134e2381d6e30e66db9e",
+      "bytes": 2823,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_gate_r1_20261107_v5.json": {
+      "sha256": "6a979abb57f7169615c0b79cd42f0bfe58f315311c129e1c6353cde725a1f6c9",
+      "bytes": 3127,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_gate_r1_20261107_v5.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/r1_v5_pointer.json": {
+      "sha256": "846f09aacd10e5e0d85add3b9054f36ff85a4e493a05d6acb0285f5a1dc86c9a",
+      "bytes": 358,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/r1_v5_pointer.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_components_v5.csv": {
+      "sha256": "d7eefb7542b7dca0f62e29964f02e3e43c00da59fa2c83bcb0660c84743bef5d",
+      "bytes": 30839,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_components_v5.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv": {
+      "sha256": "0df0cf844d96503a0882838cb6008fe8dbb5bb2606ddc96629fff8bd4ecd4a40",
+      "bytes": 24072,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv": {
+      "sha256": "803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4",
+      "bytes": 85305,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json": {
+      "sha256": "e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33",
+      "bytes": 7006,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
       ]
     }
   }

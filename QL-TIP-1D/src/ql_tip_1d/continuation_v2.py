@@ -264,6 +264,33 @@ def midpoint_tasks(plan: dict[str, Any]) -> list[dict[str, Any]]:
     return tasks
 
 
+def s4_control_tasks(intensity: float) -> list[dict[str, Any]]:
+    """Four matched dx/dt controls at the S4 representative intensity, CEP0."""
+    tasks = []
+    for F in [0.0, 1.0]:
+        for label in ["dx048", "dt005"]:
+            parent = f"results/bias_v1/bias_p1_F{F:.3f}_I1_phi000_{label}_r02/config.json"
+            run_id = f"bias_v2_s4_F{F:g}_I{intensity:g}_phi000_{label}_r01"
+            task = _derive_observation(parent, run_id, intensity, 0.0, "R3_S4_control")
+            task.update({"F_dc_V_per_nm": F, "I_over_mu": intensity, "CEP_rad": 0.0})
+            tasks.append(task)
+    return tasks
+
+
+def phase8_tasks(conditions: list[tuple[float, float]]) -> list[dict[str, Any]]:
+    """Four extra CEP values for each 4->8 phase-validation condition."""
+    tasks = []
+    for F, intensity in conditions:
+        parent = f"results/bias_v1/bias_p1_F{F:.3f}_I1_phi000_r02/config.json"
+        for degrees in [45, 135, 225, 315]:
+            cep = math.radians(degrees)
+            run_id = f"bias_v2_ph8_F{F:g}_I{intensity:g}_phi{degrees:03d}_r01"
+            task = _derive_observation(parent, run_id, intensity, cep, "R3_phase8")
+            task.update({"F_dc_V_per_nm": F, "I_over_mu": intensity, "CEP_rad": cep})
+            tasks.append(task)
+    return tasks
+
+
 def project_path(relative: str | Path) -> Path:
     """Resolve a path recorded relative to the QL-TIP-1D project root."""
     path = Path(relative)

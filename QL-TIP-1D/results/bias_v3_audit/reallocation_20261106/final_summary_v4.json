@@ -1,0 +1,15 @@
+{
+  "label": "INCOMPLETE",
+  "D": {
+    "value": 0.8590078149683408,
+    "lo": 0.3646850622013346,
+    "hi": 2.009585517350126,
+    "valid": false
+  },
+  "tdse": 96,
+  "readouts": 170,
+  "continuation_hours": 42.14631916250067,
+  "tail_complete": true,
+  "phase_complete": true,
+  "missing_validation": []
+}

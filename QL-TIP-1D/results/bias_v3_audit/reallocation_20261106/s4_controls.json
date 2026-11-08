@@ -1,0 +1,69 @@
+{
+  "schema": "ql-tip-1d-s4-controls-v5",
+  "J_over_mu": 8.0,
+  "per_F": {
+    "F0": {
+      "dx_relative": 0.01136686473264935,
+      "dt_relative": -0.018894725719328185
+    },
+    "F1": {
+      "dx_relative": 0.0001614061483652156,
+      "dt_relative": -0.04014220046827089
+    }
+  },
+  "complete": true,
+  "gate": {
+    "schema": "ql-tip-1d-s4-gate-v5",
+    "status": "PROCEED",
+    "data_complete": true,
+    "can_continue_library": true,
+    "J_over_mu": 8.0,
+    "input_hashes": {
+      "s4_selection_sha256": "576db2ae2eaf0675c465f1c8150947efb2d557a214322f68198e53726691c984",
+      "s4_readout_controls_sha256": "5cb514de271fc480c6274a075e34a27341b64314098a9c0368fbf4509a597eea",
+      "error_component_map_sha256": "6af2ded7d77f3226572a07e0ecac459b1cbfa39d0a1a0ee36c6b0a13dbcdffd7",
+      "classical_response_sha256": "6c44aaa85dd9e749e4f546b5c590d4a41e06da443534c2f878f93f3d19b251b5",
+      "r1_gate_sha256": "6a979abb57f7169615c0b79cd42f0bfe58f315311c129e1c6353cde725a1f6c9",
+      "r2_gate_sha256": "ee3313babeec7d80198a4812407bf99497f83c55297c127a0dc1b0c8e85c5fdd"
+    },
+    "control_magnitude": {
+      "max_abs_relative_change": 0.04014220046827089,
+      "per_F": {
+        "F0": {
+          "dx_relative": 0.01136686473264935,
+          "dt_relative": -0.018894725719328185
+        },
+        "F1": {
+          "dx_relative": 0.0001614061483652156,
+          "dt_relative": -0.04014220046827089
+        }
+      },
+      "high_local_sum_over_5pct_is_not_auto_veto": true
+    },
+    "coverage": {
+      "channel_coverage": {
+        "bsv_F0": 0.7297544981972767,
+        "bsv_F1": 0.7293176790896744,
+        "thermal_F0": 0.6991003619262002,
+        "thermal_F1": 0.6663695742910314
+      },
+      "uncovered_channels": [],
+      "coverage_gap": false,
+      "transfer_justified": true,
+      "transfer_rule": "uncovered channels are bounded by per-category 32 mu direct controls, R1 4 mu transfers and the S4 representative eta/grid readouts; never assumed zero"
+    },
+    "error_risk": {
+      "per_category_map_rebuildable": true,
+      "direct_J_readouts_complete": true,
+      "note": "the 32 mu seven-category envelope is transferred per category; it is not presented as a direct J check"
+    },
+    "remaining_cost": {
+      "continuation_hours_used": 22.994594977778455,
+      "continuation_hours_remaining": 33.005405022221545,
+      "mandatory_estimate_hours": 24.09111111111111,
+      "conditional_direct_readout_hours": 0.5,
+      "conditional_extension_note": "48/64 mu extension and its new highest-intensity controls are budgeted only if the tail audit requires them"
+    },
+    "blockers": []
+  }
+}

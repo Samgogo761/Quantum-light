@@ -1,0 +1,72 @@
+{
+  "schema": "ql-tip-1d-s4-selection-v5",
+  "rule": "maximin normalised contribution coverage across BSV/thermal x F0/F1 over adjacent intervals; second key = sum of channel shares; |q-1| is diagnostic only",
+  "J_over_mu": 8.0,
+  "candidate_scores": [
+    {
+      "I_over_mu": 8.0,
+      "combined_contribution": 1.3568898070568166e-05,
+      "channel_shares": {
+        "bsv_F0": 0.3719750788234566,
+        "bsv_F1": 0.3931301747112247,
+        "thermal_F0": 0.3488616713180764,
+        "thermal_F1": 0.3451124579127635
+      },
+      "min_channel_share": 0.3451124579127635,
+      "sum_channel_shares": 1.459079382765521,
+      "abs_q_minus_1": 0.8327384724979086,
+      "score": 0.3451124579127635
+    },
+    {
+      "I_over_mu": 12.0,
+      "combined_contribution": 1.3394343803117183e-05,
+      "channel_shares": {
+        "bsv_F0": 0.446161650124444,
+        "bsv_F1": 0.4164837868996442,
+        "thermal_F0": 0.055072865020728584,
+        "thermal_F1": 0.0477019382216454
+      },
+      "min_channel_share": 0.0477019382216454,
+      "sum_channel_shares": 0.9654202402664622,
+      "abs_q_minus_1": 0.4340380840998821,
+      "score": 0.0477019382216454
+    },
+    {
+      "I_over_mu": 20.0,
+      "combined_contribution": 8.708085675360619e-06,
+      "channel_shares": {
+        "bsv_F0": 0.29088519411201236,
+        "bsv_F1": 0.27491304628149166,
+        "thermal_F0": 0.016306276805571458,
+        "thermal_F1": 0.014065105387635694
+      },
+      "min_channel_share": 0.014065105387635694,
+      "sum_channel_shares": 0.5961696225867111,
+      "abs_q_minus_1": 0.6732102047312052,
+      "score": 0.014065105387635694
+    }
+  ],
+  "channel_coverage": {
+    "bsv_F0": 0.3719750788234566,
+    "bsv_F1": 0.3931301747112247,
+    "thermal_F0": 0.3488616713180764,
+    "thermal_F1": 0.3451124579127635
+  },
+  "uncovered_channels": [
+    "bsv_F0",
+    "bsv_F1",
+    "thermal_F0",
+    "thermal_F1"
+  ],
+  "bsv_peak_interval": [
+    12.0,
+    20.0
+  ],
+  "thermal_peak_interval": [
+    4.0,
+    6.0
+  ],
+  "coverage_gap": true,
+  "coverage_resolution": "uncovered channels are bounded by per-category 32 mu direct controls, R1 4 mu transfers and the S4 representative eta/grid readouts; never assumed zero",
+  "note": "One representative J cannot cover disjoint BSV/thermal peaks; recorded as a coverage limitation and fed into the S4 gate."
+}

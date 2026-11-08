@@ -75,8 +75,11 @@ def linear_weights(nodes: Iterable[float], state: str, Imax_over_mu: float,
     if np.any(np.diff(node_values) <= 0.0):
         raise ValueError("Nodes must be strictly increasing")
     Imax = float(Imax_over_mu)
-    if Imax <= node_values[-1]:
-        raise ValueError("Imax must exceed the last node")
+    # Imax is the truncation point of the production piecewise-linear response.
+    # It equals the last measured node: the final hat rises to 1 exactly at Imax
+    # and the omitted probability above Imax is reported by tail_bound().
+    if Imax < node_values[-1]:
+        raise ValueError("Imax must not lie below the last response node")
     pdf: Callable[[float], float] = bsv_pdf if state == "bsv" else thermal_pdf if state == "thermal" else None  # type: ignore[assignment]
     if pdf is None:
         raise ValueError(state)

@@ -116,6 +116,7 @@ def test_library_success_paths_without_tdse(tmp_path, monkeypatch) -> None:
     import run_continuation_v2 as runner
     import ql_tip_1d.continuation_v2 as common
     monkeypatch.setattr(runner, "REPORT_DIR", tmp_path)
+    monkeypatch.setattr(runner, "V4_REPORT", tmp_path)
     (tmp_path / "midpoint_plan.json").write_text('{"intervals":[]}', encoding="utf-8")
     monkeypatch.setattr(runner, "load_active", lambda stage: {"allowed_task_ids": ["mock"]})
     task = {"run_id": "mock", "F_dc_V_per_nm": 0.0, "I_over_mu": 1.0,

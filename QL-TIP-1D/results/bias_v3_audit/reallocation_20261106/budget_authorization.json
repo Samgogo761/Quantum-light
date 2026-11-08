@@ -1,0 +1,27 @@
+{
+  "schema": "ql-tip-1d-budget-limits-v4",
+  "authorization": "2026-11-06 user message: '不够额度吗？我换了一个模型，再继续完整v3？我希望能把所有的任务先完成了再提交报告'",
+  "decision": "CONTINUE_FULL_V3_ALL_TASKS_BEFORE_REPORT",
+  "global_tdse_limit": 240,
+  "global_hours_limit": 72.0,
+  "global_hours_baseline": 14.117235553083,
+  "continuation_tdse_limit": 112,
+  "continuation_hours_limit": 56.0,
+  "previous_continuation_hours_limit": 40.0,
+  "repair_tdse_limit": 12,
+  "repair_hours_limit": 8.0,
+  "stage_s3_hours_limit": 10.0,
+  "previous_stage_s3_hours_limit": 8.0,
+  "batch_max_new_runs": 8,
+  "event_hard_timeout_s": 5400,
+  "unchanged": [
+    "single active electron square well and all frozen physics parameters",
+    "common readout eta=.05 eV / dE=.0125 eV / mask 2-4 nm / three fixed thresholds",
+    "all R1/R2/final statistical error gates and the <=5% target",
+    "explicit allowed_task_ids per batch, no bare offsets",
+    "per-batch <=8 new TDSE and per-event <=90 min",
+    "material sensitivity stays DEFERRED_PRIORITY, no new physical model",
+    "no dt=.025 unless the task-book trigger is actually met"
+  ],
+  "reason": "The stop at S3 partial was caused by the internal 40 h continuation sub-cap and the 8 h S3 stage cap, not by the global 72 h ceiling and not by any AI-model quota. After the 14 completed S3 propagations the remaining 66-task mandatory path is estimated at 24.091 h; the global budget still has 39.675 h left. The continuation sub-cap is resized inside the unchanged global ceiling."
+}

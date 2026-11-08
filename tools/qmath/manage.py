@@ -30,6 +30,7 @@ GENERATED = {'Q-MATH/manifest.json', 'Q-MATH/INDEX.md'}
 CONTROL = {'AGENTS.md', 'tools/qmath/manage.py', 'Q-MATH/README.md',
            'Q-MATH/SYNC.md', 'Q-MATH/REPRODUCE.md', 'Q-MATH/.gitignore',
            'Q-MATH/.gitattributes', 'Q-MATH/VALIDATION.md',
+           'Q-MATH/version_migration.json',
            'docs/04_BSV量子光/.gitattributes',
            'QL-TIP-1D/.gitignore', 'QL-TIP-1D/.gitattributes'}
 

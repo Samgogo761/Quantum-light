@@ -32,6 +32,7 @@ from readout_continuation_v2 import run_readout
 
 REVISION = "r1_20261105_v1"
 REPORT_DIR = V2_RESULTS / "reports" / REVISION
+V4_REPORT = V2_RESULTS / "reports" / "v3_r2_20261106"
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -39,18 +40,37 @@ def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+SOURCE_PATHS = [
+    PROJECT / "scripts/run_continuation_v2.py",
+    PROJECT / "scripts/readout_continuation_v2.py",
+    PROJECT / "src/ql_tip_1d/continuation_v2.py",
+    PROJECT / "src/ql_tip_1d/core.py",
+    PROJECT / "src/ql_tip_1d/bias_v1.py",
+    PROJECT / "src/ql_tip_1d/spectrum_v1.py",
+    PROJECT / "configs/continuation_v2/protocol_v2.json",
+]
+
+
+def _disk_source_hashes() -> dict[str, str]:
+    return {str(path.relative_to(PROJECT)).replace("\\", "/"): sha256(path)
+            for path in SOURCE_PATHS}
+
+
+# External review 2026-11-07 section 4.5: a process executes the sources it
+# imported at start-up, not the bytes that happen to be on disk later.
+PROCESS_SOURCE_HASHES = _disk_source_hashes()
+
+
 def source_hashes() -> dict[str, str]:
-    """Hash the new wrapper, common plan and frozen numerical modules."""
-    paths = [
-        PROJECT / "scripts/run_continuation_v2.py",
-        PROJECT / "scripts/readout_continuation_v2.py",
-        PROJECT / "src/ql_tip_1d/continuation_v2.py",
-        PROJECT / "src/ql_tip_1d/core.py",
-        PROJECT / "src/ql_tip_1d/bias_v1.py",
-        PROJECT / "src/ql_tip_1d/spectrum_v1.py",
-        PROJECT / "configs/continuation_v2/protocol_v2.json",
-    ]
-    return {str(path.relative_to(PROJECT)).replace("\\", "/"): sha256(path) for path in paths}
+    """Return the LOADED process revision plus any observed disk drift."""
+    disk = _disk_source_hashes()
+    loaded = dict(PROCESS_SOURCE_HASHES)
+    drift = {name: {"loaded": loaded.get(name), "disk": digest}
+             for name, digest in disk.items() if loaded.get(name) != digest}
+    if drift:
+        loaded["_disk_drift"] = json.dumps(drift, sort_keys=True)
+    loaded["_process_start_revision"] = "loaded_sources_snapshot"
+    return loaded
 
 
 LEDGER_FIELDS = ["event_id", "parent_event", "kind", "phase", "run_id", "host", "started_utc",
@@ -99,22 +119,69 @@ def budget_snapshot() -> dict[str, Any]:
     }
 
 
+# Explicit S3 scout task ids; the ledger phase column alone is R3/R2-R3 and
+# cannot be used to isolate S3 (external review 2026-11-07 section 4.2).
+S3_TASK_IDS = set()
+for _intensity in [8.0, 12.0, 20.0]:
+    for _F in ["0", "1"]:
+        for _deg in [0, 90, 180, 270]:
+            S3_TASK_IDS.add(
+                f"bias_v2_probe_F{_F}_I{_intensity:g}_phi000_r01"
+                if (_intensity == 8.0 and _deg == 0)
+                else f"bias_v2_lib_F{_F}_I{_intensity:g}_phi{_deg:03d}_r01")
+
+
+def s3_hours_used() -> float:
+    """Explicit task-id sum of S3 propagations, readouts and failed events."""
+    return sum(float(row["counted_seconds"] or 0.0) for row in read_ledger()
+               if row["run_id"] in S3_TASK_IDS) / 3600.0
+
+
+ACTIVE_EVIDENCE = PROJECT / "results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
+V4_AUDIT = PROJECT / "results/bias_v3_audit/reallocation_20261106"
+
+
+def budget_limits() -> dict[str, Any]:
+    """Read the audited budget caps; the global ceiling is never relaxed."""
+    active = read_json(ACTIVE_EVIDENCE) if ACTIVE_EVIDENCE.exists() else {}
+    limits = dict(active.get("budget", {}))
+    defaults = {
+        "global_tdse_limit": 240, "global_hours_limit": 72.0,
+        "global_hours_baseline": 14.117235553083, "continuation_tdse_limit": 112,
+        "continuation_hours_limit": 40.0, "repair_tdse_limit": 12,
+        "repair_hours_limit": 8.0,
+    }
+    for key, value in defaults.items():
+        limits.setdefault(key, value)
+    # Hard ceiling: a reallocation may never lift the overall 72 h / 240 TDSE cap.
+    limits["global_tdse_limit"] = min(float(limits["global_tdse_limit"]), 240.0)
+    limits["global_hours_limit"] = min(float(limits["global_hours_limit"]), 72.0)
+    limits["continuation_tdse_limit"] = min(float(limits["continuation_tdse_limit"]), 112.0)
+    return limits
+
+
 def check_budget(add_tdse: int = 0, add_seconds: float = 0.0, phase: str = "R1") -> dict[str, Any]:
     """Refuse a task when either continuation or repair hard limits would be exceeded."""
     snap = budget_snapshot()
-    if 48 + snap["new_tdse_attempts"] + add_tdse > 240:
-        raise RuntimeError("Global TDSE limit 240 would be exceeded")
-    if 14.117235553083 + snap["new_science_hours"] + add_seconds / 3600.0 > 72.0:
+    lim = budget_limits()
+    if 48 + snap["new_tdse_attempts"] + add_tdse > lim["global_tdse_limit"]:
+        raise RuntimeError("Global TDSE limit would be exceeded")
+    if (lim["global_hours_baseline"] + snap["new_science_hours"] + add_seconds / 3600.0
+            > lim["global_hours_limit"]):
         raise RuntimeError("Global science limit 72 h would be exceeded")
-    if snap["new_tdse_attempts"] + add_tdse > 112:
-        raise RuntimeError("Continuation TDSE limit 112 would be exceeded")
-    if snap["new_science_hours"] + add_seconds / 3600.0 > 40.0:
-        raise RuntimeError("Continuation science limit 40 h would be exceeded")
+    if snap["new_tdse_attempts"] + add_tdse > lim["continuation_tdse_limit"]:
+        raise RuntimeError("Continuation TDSE limit would be exceeded")
+    if snap["new_science_hours"] + add_seconds / 3600.0 > lim["continuation_hours_limit"]:
+        raise RuntimeError("Continuation science limit would be exceeded")
     if phase == "R1":
-        if snap["repair_tdse_attempts"] + add_tdse > 12:
-            raise RuntimeError("Repair TDSE limit 12 would be exceeded")
-        if snap["repair_science_hours"] + add_seconds / 3600.0 > 8.0:
-            raise RuntimeError("Repair science limit 8 h would be exceeded")
+        if snap["repair_tdse_attempts"] + add_tdse > lim["repair_tdse_limit"]:
+            raise RuntimeError("Repair TDSE limit would be exceeded")
+        if snap["repair_science_hours"] + add_seconds / 3600.0 > lim["repair_hours_limit"]:
+            raise RuntimeError("Repair science limit would be exceeded")
+    if phase == "S3":
+        stage_limit = float(lim.get("stage_s3_hours_limit", 10.0))
+        if s3_hours_used() + add_seconds / 3600.0 > stage_limit:
+            raise RuntimeError("S3 stage hours limit would be exceeded")
     return snap
 
 
@@ -506,16 +573,22 @@ def execute_legacy_observation(config: dict[str, Any], run_id: str, result_dir: 
     original = legacy.spectrum_for_state
 
     def diagnostic_placeholder(*args: Any, **kwargs: Any) -> dict[str, Any]:
+        # External review 2026-11-07 section 4.6: a skipped legacy diagnostic
+        # must NEVER fabricate Y_H=0.  Every yield is explicitly not_computed;
+        # only the common eta=.05 readout is authoritative for statistics.
         label = args[1]
         eta = float(args[8])
         step = float(args[9])
         mask = args[10]
         return {"label": label, "eta_eV": eta, "energy_step_eV": step,
                 "mask_bounds_nm": list(mask), "energy_range_eV": [0.0, 0.0],
-                "energy_points": 0, "masked_norm": 0.0, "spectrum_integral": 0.0,
-                "spectrum_norm_absolute_difference": 0.0, "Y_H_lower": 0.0,
-                "Y_H_main": 0.0, "Y_H_upper": 0.0,
-                "note": "legacy eta=.1 diagnostic skipped; continuation readout is authoritative"}
+                "energy_points": 0, "masked_norm": "not_computed",
+                "spectrum_integral": "not_computed",
+                "spectrum_norm_absolute_difference": "not_computed",
+                "Y_H_lower": "not_computed", "Y_H_main": "not_computed",
+                "Y_H_upper": "not_computed", "execution_status": "NOT_COMPUTED",
+                "note": ("legacy eta=.1 diagnostic skipped; all yields are not_computed "
+                         "and must not be consumed; continuation common readout is authoritative")}
 
     try:
         legacy.spectrum_for_state = diagnostic_placeholder
@@ -540,17 +613,25 @@ def load_active(stage: str) -> dict[str, Any]:
 
 
 def stage_library(dry_run: bool, max_new_runs: int, offset: int, midpoint: bool = False,
-                  scout: bool = False) -> int:
+                  scout: bool = False, custom_tasks: list[dict[str, Any]] | None = None,
+                  stage: str | None = None) -> int:
     """Run the remaining two-bias production phases in explicit batches."""
     from ql_tip_1d.continuation_v2 import library_tasks, midpoint_tasks
-    active = load_active("SCOUT_BATCHES" if scout else "INITIAL_LIBRARY")
-    if midpoint:
-        plan = read_json(REPORT_DIR / "midpoint_plan.json")
+    active = load_active(stage or ("SCOUT_BATCHES" if scout else "INITIAL_LIBRARY"))
+    if custom_tasks is not None:
+        allowed = set(active.get("allowed_task_ids", []))
+        if not allowed:
+            raise RuntimeError("Explicit stage requires allowed_task_ids")
+        tasks = [task for task in custom_tasks if task["run_id"] in allowed]
+    elif midpoint:
+        plan = read_json(V4_REPORT / "midpoint_plan.json")
         tasks = [task for task in midpoint_tasks(plan)]
     else:
         tasks = [task for task in library_tasks() if not task.get("existing")]
-        if scout:
-            allowed = set(active.get("allowed_task_ids", []))
+        allowed = set(active.get("allowed_task_ids", []))
+        if scout or allowed:
+            if not allowed:
+                raise RuntimeError("SCOUT stage requires explicit allowed_task_ids")
             tasks = [task for task in tasks if task["run_id"] in allowed]
     selected = tasks[offset:offset + max_new_runs]
     print(f"library new={len(tasks)} selected={len(selected)}")
@@ -569,7 +650,12 @@ def stage_library(dry_run: bool, max_new_runs: int, offset: int, midpoint: bool 
                 print(f"REUSE {run_id}")
                 continue
             raise RuntimeError(f"Incomplete v2 library run refuses overwrite: {run_id}")
-        check_budget(add_tdse=1, add_seconds=5400.0, phase="R3")
+        budget_phase = "S3" if active.get("allowed_stage") == "SCOUT_BATCHES" else "R3"
+        # 5400 s is the hard timeout; it is not the expected event cost.  For
+        # the S3 stage reserve 1800 s (measured 20 mu propagations: 889-1584 s)
+        # so a resumed in-flight batch is not falsely rejected by the 10 h cap.
+        reserve_seconds = 1800.0 if budget_phase == "S3" else 5400.0
+        check_budget(add_tdse=1, add_seconds=reserve_seconds, phase=budget_phase)
         config_path = V2_CONFIGS / f"{run_id}.json"
         write_json_new(config_path, task["config"])
         result_dir.mkdir(parents=True, exist_ok=False)
@@ -630,7 +716,8 @@ def main() -> int:
     parser.add_argument("--stage", required=True,
                         choices=["inventory", "repair-readouts", "repair-tdse", "repair-gate",
                                  "high-intensity-check", "high-intensity-readouts", "library",
-                                 "scout", "library-midpoints", "library-readouts", "statistics"])
+                                 "scout", "library-midpoints", "library-readouts", "statistics",
+                                 "s4-controls", "midpoints", "phase8", "tail-extension"])
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--max-new-runs", type=int, default=8)
@@ -654,6 +741,33 @@ def main() -> int:
         return stage_library(args.dry_run, args.max_new_runs, args.offset, scout=True)
     if args.stage == "library-midpoints":
         return stage_library(args.dry_run, args.max_new_runs, args.offset, midpoint=True)
+    if args.stage == "s4-controls":
+        from ql_tip_1d.continuation_v2 import s4_control_tasks
+        selection = read_json(V4_AUDIT / "s4_selection.json")
+        if not selection.get("J_over_mu"):
+            raise RuntimeError("s4_selection.json must name the representative intensity")
+        return stage_library(args.dry_run, args.max_new_runs, args.offset,
+                             custom_tasks=s4_control_tasks(float(selection["J_over_mu"])),
+                             stage="INITIAL_LIBRARY")
+    if args.stage == "midpoints":
+        from ql_tip_1d.continuation_v2 import midpoint_tasks
+        plan = read_json(V4_REPORT / "midpoint_plan.json")
+        return stage_library(args.dry_run, args.max_new_runs, args.offset,
+                             custom_tasks=midpoint_tasks(plan), stage="FINAL_STATISTICS")
+    if args.stage == "phase8":
+        from ql_tip_1d.continuation_v2 import phase8_tasks
+        selection = read_json(V4_AUDIT / "phase8_selection.json")
+        conditions = [(float(F), float(I)) for F, I in selection.get("conditions", [])]
+        if not conditions:
+            raise RuntimeError("phase8_selection.json must name the validation conditions")
+        return stage_library(args.dry_run, args.max_new_runs, args.offset,
+                             custom_tasks=phase8_tasks(conditions), stage="FINAL_STATISTICS")
+    if args.stage == "tail-extension":
+        plan = read_json(V4_AUDIT / "tail_extension_tasks.json")
+        if not plan.get("tasks"):
+            raise RuntimeError("tail_extension_tasks.json must contain an explicit task list")
+        return stage_library(args.dry_run, args.max_new_runs, args.offset,
+                             custom_tasks=plan["tasks"], stage="TAIL_EXTENSION")
     if args.stage == "statistics":
         import analyze_statistics_v2 as statistics
         return statistics.final_statistics()

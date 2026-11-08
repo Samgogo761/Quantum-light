@@ -1,0 +1,17 @@
+{
+  "schema": "ql-tip-1d-budget-reallocation-v4",
+  "created_utc": "2026-11-06T16:09:57.465446+00:00",
+  "git_head": "a5e35138d5e901177719a8e7d32dd7377657ff7d",
+  "ledger_sha256": "6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d",
+  "cost_table_sha256": "7716e4c849601fed2a6af355f07a77c2811cd2e480f5c16db6c0df5e49df2f0d",
+  "ledger_events": 134,
+  "ledger_new_tdse": 30,
+  "continuation_hours_used": 18.20749219722291,
+  "global_hours_used": 32.32472775030591,
+  "remaining_tasks": 66,
+  "remaining_estimate_hours": 24.09111111111111,
+  "projected_continuation_hours": 42.29860330833402,
+  "projected_global_hours": 56.41583886141702,
+  "projected_continuation_tdse": 96,
+  "projected_global_tdse": 144
+}
