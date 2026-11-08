@@ -12387,6 +12387,30 @@
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
       ]
+    },
+    "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md": {
+      "sha256": "3f628e0f10c64d56ca901043bc807e170255072564ced12c32f96f1d615b2ee8",
+      "bytes": 11429,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_evidence.json": {
+      "sha256": "81b638048aa27b1f8a8ea092a3b5ad116f48a8873a13013069d1a933309afa07",
+      "bytes": 8976,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_files.json": {
+      "sha256": "f98a20ca7bf725fab3c45e0f6ba138a9f9a894c358d0f26d9515445892009734",
+      "bytes": 880,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_files.json"
+      ]
     }
   }
 }

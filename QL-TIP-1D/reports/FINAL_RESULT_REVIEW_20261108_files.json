@@ -1,0 +1,26 @@
+{
+  "schema": "ql-tip-review-inventory-v1",
+  "date": "2026-11-08",
+  "inherited_execution_commit": "2c3a610f0da0b7adbfc0eeb5cfacd7913e4724ac",
+  "scope": "read-only review documents; no new scientific execution",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md",
+      "bytes": 11429,
+      "sha256": "3f628e0f10c64d56ca901043bc807e170255072564ced12c32f96f1d615b2ee8"
+    },
+    {
+      "path": "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_evidence.json",
+      "bytes": 8976,
+      "sha256": "81b638048aa27b1f8a8ea092a3b5ad116f48a8873a13013069d1a933309afa07"
+    }
+  ],
+  "excludes": "this inventory itself; active Q-MATH README is tracked separately",
+  "validation": {
+    "source_hashes_checked": 14,
+    "arithmetic_and_status_consistency": "PASS",
+    "new_TDSE": 0,
+    "new_spectral_readouts": 0,
+    "project_tests_rerun": 0
+  }
+}
