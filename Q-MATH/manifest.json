@@ -12760,14 +12760,6 @@
         "migrated-from:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
       ]
     },
-    "QL-TIP-1D/scripts/estimate_acceptance_path.py": {
-      "sha256": "7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252",
-      "bytes": 6016,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/estimate_acceptance_path.py"
-      ]
-    },
     "QL-TIP-1D/scripts/build_node_error_table.py": {
       "sha256": "4cdb5569e76865936367257675542f2d8fe0c961e1efaf4edc3022c2ee8e7d75",
       "bytes": 18733,
@@ -12800,22 +12792,6 @@
         "registered:QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md"
       ]
     },
-    "QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md": {
-      "sha256": "82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555",
-      "bytes": 7435,
-      "kind": "reports",
-      "origins": [
-        "registered:QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json": {
-      "sha256": "d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686",
-      "bytes": 2996,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json"
-      ]
-    },
     "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md": {
       "sha256": "141ad70b71c2da9cc892cb4db69e79a8349056a3f21efbe4b02c2961e2889e36",
       "bytes": 4431,
@@ -12846,6 +12822,65 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_files.json"
+      ]
+    },
+    "Q-MATH/history/by_sha256/7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252.py": {
+      "sha256": "7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252",
+      "bytes": 6016,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/estimate_acceptance_path.py",
+        "migrated-from:QL-TIP-1D/scripts/estimate_acceptance_path.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555.md": {
+      "sha256": "82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555",
+      "bytes": 7435,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md",
+        "migrated-from:QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md"
+      ]
+    },
+    "Q-MATH/history/by_sha256/d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686.json": {
+      "sha256": "d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686",
+      "bytes": 2996,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json",
+        "migrated-from:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json"
+      ]
+    },
+    "QL-TIP-1D/scripts/estimate_acceptance_path.py": {
+      "sha256": "118a0910603b611b3e41660ac1c87b0f85a6bdd6f787317130529b5a9f8637c3",
+      "bytes": 7391,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/estimate_acceptance_path.py"
+      ]
+    },
+    "QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md": {
+      "sha256": "9dd365b4832b154179ae4a9eff48cf94cb6136128872a72d85eb73eb6428c8d5",
+      "bytes": 5013,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/reports/HANDOVER_20261108.md": {
+      "sha256": "0e58bf6ac1b031c0c1e0b6bff59182711fe03568ecc6a41f7afa2e21a04ec821",
+      "bytes": 3699,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/HANDOVER_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json": {
+      "sha256": "7731bfa525da09e38d1f4687413533b2c64044d07029784a876d23a7f7ec96d2",
+      "bytes": 4286,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json"
       ]
     }
   }
