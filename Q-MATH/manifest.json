@@ -12729,6 +12729,30 @@
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
       ]
+    },
+    "QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108.md": {
+      "sha256": "37e9d20fe66237ae9a45518ba2b860099de6b90d1ae49e44e8645ba1cbf05e0f",
+      "bytes": 7526,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_evidence.json": {
+      "sha256": "df1a9aa7e438ee60eb49f2e6e8e4c68efa3900d3bec8bab3c96330edccb6ef9d",
+      "bytes": 4823,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_files.json": {
+      "sha256": "75705b54293ba7754fa0940514ec818b7498b275925a8d2df9da8cea1e4e56bf",
+      "bytes": 610,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_files.json"
+      ]
     }
   }
 }

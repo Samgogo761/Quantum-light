@@ -1,0 +1,17 @@
+{
+  "schema": "review-deliverable-file-list-v1",
+  "generated_by": "Python pathlib/hashlib over explicit deliverables",
+  "note": "inventory excludes itself and mutable Q-MATH index",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108.md",
+      "bytes": 7526,
+      "sha256": "37e9d20fe66237ae9a45518ba2b860099de6b90d1ae49e44e8645ba1cbf05e0f"
+    },
+    {
+      "path": "QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_evidence.json",
+      "bytes": 4823,
+      "sha256": "df1a9aa7e438ee60eb49f2e6e8e4c68efa3900d3bec8bab3c96330edccb6ef9d"
+    }
+  ]
+}

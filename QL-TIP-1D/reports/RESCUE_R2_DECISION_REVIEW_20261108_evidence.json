@@ -1,0 +1,123 @@
+{
+  "schema": "ql-tip-rescue-r2-decision-review-v1",
+  "observed_at_Asia_Shanghai": "2026-11-08T16:40:03.752935+08:00",
+  "inherited_commit": "de6dcfc2c1d71feea7346b5df36ecb27f582a4c1",
+  "scope": "saved scalar arithmetic and read-only source review; no solver, spectrum, quadrature, scientific tests or execution-code modifications",
+  "source_hashes": [
+    {
+      "path": "QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md",
+      "bytes": 6200,
+      "sha256": "d21225094416b30a8ec35086d14e9481d1f086207c436f23b2e41a555d11742a"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md",
+      "bytes": 4197,
+      "sha256": "10dc578c24a4890f0e9bafcbfe9816ca2752ecbb564483dfeefa2f8c5fe2c34b"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv",
+      "bytes": 61748,
+      "sha256": "b688b4b880f66d138774c0c557081abde152395d8a090224f9269769b5b4a29b"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json",
+      "bytes": 3342,
+      "sha256": "2c567ee7e1159a92093534c8626393f994b16c00dc637e15ed59145b8fd77c8c"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_headroom.json",
+      "bytes": 12964,
+      "sha256": "4dd7bc72ed17a70a9eda0ef57a136bda74db958ff28798d623e6a6ed0c71298e"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv",
+      "bytes": 24072,
+      "sha256": "0df0cf844d96503a0882838cb6008fe8dbb5bb2606ddc96629fff8bd4ecd4a40"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/build_node_error_table.py",
+      "bytes": 18471,
+      "sha256": "4743c25b2833353bfaba509a8132083faa465c81a76553e2143aebe025720b4a"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "bytes": 44197,
+      "sha256": "37cd9537d9e7aa4b55666b4b2b6f9d59b69186375945f5e4bef9f52142644705"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "bytes": 88402,
+      "sha256": "4b617f6818b9c36f1b956b931068a047b8c8ff1fd24e504d615131b8a0b01fa0"
+    }
+  ],
+  "node_rows": 264,
+  "ledger_events": 273,
+  "ledger_kinds": {
+    "readout": 176,
+    "tdse": 96,
+    "tdse_attempt": 1
+  },
+  "F1_I4_CEP_direct_row": {
+    "F": "1",
+    "I_over_mu": "4.0",
+    "component": "cep",
+    "value": "2.9918675811160841e-11",
+    "evidence_type": "direct_4to8",
+    "source": "R1_pair_audit_v5.csv:F1_I4:cep:4to8",
+    "transfer_scope": "F1 4 mu node",
+    "reason": "direct 4->8 pair already saved under the same protocol",
+    "weight_bsv": "0.062328548062545182",
+    "weighted_bsv": "3.5274428514358948e-17",
+    "weight_thermal": "0.050591378817905347",
+    "weighted_thermal": "2.8631855402186984e-17"
+  },
+  "fixed_weight_diagnostic": [
+    {
+      "channel": "bsv_F0",
+      "response_relative": 0.11528452018183186,
+      "remaining_if_20mu_cep_zero": 0.10293384724240309,
+      "reduction_percentage_points": 1.235067293942875
+    },
+    {
+      "channel": "bsv_F1",
+      "response_relative": 0.11238228558981202,
+      "remaining_if_20mu_cep_zero": 0.10001286134504475,
+      "reduction_percentage_points": 1.2369424244767264
+    },
+    {
+      "channel": "thermal_F0",
+      "response_relative": 0.11153104804104946,
+      "remaining_if_20mu_cep_zero": 0.1110312656605098,
+      "reduction_percentage_points": 0.049978238053966145
+    },
+    {
+      "channel": "thermal_F1",
+      "response_relative": 0.08864721516052022,
+      "remaining_if_20mu_cep_zero": 0.0881783395426093,
+      "reduction_percentage_points": 0.04688756179109373
+    }
+  ],
+  "diagnostic_limit": "Y, weights and all other components fixed; no other-node transfer; not a prediction of a new eight-phase mean or a rigorous upper bound",
+  "attempt_budget": {
+    "limit": 112,
+    "current": 97,
+    "remaining_now": 15,
+    "A1_adds": 8,
+    "after_A1": 105,
+    "remaining_after_A1": 7,
+    "one_shared_four_phase_node_cost": 8,
+    "after_A1_plus_one_node": 113
+  },
+  "hours_from_report": {
+    "continuation_confirmed": 42.364278,
+    "continuation_including_temporary_reserve": 42.864278,
+    "global_excluding_new_temporary_reserve": 56.481514,
+    "global_including_new_temporary_reserve": 56.981514,
+    "A1_estimate": 3.8,
+    "global_nominal_remaining": 15.018486000000003,
+    "interruption_actual_duration": "unknown; 0.5 h is not measured upper bound"
+  },
+  "result": "INCOMPLETE; D.valid=false; no conclusion for presence or absence of statistics-dependent bias response",
+  "archive_before_review": "PASS: 1470 original hashes and all package links",
+  "project_test_scope": "45 passing tests reported by execution agent, not rerun in this review"
+}
