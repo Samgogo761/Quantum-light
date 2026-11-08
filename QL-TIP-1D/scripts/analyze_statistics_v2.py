@@ -29,6 +29,7 @@ REPORT_DIR = V2_RESULTS / "reports" / "v3_r2_20261106"
 ACTIVE_EVIDENCE = PROJECT / "results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
 AUDIT_DIR = PROJECT / "results/bias_v3_audit/reallocation_20261106"
 ERROR_MAP = AUDIT_DIR / "error_component_map.csv"
+NODE_ERROR_TABLE = AUDIT_DIR / "node_error_table.csv"
 PHASE_VALIDATION = AUDIT_DIR / "phase_validation.json"
 TAIL_AUDIT = AUDIT_DIR / "tail_audit.json"
 ERROR_CATEGORIES = ["dx", "dt", "eta", "energy_grid", "energy_range", "box", "cap",
@@ -69,6 +70,10 @@ def load_active() -> dict[str, Any]:
     if active.get("error_component_map_sha256"):
         if not ERROR_MAP.exists() or sha256(ERROR_MAP) != active["error_component_map_sha256"]:
             raise RuntimeError("Active evidence hash mismatch: error_component_map")
+    if active.get("node_error_table_sha256"):
+        if (not NODE_ERROR_TABLE.exists()
+                or sha256(NODE_ERROR_TABLE) != active["node_error_table_sha256"]):
+            raise RuntimeError("Active evidence hash mismatch: node_error_table")
     return active
 
 
@@ -131,9 +136,31 @@ def error_map_rows(F: float, region: str) -> list[dict[str, str]]:
 
 
 def response_error_envelope(F: float, intensity: float) -> tuple[float, str]:
-    """Sum each numerical error category once, with an explicit region and source."""
+    """Sum each numerical error category once, at the NODE level when available.
+
+    External review 2026-11-08 section 3: a direct control is used at the node
+    where it was actually measured (e.g. S4 eta/grid/dx/dt at J=8 mu, direct
+    4->8 phase at F1/8 mu and F1/32 mu).  Historical 4 mu values and the
+    empirical 2->4 envelope are transferred only to nodes without direct
+    evidence.  No value is deleted to make a gate pass; the coarser region map
+    stays as a fallback and cross-check.
+    """
     if intensity == 0.0:
         return 0.0, "zero_light_endpoint"
+    if NODE_ERROR_TABLE.exists():
+        with NODE_ERROR_TABLE.open(encoding="utf-8", newline="") as handle:
+            rows = [row for row in csv.DictReader(handle)
+                    if row["F"] == f"{F:g}"
+                    and abs(float(row["I_over_mu"]) - intensity) < 1e-12]
+        if rows:
+            components = [row["component"] for row in rows]
+            missing = [name for name in ERROR_CATEGORIES if name not in components]
+            if missing or len(components) != len(ERROR_CATEGORIES):
+                raise RuntimeError(
+                    f"Incomplete/duplicate node table for F{F:g}/I={intensity:g}: {missing}")
+            total = float(sum(abs(float(row["value"])) for row in rows))
+            kinds = "+".join(sorted({row["evidence_type"] for row in rows}))
+            return total, f"node_table_per_category_once[{kinds}]"
     region = "low" if intensity <= 2.0 else "high" if intensity >= 32.0 else "mid"
     rows = error_map_rows(F, region)
     total = float(sum(abs(float(row["relative_estimate"])) for row in rows))

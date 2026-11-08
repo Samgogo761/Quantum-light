@@ -78,14 +78,16 @@
   "source_freeze": {
     "scripts/run_continuation_v2.py": "c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3",
     "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
-    "scripts/analyze_statistics_v2.py": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
+    "scripts/analyze_statistics_v2.py": "1095de283582f16d7b4fda6f9074b1fa7b0147fa9a5402add056e0ac38380e34",
     "scripts/build_error_component_map_v4.py": "04be6381c62e7dfe848c1b8f083970840ebc2d87deadc3efa71e05a09b2e3130",
     "scripts/rebuild_r1_pairs_v5.py": "6097cd5a42b4fb6e7c102272ae2747f19c7aaacd3a41cf342fe84446b8fd626f",
-    "scripts/v3_stage_v4.py": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
+    "scripts/v3_stage_v4.py": "addd8f1bac96be40dce9a8f117ca69e7e105291c776a5319dae13a95f3c1abc6",
     "scripts/run_v3_full_v4.py": "44652988f4b336a7ef5618825d77ca3ce5f00cccac67992cd41b824cb20dffa8",
     "scripts/build_budget_reallocation_v4.py": "06377f203b62b728621016e19865d89299a8614f98aa41a73c0a99a2c1f21291",
     "scripts/build_tail_extension_v5.py": "0e5033f6a76a2d5015dac39e6bacab949205c46ec308401ff25773067cf62b3e",
-    "scripts/apply_r1_v5.py": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
+    "scripts/apply_r1_v5.py": "92dc0239701e6aa9fdd85ac036a18804523e3772409e7d84177bae39dbafefaa",
+    "scripts/backfill_ledger_v5.py": "43305e5d2dc1620eae58241a97cc5a98394d5f8c4c79238a4a998f53ddaa2c87",
+    "scripts/build_node_error_table.py": "c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda",
     "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
     "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
     "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
@@ -124,5 +126,8 @@
   "s5_batch": 4,
   "midpoint_batch": 2,
   "phase8_batch": 1,
-  "rerun_reason": "fix representative-set binding check after full v3 completion"
+  "rerun_reason": "2026-11-08 review: node-level evidence table",
+  "node_error_table": "results/bias_v3_audit/reallocation_20261106/node_error_table.csv",
+  "node_error_table_sha256": "0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3",
+  "node_error_table_note": "direct evidence used only at the node where it was measured; historical 4 mu values and the 2->4 envelope transferred to nodes without direct evidence; no value deleted to pass a gate"
 }

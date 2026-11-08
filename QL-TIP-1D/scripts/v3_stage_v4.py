@@ -648,64 +648,82 @@ def step_decision() -> int:
     d = final.get("D", {})
     label = final.get("scientific_label", "INCOMPLETE")
     s4_gate = jload(AUDIT / "s4_gate.json")
+    node_summary = jload(AUDIT / "node_error_summary.json")
     extension = tail.get("extension", {})
     phase_uncovered = phase.get("coverage", {}).get("uncovered_nodes", [])
     executed_ok = tdse > 0 and readouts > 0
     data_ok = bool(final.get("nodes")) and tail.get("complete") and phase.get("complete")
     acceptance_ok = final.get("status") == "PASS"
-    text = f"""# QL-TIP-1D 两偏压统计研究：最终判定（v3-r2）
+    attempts = sum(1 for row in ledger if row["kind"] == "tdse_attempt")
+    reserve = sum(float(row["counted_seconds"] or 0.0) for row in ledger
+                  if row["kind"] == "tdse_attempt") / 3600.0
+    response_lines = [
+        f"  - {key}: 响应项 {value['response_relative'] * 100:.2f}%，"
+        f"CEP 归零后 {value['relative_if_cep_zero'] * 100:.2f}%"
+        for key, value in node_summary.get("per_channel", {}).items()
+    ]
+    response_block = "\n".join(response_lines) if response_lines else "  - 节点表缺失"
+    text = f"""# QL-TIP-1D 两偏压统计研究：判定修订（v3-r2 / r2）
 
-日期：2026-11-06。本报告在所有 S3–S6 任务完成后生成。
+日期：2026-11-08。本文件是 `decision.md` 的修订版，依据 2026-11-08 外审
+`reports/FINAL_RESULT_REVIEW_20261108.md` 更正两处模板措辞；历史 `decision.md` 保留不覆盖。
 
 ## 判定
 
-`{label}`。程序状态 `{final.get('status')}`。
+`{label}`。程序状态 `{final.get('status')}`；`gate_ok = {final.get('gate_ok')}`。
 
 - 三者严格区分：任务已执行 = {executed_ok}；数据齐全 = {data_ok}；数值验收通过 = {acceptance_ok}。
+- BSV 主量 `D = Q_BSV / Q_C` = {d.get('value')}，保守审计区间 [{d.get('lo')}, {d.get('hi')}]。
+- 该区间含 1，但**只有数值门全部通过时**才可标为 `VALID_UNRESOLVED`。本轮 `D.valid = {d.get('valid')}`，
+  因误差门未通过，不作该判定；区间仅作中间量审计，不是置信区间。
+- 本轮数值验收未通过，**不构成关于统计依赖是否存在的结论**，也不能反向宣称物理效应不存在；
+  这里只报告可复核的中间量、误差结构与缺口。
 - S4 验收关口 = `{s4_gate.get('status', 'NOT_RUN')}`；尾部条件扩尾 = `{extension.get('status', 'NOT_RUN')}`；
-  未直接测 4→8 相位的节点 = {len(phase_uncovered)} 个（由单一 CEP 类别包络覆盖，不记为 0）。
-- BSV 主量 `D = Q_BSV / Q_C` = {d.get('value')}，经验审计区间 [{d.get('lo')}, {d.get('hi')}]。
-- 区间是保守审计区间，不是严格置信区间；区间含 1 属正常完成结果（`VALID_UNRESOLVED`）。
-- 本结论只支持此单活性电子一维模型内的统计依赖，不支持量子优势、纠缠或多电子计数断言。
+  未直接测 4→8 相位的节点 = {len(phase_uncovered)} 个（按节点用经验包络，不记为 0）。
 
 ## 实际执行
 
-- 新增 TDSE：{tdse} 条；独立共同读出：{readouts} 项；续接累计机时：{hours:.4f} h。
-- S3 完成 8/12/20μ 两偏压四相位；S4 完成代表节点 dx/dt 直接控制及 J 点 η/能区/能量网格直接读出，
-  并通过显式验收关口；S5 补齐 32μ 与弱光初始库。
-- S6 顺序为：初步统计 → 先用当前响应库审核 32μ 尾部并评估条件扩尾 → 再决定中点与相位位置 →
-  两个真实插值中点 → 代表性 4→8 相位 → 误差地图刷新 → 用当前库重新审核尾部 → 最终统计。
-- 尾部审核范围 = `{tail.get('scope', 'NOT_RUN')}`，`complete={tail.get('complete')}`；
-  扩尾计划状态 = `{extension.get('status', 'NOT_RUN')}`，若需扩尾则只到最小充分节点。
-- 逐类别误差映射见 `error_component_map.csv`；32μ 七类直接控制各计一次，R1 只补未直接测类别，
-  不再叠加 R1 完整总误差。
-- 尾部审核 `complete={tail.get('complete')}`；相位验证 `complete={phase.get('complete')}`。
+- 新增 TDSE：{tdse} 条（另有 {attempts} 次蓝屏中断 attempt 单列）；独立共同读出：{readouts} 项；
+  续接累计 {hours:.6f} h（含中断保守预留 {reserve:.3f} h，**不是实测上界**）。
+- 6 项 S4 保存态对照读出已补账（784.653430 s = 0.217959 h），未重跑。
+- S3 完成 8/12/20μ 两偏压四相位；S4 完成代表节点 dx/dt 直接控制及 J 点 η/能区/能量网格直接读出；
+  S5 补齐 32μ 与弱光初始库；S6 完成尾部预审、两个中点、代表性 4→8 相位、误差刷新与最终统计。
+- 逐节点误差表 `node_error_table.csv`：直接控制只在其实测节点生效，历史 4μ 值与 2→4 包络只转用到
+  无直接证据的节点；未删除任何误差项以通过门限。
+- 响应项（中点项之外）与 CEP 归零后的响应项：
+{response_block}
 - 缺失的最终验证项：{final.get('missing_validation', [])}。
 
 ## 预算与授权
 
-- 用户 2026-11-06 明确要求完成全部任务后再提交报告；据此把续接机时子上限由 40 h 调整为 56 h，
-  S3 阶段上限由 8 h 调整为 10 h。全局 240 条 / 72 h 上限未改变。
-- 执行前预计剩余 {budget.get('remaining_tasks')} 条任务、{budget.get('remaining_estimate_hours', 0):.3f} h；
-  完成后全局机时预计约 {hours + 14.117235553083:.3f} h，仍在 72 h 内。
+- 用户 2026-11-06 要求完成全部任务后再提交报告；续接子上限 40→56 h、S3 阶段上限 8→10 h，
+  全局 240 条 / 72 h 未变。
+- 已确认续接机时 42.364278 h（不含中断预留），含预留 42.864278 h；全局约 56.48 h（含旧 1 h 后处理预留）。
 - 每批 ≤8 条、单事件 ≤90 min、显式任务 ID、共同读出协议与全部误差门均未放宽。
+- 32 条二级中点方案会使续接成功 TDSE 达 128 条（限 112）、每 F 非零节点达 15（限 12），
+  成本约 12.24 h 且不含相位与其他数值修正；未获新 revision 授权前不启动。
 
 ## 未成立与限制
 
-- 材料敏感性 −5.6 eV 仍为 `DEFERRED_PRIORITY`；未新增 DFT、多电子、温度、三维或真实钨第一性原理计算。
-- 不把单电子概率当针尖绝对计数，不把高能窗口等同再散射认证。
-- 两个 DC 端点只支持端点比较，不支持连续偏压扫描结论。
-- 细节数据见同目录 CSV/JSON：`R3_statistics.json`、`classical_response.csv`、
-  `statistical_yields.csv`、`integration_audit.csv`、`intensity_contributions.csv`。
+- 误差结构：节点项 25.8–45.7%（门限 1%）、响应项 11.0–11.7%（门限 5%）；即使中点项归零仍不达标。
+- 材料敏感性 −5.6 eV 仍为 `DEFERRED_PRIORITY`；未新增 DFT、多电子、温度、三维或完整 QED。
+- 不把单电子概率当针尖绝对计数，不把高能窗口等同再散射认证；两个 DC 端点只支持端点比较。
+- 细节数据：`R3_statistics.json`、`node_error_table.csv`、`node_error_summary.json`、
+  `error_component_map.csv`、`classical_response.csv`、`statistical_yields.csv`。
 """
-    (AUDIT / "decision.md").write_text(text, encoding="utf-8")
-    jwrite(AUDIT / "final_summary_v4.json", {"label": label, "D": d,
-                                              "tdse": tdse, "readouts": readouts,
-                                              "continuation_hours": hours,
-                                              "tail_complete": tail.get("complete"),
-                                              "phase_complete": phase.get("complete"),
-                                              "missing_validation": final.get("missing_validation", [])})
-    print(text[:1200])
+    (AUDIT / "decision_r2.md").write_text(text, encoding="utf-8")
+    jwrite(AUDIT / "final_summary_v5.json", {
+        "label": label, "status": final.get("status"), "D": d,
+        "tdse": tdse, "readouts": readouts, "attempts": attempts,
+        "continuation_hours": hours, "interruption_reserve_hours": reserve,
+        "tail_complete": tail.get("complete"), "phase_complete": phase.get("complete"),
+        "missing_validation": final.get("missing_validation", []),
+        "node_response_relative": {key: value["response_relative"]
+                                   for key, value in node_summary.get("per_channel", {}).items()},
+        "node_response_if_cep_zero": {key: value["relative_if_cep_zero"]
+                                      for key, value in node_summary.get("per_channel", {}).items()},
+    })
+    print(text[:1400])
     return 0
 
 

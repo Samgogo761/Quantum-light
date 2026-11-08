@@ -2,58 +2,82 @@
   "schema": 1,
   "records": [
     {
-      "original_path": "QL-TIP-1D/src/ql_tip_1d/statistics_v2.py",
-      "old_sha256": "2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673",
-      "current_sha256": "e21303c7df5079fae632bdc02969c37e7a2f07d7a9bd0b865906ffffbe789954",
-      "history_path": "Q-MATH/history/by_sha256/2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673.py",
-      "git_commit": "history-resolved-by-blob",
-      "purpose": "preserve original bytes while active path changes"
-    },
-    {
-      "original_path": "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py",
-      "old_sha256": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
-      "current_sha256": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
-      "history_path": "Q-MATH/history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py",
-      "git_commit": "history-resolved-by-blob",
-      "purpose": "preserve original bytes while active path changes"
-    },
-    {
-      "original_path": "QL-TIP-1D/scripts/run_continuation_v2.py",
-      "old_sha256": "12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0",
-      "current_sha256": "7541224048051691baf667015c733160e15e957dcbd2617c8eb4de334b10228b",
-      "history_path": "Q-MATH/history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py",
-      "git_commit": "history-resolved-by-blob",
-      "purpose": "preserve original bytes while active path changes"
-    },
-    {
       "original_path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
-      "old_sha256": "1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0",
-      "current_sha256": "e584075d3e8493600cde02ffa2618f11b9f810b2e9e7a73445f0f7cf29482e53",
-      "history_path": "Q-MATH/history/by_sha256/1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0.py",
+      "old_sha256": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
+      "current_sha256": "1095de283582f16d7b4fda6f9074b1fa7b0147fa9a5402add056e0ac38380e34",
+      "history_path": "Q-MATH/history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py",
       "git_commit": "history-resolved-by-blob",
       "purpose": "preserve original bytes while active path changes"
     },
     {
-      "original_path": "QL-TIP-1D/tests/test_continuation_v2.py",
-      "old_sha256": "b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6",
-      "current_sha256": "da6859d2edc56ab25cc5000ea9913385b6ede78b5380b99d75769a67b0ec41e6",
-      "history_path": "Q-MATH/history/by_sha256/b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6.py",
+      "original_path": "QL-TIP-1D/scripts/v3_stage_v4.py",
+      "old_sha256": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
+      "current_sha256": "addd8f1bac96be40dce9a8f117ca69e7e105291c776a5319dae13a95f3c1abc6",
+      "history_path": "Q-MATH/history/by_sha256/624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/scripts/apply_r1_v5.py",
+      "old_sha256": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
+      "current_sha256": "92dc0239701e6aa9fdd85ac036a18804523e3772409e7d84177bae39dbafefaa",
+      "history_path": "Q-MATH/history/by_sha256/2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/tests/test_statistics_gate_v4.py",
+      "old_sha256": "66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958",
+      "current_sha256": "0bab61b050419fc19b632c4d2c6c995e9b63c6787c43c366d45b33bff27c0fe1",
+      "history_path": "Q-MATH/history/by_sha256/66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json",
+      "old_sha256": "c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1",
+      "current_sha256": "e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891",
+      "history_path": "Q-MATH/history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv",
+      "old_sha256": "f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732",
+      "current_sha256": "05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb",
+      "history_path": "Q-MATH/history/by_sha256/f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732.csv",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv",
+      "old_sha256": "d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3",
+      "current_sha256": "ef2c133358182e3ada4769b20a01eef30cfa3c26a1f29309b25601e47a9cf5a5",
+      "history_path": "Q-MATH/history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv",
+      "old_sha256": "0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce",
+      "current_sha256": "f24c3292313e81328c4f0f2848ef8e97e473d24049837af36b74da66bd241e4d",
+      "history_path": "Q-MATH/history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv",
       "git_commit": "history-resolved-by-blob",
       "purpose": "preserve original bytes while active path changes"
     },
     {
       "original_path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
-      "old_sha256": "6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d",
-      "current_sha256": "2c978bcecd5df71ac710db0a2975b395b84e2d8f7a0aa4d773952557bd5cf90e",
-      "history_path": "Q-MATH/history/by_sha256/6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d.csv",
+      "old_sha256": "803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4",
+      "current_sha256": "4b617f6818b9c36f1b956b931068a047b8c8ff1fd24e504d615131b8a0b01fa0",
+      "history_path": "Q-MATH/history/by_sha256/803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4.csv",
       "git_commit": "history-resolved-by-blob",
       "purpose": "preserve original bytes while active path changes"
     },
     {
       "original_path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json",
-      "old_sha256": "329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b",
-      "current_sha256": "b1208cb995a628acf3d3e91c6105a6d68afcad018001ab6be06249f140347c61",
-      "history_path": "Q-MATH/history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json",
+      "old_sha256": "e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33",
+      "current_sha256": "44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14",
+      "history_path": "Q-MATH/history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json",
       "git_commit": "history-resolved-by-blob",
       "purpose": "preserve original bytes while active path changes"
     }

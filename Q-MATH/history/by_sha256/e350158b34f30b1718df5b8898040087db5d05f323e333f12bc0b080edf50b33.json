@@ -1,0 +1,128 @@
+{
+  "schema": "ql-tip-1d-active-evidence-v3",
+  "r1_gate": "results/bias_v3_audit/r1_20261107_v5/R1_gate_r1_20261107_v5.json",
+  "r1_sha256": "6a979abb57f7169615c0b79cd42f0bfe58f315311c129e1c6353cde725a1f6c9",
+  "r2_gate": "results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json",
+  "r2_sha256": "ee3313babeec7d80198a4812407bf99497f83c55297c127a0dc1b0c8e85c5fdd",
+  "allowed_stage": "NONE",
+  "allowed_task_ids": [],
+  "material_sensitivity": "DEFERRED_PRIORITY",
+  "s3_completed_task_ids": [
+    "bias_v2_lib_F0_I12_phi000_r01",
+    "bias_v2_lib_F0_I12_phi090_r01",
+    "bias_v2_lib_F0_I12_phi180_r01",
+    "bias_v2_lib_F0_I12_phi270_r01",
+    "bias_v2_lib_F0_I20_phi0_r01",
+    "bias_v2_lib_F0_I20_phi180_r01",
+    "bias_v2_lib_F0_I20_phi270_r01",
+    "bias_v2_lib_F0_I20_phi90_r01",
+    "bias_v2_lib_F0_I8_phi090_r01",
+    "bias_v2_lib_F0_I8_phi180_r01",
+    "bias_v2_lib_F0_I8_phi270_r01",
+    "bias_v2_lib_F1_I12_phi000_r01",
+    "bias_v2_lib_F1_I12_phi090_r01",
+    "bias_v2_lib_F1_I12_phi180_r01",
+    "bias_v2_lib_F1_I12_phi270_r01",
+    "bias_v2_lib_F1_I20_phi000_r01",
+    "bias_v2_lib_F1_I20_phi090_r01",
+    "bias_v2_lib_F1_I8_phi090_r01",
+    "bias_v2_lib_F1_I8_phi180_r01",
+    "bias_v2_lib_F1_I8_phi270_r01"
+  ],
+  "note": "User explicitly authorized completing all v3 tasks before the final report. Global 72 h / 240 TDSE ceiling unchanged; continuation sub-cap resized to 56 h. Batch C = 20 mu, F0/F1, four CEP.",
+  "s3_status": "RESUMING_BATCH_C_AFTER_BLUESCREEN",
+  "revision": "v3_r2_user_authorized_reallocation_20261106",
+  "budget": {
+    "schema": "ql-tip-1d-budget-limits-v4",
+    "authorization": "2026-11-06 user message: '不够额度吗？我换了一个模型，再继续完整v3？我希望能把所有的任务先完成了再提交报告'",
+    "decision": "CONTINUE_FULL_V3_ALL_TASKS_BEFORE_REPORT",
+    "global_tdse_limit": 240,
+    "global_hours_limit": 72.0,
+    "global_hours_baseline": 14.117235553083,
+    "continuation_tdse_limit": 112,
+    "continuation_hours_limit": 56.0,
+    "previous_continuation_hours_limit": 40.0,
+    "repair_tdse_limit": 12,
+    "repair_hours_limit": 8.0,
+    "stage_s3_hours_limit": 10.0,
+    "previous_stage_s3_hours_limit": 8.0,
+    "batch_max_new_runs": 8,
+    "event_hard_timeout_s": 5400,
+    "unchanged": [
+      "single active electron square well and all frozen physics parameters",
+      "common readout eta=.05 eV / dE=.0125 eV / mask 2-4 nm / three fixed thresholds",
+      "all R1/R2/final statistical error gates and the <=5% target",
+      "explicit allowed_task_ids per batch, no bare offsets",
+      "per-batch <=8 new TDSE and per-event <=90 min",
+      "material sensitivity stays DEFERRED_PRIORITY, no new physical model",
+      "no dt=.025 unless the task-book trigger is actually met"
+    ],
+    "reason": "The stop at S3 partial was caused by the internal 40 h continuation sub-cap and the 8 h S3 stage cap, not by the global 72 h ceiling and not by any AI-model quota. After the 14 completed S3 propagations the remaining 66-task mandatory path is estimated at 24.091 h; the global budget still has 39.675 h left. The continuation sub-cap is resized inside the unchanged global ceiling.",
+    "authoritative": true
+  },
+  "previous_s3_status": "PARTIAL_BUDGET_INCOMPLETE",
+  "error_component_map": "results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+  "error_component_map_sha256": "0e46a8497d5d504605cf05d134a9b8dabdf8ac698fa4975b2c067dfa15bd9464",
+  "r1_components_csv": "results/bias_v3_audit/r1_20261107_v5/R1_components_v5.csv",
+  "r1_components_csv_sha256": "d7eefb7542b7dca0f62e29964f02e3e43c00da59fa2c83bcb0660c84743bef5d",
+  "r1_rebuild": {
+    "revision": "r1_20261107_v5",
+    "status": "PASS",
+    "numerical_evidence_complete": true,
+    "pairing": "each control paired with its own matched reference before transfer",
+    "previous": {
+      "r1_gate": "results/bias_v3_audit/r1_20261107_v5/R1_gate_r1_20261107_v5.json",
+      "r1_sha256": "6a979abb57f7169615c0b79cd42f0bfe58f315311c129e1c6353cde725a1f6c9"
+    }
+  },
+  "source_freeze": {
+    "scripts/run_continuation_v2.py": "c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3",
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "scripts/analyze_statistics_v2.py": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
+    "scripts/build_error_component_map_v4.py": "04be6381c62e7dfe848c1b8f083970840ebc2d87deadc3efa71e05a09b2e3130",
+    "scripts/rebuild_r1_pairs_v5.py": "6097cd5a42b4fb6e7c102272ae2747f19c7aaacd3a41cf342fe84446b8fd626f",
+    "scripts/v3_stage_v4.py": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
+    "scripts/run_v3_full_v4.py": "44652988f4b336a7ef5618825d77ca3ce5f00cccac67992cd41b824cb20dffa8",
+    "scripts/build_budget_reallocation_v4.py": "06377f203b62b728621016e19865d89299a8614f98aa41a73c0a99a2c1f21291",
+    "scripts/build_tail_extension_v5.py": "0e5033f6a76a2d5015dac39e6bacab949205c46ec308401ff25773067cf62b3e",
+    "scripts/apply_r1_v5.py": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "src/ql_tip_1d/statistics_v2.py": "e21303c7df5079fae632bdc02969c37e7a2f07d7a9bd0b865906ffffbe789954",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "phase_coverage": {
+    "saved_2to4_envelope": 0.07026308347987481,
+    "direct_4to8": {
+      "1": 0.0058335280579012135
+    },
+    "missing": [],
+    "single_channel": "cep only; final statistics add no separate phase delta"
+  },
+  "interruption": {
+    "utc": "2026-11-07T03:04:31.433046+00:00",
+    "cause": "host blue screen and restart; background processes terminated",
+    "batch_c_propagations_complete": [
+      "bias_v2_lib_F0_I20_phi0_r01",
+      "bias_v2_lib_F0_I20_phi90_r01",
+      "bias_v2_lib_F0_I20_phi180_r01",
+      "bias_v2_lib_F0_I20_phi270_r01",
+      "bias_v2_lib_F1_I20_phi000_r01",
+      "bias_v2_lib_F1_I20_phi090_r01"
+    ],
+    "batch_c_propagations_remaining": [
+      "bias_v2_lib_F1_I20_phi180_r01",
+      "bias_v2_lib_F1_I20_phi270_r01"
+    ],
+    "batch_c_readouts_complete": 0,
+    "incomplete_run_isolated": "results/bias_v2/incomplete/bluescreen_20261107",
+    "no_result_deleted": true
+  },
+  "v3_stage": "COMPLETE",
+  "s5_batch": 4,
+  "midpoint_batch": 2,
+  "phase8_batch": 1,
+  "rerun_reason": "fix representative-set binding check after full v3 completion"
+}

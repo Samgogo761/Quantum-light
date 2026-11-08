@@ -11940,22 +11940,6 @@
         "registered:QL-TIP-1D/scripts/run_continuation_v2.py"
       ]
     },
-    "QL-TIP-1D/scripts/analyze_statistics_v2.py": {
-      "sha256": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
-      "bytes": 35185,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py"
-      ]
-    },
-    "QL-TIP-1D/scripts/v3_stage_v4.py": {
-      "sha256": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
-      "bytes": 41765,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/v3_stage_v4.py"
-      ]
-    },
     "QL-TIP-1D/scripts/run_v3_full_v4.py": {
       "sha256": "44652988f4b336a7ef5618825d77ca3ce5f00cccac67992cd41b824cb20dffa8",
       "bytes": 22708,
@@ -11988,14 +11972,6 @@
         "registered:QL-TIP-1D/scripts/rebuild_r1_pairs_v5.py"
       ]
     },
-    "QL-TIP-1D/scripts/apply_r1_v5.py": {
-      "sha256": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
-      "bytes": 3227,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/scripts/apply_r1_v5.py"
-      ]
-    },
     "QL-TIP-1D/scripts/build_tail_extension_v5.py": {
       "sha256": "0e5033f6a76a2d5015dac39e6bacab949205c46ec308401ff25773067cf62b3e",
       "bytes": 4155,
@@ -12012,28 +11988,12 @@
         "registered:QL-TIP-1D/tests/test_continuation_v2.py"
       ]
     },
-    "QL-TIP-1D/tests/test_statistics_gate_v4.py": {
-      "sha256": "66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958",
-      "bytes": 5637,
-      "kind": "code",
-      "origins": [
-        "registered:QL-TIP-1D/tests/test_statistics_gate_v4.py"
-      ]
-    },
     "QL-TIP-1D/tests/test_v4_review_fixes.py": {
       "sha256": "65ab978ccead31395711d4cfb5f87bf7741a90ae61897f83e77ff4ae67fb0598",
       "bytes": 10720,
       "kind": "code",
       "origins": [
         "registered:QL-TIP-1D/tests/test_v4_review_fixes.py"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json": {
-      "sha256": "c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1",
-      "bytes": 25929,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json"
       ]
     },
     "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics_preliminary.json": {
@@ -12052,14 +12012,6 @@
         "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/midpoint_plan.json"
       ]
     },
-    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv": {
-      "sha256": "f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732",
-      "bytes": 4199,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv"
-      ]
-    },
     "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_prelim.csv": {
       "sha256": "c2b208f9a0da177f31886d93667febe418ddec6b105671f454517a5119d43f3f",
       "bytes": 3369,
@@ -12074,14 +12026,6 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_preliminary.csv"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv": {
-      "sha256": "d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3",
-      "bytes": 1224,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv"
       ]
     },
     "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit_preliminary.csv": {
@@ -12122,14 +12066,6 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions_preliminary.csv"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv": {
-      "sha256": "0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce",
-      "bytes": 1205,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv"
       ]
     },
     "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields_preliminary.csv": {
@@ -12372,22 +12308,6 @@
         "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv"
       ]
     },
-    "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv": {
-      "sha256": "803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4",
-      "bytes": 85305,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
-      ]
-    },
-    "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json": {
-      "sha256": "e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33",
-      "bytes": 7006,
-      "kind": "results",
-      "origins": [
-        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
-      ]
-    },
     "QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md": {
       "sha256": "3f628e0f10c64d56ca901043bc807e170255072564ced12c32f96f1d615b2ee8",
       "bytes": 11429,
@@ -12410,6 +12330,232 @@
       "kind": "results",
       "origins": [
         "registered:QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_files.json"
+      ]
+    },
+    "Q-MATH/history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py": {
+      "sha256": "3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496",
+      "bytes": 35185,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py",
+        "migrated-from:QL-TIP-1D/scripts/analyze_statistics_v2.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30.py": {
+      "sha256": "624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30",
+      "bytes": 41765,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/v3_stage_v4.py",
+        "migrated-from:QL-TIP-1D/scripts/v3_stage_v4.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325.py": {
+      "sha256": "2e780a732863331e32c39651c0646acf9b0227f0af40f6bfcaa6f1456421a325",
+      "bytes": 3227,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/apply_r1_v5.py",
+        "migrated-from:QL-TIP-1D/scripts/apply_r1_v5.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958.py": {
+      "sha256": "66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958",
+      "bytes": 5637,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_statistics_gate_v4.py",
+        "migrated-from:QL-TIP-1D/tests/test_statistics_gate_v4.py"
+      ]
+    },
+    "Q-MATH/history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json": {
+      "sha256": "c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1",
+      "bytes": 25929,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json",
+        "migrated-from:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json"
+      ]
+    },
+    "Q-MATH/history/by_sha256/f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732.csv": {
+      "sha256": "f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732",
+      "bytes": 4199,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv",
+        "migrated-from:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv"
+      ]
+    },
+    "Q-MATH/history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv": {
+      "sha256": "d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3",
+      "bytes": 1224,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv",
+        "migrated-from:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv"
+      ]
+    },
+    "Q-MATH/history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv": {
+      "sha256": "0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce",
+      "bytes": 1205,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv",
+        "migrated-from:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv"
+      ]
+    },
+    "Q-MATH/history/by_sha256/803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4.csv": {
+      "sha256": "803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4",
+      "bytes": 85305,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+        "migrated-from:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
+      ]
+    },
+    "Q-MATH/history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json": {
+      "sha256": "e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33",
+      "bytes": 7006,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json",
+        "migrated-from:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/scripts/analyze_statistics_v2.py": {
+      "sha256": "1095de283582f16d7b4fda6f9074b1fa7b0147fa9a5402add056e0ac38380e34",
+      "bytes": 36807,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/analyze_statistics_v2.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/v3_stage_v4.py": {
+      "sha256": "addd8f1bac96be40dce9a8f117ca69e7e105291c776a5319dae13a95f3c1abc6",
+      "bytes": 42963,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/v3_stage_v4.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/apply_r1_v5.py": {
+      "sha256": "92dc0239701e6aa9fdd85ac036a18804523e3772409e7d84177bae39dbafefaa",
+      "bytes": 3301,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/apply_r1_v5.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/backfill_ledger_v5.py": {
+      "sha256": "43305e5d2dc1620eae58241a97cc5a98394d5f8c4c79238a4a998f53ddaa2c87",
+      "bytes": 5266,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/backfill_ledger_v5.py"
+      ]
+    },
+    "QL-TIP-1D/scripts/build_node_error_table.py": {
+      "sha256": "c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda",
+      "bytes": 14923,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/scripts/build_node_error_table.py"
+      ]
+    },
+    "QL-TIP-1D/tests/test_statistics_gate_v4.py": {
+      "sha256": "0bab61b050419fc19b632c4d2c6c995e9b63c6787c43c366d45b33bff27c0fe1",
+      "bytes": 6577,
+      "kind": "code",
+      "origins": [
+        "registered:QL-TIP-1D/tests/test_statistics_gate_v4.py"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json": {
+      "sha256": "e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891",
+      "bytes": 25929,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv": {
+      "sha256": "05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb",
+      "bytes": 4128,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv": {
+      "sha256": "ef2c133358182e3ada4769b20a01eef30cfa3c26a1f29309b25601e47a9cf5a5",
+      "bytes": 1224,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv": {
+      "sha256": "f24c3292313e81328c4f0f2848ef8e97e473d24049837af36b74da66bd241e4d",
+      "bytes": 1205,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v5.json": {
+      "sha256": "8b8c29be580d958de67a31acc0cdafbd2b15b9029339bc52003c242766f6c82c",
+      "bytes": 785,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v5.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json": {
+      "sha256": "8edcb9f6bda0f8c709fe8d2f23e3a6049b595976a13ba94f4876bd62d2a9c2ff",
+      "bytes": 3307,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv": {
+      "sha256": "0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3",
+      "bytes": 61767,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md": {
+      "sha256": "890318181d1f48acf6f53d0438758985af6b897b8068a2fa0982d2ee78577554",
+      "bytes": 3490,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv": {
+      "sha256": "4b617f6818b9c36f1b956b931068a047b8c8ff1fd24e504d615131b8a0b01fa0",
+      "bytes": 88402,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv"
+      ]
+    },
+    "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json": {
+      "sha256": "44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14",
+      "bytes": 7609,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md": {
+      "sha256": "565ba63dea67de30bc25beea69d8bbfbb941778d477df8056dee362ec1230fd9",
+      "bytes": 6325,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md"
       ]
     }
   }

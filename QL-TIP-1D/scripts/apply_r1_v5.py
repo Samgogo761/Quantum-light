@@ -19,6 +19,7 @@ SOURCE_FILES = [
     "scripts/rebuild_r1_pairs_v5.py", "scripts/v3_stage_v4.py",
     "scripts/run_v3_full_v4.py", "scripts/build_budget_reallocation_v4.py",
     "scripts/build_tail_extension_v5.py", "scripts/apply_r1_v5.py",
+    "scripts/backfill_ledger_v5.py", "scripts/build_node_error_table.py",
     "src/ql_tip_1d/continuation_v2.py", "src/ql_tip_1d/core.py",
     "src/ql_tip_1d/bias_v1.py", "src/ql_tip_1d/spectrum_v1.py",
     "src/ql_tip_1d/statistics_v2.py", "configs/continuation_v2/protocol_v2.json",

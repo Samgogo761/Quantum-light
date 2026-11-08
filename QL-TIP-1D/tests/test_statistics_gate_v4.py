@@ -30,38 +30,59 @@ def test_error_map_counts_each_category_exactly_once() -> None:
             assert len(components) == len(CATEGORIES)
 
 
-def test_high_intensity_envelope_does_not_add_a_full_r1_total() -> None:
-    """The 32 mu envelope = seven direct R2 controls + four R1-only categories."""
+def _node_rows() -> list[dict[str, str]]:
+    with (AUDIT / "node_error_table.csv").open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def test_high_intensity_envelope_uses_node_table_and_no_r1_total() -> None:
+    """32 mu is summed from the audited node table, never from an R1 total."""
     active = json.loads((PROJECT / stats.ACTIVE_EVIDENCE.relative_to(PROJECT)).read_text(encoding="utf-8"))
     r1 = json.loads((PROJECT / active["r1_gate"]).read_text(encoding="utf-8"))
     r2 = json.loads((PROJECT / active["r2_gate"]).read_text(encoding="utf-8"))
+    node_rows = _node_rows()
     for F in [0.0, 1.0]:
         label = f"F{F:g}"
+        rows = [row for row in node_rows
+                if row["F"] == f"{F:g}" and float(row["I_over_mu"]) == 32.0]
+        assert sorted(row["component"] for row in rows) == sorted(CATEGORIES)
+        value, origin = stats.response_error_envelope(F, 32.0)
+        assert value == pytest.approx(sum(abs(float(row["value"])) for row in rows), rel=1e-12)
+        assert "node_table_per_category_once" in origin
         direct = sum(abs(float(r2["controls"][f"{label}_{key}"]["relative_change"]))
                      for key in ["dx048", "dt005", "box900", "caphalf"])
         direct += sum(abs(float(r2[name][label]))
                       for name in ["eta32_relative", "grid32_relative", "range32_relative"])
-        r1_only = sum(max(float(r1["components"][f"{label}_I1"]["components"][name]),
-                          float(r1["components"][f"{label}_I4"]["components"][name]))
-                      for name in ["preparation", "mask", "time"])
-        # External review D: high-intensity CEP uses the saved 8/12/20 mu
-        # envelope, so the expected value must be read from the audited map
-        # instead of hard-coding the old R1 4 mu CEP.
-        cep_row = next(row for row in stats.error_map_rows(F, "high")
-                       if row["component"] == "cep")
-        r1_only += abs(float(cep_row["relative_estimate"]))
-        value, origin = stats.response_error_envelope(F, 32.0)
-        assert value == pytest.approx(direct + r1_only, rel=1e-12)
-        assert "per_category_once" in origin
-        # No full R1 total may be added on top: the audited envelope must stay
-        # strictly below "seven R2 categories + one R1 total + CEP".  The CEP
-        # envelope itself can legitimately exceed the R1 total (measured 20 mu
-        # 2->4 change is ~7%), so the check must not assume CEP < R1 total.
+        cep_value = abs(float(next(row["value"] for row in rows if row["component"] == "cep")))
+        # No full R1 total may be added on top of the per-category sum.
         wrong_double = (direct
                         + max(float(r1["components"][f"{label}_I1"]["total"]),
                               float(r1["components"][f"{label}_I4"]["total"]))
-                        + abs(float(cep_row["relative_estimate"])))
+                        + cep_value)
         assert value < wrong_double
+
+
+def test_direct_phase_evidence_is_used_only_at_measured_nodes() -> None:
+    """A direct 4->8 value applies to its own node, never to the whole bias."""
+    validation = json.loads((AUDIT / "phase_validation.json").read_text(encoding="utf-8"))
+    measured = {(float(row["F"]), float(row["I_over_mu"])):
+                abs(float(row["relative_4to8_change"]))
+                for row in validation["rows"]
+                if row.get("status") == "PASS" and row.get("relative_4to8_change") not in (None, "")}
+    active = json.loads((PROJECT / stats.ACTIVE_EVIDENCE.relative_to(PROJECT)).read_text(encoding="utf-8"))
+    envelope = float(active["phase_coverage"]["saved_2to4_envelope"])
+    node_rows = _node_rows()
+    for F in [0.0, 1.0]:
+        for I in [8.0, 32.0]:
+            cep = next(row for row in node_rows
+                       if row["F"] == f"{F:g}" and float(row["I_over_mu"]) == I
+                       and row["component"] == "cep")
+            if (F, I) in measured:
+                assert cep["evidence_type"] == "direct_4to8"
+                assert float(cep["value"]) == pytest.approx(measured[(F, I)], rel=1e-12)
+            else:
+                assert cep["evidence_type"] == "envelope_2to4"
+                assert float(cep["value"]) == pytest.approx(envelope, rel=1e-12)
 
 
 def test_tail_uses_positive_lower_bound_and_total_5pct_includes_tail() -> None:
