@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1473 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1481 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -96,10 +96,12 @@
 | code | [Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py](code/v16.30/qmath_16_29_same_state_readout.py) | 8949 | `a3d3866067e0` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_bridge_audit.py](code/v16.30/qmath_16_30_bridge_audit.py) | 8953 | `f41b5c60fcbd` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_output_mode_gram.py](code/v16.30/qmath_16_30_output_mode_gram.py) | 1458 | `ed8b9acc19f7` |
+| code | [Q-MATH/history/by_sha256/01bfd18f503e014fa34277848e03aec8fbc1a32fbd159bda85de14880566df41.py](history/by_sha256/01bfd18f503e014fa34277848e03aec8fbc1a32fbd159bda85de14880566df41.py) | 43899 | `01bfd18f503e` |
 | results | [Q-MATH/history/by_sha256/0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3.csv](history/by_sha256/0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3.csv) | 61767 | `0526af02a2ee` |
 | results | [Q-MATH/history/by_sha256/0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383.csv](history/by_sha256/0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383.csv) | 75684 | `0570f3ee72a4` |
 | results | [Q-MATH/history/by_sha256/05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb.csv](history/by_sha256/05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb.csv) | 4128 | `05fa1864a9e6` |
 | results | [Q-MATH/history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv](history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv) | 1205 | `0e5879e4cf1d` |
+| reports | [Q-MATH/history/by_sha256/10dc578c24a4890f0e9bafcbfe9816ca2752ecbb564483dfeefa2f8c5fe2c34b.md](history/by_sha256/10dc578c24a4890f0e9bafcbfe9816ca2752ecbb564483dfeefa2f8c5fe2c34b.md) | 4197 | `10dc578c24a4` |
 | code | [Q-MATH/history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py](history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py) | 37595 | `12c2ba8eb1f5` |
 | code | [Q-MATH/history/by_sha256/16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d.py](history/by_sha256/16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d.py) | 6297 | `16f4199ba005` |
 | code | [Q-MATH/history/by_sha256/1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0.py](history/by_sha256/1e1aa609eb917d4377ae13a2ec0c2a89ae8aeaea5d8f512967dbe49f04c4d4f0.py) | 20039 | `1e1aa609eb91` |
@@ -108,8 +110,10 @@
 | results | [Q-MATH/history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json](history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json) | 1264 | `329bda44d566` |
 | code | [Q-MATH/history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py](history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py) | 35185 | `3c5879a48dc7` |
 | results | [Q-MATH/history/by_sha256/44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14.json](history/by_sha256/44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14.json) | 7609 | `44f9e0b15b22` |
+| code | [Q-MATH/history/by_sha256/4743c25b2833353bfaba509a8132083faa465c81a76553e2143aebe025720b4a.py](history/by_sha256/4743c25b2833353bfaba509a8132083faa465c81a76553e2143aebe025720b4a.py) | 18471 | `4743c25b2833` |
 | code | [Q-MATH/history/by_sha256/52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0.py](history/by_sha256/52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0.py) | 18841 | `52667c8a042b` |
 | code | [Q-MATH/history/by_sha256/5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057.py](history/by_sha256/5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057.py) | 36863 | `5750293a843d` |
+| results | [Q-MATH/history/by_sha256/59e1cb5b9aa15cfb16344e32dbf10c1a64f7b3ef373813731992fabe52808fb7.json](history/by_sha256/59e1cb5b9aa15cfb16344e32dbf10c1a64f7b3ef373813731992fabe52808fb7.json) | 7730 | `59e1cb5b9aa1` |
 | code | [Q-MATH/history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py](history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py) | 17470 | `5cccab65d948` |
 | reports | [Q-MATH/history/by_sha256/612b75b42bddc193d376d614c9e2d2b9b01398f03e2d735dc8442dca9c91c873.md](history/by_sha256/612b75b42bddc193d376d614c9e2d2b9b01398f03e2d735dc8442dca9c91c873.md) | 14295 | `612b75b42bdd` |
 | reports | [Q-MATH/history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md](history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md) | 3601 | `622c23829ef2` |
@@ -132,6 +136,8 @@
 | results | [Q-MATH/history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json](history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json) | 25929 | `c0b95dae4d80` |
 | code | [Q-MATH/history/by_sha256/c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3.py](history/by_sha256/c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3.py) | 43825 | `c38471e1e7a3` |
 | code | [Q-MATH/history/by_sha256/c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda.py](history/by_sha256/c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda.py) | 14923 | `c3d6c54fddb5` |
+| code | [Q-MATH/history/by_sha256/ce138ec44f7b7807ddb711a12e0fc3f3c25342adce56d3c94306268dc448ef82.py](history/by_sha256/ce138ec44f7b7807ddb711a12e0fc3f3c25342adce56d3c94306268dc448ef82.py) | 3342 | `ce138ec44f7b` |
+| reports | [Q-MATH/history/by_sha256/d21225094416b30a8ec35086d14e9481d1f086207c436f23b2e41a555d11742a.md](history/by_sha256/d21225094416b30a8ec35086d14e9481d1f086207c436f23b2e41a555d11742a.md) | 6200 | `d21225094416` |
 | results | [Q-MATH/history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv](history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv) | 1224 | `d9e22c91fe47` |
 | results | [Q-MATH/history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json](history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json) | 7006 | `e350158b34f3` |
 | results | [Q-MATH/history/by_sha256/e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891.json](history/by_sha256/e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891.json) | 25929 | `e831e1dac84a` |
@@ -515,7 +521,7 @@
 | results | [QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json](../QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json) | 41882 | `8c25e278a807` |
 | results | [QL-TIP-1D/plans/20261106_execution_review/file_inventory.json](../QL-TIP-1D/plans/20261106_execution_review/file_inventory.json) | 913 | `682dc7e5248f` |
 | reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md) | 6325 | `565ba63dea67` |
-| reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md) | 6200 | `d21225094416` |
+| reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md) | 6705 | `02df6e457419` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
@@ -528,6 +534,7 @@
 | results | [QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json](../QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json) | 7095 | `3d2f61978eed` |
 | results | [QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json](../QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json) | 696 | `5142820d898e` |
 | reports | [QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md](../QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md) | 7960 | `426a5397f25d` |
+| reports | [QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md](../QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md) | 7435 | `825442003333` |
 | reports | [QL-TIP-1D/reports/P0_protocol.md](../QL-TIP-1D/reports/P0_protocol.md) | 4083 | `6113c8398e63` |
 | reports | [QL-TIP-1D/reports/P1_spectrum_validation.md](../QL-TIP-1D/reports/P1_spectrum_validation.md) | 4689 | `bbf86234b5e3` |
 | reports | [QL-TIP-1D/reports/P2_two_bias_pilot.md](../QL-TIP-1D/reports/P2_two_bias_pilot.md) | 3670 | `7d6f14901760` |
@@ -1317,7 +1324,6 @@
 | results | [QL-TIP-1D/results/bias_v3_audit/START_STATE.json](../QL-TIP-1D/results/bias_v3_audit/START_STATE.json) | 837 | `cb72e6b39019` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_components.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_components.csv) | 14550 | `34338c9a236d` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json) | 2622 | `c16220bfadbc` |
-| results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json) | 7730 | `59e1cb5b9aa1` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/cost_remaining.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/cost_remaining.csv) | 5941 | `7716e4c84960` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout.json) | 953 | `c43daeb78752` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout_response.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout_response.csv) | 528 | `e728ce471a23` |
@@ -1327,12 +1333,13 @@
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/r1_v5_pointer.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/r1_v5_pointer.json) | 358 | `846f09aacd10` |
 | reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/BUDGET_REALLOCATION.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/BUDGET_REALLOCATION.md) | 2415 | `44b6b873fb08` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/START_STATE_v4.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/START_STATE_v4.json) | 739 | `6896306fbd92` |
+| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json) | 2996 | `d11fd989eaf8` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/active_evidence_v3_r1_before_reallocation.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/active_evidence_v3_r1_before_reallocation.json) | 1264 | `329bda44d566` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json) | 1601 | `df8652e99780` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv) | 2363 | `282d465a2e7e` |
 | reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md) | 2823 | `e793d6703045` |
 | reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md) | 3490 | `890318181d1f` |
-| reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md) | 4197 | `10dc578c24a4` |
+| reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md) | 4431 | `141ad70b71c2` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv) | 11106 | `0e46a8497d5d` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_headroom.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_headroom.json) | 12964 | `4dd7bc72ed17` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json) | 323 | `f5f213b2796c` |
@@ -1406,17 +1413,18 @@
 | code | [QL-TIP-1D/scripts/analyze_p2.py](../QL-TIP-1D/scripts/analyze_p2.py) | 8764 | `dd6e1cb68047` |
 | code | [QL-TIP-1D/scripts/analyze_scout_v3.py](../QL-TIP-1D/scripts/analyze_scout_v3.py) | 2534 | `ed2456091cc2` |
 | code | [QL-TIP-1D/scripts/analyze_statistics_v2.py](../QL-TIP-1D/scripts/analyze_statistics_v2.py) | 36807 | `1095de283582` |
-| code | [QL-TIP-1D/scripts/apply_r1_v5.py](../QL-TIP-1D/scripts/apply_r1_v5.py) | 3342 | `ce138ec44f7b` |
+| code | [QL-TIP-1D/scripts/apply_r1_v5.py](../QL-TIP-1D/scripts/apply_r1_v5.py) | 3381 | `01605d631480` |
 | code | [QL-TIP-1D/scripts/audit_environment.py](../QL-TIP-1D/scripts/audit_environment.py) | 3550 | `15e608104bca` |
 | code | [QL-TIP-1D/scripts/backfill_ledger_v5.py](../QL-TIP-1D/scripts/backfill_ledger_v5.py) | 5266 | `43305e5d2dc1` |
 | code | [QL-TIP-1D/scripts/budget_status.py](../QL-TIP-1D/scripts/budget_status.py) | 2809 | `c70be3f548db` |
 | code | [QL-TIP-1D/scripts/build_budget_reallocation_v4.py](../QL-TIP-1D/scripts/build_budget_reallocation_v4.py) | 9273 | `06377f203b62` |
 | code | [QL-TIP-1D/scripts/build_error_component_map_v4.py](../QL-TIP-1D/scripts/build_error_component_map_v4.py) | 13089 | `04be6381c62e` |
 | code | [QL-TIP-1D/scripts/build_manifest.py](../QL-TIP-1D/scripts/build_manifest.py) | 4424 | `eb6c779a910f` |
-| code | [QL-TIP-1D/scripts/build_node_error_table.py](../QL-TIP-1D/scripts/build_node_error_table.py) | 18471 | `4743c25b2833` |
+| code | [QL-TIP-1D/scripts/build_node_error_table.py](../QL-TIP-1D/scripts/build_node_error_table.py) | 18733 | `4cdb5569e768` |
 | code | [QL-TIP-1D/scripts/build_r1_components_v3.py](../QL-TIP-1D/scripts/build_r1_components_v3.py) | 11313 | `4bc004b27d5d` |
 | code | [QL-TIP-1D/scripts/build_r1_v2_gate.py](../QL-TIP-1D/scripts/build_r1_v2_gate.py) | 2718 | `e15423357cee` |
 | code | [QL-TIP-1D/scripts/build_tail_extension_v5.py](../QL-TIP-1D/scripts/build_tail_extension_v5.py) | 4155 | `0e5033f6a76a` |
+| code | [QL-TIP-1D/scripts/estimate_acceptance_path.py](../QL-TIP-1D/scripts/estimate_acceptance_path.py) | 6016 | `7482232d91d8` |
 | code | [QL-TIP-1D/scripts/export_bias_data.py](../QL-TIP-1D/scripts/export_bias_data.py) | 4949 | `ea65fa25600c` |
 | code | [QL-TIP-1D/scripts/hash_bias_artifacts.py](../QL-TIP-1D/scripts/hash_bias_artifacts.py) | 1465 | `e100625cb00b` |
 | code | [QL-TIP-1D/scripts/hash_bias_v2.py](../QL-TIP-1D/scripts/hash_bias_v2.py) | 1435 | `ae4b83f21afd` |
@@ -1432,7 +1440,7 @@
 | code | [QL-TIP-1D/scripts/run_stage2.py](../QL-TIP-1D/scripts/run_stage2.py) | 9256 | `65752073a982` |
 | code | [QL-TIP-1D/scripts/run_v3_full_v4.py](../QL-TIP-1D/scripts/run_v3_full_v4.py) | 22708 | `44652988f4b3` |
 | code | [QL-TIP-1D/scripts/summarize_stage2.py](../QL-TIP-1D/scripts/summarize_stage2.py) | 5949 | `2a3415a13d02` |
-| code | [QL-TIP-1D/scripts/v3_stage_v4.py](../QL-TIP-1D/scripts/v3_stage_v4.py) | 43899 | `01bfd18f503e` |
+| code | [QL-TIP-1D/scripts/v3_stage_v4.py](../QL-TIP-1D/scripts/v3_stage_v4.py) | 44682 | `70f1e0b0ddd6` |
 | code | [QL-TIP-1D/scripts/validate_spectrum_v1.py](../QL-TIP-1D/scripts/validate_spectrum_v1.py) | 6663 | `fdd3776f7880` |
 | code | [QL-TIP-1D/src/ql_tip_1d/__init__.py](../QL-TIP-1D/src/ql_tip_1d/__init__.py) | 64 | `b5b8948d99c7` |
 | code | [QL-TIP-1D/src/ql_tip_1d/bias_v1.py](../QL-TIP-1D/src/ql_tip_1d/bias_v1.py) | 6357 | `1faff033af6b` |

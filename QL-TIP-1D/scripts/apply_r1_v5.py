@@ -20,7 +20,7 @@ SOURCE_FILES = [
     "scripts/run_v3_full_v4.py", "scripts/build_budget_reallocation_v4.py",
     "scripts/build_tail_extension_v5.py", "scripts/apply_r1_v5.py",
     "scripts/backfill_ledger_v5.py", "scripts/build_node_error_table.py",
-    "scripts/analyze_error_headroom.py",
+    "scripts/analyze_error_headroom.py", "scripts/estimate_acceptance_path.py",
     "src/ql_tip_1d/continuation_v2.py", "src/ql_tip_1d/core.py",
     "src/ql_tip_1d/bias_v1.py", "src/ql_tip_1d/spectrum_v1.py",
     "src/ql_tip_1d/statistics_v2.py", "configs/continuation_v2/protocol_v2.json",

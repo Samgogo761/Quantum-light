@@ -658,6 +658,16 @@ def step_decision() -> int:
     attempts = sum(1 for row in ledger if row["kind"] == "tdse_attempt")
     reserve = sum(float(row["counted_seconds"] or 0.0) for row in ledger
                   if row["kind"] == "tdse_attempt") / 3600.0
+    pairs = [(value["node_change"] / value["Y"],
+              (value["delta"] - value["node_change"] - value["quadrature_error"]) / value["Y"])
+             for value in final.get("yields", {}).values()
+             if value["state"] != "coherent" and value["Y"]]
+    error_range = (
+        f"节点项 {min(pair[0] for pair in pairs) * 100:.2f}–"
+        f"{max(pair[0] for pair in pairs) * 100:.2f}%（门限 1%）、"
+        f"响应项 {min(pair[1] for pair in pairs) * 100:.2f}–"
+        f"{max(pair[1] for pair in pairs) * 100:.2f}%（门限 5%）"
+        if pairs else "误差分解缺失")
     response_lines = [
         f"  - {key}: 响应项 {value['response_relative'] * 100:.2f}%，"
         f"CEP 归零后 {value['relative_if_cep_zero'] * 100:.2f}%"
@@ -718,7 +728,9 @@ def step_decision() -> int:
 
 ## 未成立与限制
 
-- 误差结构：节点项 25.8–45.7%（门限 1%）、响应项 11.0–11.7%（门限 5%）；即使中点项归零仍不达标。
+- 误差结构：{error_range}；即使中点项归零仍不达标。
+- 完整最小验收路径评估见 `reports/MINIMAL_ACCEPTANCE_PATH_20261108.md`：现行全局 72 h 内没有
+  同时覆盖响应误差与插值残余的可行组合，建议冻结本轮为数值先导，不做零散补算。
 - 材料敏感性 −5.6 eV 仍为 `DEFERRED_PRIORITY`；未新增 DFT、多电子、温度、三维或完整 QED。
 - 不把单电子概率当针尖绝对计数，不把高能窗口等同再散射认证；两个 DC 端点只支持端点比较。
 - 细节数据：`R3_statistics.json`、`node_error_table.csv`、`node_error_summary.json`、

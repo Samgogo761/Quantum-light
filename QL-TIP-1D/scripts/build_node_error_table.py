@@ -90,7 +90,13 @@ def s4_direct() -> dict[tuple[float, str], tuple[float, str]]:
 
 
 def _readout_ok(readout_id: str) -> bool:
-    """Verify protocol, status, thresholds and provenance SHA of one readout."""
+    """Check protocol values and that provenance fields are PRESENT.
+
+    It does not re-hash the state/config files.  Content hashing and
+    original-byte verification are performed by `manage.py check` and the
+    frozen-source manifest, which have different scopes; this helper must not
+    be described as a full content re-hash.
+    """
     path = PROJECT / "results/bias_v2/readouts" / readout_id / "summary.json"
     if not path.exists():
         return False
