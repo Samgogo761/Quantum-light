@@ -1,0 +1,156 @@
+{
+  "schema": "ql-tip-finite-rescue-review-v1",
+  "date": "2026-11-08",
+  "observed_at_Asia_Shanghai": "2026-11-08T16:23:31.535761+08:00",
+  "inherited_commit": "b2a0b1e537cd8ee23095aa04c8b651066ddfa324",
+  "scope": "read-only review and stored scalar arithmetic; zero new science runs or project tests",
+  "source_hashes": [
+    {
+      "path": "QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md",
+      "sha256": "565ba63dea67de30bc25beea69d8bbfbb941778d477df8056dee362ec1230fd9"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/build_node_error_table.py",
+      "sha256": "c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/backfill_ledger_v5.py",
+      "sha256": "43305e5d2dc1620eae58241a97cc5a98394d5f8c4c79238a4a998f53ddaa2c87"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "sha256": "c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
+      "sha256": "1095de283582f16d7b4fda6f9074b1fa7b0147fa9a5402add056e0ac38380e34"
+    },
+    {
+      "path": "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py",
+      "sha256": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv",
+      "sha256": "0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json",
+      "sha256": "8edcb9f6bda0f8c709fe8d2f23e3a6049b595976a13ba94f4876bd62d2a9c2ff"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md",
+      "sha256": "890318181d1f48acf6f53d0438758985af6b897b8068a2fa0982d2ee78577554"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json",
+      "sha256": "7cf6d614a3ac23e525f03258d207594c0a4adcfe99f3dd56770f8a196fd9acaf"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv",
+      "sha256": "0df0cf844d96503a0882838cb6008fe8dbb5bb2606ddc96629fff8bd4ecd4a40"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "sha256": "4b617f6818b9c36f1b956b931068a047b8c8ff1fd24e504d615131b8a0b01fa0"
+    }
+  ],
+  "node_table_rows": 264,
+  "channel_audit": [
+    {
+      "channel": "bsv_F0",
+      "response_relative": 0.11528452018183191,
+      "optimistic_remaining_if_A_targets_zero": 0.09918504501407854,
+      "scope": "diagnostic only; Y/weights unchanged and no other-node transfer; does not license deleting errors"
+    },
+    {
+      "channel": "thermal_F0",
+      "response_relative": 0.1115310480410495,
+      "optimistic_remaining_if_A_targets_zero": 0.10715489139829089,
+      "scope": "diagnostic only; Y/weights unchanged and no other-node transfer; does not license deleting errors"
+    },
+    {
+      "channel": "bsv_F1",
+      "response_relative": 0.11669061909086446,
+      "optimistic_remaining_if_A_targets_zero": 0.09558420222869267,
+      "scope": "diagnostic only; Y/weights unchanged and no other-node transfer; does not license deleting errors"
+    },
+    {
+      "channel": "thermal_F1",
+      "response_relative": 0.10968011014174557,
+      "optimistic_remaining_if_A_targets_zero": 0.100748455811575,
+      "scope": "diagnostic only; Y/weights unchanged and no other-node transfer; does not license deleting errors"
+    }
+  ],
+  "omitted_F1_I4_direct_phase": {
+    "Y4": 1.891605675322084e-05,
+    "Y8": 1.8916056753786783e-05,
+    "relative_4to8": 2.9918675812055967e-11,
+    "readouts": [
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "96c99fa59a1bb199253fdffc9fb9a1d7c9384fbde8b8394430c4d71e5d9d05fd"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi045_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "071e24e57a1159e827af1da290f25da272142c411a8f834dc3f5db05c54949f4"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi090_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "e71a530c860be492c6bb0d74a92d1828ebcc1390de482b8a5d1c708612787b39"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi135_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "1c72faaeecf11bdda3822625f8f6dd09ba44d96602182b0825b14cb71d862f4e"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi180_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "3acacad8f7bd20dc9dc53bed1e21c2111a24e17b634eff9d718fca19eae8fe1c"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi225_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "ebb77d92fd673718f9ab9f79bf28b25d9d46dd9a0e6004a32bfc2f2c29d2d10e"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi270_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "b2d877f5f179af06bd9a672567295f0149fbe625cf9e41a14dfb1bb398001dbd"
+      },
+      {
+        "path": "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_p2_F1.000_I4_phi315_r02_t100_eta0p05_dE0p0125_m2-4/summary.json",
+        "sha256": "d32e16a9b743d69be41e480887fd6cfe406ec7f60ca194b8e572779c65c31e8d"
+      }
+    ],
+    "current_table_cep": [
+      0.07026308347987481
+    ]
+  },
+  "existing_A2_literal_controls": [
+    {
+      "run_id": "bias_v2_s4_F0_I8_phi000_dt005_r01",
+      "dt_au": 0.05,
+      "prep_state_path": "data/raw/bias_v1/bias_p1_prep_F0.000_dt005_r02/state_prep.npz",
+      "wall_seconds": 1652.0380587000036,
+      "config_sha256": "7a115e84526aaf8327b873f94908250d0a8d4549dcd64244fff719d233069039",
+      "summary_sha256": "9d6e88149e37a37b2b949ae894dca1c3c3621221c50f133a11e880a713047328"
+    },
+    {
+      "run_id": "bias_v2_s4_F1_I8_phi000_dt005_r01",
+      "dt_au": 0.05,
+      "prep_state_path": "data/raw/bias_v1/bias_p1_prep_F1.000_dt005_r02/state_prep.npz",
+      "wall_seconds": 1631.6804047999976,
+      "config_sha256": "03ba490fb573d90173bbc6ddbb3c99b5db3ee1e21866de56189fb55f386d5103",
+      "summary_sha256": "180db3b9096bbba669f0f359aa1040b864673a45c74e35d35da43d7e27c2cdcb"
+    }
+  ],
+  "two_dt0025_laser_wall_analogy_hours_excluding_prep_readout": 1.8242880352777784,
+  "budget_snapshot": {
+    "events": 273,
+    "tdse_kind": 96,
+    "tdse_attempt_kind": 1,
+    "known_start_attempts_at_least": 97,
+    "continuation_hours_including_0p5h_estimate": 42.8642784486951,
+    "global_hours_including_0p5h_estimate_and_historical_reserve": 56.9815140017781,
+    "interrupted_actual_elapsed_unknown": true,
+    "runtime_counter_still_counts_only_tdse_kind": true
+  },
+  "no_execution_authorized_by_this_review": true
+}

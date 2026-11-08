@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1450 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1453 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -511,6 +511,9 @@
 | reports | [QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md](../QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108.md) | 11429 | `3f628e0f10c6` |
 | results | [QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_evidence.json](../QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_evidence.json) | 8976 | `81b638048aa2` |
 | results | [QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_files.json](../QL-TIP-1D/reports/FINAL_RESULT_REVIEW_20261108_files.json) | 880 | `f98a20ca7bf7` |
+| reports | [QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108.md](../QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108.md) | 9533 | `32c5e4f4d817` |
+| results | [QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json](../QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json) | 7095 | `3d2f61978eed` |
+| results | [QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json](../QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json) | 696 | `5142820d898e` |
 | reports | [QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md](../QL-TIP-1D/reports/MATERIAL_MODEL_REVIEW_20261105.md) | 7960 | `426a5397f25d` |
 | reports | [QL-TIP-1D/reports/P0_protocol.md](../QL-TIP-1D/reports/P0_protocol.md) | 4083 | `6113c8398e63` |
 | reports | [QL-TIP-1D/reports/P1_spectrum_validation.md](../QL-TIP-1D/reports/P1_spectrum_validation.md) | 4689 | `bbf86234b5e3` |

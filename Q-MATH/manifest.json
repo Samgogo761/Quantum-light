@@ -12557,6 +12557,30 @@
       "origins": [
         "registered:QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md"
       ]
+    },
+    "QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108.md": {
+      "sha256": "32c5e4f4d817ec18d75c923805eec2b9cf689eba5f73f58769f79f2e9da72af3",
+      "bytes": 9533,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json": {
+      "sha256": "3d2f61978eedb06846695cb3abad30fa23befc150df39c687b79b73e1efb980c",
+      "bytes": 7095,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json": {
+      "sha256": "5142820d898e5f8f15303676f4a0c2c01408d1c75b2aa2273c5bbf36c2334aab",
+      "bytes": 696,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_files.json"
+      ]
     }
   }
 }
