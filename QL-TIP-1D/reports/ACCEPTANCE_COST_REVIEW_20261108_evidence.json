@@ -1,0 +1,125 @@
+{
+  "schema": "ql-tip-acceptance-cost-review-v1",
+  "observed_at_Asia_Shanghai": "2026-11-08T16:58:18.804886+08:00",
+  "inherited_commit": "83d1837eee140eda63b14c176076ac5e0b0e62d3",
+  "scope": "saved scalar arithmetic, static source review and archive check only; no scientific computation, scientific tests or execution-code changes",
+  "source_hashes": [
+    {
+      "path": "QL-TIP-1D/scripts/estimate_acceptance_path.py",
+      "bytes": 6016,
+      "sha256": "7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252"
+    },
+    {
+      "path": "QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md",
+      "bytes": 7435,
+      "sha256": "82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md",
+      "bytes": 6705,
+      "sha256": "02df6e4574198eba209e514f8b0d3f2518ea8a5fbe3f627d6a7724ac66e3a5a6"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json",
+      "bytes": 2996,
+      "sha256": "d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json",
+      "bytes": 3342,
+      "sha256": "2c567ee7e1159a92093534c8626393f994b16c00dc637e15ed59145b8fd77c8c"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json",
+      "bytes": 3815,
+      "sha256": "7cf6d614a3ac23e525f03258d207594c0a4adcfe99f3dd56770f8a196fd9acaf"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/budget_authorization.json",
+      "bytes": 1601,
+      "sha256": "df8652e99780eed825635e03895b10284bdb0e06047dcc2baf332e790ec4c666"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "bytes": 88402,
+      "sha256": "4b617f6818b9c36f1b956b931068a047b8c8ff1fd24e504d615131b8a0b01fa0"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "bytes": 44197,
+      "sha256": "37cd9537d9e7aa4b55666b4b2b6f9d59b69186375945f5e4bef9f52142644705"
+    }
+  ],
+  "median_tdse_hours": 0.3526006422638885,
+  "median_readout_hours": 0.03065875263889009,
+  "cost_scenarios": [
+    {
+      "name": "interp_4nodes_only",
+      "reported_new_propagations": 32,
+      "reported_hours_equal_nominal_without_retry": true,
+      "nominal_hours": 12.264300636888915,
+      "illustrative_hours_if_uniform_10pct_added": 13.490730700577808,
+      "illustrative_global_if_uniform_margin": 70.47224470235591
+    },
+    {
+      "name": "interp_4nodes_plus_cep_20mu",
+      "reported_new_propagations": 40,
+      "reported_hours_equal_nominal_without_retry": true,
+      "nominal_hours": 15.330375796111143,
+      "illustrative_hours_if_uniform_10pct_added": 16.86341337572226,
+      "illustrative_global_if_uniform_margin": 73.84492737750037
+    },
+    {
+      "name": "interp_4nodes_plus_cep_5nodes",
+      "reported_new_propagations": 72,
+      "reported_hours_equal_nominal_without_retry": true,
+      "nominal_hours": 27.594676433000057,
+      "illustrative_hours_if_uniform_10pct_added": 30.354144076300067,
+      "illustrative_global_if_uniform_margin": 87.33565807807817
+    },
+    {
+      "name": "interp_8nodes_plus_cep_5nodes",
+      "reported_new_propagations": 104,
+      "reported_hours_equal_nominal_without_retry": true,
+      "nominal_hours": 39.85897706988897,
+      "illustrative_hours_if_uniform_10pct_added": 43.84487477687787,
+      "illustrative_global_if_uniform_margin": 100.82638877865597
+    }
+  ],
+  "illustration_warning": "10 percent multiplication is illustrative only, not a validated new budget; duplicate tasks and missing controls are not corrected in these rows",
+  "phase_dedup": {
+    "specified_intensities": [
+      6,
+      8,
+      10,
+      12,
+      20
+    ],
+    "specified_two_bias_extra_phases": 40,
+    "existing_F1_I8_extra_phases": 4,
+    "remaining_for_these_conditions": 36,
+    "72_scenario_after_dedup_only": 68,
+    "104_scenario_after_dedup_only": 100,
+    "complete_path_proved": false
+  },
+  "BSV_F1_fixed_weight_diagnostic": {
+    "non_CEP_relative": 0.06219570379653599,
+    "CEP_percentage_points": 5.0186581793275975
+  },
+  "nominal_remaining_hours": {
+    "continuation": 13.135721551304897,
+    "global": 15.018485998221898,
+    "unknown_interruption_duration": true
+  },
+  "interpolation_warning": "coarse-fine correction is not established current error; no node hierarchy defined in original estimate; for four intervals repeated bisection adds 4 then 8, cumulatively 12",
+  "archive_before_review": "PASS: 1481 original hashes and all package links",
+  "project_tests": "45 passing tests reported by executor, not rerun",
+  "preexisting_uncommitted_file": {
+    "path": "QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json",
+    "bytes": 7842,
+    "sha256": "da937baa5dfd06bdbcfce1930295d358fd051bea65e03a576d59a70ca1ddecbd",
+    "registered_original": false,
+    "head_sha256": "59e1cb5b9aa15cfb16344e32dbf10c1a64f7b3ef373813731992fabe52808fb7",
+    "action": "preserve worktree content; exclude from this review commit"
+  }
+}

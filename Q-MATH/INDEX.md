@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1481 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1484 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -524,6 +524,9 @@
 | reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md) | 6705 | `02df6e457419` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
+| reports | [QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108.md](../QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108.md) | 6491 | `9b70faabc5c9` |
+| results | [QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_evidence.json](../QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_evidence.json) | 5284 | `f4ef0f20d986` |
+| results | [QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_files.json](../QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_files.json) | 532 | `f37c66818be6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
 | reports | [QL-TIP-1D/reports/COST_PLAN_20261106.md](../QL-TIP-1D/reports/COST_PLAN_20261106.md) | 2944 | `e77c7e019f1a` |
 | reports | [QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md](../QL-TIP-1D/reports/DIRECTION_DECISION_20261104.md) | 7629 | `74e7a4c3a3e2` |

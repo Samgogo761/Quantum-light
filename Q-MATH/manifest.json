@@ -12823,6 +12823,30 @@
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md"
       ]
+    },
+    "QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108.md": {
+      "sha256": "9b70faabc5c950bc4fbb3870b6871b82486186e7cd262134c3c949f464cb28b2",
+      "bytes": 6491,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108.md"
+      ]
+    },
+    "QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_evidence.json": {
+      "sha256": "f4ef0f20d986fcf9775c39688471578b6d599a5d9399f16911c9917360b95abc",
+      "bytes": 5284,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_evidence.json"
+      ]
+    },
+    "QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_files.json": {
+      "sha256": "f37c66818be62602ac74a1195ea846a5fac7a76944e770b68b452170f67d1f07",
+      "bytes": 532,
+      "kind": "results",
+      "origins": [
+        "registered:QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_files.json"
+      ]
     }
   }
 }
