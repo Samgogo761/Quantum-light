@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1453 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1470 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -96,7 +96,9 @@
 | code | [Q-MATH/code/v16.30/qmath_16_29_same_state_readout.py](code/v16.30/qmath_16_29_same_state_readout.py) | 8949 | `a3d3866067e0` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_bridge_audit.py](code/v16.30/qmath_16_30_bridge_audit.py) | 8953 | `f41b5c60fcbd` |
 | code | [Q-MATH/code/v16.30/qmath_16_30_output_mode_gram.py](code/v16.30/qmath_16_30_output_mode_gram.py) | 1458 | `ed8b9acc19f7` |
+| results | [Q-MATH/history/by_sha256/0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3.csv](history/by_sha256/0526af02a2ee59cc14a51b7882e51513498800ffeb6300b324dfb3f25ccc2ff3.csv) | 61767 | `0526af02a2ee` |
 | results | [Q-MATH/history/by_sha256/0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383.csv](history/by_sha256/0570f3ee72a40c5b20830da02bc9b1d6e9d332094dd1c18f0631f676ecc28383.csv) | 75684 | `0570f3ee72a4` |
+| results | [Q-MATH/history/by_sha256/05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb.csv](history/by_sha256/05fa1864a9e6c999a90fe7c567e6208ef6acdef6e92c44775a99d759664de4bb.csv) | 4128 | `05fa1864a9e6` |
 | results | [Q-MATH/history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv](history/by_sha256/0e5879e4cf1d3eeec035569b9afe544f4ebd7846cda69907dc6636a46dbcd3ce.csv) | 1205 | `0e5879e4cf1d` |
 | code | [Q-MATH/history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py](history/by_sha256/12c2ba8eb1f55b2b836cfa46dce238d3c3c0e6acce28e80ecae17e68fcf250e0.py) | 37595 | `12c2ba8eb1f5` |
 | code | [Q-MATH/history/by_sha256/16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d.py](history/by_sha256/16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d.py) | 6297 | `16f4199ba005` |
@@ -105,6 +107,7 @@
 | code | [Q-MATH/history/by_sha256/2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673.py](history/by_sha256/2f4f46383b80efc883767c91fb6d22b4adfa8b2f04aa440340225d82d6419673.py) | 6378 | `2f4f46383b80` |
 | results | [Q-MATH/history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json](history/by_sha256/329bda44d566608fc522dff4121e4fbd88f278fa1eeb89db392c9918f190bc9b.json) | 1264 | `329bda44d566` |
 | code | [Q-MATH/history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py](history/by_sha256/3c5879a48dc728bc1ab1efd9724d1a4fe96d41e524d9e06421ce615fdf802496.py) | 35185 | `3c5879a48dc7` |
+| results | [Q-MATH/history/by_sha256/44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14.json](history/by_sha256/44f9e0b15b22d37d9fb7435329ab9ebec4f07d0c497ae1b9fc116a351698fa14.json) | 7609 | `44f9e0b15b22` |
 | code | [Q-MATH/history/by_sha256/52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0.py](history/by_sha256/52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0.py) | 18841 | `52667c8a042b` |
 | code | [Q-MATH/history/by_sha256/5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057.py](history/by_sha256/5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057.py) | 36863 | `5750293a843d` |
 | code | [Q-MATH/history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py](history/by_sha256/5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc.py) | 17470 | `5cccab65d948` |
@@ -112,19 +115,28 @@
 | reports | [Q-MATH/history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md](history/by_sha256/622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517.md) | 3601 | `622c23829ef2` |
 | code | [Q-MATH/history/by_sha256/624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30.py](history/by_sha256/624e5744c2f44304f329fa887a999882ca3ba8dba87e923a7bb34c2a6e8f9a30.py) | 41765 | `624e5744c2f4` |
 | code | [Q-MATH/history/by_sha256/629750fd25aabec14b51202d2cfaa6f5dc5320ad12c1aeec6279ae8c9a372c3f.py](history/by_sha256/629750fd25aabec14b51202d2cfaa6f5dc5320ad12c1aeec6279ae8c9a372c3f.py) | 3117 | `629750fd25aa` |
+| code | [Q-MATH/history/by_sha256/65ab978ccead31395711d4cfb5f87bf7741a90ae61897f83e77ff4ae67fb0598.py](history/by_sha256/65ab978ccead31395711d4cfb5f87bf7741a90ae61897f83e77ff4ae67fb0598.py) | 10720 | `65ab978ccead` |
 | code | [Q-MATH/history/by_sha256/66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958.py](history/by_sha256/66368ab4be01d53ff58ef6a820bc8e0b9b8405938230283f7ed68a7ddb040958.py) | 5637 | `66368ab4be01` |
 | results | [Q-MATH/history/by_sha256/6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d.csv](history/by_sha256/6ce53d42774645a7700812832447555caa0542619b33a5a63a10ca379af8825d.csv) | 44779 | `6ce53d427746` |
 | code | [Q-MATH/history/by_sha256/7c526cd66197be9d9360a4bf7647f4623a0c215a68e5861c096e4c328597e567.py](history/by_sha256/7c526cd66197be9d9360a4bf7647f4623a0c215a68e5861c096e4c328597e567.py) | 36287 | `7c526cd66197` |
 | results | [Q-MATH/history/by_sha256/803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4.csv](history/by_sha256/803f2079415f5651c6efa7a4ffb3714118c5ef903280a434abc9dea20c43e5c4.csv) | 85305 | `803f2079415f` |
+| results | [Q-MATH/history/by_sha256/8edcb9f6bda0f8c709fe8d2f23e3a6049b595976a13ba94f4876bd62d2a9c2ff.json](history/by_sha256/8edcb9f6bda0f8c709fe8d2f23e3a6049b595976a13ba94f4876bd62d2a9c2ff.json) | 3307 | `8edcb9f6bda0` |
 | code | [Q-MATH/history/by_sha256/90d6a678fba285fd0f2262ffec9fe35d546495c6b00c83af1cb249411ae9b646.py](history/by_sha256/90d6a678fba285fd0f2262ffec9fe35d546495c6b00c83af1cb249411ae9b646.py) | 16479 | `90d6a678fba2` |
+| code | [Q-MATH/history/by_sha256/92dc0239701e6aa9fdd85ac036a18804523e3772409e7d84177bae39dbafefaa.py](history/by_sha256/92dc0239701e6aa9fdd85ac036a18804523e3772409e7d84177bae39dbafefaa.py) | 3301 | `92dc0239701e` |
 | code | [Q-MATH/history/by_sha256/9d33c6282f7dbeaaef9c0f51800059f752588e66b0dec015c1f49f173b7b1695.py](history/by_sha256/9d33c6282f7dbeaaef9c0f51800059f752588e66b0dec015c1f49f173b7b1695.py) | 16932 | `9d33c6282f7d` |
 | results | [Q-MATH/history/by_sha256/a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5.csv](history/by_sha256/a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5.csv) | 36211 | `a1c8fd342bbe` |
+| code | [Q-MATH/history/by_sha256/addd8f1bac96be40dce9a8f117ca69e7e105291c776a5319dae13a95f3c1abc6.py](history/by_sha256/addd8f1bac96be40dce9a8f117ca69e7e105291c776a5319dae13a95f3c1abc6.py) | 42963 | `addd8f1bac96` |
 | code | [Q-MATH/history/by_sha256/b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825.py](history/by_sha256/b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825.py) | 9296 | `b452f742e0a6` |
 | results | [Q-MATH/history/by_sha256/b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351.csv](history/by_sha256/b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351.csv) | 31537 | `b6eebb1f0282` |
 | code | [Q-MATH/history/by_sha256/b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6.py](history/by_sha256/b906385bb81737d7fb885b5a8b8ff85a8787f6ba66c9bfe8f39a1dfc92fea9a6.py) | 6067 | `b906385bb817` |
 | results | [Q-MATH/history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json](history/by_sha256/c0b95dae4d807c2aaf4fed35092de343f390eb671b3ce27d35dea413a52d0da1.json) | 25929 | `c0b95dae4d80` |
+| code | [Q-MATH/history/by_sha256/c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3.py](history/by_sha256/c38471e1e7a3abca7cec01f5e876e42cbf94c93161293b54973623899a37efd3.py) | 43825 | `c38471e1e7a3` |
+| code | [Q-MATH/history/by_sha256/c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda.py](history/by_sha256/c3d6c54fddb5363cd16f01585403dbb44cb5cc0e56e5d1f9cc79c980bdec9bda.py) | 14923 | `c3d6c54fddb5` |
 | results | [Q-MATH/history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv](history/by_sha256/d9e22c91fe473465cacd7553ca74c97ea26820e0f6ff0029b6676bed3e53a6b3.csv) | 1224 | `d9e22c91fe47` |
 | results | [Q-MATH/history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json](history/by_sha256/e350158b34f30b1718df5b8898040087db5d05f323e333f12bc0b080edf50b33.json) | 7006 | `e350158b34f3` |
+| results | [Q-MATH/history/by_sha256/e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891.json](history/by_sha256/e831e1dac84ac5af5da8e9ab2e9d4863620ff0d5758f2b23d15229afa5a47891.json) | 25929 | `e831e1dac84a` |
+| results | [Q-MATH/history/by_sha256/ef2c133358182e3ada4769b20a01eef30cfa3c26a1f29309b25601e47a9cf5a5.csv](history/by_sha256/ef2c133358182e3ada4769b20a01eef30cfa3c26a1f29309b25601e47a9cf5a5.csv) | 1224 | `ef2c13335818` |
+| results | [Q-MATH/history/by_sha256/f24c3292313e81328c4f0f2848ef8e97e473d24049837af36b74da66bd241e4d.csv](history/by_sha256/f24c3292313e81328c4f0f2848ef8e97e473d24049837af36b74da66bd241e4d.csv) | 1205 | `f24c3292313e` |
 | results | [Q-MATH/history/by_sha256/f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732.csv](history/by_sha256/f3bebaab3d47a6e92ee39a33759578d24422cadf89d0b95aee79ad6ece666732.csv) | 4199 | `f3bebaab3d47` |
 | code | [Q-MATH/history/by_sha256/ff41877e1d5e73058365a8466d7fdd07adf557d91e2d207ab572e0f8a4890a78.py](history/by_sha256/ff41877e1d5e73058365a8466d7fdd07adf557d91e2d207ab572e0f8a4890a78.py) | 5554 | `ff41877e1d5e` |
 | reports | [Q-MATH/reports/QL-TIP-1D-contract-20261103/QL-TIP-1D_本地Agent科研执行任务书.md](reports/QL-TIP-1D-contract-20261103/QL-TIP-1D_本地Agent科研执行任务书.md) | 22716 | `f8f66a3ba9da` |
@@ -503,6 +515,7 @@
 | results | [QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json](../QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json) | 41882 | `8c25e278a807` |
 | results | [QL-TIP-1D/plans/20261106_execution_review/file_inventory.json](../QL-TIP-1D/plans/20261106_execution_review/file_inventory.json) | 913 | `682dc7e5248f` |
 | reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN.md) | 6325 | `565ba63dea67` |
+| reports | [QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md](../QL-TIP-1D/plans/20261108_finite_rescue/PLAN_r2.md) | 6200 | `d21225094416` |
 | reports | [QL-TIP-1D/references/README.md](../QL-TIP-1D/references/README.md) | 1362 | `d742a0a2b096` |
 | results | [QL-TIP-1D/references/source_inventory.json](../QL-TIP-1D/references/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
 | reports | [QL-TIP-1D/reports/CLOSEOUT_20261104.md](../QL-TIP-1D/reports/CLOSEOUT_20261104.md) | 2227 | `012321c59a6f` |
@@ -1164,19 +1177,19 @@
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json) | 1579 | `d61a0b4a5088` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json) | 3921 | `ee3313babeec` |
 | results | [QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/inventory.json](../QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/inventory.json) | 63743 | `1f4f5c02ef8b` |
-| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json) | 25929 | `e831e1dac84a` |
+| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics.json) | 25930 | `f40e3f7ba5f8` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics_preliminary.json](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/R3_statistics_preliminary.json) | 9833 | `13915605d378` |
-| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv) | 4128 | `05fa1864a9e6` |
+| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response.csv) | 4127 | `dea2a35c89ef` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_prelim.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_prelim.csv) | 3369 | `c2b208f9a0da` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_preliminary.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/classical_response_preliminary.csv) | 3369 | `c2b208f9a0da` |
-| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv) | 1224 | `ef2c13335818` |
+| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit.csv) | 1225 | `2f5fac885141` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit_preliminary.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_audit_preliminary.csv) | 1151 | `102699ab58a4` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights.csv) | 3900 | `05f8c06ddd9e` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights_preliminary.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/integration_weights_preliminary.csv) | 3252 | `ef3c5df90afe` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions.csv) | 1982 | `2e8466cf781c` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions_preliminary.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/intensity_contributions_preliminary.csv) | 1631 | `403e43b072f2` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/midpoint_plan.json](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/midpoint_plan.json) | 4058 | `3547dee821de` |
-| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv) | 1205 | `f24c3292313e` |
+| results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields.csv) | 1206 | `acc854fb8af4` |
 | results | [QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields_preliminary.csv](../QL-TIP-1D/results/bias_v2/reports/v3_r2_20261106/statistical_yields_preliminary.csv) | 1132 | `3c029c949b26` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/config.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/config.json) | 7927 | `2194548f23e0` |
 | results | [QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/provenance.json](../QL-TIP-1D/results/bias_v2/runs/bias_v2_fix_F0_I4_dt005_r01/provenance.json) | 1594 | `e5c39c2c0947` |
@@ -1301,7 +1314,7 @@
 | results | [QL-TIP-1D/results/bias_v3_audit/START_STATE.json](../QL-TIP-1D/results/bias_v3_audit/START_STATE.json) | 837 | `cb72e6b39019` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_components.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_components.csv) | 14550 | `34338c9a236d` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/R1_gate_r1_20261106_v3.json) | 2622 | `c16220bfadbc` |
-| results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json) | 7609 | `44f9e0b15b22` |
+| results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/active_evidence.json) | 7730 | `59e1cb5b9aa1` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/cost_remaining.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/cost_remaining.csv) | 5941 | `7716e4c84960` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout.json](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout.json) | 953 | `c43daeb78752` |
 | results | [QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout_response.csv](../QL-TIP-1D/results/bias_v3_audit/r1_20261106_v3/s3_scout_response.csv) | 528 | `e728ce471a23` |
@@ -1316,11 +1329,14 @@
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/classical_response_v4.csv) | 2363 | `282d465a2e7e` |
 | reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision.md) | 2823 | `e793d6703045` |
 | reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r2.md) | 3490 | `890318181d1f` |
+| reports | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/decision_r3.md) | 4197 | `10dc578c24a4` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_component_map.csv) | 11106 | `0e46a8497d5d` |
+| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_headroom.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/error_headroom.json) | 12964 | `4dd7bc72ed17` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v4.json) | 323 | `f5f213b2796c` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v5.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v5.json) | 785 | `8b8c29be580d` |
-| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json) | 3307 | `8edcb9f6bda0` |
-| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv) | 61767 | `0526af02a2ee` |
+| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v6.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/final_summary_v6.json) | 784 | `200394b7cfb4` |
+| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_summary.json) | 3342 | `2c567ee7e115` |
+| results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/node_error_table.csv) | 61748 | `b688b4b880f6` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase8_selection.json) | 3815 | `7cf6d614a3ac` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.csv](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.csv) | 260 | `4aa14c3c0049` |
 | results | [QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.json](../QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/phase_validation.json) | 18061 | `58cb2b8de771` |
@@ -1381,19 +1397,20 @@
 | results | [QL-TIP-1D/results/stage2_20261103_time100/summary.json](../QL-TIP-1D/results/stage2_20261103_time100/summary.json) | 1166 | `18423cbcb406` |
 | results | [QL-TIP-1D/results/stage2_audit_20261104/summary.json](../QL-TIP-1D/results/stage2_audit_20261104/summary.json) | 5413 | `47661fe6c75e` |
 | code | [QL-TIP-1D/scripts/analyze_continuation_v2.py](../QL-TIP-1D/scripts/analyze_continuation_v2.py) | 18245 | `b0bb1158c59f` |
+| code | [QL-TIP-1D/scripts/analyze_error_headroom.py](../QL-TIP-1D/scripts/analyze_error_headroom.py) | 4006 | `8386587e04b1` |
 | code | [QL-TIP-1D/scripts/analyze_high_intensity_v2.py](../QL-TIP-1D/scripts/analyze_high_intensity_v2.py) | 7751 | `a9ab78f94e02` |
 | code | [QL-TIP-1D/scripts/analyze_p1.py](../QL-TIP-1D/scripts/analyze_p1.py) | 10922 | `f891a233b8e5` |
 | code | [QL-TIP-1D/scripts/analyze_p2.py](../QL-TIP-1D/scripts/analyze_p2.py) | 8764 | `dd6e1cb68047` |
 | code | [QL-TIP-1D/scripts/analyze_scout_v3.py](../QL-TIP-1D/scripts/analyze_scout_v3.py) | 2534 | `ed2456091cc2` |
 | code | [QL-TIP-1D/scripts/analyze_statistics_v2.py](../QL-TIP-1D/scripts/analyze_statistics_v2.py) | 36807 | `1095de283582` |
-| code | [QL-TIP-1D/scripts/apply_r1_v5.py](../QL-TIP-1D/scripts/apply_r1_v5.py) | 3301 | `92dc0239701e` |
+| code | [QL-TIP-1D/scripts/apply_r1_v5.py](../QL-TIP-1D/scripts/apply_r1_v5.py) | 3342 | `ce138ec44f7b` |
 | code | [QL-TIP-1D/scripts/audit_environment.py](../QL-TIP-1D/scripts/audit_environment.py) | 3550 | `15e608104bca` |
 | code | [QL-TIP-1D/scripts/backfill_ledger_v5.py](../QL-TIP-1D/scripts/backfill_ledger_v5.py) | 5266 | `43305e5d2dc1` |
 | code | [QL-TIP-1D/scripts/budget_status.py](../QL-TIP-1D/scripts/budget_status.py) | 2809 | `c70be3f548db` |
 | code | [QL-TIP-1D/scripts/build_budget_reallocation_v4.py](../QL-TIP-1D/scripts/build_budget_reallocation_v4.py) | 9273 | `06377f203b62` |
 | code | [QL-TIP-1D/scripts/build_error_component_map_v4.py](../QL-TIP-1D/scripts/build_error_component_map_v4.py) | 13089 | `04be6381c62e` |
 | code | [QL-TIP-1D/scripts/build_manifest.py](../QL-TIP-1D/scripts/build_manifest.py) | 4424 | `eb6c779a910f` |
-| code | [QL-TIP-1D/scripts/build_node_error_table.py](../QL-TIP-1D/scripts/build_node_error_table.py) | 14923 | `c3d6c54fddb5` |
+| code | [QL-TIP-1D/scripts/build_node_error_table.py](../QL-TIP-1D/scripts/build_node_error_table.py) | 18471 | `4743c25b2833` |
 | code | [QL-TIP-1D/scripts/build_r1_components_v3.py](../QL-TIP-1D/scripts/build_r1_components_v3.py) | 11313 | `4bc004b27d5d` |
 | code | [QL-TIP-1D/scripts/build_r1_v2_gate.py](../QL-TIP-1D/scripts/build_r1_v2_gate.py) | 2718 | `e15423357cee` |
 | code | [QL-TIP-1D/scripts/build_tail_extension_v5.py](../QL-TIP-1D/scripts/build_tail_extension_v5.py) | 4155 | `0e5033f6a76a` |
@@ -1406,13 +1423,13 @@
 | code | [QL-TIP-1D/scripts/readout_continuation_v2.py](../QL-TIP-1D/scripts/readout_continuation_v2.py) | 9482 | `2b0af6349916` |
 | code | [QL-TIP-1D/scripts/rebuild_r1_pairs_v5.py](../QL-TIP-1D/scripts/rebuild_r1_pairs_v5.py) | 20114 | `6097cd5a42b4` |
 | code | [QL-TIP-1D/scripts/run_bias_v1.py](../QL-TIP-1D/scripts/run_bias_v1.py) | 20600 | `a9920174a983` |
-| code | [QL-TIP-1D/scripts/run_continuation_v2.py](../QL-TIP-1D/scripts/run_continuation_v2.py) | 43825 | `c38471e1e7a3` |
+| code | [QL-TIP-1D/scripts/run_continuation_v2.py](../QL-TIP-1D/scripts/run_continuation_v2.py) | 44197 | `37cd9537d9e7` |
 | code | [QL-TIP-1D/scripts/run_solo_v1.py](../QL-TIP-1D/scripts/run_solo_v1.py) | 13211 | `82d22c6d15ce` |
 | code | [QL-TIP-1D/scripts/run_stage1.py](../QL-TIP-1D/scripts/run_stage1.py) | 12978 | `febaeebcc08e` |
 | code | [QL-TIP-1D/scripts/run_stage2.py](../QL-TIP-1D/scripts/run_stage2.py) | 9256 | `65752073a982` |
 | code | [QL-TIP-1D/scripts/run_v3_full_v4.py](../QL-TIP-1D/scripts/run_v3_full_v4.py) | 22708 | `44652988f4b3` |
 | code | [QL-TIP-1D/scripts/summarize_stage2.py](../QL-TIP-1D/scripts/summarize_stage2.py) | 5949 | `2a3415a13d02` |
-| code | [QL-TIP-1D/scripts/v3_stage_v4.py](../QL-TIP-1D/scripts/v3_stage_v4.py) | 42963 | `addd8f1bac96` |
+| code | [QL-TIP-1D/scripts/v3_stage_v4.py](../QL-TIP-1D/scripts/v3_stage_v4.py) | 43899 | `01bfd18f503e` |
 | code | [QL-TIP-1D/scripts/validate_spectrum_v1.py](../QL-TIP-1D/scripts/validate_spectrum_v1.py) | 6663 | `fdd3776f7880` |
 | code | [QL-TIP-1D/src/ql_tip_1d/__init__.py](../QL-TIP-1D/src/ql_tip_1d/__init__.py) | 64 | `b5b8948d99c7` |
 | code | [QL-TIP-1D/src/ql_tip_1d/bias_v1.py](../QL-TIP-1D/src/ql_tip_1d/bias_v1.py) | 6357 | `1faff033af6b` |
@@ -1425,7 +1442,7 @@
 | code | [QL-TIP-1D/tests/test_continuation_v2.py](../QL-TIP-1D/tests/test_continuation_v2.py) | 6123 | `da6859d2edc5` |
 | code | [QL-TIP-1D/tests/test_spectrum_v1.py](../QL-TIP-1D/tests/test_spectrum_v1.py) | 5823 | `4a7b8de8a1be` |
 | code | [QL-TIP-1D/tests/test_statistics_gate_v4.py](../QL-TIP-1D/tests/test_statistics_gate_v4.py) | 6577 | `0bab61b05041` |
-| code | [QL-TIP-1D/tests/test_v4_review_fixes.py](../QL-TIP-1D/tests/test_v4_review_fixes.py) | 10720 | `65ab978ccead` |
+| code | [QL-TIP-1D/tests/test_v4_review_fixes.py](../QL-TIP-1D/tests/test_v4_review_fixes.py) | 12902 | `fdb68360ea69` |
 | code | [QL-TIP-1D/validation/finite_well_si.py](../QL-TIP-1D/validation/finite_well_si.py) | 5752 | `5eeb1b96adac` |
 | results | [QL-TIP-1D/validation/finite_well_si_20261103_r1.json](../QL-TIP-1D/validation/finite_well_si_20261103_r1.json) | 1611 | `d236da72df17` |
 | code | [QL-TIP-1D/validation/stage1_failed_source_v1.py](../QL-TIP-1D/validation/stage1_failed_source_v1.py) | 12809 | `0c4adca3e725` |

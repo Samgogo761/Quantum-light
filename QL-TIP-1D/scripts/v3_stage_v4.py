@@ -649,6 +649,7 @@ def step_decision() -> int:
     label = final.get("scientific_label", "INCOMPLETE")
     s4_gate = jload(AUDIT / "s4_gate.json")
     node_summary = jload(AUDIT / "node_error_summary.json")
+    headroom = jload(AUDIT / "error_headroom.json")
     extension = tail.get("extension", {})
     phase_uncovered = phase.get("coverage", {}).get("uncovered_nodes", [])
     executed_ok = tdse > 0 and readouts > 0
@@ -663,10 +664,18 @@ def step_decision() -> int:
         for key, value in node_summary.get("per_channel", {}).items()
     ]
     response_block = "\n".join(response_lines) if response_lines else "  - 节点表缺失"
-    text = f"""# QL-TIP-1D 两偏压统计研究：判定修订（v3-r2 / r2）
+    headroom_lines = [
+        f"  - {key}: 当前 {entry['response_relative'] * 100:.2f}% → "
+        f"20μ CEP 归零 {entry['hypothetical']['20mu_cep_zero']['remaining_relative'] * 100:.2f}% → "
+        f"8μ dt 归零 {entry['hypothetical']['8mu_dt_zero']['remaining_relative'] * 100:.2f}% → "
+        f"两者归零 {entry['hypothetical']['both_zero']['remaining_relative'] * 100:.2f}%"
+        for key, entry in headroom.get("channels", {}).items()
+    ]
+    headroom_block = "\n".join(headroom_lines) if headroom_lines else "  - 余量诊断缺失"
+    text = f"""# QL-TIP-1D 两偏压统计研究：判定修订（v3-r2 / r3）
 
-日期：2026-11-08。本文件是 `decision.md` 的修订版，依据 2026-11-08 外审
-`reports/FINAL_RESULT_REVIEW_20261108.md` 更正两处模板措辞；历史 `decision.md` 保留不覆盖。
+日期：2026-11-08。本文件是 `decision.md` 与 `decision_r2.md` 之后的修订版：合并 F1/4μ 已保存的
+4→8 直接证据（2.9918675812e-11），并加入逐通道误差余量诊断；历史两版保留不覆盖。
 
 ## 判定
 
@@ -692,6 +701,10 @@ def step_decision() -> int:
   无直接证据的节点；未删除任何误差项以通过门限。
 - 响应项（中点项之外）与 CEP 归零后的响应项：
 {response_block}
+- 误差余量（仅诊断，不是删除误差）：即使把 20μ 的 CEP 项与 8μ 的 dt 项都假设为零，
+  响应项仍为：
+{headroom_block}
+- 已用尽的直接证据：8μ 的 S4 dx/dt/η/网格/扩能区；F1/4μ、F1/8μ、F1/32μ 的 4→8；32μ 七类。
 - 缺失的最终验证项：{final.get('missing_validation', [])}。
 
 ## 预算与授权
@@ -711,8 +724,8 @@ def step_decision() -> int:
 - 细节数据：`R3_statistics.json`、`node_error_table.csv`、`node_error_summary.json`、
   `error_component_map.csv`、`classical_response.csv`、`statistical_yields.csv`。
 """
-    (AUDIT / "decision_r2.md").write_text(text, encoding="utf-8")
-    jwrite(AUDIT / "final_summary_v5.json", {
+    (AUDIT / "decision_r3.md").write_text(text, encoding="utf-8")
+    jwrite(AUDIT / "final_summary_v6.json", {
         "label": label, "status": final.get("status"), "D": d,
         "tdse": tdse, "readouts": readouts, "attempts": attempts,
         "continuation_hours": hours, "interruption_reserve_hours": reserve,

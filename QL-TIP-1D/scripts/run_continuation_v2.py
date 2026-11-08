@@ -106,7 +106,13 @@ def append_ledger(event: dict[str, Any]) -> None:
 def budget_snapshot() -> dict[str, Any]:
     """Summarise new and globally inherited compute use."""
     rows = read_ledger()
-    new_tdse = sum(1 for row in rows if row["kind"] == "tdse" and row["status"] != "preflight_failed")
+    # Count unique START attempts, not only completed `tdse` rows.  The host
+    # blue-screen attempt is a real launch and must consume the attempt budget
+    # (external review 2026-11-08 section 6.1): successful run and its recovery
+    # are two distinct starts, never double-counted for the same attempt.
+    new_tdse = sum(1 for row in rows
+                   if row["kind"] in {"tdse", "tdse_attempt"}
+                   and row["status"] != "preflight_failed")
     new_seconds = sum(float(row["counted_seconds"] or 0.0) for row in rows)
     repair_tdse = sum(1 for row in rows if row["kind"] == "tdse" and row["phase"] == "R1")
     repair_seconds = sum(float(row["counted_seconds"] or 0.0) for row in rows if row["phase"] == "R1")

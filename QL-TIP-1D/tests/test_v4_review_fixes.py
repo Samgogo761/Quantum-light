@@ -26,6 +26,7 @@ import run_v3_full_v4 as orch
 import v3_stage_v4 as stage
 
 R1_V5 = PROJECT / "results/bias_v3_audit/r1_20261107_v5"
+AUDIT = PROJECT / "results/bias_v3_audit/reallocation_20261106"
 
 
 def test_r1_v5_controls_are_paired_with_their_own_reference() -> None:
@@ -205,3 +206,49 @@ def test_s3_cap_uses_explicit_task_ids(monkeypatch: pytest.MonkeyPatch,
                          "phase": "R3", "counted_seconds": "99999", "status": "PASS"})
     monkeypatch.setattr(orch, "V2_RESULTS", tmp_path)
     assert orch.s3_hours_used() == pytest.approx(1.5)
+
+
+def test_budget_counts_interrupted_attempt_as_a_start() -> None:
+    """Review 6.1: tdse_attempt enters the attempt budget; base is at least 97."""
+    import run_continuation_v2 as runner
+    snapshot = runner.budget_snapshot()
+    assert snapshot["new_tdse_attempts"] >= 97
+
+
+def test_f1_4mu_direct_phase_is_reused_without_new_tdse() -> None:
+    """Review 4: the saved F1/4 mu 4->8 pair is used at its own node only."""
+    with (AUDIT / "node_error_table.csv").open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    f1 = next(row for row in rows
+              if row["F"] == "1" and float(row["I_over_mu"]) == 4.0
+              and row["component"] == "cep")
+    assert f1["evidence_type"] == "direct_4to8"
+    assert float(f1["value"]) == pytest.approx(2.991867581116084e-11, rel=1e-12)
+    assert "R1_pair_audit_v5" in f1["source"]
+    # The same tiny value must never be transferred to F0/4 mu.
+    f0 = next(row for row in rows
+              if row["F"] == "0" and float(row["I_over_mu"]) == 4.0
+              and row["component"] == "cep")
+    assert f0["evidence_type"] == "envelope_2to4"
+
+
+def test_old_s4_dt_controls_are_already_completed() -> None:
+    """Review 2: the old s4-control entry cannot produce new dt evidence."""
+    from ql_tip_1d.continuation_v2 import s4_control_tasks
+    ids = {task["run_id"] for task in s4_control_tasks(8.0)}
+    assert ids == {
+        "bias_v2_s4_F0_I8_phi000_dx048_r01",
+        "bias_v2_s4_F0_I8_phi000_dt005_r01",
+        "bias_v2_s4_F1_I8_phi000_dx048_r01",
+        "bias_v2_s4_F1_I8_phi000_dt005_r01",
+    }
+    for run_id in ids:
+        assert (PROJECT / "results/bias_v2/runs" / run_id / "summary.json").exists()
+
+
+def test_current_phase8_selection_is_not_the_20mu_candidate() -> None:
+    """Review 7: the existing selection cannot be reused for the 20 mu A1 task."""
+    selection = json.loads((AUDIT / "phase8_selection.json").read_text(encoding="utf-8"))
+    conditions = {(float(F), float(I)) for F, I in selection["conditions"]}
+    assert (0.0, 20.0) not in conditions
+    assert (1.0, 20.0) not in conditions

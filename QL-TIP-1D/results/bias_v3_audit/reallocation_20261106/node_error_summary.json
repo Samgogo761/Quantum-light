@@ -19,6 +19,10 @@
   "direct_phase_conditions": [
     [
       1.0,
+      4.0
+    ],
+    [
+      1.0,
       8.0
     ],
     [
@@ -67,8 +71,8 @@
     },
     "bsv_F1": {
       "Y": 1.9228061793642173e-05,
-      "response_error_absolute": 2.243734434617503e-06,
-      "response_relative": 0.11669061909086446,
+      "response_error_absolute": 2.160893531831647e-06,
+      "response_relative": 0.11238228558981196,
       "relative_if_cep_zero": 0.06219570379653599,
       "per_component_absolute": {
         "dx": 2.4769414227621586e-07,
@@ -81,13 +85,13 @@
         "mask": 7.817782871113705e-14,
         "time": 2.580093556026178e-13,
         "preparation": 5.667866695446914e-13,
-        "cep": 1.0478315987186446e-06
+        "cep": 9.649906959327886e-07
       }
     },
     "thermal_F1": {
       "Y": 3.1969458145020773e-06,
-      "response_error_absolute": 3.5064136905178035e-07,
-      "response_relative": 0.10968011014174557,
+      "response_error_absolute": 2.834003434746901e-07,
+      "response_relative": 0.0886472151605202,
       "relative_if_cep_zero": 0.055259598037926974,
       "per_component_absolute": {
         "dx": 4.174037445356465e-08,
@@ -100,7 +104,7 @@
         "mask": 1.2850865797336868e-14,
         "time": 4.289781977759735e-14,
         "preparation": 9.423655334390558e-14,
-        "cep": 1.7397942839336286e-07
+        "cep": 1.0673840281627246e-07
       }
     }
   }

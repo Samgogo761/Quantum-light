@@ -1,0 +1,30 @@
+{
+  "label": "INCOMPLETE",
+  "status": "INCOMPLETE",
+  "D": {
+    "value": 0.8590078149683408,
+    "lo": 0.3793989210924774,
+    "hi": 1.9518562447102636,
+    "valid": false
+  },
+  "tdse": 96,
+  "readouts": 176,
+  "attempts": 1,
+  "continuation_hours": 42.8642784486951,
+  "interruption_reserve_hours": 0.5,
+  "tail_complete": true,
+  "phase_complete": true,
+  "missing_validation": [],
+  "node_response_relative": {
+    "bsv_F0": 0.11528452018183191,
+    "thermal_F0": 0.1115310480410495,
+    "bsv_F1": 0.11238228558981196,
+    "thermal_F1": 0.0886472151605202
+  },
+  "node_response_if_cep_zero": {
+    "bsv_F0": 0.04522679412840101,
+    "thermal_F0": 0.04294742798302799,
+    "bsv_F1": 0.06219570379653599,
+    "thermal_F1": 0.055259598037926974
+  }
+}

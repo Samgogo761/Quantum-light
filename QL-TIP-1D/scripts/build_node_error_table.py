@@ -89,15 +89,73 @@ def s4_direct() -> dict[tuple[float, str], tuple[float, str]]:
     return result
 
 
+def _readout_ok(readout_id: str) -> bool:
+    """Verify protocol, status, thresholds and provenance SHA of one readout."""
+    path = PROJECT / "results/bias_v2/readouts" / readout_id / "summary.json"
+    if not path.exists():
+        return False
+    summary = json.loads(path.read_text(encoding="utf-8"))
+    thresholds = [float(value) for value in summary.get("thresholds_eV", [])]
+    mask = [float(value) for value in summary.get("mask_bounds_nm", [])]
+    return (summary.get("execution_status") == "PASS"
+            and abs(float(summary.get("eta_eV", -1.0)) - 0.05) < 1e-12
+            and abs(float(summary.get("step_eV", -1.0)) - 0.0125) < 1e-12
+            and thresholds == [0.5170816, 0.7170816, 0.9170816]
+            and mask == [2.0, 4.0]
+            and bool(summary.get("state_sha256"))
+            and bool(summary.get("run_config_sha256")))
+
+
 def phase_direct() -> dict[tuple[float, float], tuple[float, str]]:
-    """Direct 4->8 change only for the exact (F, node) conditions measured."""
-    validation = jload(AUDIT / "phase_validation.json")
+    """Direct 4->8 change for the exact (F, node) conditions measured.
+
+    Two audited sources are merged (external review 2026-11-08 section 4):
+    `phase_validation.json` for the representative F1/8 and F1/32 checks, and
+    `R1_pair_audit_v5.csv`, which already contains the F1/4 mu 4->8 pair
+    (2.9918675812e-11) under the same eta/dE/mask/threshold protocol.  A row is
+    accepted only when the frozen protocol tag is present, the 4+4 phase sets
+    are complete, and a provenance SHA is recorded.  Nothing is invented: a
+    value is used only at its own (F, node).
+    """
     result: dict[tuple[float, float], tuple[float, str]] = {}
+    validation = jload(AUDIT / "phase_validation.json")
     for row in validation.get("rows", []):
         if row.get("status") != "PASS" or row.get("relative_4to8_change") in (None, ""):
             continue
         result[(float(row["F"]), float(row["I_over_mu"]))] = (
             abs(float(row["relative_4to8_change"])), "phase_validation.json")
+    r1_audit = PROJECT / "results/bias_v3_audit/r1_20261107_v5/R1_pair_audit_v5.csv"
+    if r1_audit.exists():
+        four = ["phi000", "phi090", "phi180", "phi270"]
+        extra = ["phi045", "phi135", "phi225", "phi315"]
+        with r1_audit.open(encoding="utf-8", newline="") as handle:
+            for row in csv.DictReader(handle):
+                # Actual audit columns: pair_label, source_condition,
+                # reference_readout_ids, control_readout_ids, reference_Y,
+                # control_Y, signed_change, relative_estimate, coverage, rule.
+                if not str(row.get("pair_label", "")).endswith(":cep:4to8"):
+                    continue
+                if row.get("coverage") != "direct_4to8":
+                    continue
+                reference = row.get("reference_readout_ids", "")
+                control = row.get("control_readout_ids", "")
+                if not all(tag in reference for tag in four):
+                    continue
+                if not all(tag in control for tag in extra):
+                    continue
+                ref_ids = [item for item in reference.split(";") if item]
+                ctl_ids = [item for item in control.split(";") if item]
+                if len(ref_ids) != 4 or len(ctl_ids) != 4:
+                    continue
+                if not all(_readout_ok(readout_id) for readout_id in ref_ids + ctl_ids):
+                    continue
+                if not row.get("reference_Y") or not row.get("control_Y"):
+                    continue
+                condition = row["source_condition"]
+                F = float(condition.split("_I")[0][1:])
+                I = float(condition.split("_I")[1])
+                result[(F, I)] = (abs(float(row["relative_estimate"])),
+                                  f"R1_pair_audit_v5.csv:{condition}:cep:4to8")
     return result
 
 
@@ -155,9 +213,14 @@ def main() -> int:
                 elif I == 4.0:
                     for component in CATEGORIES:
                         if component == "cep":
-                            add(component, envelope, "envelope_2to4",
-                                "8/12/20 mu saved readouts", f"{label} mid nodes",
-                                "4 mu 2->4 change (~1e-4) cannot represent 8-20 mu phase dependence")
+                            if (F, I) in direct_phase:
+                                add(component, direct_phase[(F, I)][0], "direct_4to8",
+                                    direct_phase[(F, I)][1], f"{label} 4 mu node",
+                                    "direct 4->8 pair already saved under the same protocol")
+                            else:
+                                add(component, envelope, "envelope_2to4",
+                                    "8/12/20 mu saved readouts", f"{label} mid nodes",
+                                    "no direct 4->8 at this node; envelope transferred")
                         elif component in {"mask", "time", "preparation"}:
                             add(component, max(r1[f"{label}_I1"][component],
                                                r1[f"{label}_I4"][component]),
