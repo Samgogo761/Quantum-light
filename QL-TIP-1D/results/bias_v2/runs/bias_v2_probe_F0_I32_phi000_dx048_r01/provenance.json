@@ -1,0 +1,24 @@
+{
+  "schema": "continuation-v2-run",
+  "run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01",
+  "started_utc": "2026-11-05T12:08:05.875094+00:00",
+  "config_sha256": "971c92ea6b672affa01579d44141ee6d6c2446be2399508eb38e225a01297929",
+  "parent_config_sha256": "79a8303e7fb07b4a2951c5723146e543459204bae719113c7086d6a942e903eb",
+  "prep_state_sha256": "73a19aa83959be62c306495e2edb5b7fa13eb685196509705826df9939a9f249",
+  "prep_config_sha256": null,
+  "prep_summary_sha256": null,
+  "source_sha256": {
+    "scripts/run_continuation_v2.py": "d6f3ef2d8b2c6f5523b95ec8cc3546e65a8f6f86f3463547a31dcc615bdd5e42",
+    "scripts/readout_continuation_v2.py": "b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825",
+    "src/ql_tip_1d/continuation_v2.py": "f7faef57a2407e18b403ff876f0a2260507e1d150b62a030fe433aca3e2a6137",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "base_git_commit": "fd7ce6cfc4b10c1d4cbeac2e4e32dd71be2ec488",
+  "host": "local",
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "finished_utc": "2026-11-05T12:39:25.452913+00:00"
+}

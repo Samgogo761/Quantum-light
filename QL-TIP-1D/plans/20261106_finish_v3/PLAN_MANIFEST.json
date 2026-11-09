@@ -1,0 +1,1094 @@
+{
+  "schema": "ql-tip-1d-finish-plan-v3",
+  "document_date": "2026-11-06",
+  "kind": "PLANNING_ONLY_NO_SCIENTIFIC_EXECUTION",
+  "git_head_at_review": "05dd51544bcbde4fc23967e71fba2f4d7d242ee2",
+  "source_snapshot": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "39d26ac412c65468b3c2afe795f7a42030a8fa6765f7d71a09a2ae7ce3fd0f6e",
+      "bytes": 2444
+    },
+    {
+      "path": "Q-MATH/README.md",
+      "sha256": "612b75b42bddc193d376d614c9e2d2b9b01398f03e2d735dc8442dca9c91c873",
+      "bytes": 14295
+    },
+    {
+      "path": "Q-MATH/SYNC.md",
+      "sha256": "7f4f9fb58d8d2549ed6acd69ff1317711a7d6c819488e883657ca6da112dfc7f",
+      "bytes": 3754
+    },
+    {
+      "path": "Q-MATH/manifest.json",
+      "sha256": "8ab8488b4cfb930be33ea0e61db5da2355ba90b6b163fab3b5bfa2065f926b02",
+      "bytes": 483146
+    },
+    {
+      "path": "tools/qmath/manage.py",
+      "sha256": "0f95913b5905e448816e4d2a2ec40e5f56f1e41cfc2616a91bc13f9ffc74a58a",
+      "bytes": 15709
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md",
+      "sha256": "3619e5fc5bd28e4273ab1a2c543b2b63d5f0d0d8bf13b9ae4a4b069a2546bf8e",
+      "bytes": 40898
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md",
+      "sha256": "19ccca5837f7e05696300f7081896759a6330fd8b2f40c320cf608509a70089e",
+      "bytes": 17611
+    },
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "sha256": "5750293a843db05b1fffc3a909dbae7f9e5143712f723f0a60e29346cfd33057",
+      "bytes": 36863
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
+      "sha256": "52667c8a042b13cd571085b0da071822ce9d59004fe988e12789c32d6a0781e0",
+      "bytes": 18841
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_high_intensity_v2.py",
+      "sha256": "a9ab78f94e023d382bd4db2b683ee1eef83baafac1bb5c5a597d84af77233e3e",
+      "bytes": 7751
+    },
+    {
+      "path": "QL-TIP-1D/scripts/readout_continuation_v2.py",
+      "sha256": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+      "bytes": 9482
+    },
+    {
+      "path": "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py",
+      "sha256": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+      "bytes": 17470
+    },
+    {
+      "path": "QL-TIP-1D/tests/test_continuation_v2.py",
+      "sha256": "16f4199ba00573ae180088eb25a2573f7c79c3d6b992cb693f0dbbf7f379629d",
+      "bytes": 6297
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "sha256": "a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5",
+      "bytes": 36211
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json",
+      "sha256": "7496deaa8139a9f163f8614770951a8c543d0e5f2039b042b8a7c47d3138acc8",
+      "bytes": 18509
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261106_v2.json",
+      "sha256": "1d10422bd2c891d0246d459e476f92962142edab870f24b35f9d7bc1fec274fd",
+      "bytes": 60809
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json",
+      "sha256": "d61a0b4a508898474b566152dd5f3f5be6a191e5ceec796ccfa3d7e50157c88c",
+      "bytes": 1579
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r2_20261106_v2.json",
+      "sha256": "ee3313babeec7d80198a4812407bf99497f83c55297c127a0dc1b0c8e85c5fdd",
+      "bytes": 3921
+    },
+    {
+      "path": "QL-TIP-1D/reports/COST_PLAN_20261106.md",
+      "sha256": "e77c7e019f1a77442cfeeedb28f420d7aa043daee9706d2ad3389a1914d5c014",
+      "bytes": 2944
+    }
+  ],
+  "snapshot_warning": "Source hashes identify the reviewed state, not approval gates. Reconcile subsequent changes without overwriting them.",
+  "existing_ledger": {
+    "counts_by_kind": {
+      "readout": 90,
+      "tdse": 16
+    },
+    "unique_event_count": 106,
+    "counted_seconds": 44038.93398920247,
+    "counted_hours": 12.23303721922291,
+    "values_are_ledger_observations_not_science_validation": true
+  },
+  "limits": {
+    "global_TDSE": 240,
+    "global_science_hours": 72,
+    "continuation_TDSE": 112,
+    "continuation_science_hours": 40,
+    "R1_repair_TDSE": 12,
+    "R1_repair_science_hours": 8,
+    "nominal_remaining_continuation_TDSE": 96,
+    "nominal_remaining_continuation_hours": 27.766962780777092,
+    "S3_new_TDSE": 22,
+    "S3_science_hours": 8,
+    "batch_max_TDSE": 8,
+    "event_max_minutes": 90,
+    "max_nonzero_intensities_per_F": 12,
+    "Imax_over_mu": 64,
+    "all_preparations_failures_controls_readouts_count": true,
+    "no_budget_reset_between_stages": true
+  },
+  "default_sequence": [
+    "S0_preserve_old_bytes_and_checkpoint_repairs",
+    "S1_complete_R1_category_evidence_and_shared_gate_statistics_interfaces",
+    "S2_cost_all_mandatory_tasks_and_enforce_timeouts",
+    "S3_bounded_22_run_scout_library",
+    "S4_direct_controls_in_important_intensity_region",
+    "S5_remaining_30_runs_and_preliminary_statistics",
+    "S6_tail_real_midpoints_phase_checks_and_final_audit"
+  ],
+  "default_dt0025_first": false,
+  "no_new_physics_or_material_variant": true,
+  "runner_note": "Adapt explicit task selection and gate checks first. This JSON is not an executable runner config; do not use a bare offset as authorization.",
+  "initial_library_new_tasks": [
+    {
+      "task_id": "bias_v2_lib_F0_I8_phi090_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 8.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I8_phi180_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 8.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I8_phi270_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 8.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I8_phi090_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 8.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I8_phi180_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 8.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I8_phi270_r01",
+      "batch": "S3_A",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 8.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I12_phi000_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 12.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I12_phi090_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 12.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I12_phi180_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 12.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I12_phi270_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 12.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I12_phi000_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 12.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I12_phi090_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 12.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I12_phi180_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 12.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I12_phi270_r01",
+      "batch": "S3_B",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 12.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I20_phi000_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 20.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I20_phi090_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 20.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I20_phi180_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 20.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I20_phi270_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 20.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I20_phi000_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 20.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I20_phi090_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 20.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I20_phi180_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 20.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I20_phi270_r01",
+      "batch": "S3_C",
+      "stage": "S3",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 20.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I32_phi090_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 32.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I32_phi180_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 32.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I32_phi270_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 32.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I32_phi090_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 32.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I32_phi180_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 32.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I32_phi270_r01",
+      "batch": "S5_D",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 32.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.25_phi000_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.25,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.25_phi090_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.25,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.25_phi180_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.25,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.25_phi270_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.25,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.25_phi000_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.25,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.25_phi090_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.25,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.25_phi180_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.25,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.25_phi270_r01",
+      "batch": "S5_E",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.25,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.5_phi000_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.5,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.5_phi090_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.5,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.5_phi180_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.5,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I0.5_phi270_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 0.5,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.5_phi000_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.5,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.5_phi090_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.5,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.5_phi180_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.5,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I0.5_phi270_r01",
+      "batch": "S5_F",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 0.5,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I2_phi000_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 2.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I2_phi090_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 2.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I2_phi180_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 2.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F0_I2_phi270_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 2.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I2_phi000_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 2.0,
+      "CEP_deg": 0,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I2_phi090_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 2.0,
+      "CEP_deg": 90,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I2_phi180_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 2.0,
+      "CEP_deg": 180,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    },
+    {
+      "task_id": "bias_v2_lib_F1_I2_phi270_r01",
+      "batch": "S5_G",
+      "stage": "S5",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 2.0,
+      "CEP_deg": 270,
+      "status": "PLANNED_NOT_RUN",
+      "new_laser_TDSE": 1,
+      "required_readout": "common_eta005_dE00125_three_frozen_thresholds",
+      "numerical_regime": "original_dt_0.1au_24wellcells",
+      "preparation": "verify existing matched preparation; no implicit new prep"
+    }
+  ],
+  "initial_library_existing_tasks": [
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 1.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p1_F0.000_I1_phi000_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi090_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 1.0,
+      "CEP_deg": 90,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I1_phi090_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi180_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 1.0,
+      "CEP_deg": 180,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I1_phi180_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi270_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 1.0,
+      "CEP_deg": 270,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I1_phi270_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi000_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 4.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I4_phi000_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi090_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 4.0,
+      "CEP_deg": 90,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I4_phi090_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi180_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 4.0,
+      "CEP_deg": 180,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I4_phi180_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi270_r02",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 4.0,
+      "CEP_deg": 270,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F0.000_I4_phi270_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 8.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v2/bias_v2_probe_F0_I8_phi000_r01/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_v2_probe_F0_I32_phi000_r01",
+      "F_dc_V_per_nm": 0,
+      "I_over_mu": 32.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v2/bias_v2_probe_F0_I32_phi000_r01/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 1.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p1_F1.000_I1_phi000_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi090_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 1.0,
+      "CEP_deg": 90,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I1_phi090_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi180_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 1.0,
+      "CEP_deg": 180,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I1_phi180_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi270_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 1.0,
+      "CEP_deg": 270,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I1_phi270_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 4.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I4_phi000_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi090_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 4.0,
+      "CEP_deg": 90,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I4_phi090_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi180_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 4.0,
+      "CEP_deg": 180,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I4_phi180_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi270_r02",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 4.0,
+      "CEP_deg": 270,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v1/bias_p2_F1.000_I4_phi270_r02/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 8.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v2/bias_v2_probe_F1_I8_phi000_r01/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    },
+    {
+      "run_id": "bias_v2_probe_F1_I32_phi000_r01",
+      "F_dc_V_per_nm": 1,
+      "I_over_mu": 32.0,
+      "CEP_deg": 0,
+      "status": "REUSE_AFTER_STATE_CONFIG_READOUT_SHA_CHECK",
+      "state_path": "QL-TIP-1D/data/raw/bias_v2/bias_v2_probe_F1_I32_phi000_r01/state_100fs.npz",
+      "state_present_at_plan_creation": true,
+      "new_laser_TDSE": 0
+    }
+  ],
+  "initial_library_DC_endpoints": [
+    {
+      "F_dc_V_per_nm": 0,
+      "run_id": "bias_p1_dc_F0.000_r02",
+      "required": "real common readout; never substitute exact zero"
+    },
+    {
+      "F_dc_V_per_nm": 1,
+      "run_id": "bias_p1_dc_F1.000_r02",
+      "required": "real common readout; never substitute exact zero"
+    }
+  ],
+  "adaptive_reservations_not_run": [
+    {
+      "stage": "S4",
+      "purpose": "important-region dx/dt controls",
+      "typical_TDSE": 4,
+      "preparations_if_missing_extra": true,
+      "choose_after": "S3 contribution evidence, before seeing control outcomes"
+    },
+    {
+      "stage": "S6",
+      "purpose": "two distinct real interpolation midpoints",
+      "typical_TDSE": 16,
+      "both_F_four_CEP": true
+    },
+    {
+      "stage": "S6",
+      "purpose": "highest and important-region 4-to-8 CEP",
+      "max_TDSE_without_further_phase_refinement": 8,
+      "reuse_if_same_condition": true
+    },
+    {
+      "stage": "CONDITIONAL",
+      "purpose": "one dt=.025 diagnostic",
+      "typical_TDSE": 2,
+      "default": "DEFERRED_UNTIL_WEIGHTED_ERROR_JUSTIFIES",
+      "fine_production_other_phases_not_included": true
+    },
+    {
+      "stage": "CONDITIONAL",
+      "purpose": "one sufficient tail node, 48 or 64",
+      "minimum_production_TDSE": 8,
+      "new_max_controls_prep_phase_and_readout_extra": true
+    }
+  ],
+  "typical_mandatory_remaining_TDSE_before_optional_or_extra_preparations": 80,
+  "acceptance": {
+    "final_weighted_Y_total_relative_error_max": 0.05,
+    "tail_bound_over_positive_Y_lower_max": 0.01,
+    "node_relative_error_max": 0.01,
+    "quadrature_relative_error_max": 0.001,
+    "phase_4_to_8_change_target": 0.02,
+    "phase_error_included_once_in_total": true,
+    "final_classifications": [
+      "VALID_DIFFERENCE",
+      "VALID_UNRESOLVED",
+      "INCOMPLETE"
+    ],
+    "gate_PASS_alone_is_insufficient": true,
+    "intervals_are_empirical_audit_intervals_not_confidence_intervals": true
+  },
+  "checks_performed_by_this_script": [
+    "required small source files exist and SHA256 captured",
+    "ledger event identities unique; 16 TDSE and 90 readout observed",
+    "52 unique planned new library tasks split 22 plus 30",
+    "20 reusable phase identities plus 52 planned tasks cover 72 cells",
+    "all fixed library batches <=8 tasks",
+    "no scientific module imported; no research solver/test executed"
+  ]
+}

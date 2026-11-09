@@ -1,0 +1,40 @@
+{
+  "scope": "Independent theorem unit test using toy kernels; not an M0 rerun",
+  "two_mode_toy_A": {
+    "omega1": 0.16,
+    "omega2": 0.2,
+    "omega_out": 0.36,
+    "free_input_energy": 0.1,
+    "mean_frequency_of_optimal_BSV_mode": 0.17777777777777778,
+    "BSV_mean_photon_number": 0.5625,
+    "classical_bound": 0.5590169943749475,
+    "BSV_response": 0.9316949906249126,
+    "ratio_numeric": 1.666666666666667,
+    "ratio_formula": 1.6666666666666667,
+    "formula_residual": 2.220446049250313e-16
+  },
+  "two_mode_toy_B": {
+    "omega1": 0.08,
+    "omega2": 0.28,
+    "omega_out": 0.36000000000000004,
+    "free_input_energy": 0.1,
+    "mean_frequency_of_optimal_BSV_mode": 0.12444444444444445,
+    "BSV_mean_photon_number": 0.8035714285714286,
+    "classical_bound": 0.6681531047810609,
+    "BSV_response": 1.000991571884662,
+    "ratio_numeric": 1.4981470036162818,
+    "ratio_formula": 1.498147003616282,
+    "formula_residual": 2.220446049250313e-16
+  },
+  "random_classical_test": {
+    "dimension": 5,
+    "seed": 20261023,
+    "samples": 5000,
+    "input_energy": 0.37,
+    "weighted_operator_norm": 33.04264038311535,
+    "classical_bound": 12.22577694175268,
+    "largest_sample_response": 10.090794055885834,
+    "margin": 2.1349828858668456,
+    "passed": true
+  }
+}

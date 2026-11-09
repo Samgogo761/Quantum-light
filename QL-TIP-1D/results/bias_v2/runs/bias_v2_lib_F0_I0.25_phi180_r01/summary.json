@@ -1,0 +1,60 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.9999999999870082,
+  "N_125fs": 0.9999999999870082,
+  "left_CAP_loss_observation_100fs": 6.080094705284539e-14,
+  "right_CAP_loss_observation_100fs": 1.4238798894562745e-27,
+  "left_CAP_loss_total_125fs": 6.080094705284598e-14,
+  "right_CAP_loss_total_125fs": 1.4238798894562745e-27,
+  "signed_flux_100fs": 4.0395050357995666e-13,
+  "signed_flux_125fs": 4.0395050357995666e-13,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.2930989612414123e-11,
+  "Y_H": "not_computed",
+  "Y_H_lower": "not_computed",
+  "Y_H_upper": "not_computed",
+  "masked_norm": "not_computed",
+  "spectrum_integral": "not_computed",
+  "propagation_seconds": 815.7638091999979,
+  "spectrum_seconds": 3.6999990697950125e-06,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        0.0,
+        0.0
+      ],
+      "energy_points": 0,
+      "masked_norm": "not_computed",
+      "spectrum_integral": "not_computed",
+      "spectrum_norm_absolute_difference": "not_computed",
+      "Y_H_lower": "not_computed",
+      "Y_H_main": "not_computed",
+      "Y_H_upper": "not_computed",
+      "execution_status": "NOT_COMPUTED",
+      "note": "legacy eta=.1 diagnostic skipped; all yields are not_computed and must not be consumed; continuation common readout is authoritative"
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_lib_F0_I0.25_phi180_r01",
+  "I_over_mu": 0.25,
+  "I_inc_W_per_cm2": 41666666666.666664,
+  "wall_seconds": 816.0011098000032,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "52f671942c8b9395a093a6329312d5fca5b1eb787c7ec088f6bf2c80143bb068",
+  "peak_working_set_bytes": 128086016
+}

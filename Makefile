@@ -45,7 +45,7 @@ debug: FFLAGS = -O0 -g -fbacktrace -fcheck=all -fopenmp -Wall -std=f2008 -fall-i
 debug: clean all
 
 clean:
-	rm -rf $(ODIR) $(MDIR) $(PROG) *.mod
+	rm -rf $(ODIR) $(MDIR) $(PROG) *.mod tests/*.mod test_qlight test_parse_ids
 
 # --- Module dependencies ---
 $(ODIR)/mod_wannier.o:        $(ODIR)/mod_params.o
@@ -72,8 +72,39 @@ $(ODIR)/main.o:               $(ODIR)/mod_params.o $(ODIR)/mod_wannier.o \
                               $(ODIR)/mod_berry.o $(ODIR)/mod_geometry.o \
                               $(ODIR)/mod_spin.o
 
-# --- Sampler unit test (standalone, no LAPACK/FFTW needed) ---
+# --- Sampler + propagate_ids unit tests (standalone, no LAPACK/FFTW needed) ---
+# NOTE: remove tests/*.mod first — stale local .mod shadows -Imod/-Jmod.
 test: dirs
+	rm -f tests/*.mod
 	$(FC) -O2 -Wall -std=f2008 $(MODINC) $(MODFLAG) -o test_qlight \
 		$(SDIR)/mod_quantum_light.f90 tests/test_qlight_sampling.f90
 	./test_qlight
+	rm -f tests/*.mod
+	$(FC) -O2 -Wall -std=f2008 $(MODINC) $(MODFLAG) -o test_parse_ids \
+		$(SDIR)/mod_quantum_light.f90 tests/test_parse_propagate_ids.f90
+	./test_parse_ids
+	python tools/analysis/test_parse_propagate_ids_neg.py --bin ./test_parse_ids
+	python tools/analysis/test_hhg_fft_utils.py
+	python tools/analysis/test_merge_compare_neg.py
+	python tools/analysis/test_merge_compare_pos.py
+	python tools/analysis/test_gh3_gh5_quadrature_gate.py
+	python tools/analysis/test_diagnose_gh5_quadrature.py
+	python tools/analysis/test_cep_pi_gate_v2.py
+	python tools/analysis/test_gh7_tail_model_gate.py
+	python tools/analysis/test_gh7_tail_edge_band_audit.py
+	python tools/analysis/test_audit_isafe_occ.py
+	python tools/analysis/test_q_to_field_mean.py
+	python tools/analysis/test_finite_bandwidth_modes.py
+	python tools/b0_small_model/test_b0_gates.py
+	python tools/b0_small_model/test_b0_open_gaussian.py
+	python tools/b0_small_model/test_b1_dev_closed_wick.py
+	$(MAKE) test-field-cep
+
+# Production generate_field_sample antipode gate (mod_params + mod_laser only).
+.PHONY: test-field-cep
+test-field-cep: dirs
+	rm -f tests/*.mod
+	$(FC) $(FFLAGS) $(MODINC) $(MODFLAG) -o test_field_cep_pi \
+		$(SDIR)/mod_params.f90 $(SDIR)/mod_laser.f90 tests/test_field_cep_pi.f90
+	./test_field_cep_pi
+	rm -f tests/*.mod

@@ -1,0 +1,324 @@
+{
+  "schema": "continuation-v2-statistics",
+  "revision": "r1_20261105_v1",
+  "mode": "PRELIMINARY",
+  "Imax_over_mu": 32.0,
+  "nodes": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "midpoints": [],
+  "yields": {
+    "coherent_F0": {
+      "state": "coherent",
+      "F": 0.0,
+      "Y": 2.8329603617305314e-09,
+      "Y_lo": 2.8138884495239435e-09,
+      "Y_hi": 2.8520322739371193e-09,
+      "relative_response_error": 0.006732149331922703,
+      "delta": 1.9071912206587696e-11,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.006732149331922703,
+      "gate": {
+        "Y_lo": 2.8138884495239435e-09,
+        "Y_hi": 2.8520322739371193e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.006732149331922703,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F0": {
+      "state": "bsv",
+      "F": 0.0,
+      "Y": 1.448134996099829e-05,
+      "Y_lo": 1.2681481752076515e-05,
+      "Y_hi": 1.629663542782034e-05,
+      "relative_response_error": 0.12428870331628238,
+      "delta": 1.7998682089217739e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1253533318172027,
+      "gate": {
+        "Y_lo": 1.2681481752076515e-05,
+        "Y_hi": 1.629663542782034e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1253533318172027,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.07145429587261037,
+        0.01582062928141481,
+        0.001774653307196515,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F0": {
+      "state": "thermal",
+      "F": 0.0,
+      "Y": 2.5388939263378668e-06,
+      "Y_lo": 2.227257672592361e-06,
+      "Y_hi": 2.850530192747538e-06,
+      "relative_response_error": 0.12274488922623625,
+      "delta": 3.116362537455055e-07,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.12274489421430032,
+      "gate": {
+        "Y_lo": 2.227257672592361e-06,
+        "Y_hi": 2.850530192747538e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.12274489421430032,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05401477810873134,
+        0.0044127144613206205,
+        8.156183498733268e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    },
+    "coherent_F1": {
+      "state": "coherent",
+      "F": 1.0,
+      "Y": 5.509789712220833e-09,
+      "Y_lo": 5.341497955436355e-09,
+      "Y_hi": 5.678081469005311e-09,
+      "relative_response_error": 0.030544134272711555,
+      "delta": 1.6829175678447788e-10,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.030544134272711555,
+      "gate": {
+        "Y_lo": 5.341497955436355e-09,
+        "Y_hi": 5.678081469005311e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.030544134272711555,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F1": {
+      "state": "bsv",
+      "F": 1.0,
+      "Y": 2.4180994365406074e-05,
+      "Y_lo": 2.0966090517066243e-05,
+      "Y_hi": 2.7411315471646184e-05,
+      "relative_response_error": 0.13295168096722904,
+      "delta": 3.214903848339831e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1335892584657928,
+      "gate": {
+        "Y_lo": 2.0966090517066243e-05,
+        "Y_hi": 2.7411315471646184e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1335892584657928,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.07145429587261037,
+        0.01582062928141481,
+        0.001774653307196515,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F1": {
+      "state": "thermal",
+      "F": 1.0,
+      "Y": 4.658293373311515e-06,
+      "Y_lo": 4.042900223849954e-06,
+      "Y_hi": 5.273686535437243e-06,
+      "relative_response_error": 0.13210699716494817,
+      "delta": 6.153931494615612e-07,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1321069998835759,
+      "gate": {
+        "Y_lo": 4.042900223849954e-06,
+        "Y_hi": 5.273686535437243e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1321069998835759,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05401477810873134,
+        0.0044127144613206205,
+        8.156183498733268e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    }
+  },
+  "Q": {
+    "coherent": {
+      "Y_F0": 2.8329603617305314e-09,
+      "Y_F1": 5.509789712220833e-09,
+      "Q": 1.9448876823871772,
+      "Q_lo": 1.8728743023874077,
+      "Q_hi": 2.0178772438423898,
+      "F0_interval": [
+        2.8138884495239435e-09,
+        2.8520322739371193e-09
+      ],
+      "F1_interval": [
+        5.341497955436355e-09,
+        5.678081469005311e-09
+      ]
+    },
+    "bsv": {
+      "Y_F0": 1.448134996099829e-05,
+      "Y_F1": 2.4180994365406074e-05,
+      "Q": 1.6698024998036252,
+      "Q_lo": 1.2865287813504482,
+      "Q_hi": 2.161523078102269,
+      "F0_interval": [
+        1.2681481752076515e-05,
+        1.629663542782034e-05
+      ],
+      "F1_interval": [
+        2.0966090517066243e-05,
+        2.7411315471646184e-05
+      ]
+    },
+    "thermal": {
+      "Y_F0": 2.5388939263378668e-06,
+      "Y_F1": 4.658293373311515e-06,
+      "Q": 1.8347727429600407,
+      "Q_lo": 1.4182976325373096,
+      "Q_hi": 2.367793632650984,
+      "F0_interval": [
+        2.227257672592361e-06,
+        2.850530192747538e-06
+      ],
+      "F1_interval": [
+        4.042900223849954e-06,
+        5.273686535437243e-06
+      ]
+    }
+  },
+  "D": {
+    "value": 0.8585598617983382,
+    "lo": 0.6375654343079231,
+    "hi": 1.1541207412301575,
+    "valid": false
+  },
+  "status": "PRELIMINARY",
+  "scientific_label": "PRELIMINARY",
+  "gate_ok": false,
+  "denominator_ok": true,
+  "missing_validation": [],
+  "validation_binding": {},
+  "midpoint_coverage_gaps": [],
+  "phase_error_policy": "single CEP category in error_component_map.csv; phase_validation.json supplies 4->8 evidence only; no outer phase delta is charged",
+  "error_component_map": "results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+  "interpretation": "D interval is a conservative audit interval, not a statistical confidence interval. VALID_UNRESOLVED is a complete delivery when the interval contains 1."
+}

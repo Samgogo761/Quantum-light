@@ -1,0 +1,56 @@
+{
+  "schema": "continuation-v2-R2-gate",
+  "probes": {
+    "bias_v2_probe_F0_I8_phi000_r01": {
+      "status": "INCOMPLETE"
+    },
+    "bias_v2_probe_F1_I8_phi000_r01": {
+      "status": "INCOMPLETE"
+    },
+    "bias_v2_probe_F0_I32_phi000_r01": {
+      "wall_seconds": 940.1644073000643,
+      "peak_working_set_bytes": 130719744,
+      "Y_diagnostic_eta01": 0.05500016457217915,
+      "Y_main_eta005": 0.05501353250754793,
+      "right_CAP_fraction": 0.007569891746706372,
+      "budget_residual": 1.2531198301246604e-11,
+      "execution_status": "PASS",
+      "cap_warning": true
+    },
+    "bias_v2_probe_F1_I32_phi000_r01": {
+      "status": "INCOMPLETE"
+    }
+  },
+  "controls": {
+    "F0_dx048": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01",
+      "Y": 0.0552961884233884,
+      "relative_change": 0.005137934303740355,
+      "pass": true
+    },
+    "F0_dt005": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01",
+      "Y": 0.055380622785491856,
+      "relative_change": 0.006672726894851917,
+      "pass": true
+    },
+    "F0_box900": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_box900_r01",
+      "Y": 0.05542962818899918,
+      "relative_change": 0.007563515056848221,
+      "pass": true
+    },
+    "F0_caphalf": {
+      "status": "missing"
+    }
+  },
+  "eta32_relative": {
+    "F0": 8.810808339775076e-05
+  },
+  "grid32_relative": {},
+  "controls_pass": false,
+  "cap_warning_present": true,
+  "cap_mitigated_by_box": false,
+  "estimated_library_hours": null,
+  "status": "INCOMPLETE"
+}

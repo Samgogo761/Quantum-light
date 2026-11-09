@@ -1,0 +1,20 @@
+include /public/home/wangjs/software/q-e-qe-7.2/make.inc
+TOPDIR = /public/home/wangjs/software/q-e-qe-7.2
+MODFLAGS = $(BASEMOD_FLAGS) \
+          $(MOD_FLAG)$(TOPDIR)/PW/src \
+          $(MOD_FLAG)$(TOPDIR)/Modules \
+          $(MOD_FLAG)$(TOPDIR)/dft-d3
+PWOBJS = $(TOPDIR)/PW/src/libpw.a $(TOPDIR)/KS_Solvers/libks_solvers.a $(TOPDIR)/dft-d3/libdftd3qe.a
+MODULES = $(PWOBJS) $(BASEMODS)
+
+.PHONY: all clean
+all: pw2wannier90_upf.x
+
+pw2wannier90.o: pw2wannier90.f90
+	$(MPIF90) $(F90FLAGS) $(MODFLAGS) -c pw2wannier90.f90
+
+pw2wannier90_upf.x: pw2wannier90.o
+	$(LD) $(LDFLAGS) -o $@ pw2wannier90.o $(TOPDIR)/PP/src/libpp.a $(MODULES) $(QELIBS)
+
+clean:
+	rm -f pw2wannier90.o pw2wannier90_upf.x *.mod

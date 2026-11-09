@@ -1,0 +1,83 @@
+&crystal
+  a1_ang = 3.2480897205, 0.0000000000, 0.0000000000
+  a2_ang = -1.6240448603, 2.8129282117, 0.0000000000
+  a3_ang = 0.0000000000, 0.0000000000, 5.2034397323
+  E_fermi_eV = 7.70
+  SOC = 0
+  wannier_tb_file = "../../output/ZnO_tb.dat"
+  wannier_hr_file = ""
+  wannier_r_file  = ""
+/
+
+&kgrid
+  nkx = 20
+  nky = 20
+/
+
+&bands
+  nv_orig = 18
+  nb_start = 1
+  nb_end = 20
+/
+
+&laser
+  wvl_nm = 3200.0
+  intensity_Wcm2 = 2.0e11
+  theta_deg = 0.0
+  phi_cep_deg = 90.0
+  ncyc = 2.0
+  env_type = 2
+  ellipticity = 0.0
+  delta_phase_deg = 90.0
+/
+
+&laser2
+  wvl_nm_2 = 0.0
+  intensity_Wcm2_2 = 0.0
+/
+
+&external_field
+  use_external_A = .false.
+  external_A_file = ""
+/
+
+&timestep
+  dt = 0.50
+  n_dt_deph = 5
+/
+
+&dephasing
+  T2_cycles = -1.0
+  T2_fs = 1.0e30
+/
+
+&bsv
+  bsv_enabled = .false.
+  bsv_n_samples = 1
+  bsv_mean_intensity = 0.0
+  bsv_seed = 42
+/
+
+&method
+  gauge_method = 'lg_cov'
+/
+
+&diagnostics
+  run_pcenter_check = .false.
+  stop_after_diagnostics = .false.
+/
+
+&output
+  save_geometry = .false.
+  save_occupation = .false.
+  occ_stride = 0
+  occ_band_resolved = .false.
+  save_coherence = .false.
+/
+
+&spin
+  spin_current = .false.
+  spin_sz_file = ""
+  spin_order = 'interleaved'
+/
+

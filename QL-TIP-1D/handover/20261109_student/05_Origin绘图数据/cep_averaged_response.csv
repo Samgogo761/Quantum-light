@@ -1,0 +1,23 @@
+F_V_per_nm,I_over_mu,Y_H_mean,Y_H_CEP_spread,n_CEP,direct_4to8_check,CEP_error_source
+0.0,0.25,7.88378899246e-14,0.000160050196556,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+0.0,0.5,1.41660547779e-11,4.02586991068e-05,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+0.0,1.0,2.83296036373e-09,0.000634910166877,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+0.0,2.0,2.42188162101e-07,0.00321159333351,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+0.0,4.0,8.92679559249e-06,0.0912026872587,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,6.0,0.000105510981595,0.202955043177,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,8.0,0.000396869752286,0.289932433601,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,10.0,0.00109531466668,0.280722730923,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,12.0,0.00306315324301,0.372080453335,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,20.0,0.0166104679885,0.375133876904,4,,envelope_2to4 | 8/12/20 mu saved readouts
+0.0,32.0,0.0590341465774,0.171032742177,4,,envelope_2to4 | 8/12/20 mu saved readouts
+1.0,0.25,1.649660028e-13,6.60733542813e-05,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+1.0,0.5,3.41783741457e-11,6.07242418657e-05,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+1.0,1.0,5.50978973127e-09,0.000467844876181,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+1.0,2.0,2.63984763181e-07,0.00226749937898,4,,direct_or_transferred_at_mu | R1_gate_r1_20261107_v5
+1.0,4.0,1.89160567538e-05,0.0594577853004,8,2.99186758112e-11,direct_4to8 | R1_pair_audit_v5.csv:F1_I4:cep:4to8
+1.0,6.0,0.000172212828632,0.0742728361908,4,,envelope_2to4 | 8/12/20 mu saved readouts
+1.0,8.0,0.000727323553665,0.481489544813,8,4.79954839572e-05,direct_4to8 | phase_validation.json
+1.0,10.0,0.00187695574194,0.57594961444,4,,envelope_2to4 | 8/12/20 mu saved readouts
+1.0,12.0,0.0043926784079,0.299917433857,4,,envelope_2to4 | 8/12/20 mu saved readouts
+1.0,20.0,0.0277928045438,0.291058323942,4,,envelope_2to4 | 8/12/20 mu saved readouts
+1.0,32.0,0.0851804056796,0.302942389342,8,0.0058335280579,direct_4to8 | phase_validation.json

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "line": "Q_THEORY",
+  "captured_at_utc": "2026-09-07T09:49:30.195668+00:00",
+  "purpose": "Read-only source provenance for independent Q-line engineering startup",
+  "physics_review_status": "pending_user_review",
+  "sources": [
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "ae555ecd43edbda69f261cd1c8024cf1ea2cfb3fc04d02a42f423c68878f5505",
+      "size_bytes": 5672
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "f873a3a4a45957b9bbabf8749dfe9c7c7596f818fe4bb49262807d02dd8da6bf",
+      "size_bytes": 5159
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第一部分.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "521b5ac7d244b20cb8ac84bceb894fff686c9054f7af42446e2ad41621f820e6",
+      "size_bytes": 19442
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第一部分.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "c09ae5055905c49c87147616ebd49f4812b4d08b2a793125d0c17e60a7f7db4a",
+      "size_bytes": 19585
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第二部分.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "f45c7994f0dfbe89b29ea5bc2f3d7e88ecc2e825394909749630cf6ada52e106",
+      "size_bytes": 22169
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第二部分.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "a945ea4e46bdfbd3d28c361594681e706143ff88c65019160e00f3d89cfd0bdf",
+      "size_bytes": 22346
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第三部分.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "61aa0000e3a6642448005725373202cfa18fad6d0a5d03fbc1154dcb6984dec0",
+      "size_bytes": 15376
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第三部分.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "f611aae20ab89f78b094b47e68c3faa403db0847a96ec34b1a4cf70fad7c4184",
+      "size_bytes": 16547
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第四部分.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "6afc7353c5b208ec4b58a3d615b6dd3285de9e794b8726d8cf791819e5d842c7",
+      "size_bytes": 18167
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第四部分.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "0ea6ca5dacc32c5e6de35e29a0fc7545838caa71878b7e8d5f0513cada1bc025",
+      "size_bytes": 19399
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第五部分.md",
+      "role": "repository_theory",
+      "inspection_scope": "Theory roadmap and relevant Q-line definitions; source comparison, not a complete mathematical peer review",
+      "sha256": "ec2d6e4422af921e2cbd72e6eb73763edcb51935895120c1b8c7cdfc348ce100",
+      "size_bytes": 16964
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\01_完整理论_20260729\\量子光驱动HHG与输出光子统计_完整理论与计算方法_20260729_第五部分.md",
+      "role": "obsidian_theory",
+      "inspection_scope": "Compared with repository counterpart after normalizing front matter/math delimiters; originals unchanged",
+      "sha256": "b0c04e5314a07c2cd03cdc2e225ece8afa08b3e34ffe1b830c8588f90ff72bdb",
+      "size_bytes": 17169
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\Obsidian Vault\\量子光HHG\\01_理论\\00_总览\\量子光理论核心.md",
+      "role": "core_notes",
+      "inspection_scope": "Section 3.1 Eq (3.2); section 4.1 operations A/B; domain-correlation and harmonic-parity qualifications; staged roadmap",
+      "sha256": "55633ea526091dc16e850a2a46be3c8682a8543a54ae31289a1bbcd6b84e9e0d",
+      "size_bytes": 101453
+    },
+    {
+      "path": "C:\\Users\\26507\\Downloads\\PT_AFM量子光模型_从0到1第一步_物理图像报告.pdf",
+      "role": "user_pdf",
+      "inspection_scope": "All 8 pages extracted; pages 2-8 visually inspected, including figure formulas omitted from text extraction",
+      "sha256": "df5cfb7d9b742ad123b453556ae5e3be050ae1e8f584da57be475e95b88bc1df",
+      "size_bytes": 2041802
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\量子理论线_PT-AFM玩具_给另一对话的研究备忘_20260831.md",
+      "role": "q_history",
+      "inspection_scope": "Read as dated history; later user instruction governs current scope",
+      "sha256": "41a0ead6d5ae263a6d2fdef14d3c7569b9be97fbe5717ed62c520af868a74a0b",
+      "size_bytes": 11267
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\线Q_PT-AFM玩具闭系统Wick第一阶段_20260831.md",
+      "role": "q_history",
+      "inspection_scope": "Read as dated history; later user instruction governs current scope",
+      "sha256": "ec35140b2e5a8475ceb90420dc27c41796407fec54722c180034398f7977ec10",
+      "size_bytes": 3715
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\04_BSV量子光\\线Q_框架冻结与CPU两时基线_20260903.md",
+      "role": "q_history",
+      "inspection_scope": "Read as dated history; later user instruction governs current scope",
+      "sha256": "ec63dfac34ab29f7ab6f4fa8f02872497abae7e8b9420a2dd5bb981ecae79702",
+      "size_bytes": 9146
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\PT_AFM_TOY.md",
+      "role": "existing_reference_spec",
+      "inspection_scope": "Read including later correction sections; regression specification is not blanket physics approval",
+      "sha256": "7bf01b02b99b2370c075c01e6f7105c7fd60de27fd17d652d64d8e64f495df3d",
+      "size_bytes": 7380
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\tools\\b0_small_model\\Q_THEORY_FROZEN_SPEC.md",
+      "role": "existing_reference_spec",
+      "inspection_scope": "Read including later correction sections; regression specification is not blanket physics approval",
+      "sha256": "7aaf9de67e952d8c2c37ddce25cf73366e1e79eeda8297b0b6449cc8794de0d5",
+      "size_bytes": 2508
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\profile_q_cpu_20260903.json",
+      "role": "historical_profile",
+      "inspection_scope": "Read as historical timing only, not a current performance or GPU environment measurement",
+      "sha256": "e4a8fd56d321c1134b5552913f56410e5d39be2dae417bc0cd263332140ba4da",
+      "size_bytes": 3891
+    },
+    {
+      "path": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\startup_20260907\\startup_report.json",
+      "role": "current_engineering_receipt",
+      "inspection_scope": "Six existing regression scripts passed; separate logs and full source fingerprints recorded",
+      "sha256": "4722bb562861afee899a0afc78a96fb9109c325d6039bee6b6fc586d9b0a47de",
+      "size_bytes": 14858
+    }
+  ],
+  "source_comparison_summary": {
+    "parts_1_4_5": "Equal after removing YAML front matter and normalizing math delimiters/blank lines",
+    "parts_2_3": "Additional front navigation Wiki-link differences",
+    "directory": "Navigation and dated status wording differences; do not use July status as current implementation status",
+    "core_notes": "Read separately for refined physical inversion vs fixed-laboratory domain comparison"
+  },
+  "primary_reference_checks": [
+    {
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.236903",
+      "scope": "Title/abstract research direction only; no eight-band Hamiltonian approved"
+    },
+    {
+      "url": "https://arxiv.org/abs/2310.15030",
+      "scope": "Title/abstract motivation concerning correlations and quantum output; not a model-specific result"
+    }
+  ]
+}

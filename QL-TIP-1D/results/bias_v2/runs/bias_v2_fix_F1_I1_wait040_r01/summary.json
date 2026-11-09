@@ -1,0 +1,60 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999954633,
+  "left_CAP_loss_prep": 1.8948199303764496e-18,
+  "right_CAP_loss_prep": 3.8118637921506084e-29,
+  "N_100fs": 0.9999999985701219,
+  "N_125fs": 0.9999999985701219,
+  "left_CAP_loss_observation_100fs": 1.4161026370969398e-09,
+  "right_CAP_loss_observation_100fs": 1.1271621126266551e-17,
+  "left_CAP_loss_total_125fs": 1.4161026389917598e-09,
+  "right_CAP_loss_total_125fs": 1.1271621126304669e-17,
+  "signed_flux_100fs": 2.3821488540366917e-07,
+  "signed_flux_125fs": 2.3821488540366917e-07,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3775425244944017e-11,
+  "Y_H": 5.697994789433722e-09,
+  "Y_H_lower": 8.454271373170461e-09,
+  "Y_H_upper": 5.257832126452657e-09,
+  "masked_norm": 2.382148904519553e-07,
+  "spectrum_integral": 2.382148841420663e-07,
+  "propagation_seconds": 869.8749990002252,
+  "spectrum_seconds": 27.477351400069892,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        37.175000000000004
+      ],
+      "energy_points": 2368,
+      "masked_norm": 2.382148904519553e-07,
+      "spectrum_integral": 2.382148841420663e-07,
+      "spectrum_norm_absolute_difference": 6.309889010751418e-15,
+      "Y_H_lower": 8.454271373170461e-09,
+      "Y_H_main": 5.697994789433722e-09,
+      "Y_H_upper": 5.257832126452657e-09
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_fix_F1_I1_wait040_r01",
+  "I_over_mu": 1.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "wall_seconds": 897.6267884001136,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "prep_state_sha256": "abafb5ec0caaab56d19c0912e7186f1794c170af374928e03ab57b5852981a81",
+  "prep_config_sha256": "ee17e4682b0a98f79aece6370f0a08c6201807b93f81890585320ee25e1a88e1",
+  "prep_summary_sha256": "e9c2a6120c164f8dea86cc130b838ed70bb3628708b67f8a879bc730bd9570cc",
+  "state_100fs_sha256": "6af6b4afc42adb9c2c4b26f4da8c435d6a98825077cdb6160cf4744f259306ee"
+}

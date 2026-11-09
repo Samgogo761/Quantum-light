@@ -1,0 +1,9 @@
+&INPUTPP
+  outdir = './tmp'
+  prefix = 'hBN'
+  seedname = 'hBN'
+  write_mmn = .true.
+  write_amn = .true.
+  write_eig = .true.
+  write_unk = .false.
+/

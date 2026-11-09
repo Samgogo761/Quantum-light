@@ -1,0 +1,64 @@
+{
+  "gate": "C8_C36_TOPOLOGY_JONES",
+  "status": "PASS",
+  "abs_atol": 0.0001,
+  "rel_atol": 0.0001,
+  "note": "Preset topology gate 1e-4; not a V3.1 retune. Same binary/TB/nodes/MKL=1; OMP 8 vs 36 only.",
+  "pinned_provenance": {
+    "c8_job": 29002,
+    "c36_job": 28861,
+    "binary_sha256": "589da472e6ec60cfa6eef41dd1e0bd9678f8647815f7d0ea2636ba0d8c96bf42",
+    "source_sha256": "3c9a3d308402b07041c7fb28997030ef8f7372b1234279e81f3fbc487caee3e2",
+    "tb_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
+    "nodes_sha256": "290dd4a3b53402b94294246e3ee1354edd7b3994050f865d021c6f66c04b6f4b",
+    "c8_omp": 8,
+    "c36_omp": 36,
+    "mkl_num_threads": 1
+  },
+  "c8_dir": "/public/home/wangjs/project/New_SBEs/Quantum-light-wt-689d9a3/output_a0_full112_k20_gh3_chunk_c8_29002/merged_plusN",
+  "c36_dir": "/public/home/wangjs/project/New_SBEs/Quantum-light/runs/a0_full112_gh3_chunk_smoke_689d9a3/output_a0_full112_k20_gh3_chunk_smoke_28861/merged_plusN",
+  "max_e_abs_vec_hard": 2.7659480373019044e-13,
+  "max_e_rel_vec_strong_hard": 1.1235416608074293e-08,
+  "by_order": {
+    "2": {
+      "A_n": 0.009725460730142505,
+      "max_e_abs_vec": 2.7659480373019044e-13,
+      "max_e_rel_vec_strong": 3.269551251931159e-11,
+      "n_strong": 8,
+      "hard": true
+    },
+    "5": {
+      "A_n": 0.029710050621003774,
+      "max_e_abs_vec": 3.645066435184841e-14,
+      "max_e_rel_vec_strong": 1.915743572851857e-10,
+      "n_strong": 8,
+      "hard": true
+    },
+    "7": {
+      "A_n": 0.007139374416407631,
+      "max_e_abs_vec": 1.0089683297560857e-13,
+      "max_e_rel_vec_strong": 7.1416585572556345e-09,
+      "n_strong": 8,
+      "hard": true
+    },
+    "9": {
+      "A_n": 0.004033804622538658,
+      "max_e_abs_vec": 1.3536819565169934e-13,
+      "max_e_rel_vec_strong": 1.1235416608074293e-08,
+      "n_strong": 8,
+      "hard": true
+    },
+    "10": {
+      "A_n": 0.0022900300803634656,
+      "max_e_abs_vec": 2.865603582057434e-13,
+      "max_e_rel_vec_strong": 9.978631353978784e-09,
+      "n_strong": 8,
+      "hard": false
+    }
+  },
+  "jones_v31_status_at_topology_atol": "PASS",
+  "barJ_v31_status_at_topology_atol": "PASS",
+  "barJ_max_e_abs_vec": 8.877718571480599e-14,
+  "pass": true,
+  "recommendation": "GH5-v2 prefer part_1/OMP=36"
+}

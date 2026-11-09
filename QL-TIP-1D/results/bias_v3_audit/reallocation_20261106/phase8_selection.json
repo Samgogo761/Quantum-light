@@ -1,0 +1,135 @@
+{
+  "schema": "ql-tip-1d-phase8-selection-v5",
+  "conditions": [
+    [
+      1.0,
+      32.0
+    ],
+    [
+      1.0,
+      8.0
+    ]
+  ],
+  "highest_intensity": [
+    1.0,
+    32.0
+  ],
+  "main_contribution": [
+    1.0,
+    8.0
+  ],
+  "phase_span_32mu": {
+    "F0": 0.1710327421771262,
+    "F1": 0.21986004269955278
+  },
+  "coverage_table": [
+    {
+      "I_over_mu": 8.0,
+      "shares": {
+        "bsv_F0": 0.18737193114193607,
+        "bsv_F1": 0.19926034560012304,
+        "thermal_F0": 0.2458194482258332,
+        "thermal_F1": 0.2432916621206288
+      },
+      "min_channel_share": 0.18737193114193607,
+      "sum_channel_shares": 0.8757433870885212
+    },
+    {
+      "I_over_mu": 4.0,
+      "shares": {
+        "bsv_F0": 0.03530694850053751,
+        "bsv_F1": 0.04389901243547366,
+        "thermal_F0": 0.21054921281384859,
+        "thermal_F1": 0.24416935682057975
+      },
+      "min_channel_share": 0.03530694850053751,
+      "sum_channel_shares": 0.5339245305704395
+    },
+    {
+      "I_over_mu": 12.0,
+      "shares": {
+        "bsv_F0": 0.17092892221802466,
+        "bsv_F1": 0.15641584771683104,
+        "thermal_F0": 0.03878975280231281,
+        "thermal_F1": 0.03365786134146836
+      },
+      "min_channel_share": 0.03365786134146836,
+      "sum_channel_shares": 0.3997923840786369
+    },
+    {
+      "I_over_mu": 20.0,
+      "shares": {
+        "bsv_F0": 0.2752327279064193,
+        "bsv_F1": 0.2600679391828132,
+        "thermal_F0": 0.016283112218415774,
+        "thermal_F1": 0.014044076880177041
+      },
+      "min_channel_share": 0.014044076880177041,
+      "sum_channel_shares": 0.5656278561878253
+    },
+    {
+      "I_over_mu": 2.0,
+      "shares": {
+        "bsv_F0": 0.00147092061127809,
+        "bsv_F1": 0.0009711578128680297,
+        "thermal_F0": 0.013347899960563065,
+        "thermal_F1": 0.008260174632240698
+      },
+      "min_channel_share": 0.0009711578128680297,
+      "sum_channel_shares": 0.024050153016949884
+    },
+    {
+      "I_over_mu": 32.0,
+      "shares": {
+        "bsv_F0": 0.015652466205593046,
+        "bsv_F1": 0.01484510709867853,
+        "thermal_F0": 2.3164587155684665e-05,
+        "thermal_F1": 2.1028507458651437e-05
+      },
+      "min_channel_share": 2.1028507458651437e-05,
+      "sum_channel_shares": 0.030541766398885912
+    },
+    {
+      "I_over_mu": 1.0,
+      "shares": {
+        "bsv_F0": 1.8100466117517528e-05,
+        "bsv_F1": 2.1102072329023774e-05,
+        "thermal_F0": 0.0001739581602685185,
+        "thermal_F1": 0.00018996709451214348
+      },
+      "min_channel_share": 1.8100466117517528e-05,
+      "sum_channel_shares": 0.0004031277932272033
+    },
+    {
+      "I_over_mu": 0.5,
+      "shares": {
+        "bsv_F0": 7.856969675601325e-08,
+        "bsv_F1": 1.1336868381470224e-07,
+        "thermal_F0": 6.563305743954182e-07,
+        "thermal_F1": 8.871654587687828e-07
+      },
+      "min_channel_share": 7.856969675601325e-08,
+      "sum_channel_shares": 1.7354344137349164e-06
+    },
+    {
+      "I_over_mu": 0.25,
+      "shares": {
+        "bsv_F0": 8.455605439116285e-10,
+        "bsv_F1": 1.0590404013794883e-09,
+        "thermal_F0": 4.661904109844091e-09,
+        "thermal_F1": 5.469517287859719e-09
+      },
+      "min_channel_share": 8.455605439116285e-10,
+      "sum_channel_shares": 1.2036022342994926e-08
+    }
+  ],
+  "main_channel_coverage": {
+    "bsv_F0": 0.18737193114193607,
+    "bsv_F1": 0.19926034560012304,
+    "thermal_F0": 0.2458194482258332,
+    "thermal_F1": 0.2432916621206288
+  },
+  "coverage_gap": true,
+  "rule": "largest 32 mu phase span plus the interval upper node with maximin BSV/thermal x F0/F1 contribution coverage",
+  "target_4to8_relative_change": 0.02
+}

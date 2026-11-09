@@ -1,0 +1,195 @@
+{
+  "title": "1600 nm experiment-facing DS protocol table, external-review revision",
+  "date": "2026-11-04",
+  "version": 2,
+  "supersedes": "ds_experimental_protocol_20261104.json",
+  "working_markdown": "线Q_1600nm实验相关DS协议_外审修正_20261104.md",
+  "no_propagation": true,
+  "c1_not_authorized_this_round": true,
+  "did_not_modify_frozen_fit": true,
+  "frozen_fit_sha256": "17a8e37ec3e0ab54096ff4edd1440c5a3f0412b09450c2fd8960cbc00d8e69db",
+  "did_not_reuse_abstract_g": true,
+  "did_not_force_R_eq_1": true,
+  "did_not_call_Rasputnyi_femtosecond_DS": true,
+  "literature_scope": "currently_checked_not_exhaustive",
+  "literature_notes": {
+    "no_fs_DS_input_HHG_found_in_checked_literature": true,
+    "2025_displaced_squeezed_in_HHG": "output light state of HHG, not femtosecond DS used as a solid-HHG driver",
+    "Rasputnyi_samples": ["Mg:LiNbO3", "amorphous Si"],
+    "not_CrI3": true
+  },
+  "statistical_input": {
+    "independent_measurables": ["alpha", "n_s", "M"],
+    "definitions": {
+      "alpha": "<a>",
+      "n_s": "<da^\\dagger da>",
+      "M": "<da da>",
+      "da": "a - alpha",
+      "nbar": "|alpha|^2 + n_s"
+    },
+    "ideal_pure_DS_only": {
+      "n_s": "sinh^2 r",
+      "abs_M": "sqrt(n_s (n_s+1))",
+      "given_nbar_and_f_alpha": "r = arsinh sqrt((1-f_alpha) nbar); r is not independent"
+    },
+    "lossy_mixed_state": {
+      "do_not_assume_purity": true,
+      "bound": "|M| <= sqrt(n_s (n_s+1))",
+      "internal_r_not_equal_to_lab_quadrature_dB": true
+    }
+  },
+  "observables": {
+    "complex_mean_current": "J2 = int dt exp(2 i omega t) <J(t)>",
+    "sample_averaged_intensity_proxy": "<|J2|^2>",
+    "not_equivalent": "|<J2>|^2 != <|J2|^2>",
+    "Rasputnyi_Husimi": "S = int dgamma Q(gamma) S(gamma); spectral intensity, not Neel-odd complex amplitude",
+    "do_not_reuse_GH5_five_point": true,
+    "wigner_sampling_must_check": ["photon-number moments", "anomalous correlation M", "sampling convergence"]
+  },
+  "normalization": {
+    "type": "traveling_wave_pulse",
+    "not_cavity_V_eff": true,
+    "E_plus": "sqrt(hbar*omega/(2*eps0*c*A_eff)) * u_E(t) * a",
+    "A_eff": "pi * w0^2 / 2",
+    "u_E_integral": "int |u_E|^2 dt = 1",
+    "envelope": "platform-free Gaussian; replaces 1+4+1 coupling switch",
+    "missing": [
+      "interface transmission / local-field factor",
+      "self-consistent Maxwell propagation",
+      "true experimental temporal-mode overlap for a displacement arm"
+    ]
+  },
+  "protocol_A_frozen_not_a_source": {
+    "alpha": 0.5,
+    "r": 0.3,
+    "R": 1.2733071642964826,
+    "nbar": 0.34273260912113385,
+    "g_Ainv": 0.005,
+    "s_t": "1+4+1 sin^2 coupling switch",
+    "implied_cavity_V_eff_m3": 4.669710497994278e-24,
+    "implied_cube_nm": 16.73,
+    "note": "Mechanism benchmark only. 17 nm cube is an equivalent volume, not a realizable cavity."
+  },
+  "not_a_candidate": {
+    "reason": "R=1 at traveling-wave 0.1 TW/cm2 would require r~12.87 if interpreted as ideal pure DS. Not listed as a source. Feasibility is not judged by converting this r into quadrature dB.",
+    "I0_W_per_cm2": 1e11,
+    "nbar": 75756144634.47339,
+    "R1_alpha": 194622.89772143136,
+    "R1_r": 12.871966287949691
+  },
+  "ideal_pure_DS_if_f_alpha_labels_used_at_0p1_TW": [
+    {
+      "f_alpha": 0.01,
+      "alpha": 27523.834150509152,
+      "n_s": 74998583188.12865,
+      "r_if_pure": 13.213514710302947,
+      "abs_M_if_pure": 74998583188.62865,
+      "R_if_pure": 99.0,
+      "note": "Determined by nbar and f_alpha; r is not a free unknown. Larger internal r than the excluded R=1 case."
+    },
+    {
+      "f_alpha": 0.10,
+      "alpha": 87038.00585633461,
+      "n_s": 68180530171.026054,
+      "r_if_pure": 13.165859620401118,
+      "abs_M_if_pure": 68180530171.526054,
+      "R_if_pure": 9.0,
+      "note": "Determined by nbar and f_alpha; r is not a free unknown. Larger internal r than the excluded R=1 case."
+    }
+  ],
+  "linear_loss_note": "Uniform linear loss: alpha -> sqrt(eta)*alpha, M -> eta*M, so R is invariant. Observable squeezing, nonclassicality, signal, and mode matching are loss-sensitive.",
+  "fock_note": "Direct Fock truncation used in protocol A is not applicable at these nbar. This is not a universal ban on all QED at nbar>10.",
+  "candidates": [
+    {
+      "id": "C1",
+      "name": "femtosecond pure BSV",
+      "status": "literature_supported_experiment",
+      "is_DS": false,
+      "can_inherit_ABC": false,
+      "suitable_for_wigner_sbe": true,
+      "role": "first experimental benchmark, not merely a smoke test",
+      "lambda_nm": 1600,
+      "tau_FWHM_fs": 25,
+      "coherent_reference_tau_FWHM_fs": 70,
+      "spot_1e2_diameter_um": 30,
+      "w0_um_interpreted": 15,
+      "I0_comparison_TW_per_cm2": 2.0,
+      "alpha": 0.0,
+      "R": null,
+      "r": null,
+      "n_s": "set by pulse energy / characterized photon number; not a lab quadrature r",
+      "M": "anomalous correlation relative to the parametric pump; purity |M|=sqrt(n_s(n_s+1)) only if assumed pure",
+      "has_squeeze_axis_phase": true,
+      "phase_sensitive_magnetic_response": "must not be declared absent without a symmetry argument",
+      "nbar_characterization": 2e12,
+      "nbar_tail": 2e13,
+      "nbar_at_2_TW_cm2_traveling_wave": 1515122892689.4678,
+      "U_at_2_TW_cm2_nJ": 188.1068,
+      "spectral_bandwidth_nm": 150,
+      "spatial_mode": "double-pass selection toward a single spatiotemporal mode; residual multimode not quantified here",
+      "samples_in_source_paper": ["Mg:LiNbO3", "amorphous Si"],
+      "not_CrI3": true,
+      "unknown": ["lab quadrature r after loss", "residual spatial modes", "local-field factor", "whether M saturates the pure-state bound"]
+    },
+    {
+      "id": "C2",
+      "name": "phase-locked displacement on the C1 traveling-wave mode",
+      "status": "to_be_realized",
+      "is_DS": true,
+      "can_inherit_ABC": "only if displacement remains phase-locked to M; not automatic",
+      "suitable_for_wigner_sbe": true,
+      "role": "conditional next stage after C1",
+      "lambda_nm": 1600,
+      "tau_FWHM_fs": 25,
+      "w0_um": 15,
+      "I0_TW_per_cm2_design": [0.1, 2.0],
+      "theoretical_input": ["alpha", "n_s", "M"],
+      "f_alpha_design_labels_only": [0.01, 0.10],
+      "f_alpha_is_literature": false,
+      "f_alpha_not_independent_of_r_in_ideal_pure_DS": true,
+      "do_not_insert_unknown_r_as_free_parameter": true,
+      "R_policy": "do not force R=1; if a mixed state is used, compute R from |M|/|alpha|^2 only after M is specified",
+      "phase_lock_required": true,
+      "mode_matching_required": true,
+      "temporal_mode_mismatch_note": "Rasputnyi coherent arm is 70 fs vs BSV 25 fs; a displacement mixer needs its own mode cleaning",
+      "alpha_if_f_alpha_0p01_at_0p1_TW": 27523.834150509152,
+      "alpha_if_f_alpha_0p10_at_0p1_TW": 87038.00585633461,
+      "nbar_at_0p1_TW": 75756144634.47339,
+      "next_physics_question": "how stably can M and its phase remain locked to an added coherent displacement",
+      "unknown": ["experimental M after loss", "mode overlap", "whether the state remains Gaussian", "experimental lock of displacement to squeeze axis"],
+      "not_the_20261028_80_20_draft": true
+    },
+    {
+      "id": "C3",
+      "name": "CW 1550 nm displaced squeezed / squeezed vacuum",
+      "status": "literature_supported_source_wrong_drive_regime",
+      "is_DS": "narrowband DS or squeezed vacuum exists; not a femtosecond driver",
+      "can_inherit_ABC": false,
+      "suitable_for_wigner_sbe": false,
+      "role": "proves DS preparation in CW, not a propagation protocol",
+      "lambda_nm": 1550,
+      "tau_FWHM_fs": null,
+      "bandwidth": "MHz-class OPO / sideband",
+      "squeezing_dB_examples": [12.6],
+      "squeezing_dB_note": "12.6 dB bow-tie result is typically squeezed vacuum; displacement needs a separate coherent mixer",
+      "peak_intensity_HHG": false,
+      "unknown": ["not relevant as an HHG driver"]
+    }
+  ],
+  "observables_instead_of_8p5": [
+    "arg of Neel-odd H2 relative to squeeze axis (C1) or locked displacement / LO (C2)",
+    "H2x/H2y polarization of the odd current",
+    "domain contrast C=(S+ - S-)/(S+ + S-); S must state |<J>|^2 vs <|J|^2>",
+    "controls: equal-energy coherent, equal-energy BSV, orthogonal displacement phase"
+  ],
+  "c1_minimal_test_if_authorized": {
+    "authorized_this_round": false,
+    "envelope": "1600 nm, 25 fs Gaussian; no 1+4+1; no abstract g=0.005",
+    "material": "M0 few representative k including k/-k; not CrI3",
+    "comparison": "equal-mean-energy coherent vs pure BSV",
+    "record": ["complex H2 per sample", "sample-averaged H2 intensity proxy"],
+    "gates_before_physics": ["sampling normalization", "second moments n_s and M", "statistical-integral convergence"],
+    "stop_on_gate_fail": true
+  },
+  "next_authorized_computation_if_any": "not authorized this round; C1 traveling-wave statistical SBE on M0 only after a separate authorization"
+}

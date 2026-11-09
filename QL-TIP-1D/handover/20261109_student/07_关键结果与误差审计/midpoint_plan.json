@@ -1,0 +1,134 @@
+{
+  "schema": "continuation-v2-midpoint-plan-v5",
+  "intervals": [
+    {
+      "left": 4.0,
+      "right": 8.0,
+      "midpoint_I_over_mu": 6.0,
+      "min_channel_share": 0.3745102799280072,
+      "coverage_shares": {
+        "bsv_F0": 0.3745102799280072,
+        "bsv_F1": 0.4139903837240823,
+        "thermal_F0": 0.6988026010814083,
+        "thermal_F1": 0.7056098995988411
+      }
+    },
+    {
+      "left": 8.0,
+      "right": 12.0,
+      "midpoint_I_over_mu": 10.0,
+      "min_channel_share": 0.11136618719459206,
+      "coverage_shares": {
+        "bsv_F0": 0.36506248386712253,
+        "bsv_F1": 0.33170992506981095,
+        "thermal_F0": 0.13148574905799681,
+        "thermal_F1": 0.11136618719459206
+      }
+    }
+  ],
+  "selection": "maximin normalised contribution coverage across BSV/thermal x F0/F1; two disjoint real intervals; second sort key = sum of channel shares",
+  "nodes_before": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "coverage_table": [
+    {
+      "interval_left": 0.0,
+      "interval_right": 0.25,
+      "bsv_F0": 6.720158694713396e-10,
+      "bsv_F1": 8.42119805826541e-10,
+      "thermal_F0": 3.2913969216427757e-09,
+      "thermal_F1": 3.75368165967175e-09,
+      "min_channel_share": 6.720158694713396e-10
+    },
+    {
+      "interval_left": 0.25,
+      "interval_right": 0.5,
+      "bsv_F0": 6.244388229769385e-08,
+      "bsv_F1": 9.014765997264121e-08,
+      "thermal_F0": 4.633824251304387e-07,
+      "thermal_F1": 6.088538597485215e-07,
+      "min_channel_share": 6.244388229769385e-08
+    },
+    {
+      "interval_left": 0.5,
+      "interval_right": 1.0,
+      "bsv_F0": 1.4385487311800738e-05,
+      "bsv_F1": 1.6779787654094786e-05,
+      "thermal_F0": 0.00012281791725261178,
+      "thermal_F1": 0.00013037274791947819,
+      "min_channel_share": 1.4385487311800738e-05
+    },
+    {
+      "interval_left": 1.0,
+      "interval_right": 2.0,
+      "bsv_F0": 0.001169025684356753,
+      "bsv_F1": 0.0007722379880258205,
+      "thermal_F0": 0.009423882560738098,
+      "thermal_F1": 0.005668885276503215,
+      "min_channel_share": 0.0007722379880258205
+    },
+    {
+      "interval_left": 2.0,
+      "interval_right": 4.0,
+      "bsv_F0": 0.028060474043888537,
+      "bsv_F1": 0.03490728755955277,
+      "thermal_F0": 0.14865192732009821,
+      "thermal_F1": 0.16757128432258916,
+      "min_channel_share": 0.028060474043888537
+    },
+    {
+      "interval_left": 4.0,
+      "interval_right": 8.0,
+      "bsv_F0": 0.3745102799280072,
+      "bsv_F1": 0.4139903837240823,
+      "thermal_F0": 0.6988026010814083,
+      "thermal_F1": 0.7056098995988411,
+      "min_channel_share": 0.3745102799280072
+    },
+    {
+      "interval_left": 8.0,
+      "interval_right": 12.0,
+      "bsv_F0": 0.36506248386712253,
+      "bsv_F1": 0.33170992506981095,
+      "thermal_F0": 0.13148574905799681,
+      "thermal_F1": 0.11136618719459206,
+      "min_channel_share": 0.11136618719459206
+    },
+    {
+      "interval_left": 12.0,
+      "interval_right": 20.0,
+      "bsv_F0": 0.21874336767815372,
+      "bsv_F1": 0.20679887392498214,
+      "thermal_F0": 0.011496200729930909,
+      "thermal_F1": 0.00963832657210036,
+      "min_channel_share": 0.00963832657210036
+    },
+    {
+      "interval_left": 20.0,
+      "interval_right": 32.0,
+      "bsv_F0": 0.012439920195261269,
+      "bsv_F1": 0.01180442095611207,
+      "thermal_F0": 1.635465875292234e-05,
+      "thermal_F1": 1.4431679913146114e-05,
+      "min_channel_share": 1.4431679913146114e-05
+    }
+  ],
+  "covered_channel_share": {
+    "bsv_F0": 0.7395727637951297,
+    "bsv_F1": 0.7457003087938933,
+    "thermal_F0": 0.8302883501394052,
+    "thermal_F1": 0.8169760867934331
+  },
+  "coverage_gap": [],
+  "transfer_rule": "any channel with covered share < 0.5 is bounded for all four channels by the node_change / node_ok gate, never assumed zero",
+  "source_response_status": "PASS"
+}

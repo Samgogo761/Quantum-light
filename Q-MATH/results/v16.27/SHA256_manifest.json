@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.md",
+    "sha256": "fbb71fc7d2fca1f4405a9913eb8ca0539ab4eb7f1e8923213c172eda449bcff0",
+    "bytes": 13353
+  },
+  {
+    "name": "Q-MATH-16.27_双频因果磁性H2核与BSV因子化限制.docx",
+    "sha256": "cce9ec6decad074787a86d3df4e5cb64f421845d5ae78ec457ec24ce6eb66fab",
+    "bytes": 260520
+  },
+  {
+    "name": "Q-MATH-16.28_下一步研究任务.md",
+    "sha256": "db09914072ba3bb09cdf69896b421d5114942c1ddcb8d4182b1e48d1a20f25ad",
+    "bytes": 1665
+  },
+  {
+    "name": "README_复算与证据范围.md",
+    "sha256": "012d81e8621f9bf77977d4e8bf59da0307c48f043516b05e65321fba0da5c471",
+    "bytes": 1441
+  },
+  {
+    "name": "retarded_BZ_convergence.png",
+    "sha256": "4a2f82d2cb5207494cc7dd7dab85e35ddb560b762569785d5f26344ee4584a5f",
+    "bytes": 96142
+  },
+  {
+    "name": "magnetic_frequency_shape.png",
+    "sha256": "2769c533b0e188dd58e323919aaac29676cd9a3da5d8f59baaabc9a4c04e1ecf",
+    "bytes": 105950
+  },
+  {
+    "name": "soft_frequency_Ward_check.png",
+    "sha256": "07650b69a487bc381b1c09778ccd55dac197ea47e1d2ad60346d7b3c23db1ced",
+    "bytes": 61015
+  },
+  {
+    "name": "qmath_16_27_reproduce.py",
+    "sha256": "b3cb5feb8d27de3bc88ca68a84fe1f283854a772c5757da72d29140768ee2f2a",
+    "bytes": 2687
+  },
+  {
+    "name": "qmath_16_27_two_tone.py",
+    "sha256": "32946ffbc6e994ef8087a8532fc253049bd0c013ba3c22d7b0fe3429dc7ca227",
+    "bytes": 7603
+  },
+  {
+    "name": "qmath_16_27_retarded_kernel.py",
+    "sha256": "dc1ee1cae4aa6f4702d5787ce4d2e47106f9c6379c8c7c711c052ef18e2e94b8",
+    "bytes": 4629
+  },
+  {
+    "name": "qmath_16_26_cubic_audit.py",
+    "sha256": "233c8c9c1ca0877b5783eda942dd7bfa58dec4afa68d7bc02a9c8a42576ff73e",
+    "bytes": 8785
+  },
+  {
+    "name": "qmath_16_26_run_verified.py",
+    "sha256": "124955be545f8343e9c49800ab31c66eac94582bdfaf853455fcc839c94aa233",
+    "bytes": 3711
+  },
+  {
+    "name": "qmath_16_27_results.json",
+    "sha256": "690a73d93041c51df1a438ab9bd4ffb0d2728bec988e8264f5318fe6d0c9692d",
+    "bytes": 14072
+  },
+  {
+    "name": "qmath_16_27_retarded_results.json",
+    "sha256": "a40965ade0a3c432e6e5a71d3e4c588f6c50005a80743c5873ad0abad1b03d65",
+    "bytes": 19603
+  },
+  {
+    "name": "qmath_16_27_shape_scan.json",
+    "sha256": "0ed054f8a5261b1b8a52271a24844e150b096a99c2a1d407d53c64374fe16d20",
+    "bytes": 17265
+  },
+  {
+    "name": "qmath_16_27_contact_ward_checks.json",
+    "sha256": "8a7b0e12310e7ed2c9b215bb7dca168a738caf6e421d80118bde590760ddfaaa",
+    "bytes": 3946
+  },
+  {
+    "name": "qmath_16_27_mixed_timeseries.npz",
+    "sha256": "edd97c7f7ce4701cbe4ea551d7de5118a2177110b6b5f4a5797d1054bb4728d2",
+    "bytes": 22741
+  },
+  {
+    "name": "source/reference_q167/q167_m0_three_photon_T.py",
+    "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017",
+    "bytes": 8262
+  },
+  {
+    "name": "source/reference_q167/deps/q8_m0_model.py",
+    "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+    "bytes": 17386
+  },
+  {
+    "name": "source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+    "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07",
+    "bytes": 2284
+  },
+  {
+    "name": "source/reference_q167/deps/q8_tperp_static_audit.py",
+    "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+    "bytes": 37002
+  }
+]

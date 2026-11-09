@@ -1,0 +1,306 @@
+{
+  "campaign": "full112_gh7_tail_k20",
+  "n_probes": 8,
+  "do_not_submit": true,
+  "do_not_blind_submit_full_gh7": true,
+  "cep_pi_tested": false,
+  "cep_pi_note": "+N-only probes do not test GH7 CEP-\u03c0 covariance",
+  "dt2_stage": "not_implemented",
+  "policy": "Pinned 29175 binary; TB-v2; no rebuild. Eight k20 probes (corner + pure wide-axis). Staged until occupation gate PASS.",
+  "gh_order": 7,
+  "n_nodes": 49,
+  "precision": "ES25.17",
+  "I_bar": 100000000000.0,
+  "squeeze_r": 2.5,
+  "thetas_deg": [
+    0,
+    180
+  ],
+  "freeze_pin_base_head": "e20289bfe84ab6e107ec4aafaf1ce17304e40395",
+  "pinned_binary_sha256": "34edab1dbc6f7033b73e4feed85d96c1f36e71b781dd810ba6ff9391db82a67a",
+  "pinned_binary_source_sha256": "c6372e17457cb45d38233d81149b43fc07768978e5870c3e040d13205000110f",
+  "tb_plus_sha256": "66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18",
+  "tb_minus_v2_sha256": "d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246",
+  "template_sha256": "95440c2a896ac146952366c55e461bc2c01030dc341db322e8438710f6b0f7ff",
+  "sbatch_sha256": "9459d7f22b22d18eba8871ff5db705e8b20f33b091edf8dd6ecaf6bc0bacf3c3",
+  "submit_sha256": "119b29a77959b3a61f2eb210bff5d9e0ee4c7e31a022b9d18af2fd17be211ef2",
+  "validator_run_sha256": "db271996d558ffde0e75acb40417f5219a6e1ca5219ca2a142103b50ba9e49d4",
+  "validator_node_sha256": "2da37375340707c2c3b2ef483dd42bf91043a13116d6ec8be35afd5e0f1dec7f",
+  "validator_node_core_sha256": "aec40987b70b082490b0d8f6a15fdc7cb6ab00a58dd40de9468cc027e0ce2573",
+  "gate_sha256": "0fd7dbb25b2c6143e7f072e350300864a4d2851a3982816540d295e887732dbd",
+  "worktree_source_sha256": "78d24fbbd10200968513817e77df14bcc966e9d441a0b69a0970a816a0f6bfbb",
+  "manifests": {
+    "nodes_sv_r2p5_th0_gh7.dat": {
+      "path": "deploy/a0_layerA_m88full/nodes_tbv2_es25/gh7/nodes_sv_r2p5_th0_gh7.dat",
+      "sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 49,
+        "weight_sum": 1.0,
+        "mean_error": 1.333492746608349e-16,
+        "covariance_relative_error": 3.8043881899990477e-16,
+        "max_alpha_to_intensity_relative_error": 2.1574053806115116e-16,
+        "max_alpha_to_phase_absolute_error_rad": 4.440892098500626e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 2813159615258.948,
+        "weighted_mean_intensity_Wcm2": 199999999999.99997
+      },
+      "corner_pair": {
+        "kind": "corner",
+        "theta_deg": 0.0,
+        "ids": [
+          1,
+          49
+        ],
+        "I_max": 2813159615258.948,
+        "I_over_Imax": 1.0,
+        "weights": [
+          3.005987384290855e-07,
+          3.005987384290855e-07
+        ],
+        "alphas": [
+          [
+            -1.8815268187188199,
+            -22.921689105943642
+          ],
+          [
+            1.8815268187188199,
+            22.921689105943642
+          ]
+        ],
+        "major_axis": [
+          0.0,
+          1.0
+        ],
+        "minor_axis": [
+          -1.0,
+          0.0
+        ],
+        "axis_dot": 0.0,
+        "note": "corner antinode: absolute max I (worst-field); not a pure wide-axis node",
+        "I_global_max": 2813159615258.948,
+        "n_maxI_nodes": 8,
+        "n_maxI_pairs": 4
+      },
+      "wide_axis_pair": {
+        "kind": "wide",
+        "theta_deg": 0.0,
+        "ids": [
+          22,
+          28
+        ],
+        "I_max": 2794331557327.8013,
+        "I_over_Imax": 0.993307149075715,
+        "weights": [
+          0.0002506371913015858,
+          0.0002506371913015858
+        ],
+        "alphas": [
+          [
+            0.0,
+            -22.921689105943642
+          ],
+          [
+            -0.0,
+            22.921689105943642
+          ]
+        ],
+        "major_axis": [
+          0.0,
+          1.0
+        ],
+        "minor_axis": [
+          -1.0,
+          0.0
+        ],
+        "axis_dot": 0.0,
+        "note": "pure wide-axis antinode: max |proj_major|, then min |proj_minor|; IDs from manifest",
+        "I_global_max": 2813159615258.948
+      }
+    },
+    "nodes_sv_r2p5_th180_gh7.dat": {
+      "path": "deploy/a0_layerA_m88full/nodes_tbv2_es25/gh7/nodes_sv_r2p5_th180_gh7.dat",
+      "sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80",
+      "q0": {
+        "status": "PASS",
+        "n_nodes": 49,
+        "weight_sum": 1.0,
+        "mean_error": 2.645236422304017e-16,
+        "covariance_relative_error": 3.804363601867986e-16,
+        "max_alpha_to_intensity_relative_error": 2.1574053806115116e-16,
+        "max_alpha_to_phase_absolute_error_rad": 8.881784197001252e-16,
+        "min_intensity_Wcm2": 0.0,
+        "max_intensity_Wcm2": 2813159615258.948,
+        "weighted_mean_intensity_Wcm2": 199999999999.99997
+      },
+      "corner_pair": {
+        "kind": "corner",
+        "theta_deg": 180.0,
+        "ids": [
+          1,
+          49
+        ],
+        "I_max": 2813159615258.948,
+        "I_over_Imax": 1.0,
+        "weights": [
+          3.005987384290855e-07,
+          3.005987384290855e-07
+        ],
+        "alphas": [
+          [
+            -22.921689105943642,
+            -1.8815268187188186
+          ],
+          [
+            22.921689105943642,
+            1.8815268187188186
+          ]
+        ],
+        "major_axis": [
+          1.0,
+          0.0
+        ],
+        "minor_axis": [
+          -0.0,
+          1.0
+        ],
+        "axis_dot": 0.0,
+        "note": "corner antinode: absolute max I (worst-field); not a pure wide-axis node",
+        "I_global_max": 2813159615258.948,
+        "n_maxI_nodes": 8,
+        "n_maxI_pairs": 4
+      },
+      "wide_axis_pair": {
+        "kind": "wide",
+        "theta_deg": 180.0,
+        "ids": [
+          4,
+          46
+        ],
+        "I_max": 2794331557327.8013,
+        "I_over_Imax": 0.993307149075715,
+        "weights": [
+          0.0002506371913015858,
+          0.0002506371913015858
+        ],
+        "alphas": [
+          [
+            -22.921689105943642,
+            1.3940916232523183e-15
+          ],
+          [
+            22.921689105943642,
+            -1.3940916232523183e-15
+          ]
+        ],
+        "major_axis": [
+          1.0,
+          0.0
+        ],
+        "minor_axis": [
+          -0.0,
+          1.0
+        ],
+        "axis_dot": 0.0,
+        "note": "pure wide-axis antinode: max |proj_major|, then min |proj_minor|; IDs from manifest",
+        "I_global_max": 2813159615258.948
+      }
+    }
+  },
+  "plusN_probes": [
+    {
+      "theta_deg": 0,
+      "id": 1,
+      "kind": "corner",
+      "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 49,
+      "kind": "corner",
+      "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 22,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 0,
+      "id": 28,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th0_gh7.dat",
+      "manifest_sha256": "0f0fb5cb4ae13421209b23ea7aaf07a55af71f97fc266ef50be378c0d323e97b"
+    },
+    {
+      "theta_deg": 180,
+      "id": 1,
+      "kind": "corner",
+      "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 49,
+      "kind": "corner",
+      "I_max": 2813159615258.948,
+      "I_over_Imax": 1.0,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 4,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    },
+    {
+      "theta_deg": 180,
+      "id": 46,
+      "kind": "wide",
+      "I_max": 2794331557327.8013,
+      "I_over_Imax": 0.993307149075715,
+      "manifest": "nodes_sv_r2p5_th180_gh7.dat",
+      "manifest_sha256": "734072f57a273db0fbed16114b18865f08e034134b82c8eb493f7f5a68e96a80"
+    }
+  ],
+  "stages": [
+    "k20_tail",
+    "occupation_post",
+    "approve_k40",
+    "then_decide_full_gh7"
+  ],
+  "renormalize_subset_weights": false,
+  "use_full_manifest_moment_check": true,
+  "propagate_ids_only": true,
+  "occ_stride": 126,
+  "n_occupation_snapshots_approx": 40,
+  "nk_valence": 84,
+  "nk_bands": 112,
+  "dt": 0.35,
+  "T2_cycles": 0.5,
+  "harmonics": [
+    2,
+    5,
+    7,
+    9,
+    10
+  ]
+}

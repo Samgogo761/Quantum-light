@@ -1,0 +1,58 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.999661098073553,
+  "N_125fs": 0.999661098073553,
+  "left_CAP_loss_observation_100fs": 0.0003389019134797591,
+  "right_CAP_loss_observation_100fs": 1.7691052201135435e-26,
+  "left_CAP_loss_total_125fs": 0.0003389019134797591,
+  "right_CAP_loss_total_125fs": 1.7691052201135435e-26,
+  "signed_flux_100fs": 0.0005548019466995216,
+  "signed_flux_125fs": 0.0005548019466995216,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.2967293905319366e-11,
+  "Y_H": 0.00044050536490590394,
+  "Y_H_lower": 0.0004821729322549434,
+  "Y_H_upper": 0.0003785417661189285,
+  "masked_norm": 0.0005619711128792687,
+  "spectrum_integral": 0.0005619669890737679,
+  "propagation_seconds": 900.8056238000281,
+  "spectrum_seconds": 28.377200599992648,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        67.375
+      ],
+      "energy_points": 2776,
+      "masked_norm": 0.0005619711128792687,
+      "spectrum_integral": 0.0005619669890737679,
+      "spectrum_norm_absolute_difference": 4.123805500853492e-09,
+      "Y_H_lower": 0.0004821729322549434,
+      "Y_H_main": 0.00044050536490590394,
+      "Y_H_upper": 0.0003785417661189285
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+  "I_over_mu": 8.0,
+  "I_inc_W_per_cm2": 1333333333333.3333,
+  "wall_seconds": 929.4397109001875,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "38556604fe257fc1afb65aa5c35cc79edbdea4395e0d87277917de45a64027cf",
+  "peak_working_set_bytes": 131923968
+}

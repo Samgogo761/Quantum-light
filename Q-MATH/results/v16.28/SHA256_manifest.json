@@ -1,0 +1,23 @@
+{
+  "Q-MATH-16.28_\u53cc\u6a21BSV\u78c1\u6027\u9891\u7387\u9009\u62e9\u6027\u4e0e\u7ecf\u5178\u51f8\u754c.docx": "9dc98546b9746cbce9e2c4cf85487d9c27cedba8e77d44dca0269c6fb3d64eac",
+  "Q-MATH-16.28_\u53cc\u6a21BSV\u78c1\u6027\u9891\u7387\u9009\u62e9\u6027\u4e0e\u7ecf\u5178\u51f8\u754c.md": "3c58afeb74106c7c0e26deed2d380bc143e166484d944d6a5790677be8baf9ee",
+  "README_\u590d\u7b97\u53ca\u8bc1\u636e\u5206\u7ea7.md": "ca1073e69c1afbc5769ffaee731f99b4baf430b3bfd617151d9afa472bb4196f",
+  "kernel_cache.json": "a614bce147042d0a1c5af49122913bb5d45cc4f68a147719a5b07efd8dcc1397",
+  "make_qmath_16_28_report.py": "329092faa14404efbe78e1625ef0010da23774d0e1f36d2d633158a36994898c",
+  "q16_27_reference/qmath_16_26_cubic_audit.py": "233c8c9c1ca0877b5783eda942dd7bfa58dec4afa68d7bc02a9c8a42576ff73e",
+  "q16_27_reference/qmath_16_27_retarded_kernel.py": "dc1ee1cae4aa6f4702d5787ce4d2e47106f9c6379c8c7c711c052ef18e2e94b8",
+  "q16_27_reference/qmath_16_27_shape_scan.json": "0ed054f8a5261b1b8a52271a24844e150b096a99c2a1d407d53c64374fe16d20",
+  "q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07",
+  "q16_27_reference/source/reference_q167/deps/q8_m0_model.py": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+  "q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+  "q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017",
+  "qmath_16_28_classical_dual_audit.py": "9b312d10a25561328b6c0ca4560fe0025a785a9372e044ae1f258e3aaa15c86a",
+  "qmath_16_28_classical_dual_bound.png": "1654af64883ef3689ee4feb8b0217da476f6d2cf920adb1790211fc1141e0019",
+  "qmath_16_28_classical_dual_results.json": "3c81f24daa2976bc04133d0e053011a098c25c135741af6d2854a95ca852fd99",
+  "qmath_16_28_inverse_condition.png": "739188f1d9e74b5314d1ff0be6f739747b1ba5dcc0b68ca3b75ab03dfc00a247",
+  "qmath_16_28_magnetic_dark_channel.png": "92680ff2c3a727ad5c86d83a2610cb522d6ce8466337562ae0adee7aa7794b62",
+  "qmath_16_28_multimode_screen.py": "c90e9e59e4cc76aaf6f74595bef20507de4927e31dbd3d5527df31c37951eeaa",
+  "qmath_16_28_photon_normalized_results.json": "d0e7605dcae44b8588e0eb21f30b9e1a8d8d1d36b53d844dc3682c0ef23f6a21",
+  "qmath_16_28_photon_weighting.py": "f3883a189f5a8e2a08b4466fdad3a56d494cb4ed4733959b20a49386278c26ab",
+  "qmath_16_28_results.json": "77f5cb0f047a118c6a81fdfb6c8c100ed9a42a7e8d3ce517286ff7f3c24e9589"
+}

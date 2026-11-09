@@ -28,8 +28,11 @@ compare_refs/
 *.out
 exit_code.txt
 
-# Generated analysis figures/tables
+# Generated analysis figures/tables / run artifacts
+results/
+local_runs/
 *.png
+*.svg
 *.csv
 
 # Wannier90 data (user-provided, large)
@@ -40,7 +43,48 @@ wannier90_hr.dat
 wannier90_r.dat
 wannier_tb.dat
 
+# Local Python environments (also keeps Cursor/git from scanning torch)
+.venv*/
+.venv_q8_cuda/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Handover package for the incoming student: generated CSV/Markdown are
+# deliverables, not disposable run artifacts.
+!QL-TIP-1D/handover/
+!QL-TIP-1D/handover/**
+
+# JS tooling leftovers
+node_modules/
+.codex_tmp/
+.codex-report-build*/
+.codex-*/
+
+# Agent / PPT / HTTP scratch (file-count bomb for git status)
+.tmp/
+.tmp_*/
+.tmp_ppt*/
+tmp/
+tmp_ppt_preview/
+.chart-data-*/
+qa_preview_*/
+-p/
+pelican-bike.html
+_tmp_*.py
+.hbn_report_http_pid.txt
+
+# Accidental IME / OS dumps inside the workspace
+%SystemDrive%/
+
 # Editor / OS
 *.swp
 *~
 .DS_Store
+.cursor/
+.workbuddy/
+
+# Large Wannier tight-binding trees (keep on disk, never commit)
+tb_b1/
+tb_m52/

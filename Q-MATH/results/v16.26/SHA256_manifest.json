@@ -1,0 +1,77 @@
+[
+  {
+    "file": "qmath_16_26_run_verified.py",
+    "bytes": 3711,
+    "sha256": "124955be545f8343e9c49800ab31c66eac94582bdfaf853455fcc839c94aa233"
+  },
+  {
+    "file": "Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.md",
+    "bytes": 10830,
+    "sha256": "fd7cdc1e2f294c919789b9bc76dde640a39fb0d0617026a109262cc99a21ff11"
+  },
+  {
+    "file": "README_QMATH_16_26_复算说明.md",
+    "bytes": 2183,
+    "sha256": "66bfee07b7b3ef52f71f7633a816c9ae64de5bf809fccb5536475963895dc68d"
+  },
+  {
+    "file": "Q-MATH-16.26_非线性Peierls接触项与磁性响应数学审计.docx",
+    "bytes": 307320,
+    "sha256": "9726a1998ba50059e0884ce1d45bfcf6b782dae3d73f0b9b5779034deba77519"
+  },
+  {
+    "file": "qmath_16_26_cubic_bz_nonconvergence.png",
+    "bytes": 97892,
+    "sha256": "aee0b783771e12a55f4ffd28bc54f6a5c256b24c79747313c2c8174710ed8723"
+  },
+  {
+    "file": "qmath_16_26_independent_method_comparison.png",
+    "bytes": 115491,
+    "sha256": "2e34f6cbce4e135a1ed8988933f9e8ba1a7b480dee18e9c8932497f9a3f3adb7"
+  },
+  {
+    "file": "qmath_16_26_verified_results.json",
+    "bytes": 19317,
+    "sha256": "a9416dfb051057b8ea133d26969c9eff89def8a1b911810a6761b297039571c4"
+  },
+  {
+    "file": "qmath_16_26_cubic_audit.py",
+    "bytes": 8785,
+    "sha256": "233c8c9c1ca0877b5783eda942dd7bfa58dec4afa68d7bc02a9c8a42576ff73e"
+  },
+  {
+    "file": "qmath_16_26_primary_timeseries.npz",
+    "bytes": 32326,
+    "sha256": "451344c613eb28110d63b014e1d534507864a21ce92176d71c91bb7d782594f7"
+  },
+  {
+    "file": "qmath_16_26_h2_bz_nonconvergence.png",
+    "bytes": 105339,
+    "sha256": "334228613617cb122111d6cf70dded82c1bd0a3c37bf981cd8761d162ecf7986"
+  },
+  {
+    "file": "source/reference_q167/q167_m0_three_photon_T.py",
+    "bytes": 8262,
+    "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017"
+  },
+  {
+    "file": "source/reference_q167/deps/q8_tperp_static_audit.py",
+    "bytes": 37002,
+    "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b"
+  },
+  {
+    "file": "source/reference_q167/deps/q8_m0_model.py",
+    "bytes": 17386,
+    "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3"
+  },
+  {
+    "file": "source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+    "bytes": 2284,
+    "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+  },
+  {
+    "file": "baseline_16_25.zip",
+    "bytes": 1222893,
+    "sha256": "76c84ba450a9b22a63b2b7cddee62046a0400fc40ba779ace89f0668344a35b4"
+  }
+]

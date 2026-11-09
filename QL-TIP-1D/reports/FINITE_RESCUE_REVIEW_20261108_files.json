@@ -1,0 +1,18 @@
+{
+  "schema": "ql-tip-review-files-v1",
+  "date": "2026-11-08",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108.md",
+      "bytes": 9533,
+      "sha256": "32c5e4f4d817ec18d75c923805eec2b9cf689eba5f73f58769f79f2e9da72af3"
+    },
+    {
+      "path": "QL-TIP-1D/reports/FINITE_RESCUE_REVIEW_20261108_evidence.json",
+      "bytes": 7095,
+      "sha256": "3d2f61978eedb06846695cb3abad30fa23befc150df39c687b79b73e1efb980c"
+    }
+  ],
+  "excludes": "this inventory itself; active README tracked separately",
+  "validation": "264 unique category rows and 273 unique ledger events; weighted sums match saved summaries; no solver or project tests run"
+}

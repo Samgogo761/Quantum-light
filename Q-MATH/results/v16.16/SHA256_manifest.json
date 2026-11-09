@@ -1,0 +1,78 @@
+{
+  "Q-MATH-16.16_数学定理_能量壳与经典负控.docx": {
+    "sha256": "d607750f96d6610060fef0dcd0c1e55af4dba614284f5915e1f0b7c7b7719e09",
+    "bytes": 99905
+  },
+  "Q-MATH-16.16_数学定理_能量壳与经典负控.md": {
+    "sha256": "7be00bc79899f901f6f7db462b160b728fd815b9aeacbc84f53dfa843525cd72",
+    "bytes": 12815
+  },
+  "README_复现实验与下一步.md": {
+    "sha256": "9c0683e4498582b0f9a6b6eb8223d2d21d877ef9b41975c46ad0e1d147d0847a",
+    "bytes": 2411
+  },
+  "qmath_16_16_bz_nonconvergence.png": {
+    "sha256": "1f62006445f6d56d005fa722976ba059d4ad77e1f2f2a1f836267103601108c8",
+    "bytes": 86072
+  },
+  "qmath_16_16_classical_theorem.wl": {
+    "sha256": "16113f3e5112b9582db7d7e034ddcb1bb4a99b9a456e4ffc6aef83e6f82008ab",
+    "bytes": 759
+  },
+  "qmath_16_16_convergence.py": {
+    "sha256": "f3165f1248b95887f81020884652c3db39214e8037fccda6f1ce724aec2655f8",
+    "bytes": 2353
+  },
+  "qmath_16_16_convergence_results.json": {
+    "sha256": "84da160063a8d24c3302d730bbe4ddf36c8bea20038749345576c98af577a54a",
+    "bytes": 6259
+  },
+  "qmath_16_16_invariant_results.json": {
+    "sha256": "2be8f10b63cb34f9e3e930d897bd7574e4c1b6416a4f53d628471e4b7947caa3",
+    "bytes": 2202
+  },
+  "qmath_16_16_invariant_tests.py": {
+    "sha256": "9a6da585414428e225fabea69152d34f29c4e884be6dd78326481fa20d4a7f1b",
+    "bytes": 1529
+  },
+  "qmath_16_16_magnetism_null.json": {
+    "sha256": "5b43552fed33f72dc4e8f044e13c314d590db2ca5713bd7603c775a1e3e3bb23",
+    "bytes": 3923
+  },
+  "qmath_16_16_magnetism_null.py": {
+    "sha256": "4ba4a8c69b4ec0e296bd4875a097de9fd69e83934e46762d7179f5338f613543",
+    "bytes": 1065
+  },
+  "qmath_16_16_nonmagnetic_k_control.json": {
+    "sha256": "cd046bf138fdc90cafaeef5e596670b194746de525d6a2c9cb6af21b1d5c8db3",
+    "bytes": 2765
+  },
+  "qmath_16_16_nonmagnetic_k_control.py": {
+    "sha256": "e0a5e5af3f22fceab40d54480424f9a14e68aafba9e0a20257c8b445d8fa9f6a",
+    "bytes": 1048
+  },
+  "qmath_16_16_on_shell_m0.py": {
+    "sha256": "0cda11e5552edf5aa940dc2d4f9a52dc57d1632a0f6ccebde0be0ac8a84f8a81",
+    "bytes": 5848
+  },
+  "qmath_16_16_on_shell_results.json": {
+    "sha256": "49be47a9f0b788abb1ae2fe5a54a72fdea5644031e65846430404b6c6e4ef6e9",
+    "bytes": 17745
+  },
+  "src/deps/CrI3_scf_soc_a1h_clean.in": {
+    "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07",
+    "bytes": 2284
+  },
+  "src/deps/q8_m0_model.py": {
+    "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+    "bytes": 17386
+  },
+  "src/deps/q8_tperp_static_audit.py": {
+    "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+    "bytes": 37002
+  },
+  "src/q167_m0_three_photon_T.py": {
+    "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017",
+    "bytes": 8262
+  }
+}

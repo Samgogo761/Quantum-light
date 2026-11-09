@@ -1,0 +1,4381 @@
+[2026-11-06T16:24:42.137718+00:00] === v3-r2 full run started ===
+[2026-11-06T16:24:42.139716+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:26:42.146519+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:28:42.150631+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:30:42.161313+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:32:42.164506+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:34:42.169264+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:36:42.173997+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:38:42.179908+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:40:42.185267+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:42:42.189647+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:44:42.194596+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:46:42.198194+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:48:42.202359+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:50:42.207943+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:52:42.212451+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:54:42.217055+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:56:42.221132+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T16:58:42.226205+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:00:42.230650+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:02:42.236492+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:04:42.241909+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:06:42.246405+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:08:42.250730+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:10:42.255129+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:12:42.277273+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:14:42.282980+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:16:42.288474+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:18:42.293493+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:20:42.299882+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:22:42.304109+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:24:42.308124+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:52:35.052223+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-06T17:52:52.267393+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-06T17:53:09.776376+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-06T17:55:48.116043+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-06T17:56:39.054857+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-06T17:56:56.869101+00:00] === v3-r2 full run started (review v5 fixes) ===
+[2026-11-06T17:56:56.874099+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-06T17:56:56.876108+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T17:58:56.879558+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:00:56.881601+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:02:56.884373+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:04:56.889238+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:06:56.891357+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:08:56.894450+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:10:56.897159+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:12:56.900340+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:14:56.902901+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:16:56.905758+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:18:56.908920+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-06T18:20:56.910898+00:00] waiting for S3-C (propagations + common readouts) ...
+[2026-11-07T03:03:07.877510+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-07T03:03:45.628800+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-07T03:03:47.759883+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-07T03:04:21.708202+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-07T03:51:48.817685+00:00] === v3-r2 full run started (review v5 fixes) ===
+[2026-11-07T03:51:48.823302+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-07T03:51:48.827519+00:00] === STAGE s3c ===
+[2026-11-07T03:51:49.307742+00:00] verify_s3c: no pending readouts
+[2026-11-07T03:51:49.310741+00:00] S3 stage budget: 9.3823 h used of 10.0 h -> WITHIN_CAP
+[2026-11-07T03:51:49.316747+00:00] === STAGE s4 ===
+[2026-11-07T03:51:49.318746+00:00] START contributions: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions
+{
+  "complete_nodes": [
+    1.0,
+    4.0,
+    8.0,
+    12.0,
+    20.0
+  ],
+  "q": {
+    "1.0": 1.9448876823871772,
+    "4.0": 2.119019815927452,
+    "8.0": 1.8327384724979086,
+    "12.0": 1.434038084099882,
+    "20.0": 1.6732102047312052
+  },
+  "J_over_mu": 8.0
+}
+[2026-11-07T03:51:50.585929+00:00] DONE contributions: exit=0 elapsed=1.3s
+[2026-11-07T03:51:50.589434+00:00] START S4 controls: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage s4-controls --max-new-runs 4 (events=4, outer_timeout=22800s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage s4-controls --max-new-runs 4
+library new=4 selected=4
+bias_v2_s4_F0_I8_phi000_dx048_r01: F=0.0 I/mu=8.0 CEP=0.0
+bias_v2_s4_F0_I8_phi000_dt005_r01: F=0.0 I/mu=8.0 CEP=0.0
+bias_v2_s4_F1_I8_phi000_dx048_r01: F=1.0 I/mu=8.0 CEP=0.0
+bias_v2_s4_F1_I8_phi000_dt005_r01: F=1.0 I/mu=8.0 CEP=0.0
+{"run_id": "bias_v2_s4_F0_I8_phi000_dx048_r01", "status": "PASS", "wall_seconds": 1647.3581357999938, "Y": "not_computed"}
+{"run_id": "bias_v2_s4_F0_I8_phi000_dt005_r01", "status": "PASS", "wall_seconds": 1652.0380587000036, "Y": "not_computed"}
+{"run_id": "bias_v2_s4_F1_I8_phi000_dx048_r01", "status": "PASS", "wall_seconds": 1662.9663891999953, "Y": "not_computed"}
+{"run_id": "bias_v2_s4_F1_I8_phi000_dt005_r01", "status": "PASS", "wall_seconds": 1631.6804047999976, "Y": "not_computed"}
+[2026-11-07T05:41:45.150999+00:00] DONE S4 controls: exit=0 elapsed=6594.6s
+[2026-11-07T05:41:45.710319+00:00] START S4 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=116 runnable=4 selected=4
+ro2_bias_v2_s4_F0_I8_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_s4_F0_I8_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_s4_F1_I8_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_s4_F1_I8_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_s4_F0_I8_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_s4_F0_I8_phi000_dt005_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    67.375
+  ],
+  "energy_points": 5551,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0004833439438093101,
+  "Y_at_E_main": 0.0004348288844443333,
+  "Y_at_E_high": 0.0003695931706197102,
+  "masked_norm": 0.000562020797378566,
+  "spectrum_integral": 0.000562020271147563,
+  "integral_over_masked_norm": 0.9999990636805516,
+  "state_sha256": "8bb77b277527fca534bc2b2588facb59fdae623927ff6691f7b2a1b4d11b3da6",
+  "run_config_sha256": "7a115e84526aaf8327b873f94908250d0a8d4549dcd64244fff719d233069039",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 55.544158500000776,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_s4_F0_I8_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_s4_F0_I8_phi000_dx048_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    67.375
+  ],
+  "energy_points": 5551,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0004876969564299569,
+  "Y_at_E_main": 0.00044824091469500374,
+  "Y_at_E_high": 0.000380522857140497,
+  "masked_norm": 0.0005668127210479433,
+  "spectrum_integral": 0.0005668121997766505,
+  "integral_over_masked_norm": 0.9999990803465175,
+  "state_sha256": "691f60239cbfba4a4d6b07b9f0d855be3ccedb64441628db7bca27d58ff688ad",
+  "run_config_sha256": "5f13816d9d4f24b717f998a0ec647f1a92702800687161131921685684ef19a8",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 112.18497899999784,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_s4_F1_I8_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_s4_F1_I8_phi000_dt005_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007294039563702884,
+  "Y_at_E_main": 0.0006241056400339645,
+  "Y_at_E_high": 0.0005618683664167701,
+  "masked_norm": 0.0018917947647687544,
+  "spectrum_integral": 0.001891794760318085,
+  "integral_over_masked_norm": 0.9999999976473826,
+  "state_sha256": "e6b95308daa213bb4d5885f0e15989c0f2bbc900e03203f19dcb4af49078c992",
+  "run_config_sha256": "03ba490fb573d90173bbc6ddbb3c99b5db3ee1e21866de56189fb55f386d5103",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 87.44786759999988,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_s4_F1_I8_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_s4_F1_I8_phi000_dx048_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007416761704230108,
+  "Y_at_E_main": 0.0006503113011385825,
+  "Y_at_E_high": 0.0005754042957681561,
+  "masked_norm": 0.0018923586041182977,
+  "spectrum_integral": 0.0018923585997007132,
+  "integral_over_masked_norm": 0.9999999976655669,
+  "state_sha256": "6080d2e937a294bfa51c3794b7f41b4ebe8b4b9d518141360291fc6a303cff04",
+  "run_config_sha256": "3a50770189a03139b9da6b90df94ef66419448fcd1e477f72135493515c0ec1d",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 180.70126609999716,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 4,
+  "remaining": 0
+}
+[2026-11-07T05:49:02.249714+00:00] DONE S4 readouts 1: exit=0 elapsed=436.5s
+[2026-11-07T05:49:02.810219+00:00] S4: no pending readouts
+[2026-11-07T05:49:02.811220+00:00] START S4 direct readouts: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4-readouts (events=6, outer_timeout=34200s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4-readouts
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p025_dE0p00625_m2-4",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.025,
+  "step_eV": 0.00625,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    67.36875
+  ],
+  "energy_points": 11100,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00048444699658662543,
+  "Y_at_E_main": 0.0004444278454307345,
+  "Y_at_E_high": 0.0003763812630550439,
+  "masked_norm": 0.0005619711128792687,
+  "spectrum_integral": 0.0005619710483410934,
+  "integral_over_masked_norm": 0.9999998851574861,
+  "state_sha256": "38556604fe257fc1afb65aa5c35cc79edbdea4395e0d87277917de45a64027cf",
+  "run_config_sha256": "4cc1a3084c900535edc3ef1c537165d24ec3c6f29a826db952df5811437a811b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 112.1030161000017,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p00625_m2-4",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.00625,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    67.36875
+  ],
+  "energy_points": 11100,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00048394751090105327,
+  "Y_at_E_main": 0.00044322199593955396,
+  "Y_at_E_high": 0.0003770419067693717,
+  "masked_norm": 0.0005619711128792687,
+  "spectrum_integral": 0.0005619705967547102,
+  "integral_over_masked_norm": 0.9999990815816922,
+  "state_sha256": "38556604fe257fc1afb65aa5c35cc79edbdea4395e0d87277917de45a64027cf",
+  "run_config_sha256": "4cc1a3084c900535edc3ef1c537165d24ec3c6f29a826db952df5811437a811b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 112.68255510000017,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F0_I8_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    100.7
+  ],
+  "energy_points": 8217,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0004839417541084079,
+  "Y_at_E_main": 0.0004432030852153903,
+  "Y_at_E_high": 0.0003770524490646259,
+  "masked_norm": 0.0005619711128792687,
+  "spectrum_integral": 0.0005619705967842738,
+  "integral_over_masked_norm": 0.9999990816342991,
+  "state_sha256": "38556604fe257fc1afb65aa5c35cc79edbdea4395e0d87277917de45a64027cf",
+  "run_config_sha256": "4cc1a3084c900535edc3ef1c537165d24ec3c6f29a826db952df5811437a811b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 83.78231159999996,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p025_dE0p00625_m2-4",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.025,
+  "step_eV": 0.00625,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.36875
+  ],
+  "energy_points": 17500,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007439239598770574,
+  "Y_at_E_main": 0.0006490529738534836,
+  "Y_at_E_high": 0.0005731845627341851,
+  "masked_norm": 0.0018889267603763268,
+  "spectrum_integral": 0.0018889267598472452,
+  "integral_over_masked_norm": 0.9999999997199036,
+  "state_sha256": "3f13bcce4821c98adebcb6c0eabb00af526af311d077878de530f8db07c32c2a",
+  "run_config_sha256": "fb1b71bba860a858ec7a7abb4bf0c778a24ad59be5c07167c4b6cfda0f211eb2",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 176.67425340000045,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p00625_m2-4",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.00625,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.36875
+  ],
+  "energy_points": 17500,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007430428350892438,
+  "Y_at_E_main": 0.0006501888845230441,
+  "Y_at_E_high": 0.0005749628609261674,
+  "masked_norm": 0.0018889267603763268,
+  "spectrum_integral": 0.001888926755965815,
+  "integral_over_masked_norm": 0.9999999976650701,
+  "state_sha256": "3f13bcce4821c98adebcb6c0eabb00af526af311d077878de530f8db07c32c2a",
+  "run_config_sha256": "fb1b71bba860a858ec7a7abb4bf0c778a24ad59be5c07167c4b6cfda0f211eb2",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 176.05317329999525,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus",
+  "kind": "s4_readout_control",
+  "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    130.70000000000002
+  ],
+  "energy_points": 12217,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007430260695438725,
+  "Y_at_E_main": 0.0006502063538904182,
+  "Y_at_E_high": 0.0005749916155801885,
+  "masked_norm": 0.0018889267603763268,
+  "spectrum_integral": 0.0018889267560208375,
+  "integral_over_masked_norm": 0.999999997694199,
+  "state_sha256": "3f13bcce4821c98adebcb6c0eabb00af526af311d077878de530f8db07c32c2a",
+  "run_config_sha256": "fb1b71bba860a858ec7a7abb4bf0c778a24ad59be5c07167c4b6cfda0f211eb2",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 123.35812079999596,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "J_over_mu": 8.0,
+  "rows": 6,
+  "missing": []
+}
+[2026-11-07T06:02:08.334131+00:00] DONE S4 direct readouts: exit=0 elapsed=785.5s
+[2026-11-07T06:02:08.335131+00:00] START S4 gate: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4 (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4
+{
+  "rows": 66,
+  "path": "results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+  "sha256": "44380f90b0bf7164f829f6812b38187aaf65fbf9203d212ce450866dd19b96df",
+  "phase_envelope": 0.07026308347987481,
+  "direct_4to8": {},
+  "phase_missing": []
+}
+{
+  "J_over_mu": 8.0,
+  "status": "PROCEED",
+  "blockers": [],
+  "max_abs": 0.04014220046827089
+}
+[2026-11-07T06:02:09.011251+00:00] DONE S4 gate: exit=0 elapsed=0.7s
+[2026-11-07T06:02:09.015252+00:00] === STAGE s5 ===
+[2026-11-07T06:02:09.045257+00:00] S5 remaining library tasks: 30
+[2026-11-07T06:02:09.048256+00:00] START S5 batch 1 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8
+library new=8 selected=8
+bias_v2_lib_F0_I32_phi090_r01: F=0.0 I/mu=32.0 CEP=1.5707963267948966
+bias_v2_lib_F0_I32_phi180_r01: F=0.0 I/mu=32.0 CEP=3.141592653589793
+bias_v2_lib_F0_I32_phi270_r01: F=0.0 I/mu=32.0 CEP=4.71238898038469
+bias_v2_lib_F0_I0.25_phi000_r01: F=0.0 I/mu=0.25 CEP=0.0
+bias_v2_lib_F0_I0.25_phi090_r01: F=0.0 I/mu=0.25 CEP=1.5707963267948966
+bias_v2_lib_F0_I0.25_phi180_r01: F=0.0 I/mu=0.25 CEP=3.141592653589793
+bias_v2_lib_F0_I0.25_phi270_r01: F=0.0 I/mu=0.25 CEP=4.71238898038469
+bias_v2_lib_F0_I0.5_phi000_r01: F=0.0 I/mu=0.5 CEP=0.0
+{"run_id": "bias_v2_lib_F0_I32_phi090_r01", "status": "PASS", "wall_seconds": 827.2645277999982, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I32_phi180_r01", "status": "PASS", "wall_seconds": 837.7114968000024, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I32_phi270_r01", "status": "PASS", "wall_seconds": 838.0379202999975, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.25_phi000_r01", "status": "PASS", "wall_seconds": 829.3629774999936, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.25_phi090_r01", "status": "PASS", "wall_seconds": 839.2745274999979, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.25_phi180_r01", "status": "PASS", "wall_seconds": 816.0011098000032, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.25_phi270_r01", "status": "PASS", "wall_seconds": 812.2952560999984, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.5_phi000_r01", "status": "PASS", "wall_seconds": 803.3327161999987, "Y": "not_computed"}
+[2026-11-07T07:52:12.891537+00:00] DONE S5 batch 1 (8): exit=0 elapsed=6603.8s
+[2026-11-07T07:52:13.457155+00:00] START S5 batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=124 runnable=8 selected=8
+ro2_bias_v2_lib_F0_I0.25_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.25_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.25_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.25_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.5_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I32_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I32_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I32_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.25_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.25_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.510162658179361e-13,
+  "Y_at_E_main": 7.883303495616601e-14,
+  "Y_at_E_high": 4.51945441500977e-14,
+  "masked_norm": 5.506432006985512e-13,
+  "spectrum_integral": 5.506419866964663e-13,
+  "integral_over_masked_norm": 0.9999977953017792,
+  "state_sha256": "ad8706d2280cc5c99de5c2baf3b9941df9b2c39fa1b5a6ef948f6373cd034e40",
+  "run_config_sha256": "6c80907f588bddb1abe6ddb41e96ec94b0546c496e34a36586231a5cf467286b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 25.665579100001196,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.25_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.25_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.510164476883445e-13,
+  "Y_at_E_main": 7.88315808940574e-14,
+  "Y_at_E_high": 4.519046947887666e-14,
+  "masked_norm": 5.508151598749411e-13,
+  "spectrum_integral": 5.508139453277397e-13,
+  "integral_over_masked_norm": 0.9999977950004105,
+  "state_sha256": "7fe8deeff158a2c5a76d4de72d2ea08d2b2abdaf64931e7422c2b0964f559765",
+  "run_config_sha256": "aa24384d3289717af46de5b99edd46b24e2e8e84c51ca38cc8fd825ba0743798",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 26.645034899993334,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.25_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.25_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.5102814544851495e-13,
+  "Y_at_E_main": 7.884274493449953e-14,
+  "Y_at_E_high": 4.519316594083523e-14,
+  "masked_norm": 5.509733822348152e-13,
+  "spectrum_integral": 5.509721672601874e-13,
+  "integral_over_masked_norm": 0.9999977948578516,
+  "state_sha256": "52f671942c8b9395a093a6329312d5fca5b1eb787c7ec088f6bf2c80143bb068",
+  "run_config_sha256": "7b12e81d0a000f649cfea176f7d4105cd29dc112350e7f8c0d30a979742acf22",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 25.665019400003075,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.25_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.25_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.5102796281624323e-13,
+  "Y_at_E_main": 7.884419891383592e-14,
+  "Y_at_E_high": 4.519723996850096e-14,
+  "masked_norm": 5.508013893627608e-13,
+  "spectrum_integral": 5.508001749333582e-13,
+  "integral_over_masked_norm": 0.9999977951591517,
+  "state_sha256": "72f8906baa5e95892824f0b5b84c8098f4e6bf5c4ce5451069fc5aea849d8d9d",
+  "run_config_sha256": "764027c2108d6f29d7e7ab33d811d32bc94fd14a292798b59ae3055f72f5f35b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 25.77503489999799,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.5_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.5_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 3.9516497753681987e-11,
+  "Y_at_E_main": 1.4166339934202395e-11,
+  "Y_at_E_high": 1.2306306863787931e-11,
+  "masked_norm": 5.312268695225154e-11,
+  "spectrum_integral": 5.312261520685675e-11,
+  "integral_over_masked_norm": 0.9999986494396479,
+  "state_sha256": "43a1587431dabc9625a93a9c0ca8694852814c858d0e3c3c0ff06c6cd3956b82",
+  "run_config_sha256": "6f8a23cb691fcc9e4a93fe480023987df326cd4083b528db2e2b422fd3b1e35e",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 27.104702700002235,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I32_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I32_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    239.47500000000002
+  ],
+  "energy_points": 19319,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.06436004157812812,
+  "Y_at_E_main": 0.06378695245371864,
+  "Y_at_E_high": 0.06310662115199651,
+  "masked_norm": 0.06556603762546039,
+  "spectrum_integral": 0.0655660254215601,
+  "integral_over_masked_norm": 0.999999813868571,
+  "state_sha256": "d8e14cc120cbd025eaa04df8db3a54348cad4da8f0f0a8d56e4fd447a8cf68cf",
+  "run_config_sha256": "602f6234aea379f67335b729376daf0e86bc271c554e9d4a01294a450d2c1da7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 209.14183839999896,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I32_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I32_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    239.47500000000002
+  ],
+  "energy_points": 19319,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.05427758968997483,
+  "Y_at_E_main": 0.05369018048249664,
+  "Y_at_E_high": 0.05320944252375015,
+  "masked_norm": 0.05581113080366758,
+  "spectrum_integral": 0.05581112056401676,
+  "integral_over_masked_norm": 0.9999998165303109,
+  "state_sha256": "43a777fe98a05b6734419fdaabc9ec65d69668ecaef563ee9db1a9e8f5381b8c",
+  "run_config_sha256": "78864f97903d338d3078ae98dc7647cae89c8f4b533ade4ad0538e55c9aa0188",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 217.2511813999954,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I32_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I32_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    239.47500000000002
+  ],
+  "energy_points": 19319,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.06419551992722312,
+  "Y_at_E_main": 0.06364592086590394,
+  "Y_at_E_high": 0.06319067919768646,
+  "masked_norm": 0.06584302655422868,
+  "spectrum_integral": 0.06584301778470807,
+  "integral_over_masked_norm": 0.9999998668117025,
+  "state_sha256": "164054f55e6d05fb78f05f4d63e612a32c2ca4c8458ee0dc5a0bdc03e9231189",
+  "run_config_sha256": "ecc8c640f7014b64cb2dc6d5a0e240d8465a4f28d8a27df568d9f20477a4eee8",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 193.3348948000057,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-07T08:04:44.875070+00:00] DONE S5 batch 1 readouts 1: exit=0 elapsed=751.4s
+[2026-11-07T08:04:45.435907+00:00] S5 batch 1: no pending readouts
+[2026-11-07T08:04:45.439226+00:00] START S5 batch 2 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8
+library new=8 selected=8
+bias_v2_lib_F0_I0.5_phi090_r01: F=0.0 I/mu=0.5 CEP=1.5707963267948966
+bias_v2_lib_F0_I0.5_phi180_r01: F=0.0 I/mu=0.5 CEP=3.141592653589793
+bias_v2_lib_F0_I0.5_phi270_r01: F=0.0 I/mu=0.5 CEP=4.71238898038469
+bias_v2_lib_F0_I2_phi000_r01: F=0.0 I/mu=2.0 CEP=0.0
+bias_v2_lib_F0_I2_phi090_r01: F=0.0 I/mu=2.0 CEP=1.5707963267948966
+bias_v2_lib_F0_I2_phi180_r01: F=0.0 I/mu=2.0 CEP=3.141592653589793
+bias_v2_lib_F0_I2_phi270_r01: F=0.0 I/mu=2.0 CEP=4.71238898038469
+bias_v2_lib_F1_I32_phi090_r01: F=1.0 I/mu=32.0 CEP=1.5707963267948966
+{"run_id": "bias_v2_lib_F0_I0.5_phi090_r01", "status": "PASS", "wall_seconds": 826.3581005000015, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.5_phi180_r01", "status": "PASS", "wall_seconds": 828.0095847999983, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I0.5_phi270_r01", "status": "PASS", "wall_seconds": 829.303396000003, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I2_phi000_r01", "status": "PASS", "wall_seconds": 829.8205553000007, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I2_phi090_r01", "status": "PASS", "wall_seconds": 827.1601307000019, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I2_phi180_r01", "status": "PASS", "wall_seconds": 813.4490357000032, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F0_I2_phi270_r01", "status": "PASS", "wall_seconds": 1135.1274266000037, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I32_phi090_r01", "status": "PASS", "wall_seconds": 1242.9362518000053, "Y": "not_computed"}
+[2026-11-07T10:06:58.198714+00:00] DONE S5 batch 2 (8): exit=0 elapsed=7332.8s
+[2026-11-07T10:06:58.974037+00:00] START S5 batch 2 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=132 runnable=8 selected=8
+ro2_bias_v2_lib_F0_I0.5_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.5_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I0.5_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I2_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I2_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I2_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F0_I2_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I32_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.5_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.5_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 3.9518197070396866e-11,
+  "Y_at_E_main": 1.416616348571919e-11,
+  "Y_at_E_high": 1.2308412417844837e-11,
+  "masked_norm": 5.308766938648386e-11,
+  "spectrum_integral": 5.30875977426844e-11,
+  "integral_over_masked_norm": 0.9999986504625219,
+  "state_sha256": "8c66d4a5378bc40ee3997776449cec91075f949809bd83744cd8ad25a86a86e0",
+  "run_config_sha256": "9e7ef07208bed1d974ce81cbef11160419b12a7de60bf79ae0769a20beb49a96",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 36.991729399996984,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.5_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.5_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 3.951713381692934e-11,
+  "Y_at_E_main": 1.4165769627265562e-11,
+  "Y_at_E_high": 1.230619048677899e-11,
+  "masked_norm": 5.3054607229370014e-11,
+  "spectrum_integral": 5.30545356682982e-11,
+  "integral_over_masked_norm": 0.99999865118082,
+  "state_sha256": "4a0c56bd0b41bfd3570854795a1e25ff412500c713b22134247b3c3e0242fd27",
+  "run_config_sha256": "7c7a225270a43cada8cf147d894778051468b40f3bd37fac33a0baa3dcb1ebe7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 39.026867599997786,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I0.5_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I0.5_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 3.951543449936102e-11,
+  "Y_at_E_main": 1.4165946064327124e-11,
+  "Y_at_E_high": 1.2304084897319464e-11,
+  "masked_norm": 5.308962474074152e-11,
+  "spectrum_integral": 5.308955307807443e-11,
+  "integral_over_masked_norm": 0.999998650156835,
+  "state_sha256": "da4bd00fe33615a2fbee5a7260e18386628876db3ee94a02c517c6c59f39b097",
+  "run_config_sha256": "c24954787eda70c9d8719b4f05f481673fdf6a3dbb0058008b33e610a7c14414",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 38.52554300000338,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I2_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I2_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.488153845332523e-07,
+  "Y_at_E_main": 2.418265734185153e-07,
+  "Y_at_E_high": 1.8893143216418738e-07,
+  "masked_norm": 1.7032764680421833e-06,
+  "spectrum_integral": 1.7032723614491831e-06,
+  "integral_over_masked_norm": 0.9999975890038539,
+  "state_sha256": "64bf3da7a04e8f49b2cbc539ae85f95d7391eac30876a038ae7ec6f9ef37a4d0",
+  "run_config_sha256": "5cdeafc1174068b8f6236bad30ea0e894cabc75619835762fe986c2f81b6e426",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 38.47362989999965,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I2_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I2_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.487948158177917e-07,
+  "Y_at_E_main": 2.42576999445906e-07,
+  "Y_at_E_high": 1.880461012609867e-07,
+  "masked_norm": 1.7086079625454163e-06,
+  "spectrum_integral": 1.7086038396512626e-06,
+  "integral_over_masked_norm": 0.9999975869864568,
+  "state_sha256": "f2fa61e0d76e7791ec67dfecaf08d307530627ccc95bbb36a2660b6a0bf92fcb",
+  "run_config_sha256": "90326f9df878c43ede7247977ee3eb66670efd996d663af87ecabd19deae6681",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 38.43965400000161,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I2_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I2_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.490688014535809e-07,
+  "Y_at_E_main": 2.425498859788372e-07,
+  "Y_at_E_high": 1.8752355492649867e-07,
+  "masked_norm": 1.7137856896296607e-06,
+  "spectrum_integral": 1.7137815531529724e-06,
+  "integral_over_masked_norm": 0.9999975863512496,
+  "state_sha256": "844acc2e5e4f37c32e1732c715f438724d1a205b1351a967a14770f58afbc14e",
+  "run_config_sha256": "bf34a8e8d8da6211b150d346b8291d661b5c20f4782b491313ab5bc5ab040020",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 38.565399300001445,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I2_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I2_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "energy_points": 2561,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.4908930923396887e-07,
+  "Y_at_E_main": 2.417991895590479e-07,
+  "Y_at_E_high": 1.884090267273224e-07,
+  "masked_norm": 1.7084543338886583e-06,
+  "spectrum_integral": 1.708450213713257e-06,
+  "integral_over_masked_norm": 0.9999975883608244,
+  "state_sha256": "d53277ceb5fde3454ab14e34af95c1387665dee9bc96f845bbf3ef5d597ebde7",
+  "run_config_sha256": "caf5dda90771344044d324c583b8eaa28ca01d207540efdd46d098a64575cf87",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 39.49552989999938,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I32_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I32_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.08071100739573676,
+  "Y_at_E_main": 0.07843739854648069,
+  "Y_at_E_high": 0.07563528735818019,
+  "masked_norm": 0.08511384101218106,
+  "spectrum_integral": 0.0851138409134825,
+  "integral_over_masked_norm": 0.9999999988403935,
+  "state_sha256": "9eb55ece5f5ce35686269ee21ec0209a64292b3f7b322fa3d8244edcb50829c0",
+  "run_config_sha256": "4ce2e430eaa568c8f51aad6092e3d65d215237d9edcddacece0d3b25f3d12505",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 337.4118199000004,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-07T10:17:06.869398+00:00] DONE S5 batch 2 readouts 1: exit=0 elapsed=607.9s
+[2026-11-07T10:17:07.461429+00:00] S5 batch 2: no pending readouts
+[2026-11-07T10:17:07.468429+00:00] START S5 batch 3 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8
+library new=8 selected=8
+bias_v2_lib_F1_I32_phi180_r01: F=1.0 I/mu=32.0 CEP=3.141592653589793
+bias_v2_lib_F1_I32_phi270_r01: F=1.0 I/mu=32.0 CEP=4.71238898038469
+bias_v2_lib_F1_I0.25_phi000_r01: F=1.0 I/mu=0.25 CEP=0.0
+bias_v2_lib_F1_I0.25_phi090_r01: F=1.0 I/mu=0.25 CEP=1.5707963267948966
+bias_v2_lib_F1_I0.25_phi180_r01: F=1.0 I/mu=0.25 CEP=3.141592653589793
+bias_v2_lib_F1_I0.25_phi270_r01: F=1.0 I/mu=0.25 CEP=4.71238898038469
+bias_v2_lib_F1_I0.5_phi000_r01: F=1.0 I/mu=0.5 CEP=0.0
+bias_v2_lib_F1_I0.5_phi090_r01: F=1.0 I/mu=0.5 CEP=1.5707963267948966
+{"run_id": "bias_v2_lib_F1_I32_phi180_r01", "status": "PASS", "wall_seconds": 1223.6876680999994, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I32_phi270_r01", "status": "PASS", "wall_seconds": 1226.2170274000018, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.25_phi000_r01", "status": "PASS", "wall_seconds": 1388.5435854000025, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.25_phi090_r01", "status": "PASS", "wall_seconds": 1362.7993123999986, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.25_phi180_r01", "status": "PASS", "wall_seconds": 1195.5462696000031, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.25_phi270_r01", "status": "PASS", "wall_seconds": 1211.1418071000007, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.5_phi000_r01", "status": "PASS", "wall_seconds": 1264.7667467000065, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.5_phi090_r01", "status": "PASS", "wall_seconds": 1214.2416209000075, "Y": "not_computed"}
+[2026-11-07T13:05:15.085320+00:00] DONE S5 batch 3 (8): exit=0 elapsed=10087.6s
+[2026-11-07T13:05:15.690175+00:00] START S5 batch 3 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=140 runnable=8 selected=8
+ro2_bias_v2_lib_F1_I0.25_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.25_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.25_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.25_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.5_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.5_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I32_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I32_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.25_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.25_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    31.800000000000004
+  ],
+  "energy_points": 4305,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 5.418188796842053e-13,
+  "Y_at_E_main": 1.6497145233233755e-13,
+  "Y_at_E_high": 7.754020253297458e-14,
+  "masked_norm": 2.0091385700643865e-10,
+  "spectrum_integral": 2.0091385628416188e-10,
+  "integral_over_masked_norm": 0.9999999964050426,
+  "state_sha256": "d9112a53b69a0fe3d1c98e4799438e4fa08d68de76591d4eba11f2ec84a1b199",
+  "run_config_sha256": "3a169e57c0d17c3f1af7846f2ff3f525c68f7b88e734ade4fc858cfc203f4c26",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 64.23568649998924,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.25_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.25_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    31.800000000000004
+  ],
+  "energy_points": 4305,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 5.418080187088579e-13,
+  "Y_at_E_main": 1.64960678103533e-13,
+  "Y_at_E_high": 7.753301531911916e-14,
+  "masked_norm": 2.0091432736301375e-10,
+  "spectrum_integral": 2.0091432664073538e-10,
+  "integral_over_masked_norm": 0.999999996405043,
+  "state_sha256": "e944d55c2fd5de485ee44e095754df276235e2661b147bbc40c89ab5d0de0998",
+  "run_config_sha256": "a26b665833e617c7a225fda4d1cd2eb4835a43a2821232f0a309149ec4dff539",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 64.18407640000805,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.25_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.25_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    31.800000000000004
+  ],
+  "energy_points": 4305,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 5.418071670002809e-13,
+  "Y_at_E_main": 1.6496055247519016e-13,
+  "Y_at_E_high": 7.75251820492522e-14,
+  "masked_norm": 2.0091475841212452e-10,
+  "spectrum_integral": 2.0091475768984504e-10,
+  "integral_over_masked_norm": 0.9999999964050452,
+  "state_sha256": "1eb4110ca06c4cf09bd837c0887e28daad7375d20d24a2605b25737ad969b3ca",
+  "run_config_sha256": "0c655f186184449bf9bba73bf2540f427d9b6fb935d62401bc1c364d827f0f1a",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 64.12760520000302,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.25_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.25_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.25,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    31.800000000000004
+  ],
+  "energy_points": 4305,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 5.418180298352777e-13,
+  "Y_at_E_main": 1.6497132829022116e-13,
+  "Y_at_E_high": 7.753237003896713e-14,
+  "masked_norm": 2.0091428806266325e-10,
+  "spectrum_integral": 2.009142873403843e-10,
+  "integral_over_masked_norm": 0.9999999964050394,
+  "state_sha256": "4dab3b8e8e913da377c96ebce7ea65e33a14e568878bbd00d6c1624213d90f63",
+  "run_config_sha256": "785ba85679f69803b9dbb6a7db22b6ca932ad73f7922cdac7e3e113bf14bdd1d",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 64.33769639999082,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.5_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.5_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    33.587500000000006
+  ],
+  "energy_points": 4448,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 9.283139112611997e-11,
+  "Y_at_E_main": 3.417733641028119e-11,
+  "Y_at_E_high": 2.5903464201847545e-11,
+  "masked_norm": 8.774378976119257e-09,
+  "spectrum_integral": 8.774378945634072e-09,
+  "integral_over_masked_norm": 0.9999999965256589,
+  "state_sha256": "ebb45a59214be614874c41740413262e18000440da88f577329c610f1d0d5b6b",
+  "run_config_sha256": "c2aa05e27dfea62f0fff6cde6882bccb039119b66be6ee95ec3829a0fd4f8fd5",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 66.5612298999913,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.5_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.5_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    33.587500000000006
+  ],
+  "energy_points": 4448,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 9.283375794208305e-11,
+  "Y_at_E_main": 3.417753245417569e-11,
+  "Y_at_E_high": 2.5905778001184707e-11,
+  "masked_norm": 8.774391964092476e-09,
+  "spectrum_integral": 8.774391933607224e-09,
+  "integral_over_masked_norm": 0.9999999965256565,
+  "state_sha256": "ed7c2a26aceb92665475902769e8a1a7fb3497ffab4a5c78d502d2221f7680ad",
+  "run_config_sha256": "eaf970c2f373910ee49c0c2294eed3de0f8fdff409c018e999fcdaf48f5f5daa",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 66.71758679999039,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I32_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I32_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.09593957362216526,
+  "Y_at_E_main": 0.09587738400402314,
+  "Y_at_E_high": 0.09548918563272364,
+  "masked_norm": 0.10068419955850842,
+  "spectrum_integral": 0.10068419944435116,
+  "integral_over_masked_norm": 0.9999999988661848,
+  "state_sha256": "17a78f57a001997a04c3c74b702c3818da210eb3e8d5b18450a3feb9fe7cd7b2",
+  "run_config_sha256": "8d3955de4c2aa77a8ab4ae9e4c9f6ad863474eba37a8352c8f73c23a29bf9d96",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 347.169750999994,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I32_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I32_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.07742130808349529,
+  "Y_at_E_main": 0.0770397263697793,
+  "Y_at_E_high": 0.07596867140835492,
+  "masked_norm": 0.08518854774377367,
+  "spectrum_integral": 0.08518854764677446,
+  "integral_over_masked_norm": 0.9999999988613585,
+  "state_sha256": "9fb19c5e5abfc36670403fc81e16d8595bc4619eb494008e5a6f055b5b837a2c",
+  "run_config_sha256": "1072f257ecee7f872a0bcd86371233fe5907590f53db6ebff7e4646613731ec2",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 336.8614428000001,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-07T13:23:10.986571+00:00] DONE S5 batch 3 readouts 1: exit=0 elapsed=1075.3s
+[2026-11-07T13:23:11.573088+00:00] S5 batch 3: no pending readouts
+[2026-11-07T13:23:11.579111+00:00] START S5 batch 4 (6): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 6 (events=6, outer_timeout=34200s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 6
+library new=6 selected=6
+bias_v2_lib_F1_I0.5_phi180_r01: F=1.0 I/mu=0.5 CEP=3.141592653589793
+bias_v2_lib_F1_I0.5_phi270_r01: F=1.0 I/mu=0.5 CEP=4.71238898038469
+bias_v2_lib_F1_I2_phi000_r01: F=1.0 I/mu=2.0 CEP=0.0
+bias_v2_lib_F1_I2_phi090_r01: F=1.0 I/mu=2.0 CEP=1.5707963267948966
+bias_v2_lib_F1_I2_phi180_r01: F=1.0 I/mu=2.0 CEP=3.141592653589793
+bias_v2_lib_F1_I2_phi270_r01: F=1.0 I/mu=2.0 CEP=4.71238898038469
+{"run_id": "bias_v2_lib_F1_I0.5_phi180_r01", "status": "PASS", "wall_seconds": 1305.147952299987, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I0.5_phi270_r01", "status": "PASS", "wall_seconds": 1374.106868200004, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I2_phi000_r01", "status": "PASS", "wall_seconds": 1215.8474701000086, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I2_phi090_r01", "status": "PASS", "wall_seconds": 1205.298981400003, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I2_phi180_r01", "status": "PASS", "wall_seconds": 1217.02958029999, "Y": "not_computed"}
+{"run_id": "bias_v2_lib_F1_I2_phi270_r01", "status": "PASS", "wall_seconds": 1219.9277367999894, "Y": "not_computed"}
+[2026-11-07T15:28:49.550768+00:00] DONE S5 batch 4 (6): exit=0 elapsed=7538.0s
+[2026-11-07T15:28:50.142064+00:00] START S5 batch 4 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=146 runnable=6 selected=6
+ro2_bias_v2_lib_F1_I0.5_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I0.5_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I2_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I2_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I2_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I2_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.5_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.5_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    33.587500000000006
+  ],
+  "energy_points": 4448,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 9.283523683306637e-11,
+  "Y_at_E_main": 3.4179411866139386e-11,
+  "Y_at_E_high": 2.5904271698411438e-11,
+  "masked_norm": 8.774403899859083e-09,
+  "spectrum_integral": 8.774403869373773e-09,
+  "integral_over_masked_norm": 0.9999999965256546,
+  "state_sha256": "b616077b2f5e2f1b6966a569d916d4270e14efa692865f0a54b6decf04fd2827",
+  "run_config_sha256": "7e1631afcf499eeeacef9336981ad22fcdabdc57fd893d7014fceef242b37400",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 65.09870039999078,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I0.5_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I0.5_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 0.5,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    33.587500000000006
+  ],
+  "energy_points": 4448,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 9.283287003045315e-11,
+  "Y_at_E_main": 3.4179215852154615e-11,
+  "Y_at_E_high": 2.5901957937627326e-11,
+  "masked_norm": 8.774390911968773e-09,
+  "spectrum_integral": 8.774390881483529e-09,
+  "integral_over_masked_norm": 0.999999996525657,
+  "state_sha256": "0ebb8d06da2ba44b4e58c54c41b2e4d264ab1d25868077248dbd03b005f262c1",
+  "run_config_sha256": "fc4abfe767fc81a32b15422facb82007ef39cb59937ebdcd76bd1227e43ea16c",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 66.16665189999912,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I2_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I2_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    44.35000000000001
+  ],
+  "energy_points": 5309,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.9282636210356645e-07,
+  "Y_at_E_main": 2.6368562615991687e-07,
+  "Y_at_E_high": 2.547850403846771e-07,
+  "masked_norm": 5.579154673098475e-06,
+  "spectrum_integral": 5.579154656521889e-06,
+  "integral_over_masked_norm": 0.9999999970288355,
+  "state_sha256": "6250fbffe8ce6f934cd5de84022220287675c0289d062a79d90ad77b64744c6f",
+  "run_config_sha256": "3963c6097fe56d40d42e0d47a932faee2c8c244991352fb074c48a7b8ebf19e8",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 78.76669669999683,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I2_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I2_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    44.35000000000001
+  ],
+  "energy_points": 5309,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.933427983886671e-07,
+  "Y_at_E_main": 2.6389812083548157e-07,
+  "Y_at_E_high": 2.559619409153077e-07,
+  "masked_norm": 5.5811491273036484e-06,
+  "spectrum_integral": 5.581149110721238e-06,
+  "integral_over_masked_norm": 0.9999999970288537,
+  "state_sha256": "60042dee9c42d440cb64808bb583686d1b659c602043d8d5ab62f1c566550b82",
+  "run_config_sha256": "507e454623296174bcb3f4a11674b7986c8b15e3349c90d99f596c3eb182bee5",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 79.21341090000351,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I2_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I2_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    44.35000000000001
+  ],
+  "energy_points": 5309,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.932361026868503e-07,
+  "Y_at_E_main": 2.6428421144649114e-07,
+  "Y_at_E_high": 2.57527562218187e-07,
+  "masked_norm": 5.5831503923366895e-06,
+  "spectrum_integral": 5.5831503757485055e-06,
+  "integral_over_masked_norm": 0.9999999970288846,
+  "state_sha256": "8c906e79038a6736c0a9986ed2618478da856a0c7baa33b8e77b36568412c3ce",
+  "run_config_sha256": "4b19173a4194e18724f33c01ad8ce91978c9026b234aa555e769255c0d2e851d",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 79.11237479999545,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I2_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I2_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 2.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    44.35000000000001
+  ],
+  "energy_points": 5309,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 2.927239582162859e-07,
+  "Y_at_E_main": 2.6407109428294427e-07,
+  "Y_at_E_high": 2.563498879581494e-07,
+  "masked_norm": 5.581155937226631e-06,
+  "spectrum_integral": 5.581155920644256e-06,
+  "integral_over_masked_norm": 0.9999999970288637,
+  "state_sha256": "103468f9e933c9d56be80335677e5fd6ceeee1340f37fc7a1ac7ac7cb8312c04",
+  "run_config_sha256": "e19399b0ba8cb2e7fab2c5fdca0895101bb2bd2ddedf26403939be9fee258fa7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 79.00665320000553,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 6,
+  "remaining": 0
+}
+[2026-11-07T15:36:18.368797+00:00] DONE S5 batch 4 readouts 1: exit=0 elapsed=448.2s
+[2026-11-07T15:36:18.946886+00:00] S5 batch 4: no pending readouts
+[2026-11-07T15:36:19.033953+00:00] START preliminary statistics: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --preliminary (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --preliminary
+{
+  "schema": "continuation-v2-statistics",
+  "revision": "r1_20261105_v1",
+  "mode": "PRELIMINARY",
+  "Imax_over_mu": 32.0,
+  "nodes": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "midpoints": [],
+  "yields": {
+    "coherent_F0": {
+      "state": "coherent",
+      "F": 0.0,
+      "Y": 2.8329603617305314e-09,
+      "Y_lo": 2.8138884495239435e-09,
+      "Y_hi": 2.8520322739371193e-09,
+      "relative_response_error": 0.006732149331922703,
+      "delta": 1.9071912206587696e-11,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.006732149331922703,
+      "gate": {
+        "Y_lo": 2.8138884495239435e-09,
+        "Y_hi": 2.8520322739371193e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.006732149331922703,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F0": {
+      "state": "bsv",
+      "F": 0.0,
+      "Y": 1.448134996099829e-05,
+      "Y_lo": 1.2681481752076515e-05,
+      "Y_hi": 1.629663542782034e-05,
+      "relative_response_error": 0.12428870331628238,
+      "delta": 1.7998682089217739e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1253533318172027,
+      "gate": {
+        "Y_lo": 1.2681481752076515e-05,
+        "Y_hi": 1.629663542782034e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1253533318172027,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.07145429587261037,
+        0.01582062928141481,
+        0.001774653307196515,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F0": {
+      "state": "thermal",
+      "F": 0.0,
+      "Y": 2.5388939263378668e-06,
+      "Y_lo": 2.227257672592361e-06,
+      "Y_hi": 2.850530192747538e-06,
+      "relative_response_error": 0.12274488922623625,
+      "delta": 3.116362537455055e-07,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.12274489421430032,
+      "gate": {
+        "Y_lo": 2.227257672592361e-06,
+        "Y_hi": 2.850530192747538e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.12274489421430032,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05401477810873134,
+        0.0044127144613206205,
+        8.156183498733268e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    },
+    "coherent_F1": {
+      "state": "coherent",
+      "F": 1.0,
+      "Y": 5.509789712220833e-09,
+      "Y_lo": 5.341497955436355e-09,
+      "Y_hi": 5.678081469005311e-09,
+      "relative_response_error": 0.030544134272711555,
+      "delta": 1.6829175678447788e-10,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.030544134272711555,
+      "gate": {
+        "Y_lo": 5.341497955436355e-09,
+        "Y_hi": 5.678081469005311e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.030544134272711555,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F1": {
+      "state": "bsv",
+      "F": 1.0,
+      "Y": 2.4180994365406074e-05,
+      "Y_lo": 2.0966090517066243e-05,
+      "Y_hi": 2.7411315471646184e-05,
+      "relative_response_error": 0.13295168096722904,
+      "delta": 3.214903848339831e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1335892584657928,
+      "gate": {
+        "Y_lo": 2.0966090517066243e-05,
+        "Y_hi": 2.7411315471646184e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1335892584657928,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.07145429587261037,
+        0.01582062928141481,
+        0.001774653307196515,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F1": {
+      "state": "thermal",
+      "F": 1.0,
+      "Y": 4.658293373311515e-06,
+      "Y_lo": 4.042900223849954e-06,
+      "Y_hi": 5.273686535437243e-06,
+      "relative_response_error": 0.13210699716494817,
+      "delta": 6.153931494615612e-07,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.1321069998835759,
+      "gate": {
+        "Y_lo": 4.042900223849954e-06,
+        "Y_hi": 5.273686535437243e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.1321069998835759,
+        "total_5pct_ok": false,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05401477810873134,
+        0.0044127144613206205,
+        8.156183498733268e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    }
+  },
+  "Q": {
+    "coherent": {
+      "Y_F0": 2.8329603617305314e-09,
+      "Y_F1": 5.509789712220833e-09,
+      "Q": 1.9448876823871772,
+      "Q_lo": 1.8728743023874077,
+      "Q_hi": 2.0178772438423898,
+      "F0_interval": [
+        2.8138884495239435e-09,
+        2.8520322739371193e-09
+      ],
+      "F1_interval": [
+        5.341497955436355e-09,
+        5.678081469005311e-09
+      ]
+    },
+    "bsv": {
+      "Y_F0": 1.448134996099829e-05,
+      "Y_F1": 2.4180994365406074e-05,
+      "Q": 1.6698024998036252,
+      "Q_lo": 1.2865287813504482,
+      "Q_hi": 2.161523078102269,
+      "F0_interval": [
+        1.2681481752076515e-05,
+        1.629663542782034e-05
+      ],
+      "F1_interval": [
+        2.0966090517066243e-05,
+        2.7411315471646184e-05
+      ]
+    },
+    "thermal": {
+      "Y_F0": 2.5388939263378668e-06,
+      "Y_F1": 4.658293373311515e-06,
+      "Q": 1.8347727429600407,
+      "Q_lo": 1.4182976325373096,
+      "Q_hi": 2.367793632650984,
+      "F0_interval": [
+        2.227257672592361e-06,
+        2.850530192747538e-06
+      ],
+      "F1_interval": [
+        4.042900223849954e-06,
+        5.273686535437243e-06
+      ]
+    }
+  },
+  "D": {
+    "value": 0.8585598617983382,
+    "lo": 0.6375654343079231,
+    "hi": 1.1541207412301575,
+    "valid": false
+  },
+  "status": "PRELIMINARY",
+  "scientific_label": "PRELIMINARY",
+  "gate_ok": false,
+  "denominator_ok": true,
+  "missing_validation": [],
+  "validation_binding": {},
+  "midpoint_coverage_gaps": [],
+  "phase_error_policy": "single CEP category in error_component_map.csv; phase_validation.json supplies 4->8 evidence only; no outer phase delta is charged",
+  "error_component_map": "results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+  "interpretation": "D interval is a conservative audit interval, not a statistical confidence interval. VALID_UNRESOLVED is a complete delivery when the interval contains 1."
+}
+[2026-11-07T15:36:20.940465+00:00] DONE preliminary statistics: exit=2 elapsed=1.9s
+[2026-11-07T15:36:20.944465+00:00] === STAGE tail_precheck ===
+[2026-11-07T15:36:20.946464+00:00] START tail precheck: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope precheck (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope precheck
+{
+  "file": "tail_precheck.json",
+  "complete": false,
+  "scope": "current_full_library",
+  "status": "SUFFICIENT",
+  "extension": "NOT_REQUIRED",
+  "rows": 4
+}
+[2026-11-07T15:36:22.839715+00:00] DONE tail precheck: exit=2 elapsed=1.9s
+[2026-11-07T15:36:22.845659+00:00] 32 mu tail satisfies the positive lower bound; no extension required
+[2026-11-07T15:36:22.853412+00:00] === STAGE midpoints ===
+[2026-11-07T15:36:22.859412+00:00] START midpoint plan: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --plan-midpoints (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --plan-midpoints
+{
+  "schema": "continuation-v2-midpoint-plan-v5",
+  "intervals": [
+    {
+      "left": 4.0,
+      "right": 8.0,
+      "midpoint_I_over_mu": 6.0,
+      "min_channel_share": 0.3745102799280072,
+      "coverage_shares": {
+        "bsv_F0": 0.3745102799280072,
+        "bsv_F1": 0.4139903837240823,
+        "thermal_F0": 0.6988026010814083,
+        "thermal_F1": 0.7056098995988411
+      }
+    },
+    {
+      "left": 8.0,
+      "right": 12.0,
+      "midpoint_I_over_mu": 10.0,
+      "min_channel_share": 0.11136618719459206,
+      "coverage_shares": {
+        "bsv_F0": 0.36506248386712253,
+        "bsv_F1": 0.33170992506981095,
+        "thermal_F0": 0.13148574905799681,
+        "thermal_F1": 0.11136618719459206
+      }
+    }
+  ],
+  "selection": "maximin normalised contribution coverage across BSV/thermal x F0/F1; two disjoint real intervals; second sort key = sum of channel shares",
+  "nodes_before": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "coverage_table": [
+    {
+      "interval_left": 0.0,
+      "interval_right": 0.25,
+      "bsv_F0": 6.720158694713396e-10,
+      "bsv_F1": 8.42119805826541e-10,
+      "thermal_F0": 3.2913969216427757e-09,
+      "thermal_F1": 3.75368165967175e-09,
+      "min_channel_share": 6.720158694713396e-10
+    },
+    {
+      "interval_left": 0.25,
+      "interval_right": 0.5,
+      "bsv_F0": 6.244388229769385e-08,
+      "bsv_F1": 9.014765997264121e-08,
+      "thermal_F0": 4.633824251304387e-07,
+      "thermal_F1": 6.088538597485215e-07,
+      "min_channel_share": 6.244388229769385e-08
+    },
+    {
+      "interval_left": 0.5,
+      "interval_right": 1.0,
+      "bsv_F0": 1.4385487311800738e-05,
+      "bsv_F1": 1.6779787654094786e-05,
+      "thermal_F0": 0.00012281791725261178,
+      "thermal_F1": 0.00013037274791947819,
+      "min_channel_share": 1.4385487311800738e-05
+    },
+    {
+      "interval_left": 1.0,
+      "interval_right": 2.0,
+      "bsv_F0": 0.001169025684356753,
+      "bsv_F1": 0.0007722379880258205,
+      "thermal_F0": 0.009423882560738098,
+      "thermal_F1": 0.005668885276503215,
+      "min_channel_share": 0.0007722379880258205
+    },
+    {
+      "interval_left": 2.0,
+      "interval_right": 4.0,
+      "bsv_F0": 0.028060474043888537,
+      "bsv_F1": 0.03490728755955277,
+      "thermal_F0": 0.14865192732009821,
+      "thermal_F1": 0.16757128432258916,
+      "min_channel_share": 0.028060474043888537
+    },
+    {
+      "interval_left": 4.0,
+      "interval_right": 8.0,
+      "bsv_F0": 0.3745102799280072,
+      "bsv_F1": 0.4139903837240823,
+      "thermal_F0": 0.6988026010814083,
+      "thermal_F1": 0.7056098995988411,
+      "min_channel_share": 0.3745102799280072
+    },
+    {
+      "interval_left": 8.0,
+      "interval_right": 12.0,
+      "bsv_F0": 0.36506248386712253,
+      "bsv_F1": 0.33170992506981095,
+      "thermal_F0": 0.13148574905799681,
+      "thermal_F1": 0.11136618719459206,
+      "min_channel_share": 0.11136618719459206
+    },
+    {
+      "interval_left": 12.0,
+      "interval_right": 20.0,
+      "bsv_F0": 0.21874336767815372,
+      "bsv_F1": 0.20679887392498214,
+      "thermal_F0": 0.011496200729930909,
+      "thermal_F1": 0.00963832657210036,
+      "min_channel_share": 0.00963832657210036
+    },
+    {
+      "interval_left": 20.0,
+      "interval_right": 32.0,
+      "bsv_F0": 0.012439920195261269,
+      "bsv_F1": 0.01180442095611207,
+      "thermal_F0": 1.635465875292234e-05,
+      "thermal_F1": 1.4431679913146114e-05,
+      "min_channel_share": 1.4431679913146114e-05
+    }
+  ],
+  "covered_channel_share": {
+    "bsv_F0": 0.7395727637951297,
+    "bsv_F1": 0.7457003087938933,
+    "thermal_F0": 0.8302883501394052,
+    "thermal_F1": 0.8169760867934331
+  },
+  "coverage_gap": [],
+  "transfer_rule": "any channel with covered share < 0.5 is bounded for all four channels by the node_change / node_ok gate, never assumed zero",
+  "source_response_status": "PASS"
+}
+[2026-11-07T15:36:24.714053+00:00] DONE midpoint plan: exit=0 elapsed=1.9s
+[2026-11-07T15:36:24.719056+00:00] START midpoints batch 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8
+library new=8 selected=8
+bias_v2_mid_F0_I6_phi000_r01: F=0.0 I/mu=6.0 CEP=0.0
+bias_v2_mid_F0_I6_phi090_r01: F=0.0 I/mu=6.0 CEP=1.5707963267948966
+bias_v2_mid_F0_I6_phi180_r01: F=0.0 I/mu=6.0 CEP=3.141592653589793
+bias_v2_mid_F0_I6_phi270_r01: F=0.0 I/mu=6.0 CEP=4.71238898038469
+bias_v2_mid_F1_I6_phi000_r01: F=1.0 I/mu=6.0 CEP=0.0
+bias_v2_mid_F1_I6_phi090_r01: F=1.0 I/mu=6.0 CEP=1.5707963267948966
+bias_v2_mid_F1_I6_phi180_r01: F=1.0 I/mu=6.0 CEP=3.141592653589793
+bias_v2_mid_F1_I6_phi270_r01: F=1.0 I/mu=6.0 CEP=4.71238898038469
+{"run_id": "bias_v2_mid_F0_I6_phi000_r01", "status": "PASS", "wall_seconds": 1234.7445027000067, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I6_phi090_r01", "status": "PASS", "wall_seconds": 1306.59691990001, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I6_phi180_r01", "status": "PASS", "wall_seconds": 1283.742866200002, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I6_phi270_r01", "status": "PASS", "wall_seconds": 1312.765876599995, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I6_phi000_r01", "status": "PASS", "wall_seconds": 1290.2799087000021, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I6_phi090_r01", "status": "PASS", "wall_seconds": 977.135634899998, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I6_phi180_r01", "status": "PASS", "wall_seconds": 1252.827914900001, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I6_phi270_r01", "status": "PASS", "wall_seconds": 1263.995362799993, "Y": "not_computed"}
+[2026-11-07T18:21:47.427035+00:00] DONE midpoints batch 1: exit=0 elapsed=9922.7s
+[2026-11-07T18:21:48.081382+00:00] START midpoints batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=154 runnable=8 selected=8
+ro2_bias_v2_mid_F0_I6_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I6_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I6_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I6_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I6_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I6_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I6_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I6_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I6_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I6_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    53.025000000000006
+  ],
+  "energy_points": 4403,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00011077109220212885,
+  "Y_at_E_main": 9.440113980092476e-05,
+  "Y_at_E_high": 8.193205863088102e-05,
+  "masked_norm": 0.00014537876856582878,
+  "spectrum_integral": 0.0001453786074656247,
+  "integral_over_masked_norm": 0.9999988918587929,
+  "state_sha256": "1119b359cdde437c1d7525d482a1475ee012379d54852bd36ae22c39e5f440ef",
+  "run_config_sha256": "0354f92d9969302a64a8ce1f7216952376f2b56c104d3cbe76bb2f651ad0f5bc",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 73.29795499998727,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I6_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I6_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    53.025000000000006
+  ],
+  "energy_points": 4403,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0001304125590005107,
+  "Y_at_E_main": 0.00010217984277982585,
+  "Y_at_E_high": 7.53277728080144e-05,
+  "masked_norm": 0.0001506264450968475,
+  "spectrum_integral": 0.00015062629049504333,
+  "integral_over_masked_norm": 0.9999989736078277,
+  "state_sha256": "1960c24634b43e9733087a06d4a0f3c549df844fb9faec0d2d715babf52963aa",
+  "run_config_sha256": "b18da378f21e75079343ddb79f0884bff72999d9f8972471fda7de45ca5ab4b9",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 73.4600250999938,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I6_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I6_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    53.025000000000006
+  ],
+  "energy_points": 4403,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00013513212818028146,
+  "Y_at_E_main": 0.0001158151256261212,
+  "Y_at_E_high": 8.096482671310754e-05,
+  "masked_norm": 0.00016117667189528856,
+  "spectrum_integral": 0.00016117649613126394,
+  "integral_over_masked_norm": 0.99999890949464,
+  "state_sha256": "77c4bb7310a7b2a291df5b38943c11b8e8e6fb7fd1b6ce81731ef6b329e26d9f",
+  "run_config_sha256": "330c76f8788a43008ca2b151701218bcd43ba55fc168335cbcadab33bfb6fe75",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 67.50594119999732,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I6_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I6_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    53.025000000000006
+  ],
+  "energy_points": 4403,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00011119912137743866,
+  "Y_at_E_main": 0.00010964781817154088,
+  "Y_at_E_high": 9.373405827068197e-05,
+  "masked_norm": 0.0001501774267691575,
+  "spectrum_integral": 0.0001501772581189391,
+  "integral_over_masked_norm": 0.9999988769935533,
+  "state_sha256": "e560316ce7af967aabd86467f34b74501b40df3e29dac8a305ee322f102bdd84",
+  "run_config_sha256": "e1dbd5f3a266932b6ffe64b4c65bd91bb1b55c79d7ad39f92eed6caa01d4c303",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 67.15817309998965,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I6_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I6_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    73.025
+  ],
+  "energy_points": 7603,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00022154712593258573,
+  "Y_at_E_main": 0.00017306326386468758,
+  "Y_at_E_high": 0.00015492400426100108,
+  "masked_norm": 0.0008978746247558071,
+  "spectrum_integral": 0.0008978746225113709,
+  "integral_over_masked_norm": 0.9999999975002789,
+  "state_sha256": "d96d9df2d9601221504f96ce4ecd54b9a6067215d91253a3be66c7d8397a2dac",
+  "run_config_sha256": "f0d6ec4f9525308349c0e3ae0d2a8d797f0664834e091607b9aa5c4fbacf1c0d",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 115.77812880001147,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I6_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I6_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    73.025
+  ],
+  "energy_points": 7603,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0002290252138832768,
+  "Y_at_E_main": 0.00017503669722009727,
+  "Y_at_E_high": 0.00015779994233934498,
+  "masked_norm": 0.0008737504263589596,
+  "spectrum_integral": 0.0008737504241760874,
+  "integral_over_masked_norm": 0.9999999975017212,
+  "state_sha256": "bb1f97caa9ac1d022d58ebb3da9bdf9bd1321df1964765b20b908160d9d96ce2",
+  "run_config_sha256": "3f73878883aef3cd8c50f93c795da96ad7b3f7bb050fee8be192d1f70d1dd223",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 116.06230220000725,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I6_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I6_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    73.025
+  ],
+  "energy_points": 7603,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0001942321301657871,
+  "Y_at_E_main": 0.00017677104432806497,
+  "Y_at_E_high": 0.0001518397831498831,
+  "masked_norm": 0.0008495845249553983,
+  "spectrum_integral": 0.0008495845228325738,
+  "integral_over_masked_norm": 0.9999999975013381,
+  "state_sha256": "b56f918b4454c705ab4593575ad285ee618a457c0eae06d399e1e9bc7b5ef5bb",
+  "run_config_sha256": "35aa5e2e1a24bdd079d29fb8684b3001948a5812662bbc1b8d1b6e8c2bd7cc79",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 115.66003959999944,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I6_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I6_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 6.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    73.025
+  ],
+  "energy_points": 7603,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00020537640809941823,
+  "Y_at_E_main": 0.0001639803091170877,
+  "Y_at_E_high": 0.00015140981471802704,
+  "masked_norm": 0.0008737376703728054,
+  "spectrum_integral": 0.0008737376681883011,
+  "integral_over_masked_norm": 0.9999999974998167,
+  "state_sha256": "be3e8abf16bb06eca00d235b8f61b61d73eab221a77400641a5afdfe4b5677a1",
+  "run_config_sha256": "afcc97ed84da80dcf623f99c6067aade06a38fbceac3b885a80c92980087c7f2",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 117.74465199999395,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-07T18:34:15.762366+00:00] DONE midpoints batch 1 readouts 1: exit=0 elapsed=747.7s
+[2026-11-07T18:34:16.376515+00:00] midpoints batch 1: no pending readouts
+[2026-11-07T18:34:16.383225+00:00] START midpoints batch 2: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8
+library new=8 selected=8
+bias_v2_mid_F0_I10_phi000_r01: F=0.0 I/mu=10.0 CEP=0.0
+bias_v2_mid_F0_I10_phi090_r01: F=0.0 I/mu=10.0 CEP=1.5707963267948966
+bias_v2_mid_F0_I10_phi180_r01: F=0.0 I/mu=10.0 CEP=3.141592653589793
+bias_v2_mid_F0_I10_phi270_r01: F=0.0 I/mu=10.0 CEP=4.71238898038469
+bias_v2_mid_F1_I10_phi000_r01: F=1.0 I/mu=10.0 CEP=0.0
+bias_v2_mid_F1_I10_phi090_r01: F=1.0 I/mu=10.0 CEP=1.5707963267948966
+bias_v2_mid_F1_I10_phi180_r01: F=1.0 I/mu=10.0 CEP=3.141592653589793
+bias_v2_mid_F1_I10_phi270_r01: F=1.0 I/mu=10.0 CEP=4.71238898038469
+{"run_id": "bias_v2_mid_F0_I10_phi000_r01", "status": "PASS", "wall_seconds": 1270.5685408999998, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I10_phi090_r01", "status": "PASS", "wall_seconds": 1235.6388732999912, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I10_phi180_r01", "status": "PASS", "wall_seconds": 1287.8521206000005, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F0_I10_phi270_r01", "status": "PASS", "wall_seconds": 1296.1784442999924, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I10_phi000_r01", "status": "PASS", "wall_seconds": 1309.148560600006, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I10_phi090_r01", "status": "PASS", "wall_seconds": 1268.1560833999974, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I10_phi180_r01", "status": "PASS", "wall_seconds": 1252.3872603999916, "Y": "not_computed"}
+{"run_id": "bias_v2_mid_F1_I10_phi270_r01", "status": "PASS", "wall_seconds": 1421.536670600006, "Y": "not_computed"}
+[2026-11-07T21:26:39.930191+00:00] DONE midpoints batch 2: exit=0 elapsed=10342.1s
+[2026-11-07T21:26:40.551256+00:00] START midpoints batch 2 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=162 runnable=8 selected=8
+ro2_bias_v2_mid_F0_I10_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I10_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I10_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F0_I10_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I10_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I10_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I10_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_mid_F1_I10_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I10_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I10_phi000_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    81.7125
+  ],
+  "energy_points": 6698,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0012856274509417934,
+  "Y_at_E_main": 0.0011317877914026426,
+  "Y_at_E_high": 0.0010835649137427895,
+  "masked_norm": 0.0016776948393999402,
+  "spectrum_integral": 0.0016776933277354346,
+  "integral_over_masked_norm": 0.9999990989633692,
+  "state_sha256": "7b8a669b07d72041524788768f74ed6ce7132bbbc4b227e8e290510af67604e4",
+  "run_config_sha256": "f152b3c5ccf1d4ce1d36c9eae9d3563916e1141b88761db7d5fad4adbaddfe60",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 108.58061079999607,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I10_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I10_phi090_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    81.7125
+  ],
+  "energy_points": 6698,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0010698967298159656,
+  "Y_at_E_main": 0.0009768201657911987,
+  "Y_at_E_high": 0.0009126391131220738,
+  "masked_norm": 0.0015970821255211088,
+  "spectrum_integral": 0.00159708037560663,
+  "integral_over_masked_norm": 0.9999989043052635,
+  "state_sha256": "13cc9a5738bcd85a0873f4701d7caa4b08295a7935a723274ab56c2061e45e12",
+  "run_config_sha256": "8e933766823b0a91c39dfaf3d27043a893450a8ac672649624b627362d872f39",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 107.55649030000495,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I10_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I10_phi180_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    81.7125
+  ],
+  "energy_points": 6698,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0010774602719087667,
+  "Y_at_E_main": 0.0009883508192829549,
+  "Y_at_E_high": 0.0009037848615745392,
+  "masked_norm": 0.0012345223862504822,
+  "spectrum_integral": 0.0012345215372830433,
+  "integral_over_masked_norm": 0.9999993123110213,
+  "state_sha256": "73f2aebdcbb4e119f8cc316dac09ecb94969be53542741e31927ae27b38c74f6",
+  "run_config_sha256": "1f8280c80269720801812f08cf0537db2f3c2c579d1bf9e8fd1ed7ab0633471b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 101.80258889999823,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F0_I10_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F0_I10_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    81.7125
+  ],
+  "energy_points": 6698,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0014221270354935827,
+  "Y_at_E_main": 0.001284299890242012,
+  "Y_at_E_high": 0.0012102355097605732,
+  "masked_norm": 0.0015947942173544234,
+  "spectrum_integral": 0.0015947930885370318,
+  "integral_over_masked_norm": 0.9999992921861772,
+  "state_sha256": "4e86c39317a9fc5f2d3b0b1a3012083746eefe509937881aecdafcbda0ce4645",
+  "run_config_sha256": "1b6e2e233b88e62184efcc5f6c3c952b621b5efd865260b9cad84e63194764d7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 102.06207800000266,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I10_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I10_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    101.7125
+  ],
+  "energy_points": 9898,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00262513289381347,
+  "Y_at_E_main": 0.002418243751839476,
+  "Y_at_E_high": 0.0017662221580737535,
+  "masked_norm": 0.004199046107794361,
+  "spectrum_integral": 0.00419904609843831,
+  "integral_over_masked_norm": 0.9999999977718629,
+  "state_sha256": "9652687880d18369e550e0c4adfc5afc8f728a44127e4c0688406e5d90a15105",
+  "run_config_sha256": "05b4e65e9538f029ce1fffb7daebe501d1aa1d152074ec7e418454621a82778b",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 154.82182539999485,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I10_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I10_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    101.7125
+  ],
+  "energy_points": 9898,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0023778731216350137,
+  "Y_at_E_main": 0.002332914820625817,
+  "Y_at_E_high": 0.0021811585673457215,
+  "masked_norm": 0.003605818137451427,
+  "spectrum_integral": 0.0036058181296705853,
+  "integral_over_masked_norm": 0.9999999978421424,
+  "state_sha256": "bbef7cc7e1c56426713eb673647ac6b1d41db9d1d2e915691699f3bc70a741df",
+  "run_config_sha256": "cc7caa6bcb3dc0bb14a8c116ef414b003b0ae6ce3fad21d9d99dfeeab966532c",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 150.58207460000995,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I10_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I10_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    101.7125
+  ],
+  "energy_points": 9898,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.001537945765217592,
+  "Y_at_E_main": 0.0014194525793339372,
+  "Y_at_E_high": 0.00130807999753722,
+  "masked_norm": 0.0030090833207679067,
+  "spectrum_integral": 0.0030090833141698694,
+  "integral_over_masked_norm": 0.9999999978072933,
+  "state_sha256": "4ff9b6b028c07973862ee274b0ad85fd160cc7aba3502de0d131bc47ac442a3f",
+  "run_config_sha256": "23d27c693135ea9c759bfc92aac8c0df3eafae715c79289a948d5ead8bb5d5ec",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 151.9046345000097,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_mid_F1_I10_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_mid_F1_I10_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 10.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    101.7125
+  ],
+  "energy_points": 9898,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0018336639857452106,
+  "Y_at_E_main": 0.0013372118159495272,
+  "Y_at_E_high": 0.0010634847585032983,
+  "masked_norm": 0.0036067981421952305,
+  "spectrum_integral": 0.003606798134011969,
+  "integral_over_masked_norm": 0.9999999977311562,
+  "state_sha256": "946d5a8604c071239df4141be83df465ce484c498019398dd9d42ef0decf754e",
+  "run_config_sha256": "4d07a9e3fa623bfbbad55cc47f181f986d117896325ae517049687f21bbb3997",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 150.79640750000544,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-07T21:43:49.794136+00:00] DONE midpoints batch 2 readouts 1: exit=0 elapsed=1029.2s
+[2026-11-07T21:43:50.405558+00:00] midpoints batch 2: no pending readouts
+[2026-11-07T21:43:50.409560+00:00] === STAGE phase8 ===
+[2026-11-07T21:43:50.410557+00:00] START contributions (full library): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions
+{
+  "complete_nodes": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "q": {
+    "0.25": 2.092471056214337,
+    "0.5": 2.4126953256639947,
+    "1.0": 1.9448876823871772,
+    "2.0": 1.0899986229367398,
+    "4.0": 2.119019815927452,
+    "6.0": 1.6321791914908406,
+    "8.0": 1.8327384724979086,
+    "10.0": 1.7136223945826694,
+    "12.0": 1.434038084099882,
+    "20.0": 1.6732102047312052,
+    "32.0": 1.4513671940027075
+  },
+  "J_over_mu": 8.0
+}
+[2026-11-07T21:43:53.023889+00:00] DONE contributions (full library): exit=0 elapsed=2.6s
+[2026-11-07T21:43:53.025891+00:00] START phase8 selection: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase8 (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase8
+{
+  "schema": "ql-tip-1d-phase8-selection-v5",
+  "conditions": [
+    [
+      1.0,
+      32.0
+    ],
+    [
+      1.0,
+      8.0
+    ]
+  ],
+  "highest_intensity": [
+    1.0,
+    32.0
+  ],
+  "main_contribution": [
+    1.0,
+    8.0
+  ],
+  "phase_span_32mu": {
+    "F0": 0.1710327421771262,
+    "F1": 0.21986004269955278
+  },
+  "coverage_table": [
+    {
+      "I_over_mu": 8.0,
+      "shares": {
+        "bsv_F0": 0.18737193114193607,
+        "bsv_F1": 0.19926034560012304,
+        "thermal_F0": 0.2458194482258332,
+        "thermal_F1": 0.2432916621206288
+      },
+      "min_channel_share": 0.18737193114193607,
+      "sum_channel_shares": 0.8757433870885212
+    },
+    {
+      "I_over_mu": 4.0,
+      "shares": {
+        "bsv_F0": 0.03530694850053751,
+        "bsv_F1": 0.04389901243547366,
+        "thermal_F0": 0.21054921281384859,
+        "thermal_F1": 0.24416935682057975
+      },
+      "min_channel_share": 0.03530694850053751,
+      "sum_channel_shares": 0.5339245305704395
+    },
+    {
+      "I_over_mu": 12.0,
+      "shares": {
+        "bsv_F0": 0.17092892221802466,
+        "bsv_F1": 0.15641584771683104,
+        "thermal_F0": 0.03878975280231281,
+        "thermal_F1": 0.03365786134146836
+      },
+      "min_channel_share": 0.03365786134146836,
+      "sum_channel_shares": 0.3997923840786369
+    },
+    {
+      "I_over_mu": 20.0,
+      "shares": {
+        "bsv_F0": 0.2752327279064193,
+        "bsv_F1": 0.2600679391828132,
+        "thermal_F0": 0.016283112218415774,
+        "thermal_F1": 0.014044076880177041
+      },
+      "min_channel_share": 0.014044076880177041,
+      "sum_channel_shares": 0.5656278561878253
+    },
+    {
+      "I_over_mu": 2.0,
+      "shares": {
+        "bsv_F0": 0.00147092061127809,
+        "bsv_F1": 0.0009711578128680297,
+        "thermal_F0": 0.013347899960563065,
+        "thermal_F1": 0.008260174632240698
+      },
+      "min_channel_share": 0.0009711578128680297,
+      "sum_channel_shares": 0.024050153016949884
+    },
+    {
+      "I_over_mu": 32.0,
+      "shares": {
+        "bsv_F0": 0.015652466205593046,
+        "bsv_F1": 0.01484510709867853,
+        "thermal_F0": 2.3164587155684665e-05,
+        "thermal_F1": 2.1028507458651437e-05
+      },
+      "min_channel_share": 2.1028507458651437e-05,
+      "sum_channel_shares": 0.030541766398885912
+    },
+    {
+      "I_over_mu": 1.0,
+      "shares": {
+        "bsv_F0": 1.8100466117517528e-05,
+        "bsv_F1": 2.1102072329023774e-05,
+        "thermal_F0": 0.0001739581602685185,
+        "thermal_F1": 0.00018996709451214348
+      },
+      "min_channel_share": 1.8100466117517528e-05,
+      "sum_channel_shares": 0.0004031277932272033
+    },
+    {
+      "I_over_mu": 0.5,
+      "shares": {
+        "bsv_F0": 7.856969675601325e-08,
+        "bsv_F1": 1.1336868381470224e-07,
+        "thermal_F0": 6.563305743954182e-07,
+        "thermal_F1": 8.871654587687828e-07
+      },
+      "min_channel_share": 7.856969675601325e-08,
+      "sum_channel_shares": 1.7354344137349164e-06
+    },
+    {
+      "I_over_mu": 0.25,
+      "shares": {
+        "bsv_F0": 8.455605439116285e-10,
+        "bsv_F1": 1.0590404013794883e-09,
+        "thermal_F0": 4.661904109844091e-09,
+        "thermal_F1": 5.469517287859719e-09
+      },
+      "min_channel_share": 8.455605439116285e-10,
+      "sum_channel_shares": 1.2036022342994926e-08
+    }
+  ],
+  "main_channel_coverage": {
+    "bsv_F0": 0.18737193114193607,
+    "bsv_F1": 0.19926034560012304,
+    "thermal_F0": 0.2458194482258332,
+    "thermal_F1": 0.2432916621206288
+  },
+  "coverage_gap": true,
+  "rule": "largest 32 mu phase span plus the interval upper node with maximin BSV/thermal x F0/F1 contribution coverage",
+  "target_4to8_relative_change": 0.02
+}
+[2026-11-07T21:43:55.559351+00:00] DONE phase8 selection: exit=0 elapsed=2.5s
+[2026-11-07T21:43:55.565350+00:00] START phase8 batch 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage phase8 --max-new-runs 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage phase8 --max-new-runs 8
+library new=8 selected=8
+bias_v2_ph8_F1_I32_phi045_r01: F=1.0 I/mu=32.0 CEP=0.7853981633974483
+bias_v2_ph8_F1_I32_phi135_r01: F=1.0 I/mu=32.0 CEP=2.356194490192345
+bias_v2_ph8_F1_I32_phi225_r01: F=1.0 I/mu=32.0 CEP=3.9269908169872414
+bias_v2_ph8_F1_I32_phi315_r01: F=1.0 I/mu=32.0 CEP=5.497787143782138
+bias_v2_ph8_F1_I8_phi045_r01: F=1.0 I/mu=8.0 CEP=0.7853981633974483
+bias_v2_ph8_F1_I8_phi135_r01: F=1.0 I/mu=8.0 CEP=2.356194490192345
+bias_v2_ph8_F1_I8_phi225_r01: F=1.0 I/mu=8.0 CEP=3.9269908169872414
+bias_v2_ph8_F1_I8_phi315_r01: F=1.0 I/mu=8.0 CEP=5.497787143782138
+{"run_id": "bias_v2_ph8_F1_I32_phi045_r01", "status": "PASS", "wall_seconds": 1260.719273900002, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I32_phi135_r01", "status": "PASS", "wall_seconds": 1266.9165834000014, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I32_phi225_r01", "status": "PASS", "wall_seconds": 1310.4538104999956, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I32_phi315_r01", "status": "PASS", "wall_seconds": 1375.1189152000006, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I8_phi045_r01", "status": "PASS", "wall_seconds": 1357.7557759000047, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I8_phi135_r01", "status": "PASS", "wall_seconds": 1298.818354099989, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I8_phi225_r01", "status": "PASS", "wall_seconds": 1257.5018914000102, "Y": "not_computed"}
+{"run_id": "bias_v2_ph8_F1_I8_phi315_r01", "status": "PASS", "wall_seconds": 1277.1303640999977, "Y": "not_computed"}
+[2026-11-08T00:37:20.631708+00:00] DONE phase8 batch 1: exit=0 elapsed=10405.1s
+[2026-11-08T00:37:21.254235+00:00] START phase8 batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8
+v2_readouts listed=170 runnable=8 selected=8
+ro2_bias_v2_ph8_F1_I32_phi045_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I32_phi135_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I32_phi225_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I32_phi315_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I8_phi045_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I8_phi135_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I8_phi225_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_ph8_F1_I8_phi315_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I32_phi045_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I32_phi045_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 0.7853981633974483,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.07333313960607131,
+  "Y_at_E_main": 0.072253794210892,
+  "Y_at_E_high": 0.07169761827694415,
+  "masked_norm": 0.07983400034921942,
+  "spectrum_integral": 0.07983400026070181,
+  "integral_over_masked_norm": 0.9999999988912291,
+  "state_sha256": "79e195abbf048e53a010c7a01071d9f44e606248eee8ff7002bc45da4708dbc9",
+  "run_config_sha256": "137b2a16c70058adf76eadd014a9bf4afde5a63a2391f871c6e6f5d704e1e82a",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 394.92732210000395,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I32_phi135_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I32_phi135_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 2.356194490192345,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.09699295281159771,
+  "Y_at_E_main": 0.0948094071341687,
+  "Y_at_E_high": 0.09346658640253497,
+  "masked_norm": 0.10391310245127268,
+  "spectrum_integral": 0.10391310233155837,
+  "integral_over_masked_norm": 0.9999999988479383,
+  "state_sha256": "24c07dd5d6553b1278e7bcd2f708efb4fb520a4c752cd9694d4c76a9c8d0685a",
+  "run_config_sha256": "9ea3d0e0de850f7157734bfaf9743703f8067c2c92a14216c39b3a01ecba1e42",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 343.81790740000724,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I32_phi225_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I32_phi225_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 3.9269908169872414,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.09819970437575536,
+  "Y_at_E_main": 0.09805854983257838,
+  "Y_at_E_high": 0.09718507836672215,
+  "masked_norm": 0.10386124480466147,
+  "spectrum_integral": 0.1038612446841042,
+  "integral_over_masked_norm": 0.9999999988392468,
+  "state_sha256": "57f65c47c18eafc35319332f6c90244ba03a19b6d720726182434dce78bdc0d9",
+  "run_config_sha256": "2ebe8d1f34def2f798a336500945c0c8ca2ef1c25f2e7f7455979aa3eb09128c",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 352.3263941999903,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I32_phi315_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I32_phi315_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 5.497787143782138,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0742980453507588,
+  "Y_at_E_main": 0.07360059958578535,
+  "Y_at_E_high": 0.07337846282002919,
+  "masked_norm": 0.07969757461521289,
+  "spectrum_integral": 0.07969757452430196,
+  "integral_over_masked_norm": 0.9999999988593011,
+  "state_sha256": "b15ac06368df3426dd4467305d3d3c770596bc7082b9c4500a8827e76fb4141c",
+  "run_config_sha256": "0b720fc2e32bb52f6bfe567ce5bc0f65c94d9e4a083cf4cdbfce8e0e58ac4987",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 382.1066737999936,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I8_phi045_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I8_phi045_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 0.7853981633974483,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0006584756096141648,
+  "Y_at_E_main": 0.0005855841508807464,
+  "Y_at_E_high": 0.0005037800397304744,
+  "masked_norm": 0.001951127449620049,
+  "spectrum_integral": 0.00195112744503338,
+  "integral_over_masked_norm": 0.9999999976492211,
+  "state_sha256": "a942b5af0b86f6d0520d0996a6807814fff9d45a96064d130ed57520ab2c25ed",
+  "run_config_sha256": "ee0855eea1d534c9907e2a0afebca0140977163f8ac2c38dad0152e94f1d170f",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 163.91677090000303,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I8_phi135_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I8_phi135_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 2.356194490192345,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0008917723197457337,
+  "Y_at_E_main": 0.0006344603975501953,
+  "Y_at_E_high": 0.0005467871586370119,
+  "masked_norm": 0.0022497856580068953,
+  "spectrum_integral": 0.0022497856526998597,
+  "integral_over_masked_norm": 0.9999999976410928,
+  "state_sha256": "c90cfe5cefed732f9fdaf00fe2a69737d344d58640ebca5bf8b915c2e7a881ed",
+  "run_config_sha256": "5312e9b4b1c4d3765e7779bc77fdc29257985c2b32eb32225bb9ed16a2d9e8d0",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 136.07826330000535,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I8_phi225_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I8_phi225_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 3.9269908169872414,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0010690789795065104,
+  "Y_at_E_main": 0.0009202015064596001,
+  "Y_at_E_high": 0.0006717173242756483,
+  "masked_norm": 0.002249503099225028,
+  "spectrum_integral": 0.002249503093969689,
+  "integral_over_masked_norm": 0.999999997663778,
+  "state_sha256": "cc4634163c6aeeefe931249cd28fb5c69ee60b70c89d831d3a19fbf612a932d2",
+  "run_config_sha256": "55d757e7579e4af55ba7ab73d8dc0ced5c59789ab04568e3ec7a410fc2f646b4",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 136.53621000000567,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_ph8_F1_I8_phi315_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_ph8_F1_I8_phi315_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 5.497787143782138,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0008806735546493012,
+  "Y_at_E_main": 0.0007689085200815878,
+  "Y_at_E_high": 0.0007059043096385375,
+  "masked_norm": 0.0019508094800401944,
+  "spectrum_integral": 0.0019508094755064426,
+  "integral_over_masked_norm": 0.9999999976759638,
+  "state_sha256": "852a645be9836e81474ccc13392ac298fd72a63a9b8e4d525cdf27b40165d5f4",
+  "run_config_sha256": "51b1f2b23fb10a992754fe2aeba5cb7152a7fe4abd60100e4652ae859a151eef",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 151.58915620000334,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}
+[2026-11-08T01:11:43.976619+00:00] DONE phase8 batch 1 readouts 1: exit=0 elapsed=2062.7s
+[2026-11-08T01:11:44.593192+00:00] phase8 batch 1: no pending readouts
+[2026-11-08T01:11:44.600181+00:00] === STAGE final ===
+[2026-11-08T01:11:44.603181+00:00] START phase validation: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase-validation (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase-validation
+{
+  "complete": true,
+  "uncovered_nodes": 18,
+  "integrated_change": {
+    "bsv_F0": 0.0,
+    "bsv_F1": 8.107687816716621e-10,
+    "thermal_F0": 0.0,
+    "thermal_F1": 3.243384519178596e-11
+  }
+}
+[2026-11-08T01:11:47.971958+00:00] DONE phase validation: exit=0 elapsed=3.4s
+[2026-11-08T01:11:47.977960+00:00] START error map refresh: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step error-map (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step error-map
+{
+  "rows": 66,
+  "path": "results/bias_v3_audit/reallocation_20261106/error_component_map.csv",
+  "sha256": "0e46a8497d5d504605cf05d134a9b8dabdf8ac698fa4975b2c067dfa15bd9464",
+  "phase_envelope": 0.07026308347987481,
+  "direct_4to8": {
+    "1": 0.0058335280579012135
+  },
+  "phase_missing": []
+}
+[2026-11-08T01:11:48.523742+00:00] DONE error map refresh: exit=0 elapsed=0.5s
+[2026-11-08T01:11:48.530746+00:00] START tail final: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope final (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope final
+{
+  "file": "tail_audit.json",
+  "complete": true,
+  "scope": "current_full_library",
+  "status": "SUFFICIENT",
+  "extension": "NOT_REQUIRED",
+  "rows": 4
+}
+[2026-11-08T01:11:51.296384+00:00] DONE tail final: exit=0 elapsed=2.8s
+[2026-11-08T01:11:51.301384+00:00] START final statistics: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --final (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --final
+{
+  "schema": "continuation-v2-statistics",
+  "revision": "r1_20261105_v1",
+  "mode": "FINAL",
+  "Imax_over_mu": 32.0,
+  "nodes": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    20.0,
+    32.0
+  ],
+  "midpoints": [
+    6.0,
+    10.0
+  ],
+  "yields": {
+    "coherent_F0": {
+      "state": "coherent",
+      "F": 0.0,
+      "Y": 2.8329603617305314e-09,
+      "Y_lo": 2.8138884495239435e-09,
+      "Y_hi": 2.8520322739371193e-09,
+      "relative_response_error": 0.006732149331922703,
+      "delta": 1.9071912206587696e-11,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.006732149331922703,
+      "gate": {
+        "Y_lo": 2.8138884495239435e-09,
+        "Y_hi": 2.8520322739371193e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.006732149331922703,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F0": {
+      "state": "bsv",
+      "F": 0.0,
+      "Y": 1.1509166381084221e-05,
+      "Y_lo": 7.107854150609078e-06,
+      "Y_hi": 1.592589586945964e-05,
+      "relative_response_error": 0.3824179862156548,
+      "delta": 4.401312230475143e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 2.972183579914067e-06,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.38375754960276676,
+      "gate": {
+        "Y_lo": 7.107854150609078e-06,
+        "Y_hi": 1.592589586945964e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.38375754960276676,
+        "total_5pct_ok": false,
+        "node_ok": false,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.06232854806254518,
+        0.018251495620130384,
+        0.005753707841722983,
+        0.0018823472592532733,
+        0.0008334796775698782,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F0": {
+      "state": "thermal",
+      "F": 0.0,
+      "Y": 1.7925095533132838e-06,
+      "Y_lo": 8.275902459544482e-07,
+      "Y_hi": 2.757428873336285e-06,
+      "relative_response_error": 0.5383063680610649,
+      "delta": 9.649193073588357e-07,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 7.463843730245827e-07,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.5383063751261127,
+      "gate": {
+        "Y_lo": 8.275902459544482e-07,
+        "Y_hi": 2.757428873336285e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.5383063751261127,
+        "total_5pct_ok": false,
+        "node_ok": false,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05059137881790535,
+        0.006846798581651988,
+        0.0009266134253119098,
+        0.0001254034903654352,
+        1.88600898046151e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    },
+    "coherent_F1": {
+      "state": "coherent",
+      "F": 1.0,
+      "Y": 5.509789712220833e-09,
+      "Y_lo": 5.341497955436355e-09,
+      "Y_hi": 5.678081469005311e-09,
+      "relative_response_error": 0.030544134272711555,
+      "delta": 1.6829175678447788e-10,
+      "tail_upper": 0.0,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 0.0,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.030544134272711555,
+      "gate": {
+        "Y_lo": 5.341497955436355e-09,
+        "Y_hi": 5.678081469005311e-09,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.030544134272711555,
+        "total_5pct_ok": true,
+        "node_ok": true,
+        "quadrature_ok": true,
+        "signal_ok": true,
+        "status": "PASS"
+      },
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "bsv_F1": {
+      "state": "bsv",
+      "F": 1.0,
+      "Y": 1.9228061793642173e-05,
+      "Y_lo": 1.1719702545448524e-05,
+      "Y_hi": 2.67518382997361e-05,
+      "relative_response_error": 0.39048965666816793,
+      "delta": 7.508359248193649e-06,
+      "tail_upper": 1.5417257900280017e-08,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 4.952932571763898e-06,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.39129146696323247,
+      "gate": {
+        "Y_lo": 1.1719702545448524e-05,
+        "Y_hi": 2.67518382997361e-05,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.39129146696323247,
+        "total_5pct_ok": false,
+        "node_ok": false,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.2594865394131186,
+        0.19759232341855795,
+        0.1525213341224979,
+        0.16426664437784771,
+        0.13696055066466084,
+        0.06232854806254518,
+        0.018251495620130384,
+        0.005753707841722983,
+        0.0018823472592532733,
+        0.0008334796775698782,
+        0.00012179386604960534,
+        1.2202587870979514e-06
+      ]
+    },
+    "thermal_F1": {
+      "state": "thermal",
+      "F": 1.0,
+      "Y": 3.1969458145020773e-06,
+      "Y_lo": 1.3147818224083662e-06,
+      "Y_hi": 5.079109819259954e-06,
+      "relative_response_error": 0.5887381586374673,
+      "delta": 1.882163992093711e-06,
+      "tail_upper": 1.2664165549094176e-14,
+      "tail_ok": true,
+      "quadrature_error": 0.0,
+      "node_change": 1.4613475588094368e-06,
+      "phase_change": 0.0,
+      "phase_accounting": "single CEP category in error_component_map.csv; no outer phase delta; kept at 0 for schema stability",
+      "total_relative_error": 0.5887381625987999,
+      "gate": {
+        "Y_lo": 1.3147818224083662e-06,
+        "Y_hi": 5.079109819259954e-06,
+        "tail_ok": true,
+        "lower_positive": true,
+        "total_relative_error": 0.5887381625987999,
+        "total_5pct_ok": false,
+        "node_ok": false,
+        "quadrature_ok": true,
+        "signal_ok": false,
+        "status": "INCOMPLETE"
+      },
+      "weights": [
+        0.11520313228561947,
+        0.19571637427929472,
+        0.21177805635270358,
+        0.24475827914755255,
+        0.1740343357608904,
+        0.05059137881790535,
+        0.006846798581651988,
+        0.0009266134253119098,
+        0.0001254034903654352,
+        1.88600898046151e-05,
+        7.675971382166986e-07,
+        1.7174908235720166e-10
+      ]
+    }
+  },
+  "Q": {
+    "coherent": {
+      "Y_F0": 2.8329603617305314e-09,
+      "Y_F1": 5.509789712220833e-09,
+      "Q": 1.9448876823871772,
+      "Q_lo": 1.8728743023874077,
+      "Q_hi": 2.0178772438423898,
+      "F0_interval": [
+        2.8138884495239435e-09,
+        2.8520322739371193e-09
+      ],
+      "F1_interval": [
+        5.341497955436355e-09,
+        5.678081469005311e-09
+      ]
+    },
+    "bsv": {
+      "Y_F0": 1.1509166381084221e-05,
+      "Y_F1": 1.9228061793642173e-05,
+      "Q": 1.6706737184062495,
+      "Q_lo": 0.7358896881853195,
+      "Q_hi": 3.7637010738949552,
+      "F0_interval": [
+        7.107854150609078e-06,
+        1.592589586945964e-05
+      ],
+      "F1_interval": [
+        1.1719702545448524e-05,
+        2.67518382997361e-05
+      ]
+    },
+    "thermal": {
+      "Y_F0": 1.7925095533132838e-06,
+      "Y_F1": 3.1969458145020773e-06,
+      "Q": 1.7835028039838483,
+      "Q_lo": 0.4768144103813556,
+      "Q_hi": 6.137227745358802,
+      "F0_interval": [
+        8.275902459544482e-07,
+        2.757428873336285e-06
+      ],
+      "F1_interval": [
+        1.3147818224083662e-06,
+        5.079109819259954e-06
+      ]
+    }
+  },
+  "D": {
+    "value": 0.8590078149683408,
+    "lo": 0.3646850622013346,
+    "hi": 2.009585517350126,
+    "valid": false
+  },
+  "status": "INCOMPLETE",
+  "scientific_label": "INCOMPLETE",
+  "gate_ok": false,
+  "denominator_ok": true,
+  "missing_validation": [
+    "phase_validation.json has no representative condition set",
+    "tail_audit.json has no representative condition set"
+  ],
+  "validation_binding": {
+    "nodes": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      20.0,
+      32.0
+    ],
+    "midpoints": [
+      6.0,
+      10.0
+    ],
+    "readout_digests": [
+      "bias_p1_F0.000_I1_phi000_r02:ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4:358afe34311385d41c6142ec8488920b25d774ad40ff3fb1c0419db2d7058e3d",
+      "bias_p1_F1.000_I1_phi000_r02:ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4:5af3d3342527493bca21a1eefc0d54c3c6cd892772ec8458b830a534c7b8480e",
+      "bias_p1_dc_F0.000_r02:ro2_bias_p1_dc_F0.000_r02_t100_eta0p05_dE0p0125_m2-4:90bfd1089d16a1af9389adbd42ba4a8809cd9469fe63375ded94d7b7b4db9486",
+      "bias_p1_dc_F1.000_r02:ro2_bias_p1_dc_F1.000_r02_t100_eta0p05_dE0p0125_m2-4:a02104fbaaa06d395fa15ac117fba6d5541f4f584e624257627f6fc24fd03b14",
+      "bias_p2_F0.000_I1_phi090_r02:ro2_bias_p2_F0.000_I1_phi090_r02_t100_eta0p05_dE0p0125_m2-4:caef152e9ac70fbe8651efbd4a29daede9ab491516e712ffbcd2acc8e8743350",
+      "bias_p2_F0.000_I1_phi180_r02:ro2_bias_p2_F0.000_I1_phi180_r02_t100_eta0p05_dE0p0125_m2-4:9b1140e748406e847fff201c2900231e7363cb92e6209d56e9ca7a97dee47079",
+      "bias_p2_F0.000_I1_phi270_r02:ro2_bias_p2_F0.000_I1_phi270_r02_t100_eta0p05_dE0p0125_m2-4:f46f6bbd10c427cff57c6bcdd1fa229df7e15ebf824daafea55a86c9e15ca831",
+      "bias_p2_F0.000_I4_phi000_r02:ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4:211f2215ad47d7939694199da36fcf967a4af8f9144b7e9d0a60947c3ad6c88b",
+      "bias_p2_F0.000_I4_phi090_r02:ro2_bias_p2_F0.000_I4_phi090_r02_t100_eta0p05_dE0p0125_m2-4:604b4cef8399e469f09bb6398c2cf1a0d00a5513fe6d3af1e758084258cee788",
+      "bias_p2_F0.000_I4_phi180_r02:ro2_bias_p2_F0.000_I4_phi180_r02_t100_eta0p05_dE0p0125_m2-4:92793e0c8a473c0ee2f39f8294ff7b094f3ca61d8193f3374497332461cc44e3",
+      "bias_p2_F0.000_I4_phi270_r02:ro2_bias_p2_F0.000_I4_phi270_r02_t100_eta0p05_dE0p0125_m2-4:eae9b51d6cccf1c5674aa811726fd8d0fb962bafa00edde2ffbb0310d8d6d726",
+      "bias_p2_F1.000_I1_phi090_r02:ro2_bias_p2_F1.000_I1_phi090_r02_t100_eta0p05_dE0p0125_m2-4:0943b51074af1d21d4dae31024399e2c017b09693d77d87b32c982115bceaa5e",
+      "bias_p2_F1.000_I1_phi180_r02:ro2_bias_p2_F1.000_I1_phi180_r02_t100_eta0p05_dE0p0125_m2-4:75794f670037d366e8ea1d3877303bc0f07008b74e562c87abdd31a7fd6dd602",
+      "bias_p2_F1.000_I1_phi270_r02:ro2_bias_p2_F1.000_I1_phi270_r02_t100_eta0p05_dE0p0125_m2-4:021607f3c0
+[2026-11-08T01:11:54.039704+00:00] DONE final statistics: exit=2 elapsed=2.7s
+[2026-11-08T01:11:54.042705+00:00] START decision: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step decision (events=1, outer_timeout=5700s)
+$ C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\.venv\Scripts\python.exe C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step decision
+# QL-TIP-1D 两偏压统计研究：最终判定（v3-r2）
+
+日期：2026-11-06。本报告在所有 S3–S6 任务完成后生成。
+
+## 判定
+
+`INCOMPLETE`。程序状态 `INCOMPLETE`。
+
+- 三者严格区分：任务已执行 = True；数据齐全 = True；数值验收通过 = False。
+- S4 验收关口 = `PROCEED`；尾部条件扩尾 = `NOT_REQUIRED`；
+  未直接测 4→8 相位的节点 = 18 个（由单一 CEP 类别包络覆盖，不记为 0）。
+- BSV 主量 `D = Q_BSV / Q_C` = 0.8590078149683408，经验审计区间 [0.3646850622013346, 2.009585517350126]。
+- 区间是保守审计区间，不是严格置信区间；区间含 1 属正常完成结果（`VALID_UNRESOLVED`）。
+- 本结论只支持此单活性电子一维模型内的统计依赖，不支持量子优势、纠缠或多电子计数断言。
+
+## 实际执行
+
+- 新增 TDSE：96 条；独立共同读出：170 项；续接累计机时：42.1463 h。
+- S3 完成 8/12/20μ 两偏压四相位；S4 完成代表节点 dx/dt 直接控制及 J 点 η/能区/能量网格直接读出，
+  并通过显式验收关口；S5 补齐 32μ 与弱光初始库。
+- S6 顺序为：初步统计 → 先用当前响应库审核 32μ 尾部并评估条件扩尾 → 再决定中点与相位位置 →
+  两个真实插值中点 → 代表性 4→8 相位 → 误差地图刷新 → 用当前库重新审核尾部 → 最终统计。
+- 尾部审核范围 = `current_full_library`，`complete=True`；
+  扩尾计划状态 = `NOT_REQUIRED`，若需扩尾则只到最小充分节点。
+- 逐类别误差映射见 `error_component_map.csv`；32μ 七类直接控制各计一次，R1 只补未直接测类别，
+  不再叠加 R1 完整总误差。
+- 尾部审核 `complete=True`；相位验证 `complete=True`。
+- 缺失的最终验证项：['phase_validation.json has no representative condition set', 'tail_audit.json has no representative condition set']。
+
+## 预算与授权
+
+- 用户 2026-11-06 明确要求完成全部任务后再提交报告；据此把续接机时子上限由 40 h 调整为 56 h，
+  S3 阶段上限由 8 h 调整为 10 h。全局 240 条 / 72 h 上限未改变。
+- 执行前预计剩余 66 条任务、24.091
+[2026-11-08T01:11:54.585744+00:00] DONE decision: exit=0 elapsed=0.5s
+[2026-11-08T01:11:54.590745+00:00] === v3-r2 full run complete ===
+[2026-11-08T01:13:34.198631+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T01:14:49.870524+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:10:22.946030+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:11:52.080958+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:12:16.148737+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:14:14.895813+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:14:16.177434+00:00] source_freeze verified: 18 modules match the running revision
+[2026-11-08T08:30:15.001669+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:30:46.825230+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:31:04.937992+00:00] source_freeze verified: 19 modules match the running revision
+[2026-11-08T08:45:38.825998+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T08:45:50.035757+00:00] source_freeze verified: 20 modules match the running revision
+[2026-11-08T09:03:12.454043+00:00] INVALIDATED probe: dependency signature changed; the step will be rerun
+[2026-11-08T09:03:13.618676+00:00] source_freeze verified: 20 modules match the running revision

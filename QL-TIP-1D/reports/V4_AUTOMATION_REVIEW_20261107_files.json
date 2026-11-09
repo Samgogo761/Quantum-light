@@ -1,0 +1,25 @@
+{
+  "schema": "ql-tip-review-file-inventory",
+  "date": "2026-11-07",
+  "scientific_runs_this_turn": 0,
+  "project_tests_this_turn": 0,
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107.md",
+      "bytes": 13397,
+      "sha256": "830e79bbbe1e8cc5a3b5372720259598e2d2eeb6599fa00bb6593964785d47bf"
+    },
+    {
+      "path": "QL-TIP-1D/reports/V4_AUTOMATION_REVIEW_20261107_evidence.json",
+      "bytes": 12880,
+      "sha256": "35151e3908339f98795e94c52ea447a1fee206a2c67200ff6762db1c69cd3bfe"
+    },
+    {
+      "path": "Q-MATH/README.md",
+      "bytes": 15903,
+      "sha256": "a9e4295b8643182c37185ecb28da678ec21de83b83a7a5fe083233e1ea02487c"
+    }
+  ],
+  "excludes": "this inventory itself; README is an active entry and may change later",
+  "archive_status": "BLOCKED_EXISTING_REGISTERED_SOURCE_CHANGE"
+}

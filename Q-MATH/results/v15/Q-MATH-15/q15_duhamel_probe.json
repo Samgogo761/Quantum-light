@@ -1,0 +1,15 @@
+{
+  "npump": 13,
+  "steps": 48,
+  "extra_out_photons": 20,
+  "residual_integral_truncated_out_tail": [
+    0.02918136381827903,
+    0.35146822950399287
+  ],
+  "max_instantaneous_out_leak": [
+    0.002208953193035093,
+    0.020337153030493115
+  ],
+  "unitarity": 4.68514116428688e-14,
+  "warning": "This residual probe omits photon levels >=Np+extra; not a rigorous infinite-tail certificate yet."
+}

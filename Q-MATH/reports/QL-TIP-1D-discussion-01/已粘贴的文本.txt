@@ -1,0 +1,479 @@
+我把这份 23 页的报告仔细看过了。我的总体判断是：
+
+这个方向值得做，而且比我们最初想象的更容易找到一个可落地的理论切入点。但我们需要调整研究目标：不要再把重点放在证明量子光能够与金属尖端相互作用，而应该研究金属尖端如何改变量子光的传播、统计特性，以及量子光如何影响尖端附近的电子动力学。
+
+我尤其建议，第一篇工作先不要追求复杂的全量子电动力学（QED），而是从一个有明确物理意义的金属尖端模型出发，建立经典电磁响应与量子光输入输出相结合的理论框架。
+
+下面我先讲报告中最重要的发现，再给出我认为最适合我们实际开展的研究路线。
+
+## 一、首先要重新认识这个方向的研究现状
+
+报告中最重要的两篇文献是：
+
+1. 2024 年：Multiphoton electron emission with non-classical light
+2. 2025 年：Quantum light drives electrons strongly at metal needle tips
+
+它们已经分别证明了非经典光照射金属针尖时，可以产生非经典光子统计向电子计数统计的转移，以及量子光驱动的强场电子发射和再散射现象。尤其是第二篇，已经涉及电子高能平台和截止结构。
+
+这意味着导师提出的想法并不是一个完全没有实验基础的新设想。实际上，已经有非常直接的实验先例。
+
+量子光注入金属纳米尖端的背景调查与可行性评估.docx
+
+
+
+这对我们有利，也有一个需要注意的地方：
+
+- 有利之处：我们不需要从头论证量子光与金属尖端相互作用是否可能，已有实验可以作为理论工作的起点。
+- 需要注意：如果我们只计算不同量子态照射尖端后产生不同的光强，就很难形成有说服力的论文。
+
+我认为我们应该把研究定位为：
+
+Quantum-light interaction with plasmonic metallic tips: quantum statistical effects and near-field response.
+
+即：量子光与等离激元金属尖端相互作用中的量子统计效应及近场响应。
+
+这里还有一个重要区分：2024—2025 年的针尖实验主要涉及明亮压缩真空（Bright Squeezed Vacuum, BSV）与强场电子发射；我们可以考虑另一条相对简单的理论路线，研究单光子、Fock 态和压缩态在金属尖端中的量子传播及其统计特征。这两类工作相关，但不是同一个问题。
+
+## 二、报告中有一个必须纠正的地方：实际上是两种不同的研究方向
+
+这是我读完报告后认为最需要注意的地方。
+
+报告把两类金属尖端体系放在了同一套研究路线中，但它们的物理机制和计算目标并不相同。
+
+[Etching Atomically Sharp Tips for ST Microscopy - Hackster.io](https://images.openai.com/static-rsc-4/uNlzueWT-8-mYg_G2mLOHXtDJLOrBR6PmgTDSrK35DlAEej5zpfVnPNYAO-DUtI4ibZBVHkM3CCa2Kcwdh80tNH-cKbomeDpCCnv7HK3Wxe61tQhMPMvKuaKibAeH1ys8h3mNIlyirTZp62U0f2YADXsUo1mIuEYzVklPg8L3Vs?purpose=inline)
+
+方向 A：金属针尖作为电子发射源
+
+已有直接量子光实验
+
+- 量子光照射金属针尖。
+- 尖端局域电场增强。
+- 电子从金属表面发射。
+- 研究电子数量、能谱、再散射及截止能量。
+
+典型材料：钨（W）。
+
+[Nanofocusing of electromagnetic radiation | Nature Photonics](https://images.openai.com/static-rsc-4/xZZRIWxDCHSKabFXimJ3cOPe7zSlsBvGTysD-sgPnP8kE3UJPojVZYgu3VIS8-PznGSJY9utuqMjFF_0GGhDus3m3StEjg6I0ozhyFaazC-FVu5ekyyDGDOdDrgU3qGESx74u9qzZnU9GuYQYKn-05pDgLokPVF-2vVIjpWjxDE?purpose=inline)
+
+方向 B：金属尖端作为等离激元光学天线
+
+量子纳米光学方向
+
+- 单光子或压缩光耦合进金属结构。
+- 激发局域表面等离激元（LSP）或传播 SPP。
+- 沿锥形尖端纳聚焦（nanofocusing）。
+- 研究光子统计、纠缠和局域量子场。
+
+典型材料：金（Au）、银（Ag）。
+
+两者不能简单地合并。
+
+例如，报告中推荐的 Au/Ag、光栅耦合、SPP 传输效率、单光子保真度，主要属于方向 B；而 2025 年 Heimerl 等人的钨针尖实验属于方向 A。
+
+如果我们研究的是电子从金属尖端发射，那么根本不需要一开始就设计一个复杂的 SPP 纳聚焦结构。
+
+2025 年的实验已经证明，直接把 BSV 聚焦到钨针尖，就可以观察到强场电子动力学。其针尖曲率半径为几十纳米，中心波长 1600 nm，实验测得的场增强因子为 \\(3.4\pm0.6\\)。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com+1
+
+
+
+我建议我们先不要把两条路线混在一起。
+
+## 三、我对报告中计算方案的几点修正
+
+报告提出的 Maxwell + Quantum Input-Output 是正确的，但它有一个容易被忽略的问题。
+
+### 1. 线性量子输入输出本身不一定产生新的量子效应
+
+报告推荐：
+
+\\[ \hat a\_{\rm out} =t\hat a\_{\rm in}+ \sqrt{1-|t|^2}\hat f \\]
+
+这里 \\(\hat f\\) 是真空损耗通道。
+
+对于单模、纯损耗、真空环境，有：
+
+\\[ \langle n\_{\rm out}\rangle =\eta\langle n\_{\rm in}\rangle \\]
+
+\\[ \langle n\_{\rm out}(n\_{\rm out}-1)\rangle =\eta^2\langle n\_{\rm in}(n\_{\rm in}-1)\rangle \\]
+
+因此：
+
+\\[ \boxed{g\_{\rm out}^{(2)}=g\_{\rm in}^{(2)}} \\]
+
+也就是说，单纯的线性损耗不会改变归一化的二阶关联函数。
+
+它会降低光子计数率，却不会自动消除或改变输入态的归一化光子统计。
+
+如果我们仅仅计算不同尖端半径下的 \\(g^{(2)}\\)，然后发现它基本不变，这实际上就是线性损耗模型的预期结果。
+
+要让方向 B 形成有价值的论文，我们需要考虑频率依赖的模式过滤、多模散射、背景通道、纠缠传输等真正能产生可观测变化的因素。
+
+报告对线性输入输出模型的定位见第 9—11 页。
+
+量子光注入金属纳米尖端的背景调查与可行性评估.docx
+
+
+
+### 2. 2025 年论文已经做了相当一部分理论工作
+
+这一点尤其重要。
+
+Heimerl 等人的工作并非只有实验。他们已经建立了一个相当简洁的计算模型：
+
+- 单电子 TDSE（含金属表面势垒）。
+- 尖端局域场增强。
+- BSV 的 Husimi 分布。
+- 对不同经典场强下的电子能谱进行统计加权。
+
+具体来说，他们使用：
+
+\\[ \xi(x)=1+(F_E-1)e^{-x/\zeta} \\]
+
+其中 \\(F_E\\) 是尖端场增强因子，\\(\zeta\\) 是近场衰减长度。
+
+其计算采用的代表参数包括：
+
+| 参数     | 取值        |
+| ------ | --------- |
+| 场增强因子  | 3         |
+| 近场衰减长度 | 20 nm     |
+| 功函数    | 6 eV      |
+| 静态电场   | -0.5 V/nm |
+| 脉冲宽度   | 25 fs     |
+
+然后求解经典驱动下的 TDSE，并利用 BSV 的 Husimi 分布进行加权：
+
+\\[ S\_{\rm BSV}(E) = \int S\_{\rm coh}(E;I\_\alpha) Q\_{\rm BSV}(I\_\alpha) \\,dI\_\alpha \\]
+
+这套方法已经能够解释实验中的电子能谱展宽、平台结构消失以及光子数后选择后截止结构的恢复。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com+1
+
+
+
+但这里有一个非常重要的理论边界：
+
+这种 Husimi 加权方法不是完整的量子光—电子联合 QED。论文作者也明确指出，他们的结果尚未体现 BSV 相干叠加性质所带来的贡献；逐发光子数后选择可以理解为对伪相干态的投影。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com+1
+
+
+
+因此，如果我们只是重新做一遍：
+
+- 相干光与 BSV 对比；
+- 电子能谱；
+- 电子截止；
+- 场增强因子；
+
+那就很难说有足够的新意。
+
+### 3. 还需要考虑 2026 年的新理论进展
+
+我额外检索到一篇 2026 年 6 月的预印本：
+
+Quantum optical photoelectron interferometry，Dubois 等人，arXiv:2606.13447。
+
+它建立了量子光多光子过程与光电子观测量之间的一般理论联系，研究了光子自相关、互相关对光电子干涉谱的影响。
+
+这篇文章主要研究气相 RABBIT 光电子干涉，并不是金属针尖研究，但说明一般性的“量子光统计影响光电子”已经有了更系统的理论框架。
+
+[image](https://www.google.com/s2/favicons?domain=https://arxiv.org\&sz=32)
+
+arxiv.org+1
+
+
+
+所以我们应该把创新点放在金属尖端特有的近场增强、表面势垒和电子动力学如何共同影响量子光统计的映射，而不是泛泛地研究量子光与电子之间的关系。
+
+## 四、我建议我们优先开展方向 A：量子光驱动金属针尖电子发射
+
+这是我目前最推荐的方案。
+
+理由有四个：
+
+1. 有非常直接的 2024、2025 年实验作为基准。
+2. 金属尖端的电子发射理论相对成熟，不需要建立全新的材料理论。
+3. 现成的 TDSE 单电子模型可以直接作为起点。
+4. 可以把量子光统计、近场增强和电子能谱联系起来，形成比较完整的理论文章。
+
+我们暂时不追求证明某种全新的量子效应，而是寻找一个目前已有实验研究、但仍有值得系统计算的物理问题。
+
+### 4.1 我们要研究的核心问题
+
+我建议暂定为：
+
+不同量子统计性质的入射光，在金属尖端局域场增强作用下，如何影响非线性电子发射及其能谱？
+
+具体分成三个层次：
+
+- 光源层：不同量子态具有不同的光子数分布、场涨落和相位特性。
+- 尖端层：金属尖端的局域场增强和空间衰减改变电子实际感受到的驱动场。
+- 电子层：电子发射概率、能量分布及高能截止依赖于驱动场。
+
+这条路线有一个优点：三个部分都能分别建模，最后再耦合起来，不必一开始就建立完整的量子电动力学。
+
+### 4.2 第一阶段：建立最小金属尖端模型
+
+[Bright squeezed vacuum reveals hidden quantum effects in strong-field physics](https://images.openai.com/static-rsc-4/wAL_k4yvWRgXsCODXYMpaoMuguyhAmiwWyg4ZzeH4sLPctt7P1J_596td_QGA0Y-OEu74WJp6vge__GlqXhxYeWNVXFWHC-_J966xf6OFqQKa5fBFJpZVNjpRUtYlbndoZUrGOiMMCPdttTtjZOF2ZmK2jf2U9XuxCEmbEksnDs?purpose=inline)
+
+[phys.org](https://phys.org/news/2025-11-bright-vacuum-reveals-hidden-quantum.html?utm_source=chatgpt.com)
+
+我建议第一轮直接使用钨针尖（W nanotip）。
+
+原因是 2025 年实验已经提供了很好的参数参考，而且钨是成熟的场发射阴极材料。
+
+初始参数不需要太多：
+
+| 参数     | 初始设置            |
+| ------ | --------------- |
+| 尖端材料   | W               |
+| 尖端曲率半径 | 30 nm           |
+| 光波长    | 1600 nm         |
+| 脉冲宽度   | 25 fs           |
+| 功函数    | 5–6 eV          |
+| 场增强因子  | 3               |
+| 近场衰减长度 | 20 nm           |
+| 静态电场   | 0.5 V/nm（先固定方向） |
+
+这些是初始建模参数，不是已经确定的最优实验条件。参考 Heimerl 等人的实验和理论设置。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com+1
+
+
+
+我们可以先采用：
+
+\\[ E\_{\rm loc}(x,t) = \xi(x)E\_{\rm inc}(t)+E\_{\rm dc} \\]
+
+其中：
+
+\\[ \xi(x)=1+(F_E-1)e^{-x/\zeta} \\]
+
+这样就能描述电子离开尖端表面时，感受到的局域光场逐渐减弱的过程。
+
+第一轮不需要自己开发完整的三维电磁求解器。
+
+我们先把场增强因子和衰减长度作为参数，等电子动力学结果出来后，再考虑是否用 COMSOL 对真实尖端几何进行修正。
+
+### 4.3 第二阶段：建立电子动力学模型
+
+我们从一维单电子 TDSE 开始：
+
+\\[ i\hbar\frac{\partial\psi(x,t)}{\partial t} = \left[ -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} +V\_{\rm surf}(x) +V\_{\rm field}(x,t) \right]\psi(x,t) \\]
+
+其中：
+
+- \\(V\_{\rm surf}\\)：金属表面势垒；
+- \\(V\_{\rm field}\\)：入射光、近场增强及静态偏压共同形成的驱动势。
+
+这里我们需要先采用合理的表面势垒模型，并通过经典相干光的结果验证它。
+
+主要输出：
+
+1. 电子发射概率；
+2. 电子能量分布；
+3. 高能电子截止；
+4. 电子产额与入射光平均能量的关系。
+
+我们不需要一开始就考虑多电子库仑相互作用。2025 年论文已经表明，单电子 TDSE 能解释高能部分的主要结构，多电子效应可以作为后续修正。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com
+
+
+
+### 4.4 第三阶段：引入量子光输入
+
+这里我建议不要一下子引入五六种光态。
+
+第一轮只比较三种：
+
+[quantum optics - Phase noise and linewidth of laser - Physics Stack Exchange](https://images.openai.com/static-rsc-4/iBSC6931Z_bqHF8VKJamtPhacDDDVqkeWh2PZ-tWrJnvt4IVHvoIAxOZqIAgD4HSX_CspA0K3mSEKk1ny4kynVwx_Sa3-sGT3LzdDO1PUaJ3ZMfTN_rc9DN7a4qWdzAYToPzjTlsppTwZajqho9Bxk1e0guOunGeRhGgAqZl3yw?purpose=inline)
+
+相干态（Coherent state）
+
+经典激光基准，泊松光子数分布。
+
+[Wigner functions of (a) a vacuum state, (b) a squeezed state and (c) a... | Download Scientific Diagram](https://images.openai.com/static-rsc-4/Vj4JQHdOEi5F-EnFM7OMoSqmKBFsCCRrObWegappxpE-PtEOxtbMLl2XZpUBQk2wHOcoS0r0pW0nVu0ZX9D9gcoN-liOcH-zm6POWkaulS_54qm8Eyq5Uc9O4Qws7BnyxMAxvoGXvjKea1lvSR7fjkpcGZYS_-y8Pxnx9Z7qNXM?purpose=inline)
+
+压缩真空（Squeezed vacuum）
+
+零平均场，但具有非平凡的光子统计与正交分量涨落。
+
+[Avik Dutt posted on LinkedIn](https://images.openai.com/static-rsc-4/lnVP-xcQsPpvDqVq1EkdBdZt-db_XUPG0rhDHw_wKJhEZgUX9bkFrJbTVFVDslsYhvR0Bv6OMcy1t_dLpIUCiITM9YcXXMSdNQs1G_lRa0tA71ALaE0Z6QAolPJ0QFBy0Ph9SHagMW8zqsZXTjBqOE3cfiygx53yHWl7rYNGAAU?purpose=inline)
+
+位移压缩态（Displaced squeezed state）
+
+同时具有非零平均场和可调压缩特性。
+
+为什么这样选？
+
+因为这三种状态能够分别考察：
+
+- 经典光驱动的基准响应；
+- 强烈光子数涨落下的电子发射；
+- 平均场和量子涨落共同存在时的电子响应。
+
+我们固定平均光子数或平均入射能量，改变压缩参数和位移量，观察电子能谱如何变化。
+
+这里需要特别注意：如果采用 1600 nm 的钨针尖光电子发射，单个光子能量约为 0.775 eV，而钨的功函数约为 5 eV。因此，单光子输入并不适合直接作为这一近红外多光子电子发射路线的主要研究对象。它更适合另一个单光子等离激元方向。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com
+
+
+
+不过，这里我还想增加一个小的研究设计：引入一个弱的 \\(2\omega\\) 相干参考光。
+
+2025 年论文的作者在结尾明确提出了这个方向：让 BSV 作为主要驱动光，同时加入一个频率为 \\(2\omega\\) 的经典相干光场，通过两者的相对相位选择 BSV 的压缩或反压缩正交分量，再观察电子发射。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+nature.com+1
+
+
+
+我们可以写成：
+
+\\[ \hat E(t)=\hat E\_{\rm BSV}(t) +E\_{2\omega}\cos(2\omega t+\phi) \\]
+
+这里 \\(\phi\\) 是两色光相对相位。
+
+研究：
+
+- 不同 \\(\phi\\) 下电子发射概率如何变化；
+- 电子能谱是否出现明显的相位依赖；
+- 压缩角改变时，电子能谱是否呈现不同响应；
+- 尖端场增强是否放大这种差异。
+
+这就比单纯重复 BSV 驱动针尖的计算更有价值。
+
+但要注意，若使用正的 Wigner 函数或 Husimi 函数进行经典场采样，这种方法只能证明对压缩态相空间涨落的敏感性，不能单独证明电子响应具有无法由经典随机场模拟的量子特征。若要宣称真正的量子相干效应，还需要进一步做算符级计算或与具有相同经典统计分布的对照态比较。
+
+我建议先把两色方案作为候选扩展，不要一开始就让它成为必须完成的内容。
+
+## 五、最终建议：我们应该怎样组织第一篇论文？
+
+我把工作分成三个层次。
+
+第一层：基础结果
+
+必须完成
+
+金属尖端近场增强 + 相干光驱动电子发射 + BSV 统计平均。
+
+目标：建立可靠的电子发射基准模型。
+
+第二层：量子光对比
+
+必须完成
+
+相干态、压缩真空、位移压缩态的电子产额与能谱对比。
+
+目标：研究输入光统计特征与尖端电子响应的关系。
+
+第三层：相位控制
+
+推荐扩展
+
+加入弱 \\(2\omega\\) 参考光，研究相对相位和压缩角对电子发射的影响。
+
+目标：形成区别于已有 BSV 针尖实验的具体理论结果。
+
+### 预期需要完成的图
+
+我认为第一篇论文有以下六张核心图就足够了。
+
+[Bright squeezed vacuum reveals hidden quantum effects in strong-field physics](https://images.openai.com/static-rsc-4/0j-iassH-kbvCI3nb22SF6_6g5yK5M4WEDfXtzjidMpvzWS8DWMbB-7r_8sH-XqGN2d6bdZ5e8W0GYCGhTSjs6GGnjPAlW2pOT--v5OQ13_lMlFY0Gh2matfvHV40qrKgvoIHO2fWEwtTzMFY0mwTUsgD8Y4gbtPdBGA0xi2m0k?purpose=inline)
+
+图 1：理论模型
+
+金属针尖、局域场增强、量子光输入和电子发射的物理示意图。
+
+[Spontaneous and stimulated electron–photon interactions in nanoscale plasmonic near fields | Light: Science & Applications](https://images.openai.com/static-rsc-4/sQuy6w8jKXUPFQjOg7BKRDHxrEZLnHR76uW_jNb_de7vzIO4DxrkRGzqjQFG-ISjwNZvA3Ln2WXmFLSlWBemN7ZBPmR6C2JTm36GXw8X-B3sE8NAqqoSf96ryayEtA2TS4knf0re62NpkKlADKwIzdmAhbszajQP0BP8OUO8w6s?purpose=inline)
+
+图 2：尖端局域场
+
+不同场增强因子、尖端半径下的局域场分布。
+
+[Quantum light drives electrons strongly at metal needle tips | Nature Physics](https://images.openai.com/static-rsc-4/x9vBZryv5Tr5LHVvKMo2gYjF_x5FXhbIlv5uZKSoY0VMf5_dnfbOKZc6H4jqMpWw1CJDfZBkZRKbuyKdXyVv538bkFXJAFBJAQD1z8zPxpJQSo9chYTWnRzWB4WR9XH72xyzBpdl3joHNFpJP3Dv7-4kfM09I5wLY6tVZMhjWbA?purpose=inline)
+
+图 3：经典光驱动电子能谱
+
+不同入射强度下的电子能谱，验证 TDSE 模型。
+
+[Electrons bunch up in quantum light | Nature Physics](https://images.openai.com/static-rsc-4/cj3JlJ8x_x-WPuRmZKSyWSsmoGmlCgnqQ5rWqEL31P2s1Tx3Wvz_ZtM-qX0SrYP-7Xc5N_JCcu-1qTcOfrhCdCD4lD7fzs8wtWyG-ZwLm6nkALIeMHxpa6hrO0QDDuFKGnHHYX9-WJP-8MptJ90VULq3_qSZgiW_QDrG-O-IGPo?purpose=inline)
+
+图 4：量子光统计
+
+相干态、BSV 和位移压缩态的光子数分布及相空间分布。
+
+[Quantum light steers photoelectrons | Nature Physics](https://images.openai.com/static-rsc-4/XqjLdDpXqPgIhvv155ZuTvmGSN6Ua7zg69r0S6HsKvIy1Bi0zcqcsMfNYEDQhnEScJBM1WywGLEga90vEhCDrwMwSK9-OSxff8RX3c349E5V7rt9Rv77Tb2elYrxxroMMCMk9FRi4lFHR35mFXBhn_rlaaHCNR9CQAkQ5v9lZTg?purpose=inline)
+
+图 5：不同量子态的电子响应
+
+对比平均能谱、电子产额、截止能量和逐发后选择结果。
+
+[Tracing attosecond electron emission from a nanometric metal tip | Nature](https://images.openai.com/static-rsc-4/VvgHl2Cvhs073iZ5IEz-2x8Ir06uoGV8Fp2kCANM-QFeBb-TwpqIBJ7jNuWvMkRUcCs_ZbkdzCCv7xCofxiF7YSJbgYYeZSp0jijx3AyNJ09ZGOmhnUSmZZy2QhueeiqK_I97GBAH3WQdYhfEZPfH8v5poOru6l6Gc1uiJqupsI?purpose=inline)
+
+图 6：两色相位依赖（扩展）
+
+不同相对相位下电子产额或能谱的变化。
+
+这些图不需要全部一开始就做。前五张是基础工作，第六张视结果决定是否加入。
+
+## 六、实际执行顺序
+
+我建议不要立即开始大规模计算，而是先做下面四项工作。
+
+| 顺序 | 任务                    | 交付结果                |
+| -- | --------------------- | ------------------- |
+| 1  | 精读 2024、2025 两篇针尖实验论文 | 物理模型和实验参数表          |
+| 2  | 整理金属针尖经典电子发射模型        | Hamiltonian、势垒和边界条件 |
+| 3  | 建立相干光驱动的 TDSE         | 经典基准电子能谱            |
+| 4  | 引入 BSV 和位移压缩态         | 量子统计加权的电子能谱         |
+
+之后才决定是否增加 COMSOL、两色光以及更完整的量子电动力学。
+
+这里有一个好消息：第一轮不需要高成本的三维计算。2025 年的工作已经提供了相当简洁的一维电子动力学模型，我们可以先用它搭建自己的计算程序，再逐步增加物理内容。
+
+## 七、现在我需要先确认一个关键问题
+
+在正式开始计算之前，我希望确认导师提出的金属尖端究竟是什么用途。这会直接决定我们后续几个月的工作方向。
+
+导师希望我们研究的金属尖端，主要是下面哪一种？
+
+A. 电子发射型金属针尖
+
+量子光照射钨针尖，研究电子发射、电子能谱和强场动力学。类似 2024—2025 年的实验。
+
+B. 等离激元增强型金属尖端
+
+量子光激发金属尖端的等离激元，研究近场增强、SPP、单光子传输及量子统计。
+
+C. 两者都希望研究
+
+既希望研究近场等离激元，也希望研究电子发射。
+
+D. 目前导师还没有明确说明
+
+先由我们提出一个合适的研究方案，再与导师讨论。
+
+确认研究方向
+
+我的倾向是 A。 它与导师的描述、现有量子光针尖实验以及我们能够采用的计算模型衔接最好。
+
+但我不希望在没有确认物理目标的情况下，就直接替导师决定研究方向。先把这一点弄清楚，我们就可以正式进入模型建立和第一轮数值计算了。

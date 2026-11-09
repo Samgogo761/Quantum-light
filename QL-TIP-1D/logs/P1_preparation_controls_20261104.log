@@ -1,0 +1,190 @@
+{
+  "run_kind": "preparation",
+  "status": "PASS",
+  "initial_ground_energy_eV": -5.51294181882463,
+  "ramp_start_fs": -200.0,
+  "ramp_end_fs": -120.0,
+  "prep_end_fs": -100.0,
+  "actual_dt_au": 0.09999122828678232,
+  "steps": 41343,
+  "N_initial": 1.0,
+  "N_prep": 0.999999999995358,
+  "left_CAP_loss_prep": 2.4738460797976965e-20,
+  "right_CAP_loss_prep": 1.5061062314392798e-28,
+  "pre_laser_population_loss": 2.4738460948587588e-20,
+  "max_probability_budget_residual": 4.7942760872388135e-12,
+  "state_prep_path": "data/raw/bias_v1/bias_p1_prep_F1.000_ramp080_r02/state_prep.npz",
+  "run_id": "bias_p1_prep_F1.000_ramp080_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 625.7437837000471,
+  "peak_working_set_bytes": 122241024
+}
+{
+  "run_kind": "dc-only",
+  "status": "PASS",
+  "N_prep": 0.999999999995358,
+  "left_CAP_loss_prep": 2.4738460797976965e-20,
+  "right_CAP_loss_prep": 1.5061062314392798e-28,
+  "N_100fs": 0.9999999999855808,
+  "N_125fs": 0.9999999999855808,
+  "left_CAP_loss_observation_100fs": 5.847480147088261e-21,
+  "right_CAP_loss_observation_100fs": 1.3816528980357333e-19,
+  "left_CAP_loss_total_125fs": 3.058594094506523e-20,
+  "right_CAP_loss_total_125fs": 1.3816528995418397e-19,
+  "signed_flux_100fs": 3.794508463179868e-23,
+  "signed_flux_125fs": 3.794508463179868e-23,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.4419243576924146e-11,
+  "Y_H": 2.6419495879214977e-24,
+  "Y_H_lower": 9.590302390317122e-24,
+  "Y_H_upper": 1.2429783750227521e-24,
+  "masked_norm": 1.0466085538398619e-19,
+  "spectrum_integral": 1.0466084235440604e-19,
+  "propagation_seconds": 601.2431057000067,
+  "spectrum_seconds": 32.12772019999102,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        30.0
+      ],
+      "energy_points": 2081,
+      "masked_norm": 1.0466085538398619e-19,
+      "spectrum_integral": 1.0466084235440604e-19,
+      "spectrum_norm_absolute_difference": 1.3029580146461537e-26,
+      "Y_H_lower": 9.590302390317122e-24,
+      "Y_H_main": 2.6419495879214977e-24,
+      "Y_H_upper": 1.2429783750227521e-24
+    }
+  ],
+  "run_id": "bias_p1_dc_F1.000_ramp080_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 633.8083687000908,
+  "peak_working_set_bytes": 129282048
+}
+{
+  "run_kind": "preparation",
+  "status": "PASS",
+  "initial_ground_energy_eV": -5.51294181882463,
+  "ramp_start_fs": -180.0,
+  "ramp_end_fs": -140.0,
+  "prep_end_fs": -100.0,
+  "actual_dt_au": 0.0999972748023708,
+  "steps": 33074,
+  "N_initial": 1.0,
+  "N_prep": 0.9999999999954633,
+  "left_CAP_loss_prep": 1.8948199303764496e-18,
+  "right_CAP_loss_prep": 3.8118637921506084e-29,
+  "pre_laser_population_loss": 1.8948199304145684e-18,
+  "max_probability_budget_residual": 4.536704345525777e-12,
+  "state_prep_path": "data/raw/bias_v1/bias_p1_prep_F1.000_wait040_r02/state_prep.npz",
+  "run_id": "bias_p1_prep_F1.000_wait040_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 377.2339707000647,
+  "peak_working_set_bytes": 122347520
+}
+{
+  "run_kind": "dc-only",
+  "status": "PASS",
+  "N_prep": 0.9999999999954633,
+  "left_CAP_loss_prep": 1.8948199303764496e-18,
+  "right_CAP_loss_prep": 3.8118637921506084e-29,
+  "N_100fs": 0.9999999999857027,
+  "N_125fs": 0.9999999999857027,
+  "left_CAP_loss_observation_100fs": 7.303067902606728e-20,
+  "right_CAP_loss_observation_100fs": 1.3685449938127482e-17,
+  "left_CAP_loss_total_125fs": 1.9678506094025168e-18,
+  "right_CAP_loss_total_125fs": 1.36854499381656e-17,
+  "signed_flux_100fs": 2.9352273187699797e-21,
+  "signed_flux_125fs": 2.9352273187699797e-21,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.4297341088820303e-11,
+  "Y_H": 8.936979824444099e-24,
+  "Y_H_lower": 4.717380464921373e-23,
+  "Y_H_upper": 3.0723561730466696e-24,
+  "masked_norm": 1.9013780482176465e-18,
+  "spectrum_integral": 1.9013779237752948e-18,
+  "propagation_seconds": 562.9150825999677,
+  "spectrum_seconds": 32.26888869982213,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        30.0
+      ],
+      "energy_points": 2081,
+      "masked_norm": 1.9013780482176465e-18,
+      "spectrum_integral": 1.9013779237752948e-18,
+      "spectrum_norm_absolute_difference": 1.2444235173840378e-25,
+      "Y_H_lower": 4.717380464921373e-23,
+      "Y_H_main": 8.936979824444099e-24,
+      "Y_H_upper": 3.0723561730466696e-24
+    }
+  ],
+  "run_id": "bias_p1_dc_F1.000_wait040_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 595.6574460000265,
+  "peak_working_set_bytes": 111366144
+}
+stage=p1-preparation-controls listed=4 selected=4 single_worker=true
+bias_p1_prep_F1.000_ramp080_r02: kind=preparation, F=1.0, I/mu=0.0, CEP=0.0, prep=None, numerics=None, preparation={'ramp_duration_fs': 80.0, 'wait_duration_fs': 20.0}
+bias_p1_dc_F1.000_ramp080_r02: kind=dc-only, F=1.0, I/mu=0.0, CEP=0.0, prep=bias_p1_prep_F1.000_ramp080_r02, numerics=None, preparation={'ramp_duration_fs': 80.0, 'wait_duration_fs': 20.0}
+bias_p1_prep_F1.000_wait040_r02: kind=preparation, F=1.0, I/mu=0.0, CEP=0.0, prep=None, numerics=None, preparation={'ramp_duration_fs': 40.0, 'wait_duration_fs': 40.0}
+bias_p1_dc_F1.000_wait040_r02: kind=dc-only, F=1.0, I/mu=0.0, CEP=0.0, prep=bias_p1_prep_F1.000_wait040_r02, numerics=None, preparation={'ramp_duration_fs': 40.0, 'wait_duration_fs': 40.0}
+STAGE_DONE p1-preparation-controls; new_runs=4; reused=0

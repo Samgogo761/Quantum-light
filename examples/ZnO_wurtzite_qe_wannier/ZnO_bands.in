@@ -1,0 +1,39 @@
+&CONTROL
+  calculation = 'bands'
+  prefix      = 'ZnO'
+  outdir      = './tmp'
+  pseudo_dir  = './pseudo'
+  verbosity   = 'high'
+/
+&SYSTEM
+  ibrav       = 4
+  celldm(1)   = 6.138000
+  celldm(3)   = 1.602000
+  nat         = 4
+  ntyp        = 2
+  nbnd        = 52
+  ecutwfc     = 50.0
+  ecutrho     = 400.0
+  occupations = 'fixed'
+  input_dft   = 'PBE'
+/
+&ELECTRONS
+  conv_thr    = 1.0d-10
+/
+ATOMIC_SPECIES
+Zn  65.38    Zn.pbe-dnl-kjpaw_psl.1.0.0.UPF
+O   15.999   O.pbe-n-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+Zn  0.0000000000  0.0000000000  0.0000000000
+Zn  0.6666666667  0.3333333333  0.5000000000
+O   0.0000000000  0.0000000000  0.3819000000
+O   0.6666666667  0.3333333333  0.8819000000
+K_POINTS crystal_b
+7
+  0.0000000000  0.0000000000  0.5000000000  20  ! A
+  0.5000000000  0.0000000000  0.5000000000  20  ! L
+  0.5000000000  0.0000000000  0.0000000000  20  ! M
+  0.0000000000  0.0000000000  0.0000000000  20  ! Gamma
+  0.0000000000  0.0000000000  0.5000000000  20  ! A
+  0.3333333333  0.3333333333  0.5000000000  20  ! H
+  0.3333333333  0.3333333333  0.0000000000   1  ! K

@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "method_validation",
+      "pass": true,
+      "status": "PASS"
+    },
+    {
+      "name": "prep_budget_F0",
+      "pass": true,
+      "residual": 3.661737579818691e-12
+    },
+    {
+      "name": "prep_population_loss_F0",
+      "pass": true,
+      "loss": 5.897616663596799e-28
+    },
+    {
+      "name": "dc_only_background_F0",
+      "pass": true,
+      "dc_Y_H": 2.468541044158175e-27,
+      "laser_Y_H": 2.884415979289559e-09,
+      "fraction": 8.558200557348821e-19
+    },
+    {
+      "name": "right_CAP_F0",
+      "pass": true,
+      "right_CAP_loss": 1.4285028823669723e-27,
+      "fraction": 4.952485676905788e-19
+    },
+    {
+      "name": "spectrum_integral_vs_mask_F0",
+      "pass": true,
+      "relative_difference": 9.792618905714862e-06,
+      "integral": 6.3098868831129195e-09,
+      "mask_norm": 6.309948674035599e-09
+    },
+    {
+      "name": "eta_convergence_F0",
+      "pass": true,
+      "eta0p1_Y_H": 2.884415979289559e-09,
+      "eta0p05_Y_H": 2.833902130530386e-09,
+      "relative_change": -0.01751267817189635,
+      "eta0p2_relative_change_from_eta0p1": 0.06003323474245463
+    },
+    {
+      "name": "mask_readout_F0",
+      "pass": true,
+      "mask_relative_change": -1.440709477881565e-07,
+      "t125_relative_change": 8.675419015035348e-08,
+      "mask_Y_H": 3.0575763603611487e-09,
+      "t125_Y_H": 3.0575770661267355e-09
+    },
+    {
+      "name": "prep_budget_F1",
+      "pass": true,
+      "residual": 3.871680753775308e-12
+    },
+    {
+      "name": "prep_population_loss_F1",
+      "pass": true,
+      "loss": 1.5792683699582965e-18
+    },
+    {
+      "name": "dc_only_background_F1",
+      "pass": true,
+      "dc_Y_H": 1.6478882875321239e-22,
+      "laser_Y_H": 5.697994724785954e-09,
+      "fraction": 2.8920495141280196e-14
+    },
+    {
+      "name": "right_CAP_F1",
+      "pass": true,
+      "right_CAP_loss": 6.222142580081061e-18,
+      "fraction": 1.0919881257550299e-09
+    },
+    {
+      "name": "spectrum_integral_vs_mask_F1",
+      "pass": true,
+      "relative_difference": 2.6488223295303012e-08,
+      "integral": 2.382148845932899e-07,
+      "mask_norm": 2.3821489090317913e-07
+    },
+    {
+      "name": "eta_convergence_F1",
+      "pass": true,
+      "eta0p1_Y_H": 5.697994724785954e-09,
+      "eta0p05_Y_H": 5.512322640638359e-09,
+      "relative_change": -0.032585513521087024,
+      "eta0p2_relative_change_from_eta0p1": 0.08191963115421588
+    },
+    {
+      "name": "mask_readout_F1",
+      "pass": true,
+      "mask_relative_change": 1.471086561423866e-09,
+      "t125_relative_change": 4.7115546712321467e-08,
+      "mask_Y_H": 6.164772360028001e-09,
+      "t125_Y_H": 6.164772641415707e-09
+    },
+    {
+      "name": "preparation_ramp080",
+      "pass": true,
+      "reference_DC_Y_H": 1.6478882875321239e-22,
+      "control_DC_Y_H": 2.6419495879214977e-24,
+      "absolute_change": -1.6214687916529088e-22,
+      "change_relative_to_laser_Y_H": -2.845683209567765e-14,
+      "same_F_laser_Y_H": 5.697994724785954e-09
+    },
+    {
+      "name": "preparation_wait040",
+      "pass": true,
+      "reference_DC_Y_H": 1.6478882875321239e-22,
+      "control_DC_Y_H": 8.936979824444099e-24,
+      "absolute_change": -1.5585184892876829e-22,
+      "change_relative_to_laser_Y_H": -2.7352052161582668e-14,
+      "same_F_laser_Y_H": 5.697994724785954e-09
+    },
+    {
+      "name": "dx048_F0",
+      "pass": true,
+      "reference_Y_H": 2.884415979289559e-09,
+      "test_Y_H": 2.895313086795669e-09,
+      "relative_change": 0.0037779250927578683
+    },
+    {
+      "name": "dt005_F0",
+      "pass": true,
+      "reference_Y_H": 2.884415979289559e-09,
+      "test_Y_H": 2.884055670811034e-09,
+      "relative_change": -0.00012491557428335922
+    },
+    {
+      "name": "box900_F0",
+      "pass": true,
+      "reference_Y_H": 2.884415979289559e-09,
+      "test_Y_H": 2.8844159792482216e-09,
+      "relative_change": -1.4331332314247742e-11
+    },
+    {
+      "name": "caphalf_F0",
+      "pass": true,
+      "reference_Y_H": 2.884415979289559e-09,
+      "test_Y_H": 2.8844040166582427e-09,
+      "relative_change": -4.1473322164188096e-06
+    },
+    {
+      "name": "dx048_F1",
+      "pass": true,
+      "reference_Y_H": 5.697994724785954e-09,
+      "test_Y_H": 5.79196659685368e-09,
+      "relative_change": 0.01649209530836417
+    },
+    {
+      "name": "dt005_F1",
+      "pass": true,
+      "reference_Y_H": 5.697994724785954e-09,
+      "test_Y_H": 5.671923606681912e-09,
+      "relative_change": -0.0045754900387384185
+    },
+    {
+      "name": "box900_F1",
+      "pass": true,
+      "reference_Y_H": 5.697994724785954e-09,
+      "test_Y_H": 5.697994726953851e-09,
+      "relative_change": 3.804665607436726e-10
+    },
+    {
+      "name": "caphalf_F1",
+      "pass": true,
+      "reference_Y_H": 5.697994724785954e-09,
+      "test_Y_H": 5.697976541210248e-09,
+      "relative_change": -3.1912236820761887e-06
+    }
+  ],
+  "completed_tdse_runs": 26,
+  "cumulative_completed_wall_seconds": 25220.253533100244,
+  "note": "P1 gate permits P2 only; no BSV, thermal, four-bias, server or remote-push work is authorised."
+}

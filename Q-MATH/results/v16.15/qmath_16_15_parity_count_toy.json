@@ -1,0 +1,50 @@
+{
+  "scope": "toy electron qubit + pump BSV + one H output mode, energy conserving, NOT material M0",
+  "cases": [
+    {
+      "E": 0.1,
+      "g": 0.04,
+      "t": 0.1,
+      "deltaE": 0.08999999999999997,
+      "gap_kinematics": 0.08999999999999997,
+      "photon_F2": 0.12999999999999967,
+      "beta_abs": 0.0,
+      "n_b": 2.079925720253576e-06,
+      "leading_n_b": 2.0799999999999945e-06,
+      "ratio": 0.9999642885834528,
+      "symmetry_norm": 0.0,
+      "psi_norm": 1.0,
+      "input_p_even_norm": 0.0
+    },
+    {
+      "E": 0.7,
+      "g": 0.04,
+      "t": 0.1,
+      "deltaE": 0.08999999999999997,
+      "gap_kinematics": 0.08999999999999997,
+      "photon_F2": 2.1699405634964584,
+      "beta_abs": 0.0,
+      "n_b": 3.4710264066584054e-05,
+      "leading_n_b": 3.471904901594333e-05,
+      "ratio": 0.9997469703344914,
+      "symmetry_norm": 0.0,
+      "psi_norm": 1.0,
+      "input_p_even_norm": 0.0
+    },
+    {
+      "E": 1.5,
+      "g": 0.04,
+      "t": 0.1,
+      "deltaE": 0.08999999999999997,
+      "gap_kinematics": 0.08999999999999997,
+      "photon_F2": 8.203647371824697,
+      "beta_abs": 0.0,
+      "n_b": 0.0001311653816589644,
+      "leading_n_b": 0.00013125835794919514,
+      "ratio": 0.999291654324468,
+      "symmetry_norm": 0.0,
+      "psi_norm": 1.0,
+      "input_p_even_norm": 0.0
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+high_intensity listed=10 selected=2
+bias_v2_probe_F0_I8_phi000_r01: F=0.0 I/mu=8.0 numerics=24/0.1
+bias_v2_probe_F1_I8_phi000_r01: F=1.0 I/mu=8.0 numerics=24/0.1
+{"run_id": "bias_v2_probe_F0_I8_phi000_r01", "status": "PASS", "wall_seconds": 929.4397109001875, "Y": 0.00044050536490590394}
+{"run_id": "bias_v2_probe_F1_I8_phi000_r01", "status": "PASS", "wall_seconds": 913.7453610000666, "Y": 0.0006528734585512591}

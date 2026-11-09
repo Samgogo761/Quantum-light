@@ -1,0 +1,192 @@
+我认真看了这次上传的六份项目文件，也重新查阅了本地 Agent 提到的三篇核心论文。
+
+我的判断是：可以把金属针尖 1D-TDSE + BSV 作为一条独立的小规模论文研究线，而且很适合让师妹参与。但目前还不能直接启动完整的“偏压 × BSV”计算库。
+
+原因不是模型不成熟，而是我们必须先确认：新工作相对于 Heimerl 2025 和 Hergert 2025，究竟多解决了什么问题。
+
+## 一、这条选题值得做吗？
+
+[Quantum light drives electrons strongly at metal needle tips | Nature Physics](https://images.openai.com/static-rsc-4/x9vBZryv5Tr5LHVvKMo2gYjF_x5FXhbIlv5uZKSoY0VMf5_dnfbOKZc6H4jqMpWw1CJDfZBkZRKbuyKdXyVv538bkFXJAFBJAQD1z8zPxpJQSo9chYTWnRzWB4WR9XH72xyzBpdl3joHNFpJP3Dv7-4kfM09I5wLY6tVZMhjWbA?purpose=inline)
+
+[Heimerl et al., Nature Physics (2025)](https://www.nature.com/articles/s41567-025-03087-1?utm_source=chatgpt.com)
+
+已经研究 BSV 驱动金属针尖电子发射，使用一维 TDSE 和 Husimi 加权，并在模型中加入了约 −0.5 V/nm 的静态电场。因此，“BSV + 金属针尖 + 静态场”本身不是新组合。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+Nature Physics
+
+
+
+[Licht-Materie-Wechselwirkung mit Elektronen-Nanoemittern - Lehrstuhl für Laserphysik](https://images.openai.com/static-rsc-4/g8NLGlEHSjXJiXmSZQpIwQaTzIk1uypWvkutLt4AgHt1vaqyQ-N3xQcKlYs-s_dq_njp0NFewN71riaiUDWmOjgPTzgDkOx5meGyKg4kQ1B3HmocMoAKjdavkLHgiQ-bBQzwZJ10OhiyYShBSS2NRLoSGbnHna5SN2KcFBeArYA?purpose=inline)
+
+[Hergert et al., ACS Photonics (2025)](https://pubs.acs.org/doi/10.1021/acsphotonics.5c00207?utm_source=chatgpt.com)
+
+已经研究静态偏压对金属针尖强场电子再散射的抑制。因此，“偏压使高能电子减少”也不是独立的新发现。
+
+[image](https://www.google.com/s2/favicons?domain=https://pubs.acs.org\&sz=32)
+
+ACS Publications
+
+
+
+[Bright squeezed vacuum reveals hidden quantum effects in strong-field physics](https://images.openai.com/static-rsc-4/wAL_k4yvWRgXsCODXYMpaoMuguyhAmiwWyg4ZzeH4sLPctt7P1J_596td_QGA0Y-OEu74WJp6vge__GlqXhxYeWNVXFWHC-_J966xf6OFqQKa5fBFJpZVNjpRUtYlbndoZUrGOiMMCPdttTtjZOF2ZmK2jf2U9XuxCEmbEksnDs?purpose=inline)
+
+[Liu et al., Physical Review Letters (2026)](https://journals.aps.org/prl/abstract/10.1103/pgkx-8t5c?utm_source=chatgpt.com)
+
+2026 年 10 月 7 日发表，研究 BSV 驱动氙原子强场电离的能量、动量分辨单脉冲产额涨落，表明高能电子对稀有高强度脉冲更加敏感。它对我们拟提出的物理解释也构成了直接的已有工作。
+
+[image](https://www.google.com/s2/favicons?domain=https://journals.aps.org\&sz=32)
+
+Phys. Rev. Lett.
+
+
+
+所以，本地 Agent 提出的论文问题应该保留：
+
+> 在相同平均入射光强下，BSV 与相干光驱动的金属针尖高能电子产额，是否呈现不同的静态提取场依赖？
+
+这里真正可能产生研究增量的是光场强度统计与静态偏压如何共同改变高能电子的响应函数，而不是分别重复已经被报道的 BSV 高能尾部和偏压抑制。
+
+这是一项有合理文献依据、计算范围可控的理论补充候选。但目前尚无相关交叉效应的数值结果，也没有证据保证它足以发表。
+
+## 二、现有数值基础是否足够进入新课题？
+
+足够进入最小可行性计算，但还没有达到可以直接生成正式偏压谱的程度。
+
+本地已经做得比较扎实：
+
+| 项目              | 目前结果                              | 我的评价              |
+| --------------- | --------------------------------- | ----------------- |
+| 一维有限阱束缚态        | −5.5087344341 eV                  | 解析与数值吻合           |
+| 无场与自由传播         | 六项物理测试通过                          | 求解器基础可信           |
+| 800 nm 零偏压 TDSE | 基准右侧产额 \\(2.73368\times10^{-8}\\) | 已有传播验证            |
+| 空间、时间及 CAP 检查   | 最大已测单项变化 0.553%                   | 基准点表现良好           |
+| 1600 nm + DC    | 尚未运行                              | 新 Hamiltonian 待验证 |
+| 电子能谱            | 尚未通过验收                            | 下一关键关口            |
+| BSV/Husimi 加权   | 尚未运行                              | 依赖可信的能谱库          |
+
+现有 Stage 1 和 Stage 2 的验证不是白做的。它们已经排除了不少求解器基础错误，可以复用。但增加空间依赖的静态电场后，初态、远场传播与能量读出发生变化，800 nm 的收敛结果不能直接替代新模型的验收。
+
+STAGE_1.md
+
+STAGE_2.md
+
+
+
+## 三、我认为正式计算前只需要处理两个核心问题
+
+### 1. 静态偏压下如何定义高能电子？
+
+这是最容易产生假结果的地方。
+
+当前计划采用：
+
+\\[ E\_{\rm dc}(x)=-\frac{F\_{\rm dc}}{(1+x/L\_{\rm dc})^2} \\]
+
+以及相应的饱和静电势。它作为有效模型可以考虑，但 \\(L\_{\rm dc}\\) 的物理依据仍需明确。
+
+更关键的是，静态电场会在电子离开表面后继续加速电子。
+
+例如，取计划中说明性的 \\(F\_{\rm dc}=1\\,\mathrm{V/nm}\\)、\\(L\_{\rm dc}=20\\,\mathrm{nm}\\)，如果沿用旧计算中约 35 nm 的右侧 CAP 起点，此处距离渐近势能仍相差约 7.27 eV。
+
+这不是小修正。对于高能电子谱，它足以改变能量窗口内的电子数量。
+
+因此，不能简单地将 CAP 前的自由 FFT 能谱平移一个常数，就认为得到正确的渐近光电子能谱。
+
+应当先验证与静态 Hamiltonian 一致的能量读出方法，例如采用静态势下的散射态投影，或经过验证的能量分辨通量方法。与此同时，还要确认 DC-only 的场发射背景是否可控。
+
+这是我认为下一步唯一不能省略的物理关卡。
+
+### 2. Husimi 加权究竟能够证明什么？
+
+已有 Heimerl 论文确实采用类似思路：先计算确定强度下的 TDSE 光电子谱，再通过 BSV 的强度分布进行统计平均。
+
+[image](https://www.google.com/s2/favicons?domain=https://www.nature.com\&sz=32)
+
+Nature Physics
+
+
+
+我们的核心计算将类似于：
+
+\\[ Y\_{\rm BSV}(F) \simeq \int_0^\infty p\_{\rm BSV}(I)\\,Y_H(I,F)\\,dI. \\]
+
+在理想高增益、单模近似中，可以使用相应的 BSV 强度权重，并在计算前检查它的归一化、平均强度及高强度尾部。
+
+这里必须明确：Husimi-Q 是正的相空间分布，但不等于 Glauber–Sudarshan 正 \\(P\\) 经典混合。 用它加权经典场响应是一种有文献依据的近似框架，不是完整光–电子 QED。
+
+因此，即使得到 BSV 和相干光不同的偏压曲线，也只能先证明在这种统计平均模型内存在光统计依赖。它不能直接证明不可经典模拟的量子优势。
+
+而且这带来一项便宜但重要的对照：热光。
+
+同一 \\(Y_H(I,F)\\) 响应库可以同时加权 BSV 与热光。如果热光也呈现相似的偏压变化，那么结果更可能属于宽强度分布与非线性电子发射之间的普遍联系，而不是 BSV 特有机制。
+
+这并不一定削弱一篇普通理论补充论文的价值，但会改变文章应当如何解释。
+
+## 四、我建议的最短执行路线
+
+不用再横向开新题，也不需要完整 QED。
+
+第一步：1600 nm + DC 的能谱验收
+
+固定势阱、近场和脉冲参数，解决 DC 初态、DC-only 背景、渐近能量定义与 CAP 的一致性。通过后冻结高能阈值 \\(E\_\*\\)。
+
+第二步：最小两偏压、两强度测试
+
+取 \\(F\_{\rm dc}=0,1\\,\mathrm{V/nm}\\)，在平均强度 \\(\mu\\) 和一个代表性高强度 \\(4\mu\\) 下计算。先确认响应曲线和高能谱可信，并检查 CEP 敏感性。
+
+这一步不做 BSV 积分。
+
+第三步：四偏压响应库与光统计加权
+
+若前两步通过，才计算 \\(0,0.5,1.0,1.5\\,\mathrm{V/nm}\\) 的强度响应库，并进行相干光、BSV、热光的统一比较。
+
+主要判据：
+
+\\[ D(F)=\frac{Y\_{\rm BSV}(F)/Y\_{\rm BSV}(0)} {Y\_{\rm coh}(F)/Y\_{\rm coh}(0)}. \\]
+
+如果 \\(D(F)\\) 与 1 的差异显著大于全部数值误差，才进一步解释其强度来源。
+
+第四步：判断论文价值
+
+如果统计依赖的偏压响应可靠、已有论文未直接覆盖，而且有清楚的强度分辨解释，就组织理论短文。
+
+如果结果只是偏压造成共同缩放，或者曲线差别来自能量零点、低信噪比和 CEP 选择，就及时停止，不继续扩大扫描。
+
+另外，在正式四偏压计算之前，需要解决一个很现实的风险：不要预设高能产额一定随 DC 增加而下降。 静态场既可能抑制返回，也会改变势垒和出射电子加速。我们真正关心的是两种光统计的偏压响应是否不同，而不是强行得到某种下降曲线。
+
+## 五、有师妹参与，怎样分工最有效？
+
+这次我很赞同本地 Agent 的意见：两个人维护同一个模型，不要各自发展一套 TDSE。
+
+| 工作                          | 主要负责人          | 交付成果              |
+| --------------------------- | -------------- | ----------------- |
+| Hamiltonian、DC 初态、传播器和能谱    | 你 + 本地 Codex   | 可复现代码、原始数据、误差检查   |
+| Heimerl/Hergert 论文及 SI 参数核实 | 师妹             | 参数证据表，精确到公式、图号和页码 |
+| BSV/热光权重与单位检查               | 师妹，可由 Agent 辅助 | 独立归一化及统计矩验证       |
+| Origin 作图和图件复核              | 师妹             | 图件、原始数据列对应表       |
+| 物理机制、创新性和论文结论               | 你主导，双方讨论       | 论文提纲与结果判断         |
+
+我尤其建议让师妹先从 Heimerl 2025 的方法部分与补充材料复核入手。她可以重点核实静态场设置、能谱提取、近场参数、BSV 权重和 CEP 协议。这是一项边界明确、能够独立验收的科研任务。
+
+如果她能熟练使用 Python，再安排她独立实现一次 BSV 强度积分与尾部误差检查。这样形成真正的交叉验证，而不只是让她负责画图。
+
+## 六、这与我们原来的博士主线是什么关系？
+
+我建议将两个项目明确分开：
+
+|       | 博士主线 Q                  | 金属针尖补充课题        |
+| ----- | ----------------------- | --------------- |
+| 研究对象  | 反铁磁材料及其非线性响应            | 金属针尖电子发射        |
+| 主要模型  | 八带 QED、真实材料 Wannier/SBE | 一维单电子 TDSE      |
+| 量子光   | DS、后续 BSV               | 明亮近单模 BSV       |
+| 主要观测量 | Néel-odd H2、相位、偏振       | 高能光电子产额与谱       |
+| 当前目标  | 真实光源、材料与可测量性            | 偏压 × 光统计的最小理论增量 |
+| 项目定位  | 博士论文核心研究                | 可与师妹合作的独立小论文候选  |
+
+两条研究线共享量子光强场统计的理论背景，但金属针尖项目不能替代 CrI₃ 主线，也不需要承担整个博士课题的创新目标。
+
+我认为这反而是目前很合适的组合：主线继续解决更难的磁性量子光问题；小课题在已有实验与成熟 TDSE 方法的基础上，争取形成一项范围明确、可验证的补充成果。
+
+最终建议：认可本地 Agent 的选题收缩和师妹分工。下一步不做新选题调研，不做大量 TDSE；先把 1600 nm + DC 下的能谱定义、DC-only 背景和最小两偏压测试做好。 这一步决定了整条金属针尖研究线是否有继续投入的价值。

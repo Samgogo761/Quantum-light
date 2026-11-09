@@ -1,0 +1,61 @@
+# config for verify_epsilon_P.py (flat key: value; '#' comments)
+
+# +N Wannier assets (full112 production reference)
+path.plus_tb: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_tb.dat
+path.plus_win: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3.win
+path.plus_wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_112.wout
+
+# -N TB for mode=file (P-conjugate product used in HHG)
+path.minus_tb: C:\Users\26507\Documents\量子光研究\01_输入与模型\CrI3_TB_mN_Pconj\CrI3_tb_mN_Pconj.dat
+
+# Output
+path.outdir: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\analysis\epsilon_P_gate
+
+# Inversion center (fractional). Recheck on relaxed structure.
+inversion.center_frac: 0.499998583,0.333333067,0.372004766
+
+# H_{-N} source: pconj | file
+mode.minus: pconj
+
+# k mesh (fractional, 2D)
+kmesh.nk1: 12
+kmesh.nk2: 12
+kmesh.nk3: 1
+
+# Also evaluate these named points (frac)
+kpoint.G: 0,0,0
+kpoint.M: 0.5,0,0
+kpoint.K: 0.333333333,0.333333333,0
+
+# Operators to audit in stored gauge: H, r, v
+audit.operators: H,r,v
+
+# Central difference step for v = dH/dk (fractional k)
+velocity.dk_frac: 1.0e-5
+
+# D4 corollary threshold (interband |d| rel diff)
+dip.max_rel: 1.0e-4
+
+# Embedding gauge: stored | crystallographic | both
+# Production P-conjugate TB on disk → stored (constant S, no k-phases)
+gate.gauge: stored
+
+# Gates (SPEC §D.4)
+gate.median.pass: 1.0e-10
+gate.median.warn: 1.0e-6
+gate.p99.pass: 1.0e-8
+gate.p99.warn: 1.0e-4
+gate.max.pass: 1.0e-6
+gate.max.warn: 1.0e-3
+
+# r inherits +N Wannier90 position-matrix Hermiticity floor (~1e-10 rel)
+gate.r.median.pass: 1.0e-9
+gate.r.median.warn: 1.0e-6
+
+# v = dH/dk numerical derivative
+gate.v.median.pass: 1.0e-10
+gate.v.median.warn: 1.0e-6
+
+# Numerical
+eps.delta: 1.0e-30
+eig.max_abs_eV: 1.0e-9

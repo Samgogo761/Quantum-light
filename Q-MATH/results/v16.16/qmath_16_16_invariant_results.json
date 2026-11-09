@@ -1,0 +1,116 @@
+{
+  "scope": "exact production q167 elastic self consistency and on-shell kinematical support; results are bare regulated T",
+  "q167_elastic_crosscheck": [
+    {
+      "lam": 0.0,
+      "kf": [
+        0.4158,
+        0.1683
+      ],
+      "abs_error": 1.2412670766236366e-16,
+      "relative_error": 4.223329649851382e-16
+    },
+    {
+      "lam": 0.0,
+      "kf": [
+        0.3703,
+        0.1913
+      ],
+      "abs_error": 7.105427357601002e-15,
+      "relative_error": 1.4409756844476676e-17
+    },
+    {
+      "lam": 0.0,
+      "kf": [
+        0.173,
+        0.271
+      ],
+      "abs_error": 4.0876702867979895e-11,
+      "relative_error": 3.9885127935226575e-16
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.4158,
+        0.1683
+      ],
+      "abs_error": 2.537160592610168e-13,
+      "relative_error": 3.786796484662593e-15
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.3703,
+        0.1913
+      ],
+      "abs_error": 1.1368683772161603e-12,
+      "relative_error": 1.8072254152813457e-16
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.173,
+        0.271
+      ],
+      "abs_error": 1.6370904631912708e-11,
+      "relative_error": 1.8833245760968245e-16
+    }
+  ],
+  "max_relative_elastic_source_error": 3.786796484662593e-15,
+  "positive_kernel_checks": [
+    {
+      "lam": 0.0,
+      "kf": [
+        0.4158,
+        0.1683
+      ],
+      "positive_integral": 4448.882918869937,
+      "all_finite": true
+    },
+    {
+      "lam": 0.0,
+      "kf": [
+        0.3703,
+        0.1913
+      ],
+      "positive_integral": 591.262649258368,
+      "all_finite": true
+    },
+    {
+      "lam": 0.0,
+      "kf": [
+        0.173,
+        0.271
+      ],
+      "positive_integral": 0.0,
+      "all_finite": true
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.4158,
+        0.1683
+      ],
+      "positive_integral": 33187.70859338076,
+      "all_finite": true
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.3703,
+        0.1913
+      ],
+      "positive_integral": 6883712.133056476,
+      "all_finite": true
+    },
+    {
+      "lam": 0.1,
+      "kf": [
+        0.173,
+        0.271
+      ],
+      "positive_integral": 0.0,
+      "all_finite": true
+    }
+  ]
+}

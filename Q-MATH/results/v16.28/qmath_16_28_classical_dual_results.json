@@ -1,0 +1,238 @@
+{
+  "purpose": "Checks classical GS-P dual certificate in idealized 2-mode linear anomalous-moment PROXY with physically motivated photon frequency prefactor. This does not certify quantized HHG.",
+  "input_energy": 0.035220185987907375,
+  "classical_upper_bound": 0.23377282107665534,
+  "BSV_witness": 0.655421662292563,
+  "classical_witness_gap": 0.42164884121590773,
+  "rows": [
+    {
+      "L": 161,
+      "eta": 0.08,
+      "dual_measurement_coefficients": [
+        [
+          4.154050371940627,
+          -5.003069014290813
+        ],
+        [
+          1.250522652123575,
+          0.9698810963365995
+        ]
+      ],
+      "quantum_witness": 0.6554216622925635,
+      "classical_max": 0.23377282107665534,
+      "condition": 44.34234605674989,
+      "noise_robustness": [
+        {
+          "rms_fraction_of_bright_response": 0.001,
+          "witness_5th_percentile": 0.6316874068640952,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.014737737020552668
+        },
+        {
+          "rms_fraction_of_bright_response": 0.005,
+          "witness_5th_percentile": 0.5353491093682563,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.07247167873419769
+        },
+        {
+          "rms_fraction_of_bright_response": 0.01,
+          "witness_5th_percentile": 0.4298657951980872,
+          "fraction_exceeding_classical_bound": 0.997,
+          "witness_standard_deviation": 0.1440905909971583
+        },
+        {
+          "rms_fraction_of_bright_response": 0.02,
+          "witness_5th_percentile": 0.19546634086511333,
+          "fraction_exceeding_classical_bound": 0.9335,
+          "witness_standard_deviation": 0.28769820822642944
+        }
+      ]
+    },
+    {
+      "L": 201,
+      "eta": 0.08,
+      "dual_measurement_coefficients": [
+        [
+          4.154084551305283,
+          -5.002814650391796
+        ],
+        [
+          1.250463523927186,
+          0.9698939844173641
+        ]
+      ],
+      "quantum_witness": 0.6554216622925637,
+      "classical_max": 0.23377282107665534,
+      "condition": 44.34116144111975,
+      "noise_robustness": [
+        {
+          "rms_fraction_of_bright_response": 0.001,
+          "witness_5th_percentile": 0.6316161598082216,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.014204679838137986
+        },
+        {
+          "rms_fraction_of_bright_response": 0.005,
+          "witness_5th_percentile": 0.5386579430726615,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.07211032194878444
+        },
+        {
+          "rms_fraction_of_bright_response": 0.01,
+          "witness_5th_percentile": 0.4177490917209267,
+          "fraction_exceeding_classical_bound": 0.9955,
+          "witness_standard_deviation": 0.1477529113291873
+        },
+        {
+          "rms_fraction_of_bright_response": 0.02,
+          "witness_5th_percentile": 0.17568113411441977,
+          "fraction_exceeding_classical_bound": 0.9235,
+          "witness_standard_deviation": 0.2916263485475573
+        }
+      ]
+    },
+    {
+      "L": 101,
+      "eta": 0.03,
+      "dual_measurement_coefficients": [
+        [
+          1.8161528183991154,
+          0.839370519897567
+        ],
+        [
+          0.14053503587222976,
+          0.5844696228985299
+        ]
+      ],
+      "quantum_witness": 0.6554216622925632,
+      "classical_max": 0.23377282107665534,
+      "condition": 22.127372340841184,
+      "noise_robustness": [
+        {
+          "rms_fraction_of_bright_response": 0.001,
+          "witness_5th_percentile": 0.643469735169879,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.007166480141941109
+        },
+        {
+          "rms_fraction_of_bright_response": 0.005,
+          "witness_5th_percentile": 0.5959069622657288,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.035826117680051256
+        },
+        {
+          "rms_fraction_of_bright_response": 0.01,
+          "witness_5th_percentile": 0.5361435585607648,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.07277563555856803
+        },
+        {
+          "rms_fraction_of_bright_response": 0.02,
+          "witness_5th_percentile": 0.42903939942274805,
+          "fraction_exceeding_classical_bound": 0.999,
+          "witness_standard_deviation": 0.14499642972643628
+        }
+      ]
+    },
+    {
+      "L": 161,
+      "eta": 0.03,
+      "dual_measurement_coefficients": [
+        [
+          1.6948708293781163,
+          1.1425291455514754
+        ],
+        [
+          0.059080875499144835,
+          0.6136222871534587
+        ]
+      ],
+      "quantum_witness": 0.6554216622925626,
+      "classical_max": 0.23377282107665534,
+      "condition": 22.613129430267367,
+      "noise_robustness": [
+        {
+          "rms_fraction_of_bright_response": 0.001,
+          "witness_5th_percentile": 0.642815904951924,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.007429299173185915
+        },
+        {
+          "rms_fraction_of_bright_response": 0.005,
+          "witness_5th_percentile": 0.5942985878382026,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.03674728520256735
+        },
+        {
+          "rms_fraction_of_bright_response": 0.01,
+          "witness_5th_percentile": 0.5377297000219003,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.07270744744820277
+        },
+        {
+          "rms_fraction_of_bright_response": 0.02,
+          "witness_5th_percentile": 0.4229544738429306,
+          "fraction_exceeding_classical_bound": 0.998,
+          "witness_standard_deviation": 0.14808626659404905
+        }
+      ]
+    },
+    {
+      "L": 201,
+      "eta": 0.03,
+      "dual_measurement_coefficients": [
+        [
+          1.6903055451425182,
+          1.1411618823885283
+        ],
+        [
+          0.05906904114867702,
+          0.612326884719105
+        ]
+      ],
+      "quantum_witness": 0.6554216622925634,
+      "classical_max": 0.23377282107665534,
+      "condition": 22.56291073223898,
+      "noise_robustness": [
+        {
+          "rms_fraction_of_bright_response": 0.001,
+          "witness_5th_percentile": 0.643225678038841,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.007438541131717736
+        },
+        {
+          "rms_fraction_of_bright_response": 0.005,
+          "witness_5th_percentile": 0.594519266488919,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.03738799889174536
+        },
+        {
+          "rms_fraction_of_bright_response": 0.01,
+          "witness_5th_percentile": 0.5392568745377047,
+          "fraction_exceeding_classical_bound": 1.0,
+          "witness_standard_deviation": 0.0750114049885348
+        },
+        {
+          "rms_fraction_of_bright_response": 0.02,
+          "witness_5th_percentile": 0.41096337744431255,
+          "fraction_exceeding_classical_bound": 0.999,
+          "witness_standard_deviation": 0.14900152267634242
+        }
+      ]
+    }
+  ],
+  "random_classical_coherent_samples": {
+    "count": 10000,
+    "max_witness": 0.23304623260535162,
+    "all_below_bound": true
+  },
+  "exact_achieving_classical_input": {
+    "alpha_pm": [
+      -0.3418865462961768,
+      0.3418865462961763
+    ],
+    "zero_mean_by_equal_pm_mix": true,
+    "mean_energy": 0.03522018598790739,
+    "anomalous_witness": 0.23377282107665537
+  }
+}

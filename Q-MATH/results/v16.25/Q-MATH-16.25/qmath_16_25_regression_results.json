@@ -1,0 +1,8 @@
+{
+  "zero_frequency_subtracted_exact": true,
+  "single_k_algebraic_identity_error": 4.929390229335695e-14,
+  "full_low_omitted_decomposition_error": 0.0,
+  "N\u00e9el_sign_evenness_error_L21": 5.551115123125783e-17,
+  "min_direct_gap_test_k": 0.09254667656129019,
+  "scope": "linear-response kernel only"
+}

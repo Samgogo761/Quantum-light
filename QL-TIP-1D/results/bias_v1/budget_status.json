@@ -1,0 +1,454 @@
+{
+  "completed_summary_runs": 48,
+  "completed_tdse_propagations": 48,
+  "cumulative_completed_wall_seconds": 47222.04799110023,
+  "cumulative_completed_wall_hours": 13.117235553083399,
+  "failed_prepropagation_attempts": [
+    {
+      "run_id": "bias_p1_prep_F0.000_r01",
+      "error": "'model'",
+      "wall_seconds": 0.07360409991815686,
+      "note": "Pre-propagation configuration failure; retained, not overwritten."
+    }
+  ],
+  "limits": {
+    "new_tdse": 240,
+    "wall_hours": 72.0,
+    "peak_GiB": 6.0,
+    "single_run_minutes": 90.0
+  },
+  "runs": [
+    {
+      "run_id": "bias_p1_dc_F0.000_r02",
+      "run_kind": "dc-only",
+      "wall_seconds": 1151.0679806999397,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_dc_F1.000_r02",
+      "run_kind": "dc-only",
+      "wall_seconds": 1210.838007299928,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_dc_F1.000_ramp080_r02",
+      "run_kind": "dc-only",
+      "wall_seconds": 633.8083687000908,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_dc_F1.000_wait040_r02",
+      "run_kind": "dc-only",
+      "wall_seconds": 595.6574460000265,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_box900_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1592.0812556999736,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_caphalf_r02",
+      "run_kind": "laser",
+      "wall_seconds": 933.9589553000405,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_dt005_r02",
+      "run_kind": "laser",
+      "wall_seconds": 2679.0995485000312,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_dx048_r02",
+      "run_kind": "laser",
+      "wall_seconds": 2636.567856099922,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F0.000_I1_phi000_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1367.9113493999466,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_box900_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1291.77066189982,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_caphalf_r02",
+      "run_kind": "laser",
+      "wall_seconds": 861.8398795998655,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_dt005_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1894.381604500115,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_dx048_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1904.3917515999638,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_F1.000_I1_phi000_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1315.3538536000997,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F0.000_box900_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 530.8055883999914,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F0.000_caphalf_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 216.1734939001035,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F0.000_dt005_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 553.2650086998474,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F0.000_dx048_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 656.8355334999505,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F0.000_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 350.34376229997724,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_box900_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 309.5271495000925,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_caphalf_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 203.73536160006188,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_dt005_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 424.48720329999924,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_dx048_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 502.23219720018096,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 401.1419614001643,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_ramp080_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 625.7437837000471,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p1_prep_F1.000_wait040_r02",
+      "run_kind": "preparation",
+      "wall_seconds": 377.2339707000647,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 0.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi090_r02",
+      "run_kind": "laser",
+      "wall_seconds": 857.2562225000001,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 1.5707963267948966,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi180_r02",
+      "run_kind": "laser",
+      "wall_seconds": 889.6120385001414,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 3.141592653589793,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I1_phi270_r02",
+      "run_kind": "laser",
+      "wall_seconds": 885.8924440001138,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 4.71238898038469,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi000_r02",
+      "run_kind": "laser",
+      "wall_seconds": 853.2122023999691,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi090_r02",
+      "run_kind": "laser",
+      "wall_seconds": 852.6216291000601,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 1.5707963267948966,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi180_r02",
+      "run_kind": "laser",
+      "wall_seconds": 867.1972132001538,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 3.141592653589793,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F0.000_I4_phi270_r02",
+      "run_kind": "laser",
+      "wall_seconds": 885.1367770999204,
+      "F_dc_V_per_nm": 0.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 4.71238898038469,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi090_r02",
+      "run_kind": "laser",
+      "wall_seconds": 873.2599892998114,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 1.5707963267948966,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi180_r02",
+      "run_kind": "laser",
+      "wall_seconds": 878.9504336998798,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 3.141592653589793,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I1_phi270_r02",
+      "run_kind": "laser",
+      "wall_seconds": 890.8442579000257,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 1500000000000.0,
+      "CEP_rad": 4.71238898038469,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_box900_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1429.3200824998785,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_caphalf_r02",
+      "run_kind": "laser",
+      "wall_seconds": 922.2687313999049,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_dt005_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1870.8934480999596,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_dx048_r02",
+      "run_kind": "laser",
+      "wall_seconds": 1846.5916051000822,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi000_r02",
+      "run_kind": "laser",
+      "wall_seconds": 885.2854327000678,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.0,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi045_r02",
+      "run_kind": "laser",
+      "wall_seconds": 915.5391543000005,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 0.7853981633974483,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi090_r02",
+      "run_kind": "laser",
+      "wall_seconds": 875.9422349999659,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 1.5707963267948966,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi135_r02",
+      "run_kind": "laser",
+      "wall_seconds": 912.8340795999393,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 2.356194490192345,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi180_r02",
+      "run_kind": "laser",
+      "wall_seconds": 876.3897412000224,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 3.141592653589793,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi225_r02",
+      "run_kind": "laser",
+      "wall_seconds": 912.8474397000391,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 3.9269908169872414,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi270_r02",
+      "run_kind": "laser",
+      "wall_seconds": 925.4596998998895,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 4.71238898038469,
+      "status": "PASS"
+    },
+    {
+      "run_id": "bias_p2_F1.000_I4_phi315_r02",
+      "run_kind": "laser",
+      "wall_seconds": 894.439600800164,
+      "F_dc_V_per_nm": 1.0,
+      "I_apex_W_per_cm2": 6000000000000.0,
+      "CEP_rad": 5.497787143782138,
+      "status": "PASS"
+    }
+  ]
+}

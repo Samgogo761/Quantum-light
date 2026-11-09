@@ -1,0 +1,32 @@
+{
+  "run_id": "stage2_20261103_dx96",
+  "energy_eV": -5.508997459632814,
+  "nx": 42667,
+  "dx_nm": 0.0014062500000000002,
+  "actual_dt_au": 0.1999985809401499,
+  "steps": 24805,
+  "initial_right_tail": 1.7595843737306475e-22,
+  "yield_right": 2.7185701206910482e-08,
+  "right_flux": 2.7185701206861563e-08,
+  "final_right_retained": 1.9951844786450867e-08,
+  "right_CAP_loss": 7.233856420459791e-09,
+  "left_CAP_loss": 2.5528915349120365e-08,
+  "final_norm": 0.999999967230673,
+  "bound_survival": 0.9999999472787662,
+  "max_total_budget_error": 6.555311848899237e-12,
+  "max_right_budget_error": 4.8919461426386057e-20,
+  "plateau_interval_fs": [
+    60.0,
+    75.0
+  ],
+  "plateau_absolute_range": 5.2289812190586655e-14,
+  "plateau_relative_range": 1.923430695887102e-06,
+  "numeric_sanity_pass": true,
+  "plateau_pass": true,
+  "gate_b_pass": null,
+  "gate_b_note": "Requires comparison with dx, dt, box, CAP and no-field controls.",
+  "propagation_seconds": 65.18331749993376,
+  "elapsed_seconds": 65.71382270008326,
+  "algorithm": "second-order centered FD + midpoint CN; cubic left/right CAP",
+  "no_renormalization": true
+}

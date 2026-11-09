@@ -1,0 +1,66 @@
+{
+  "run_kind": "preparation",
+  "status": "PASS",
+  "initial_ground_energy_eV": -5.51294181882463,
+  "ramp_start_fs": -160.0,
+  "ramp_end_fs": -120.0,
+  "prep_end_fs": -100.0,
+  "actual_dt_au": 0.09999929047007496,
+  "steps": 24805,
+  "N_initial": 1.0,
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "pre_laser_population_loss": 5.897616663596799e-28,
+  "max_probability_budget_residual": 3.661737579818691e-12,
+  "state_prep_path": "data/raw/bias_v1/bias_p1_prep_F0.000_r02/state_prep.npz",
+  "run_id": "bias_p1_prep_F0.000_r02",
+  "F_dc_V_per_nm": 0.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0,
+    125.0
+  ],
+  "wall_seconds": 350.34376229997724,
+  "peak_working_set_bytes": 0
+}
+{
+  "run_kind": "preparation",
+  "status": "PASS",
+  "initial_ground_energy_eV": -5.51294181882463,
+  "ramp_start_fs": -160.0,
+  "ramp_end_fs": -120.0,
+  "prep_end_fs": -100.0,
+  "actual_dt_au": 0.09999929047007496,
+  "steps": 24805,
+  "N_initial": 1.0,
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "pre_laser_population_loss": 1.5792683699582965e-18,
+  "max_probability_budget_residual": 3.871680753775308e-12,
+  "state_prep_path": "data/raw/bias_v1/bias_p1_prep_F1.000_r02/state_prep.npz",
+  "run_id": "bias_p1_prep_F1.000_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 0.0,
+  "I_inc_W_per_cm2": 0.0,
+  "CEP_rad": 0.0,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0,
+    125.0
+  ],
+  "wall_seconds": 401.1419614001643,
+  "peak_working_set_bytes": 0
+}
+stage=p1-prep listed=2 selected=2 single_worker=true
+bias_p1_prep_F0.000_r02: kind=preparation, F=0.0, I/mu=0.0, CEP=0.0, prep=None, numerics=None, preparation=None
+bias_p1_prep_F1.000_r02: kind=preparation, F=1.0, I/mu=0.0, CEP=0.0, prep=None, numerics=None, preparation=None
+STAGE_DONE p1-prep; new_runs=2; reused=0

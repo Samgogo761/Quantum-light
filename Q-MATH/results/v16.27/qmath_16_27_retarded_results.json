@@ -1,0 +1,654 @@
+{
+  "scope": "Fully adiabatically switched causal M0 classical two-frequency transverse vector-potential current kernel, complete 8-band and Peierls contacts, NOT quantized BSV or radiated photon statistics",
+  "checks": {
+    "permutation_abs": 0.0,
+    "neel_odd_abs": 8.46201705687608e-13,
+    "delta0_soc0_abs": [
+      1.21371644456478e-14,
+      2.9716333774225424e-13
+    ]
+  },
+  "data": [
+    {
+      "L": 13,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        2.1341027945263704,
+        -0.9692225742498909
+      ],
+      "min_gap": 0.12332978453199134,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 21,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        1.25036040533787,
+        -3.9362105567450234
+      ],
+      "min_gap": 0.09698926306073449,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 33,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        -0.3331740865644312,
+        -2.4342614636369415
+      ],
+      "min_gap": 0.09435891062088322,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.3261088348937369,
+        -2.679310228864009
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 65,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.2863633771142275,
+        -2.5805385036875745
+      ],
+      "min_gap": 0.09710351704299905,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 81,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.29911878930972646,
+        -2.60727305092381
+      ],
+      "min_gap": 0.09304000371414758,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 101,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.29720244936731033,
+        -2.5976934744866016
+      ],
+      "min_gap": 0.09476435402879443,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 13,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        2.3410866730379554,
+        -1.4850568039321805
+      ],
+      "min_gap": 0.12332978453199134,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 21,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        1.642215651675243,
+        -6.965038090319779
+      ],
+      "min_gap": 0.09698926306073449,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 33,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -3.185330626025092,
+        -3.3221197223030234
+      ],
+      "min_gap": 0.09435891062088322,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.3213129786330553,
+        -3.9208372821640762
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 65,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -0.9952322320725298,
+        -3.1911704008240105
+      ],
+      "min_gap": 0.09710351704299905,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 81,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.0576800517591658,
+        -3.620175796249318
+      ],
+      "min_gap": 0.09304000371414758,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 101,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.1696043075097997,
+        -3.4550554181264395
+      ],
+      "min_gap": 0.09476435402879443,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 13,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        2.888472014715278,
+        -3.343901149641094
+      ],
+      "min_gap": 0.12332978453199134,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 21,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        2.272867470577339,
+        -10.202833766592775
+      ],
+      "min_gap": 0.09698926306073449,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 33,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -4.817148651402585,
+        -4.894174934874774
+      ],
+      "min_gap": 0.09435891062088322,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -3.639576608949843,
+        -5.6224003024304245
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 65,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -0.6428975297993988,
+        -3.795452937010232
+      ],
+      "min_gap": 0.09710351704299905,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 81,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -1.7483992441620337,
+        -4.835610893263024
+      ],
+      "min_gap": 0.09304000371414758,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 101,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -3.1519571490503613,
+        -4.618340152788737
+      ],
+      "min_gap": 0.09476435402879443,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.2,
+      "w2": 0.16,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.3213129786330553,
+        -3.9208372821640762
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.18,
+      "w2": 0.18,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.4468660465387486,
+        -4.542233320983634
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": -0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        1.3213129786326552,
+        3.920837282164822
+      ],
+      "min_gap": 0.0949962544959361,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        1.2121545379730822e-14,
+        -6.155472263144559e-16
+      ],
+      "min_gap": 0.8636186993645325,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        2.9091708911353975e-13,
+        6.060772689865411e-14
+      ],
+      "min_gap": 0.03610813155616101,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.4,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -0.4707950058099463,
+        0.8518542105312034
+      ],
+      "min_gap": 0.29405007401454103,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.0,
+      "chi12": [
+        -0.7659075096304031,
+        -2.7295265706394467
+      ],
+      "min_gap": 0.09883942809044655,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.25,
+      "chi12": [
+        -2.3305754039204403,
+        -5.203079598321908
+      ],
+      "min_gap": 0.09267636688434332,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.3213129786330553,
+        -3.9208372821640762
+      ],
+      "min_gap": 0.09499625449593611,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 49,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.75,
+      "chi12": [
+        0.06302467983680593,
+        -2.0188835935600924
+      ],
+      "min_gap": 0.09267636688434322,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 129,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.29635716035990256,
+        -2.5983298948233737
+      ],
+      "min_gap": 0.09288996306801026,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 161,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.2965239888117528,
+        -2.5985230504446517
+      ],
+      "min_gap": 0.09312679537923566,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.08,
+      "shift": 0.5,
+      "chi12": [
+        0.29651750496973894,
+        -2.5985761191658066
+      ],
+      "min_gap": 0.09283304829414372,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 129,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.1400447783380103,
+        -3.427295973277902
+      ],
+      "min_gap": 0.09288996306801026,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 161,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.1002298067829568,
+        -3.4533332829291523
+      ],
+      "min_gap": 0.09312679537923566,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.03,
+      "shift": 0.5,
+      "chi12": [
+        -1.1243472894487265,
+        -3.469776728338435
+      ],
+      "min_gap": 0.09283304829414372,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 129,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -2.0707179585934554,
+        -4.223136390526034
+      ],
+      "min_gap": 0.09288996306801026,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 161,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -2.0292383520907515,
+        -4.193862186048329
+      ],
+      "min_gap": 0.09312679537923566,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    },
+    {
+      "L": 201,
+      "Delta": 0.8,
+      "N": 1,
+      "lambda": 0.1,
+      "w1": 0.16,
+      "w2": 0.2,
+      "eta": 0.01,
+      "shift": 0.5,
+      "chi12": [
+        -2.374152207576016,
+        -4.534473610715563
+      ],
+      "min_gap": 0.09283304829414372,
+      "meaning": "Retarded two-tone vector-potential transverse current kernel: each incoming tone exp(-i w t+eta*t); normalized coefficient for product of complex source amplitudes; not quantum light"
+    }
+  ],
+  "elapsed": 2.56
+}

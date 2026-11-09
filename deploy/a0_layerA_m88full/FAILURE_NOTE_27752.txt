@@ -1,0 +1,16 @@
+Job 27752 (array 0-3) FAILED before SBE propagation.
+
+Root cause:
+  Single-node manifests with weight=1 were submitted under
+  bsv_state_type='squeezed_vacuum' + from_file.  The Gaussian-Q moment
+  gate correctly reported pass=F (err_d ~ 24.8, err_VQ = 1).
+
+Do NOT delete this run tree.  It documents that the production moment
+gate works and that a lone high-field sample is a classical drive, not
+a full Q distribution.
+
+Correct follow-up: classical fixed-field spot checks with
+  bsv_enabled=.false.
+  intensity_Wcm2 / phi_cep_deg set from the GH5 Imax tails
+  save_complex_hhg=.true.  -> HHG_complex.dat
+under OUTROOT output_a0_highfield_classical_m88_vs_full112_k20.

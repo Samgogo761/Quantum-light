@@ -1,0 +1,21 @@
+{
+  "source_scf_out": "量子光研究/01_输入与模型/inputs/CrI3_scf_soc.out",
+  "terminated_on": "2Apr2026 06:29:40",
+  "etot_ry": -5554.37306363,
+  "etot_tol_ry": 0.001,
+  "efermi_ev": 0.081,
+  "efermi_tol_ev": 0.005,
+  "m_tot_bohr": [0.01, -0.01, 0.0],
+  "m_tot_tol": 0.15,
+  "m_abs_bohr": 20.42,
+  "m_abs_tol": 0.5,
+  "hubbard_ry": 0.37898613,
+  "hubbard_tol_ry": 0.02,
+  "note_m_cr": "April verbosity=low scf.out has no per-site moments; AFM fingerprint is M_tot~0 and M_abs=20.42. Per-site M_Cr is recorded if QE prints it, not required for PASS.",
+  "upf_sha256": {
+    "Cr.rel-pbe.upf": "be756eda2d6d7f07b1f19f6c4ba216cb2cd37615671bf98c872d4904bfaf2e6a",
+    "I.rel-pbe.upf": "c7ce679d2426cea1b7508a63104b6a8492529af66860ce7f5afba00f3cc49123"
+  },
+  "gamma_rms_pass_eV": 0.02,
+  "gamma_rms_fail_eV": 0.05
+}

@@ -1,0 +1,80 @@
+[2026-11-07T03:51:48.817685+00:00] === v3-r2 full run started (review v5 fixes) ===
+[2026-11-07T03:51:48.823302+00:00] source_freeze verified: 16 modules match the running revision
+[2026-11-07T03:51:48.827519+00:00] === STAGE s3c ===
+[2026-11-07T03:51:49.307742+00:00] verify_s3c: no pending readouts
+[2026-11-07T03:51:49.310741+00:00] S3 stage budget: 9.3823 h used of 10.0 h -> WITHIN_CAP
+[2026-11-07T03:51:49.316747+00:00] === STAGE s4 ===
+[2026-11-07T03:51:49.318746+00:00] START contributions: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions (events=1, outer_timeout=5700s)
+[2026-11-07T03:51:50.585929+00:00] DONE contributions: exit=0 elapsed=1.3s
+[2026-11-07T03:51:50.589434+00:00] START S4 controls: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage s4-controls --max-new-runs 4 (events=4, outer_timeout=22800s)
+[2026-11-07T05:41:45.150999+00:00] DONE S4 controls: exit=0 elapsed=6594.6s
+[2026-11-07T05:41:45.710319+00:00] START S4 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T05:49:02.249714+00:00] DONE S4 readouts 1: exit=0 elapsed=436.5s
+[2026-11-07T05:49:02.810219+00:00] S4: no pending readouts
+[2026-11-07T05:49:02.811220+00:00] START S4 direct readouts: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4-readouts (events=6, outer_timeout=34200s)
+[2026-11-07T06:02:08.334131+00:00] DONE S4 direct readouts: exit=0 elapsed=785.5s
+[2026-11-07T06:02:08.335131+00:00] START S4 gate: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step s4 (events=1, outer_timeout=5700s)
+[2026-11-07T06:02:09.011251+00:00] DONE S4 gate: exit=0 elapsed=0.7s
+[2026-11-07T06:02:09.015252+00:00] === STAGE s5 ===
+[2026-11-07T06:02:09.045257+00:00] S5 remaining library tasks: 30
+[2026-11-07T06:02:09.048256+00:00] START S5 batch 1 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-07T07:52:12.891537+00:00] DONE S5 batch 1 (8): exit=0 elapsed=6603.8s
+[2026-11-07T07:52:13.457155+00:00] START S5 batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T08:04:44.875070+00:00] DONE S5 batch 1 readouts 1: exit=0 elapsed=751.4s
+[2026-11-07T08:04:45.435907+00:00] S5 batch 1: no pending readouts
+[2026-11-07T08:04:45.439226+00:00] START S5 batch 2 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-07T10:06:58.198714+00:00] DONE S5 batch 2 (8): exit=0 elapsed=7332.8s
+[2026-11-07T10:06:58.974037+00:00] START S5 batch 2 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T10:17:06.869398+00:00] DONE S5 batch 2 readouts 1: exit=0 elapsed=607.9s
+[2026-11-07T10:17:07.461429+00:00] S5 batch 2: no pending readouts
+[2026-11-07T10:17:07.468429+00:00] START S5 batch 3 (8): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-07T13:05:15.085320+00:00] DONE S5 batch 3 (8): exit=0 elapsed=10087.6s
+[2026-11-07T13:05:15.690175+00:00] START S5 batch 3 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T13:23:10.986571+00:00] DONE S5 batch 3 readouts 1: exit=0 elapsed=1075.3s
+[2026-11-07T13:23:11.573088+00:00] S5 batch 3: no pending readouts
+[2026-11-07T13:23:11.579111+00:00] START S5 batch 4 (6): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library --max-new-runs 6 (events=6, outer_timeout=34200s)
+[2026-11-07T15:28:49.550768+00:00] DONE S5 batch 4 (6): exit=0 elapsed=7538.0s
+[2026-11-07T15:28:50.142064+00:00] START S5 batch 4 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T15:36:18.368797+00:00] DONE S5 batch 4 readouts 1: exit=0 elapsed=448.2s
+[2026-11-07T15:36:18.946886+00:00] S5 batch 4: no pending readouts
+[2026-11-07T15:36:19.033953+00:00] START preliminary statistics: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --preliminary (events=1, outer_timeout=5700s)
+[2026-11-07T15:36:20.940465+00:00] DONE preliminary statistics: exit=2 elapsed=1.9s
+[2026-11-07T15:36:20.944465+00:00] === STAGE tail_precheck ===
+[2026-11-07T15:36:20.946464+00:00] START tail precheck: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope precheck (events=1, outer_timeout=5700s)
+[2026-11-07T15:36:22.839715+00:00] DONE tail precheck: exit=2 elapsed=1.9s
+[2026-11-07T15:36:22.845659+00:00] 32 mu tail satisfies the positive lower bound; no extension required
+[2026-11-07T15:36:22.853412+00:00] === STAGE midpoints ===
+[2026-11-07T15:36:22.859412+00:00] START midpoint plan: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --plan-midpoints (events=1, outer_timeout=5700s)
+[2026-11-07T15:36:24.714053+00:00] DONE midpoint plan: exit=0 elapsed=1.9s
+[2026-11-07T15:36:24.719056+00:00] START midpoints batch 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-07T18:21:47.427035+00:00] DONE midpoints batch 1: exit=0 elapsed=9922.7s
+[2026-11-07T18:21:48.081382+00:00] START midpoints batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T18:34:15.762366+00:00] DONE midpoints batch 1 readouts 1: exit=0 elapsed=747.7s
+[2026-11-07T18:34:16.376515+00:00] midpoints batch 1: no pending readouts
+[2026-11-07T18:34:16.383225+00:00] START midpoints batch 2: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage midpoints --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-07T21:26:39.930191+00:00] DONE midpoints batch 2: exit=0 elapsed=10342.1s
+[2026-11-07T21:26:40.551256+00:00] START midpoints batch 2 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-07T21:43:49.794136+00:00] DONE midpoints batch 2 readouts 1: exit=0 elapsed=1029.2s
+[2026-11-07T21:43:50.405558+00:00] midpoints batch 2: no pending readouts
+[2026-11-07T21:43:50.409560+00:00] === STAGE phase8 ===
+[2026-11-07T21:43:50.410557+00:00] START contributions (full library): C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step contributions (events=1, outer_timeout=5700s)
+[2026-11-07T21:43:53.023889+00:00] DONE contributions (full library): exit=0 elapsed=2.6s
+[2026-11-07T21:43:53.025891+00:00] START phase8 selection: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase8 (events=1, outer_timeout=5700s)
+[2026-11-07T21:43:55.559351+00:00] DONE phase8 selection: exit=0 elapsed=2.5s
+[2026-11-07T21:43:55.565350+00:00] START phase8 batch 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage phase8 --max-new-runs 8 (events=8, outer_timeout=45600s)
+[2026-11-08T00:37:20.631708+00:00] DONE phase8 batch 1: exit=0 elapsed=10405.1s
+[2026-11-08T00:37:21.254235+00:00] START phase8 batch 1 readouts 1: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\run_continuation_v2.py --stage library-readouts --max-events 8 (events=8, outer_timeout=45600s)
+[2026-11-08T01:11:43.976619+00:00] DONE phase8 batch 1 readouts 1: exit=0 elapsed=2062.7s
+[2026-11-08T01:11:44.593192+00:00] phase8 batch 1: no pending readouts
+[2026-11-08T01:11:44.600181+00:00] === STAGE final ===
+[2026-11-08T01:11:44.603181+00:00] START phase validation: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step phase-validation (events=1, outer_timeout=5700s)
+[2026-11-08T01:11:47.971958+00:00] DONE phase validation: exit=0 elapsed=3.4s
+[2026-11-08T01:11:47.977960+00:00] START error map refresh: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step error-map (events=1, outer_timeout=5700s)
+[2026-11-08T01:11:48.523742+00:00] DONE error map refresh: exit=0 elapsed=0.5s
+[2026-11-08T01:11:48.530746+00:00] START tail final: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step tail --tail-scope final (events=1, outer_timeout=5700s)
+[2026-11-08T01:11:51.296384+00:00] DONE tail final: exit=0 elapsed=2.8s
+[2026-11-08T01:11:51.301384+00:00] START final statistics: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\analyze_statistics_v2.py --final (events=1, outer_timeout=5700s)
+[2026-11-08T01:11:54.039704+00:00] DONE final statistics: exit=2 elapsed=2.7s
+[2026-11-08T01:11:54.042705+00:00] START decision: C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\scripts\v3_stage_v4.py --step decision (events=1, outer_timeout=5700s)
+[2026-11-08T01:11:54.585744+00:00] DONE decision: exit=0 elapsed=0.5s
+[2026-11-08T01:11:54.590745+00:00] === v3-r2 full run complete ===

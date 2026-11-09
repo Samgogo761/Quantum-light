@@ -1,0 +1,8 @@
+QE nbnd=52 nks=121
+Wannier bands=20 points_per_band=97
+RMS error first20 normalized path: 0.301350 eV
+MAE error first20 normalized path: 0.067345 eV
+RMS error first20 for energies <=18 eV: 0.301350 eV
+MAE error first20 for energies <=18 eV: 0.067345 eV
+Max abs error: 2.179561 eV at band,k,qe,w,err=(20, 25, 13.334, 15.513561284586663, 2.179561284586663)
+Caution: error stats use normalized path interpolation; plot inspection is authoritative because QE and W90 sample counts differ.

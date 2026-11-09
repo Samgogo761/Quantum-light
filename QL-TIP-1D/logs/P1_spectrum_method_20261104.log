@@ -1,0 +1,48 @@
+{
+  "method": "static H_dc resolvent energy-window filter",
+  "tests": {
+    "small_matrix": {
+      "N": 160,
+      "relative_L1": 2.561091671035822e-13,
+      "spectrum_integral": 1.8799662166945168,
+      "masked_norm": 1.8799712059732496,
+      "pass": true
+    },
+    "constant_shift": {
+      "shift_hartree": 0.137,
+      "max_absolute_spectrum_difference_per_eV": 3.132216708223723e-14,
+      "pass": true
+    },
+    "free_gaussian": {
+      "eta_eV": 0.81634158737943,
+      "relative_L1": 0.0033092692324684374,
+      "Y_filter": 0.897312569912527,
+      "Y_reference": 0.8973150475298286,
+      "relative_Y_error": 2.7611453841941785e-06,
+      "pass": true
+    },
+    "dc_outgoing": {
+      "relative_L1": 3.3455795503559426e-20,
+      "total_energy_initial_hartree": -0.24425914495600043,
+      "total_energy_final_hartree": -0.24425914495600676,
+      "absolute_total_energy_error_hartree": 6.328271240363392e-15,
+      "pass": true
+    },
+    "bound_mask_leakage": {
+      "masked_norm": 4.617929523425926e-27,
+      "Y_H": 1.769586361308416e-27,
+      "pass": true
+    },
+    "low_energy_kernel_tail": {
+      "packet_mean_energy_eV": 0.2,
+      "Y_H_by_eta_eV": {
+        "0.2": 0.013200107537150568,
+        "0.1": 0.0020620602144203128,
+        "0.05": 0.000303396822960638
+      },
+      "note": "Finite-eta kernel tail is an error-floor diagnostic, not a physical high-energy channel."
+    }
+  },
+  "wall_seconds": 0.35450499993748963,
+  "status": "PASS"
+}

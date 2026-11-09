@@ -1,0 +1,7 @@
+# node-moment validation
+state_type = squeezed_vacuum
+n_nodes = 9
+sum_weight =   1.00000000E+00
+err_d =   0.00000000E+00
+err_VQ =   4.40261007E-16
+pass = T

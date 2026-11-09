@@ -1,0 +1,4 @@
+readout_id=ro2_bias_v2_fix_F0_I4_dt005_r01_t100_eta0p025_dE0p00625_m2-4
+state=C:\Users\26507\Documents\New_SBEs\Quantum-light\QL-TIP-1D\data\raw\bias_v2\bias_v2_fix_F0_I4_dt005_r01\state_100fs.npz
+wall_seconds=81.063939499901608
+status=PASS

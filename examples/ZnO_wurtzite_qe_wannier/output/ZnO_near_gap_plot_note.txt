@@ -1,0 +1,3 @@
+ZnO_qe_vs_wannier_bands_near_gap.png shifts energies by QE VBM=7.308 eV and uses y range [-5.2,15.2] eV.
+This is intended for visual comparison near the gap, similar to published ZnO band plots.
+No orbital projections/PDOS are included because current downloaded data do not include projwfc/fatband weights.

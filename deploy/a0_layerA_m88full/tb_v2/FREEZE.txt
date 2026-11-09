@@ -1,0 +1,8 @@
+tb_plus=/public/home/wangjs/project/CrI3_TB/wannier/CrI3_tb.dat
+tb_plus_sha256=66382a51a976ea86e15ceb719121dd681bac8e64e7cda702c982921cd1bfda18
+tb_minus_prod=/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj.dat
+tb_minus_prod_sha256=d346f352d110ea27d659b2b339ed5bbed78af955115105be69625c205d8aaf9c
+tb_minus_v2=/public/home/wangjs/project/CrI3_TB_mN/wannier/CrI3_tb_mN_Pconj_v2.dat
+tb_minus_v2_sha256=d61034e18b551dbb33b064c0c311d4ba0ef13be1c8f4a11a88ddbe1e95b66246
+policy=H_E18.8_from_prod__r_ES25.17_Pconj
+frozen_at=2026-08-13T00:48:19+0800

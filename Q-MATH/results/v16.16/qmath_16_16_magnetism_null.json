@@ -1,0 +1,200 @@
+[
+  {
+    "lambda": 0.0,
+    "delta": 0.0,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 1.2084827652889274,
+    "elastic_local_norm2": 139.98292308464312,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.0,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 1.1670475905957765,
+    "elastic_local_norm2": 79609306.29428928,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.0,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 1.067551644704288,
+    "elastic_local_norm2": 3.5567687749961573e-07,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.4,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 0.6062447051506092,
+    "elastic_local_norm2": 140.34251542694932,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.4,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 0.5677240269171029,
+    "elastic_local_norm2": 78818650.72913055,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.4,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 0.5009578415792508,
+    "elastic_local_norm2": 3.9105443249565725e-07,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.8,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 0.17087487101225696,
+    "elastic_local_norm2": 0.0018377458695972662,
+    "inelastic_local_norm2": 11604.715574450638
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.8,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 0.22165382010238321,
+    "elastic_local_norm2": 5160.321634728552,
+    "inelastic_local_norm2": 5573.259829228349
+  },
+  {
+    "lambda": 0.0,
+    "delta": 0.8,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 0.2753514085264661,
+    "elastic_local_norm2": 1.3610434730975948e-10,
+    "inelastic_local_norm2": 0.10593188696222046
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.0,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 1.4068446250632372,
+    "elastic_local_norm2": 16.630297717143733,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.0,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 1.4021501089922221,
+    "elastic_local_norm2": 9250891.795783613,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.0,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 1.3778497365459748,
+    "elastic_local_norm2": 7.18202133943013e-08,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.4,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 0.7992060979228319,
+    "elastic_local_norm2": 11.988502105854774,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.4,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 0.7963301520127244,
+    "elastic_local_norm2": 9031002.630108807,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.4,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 0.798877553760363,
+    "elastic_local_norm2": 2.3782176451276795,
+    "inelastic_local_norm2": 0.0
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.8,
+    "kfrac": [
+      0.4158,
+      0.1683
+    ],
+    "direct_gap": 0.09254667656128435,
+    "elastic_local_norm2": 85.21520773994962,
+    "inelastic_local_norm2": 35363.793500959175
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.8,
+    "kfrac": [
+      0.3703,
+      0.1913
+    ],
+    "direct_gap": 0.11256647841200484,
+    "elastic_local_norm2": 993315.00035781,
+    "inelastic_local_norm2": 8500337.067923654
+  },
+  {
+    "lambda": 0.1,
+    "delta": 0.8,
+    "kfrac": [
+      0.276,
+      0.448
+    ],
+    "direct_gap": 0.11298839226828505,
+    "elastic_local_norm2": 556.5854608777875,
+    "inelastic_local_norm2": 1016937.4662163069
+  }
+]

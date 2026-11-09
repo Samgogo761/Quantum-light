@@ -1,0 +1,73 @@
+{
+  "pairs": [
+    {
+      "frac": [
+        0.4158,
+        0.1683
+      ],
+      "K_pair": -402.9241969931296,
+      "Jpair": 2.4868995751603507e-14,
+      "omega_cavity": 0.18,
+      "quadratic_softening_critical_g_if_unnormalized": 0.01494547010519004,
+      "illustration_at_g_0.08": -4.97742972151206,
+      "warning": "This gcrit is adiabatic quadratic estimate at an intentionally unphysical two-k truncation; NOT a real material phase boundary."
+    },
+    {
+      "frac": [
+        0.37,
+        0.1913
+      ],
+      "K_pair": -398.17446757582115,
+      "Jpair": -1.5987211554602254e-14,
+      "omega_cavity": 0.18,
+      "quadratic_softening_critical_g_if_unnormalized": 0.015034346340940408,
+      "illustration_at_g_0.08": -4.916633184970511,
+      "warning": "This gcrit is adiabatic quadratic estimate at an intentionally unphysical two-k truncation; NOT a real material phase boundary."
+    },
+    {
+      "frac": [
+        0.21,
+        0.31
+      ],
+      "K_pair": -163.68374098428166,
+      "Jpair": -8.881784197001252e-15,
+      "omega_cavity": 0.18,
+      "quadratic_softening_critical_g_if_unnormalized": 0.02344868451663724,
+      "illustration_at_g_0.08": -1.9151518845988054,
+      "warning": "This gcrit is adiabatic quadratic estimate at an intentionally unphysical two-k truncation; NOT a real material phase boundary."
+    }
+  ],
+  "twists": [
+    {
+      "L": 3,
+      "M": 3,
+      "n_total_twist_points": 81,
+      "twist_mean_K": 5.850721841166876,
+      "single_twist_K": -0.9909406074647727,
+      "twist_K_std": 15.134272319656196,
+      "equivalent_uniform_fine_grid_K": 5.850721841166937,
+      "quadrature_equivalence_residual": 6.128431095930864e-14
+    },
+    {
+      "L": 5,
+      "M": 5,
+      "n_total_twist_points": 625,
+      "twist_mean_K": 1.3116007035268031,
+      "single_twist_K": 8.30589404833845,
+      "twist_K_std": 6.3150758757143866,
+      "equivalent_uniform_fine_grid_K": 1.3116007035268247,
+      "quadrature_equivalence_residual": 2.1538326677728037e-14
+    },
+    {
+      "L": 9,
+      "M": 3,
+      "n_total_twist_points": 729,
+      "twist_mean_K": 2.0339793370540415,
+      "single_twist_K": 5.850721841166936,
+      "twist_K_std": 4.459205260328304,
+      "equivalent_uniform_fine_grid_K": 2.033979337054018,
+      "quadrature_equivalence_residual": 2.353672812205332e-14
+    }
+  ],
+  "interpretation": "Twist averages restore quadrature of periodic occupied band; DO NOT commute averaging k with shared quantum-field dynamics. The pair harmonic softening is an adiabatic diagnostic only."
+}

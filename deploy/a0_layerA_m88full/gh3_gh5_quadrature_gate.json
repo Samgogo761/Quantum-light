@@ -1,0 +1,13 @@
+{
+  "schema": "gh3_gh5_quadrature_v1_20260815",
+  "note": "Independent of CEP relative covariance τ_rel=1e-3. Formal compare is GH3-v2 ↔ GH5-v2 only.",
+  "hard_orders": [2, 5, 7, 9],
+  "diag_orders": [10],
+  "ics_cs_rtol": 0.05,
+  "je_resolved_rtol": 0.05,
+  "jo_mixed_rtol": 0.10,
+  "jo_je_eta": 1e-4,
+  "phase_strong_atol_rad": 0.1,
+  "not_the_cep_rel_1e-3_gate": true,
+  "analyzer": "tools/analysis/gh3_gh5_quadrature_gate.py"
+}

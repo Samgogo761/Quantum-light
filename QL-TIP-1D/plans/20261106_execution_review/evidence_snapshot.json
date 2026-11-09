@@ -1,0 +1,1105 @@
+{
+  "scope": "read-only metadata and arithmetic; no TDSE or spectrum evaluation",
+  "snapshot_time": "2026-11-06T10:37:21.581881+08:00",
+  "inherited_commit": "3bba5db5",
+  "ledger": {
+    "groups": [
+      {
+        "phase": "R1",
+        "kind": "readout",
+        "events": 72,
+        "hours": 2.202802431389185
+      },
+      {
+        "phase": "R1",
+        "kind": "tdse",
+        "events": 4,
+        "hours": 1.9087984523612411
+      },
+      {
+        "phase": "R2",
+        "kind": "tdse",
+        "events": 11,
+        "hours": 5.521117374889113
+      },
+      {
+        "phase": "R2/R3",
+        "kind": "readout",
+        "events": 6,
+        "hours": 0.8052533803889269
+      }
+    ],
+    "hours": 10.437971639028465,
+    "duplicate_event_ids": 0,
+    "limitation": "unrecorded or interrupted work is not certified by this sum"
+  },
+  "R2_runs": {
+    "bias_v2_probe_F0_I32_phi000_box900_r01": {
+      "wall_seconds": 2384.3616476999596,
+      "Y_H": 0.0554162602107144,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.097222313006796e-11,
+      "right_CAP_loss_observation_100fs": 2.6997102986329633e-21,
+      "state_100fs_sha256": "6e13ddbed43f9290f8ea7a70c74c1cc5e72eed2de4ed2f417fa18f835177941b",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.0554162602107144
+        }
+      ]
+    },
+    "bias_v2_probe_F0_I32_phi000_dt005_r01": {
+      "wall_seconds": 2385.01224450022,
+      "Y_H": 0.05537721998482685,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.5921819418451832e-11,
+      "right_CAP_loss_observation_100fs": 0.0003692262738797597,
+      "state_100fs_sha256": "2496dc220ba86d6b11e3bb5b2119dfb870924c02e3305381ad447345fffbd4b8",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.05537721998482685
+        }
+      ]
+    },
+    "bias_v2_probe_F0_I32_phi000_dx048_r01": {
+      "wall_seconds": 1879.5687645000871,
+      "Y_H": 0.055282346942744774,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 3.4652281044600386e-12,
+      "right_CAP_loss_observation_100fs": 0.0004176270102546885,
+      "state_100fs_sha256": "e00d816f6b4478be1099a9e910bc4389f2bbaf2f147ae27ff5303d0ab79cc69d",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.055282346942744774
+        }
+      ]
+    },
+    "bias_v2_probe_F0_I32_phi000_r01": {
+      "wall_seconds": 940.1644073000643,
+      "Y_H": 0.05500016457217915,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.2531198301246604e-11,
+      "right_CAP_loss_observation_100fs": 0.00041634529186243113,
+      "state_100fs_sha256": "dee9d689ffee80d8e672b79322aac3caa92c06c78b7645be6caffc08721410db",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.05500016457217915
+        }
+      ]
+    },
+    "bias_v2_probe_F0_I8_phi000_r01": {
+      "wall_seconds": 929.4397109001875,
+      "Y_H": 0.00044050536490590394,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.2967293905319366e-11,
+      "right_CAP_loss_observation_100fs": 1.7691052201135435e-26,
+      "state_100fs_sha256": "38556604fe257fc1afb65aa5c35cc79edbdea4395e0d87277917de45a64027cf",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.00044050536490590394
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I32_phi000_box900_r01": {
+      "wall_seconds": 2202.3894801998977,
+      "Y_H": 0.09185492698897321,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.0878853373696984e-11,
+      "right_CAP_loss_observation_100fs": 3.543915488717997e-12,
+      "state_100fs_sha256": "db64140e4bf707a6d2b8d650da2ce6543653becf64ec3be3efd78b406b57ae3a",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.09185492698897321
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I32_phi000_caphalf_r01": {
+      "wall_seconds": 1694.9707128000446,
+      "Y_H": 0.09141951623270937,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.0869638522592595e-11,
+      "right_CAP_loss_observation_100fs": 0.0004354030240479154,
+      "state_100fs_sha256": "ecbc58536fd393ce295ac37676fc4e5f6738639f22e6e906853bbe81848febeb",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.09141951623270937
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I32_phi000_dt005_r01": {
+      "wall_seconds": 2630.046087300172,
+      "Y_H": 0.08717008265236786,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.5674017639355498e-11,
+      "right_CAP_loss_observation_100fs": 0.00041654763792262756,
+      "state_100fs_sha256": "712af1479ac65c8b696793d017aaef4988f62d369d8ffeab8e94c9eb3c973c42",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.08717008265236786
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I32_phi000_dx048_r01": {
+      "wall_seconds": 2972.8218779000454,
+      "Y_H": 0.09165212105615926,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 3.5869085479589558e-12,
+      "right_CAP_loss_observation_100fs": 0.00043937040135244235,
+      "state_100fs_sha256": "e3f599e0409e7b2423ac2f0d243d660b49f1c4053273154ba8f443cb33d9cdef",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.09165212105615926
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I32_phi000_r01": {
+      "wall_seconds": 943.5022555000614,
+      "Y_H": 0.09141606488016506,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.2478240662971984e-11,
+      "right_CAP_loss_observation_100fs": 0.000438862254473865,
+      "state_100fs_sha256": "677ca57339b8c5e8c49c54a4c5d0c67b0ada9ec8c22afee8fddca4af033c0979",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.09141606488016506
+        }
+      ]
+    },
+    "bias_v2_probe_F1_I8_phi000_r01": {
+      "wall_seconds": 913.7453610000666,
+      "Y_H": 0.0006528734585512591,
+      "execution_status": "PASS",
+      "max_probability_budget_residual": 1.3156586931017955e-11,
+      "right_CAP_loss_observation_100fs": 2.156313284473597e-18,
+      "state_100fs_sha256": "3f13bcce4821c98adebcb6c0eabb00af526af311d077878de530f8db07c32c2a",
+      "spectral_diagnostic": [
+        {
+          "label": "t100_eta0p1_dE0p025_mask2to4",
+          "eta_eV": 0.1,
+          "energy_step_eV": 0.025,
+          "Y_H_main": 0.0006528734585512591
+        }
+      ]
+    }
+  },
+  "R2_readouts": {
+    "ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_box900_r01",
+      "eta_eV": 0.05,
+      "step_eV": 0.0125,
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 19319,
+      "Y_at_E_main": 0.05542962818899918,
+      "wall_seconds": 441.3928228998557,
+      "state_sha256": "6e13ddbed43f9290f8ea7a70c74c1cc5e72eed2de4ed2f417fa18f835177941b",
+      "run_config_sha256": "a881d372e12372ba4b95f2791edf2e183f361d01113fa3278b0e85a5862b7d51"
+    },
+    "ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01",
+      "eta_eV": 0.05,
+      "step_eV": 0.0125,
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 19319,
+      "Y_at_E_main": 0.055380622785491856,
+      "wall_seconds": 315.06547760008834,
+      "state_sha256": "2496dc220ba86d6b11e3bb5b2119dfb870924c02e3305381ad447345fffbd4b8",
+      "run_config_sha256": "4b2fc4dea17c6961ba8f8edb0fd508298747e932c061ded5c5c10f990c551bbe"
+    },
+    "ro2_bias_v2_probe_F0_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01",
+      "eta_eV": 0.05,
+      "step_eV": 0.0125,
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 19319,
+      "Y_at_E_main": 0.0552961884233884,
+      "wall_seconds": 663.891597900074,
+      "state_sha256": "e00d816f6b4478be1099a9e910bc4389f2bbaf2f147ae27ff5303d0ab79cc69d",
+      "run_config_sha256": "971c92ea6b672affa01579d44141ee6d6c2446be2399508eb38e225a01297929"
+    },
+    "ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_r01",
+      "eta_eV": 0.025,
+      "step_eV": 0.00625,
+      "energy_range_eV": [
+        -2.0,
+        239.46875
+      ],
+      "energy_points": 38636,
+      "Y_at_E_main": 0.05501837964445811,
+      "wall_seconds": 670.4326990998816,
+      "state_sha256": "dee9d689ffee80d8e672b79322aac3caa92c06c78b7645be6caffc08721410db",
+      "run_config_sha256": "54fd3bb9917bc177998f8f72885215e597ab11a5a653b7e14d7341ba7b9ea966"
+    },
+    "ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_r01",
+      "eta_eV": 0.05,
+      "step_eV": 0.0125,
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 19319,
+      "Y_at_E_main": 0.05501353250754793,
+      "wall_seconds": 309.1811969000846,
+      "state_sha256": "dee9d689ffee80d8e672b79322aac3caa92c06c78b7645be6caffc08721410db",
+      "run_config_sha256": "54fd3bb9917bc177998f8f72885215e597ab11a5a653b7e14d7341ba7b9ea966"
+    },
+    "ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus": {
+      "run_id": "bias_v2_probe_F0_I32_phi000_r01",
+      "eta_eV": 0.05,
+      "step_eV": 0.0125,
+      "energy_range_eV": [
+        -2.0,
+        358.85
+      ],
+      "energy_points": 28869,
+      "Y_at_E_main": 0.05501353250763972,
+      "wall_seconds": 498.05689590005204,
+      "state_sha256": "dee9d689ffee80d8e672b79322aac3caa92c06c78b7645be6caffc08721410db",
+      "run_config_sha256": "54fd3bb9917bc177998f8f72885215e597ab11a5a653b7e14d7341ba7b9ea966"
+    }
+  },
+  "R2_readouts_expected_from_existing_runs": 17,
+  "R2_readouts_missing": [
+    "ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4",
+    "ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_caphalf_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p00625_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+    "ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus",
+    "ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4"
+  ],
+  "R2_completed_readout_minutes": {
+    "min": 5.153019948334744,
+    "max": 11.17387831833136,
+    "sum": 48.300344838333935
+  },
+  "diagnostic_only": {
+    "F1_I32_dt_relative": -0.046446784089461124,
+    "q_CEP0_eta01": {
+      "8": 1.4821010379538033,
+      "32": 1.6621052971613515
+    },
+    "warning": "not four-phase means; not BSV statistics; common eta=.05 controls pending"
+  },
+  "R1_reported_gate": {
+    "schema": "continuation-v2-R1-gate",
+    "revision": "r1_20261105_v1",
+    "thresholds_eV": [
+      0.5170816,
+      0.7170816,
+      0.9170816
+    ],
+    "conditions": {
+      "F0_I1": {
+        "F_dc_V_per_nm": 0.0,
+        "I_over_mu": 1.0,
+        "Y_four_phase": 2.8329603617305314e-09,
+        "Y_eta_control": 2.8222156530140522e-09,
+        "components": {
+          "eta": 0.0037927494015185135,
+          "energy_grid": 3.108842710276536e-05,
+          "dx": 0.0028533218465845293,
+          "dt": 4.711076420649107e-05,
+          "box": 3.2905300735804187e-10,
+          "cap": 7.86923285121714e-06,
+          "mask": 4.072724104815606e-09,
+          "time": 1.3418375620569802e-08,
+          "preparation": 0.0,
+          "cep": 9.102063093260289e-10,
+          "energy_range": 0.0
+        },
+        "estimated_total_rel_error": 0.006732158402622559,
+        "signal_floor": 1.9281156177554213e-12,
+        "signal_over_floor": 1469.289671035634,
+        "dc_only_fraction": 8.753993286287926e-19,
+        "probability_budget_ok": true,
+        "preparation_ok": true,
+        "missing": [],
+        "status": "PASS",
+        "reasons": []
+      },
+      "F1_I1": {
+        "F_dc_V_per_nm": 1.0,
+        "I_over_mu": 1.0,
+        "Y_four_phase": 5.509789712220833e-09,
+        "Y_eta_control": 5.451719882057281e-09,
+        "components": {
+          "eta": 0.01053939137364018,
+          "energy_grid": 0.00013313043871465848,
+          "dx": 0.01550675405767247,
+          "dt": 0.004356944759408156,
+          "box": 3.2905300735804187e-10,
+          "cap": 7.86923285121714e-06,
+          "mask": 4.072724104815606e-09,
+          "time": 1.3418375620569802e-08,
+          "preparation": 2.947705679477801e-08,
+          "cep": 8.146058295429939e-11,
+          "energy_range": 0.0
+        },
+        "estimated_total_rel_error": 0.03054413724095679,
+        "signal_floor": 7.227364108193953e-11,
+        "signal_over_floor": 76.23512015914852,
+        "dc_only_fraction": 7.457731072102692e-15,
+        "probability_budget_ok": true,
+        "preparation_ok": true,
+        "missing": [],
+        "status": "PASS",
+        "reasons": []
+      },
+      "F0_I4": {
+        "F_dc_V_per_nm": 0.0,
+        "I_over_mu": 4.0,
+        "Y_four_phase": 8.926795592490328e-06,
+        "Y_eta_control": 8.781486706306425e-06,
+        "components": {
+          "eta": 0.016277832810033678,
+          "energy_grid": 0.0002625707994291476,
+          "dx": 0.010605599027787887,
+          "dt": 0.012345249437723554,
+          "box": 3.2905300735804187e-10,
+          "cap": 7.86923285121714e-06,
+          "mask": 4.072724104815606e-09,
+          "time": 1.3418375620569802e-08,
+          "preparation": 0.0,
+          "cep": 0.00031293236628900914,
+          "energy_range": 1.5281957803821957e-09
+        },
+        "estimated_total_rel_error": 0.03981207302246301,
+        "signal_floor": 1.0531295010378332e-08,
+        "signal_over_floor": 847.6446233528916,
+        "dc_only_fraction": 2.7781207410833583e-22,
+        "probability_budget_ok": true,
+        "preparation_ok": true,
+        "missing": [],
+        "status": "PASS",
+        "reasons": []
+      },
+      "F1_I4": {
+        "F_dc_V_per_nm": 1.0,
+        "I_over_mu": 4.0,
+        "Y_four_phase": 1.8916056753220843e-05,
+        "Y_eta_control": 1.8940361051471643e-05,
+        "components": {
+          "eta": 0.001284850144397155,
+          "energy_grid": 9.7625938698358e-05,
+          "dx": 0.016520131856919355,
+          "dt": 0.022881211417936215,
+          "box": 3.2905300735804187e-10,
+          "cap": 7.86923285121714e-06,
+          "mask": 4.072724104815606e-09,
+          "time": 1.3418375620569802e-08,
+          "preparation": 2.947705679477801e-08,
+          "cep": 0.0003422661820167295,
+          "energy_range": 6.135465410913067e-10
+        },
+        "estimated_total_rel_error": 0.0411340026835751,
+        "signal_floor": 3.878723829482519e-08,
+        "signal_over_floor": 487.6876412143149,
+        "dc_only_fraction": 2.1722566427902345e-18,
+        "probability_budget_ok": true,
+        "preparation_ok": true,
+        "missing": [],
+        "status": "PASS",
+        "reasons": []
+      }
+    },
+    "error_budget_rows": [
+      {
+        "condition": "F0_I1",
+        "component": "dx",
+        "reference_id": "ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p1_F0.000_I1_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "2.8335779855715571e-09",
+        "control_Y": "2.8416630955417894e-09",
+        "relative_change": "0.0028533218465845293",
+        "abs_relative": "0.0028533218465845293",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I1",
+        "component": "dt",
+        "reference_id": "ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p1_F0.000_I1_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "2.8335779855715571e-09",
+        "control_Y": "2.833711477595896e-09",
+        "relative_change": "4.7110764206491072e-05",
+        "abs_relative": "4.7110764206491072e-05",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I1",
+        "component": "box",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "3.2905300735804187e-10",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F0_I1",
+        "component": "cap",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "7.8692328512171393e-06",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F0_I1",
+        "component": "mask",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "4.0727241048156057e-09",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I1",
+        "component": "time",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "1.3418375620569802e-08",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I1",
+        "component": "preparation",
+        "reference_id": "F1 mu CEP0",
+        "control_id": "ramp080;wait040",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "0",
+        "coverage": "not_applicable_DC_zero",
+        "note": ""
+      },
+      {
+        "condition": "F0_I1",
+        "component": "cep",
+        "reference_id": "four-phase mean",
+        "control_id": "two-phase or representative eight-phase",
+        "reference_Y": "2.8329603617305314e-09",
+        "control_Y": "",
+        "relative_change": "9.1020630932602886e-10",
+        "abs_relative": "9.1020630932602886e-10",
+        "coverage": "two_to_four_only",
+        "note": "representative 4->8 available only at F1/4mu"
+      },
+      {
+        "condition": "F0_I1",
+        "component": "energy_range",
+        "reference_id": "ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "",
+        "reference_Y": "2.8335779855715571e-09",
+        "control_Y": "",
+        "relative_change": "0",
+        "abs_relative": "0",
+        "coverage": "not_applicable_at_mu",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "dx",
+        "reference_id": "ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p1_F1.000_I1_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "5.5095733336579517e-09",
+        "control_Y": "5.5950089323056962e-09",
+        "relative_change": "0.01550675405767247",
+        "abs_relative": "0.01550675405767247",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "dt",
+        "reference_id": "ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p1_F1.000_I1_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "5.5095733336579517e-09",
+        "control_Y": "5.4855684269952957e-09",
+        "relative_change": "-0.0043569447594081559",
+        "abs_relative": "0.0043569447594081559",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "box",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "3.2905300735804187e-10",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F1_I1",
+        "component": "cap",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "7.8692328512171393e-06",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F1_I1",
+        "component": "mask",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "4.0727241048156057e-09",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "time",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "1.3418375620569802e-08",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "preparation",
+        "reference_id": "F1 mu CEP0",
+        "control_id": "ramp080;wait040",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "2.947705679477801e-08",
+        "coverage": "direct_at_mu",
+        "note": ""
+      },
+      {
+        "condition": "F1_I1",
+        "component": "cep",
+        "reference_id": "four-phase mean",
+        "control_id": "two-phase or representative eight-phase",
+        "reference_Y": "5.5097897122208327e-09",
+        "control_Y": "",
+        "relative_change": "8.1460582954299385e-11",
+        "abs_relative": "8.1460582954299385e-11",
+        "coverage": "two_to_four_only",
+        "note": "representative 4->8 available only at F1/4mu"
+      },
+      {
+        "condition": "F1_I1",
+        "component": "energy_range",
+        "reference_id": "ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "",
+        "reference_Y": "5.5095733336579517e-09",
+        "control_Y": "",
+        "relative_change": "0",
+        "abs_relative": "0",
+        "coverage": "not_applicable_at_mu",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "dx",
+        "reference_id": "ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_v2_fix_F0_I4_dx048_r01_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "8.5225152024363338e-06",
+        "control_Y": "8.6129015813816001e-06",
+        "relative_change": "0.010605599027787887",
+        "abs_relative": "0.010605599027787887",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "dt",
+        "reference_id": "ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_v2_fix_F0_I4_dt005_r01_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "8.5225152024363338e-06",
+        "control_Y": "8.4173026264254662e-06",
+        "relative_change": "-0.012345249437723554",
+        "abs_relative": "0.012345249437723554",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "box",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "3.2905300735804187e-10",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F0_I4",
+        "component": "cap",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "7.8692328512171393e-06",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F0_I4",
+        "component": "mask",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "4.0727241048156057e-09",
+        "coverage": "transferred_to_4mu",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "time",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "1.3418375620569802e-08",
+        "coverage": "transferred_to_4mu",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "preparation",
+        "reference_id": "F1 mu CEP0",
+        "control_id": "ramp080;wait040",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "0",
+        "coverage": "not_applicable_DC_zero",
+        "note": ""
+      },
+      {
+        "condition": "F0_I4",
+        "component": "cep",
+        "reference_id": "four-phase mean",
+        "control_id": "two-phase or representative eight-phase",
+        "reference_Y": "8.9267955924903278e-06",
+        "control_Y": "",
+        "relative_change": "0.00031293236628900914",
+        "abs_relative": "0.00031293236628900914",
+        "coverage": "two_to_four_only",
+        "note": "representative 4->8 available only at F1/4mu"
+      },
+      {
+        "condition": "F0_I4",
+        "component": "energy_range",
+        "reference_id": "ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4_emaxplus",
+        "reference_Y": "8.5225152024363338e-06",
+        "control_Y": "8.5225152154604056e-06",
+        "relative_change": "1.5281957803821957e-09",
+        "abs_relative": "1.5281957803821957e-09",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "dx",
+        "reference_id": "ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p2_F1.000_I4_phi000_dx048_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "1.9181158525779612e-05",
+        "control_Y": "1.9498033793793964e-05",
+        "relative_change": "0.016520131856919355",
+        "abs_relative": "0.016520131856919355",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "dt",
+        "reference_id": "ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p2_F1.000_I4_phi000_dt005_r02_t100_eta0p05_dE0p0125_m2-4",
+        "reference_Y": "1.9181158525779612e-05",
+        "control_Y": "1.8742270382310299e-05",
+        "relative_change": "-0.022881211417936215",
+        "abs_relative": "0.022881211417936215",
+        "coverage": "direct",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "box",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "3.2905300735804187e-10",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F1_I4",
+        "component": "cap",
+        "reference_id": "mixed",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "7.8692328512171393e-06",
+        "coverage": "direct/transferred",
+        "note": "F0/4mu transferred as allowed by plan"
+      },
+      {
+        "condition": "F1_I4",
+        "component": "mask",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "4.0727241048156057e-09",
+        "coverage": "transferred_to_4mu",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "time",
+        "reference_id": "F0/F1 mu",
+        "control_id": "mixed",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "1.3418375620569802e-08",
+        "coverage": "transferred_to_4mu",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "preparation",
+        "reference_id": "F1 mu CEP0",
+        "control_id": "ramp080;wait040",
+        "reference_Y": "",
+        "control_Y": "",
+        "relative_change": "",
+        "abs_relative": "2.947705679477801e-08",
+        "coverage": "direct_at_mu;transferred_to_4mu",
+        "note": ""
+      },
+      {
+        "condition": "F1_I4",
+        "component": "cep",
+        "reference_id": "four-phase mean",
+        "control_id": "two-phase or representative eight-phase",
+        "reference_Y": "1.8916056753220843e-05",
+        "control_Y": "",
+        "relative_change": "0.00034226618201672952",
+        "abs_relative": "0.00034226618201672952",
+        "coverage": "direct_2to4; representative_4to8",
+        "note": "representative 4->8 available only at F1/4mu"
+      },
+      {
+        "condition": "F1_I4",
+        "component": "energy_range",
+        "reference_id": "ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4",
+        "control_id": "ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4_emaxplus",
+        "reference_Y": "1.9181158525779612e-05",
+        "control_Y": "1.9181158537548146e-05",
+        "relative_change": "6.1354654109130673e-10",
+        "abs_relative": "6.1354654109130673e-10",
+        "coverage": "direct",
+        "note": ""
+      }
+    ],
+    "all_conditions_pass": true,
+    "status": "PASS",
+    "note": "Conservative sum of absolute measured changes, not a confidence interval; transferred components are labelled."
+  },
+  "R2_reported_gate": {
+    "schema": "continuation-v2-R2-gate",
+    "probes": {
+      "bias_v2_probe_F0_I8_phi000_r01": {
+        "status": "INCOMPLETE"
+      },
+      "bias_v2_probe_F1_I8_phi000_r01": {
+        "status": "INCOMPLETE"
+      },
+      "bias_v2_probe_F0_I32_phi000_r01": {
+        "wall_seconds": 940.1644073000643,
+        "peak_working_set_bytes": 130719744,
+        "Y_diagnostic_eta01": 0.05500016457217915,
+        "Y_main_eta005": 0.05501353250754793,
+        "right_CAP_fraction": 0.007569891746706372,
+        "budget_residual": 1.2531198301246604e-11,
+        "execution_status": "PASS",
+        "cap_warning": true
+      },
+      "bias_v2_probe_F1_I32_phi000_r01": {
+        "status": "INCOMPLETE"
+      }
+    },
+    "controls": {
+      "F0_dx048": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01",
+        "Y": 0.0552961884233884,
+        "relative_change": 0.005137934303740355,
+        "pass": true
+      },
+      "F0_dt005": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01",
+        "Y": 0.055380622785491856,
+        "relative_change": 0.006672726894851917,
+        "pass": true
+      },
+      "F0_box900": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_box900_r01",
+        "Y": 0.05542962818899918,
+        "relative_change": 0.007563515056848221,
+        "pass": true
+      },
+      "F0_caphalf": {
+        "status": "missing"
+      }
+    },
+    "eta32_relative": {
+      "F0": 8.810808339775076e-05
+    },
+    "grid32_relative": {},
+    "controls_pass": false,
+    "cap_warning_present": true,
+    "cap_mitigated_by_box": false,
+    "estimated_library_hours": null,
+    "status": "INCOMPLETE"
+  },
+  "source_files": {
+    "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv": {
+      "bytes": 31537,
+      "sha256": "b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/summary.json": {
+      "bytes": 2030,
+      "sha256": "33c792323335130d1858a272f78dfac4f287abf1868f5258556a11011a08aaed"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_box900_r01/config.json": {
+      "bytes": 7487,
+      "sha256": "a881d372e12372ba4b95f2791edf2e183f361d01113fa3278b0e85a5862b7d51"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/summary.json": {
+      "bytes": 2035,
+      "sha256": "16fbc41250210be6fb4cafe8df2631e2aa47a76a048c0762ca427b3ba1fef871"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dt005_r01/config.json": {
+      "bytes": 7484,
+      "sha256": "4b2fc4dea17c6961ba8f8edb0fd508298747e932c061ded5c5c10f990c551bbe"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dx048_r01/summary.json": {
+      "bytes": 2037,
+      "sha256": "8d44790fddb20d36d29620e280ec632c25ef7b98523c0d1f7122be58c5578ba4"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_dx048_r01/config.json": {
+      "bytes": 7483,
+      "sha256": "971c92ea6b672affa01579d44141ee6d6c2446be2399508eb38e225a01297929"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_r01/summary.json": {
+      "bytes": 2026,
+      "sha256": "e9734c926c10fd5a77c2b7fa733dd1e02a55e0d32385a96e35f5cd700de64871"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I32_phi000_r01/config.json": {
+      "bytes": 7457,
+      "sha256": "54fd3bb9917bc177998f8f72885215e597ab11a5a653b7e14d7341ba7b9ea966"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I8_phi000_r01/summary.json": {
+      "bytes": 2038,
+      "sha256": "005d70dfd966f4a0ae9451ada0a3f619a39cdc8a58e263e9e6c7c8518e0de906"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F0_I8_phi000_r01/config.json": {
+      "bytes": 7455,
+      "sha256": "4cc1a3084c900535edc3ef1c537165d24ec3c6f29a826db952df5811437a811b"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_box900_r01/summary.json": {
+      "bytes": 2024,
+      "sha256": "c194d300aea7929e66e4fef61a9c7f660e11ce7b30efa7fb016f7312f2fb6bfe"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_box900_r01/config.json": {
+      "bytes": 7487,
+      "sha256": "211acd3f9e0310a0441b58b0d01ba18a31787b0a70936894eb35d45a3239483d"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_caphalf_r01/summary.json": {
+      "bytes": 2020,
+      "sha256": "ae3957b42fd9128746efa91dbcba6cba7ad0ebe96b4d89a09ee9f0aa25c8f567"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_caphalf_r01/config.json": {
+      "bytes": 7491,
+      "sha256": "697d1048353fc6933ae0ac64ede585255c38ef785f590110cf131b30d56300a2"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_dt005_r01/summary.json": {
+      "bytes": 2024,
+      "sha256": "7bbe2f0d09a97a2c1dbeb6bb1f6a387756fd4cb768cedc363813e45e98c74f26"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_dt005_r01/config.json": {
+      "bytes": 7484,
+      "sha256": "104ddb4792e84365be85b41802898dce1f60b4571955aa80eff92a8bb896cc51"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_dx048_r01/summary.json": {
+      "bytes": 2021,
+      "sha256": "d9deec1b5bda95e65f0dfaadf6e8bf7bce588a352c0a2dc93df22a1ba8898e72"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_dx048_r01/config.json": {
+      "bytes": 7483,
+      "sha256": "efe5c6b266d6125e9440e0ca7ddc9bfa9392c7245de25081d14db8dc7360804b"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_r01/summary.json": {
+      "bytes": 2010,
+      "sha256": "432c2b35f6195c81a5f7794aa5224f4051ef304880f7bbfd572c57776b292577"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I32_phi000_r01/config.json": {
+      "bytes": 7457,
+      "sha256": "59e45090ad73f5b50d9be05e021a9fa8e9d2c0659284b09e577738860a1eb5b5"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I8_phi000_r01/summary.json": {
+      "bytes": 2040,
+      "sha256": "d20e64742c559744d89b2a372d10d6c4db668f0650d1ce94246fa25a3cc23d22"
+    },
+    "QL-TIP-1D/results/bias_v2/runs/bias_v2_probe_F1_I8_phi000_r01/config.json": {
+      "bytes": 7455,
+      "sha256": "fb1b71bba860a858ec7a7abb4bf0c778a24ad59be5c07167c4b6cfda0f211eb2"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_box900_r01_t100_eta0p05_dE0p0125_m2-4/summary.json": {
+      "bytes": 1791,
+      "sha256": "eb57ca1d1d852d0f9a99fc7a0641cb7d1f13b6cd58b6bb9e3b4530c2258626ba"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dt005_r01_t100_eta0p05_dE0p0125_m2-4/summary.json": {
+      "bytes": 1789,
+      "sha256": "8dd11cba5667387c59a1422c4113034e37709aa98685007b2a52af2a275247eb"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_dx048_r01_t100_eta0p05_dE0p0125_m2-4/summary.json": {
+      "bytes": 1787,
+      "sha256": "208cfe1116cd653590fa8f8877c172e0696aa2597925d6dd7e91cf2588e3ec59"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p025_dE0p00625_m2-4/summary.json": {
+      "bytes": 1775,
+      "sha256": "68e6a923d356a36241359e2299eb966946f62e9f9322b0519b20ba4e03eed88e"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4/summary.json": {
+      "bytes": 1775,
+      "sha256": "f8f958bd2a5b93a83bf90d96ebb4919dc5a35c991556357bd8f7a2a92f083eb0"
+    },
+    "QL-TIP-1D/results/bias_v2/readouts/ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4_emaxplus/summary.json": {
+      "bytes": 1778,
+      "sha256": "a82a5862de93c6291043a6d832513952b315a7b03b96226938c180900b3a5afd"
+    },
+    "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json": {
+      "bytes": 18509,
+      "sha256": "7496deaa8139a9f163f8614770951a8c543d0e5f2039b042b8a7c47d3138acc8"
+    },
+    "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json": {
+      "bytes": 1579,
+      "sha256": "d61a0b4a508898474b566152dd5f3f5be6a191e5ceec796ccfa3d7e50157c88c"
+    },
+    "QL-TIP-1D/reports/evening_status.md": {
+      "bytes": 3601,
+      "sha256": "622c23829ef23cd3be6fd97884660555ed76a46e09089003415497118ace0517"
+    },
+    "QL-TIP-1D/scripts/run_continuation_v2.py": {
+      "bytes": 36287,
+      "sha256": "7c526cd66197be9d9360a4bf7647f4623a0c215a68e5861c096e4c328597e567"
+    },
+    "QL-TIP-1D/scripts/readout_continuation_v2.py": {
+      "bytes": 9296,
+      "sha256": "b452f742e0a6d1724b095533c5e1179be551a74aac83bbff24e00007c80ac825"
+    },
+    "QL-TIP-1D/scripts/analyze_continuation_v2.py": {
+      "bytes": 18245,
+      "sha256": "b0bb1158c59f6dae1631db52d810bb00b41fc0e21d618d0e2edead0234a3ace4"
+    },
+    "QL-TIP-1D/scripts/analyze_high_intensity_v2.py": {
+      "bytes": 5554,
+      "sha256": "ff41877e1d5e73058365a8466d7fdd07adf557d91e2d207ab572e0f8a4890a78"
+    },
+    "QL-TIP-1D/scripts/analyze_statistics_v2.py": {
+      "bytes": 16479,
+      "sha256": "90d6a678fba285fd0f2262ffec9fe35d546495c6b00c83af1cb249411ae9b646"
+    },
+    "QL-TIP-1D/src/ql_tip_1d/continuation_v2.py": {
+      "bytes": 16932,
+      "sha256": "9d33c6282f7dbeaaef9c0f51800059f752588e66b0dec015c1f49f173b7b1695"
+    },
+    "QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md": {
+      "bytes": 40898,
+      "sha256": "3619e5fc5bd28e4273ab1a2c543b2b63d5f0d0d8bf13b9ae4a4b069a2546bf8e"
+    },
+    "QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md": {
+      "bytes": 17611,
+      "sha256": "19ccca5837f7e05696300f7081896759a6330fd8b2f40c320cf608509a70089e"
+    }
+  }
+}

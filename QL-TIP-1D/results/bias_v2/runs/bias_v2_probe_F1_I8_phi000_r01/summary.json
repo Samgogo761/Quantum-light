@@ -1,0 +1,58 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9996553906147185,
+  "N_125fs": 0.9996553906147185,
+  "left_CAP_loss_observation_100fs": 0.00034460937212487866,
+  "right_CAP_loss_observation_100fs": 2.156313284473597e-18,
+  "left_CAP_loss_total_125fs": 0.00034460937212488023,
+  "right_CAP_loss_total_125fs": 2.156313284473597e-18,
+  "signed_flux_100fs": 0.0018889262971339277,
+  "signed_flux_125fs": 0.0018889262971339277,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3156586931017955e-11,
+  "Y_H": 0.0006528734585512591,
+  "Y_H_lower": 0.0007423006579264082,
+  "Y_H_upper": 0.0005784934162700145,
+  "masked_norm": 0.0018889267603763268,
+  "spectrum_integral": 0.0018889267251051614,
+  "propagation_seconds": 869.0749117999803,
+  "spectrum_seconds": 44.40205799997784,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        87.375
+      ],
+      "energy_points": 4376,
+      "masked_norm": 0.0018889267603763268,
+      "spectrum_integral": 0.0018889267251051614,
+      "spectrum_norm_absolute_difference": 3.527116532869856e-11,
+      "Y_H_lower": 0.0007423006579264082,
+      "Y_H_main": 0.0006528734585512591,
+      "Y_H_upper": 0.0005784934162700145
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_probe_F1_I8_phi000_r01",
+  "I_over_mu": 8.0,
+  "I_inc_W_per_cm2": 1333333333333.3333,
+  "wall_seconds": 913.7453610000666,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "3f13bcce4821c98adebcb6c0eabb00af526af311d077878de530f8db07c32c2a",
+  "peak_working_set_bytes": 131923968
+}

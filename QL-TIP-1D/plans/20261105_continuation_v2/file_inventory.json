@@ -1,0 +1,59 @@
+{
+  "status": "documentation_only",
+  "files": [
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md",
+      "bytes": 40898,
+      "sha256": "3619e5fc5bd28e4273ab1a2c543b2b63d5f0d0d8bf13b9ae4a4b069a2546bf8e",
+      "role": "new_plan"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/START_HERE.md",
+      "bytes": 4472,
+      "sha256": "5dcf83f574b8cacd2ffe33a807010513e109c725056711ba295af2c9a94f6294",
+      "role": "new_plan"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/TASK_MANIFEST.json",
+      "bytes": 64342,
+      "sha256": "2cc408950a3ef5d713f8e6144e70313e3f16b287a523d5dea7d62b1b75309c0e",
+      "role": "new_plan"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/PLAN_REVIEW.md",
+      "bytes": 5114,
+      "sha256": "bb73c2fbffbb7f9acc47fabe7ac1ec7a87d595e9f6816f181a42f3715cfe07c8",
+      "role": "new_plan"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/build_plan_manifest.py",
+      "bytes": 10399,
+      "sha256": "c5436d410bf061bdb5b33c567a4facde5756cd118e41e80ef247641c09a9dd95",
+      "role": "new_plan"
+    },
+    {
+      "path": "QL-TIP-1D/reports/STATUS_REVIEW_20261105.md",
+      "bytes": 11141,
+      "sha256": "95c87b8e92df37c34611f455fde73cc571a2ffd63db124f354e017d9d759c08f",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md",
+      "bytes": 40491,
+      "sha256": "3932679f223170d1c6a3867465fd55b133076adfb2b31ca2f7f93228790abaaf",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/P2_pilot.json",
+      "bytes": 3564,
+      "sha256": "e9f67af55917ff47b9788a367010541c30cd1e88ba1d3e058f9fcecb231cf556",
+      "role": "read_only_evidence"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v1/P2_error_budget.json",
+      "bytes": 1324,
+      "sha256": "e3387ce38db086ae98b1be7c823b743628536ed4fc27caf803c8d41dc1b11246",
+      "role": "read_only_evidence"
+    }
+  ]
+}

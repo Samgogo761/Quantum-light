@@ -182,22 +182,28 @@ def read_header_text(path: Path, nrpts: int) -> list[str]:
 # --------------------------------------------------------------------------- #
 # Mapping
 # --------------------------------------------------------------------------- #
-def build_wf_metadata(nwann: int) -> dict:
+def build_wf_metadata(
+    nwann: int,
+    n_cr_atoms: int = N_CR_ATOMS,
+    cr_wf_per_atom: int = CR_WF_PER_ATOM,
+    i_wf_per_atom: int = I_WF_PER_ATOM,
+) -> dict:
     species = np.empty(nwann, dtype="U2")
     atom = np.empty(nwann, dtype=int)
     intra = np.empty(nwann, dtype=int)
     parity = np.empty(nwann, dtype=int)
+    n_cr_wf = n_cr_atoms * cr_wf_per_atom
     for a in range(nwann):
-        if a < N_CR_ATOMS * CR_WF_PER_ATOM:
+        if a < n_cr_wf:
             species[a] = "Cr"
-            atom[a] = a // CR_WF_PER_ATOM
-            intra[a] = a % CR_WF_PER_ATOM
+            atom[a] = a // cr_wf_per_atom
+            intra[a] = a % cr_wf_per_atom
             parity[a] = +1
         else:
-            b = a - N_CR_ATOMS * CR_WF_PER_ATOM
+            b = a - n_cr_wf
             species[a] = "I"
-            atom[a] = N_CR_ATOMS + b // I_WF_PER_ATOM
-            intra[a] = b % I_WF_PER_ATOM
+            atom[a] = n_cr_atoms + b // i_wf_per_atom
+            intra[a] = b % i_wf_per_atom
             parity[a] = -1
     return {"species": species, "atom": atom, "intra": intra, "parity": parity}
 
@@ -359,6 +365,10 @@ def main() -> None:
     ap.add_argument("--center", default="0.499998583,0.333333067,0.372004766")
     ap.add_argument("--out", type=Path, default=None, help="Write the -N tb.dat here")
     ap.add_argument("--gate-tol", type=float, default=1e-9)
+    ap.add_argument("--n-cr-atoms", type=int, default=N_CR_ATOMS)
+    ap.add_argument("--cr-wf-per-atom", type=int, default=CR_WF_PER_ATOM)
+    ap.add_argument("--i-wf-per-atom", type=int, default=I_WF_PER_ATOM,
+                    help="6 for full112; 2 for M52/M64 (pz only); 4 for M88 (px+py)")
     args = ap.parse_args()
 
     center = np.array([float(x) for x in args.center.split(",")], dtype=float)
@@ -370,7 +380,12 @@ def main() -> None:
     centers_cart = parse_final_centers(args.plus_wout)
     centers_frac = (centers_cart @ np.linalg.inv(lattice)) % 1.0
     nwann = centers_frac.shape[0]
-    meta = build_wf_metadata(nwann)
+    meta = build_wf_metadata(
+        nwann,
+        n_cr_atoms=args.n_cr_atoms,
+        cr_wf_per_atom=args.cr_wf_per_atom,
+        i_wf_per_atom=args.i_wf_per_atom,
+    )
     perm, diag = build_permutation(centers_frac, meta, center)
 
     print(f"\n[A] nwann={nwann}, natoms={diag['natoms']}")

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "original_path": "QL-TIP-1D/scripts/estimate_acceptance_path.py",
+      "old_sha256": "7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252",
+      "current_sha256": "118a0910603b611b3e41660ac1c87b0f85a6bdd6f787317130529b5a9f8637c3",
+      "history_path": "Q-MATH/history/by_sha256/7482232d91d8e2aae42973f0de9b7914b900e5305a138790bf886f67dcd4e252.py",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/reports/MINIMAL_ACCEPTANCE_PATH_20261108.md",
+      "old_sha256": "82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555",
+      "current_sha256": "9dd365b4832b154179ae4a9eff48cf94cb6136128872a72d85eb73eb6428c8d5",
+      "history_path": "Q-MATH/history/by_sha256/82544200333365a411221d140bcb5210d7098257087532e69c1e1c14fc039555.md",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    },
+    {
+      "original_path": "QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json",
+      "old_sha256": "d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686",
+      "current_sha256": "7731bfa525da09e38d1f4687413533b2c64044d07029784a876d23a7f7ec96d2",
+      "history_path": "Q-MATH/history/by_sha256/d11fd989eaf827039034407ab363221e48567315d52aaf365d1b271169622686.json",
+      "git_commit": "history-resolved-by-blob",
+      "purpose": "preserve original bytes while active path changes"
+    }
+  ]
+}

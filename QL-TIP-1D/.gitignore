@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+references/extracted/
+references/downloads/
+figures_preview/
+!data/
+!data/**/
+!data/**/*.csv
+!data/**/*.npz
+!results/
+!results/**
+!logs/
+!logs/*.log

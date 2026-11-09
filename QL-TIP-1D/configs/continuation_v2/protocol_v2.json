@@ -1,0 +1,60 @@
+{
+  "protocol_id": "ql-tip-1d-continuation-v2",
+  "date": "2026-11-05",
+  "inherits": "41e26d1 and 641bdef; continuation plan 20261105_continuation_v2",
+  "status": "active_execution_protocol_pending_R1_gate",
+  "physics_frozen": true,
+  "model": "1D single-electron finite well + screened DC + integrated optical near field; no QED/3D/band/multi-electron extension",
+  "wavelength_nm": 1600.0,
+  "pulse_intensity_fwhm_fs": 25.0,
+  "enhancement_apex_over_incident": 9.0,
+  "mu_I_apex_W_per_cm2": 1.5e12,
+  "L_dc_nm": 20.0,
+  "well_width_nm": 0.135,
+  "well_depth_eV": 10.8,
+  "thresholds_eV": {
+    "low": 0.5170816,
+    "main": 0.7170816,
+    "high": 0.9170816
+  },
+  "cep_rad": [0.0, 1.5707963267948966, 3.141592653589793, 4.71238898038469],
+  "cep_rule": "equal-weight unconstrained global phase; same rule for coherent, BSV and thermal",
+  "readout_candidate": {
+    "eta_eV": 0.05,
+    "step_eV": 0.0125,
+    "eta_control_eV": 0.025,
+    "step_control_eV": 0.00625,
+    "fixed_eta_grid_control_eV": 0.00625,
+    "fixed_eta_control_step_eV": 0.003125,
+    "mask_default_nm": [2.0, 4.0],
+    "mask_control_nm": [3.0, 5.0]
+  },
+  "preparation_checks": {
+    "default_ramp_wait_fs": [40.0, 20.0],
+    "F1_control_ramp_wait_fs": [[80.0, 20.0], [40.0, 40.0]],
+    "pre_laser_loss_max": 0.01
+  },
+  "budget": {
+    "global_tdse_attempts": 240,
+    "global_science_hours": 72.0,
+    "continuation_tdse_attempts": 112,
+    "continuation_science_hours": 40.0,
+    "repair_tdse_attempts": 12,
+    "repair_science_hours": 8.0,
+    "mandatory_repair_tdse": 4,
+    "maximum_single_event_minutes": 90.0,
+    "maximum_batch_tdse": 8,
+    "historical_completed_tdse": 48,
+    "historical_summary_wall_hours": 13.117235553083399,
+    "historical_unknown_reserve_hours": 1.0
+  },
+  "scope": {
+    "biases_V_per_nm": [0.0, 1.0],
+    "library_nodes_I_over_mu": [0, 0.25, 0.5, 1, 2, 4, 8, 12, 20, 32],
+    "maximum_I_over_mu": 64,
+    "maximum_nonzero_nodes_per_bias": 12,
+    "four_bias_P4_authorized": false,
+    "server_authorized": false,
+    "remote_push_authorized": false
+  }
+}

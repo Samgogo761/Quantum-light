@@ -803,11 +803,13 @@ contains
 
             rho_new = rho_k + (dt / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
 
-            ! --- Dephasing ---
-            if (mod(it, n_dt_deph) == 0) then
-              call apply_instantaneous_dephasing(Ht_next, rho_new, Wmat, eig_tmp, &
-                                                 tmp_mat, rho_band, work_d, rwork_d, &
-                                                 iwork_d, info_d)
+            ! --- Dephasing (skipped entirely when dephasing_enabled=.false.) ---
+            if (dephasing_enabled) then
+              if (mod(it, n_dt_deph) == 0) then
+                call apply_instantaneous_dephasing(Ht_next, rho_new, Wmat, eig_tmp, &
+                                                   tmp_mat, rho_band, work_d, rwork_d, &
+                                                   iwork_d, info_d)
+              end if
             end if
 
             rho(:,:,ikx,iky) = rho_new
@@ -1062,32 +1064,34 @@ contains
         call lg_covariant_rhs_all(E_next, rho_stage, k4)
         rho_new = rho + (dt / 6.0_dp) * (k1 + 2.0_dp*k2 + 2.0_dp*k3 + k4)
 
-        !$OMP PARALLEL DEFAULT(shared) &
-        !$OMP PRIVATE(ikx, iky, info_d, Ht_next, Wmat, eig_tmp, tmp_mat, rho_band, &
-        !$OMP         work_d, rwork_d, iwork_d)
-        allocate(Ht_next(n_trunc,n_trunc), Wmat(n_trunc,n_trunc), eig_tmp(n_trunc))
-        allocate(tmp_mat(n_trunc,n_trunc), rho_band(n_trunc,n_trunc))
-        allocate(work_d(lwork_d), rwork_d(lrwork_d), iwork_d(liwork_d))
+        if (dephasing_enabled) then
+          !$OMP PARALLEL DEFAULT(shared) &
+          !$OMP PRIVATE(ikx, iky, info_d, Ht_next, Wmat, eig_tmp, tmp_mat, rho_band, &
+          !$OMP         work_d, rwork_d, iwork_d)
+          allocate(Ht_next(n_trunc,n_trunc), Wmat(n_trunc,n_trunc), eig_tmp(n_trunc))
+          allocate(tmp_mat(n_trunc,n_trunc), rho_band(n_trunc,n_trunc))
+          allocate(work_d(lwork_d), rwork_d(lrwork_d), iwork_d(liwork_d))
 
-        !$OMP DO COLLAPSE(2) SCHEDULE(dynamic)
-        do iky = 1, nky
-          do ikx = 1, nkx
-            if (mod(it, n_dt_deph) == 0) then
-              call build_lg_hamiltonian(ikx, iky, E_next, Ht_next)
-              call apply_instantaneous_dephasing(Ht_next, rho_new(:,:,ikx,iky), &
-                                                 Wmat, eig_tmp, tmp_mat, rho_band, &
-                                                 work_d, rwork_d, iwork_d, info_d)
-            else
-              rho_new(:,:,ikx,iky) = 0.5_dp * &
-                (rho_new(:,:,ikx,iky) + conjg(transpose(rho_new(:,:,ikx,iky))))
-            end if
+          !$OMP DO COLLAPSE(2) SCHEDULE(dynamic)
+          do iky = 1, nky
+            do ikx = 1, nkx
+              if (mod(it, n_dt_deph) == 0) then
+                call build_lg_hamiltonian(ikx, iky, E_next, Ht_next)
+                call apply_instantaneous_dephasing(Ht_next, rho_new(:,:,ikx,iky), &
+                                                   Wmat, eig_tmp, tmp_mat, rho_band, &
+                                                   work_d, rwork_d, iwork_d, info_d)
+              else
+                rho_new(:,:,ikx,iky) = 0.5_dp * &
+                  (rho_new(:,:,ikx,iky) + conjg(transpose(rho_new(:,:,ikx,iky))))
+              end if
+            end do
           end do
-        end do
-        !$OMP END DO
+          !$OMP END DO
 
-        deallocate(Ht_next, Wmat, eig_tmp, tmp_mat, rho_band)
-        deallocate(work_d, rwork_d, iwork_d)
-        !$OMP END PARALLEL
+          deallocate(Ht_next, Wmat, eig_tmp, tmp_mat, rho_band)
+          deallocate(work_d, rwork_d, iwork_d)
+          !$OMP END PARALLEL
+        end if
 
         rho = rho_new
       end if

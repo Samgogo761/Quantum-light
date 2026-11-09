@@ -1,0 +1,13 @@
+&INPUTPP
+    outdir = './temp_nscf576/'
+    prefix = 'CrI3_scf_soc'
+    seedname = 'CrI3_112large'
+    spin_component = 'none'
+    wan_mode = 'standalone'
+    write_mmn = .true.
+    write_amn = .true.
+    write_eig = .true.
+    write_unk = .false.
+    write_spn = .false.
+    regular_mesh = .true.
+/

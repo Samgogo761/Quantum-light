@@ -1,0 +1,245 @@
+{
+  "scope": "Reduced 2x2 electronic states for each of two k sectors, sharing exactly ONE quantum photon mode; pre-asymptotic cavity toy truncated at fixed A=0 basis; NOT gauge-preserving downfolding, NOT full 36x36 dynamics, NOT BSV input/output.",
+  "cases": [
+    {
+      "nmax": 8,
+      "gp": 0.0,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 36,
+      "E0": -6.705443877039701,
+      "exc_gap": 0.0925466765612919,
+      "mean_bare_photon_number": 0.0,
+      "X_mean": 0.0,
+      "top_fock_probability": 0.0,
+      "photon_tail_last3": 0.0
+    },
+    {
+      "nmax": 12,
+      "gp": 0.0,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 52,
+      "E0": -6.705443877039701,
+      "exc_gap": 0.0925466765612919,
+      "mean_bare_photon_number": 0.0,
+      "X_mean": 0.0,
+      "top_fock_probability": 0.0,
+      "photon_tail_last3": 0.0
+    },
+    {
+      "nmax": 16,
+      "gp": 0.0,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 68,
+      "E0": -6.705443877039701,
+      "exc_gap": 0.0925466765612919,
+      "mean_bare_photon_number": 0.0,
+      "X_mean": 0.0,
+      "top_fock_probability": 0.0,
+      "photon_tail_last3": 0.0
+    },
+    {
+      "nmax": 24,
+      "gp": 0.0,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 100,
+      "E0": -6.705443877039701,
+      "exc_gap": 0.09254667656129012,
+      "mean_bare_photon_number": 0.0,
+      "X_mean": 0.0,
+      "top_fock_probability": 0.0,
+      "photon_tail_last3": 0.0
+    },
+    {
+      "nmax": 8,
+      "gp": 0.005,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 36,
+      "E0": -6.7057814672423985,
+      "exc_gap": 0.0875226032071117,
+      "mean_bare_photon_number": 0.006341211948658643,
+      "X_mean": 7.113213640835247e-08,
+      "top_fock_probability": 3.753963967006252e-18,
+      "photon_tail_last3": 3.838174344452732e-14
+    },
+    {
+      "nmax": 12,
+      "gp": 0.005,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 52,
+      "E0": -6.705781467242398,
+      "exc_gap": 0.08752260320710992,
+      "mean_bare_photon_number": 0.006341211948658643,
+      "X_mean": 7.11321364145263e-08,
+      "top_fock_probability": 5.21244301877549e-26,
+      "photon_tail_last3": 4.507705296136496e-22
+    },
+    {
+      "nmax": 16,
+      "gp": 0.005,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 68,
+      "E0": -6.705781467242398,
+      "exc_gap": 0.08752260320711258,
+      "mean_bare_photon_number": 0.0063412119486586415,
+      "X_mean": 7.113213639915838e-08,
+      "top_fock_probability": 7.524233311658097e-34,
+      "photon_tail_last3": 6.150039234647737e-30
+    },
+    {
+      "nmax": 24,
+      "gp": 0.005,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 100,
+      "E0": -6.705781467242399,
+      "exc_gap": 0.08752260320711258,
+      "mean_bare_photon_number": 0.006341211948658642,
+      "X_mean": 7.113213639921178e-08,
+      "top_fock_probability": 2.234044479752025e-49,
+      "photon_tail_last3": 1.6354498862024318e-45
+    },
+    {
+      "nmax": 8,
+      "gp": 0.015,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 36,
+      "E0": -6.708485979212577,
+      "exc_gap": 0.06354600453075765,
+      "mean_bare_photon_number": 0.055533579874092326,
+      "X_mean": 8.230494401906332e-07,
+      "top_fock_probability": 2.7311336851180266e-11,
+      "photon_tail_last3": 8.709896013013463e-09
+    },
+    {
+      "nmax": 12,
+      "gp": 0.015,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 52,
+      "E0": -6.708485979214835,
+      "exc_gap": 0.06354600450556269,
+      "mean_bare_photon_number": 0.05553357995412969,
+      "X_mean": 8.23049397599799e-07,
+      "top_fock_probability": 1.4314970345116719e-15,
+      "photon_tail_last3": 2.0308933570789424e-13
+    },
+    {
+      "nmax": 16,
+      "gp": 0.015,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 68,
+      "E0": -6.708485979214833,
+      "exc_gap": 0.06354600450555559,
+      "mean_bare_photon_number": 0.05553357995413101,
+      "X_mean": 8.230493970343848e-07,
+      "top_fock_probability": 6.838768193953363e-20,
+      "photon_tail_last3": 1.0063425140249035e-17
+    },
+    {
+      "nmax": 24,
+      "gp": 0.015,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 100,
+      "E0": -6.708485979214835,
+      "exc_gap": 0.06354600450555914,
+      "mean_bare_photon_number": 0.05553357995413106,
+      "X_mean": 8.230493970904364e-07,
+      "top_fock_probability": 2.185034772032926e-28,
+      "photon_tail_last3": 2.879345653137263e-26
+    },
+    {
+      "nmax": 8,
+      "gp": 0.025,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 36,
+      "E0": -6.711598695282971,
+      "exc_gap": 0.04499165583008846,
+      "mean_bare_photon_number": 0.12585001736599064,
+      "X_mean": -8.335457700309241e-07,
+      "top_fock_probability": 1.506042578880669e-08,
+      "photon_tail_last3": 1.7678655330568375e-06
+    },
+    {
+      "nmax": 12,
+      "gp": 0.025,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 52,
+      "E0": -6.711598701127634,
+      "exc_gap": 0.04499163114185034,
+      "mean_bare_photon_number": 0.12585023994479308,
+      "X_mean": -8.335609310482472e-07,
+      "top_fock_probability": 8.123711766965811e-12,
+      "photon_tail_last3": 3.121821931690704e-10
+    },
+    {
+      "nmax": 16,
+      "gp": 0.025,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 68,
+      "E0": -6.711598701130487,
+      "exc_gap": 0.04499163112838289,
+      "mean_bare_photon_number": 0.12585024005963824,
+      "X_mean": -8.3356096890366e-07,
+      "top_fock_probability": 1.0490378638260413e-14,
+      "photon_tail_last3": 3.3486121555263517e-13
+    },
+    {
+      "nmax": 24,
+      "gp": 0.025,
+      "gap_bright": [
+        0.09254667656128435,
+        0.09254667656129056
+      ],
+      "H_dimension": 100,
+      "E0": -6.711598701130488,
+      "exc_gap": 0.04499163112837046,
+      "mean_bare_photon_number": 0.12585024005972695,
+      "X_mean": -8.335609686513883e-07,
+      "top_fock_probability": 1.4907495426379823e-20,
+      "photon_tail_last3": 4.641954026876496e-19
+    }
+  ]
+}

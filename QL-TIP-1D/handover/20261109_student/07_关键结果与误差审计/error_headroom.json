@@ -1,0 +1,378 @@
+{
+  "schema": "ql-tip-1d-error-headroom-v5",
+  "note": "weighted shares are diagnostic; setting a term to zero here is not a scientific update",
+  "channels": {
+    "bsv_F0": {
+      "Y": 1.1509166381084221e-05,
+      "response_relative": 0.11528452018183186,
+      "top_contributions": [
+        {
+          "I_over_mu": 12.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.7938699052540983e-07,
+          "share_of_response": 0.13519980935688605
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.6044382633045009e-07,
+          "share_of_response": 0.1209227863672397
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.4486579492829405e-07,
+          "share_of_response": 0.10918198582446706
+        },
+        {
+          "I_over_mu": 20.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.4214594977824e-07,
+          "share_of_response": 0.10713210169022451
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.3530795388788924e-07,
+          "share_of_response": 0.10197846296731143
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "dt",
+          "evidence_type": "direct_at_J",
+          "weighted_absolute": 4.314558857556675e-08,
+          "share_of_response": 0.032517828260132345
+        },
+        {
+          "I_over_mu": 12.0,
+          "component": "eta",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 4.155854391024732e-08,
+          "share_of_response": 0.03132170954737844
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 3.90939726936308e-08,
+          "share_of_response": 0.0294642194492555
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "eta",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 3.356102625941323e-08,
+          "share_of_response": 0.025294166197918317
+        },
+        {
+          "I_over_mu": 20.0,
+          "component": "eta",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 3.2930920342777194e-08,
+          "share_of_response": 0.02481926999973626
+        }
+      ],
+      "hypothetical": {
+        "20mu_cep_zero": {
+          "removed_absolute": 1.4214594977824e-07,
+          "remaining_relative": 0.10293384724240309,
+          "reduction_percentage_points": 1.235067293942875
+        },
+        "8mu_dt_zero": {
+          "removed_absolute": 4.314558857556675e-08,
+          "remaining_relative": 0.11153571795350728,
+          "reduction_percentage_points": 0.374880222832457
+        },
+        "both_zero": {
+          "removed_absolute": 1.8529153835380675e-07,
+          "remaining_relative": 0.09918504501407854,
+          "reduction_percentage_points": 1.6099475167753319
+        }
+      }
+    },
+    "thermal_F0": {
+      "Y": 1.7925095533132838e-06,
+      "response_relative": 0.11153104804104946,
+      "top_contributions": [
+        {
+          "I_over_mu": 6.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 5.0758925517535997e-08,
+          "share_of_response": 0.25389559030582526
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 3.173213629259631e-08,
+          "share_of_response": 0.1587237986921189
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 2.5838886432177198e-08,
+          "share_of_response": 0.12924582734274692
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "eta",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.1759308904057292e-08,
+          "share_of_response": 0.058819934530582346
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 9.651075926223171e-09,
+          "share_of_response": 0.04827457623247419
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 8.91836175798201e-09,
+          "share_of_response": 0.04460954797637445
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "dx",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 7.66161666210577e-09,
+          "share_of_response": 0.03832332275138987
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "eta",
+          "evidence_type": "direct_at_4mu",
+          "weighted_absolute": 7.351376906537818e-09,
+          "share_of_response": 0.036771506887024345
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "dt",
+          "evidence_type": "direct_at_J",
+          "weighted_absolute": 6.948437897245104e-09,
+          "share_of_response": 0.03475601036934738
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "dt",
+          "evidence_type": "direct_at_4mu",
+          "weighted_absolute": 5.575347939806067e-09,
+          "share_of_response": 0.02788782941924937
+        }
+      ],
+      "hypothetical": {
+        "20mu_cep_zero": {
+          "removed_absolute": 8.958646916949983e-10,
+          "remaining_relative": 0.1110312656605098,
+          "reduction_percentage_points": 0.04997823805396615
+        },
+        "8mu_dt_zero": {
+          "removed_absolute": 6.948437897245104e-09,
+          "remaining_relative": 0.10765467377883056,
+          "reduction_percentage_points": 0.3876374262218896
+        },
+        "both_zero": {
+          "removed_absolute": 7.844302588940102e-09,
+          "remaining_relative": 0.10715489139829089,
+          "reduction_percentage_points": 0.43761566427585574
+        }
+      }
+    },
+    "bsv_F1": {
+      "Y": 1.9228061793642173e-05,
+      "response_relative": 0.11238228558981202,
+      "top_contributions": [
+        {
+          "I_over_mu": 12.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 2.572477762055024e-07,
+          "share_of_response": 0.1190469462821939
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 2.4824527039814515e-07,
+          "share_of_response": 0.11488084292043944
+        },
+        {
+          "I_over_mu": 20.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 2.378400537301606e-07,
+          "share_of_response": 0.11006560491139016
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 2.20846826779015e-07,
+          "share_of_response": 0.1022016233219124
+        },
+        {
+          "I_over_mu": 12.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.687548305403793e-07,
+          "share_of_response": 0.07809493066386149
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "dt",
+          "evidence_type": "direct_at_J",
+          "weighted_absolute": 1.6799543393805063e-07,
+          "share_of_response": 0.07774350353839596
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.6284917660482992e-07,
+          "share_of_response": 0.07536196217256172
+        },
+        {
+          "I_over_mu": 20.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.5602334276695473e-07,
+          "share_of_response": 0.07220316062249674
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.448757667732018e-07,
+          "share_of_response": 0.06704437985447627
+        },
+        {
+          "I_over_mu": 12.0,
+          "component": "dx",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 6.048364194024343e-08,
+          "share_of_response": 0.027990107355717525
+        }
+      ],
+      "hypothetical": {
+        "20mu_cep_zero": {
+          "removed_absolute": 2.378400537301606e-07,
+          "remaining_relative": 0.10001286134504475,
+          "reduction_percentage_points": 1.2369424244767262
+        },
+        "8mu_dt_zero": {
+          "removed_absolute": 1.6799543393805063e-07,
+          "remaining_relative": 0.10364529297240743,
+          "reduction_percentage_points": 0.8736992617404574
+        },
+        "both_zero": {
+          "removed_absolute": 4.0583548766821124e-07,
+          "remaining_relative": 0.09127586872764018,
+          "reduction_percentage_points": 2.1106416862171837
+        }
+      }
+    },
+    "thermal_F1": {
+      "Y": 3.1969458145020773e-06,
+      "response_relative": 0.08864721516052022,
+      "top_contributions": [
+        {
+          "I_over_mu": 6.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 8.284766201215571e-08,
+          "share_of_response": 0.2923343740391572
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 5.434815946614551e-08,
+          "share_of_response": 0.1917716781842899
+        },
+        {
+          "I_over_mu": 8.0,
+          "component": "dt",
+          "evidence_type": "direct_at_J",
+          "weighted_absolute": 2.7055044983215964e-08,
+          "share_of_response": 0.09546581578378427
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "dt",
+          "evidence_type": "direct_at_4mu",
+          "weighted_absolute": 2.189707662465562e-08,
+          "share_of_response": 0.07726552606176072
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "dx",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.9478995692956166e-08,
+          "share_of_response": 0.06873314073698639
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 1.6538299838993706e-08,
+          "share_of_response": 0.058356668295536845
+        },
+        {
+          "I_over_mu": 4.0,
+          "component": "dx",
+          "evidence_type": "direct_at_4mu",
+          "weighted_absolute": 1.5809590957094746e-08,
+          "share_of_response": 0.05578536272489261
+        },
+        {
+          "I_over_mu": 10.0,
+          "component": "dt",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 1.0849143296484088e-08,
+          "share_of_response": 0.038282040040833604
+        },
+        {
+          "I_over_mu": 12.0,
+          "component": "cep",
+          "evidence_type": "envelope_2to4",
+          "weighted_absolute": 5.8210371432440105e-09,
+          "share_of_response": 0.02053997914001778
+        },
+        {
+          "I_over_mu": 6.0,
+          "component": "box",
+          "evidence_type": "transferred_max_4mu_32mu",
+          "weighted_absolute": 5.663627643536436e-09,
+          "share_of_response": 0.01998454756298572
+        }
+      ],
+      "hypothetical": {
+        "20mu_cep_zero": {
+          "removed_absolute": 1.4989699442024462e-09,
+          "remaining_relative": 0.0881783395426093,
+          "reduction_percentage_points": 0.046887561791093726
+        },
+        "8mu_dt_zero": {
+          "removed_absolute": 2.7055044983215964e-08,
+          "remaining_relative": 0.08018443644826052,
+          "reduction_percentage_points": 0.8462778712259711
+        },
+        "both_zero": {
+          "removed_absolute": 2.855401492741841e-08,
+          "remaining_relative": 0.07971556083034957,
+          "reduction_percentage_points": 0.8931654330170649
+        }
+      }
+    }
+  }
+}

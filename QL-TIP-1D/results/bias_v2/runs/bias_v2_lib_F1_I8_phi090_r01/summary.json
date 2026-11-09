@@ -1,0 +1,59 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9996554197644569,
+  "N_125fs": 0.9996554197644569,
+  "left_CAP_loss_observation_100fs": 0.0003445802224074834,
+  "right_CAP_loss_observation_100fs": 1.804448436368019e-18,
+  "left_CAP_loss_total_125fs": 0.000344580222407485,
+  "right_CAP_loss_total_125fs": 1.804448436368019e-18,
+  "signed_flux_100fs": 0.002100702959326278,
+  "signed_flux_125fs": 0.002100702959326278,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.313560371585254e-11,
+  "Y_H": 0.0,
+  "Y_H_lower": 0.0,
+  "Y_H_upper": 0.0,
+  "masked_norm": 0.0,
+  "spectrum_integral": 0.0,
+  "propagation_seconds": 1355.3651221000036,
+  "spectrum_seconds": 8.600000001024455e-06,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        0.0,
+        0.0
+      ],
+      "energy_points": 0,
+      "masked_norm": 0.0,
+      "spectrum_integral": 0.0,
+      "spectrum_norm_absolute_difference": 0.0,
+      "Y_H_lower": 0.0,
+      "Y_H_main": 0.0,
+      "Y_H_upper": 0.0,
+      "note": "legacy eta=.1 diagnostic skipped; continuation readout is authoritative"
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_lib_F1_I8_phi090_r01",
+  "I_over_mu": 8.0,
+  "I_inc_W_per_cm2": 1333333333333.3333,
+  "wall_seconds": 1355.7807838000008,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "a90362ba616f7e90073ac36b0c600edfd4e3447a422a51eb2934ddd2e9afeef9",
+  "peak_working_set_bytes": 128307200
+}

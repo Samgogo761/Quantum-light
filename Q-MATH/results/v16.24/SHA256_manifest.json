@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-25",
+  "scope": "Q-MATH-16.24 original M0 static Ward sumrule, shared reduced two-k photon toy; NOT BSV HHG certification",
+  "files": [
+    {
+      "path": "Q-MATH-16.24_共享量子场与静态Ward求和规则.docx",
+      "bytes": 159259,
+      "sha256": "8da282daab9c0815e6d3e5aa0b5c2853a53275f4ada7aa7ecad4b8a560dfb43d"
+    },
+    {
+      "path": "Q-MATH-16.24_共享量子场与静态Ward求和规则.md",
+      "bytes": 10870,
+      "sha256": "adf7544973e5d1928db96013cf4cdf558118ca0223a682afc4c9554fa69f74f1"
+    },
+    {
+      "path": "README_研究复现说明.md",
+      "bytes": 1170,
+      "sha256": "dfe767f4075afdcef4c8622ff72da1cecb6fa1e0ee25df23fb4c4810c31e8829"
+    },
+    {
+      "path": "qmath_16_24_make_figures.py",
+      "bytes": 1371,
+      "sha256": "6eccc9ffd0b11e5c1b42e9f4380f1be2800fe362369947eaebf950514bac9f58"
+    },
+    {
+      "path": "qmath_16_24_manybody_crosscheck.json",
+      "bytes": 1214,
+      "sha256": "285dee259c98adb66eefff0ee76dbb76b6bf43b77aed97765ad30baa71191d7b"
+    },
+    {
+      "path": "qmath_16_24_manybody_crosscheck.py",
+      "bytes": 1222,
+      "sha256": "de4c32a83cf4aec8ff6a0b76f0610c27350a7d6288ce57eaa2c13d4c55d4e8e9"
+    },
+    {
+      "path": "qmath_16_24_regression_tests.py",
+      "bytes": 1138,
+      "sha256": "116c4b6d5487ff0b7ed588f76e5e5f52d805d1e3069d1c6a9a826f13aa2558f5"
+    },
+    {
+      "path": "qmath_16_24_shared_pair_cavity.py",
+      "bytes": 3201,
+      "sha256": "ba480c6fa4845a7827bcaec6e4c80bbb6463e6510ae3b8d91690df5ebe2e38f2"
+    },
+    {
+      "path": "qmath_16_24_shared_pair_toy_results.json",
+      "bytes": 6839,
+      "sha256": "9a0f4e2f3a61eb9099bbd4adea5ea51facec80d68ef33b5deb5ab85d9e378f3e"
+    },
+    {
+      "path": "qmath_16_24_twist_and_stiffness.json",
+      "bytes": 2559,
+      "sha256": "098d2dd83b075cd9734576487b611a6a6aea2afb5b8d8cdfa095f5548bdea24a"
+    },
+    {
+      "path": "qmath_16_24_twist_and_stiffness.py",
+      "bytes": 1943,
+      "sha256": "8d6fd3a58cb381a4591f6847eec5886ae32993877346406dd6bb85f620f9df7d"
+    },
+    {
+      "path": "qmath_16_24_ward_sumrule.py",
+      "bytes": 4906,
+      "sha256": "328a84a339168d723ee9f35e2ebb3f470fbaee0559e4d203160b8336ceb4f834"
+    },
+    {
+      "path": "qmath_16_24_ward_sumrule_results.json",
+      "bytes": 7662,
+      "sha256": "023607e8684185086c112ff08f7e3c0ed23ec0cda4902a63adf889f9752d77b1"
+    },
+    {
+      "path": "shared_pair_toy_fock_convergence.png",
+      "bytes": 66080,
+      "sha256": "00bdfa20aee025f0c24479c3f5dcba1a6a146f37c4d91dd406da263b96fac9bf"
+    },
+    {
+      "path": "source/deps/q19/qmath_16_19_quantum_pump.py",
+      "bytes": 7283,
+      "sha256": "dce3ece2ab3a24104ed119eeef1e678366556eb7dc3d2372c970f36e60c2b678"
+    },
+    {
+      "path": "source/deps/q19/reference_q167/deps/CrI3_scf_soc_a1h_clean.in",
+      "bytes": 2284,
+      "sha256": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+    },
+    {
+      "path": "source/deps/q19/reference_q167/deps/q8_m0_model.py",
+      "bytes": 17386,
+      "sha256": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3"
+    },
+    {
+      "path": "source/deps/q19/reference_q167/deps/q8_tperp_static_audit.py",
+      "bytes": 37002,
+      "sha256": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b"
+    },
+    {
+      "path": "source/deps/q19/reference_q167/q167_m0_three_photon_T.py",
+      "bytes": 8262,
+      "sha256": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017"
+    },
+    {
+      "path": "source/deps/q19/reference_q167/q167_slater_condon_direct.py",
+      "bytes": 4085,
+      "sha256": "630cf8c8659ead7e0b9e04c336eec6f8a898eff412ed5bb408793b66f7c71295"
+    },
+    {
+      "path": "source/deps/qmath_16_22_projected_pump.py",
+      "bytes": 4983,
+      "sha256": "387beaef2ee65199b1c5e559a660e87490a1836e6843c5afa81b09330167a919"
+    },
+    {
+      "path": "ward_static_virtual_truncation.png",
+      "bytes": 95402,
+      "sha256": "325086451f7103812b22004060027b970948fd3682edc838125e851c37408de6"
+    }
+  ]
+}

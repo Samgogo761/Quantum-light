@@ -1,0 +1,14 @@
+{
+  "schema": "ql-tip-1d-tail-extension-status-v5",
+  "status": "NOT_REQUIRED",
+  "plan": {
+    "status": "NOT_REQUIRED",
+    "required_Imax_by_yield": {
+      "bsv_F0": 32.0,
+      "thermal_F0": 32.0,
+      "bsv_F1": 32.0,
+      "thermal_F1": 32.0
+    },
+    "note": "32 mu truncation already satisfies the positive lower bound"
+  }
+}

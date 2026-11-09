@@ -1,0 +1,99 @@
+{
+  "scope": "Finite two-mode ideal weak pair-conversion model; NOT M0 or measured HHG",
+  "quantum_normal_occupations": [
+    0.15,
+    0.55
+  ],
+  "input_total_E": 0.7000000000000001,
+  "mode_energies": [
+    0.16,
+    0.2
+  ],
+  "free_photon_energy": 0.134,
+  "weighted_anomaly_nuclear_norm": 0.2511148440295385,
+  "fixed_physical_energy_classical_attenuation_t": 0.5336203859945359,
+  "BSV_F2": 1.8400000000000003,
+  "BSV_anomaly_Takagi_singular_values": [
+    0.4153311931459037,
+    0.9233092656309695
+  ],
+  "BSV_anomaly_nuclear_norm": 1.3386404587768732,
+  "classical_attenuation_t": 0.5229186040287441,
+  "classical_explicit_P_weights": [
+    0.7336956521739131,
+    0.06657608695652174,
+    0.06657608695652174,
+    0.06657608695652174,
+    0.06657608695652174
+  ],
+  "classical_explicit_P_amplitudes": [
+    [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      [
+        -0.9030778552806716,
+        0.0
+      ],
+      [
+        -1.3464849853871712,
+        0.0
+      ]
+    ],
+    [
+      [
+        -0.9030778552806716,
+        0.0
+      ],
+      [
+        1.3464849853871712,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.9030778552806716,
+        0.0
+      ],
+      [
+        -1.3464849853871712,
+        0.0
+      ]
+    ],
+    [
+      [
+        0.9030778552806716,
+        0.0
+      ],
+      [
+        1.3464849853871712,
+        0.0
+      ]
+    ]
+  ],
+  "classical_total_E": 0.7000000000000001,
+  "classical_F2": 1.84,
+  "classical_mean_field_norm": 0.0,
+  "max_classical_anomaly_scaling_error": 1.6653345369377348e-16,
+  "max_coherent_response_scaling_error": 2.220446049250313e-16,
+  "quantum_domain_coherent_contrast": 0.7482519784140071,
+  "classical_domain_coherent_contrast": 0.7482519784140073,
+  "K_even_K_odd_gram_det": 1.0,
+  "proportional_kernel_domain_contrast": 0.6896551724137933,
+  "proportional_kernel_classical_domain_contrast": 0.6896551724137931,
+  "sum_energy_shell_example": {
+    "omega1": 0.16,
+    "omega2": 0.2,
+    "Omega": 0.36,
+    "allowed_elastic_Delta": 0.0,
+    "example_inelastic_gap": 0.08,
+    "inelastic_required_Omega": 0.28
+  }
+}

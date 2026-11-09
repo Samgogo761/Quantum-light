@@ -1,6 +1,11 @@
 # Results and local data
 
-Large numerical outputs and user-provided Wannier data should stay out of git.
+Tracked small reports may live here. Large numerical outputs and user-provided Wannier data should stay out of git.
+
+| tracked | purpose |
+|---|---|
+| `gh5_quadrature_diag_20260816/` | GH3→GH5 diagnostic archive (v1=FAIL permanent; Jones / A22 / tail / CEP‑π Jones-only) |
+| `a1_qls1_classical_mixture_20260827/` | A1-1 exploratory classical-mixture g2 (CLASSICAL_MIXTURE_BENCHMARK; quadrature not closed) |
 This directory is only a map for where validation data should live locally.
 
 Recommended local result directories:

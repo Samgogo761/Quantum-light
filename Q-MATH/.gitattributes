@@ -1,0 +1,7 @@
+# Preserve the original archive bytes, including original line endings.
+reports/** -text
+code/** -text
+results/** -text
+
+history/** -text
+version_migration.json -text

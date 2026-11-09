@@ -1,0 +1,43 @@
+{
+  "eta_max": 0.3500214032890181,
+  "sum_two_ops": 18.152521830204943,
+  "T": 69.81317007977319,
+  "bounds": [
+    {
+      "Np": 13,
+      "extra_levels": 20,
+      "missing_unitary_displacement_norm_bound": 2.931684963419026e-09,
+      "missing_Duhamel_integral_bound": 3.7152806541777708e-06
+    },
+    {
+      "Np": 13,
+      "extra_levels": 30,
+      "missing_unitary_displacement_norm_bound": 4.6523993115793726e-17,
+      "missing_Duhamel_integral_bound": 5.895916298476536e-14
+    },
+    {
+      "Np": 17,
+      "extra_levels": 20,
+      "missing_unitary_displacement_norm_bound": 1.653511815882782e-08,
+      "missing_Duhamel_integral_bound": 2.095470876870476e-05
+    },
+    {
+      "Np": 17,
+      "extra_levels": 30,
+      "missing_unitary_displacement_norm_bound": 4.2380014850547957e-16,
+      "missing_Duhamel_integral_bound": 5.370756109973696e-13
+    },
+    {
+      "Np": 23,
+      "extra_levels": 20,
+      "missing_unitary_displacement_norm_bound": 1.407969427854036e-07,
+      "missing_Duhamel_integral_bound": 0.0001784298668598853
+    },
+    {
+      "Np": 23,
+      "extra_levels": 30,
+      "missing_unitary_displacement_norm_bound": 6.8515519305262155e-15,
+      "missing_Duhamel_integral_bound": 8.682869631698576e-12
+    }
+  ]
+}

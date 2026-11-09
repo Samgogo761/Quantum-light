@@ -1,0 +1,16 @@
+{
+  "schema": "review-deliverable-file-list-v1",
+  "generated_by": "Python pathlib/hashlib over explicit paths",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108.md",
+      "bytes": 6491,
+      "sha256": "9b70faabc5c950bc4fbb3870b6871b82486186e7cd262134c3c949f464cb28b2"
+    },
+    {
+      "path": "QL-TIP-1D/reports/ACCEPTANCE_COST_REVIEW_20261108_evidence.json",
+      "bytes": 5284,
+      "sha256": "f4ef0f20d986fcf9775c39688471578b6d599a5d9399f16911c9917360b95abc"
+    }
+  ]
+}

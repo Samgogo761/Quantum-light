@@ -1,0 +1,518 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.9999999975980267,
+  "N_125fs": 0.9999999975980267,
+  "left_CAP_loss_observation_100fs": 2.3890164007122643e-09,
+  "right_CAP_loss_observation_100fs": 6.98728027336512e-27,
+  "left_CAP_loss_total_125fs": 2.3890164007122643e-09,
+  "right_CAP_loss_total_125fs": 6.98728027336512e-27,
+  "signed_flux_100fs": 6.3295437273901996e-09,
+  "signed_flux_125fs": 6.3295437273901996e-09,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.295685780888789e-11,
+  "Y_H": 2.883503757781368e-09,
+  "Y_H_lower": 3.8985282133589256e-09,
+  "Y_H_upper": 2.797346430884556e-09,
+  "masked_norm": 6.333248029196253e-09,
+  "spectrum_integral": 6.333185660974317e-09,
+  "propagation_seconds": 843.7757147001103,
+  "spectrum_seconds": 13.22104169987142,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        30.0
+      ],
+      "energy_points": 1281,
+      "masked_norm": 6.333248029196253e-09,
+      "spectrum_integral": 6.333185660974317e-09,
+      "spectrum_norm_absolute_difference": 6.236822193609439e-14,
+      "Y_H_lower": 3.8985282133589256e-09,
+      "Y_H_main": 2.883503757781368e-09,
+      "Y_H_upper": 2.797346430884556e-09
+    }
+  ],
+  "run_id": "bias_p2_F0.000_I1_phi090_r02",
+  "F_dc_V_per_nm": 0.0,
+  "I_apex_W_per_cm2": 1500000000000.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "CEP_rad": 1.5707963267948966,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 857.2562225000001,
+  "peak_working_set_bytes": 130285568
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.9999999975970504,
+  "N_125fs": 0.9999999975970504,
+  "left_CAP_loss_observation_100fs": 2.389937180053059e-09,
+  "right_CAP_loss_observation_100fs": 7.133783431638607e-27,
+  "left_CAP_loss_total_125fs": 2.389937180053059e-09,
+  "right_CAP_loss_total_125fs": 7.133783431638607e-27,
+  "signed_flux_100fs": 6.325126091314773e-09,
+  "signed_flux_125fs": 6.325126091314773e-09,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.301247998242161e-11,
+  "Y_H": 2.884454959446794e-09,
+  "Y_H_lower": 3.8987608381030556e-09,
+  "Y_H_upper": 2.7982653916439475e-09,
+  "masked_norm": 6.331795596046772e-09,
+  "spectrum_integral": 6.331733334850543e-09,
+  "propagation_seconds": 872.5385656000581,
+  "spectrum_seconds": 13.089816799852997,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        30.0
+      ],
+      "energy_points": 1281,
+      "masked_norm": 6.331795596046772e-09,
+      "spectrum_integral": 6.331733334850543e-09,
+      "spectrum_norm_absolute_difference": 6.226119622872613e-14,
+      "Y_H_lower": 3.8987608381030556e-09,
+      "Y_H_main": 2.884454959446794e-09,
+      "Y_H_upper": 2.7982653916439475e-09
+    }
+  ],
+  "run_id": "bias_p2_F0.000_I1_phi270_r02",
+  "F_dc_V_per_nm": 0.0,
+  "I_apex_W_per_cm2": 1500000000000.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "CEP_rad": 4.71238898038469,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 885.8924440001138,
+  "peak_working_set_bytes": 130166784
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.9999860168514939,
+  "N_125fs": 0.9999860168514939,
+  "left_CAP_loss_observation_100fs": 1.3983135537346298e-05,
+  "right_CAP_loss_observation_100fs": 2.122170502457946e-26,
+  "left_CAP_loss_total_125fs": 1.3983135537346298e-05,
+  "right_CAP_loss_total_125fs": 2.122170502457946e-26,
+  "signed_flux_100fs": 3.40239831255121e-05,
+  "signed_flux_125fs": 3.40239831255121e-05,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.2968737195251379e-11,
+  "Y_H": 9.505203802693529e-06,
+  "Y_H_lower": 1.5666016516347825e-05,
+  "Y_H_upper": 7.816706817329363e-06,
+  "masked_norm": 3.45901460155953e-05,
+  "spectrum_integral": 3.458967668020421e-05,
+  "propagation_seconds": 835.6204660998192,
+  "spectrum_seconds": 16.736064000055194,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        38.7
+      ],
+      "energy_points": 1629,
+      "masked_norm": 3.45901460155953e-05,
+      "spectrum_integral": 3.458967668020421e-05,
+      "spectrum_norm_absolute_difference": 4.693353910874731e-10,
+      "Y_H_lower": 1.5666016516347825e-05,
+      "Y_H_main": 9.505203802693529e-06,
+      "Y_H_upper": 7.816706817329363e-06
+    }
+  ],
+  "run_id": "bias_p2_F0.000_I4_phi090_r02",
+  "F_dc_V_per_nm": 0.0,
+  "I_apex_W_per_cm2": 6000000000000.0,
+  "I_inc_W_per_cm2": 666666666666.6666,
+  "CEP_rad": 1.5707963267948966,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 852.6216291000601,
+  "peak_working_set_bytes": 130187264
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999963383,
+  "left_CAP_loss_prep": 5.897616663596799e-28,
+  "right_CAP_loss_prep": 6.45365672889524e-77,
+  "N_100fs": 0.9999859530976348,
+  "N_125fs": 0.9999859530976348,
+  "left_CAP_loss_observation_100fs": 1.4046889417802502e-05,
+  "right_CAP_loss_observation_100fs": 2.142364670519498e-26,
+  "left_CAP_loss_total_125fs": 1.4046889417802502e-05,
+  "right_CAP_loss_total_125fs": 2.142364670519498e-26,
+  "signed_flux_100fs": 3.449576923322246e-05,
+  "signed_flux_125fs": 3.449576923322246e-05,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.2947420913178576e-11,
+  "Y_H": 9.17490826038941e-06,
+  "Y_H_lower": 1.50011826686609e-05,
+  "Y_H_upper": 8.059780335077671e-06,
+  "masked_norm": 3.455099610974819e-05,
+  "spectrum_integral": 3.45505542449582e-05,
+  "propagation_seconds": 868.1131688000169,
+  "spectrum_seconds": 16.753418900072575,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        38.7
+      ],
+      "energy_points": 1629,
+      "masked_norm": 3.455099610974819e-05,
+      "spectrum_integral": 3.45505542449582e-05,
+      "spectrum_norm_absolute_difference": 4.4186478998978597e-10,
+      "Y_H_lower": 1.50011826686609e-05,
+      "Y_H_main": 9.17490826038941e-06,
+      "Y_H_upper": 8.059780335077671e-06
+    }
+  ],
+  "run_id": "bias_p2_F0.000_I4_phi270_r02",
+  "F_dc_V_per_nm": 0.0,
+  "I_apex_W_per_cm2": 6000000000000.0,
+  "I_inc_W_per_cm2": 666666666666.6666,
+  "CEP_rad": 4.71238898038469,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 885.1367770999204,
+  "peak_working_set_bytes": 130232320
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9999999985707269,
+  "N_125fs": 0.9999999985707269,
+  "left_CAP_loss_observation_100fs": 1.4160756402542598e-09,
+  "right_CAP_loss_observation_100fs": 6.22214297138734e-18,
+  "left_CAP_loss_total_125fs": 1.416075641833528e-09,
+  "right_CAP_loss_total_125fs": 6.22214297138734e-18,
+  "signed_flux_100fs": 2.3820702538202678e-07,
+  "signed_flux_125fs": 2.3820702538202678e-07,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3197443138324161e-11,
+  "Y_H": 5.697090878221702e-09,
+  "Y_H_lower": 8.454365743060425e-09,
+  "Y_H_upper": 5.2586532755635615e-09,
+  "masked_norm": 2.382070301524543e-07,
+  "spectrum_integral": 2.382070238427761e-07,
+  "propagation_seconds": 847.4223235999234,
+  "spectrum_seconds": 25.538735799957067,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        37.175000000000004
+      ],
+      "energy_points": 2368,
+      "masked_norm": 2.382070301524543e-07,
+      "spectrum_integral": 2.382070238427761e-07,
+      "spectrum_norm_absolute_difference": 6.30967820542667e-15,
+      "Y_H_lower": 8.454365743060425e-09,
+      "Y_H_main": 5.697090878221702e-09,
+      "Y_H_upper": 5.2586532755635615e-09
+    }
+  ],
+  "run_id": "bias_p2_F1.000_I1_phi090_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 1500000000000.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "CEP_rad": 1.5707963267948966,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 873.2599892998114,
+  "peak_working_set_bytes": 130576384
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9999999985707281,
+  "N_125fs": 0.9999999985707281,
+  "left_CAP_loss_observation_100fs": 1.416131210071616e-09,
+  "right_CAP_loss_observation_100fs": 6.222142978188499e-18,
+  "left_CAP_loss_total_125fs": 1.4161312116508843e-09,
+  "right_CAP_loss_total_125fs": 6.222142978188499e-18,
+  "signed_flux_100fs": 2.3820697792107906e-07,
+  "signed_flux_125fs": 2.3820697792107906e-07,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3140710741765815e-11,
+  "Y_H": 5.698966141253717e-09,
+  "Y_H_lower": 8.455087389570788e-09,
+  "Y_H_upper": 5.2579397043801096e-09,
+  "masked_norm": 2.382069825800633e-07,
+  "spectrum_integral": 2.3820697627037408e-07,
+  "propagation_seconds": 866.3905370000284,
+  "spectrum_seconds": 24.15061919996515,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        37.175000000000004
+      ],
+      "energy_points": 2368,
+      "masked_norm": 2.382069825800633e-07,
+      "spectrum_integral": 2.3820697627037408e-07,
+      "spectrum_norm_absolute_difference": 6.309689216854985e-15,
+      "Y_H_lower": 8.455087389570788e-09,
+      "Y_H_main": 5.698966141253717e-09,
+      "Y_H_upper": 5.2579397043801096e-09
+    }
+  ],
+  "run_id": "bias_p2_F1.000_I1_phi270_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 1500000000000.0,
+  "I_inc_W_per_cm2": 166666666666.66666,
+  "CEP_rad": 4.71238898038469,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 890.8442579000257,
+  "peak_working_set_bytes": 130580480
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.999988508415917,
+  "N_125fs": 0.999988508415917,
+  "left_CAP_loss_observation_100fs": 1.1491570929886066e-05,
+  "right_CAP_loss_observation_100fs": 1.4014848894370964e-18,
+  "left_CAP_loss_total_125fs": 1.1491570929887645e-05,
+  "right_CAP_loss_total_125fs": 1.4014848894370964e-18,
+  "signed_flux_100fs": 0.00012735411758986982,
+  "signed_flux_125fs": 0.00012735411758986982,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3153145239641617e-11,
+  "Y_H": 1.9353321788584903e-05,
+  "Y_H_lower": 2.0955467424824688e-05,
+  "Y_H_upper": 1.6380542342379267e-05,
+  "masked_norm": 0.00012735414324956617,
+  "spectrum_integral": 0.00012735414050278536,
+  "propagation_seconds": 840.746006899979,
+  "spectrum_seconds": 34.904459699988365,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        58.7
+      ],
+      "energy_points": 3229,
+      "masked_norm": 0.00012735414324956617,
+      "spectrum_integral": 0.00012735414050278536,
+      "spectrum_norm_absolute_difference": 2.7467808030260527e-12,
+      "Y_H_lower": 2.0955467424824688e-05,
+      "Y_H_main": 1.9353321788584903e-05,
+      "Y_H_upper": 1.6380542342379267e-05
+    }
+  ],
+  "run_id": "bias_p2_F1.000_I4_phi090_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 6000000000000.0,
+  "I_inc_W_per_cm2": 666666666666.6666,
+  "CEP_rad": 1.5707963267948966,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 875.9422349999659,
+  "peak_working_set_bytes": 129896448
+}
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9999885077812136,
+  "N_125fs": 0.9999885077812136,
+  "left_CAP_loss_observation_100fs": 1.149220562715314e-05,
+  "right_CAP_loss_observation_100fs": 1.4014851278959673e-18,
+  "left_CAP_loss_total_125fs": 1.1492205627154719e-05,
+  "right_CAP_loss_total_125fs": 1.4014851278959673e-18,
+  "signed_flux_100fs": 0.0001273542050661265,
+  "signed_flux_125fs": 0.0001273542050661265,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3159251466277055e-11,
+  "Y_H": 1.836835029377408e-05,
+  "Y_H_lower": 2.0281759677130465e-05,
+  "Y_H_upper": 1.6545780718459023e-05,
+  "masked_norm": 0.0001273542115331028,
+  "spectrum_integral": 0.0001273542087847151,
+  "propagation_seconds": 890.0386530999094,
+  "spectrum_seconds": 35.12904369994067,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -22.0,
+        58.7
+      ],
+      "energy_points": 3229,
+      "masked_norm": 0.0001273542115331028,
+      "spectrum_integral": 0.0001273542087847151,
+      "spectrum_norm_absolute_difference": 2.7483876990658934e-12,
+      "Y_H_lower": 2.0281759677130465e-05,
+      "Y_H_main": 1.836835029377408e-05,
+      "Y_H_upper": 1.6545780718459023e-05
+    }
+  ],
+  "run_id": "bias_p2_F1.000_I4_phi270_r02",
+  "F_dc_V_per_nm": 1.0,
+  "I_apex_W_per_cm2": 6000000000000.0,
+  "I_inc_W_per_cm2": 666666666666.6666,
+  "CEP_rad": 4.71238898038469,
+  "well_cells": 24,
+  "dx_nm": 0.005625000000000001,
+  "xmax_nm": 600.0,
+  "readout_fs": [
+    100.0
+  ],
+  "wall_seconds": 925.4596998998895,
+  "peak_working_set_bytes": 130535424
+}
+stage=p2-main listed=14 selected=14 single_worker=true
+bias_p2_F0.000_I1_phi090_r02: kind=laser, F=0.0, I/mu=1.0, CEP=1.5707963267948966, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I1_phi180_r02: kind=laser, F=0.0, I/mu=1.0, CEP=3.141592653589793, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I1_phi270_r02: kind=laser, F=0.0, I/mu=1.0, CEP=4.71238898038469, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I4_phi000_r02: kind=laser, F=0.0, I/mu=4.0, CEP=0.0, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I4_phi090_r02: kind=laser, F=0.0, I/mu=4.0, CEP=1.5707963267948966, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I4_phi180_r02: kind=laser, F=0.0, I/mu=4.0, CEP=3.141592653589793, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F0.000_I4_phi270_r02: kind=laser, F=0.0, I/mu=4.0, CEP=4.71238898038469, prep=bias_p1_prep_F0.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I1_phi090_r02: kind=laser, F=1.0, I/mu=1.0, CEP=1.5707963267948966, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I1_phi180_r02: kind=laser, F=1.0, I/mu=1.0, CEP=3.141592653589793, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I1_phi270_r02: kind=laser, F=1.0, I/mu=1.0, CEP=4.71238898038469, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I4_phi000_r02: kind=laser, F=1.0, I/mu=4.0, CEP=0.0, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I4_phi090_r02: kind=laser, F=1.0, I/mu=4.0, CEP=1.5707963267948966, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I4_phi180_r02: kind=laser, F=1.0, I/mu=4.0, CEP=3.141592653589793, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+bias_p2_F1.000_I4_phi270_r02: kind=laser, F=1.0, I/mu=4.0, CEP=4.71238898038469, prep=bias_p1_prep_F1.000_r02, numerics=None, preparation=None
+REUSE bias_p2_F0.000_I1_phi180_r02
+REUSE bias_p2_F0.000_I4_phi000_r02
+REUSE bias_p2_F0.000_I4_phi180_r02
+REUSE bias_p2_F1.000_I1_phi180_r02
+REUSE bias_p2_F1.000_I4_phi000_r02
+REUSE bias_p2_F1.000_I4_phi180_r02
+STAGE_DONE p2-main; new_runs=8; reused=6

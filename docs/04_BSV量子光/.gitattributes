@@ -1,0 +1,7 @@
+# Q-MATH originals: preserve archive SHA-256 across Git and future checkouts.
+qmath*.json -text
+qmath*.txt -text
+qmath_pack_16_11_20261023/** -text
+*QMATH*.md -text
+PHYSICS_CONTRACT.md -text
+SOURCES_PROVENANCE.md -text

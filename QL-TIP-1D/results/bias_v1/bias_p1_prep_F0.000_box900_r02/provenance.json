@@ -1,0 +1,24 @@
+{
+  "run_id": "bias_p1_prep_F0.000_box900_r02",
+  "started_utc": "2026-11-04T09:10:41.354934+00:00",
+  "config_sha256": "96a374867b32fb880904bee825fed36f774ac738ff47bee617950becd42b6706",
+  "base_git_commit": "6f8798e2f50957ef4484702fb55d38babcc8f5d5",
+  "source_sha256": {
+    "scripts/run_bias_v1.py": "a9920174a983671ccff101b6fd0ddc1a6a44cf973da3c2af5ba0cc5a0d297335",
+    "scripts/run_solo_v1.py": "44c1892bd40ea26a5aeb1d7a9769f56cb899e414972793b0dccf36102778419a",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/protocol_v1.json": "bb7a61f1fcd8a4723a6b785feb13d2a1dfde75e2a0182a1bd36acf16fd415d67"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "device": "CPU",
+  "dtype": "complex128",
+  "renormalization_during_or_after_preparation": false,
+  "exit_status": "PASS",
+  "finished_utc": "2026-11-04T09:19:32.162830+00:00"
+}

@@ -1,0 +1,62 @@
+# score_reduced_model config (flat key: value; '#' comments)
+# Paths
+path.qe_gnu: C:\Users\26507\Documents\量子光研究\01_输入与模型\qe_bands\CrI3_bands_nbnd200.dat.gnu
+path.tb112: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_tb.dat
+path.wout112: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_112.wout
+path.outdir: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\analysis\model_score
+
+# Models: name -> band.dat, wout  (kept_orbitals: d | d+p)
+model.40_pilot.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\pilot_40wf\CrI3_donly_band.dat
+model.40_pilot.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\pilot_40wf\CrI3_donly.wout
+model.40_pilot.kept: d
+model.40_opt1.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\pilot_40wf_opt1\CrI3_donly_band.dat
+model.40_opt1.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\pilot_40wf_opt1\CrI3_donly.wout
+model.40_opt1.kept: d
+model.112_ref.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_band.dat
+model.112_ref.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\CrI3_112.wout
+model.112_ref.kept: d+p
+# M52/M64/M88: hop_keep_frac from select_projections vs full112 tb.dat (p4_summary_and_hop.py)
+model.M52.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M52_interface\CrI3_M52_band.dat
+model.M52.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M52_interface\CrI3_M52.wout
+model.M52.kept: d
+model.M52.hop_keep_frac: 0.1624
+model.M64.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M64_allI_pz\CrI3_M64_band.dat
+model.M64.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M64_allI_pz\CrI3_M64.wout
+model.M64.kept: d
+model.M64.hop_keep_frac: 0.2986
+model.M88.band: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M88_allI_2p\CrI3_M88_band.dat
+model.M88.wout: C:\Users\26507\Documents\量子光研究\01_输入与模型\wannier\models\M88_allI_2p\CrI3_M88.wout
+model.M88.kept: d
+model.M88.hop_keep_frac: 0.6499
+
+# Energy zero
+qe_fermi_eV: 0.0810
+
+# Scoring windows (E - E_VBM, eV)
+window.near.lo: -1.5
+window.near.hi: 1.5
+window.mid.lo: -2.0
+window.mid.hi: 3.5
+
+# Weights (plan section 5; optical/hhg reserved = 0 this round)
+weight.energy: 0.35
+weight.subspace: 0.25
+weight.localization: 0.15
+weight.hopping: 0.25
+
+# Scales: term / scale -> dimensionless before weighting
+scale.energy_eV: 0.05
+scale.subspace_frac: 0.10
+scale.localization_A2: 2.0
+scale.hopping_frac: 0.20
+localization.lambda_max: 0.10
+
+# Gates (PASS / WARN / FAIL): four-tier check thresholds
+gate.energy.pass: 0.05
+gate.energy.warn: 0.15
+gate.subspace.pass: 0.05
+gate.subspace.warn: 0.20
+gate.localization.pass: 5.0
+gate.localization.warn: 10.0
+gate.hopping.pass: 0.20
+gate.hopping.warn: 0.50

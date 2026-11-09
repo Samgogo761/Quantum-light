@@ -1,0 +1,37 @@
+{
+  "model_id": "Q_M0_eightband_v1",
+  "stage": "A_static",
+  "params": {
+    "t_h": 1.0,
+    "lam_so": 0.1,
+    "delta": 0.8,
+    "u": 0.1,
+    "v": 0.1,
+    "label": "R0"
+  },
+  "figures": [
+    "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\m0_v1_20260912\\static\\m0_bands_path.png",
+    "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\m0_v1_20260912\\static\\m0_direct_gap_map.png"
+  ],
+  "insulating_initial_state_supported": true,
+  "E_g_direct": 0.09254653216396126,
+  "E_g_indirect": 0.0916449151259145,
+  "mu": -0.009010620372198276,
+  "worst_normalised_residuals": {
+    "herm": 0.0,
+    "P": 5.825993940381613e-17,
+    "Theta": 0.0,
+    "PTheta": 5.825993940381613e-17,
+    "sz": 0.0,
+    "sewing": 1.8124878429117803e-15,
+    "kramers": 1.277356460358862e-15,
+    "mirror": 6.852944157756838e-06,
+    "C2": 6.852944157756838e-06,
+    "fd_dx": 8.670991461533094e-10,
+    "fd_dy": 7.387718174636242e-10,
+    "V_minus_2tauyY": 0.0
+  },
+  "constant_intertwiner_nullspace": 0,
+  "quantum_input": "not_run",
+  "quantum_output": "not_run"
+}

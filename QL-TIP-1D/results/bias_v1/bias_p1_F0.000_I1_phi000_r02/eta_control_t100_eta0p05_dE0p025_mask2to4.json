@@ -1,0 +1,23 @@
+{
+  "run_id": "bias_p1_F0.000_I1_phi000_r02",
+  "label": "t100_eta0p05_dE0p025_mask2to4",
+  "eta_eV": 0.05,
+  "energy_step_eV": 0.025,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    30.0
+  ],
+  "masked_norm": 6.309948674035599e-09,
+  "spectrum_integral": 6.3099409411681456e-09,
+  "Y_H_main": 2.833902130530386e-09,
+  "Y_H_lower": 3.7965063197781356e-09,
+  "Y_H_upper": 2.7994575284837855e-09,
+  "wall_seconds": 13.779303099960089,
+  "state_sha256": "e25efad5d34973abb9975d6ae7d555622301c7c0a35b787c01d2c4de6491c564",
+  "source_sha256": "bde552aa815a3b8f08bd4ce047a7fcbe9e3ec68ad0c2b76eb57d2d2ffa935f63",
+  "spectrum_csv_sha256": "f22180134d5d679cd97ac72383da88c57aba20d825006397fe4d08faffb67c91"
+}

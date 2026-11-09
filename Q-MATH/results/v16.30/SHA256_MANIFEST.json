@@ -1,0 +1,22 @@
+{
+  "qmath_16_30_flat_null_calibration.png": "f20f2796bf21bf948c67027c1dc816e17f09a010cac003f8701affb53538c3e3",
+  "qmath_16_29_results.json": "a5cb41d68694adc4752422cc7d3278392a36ac3ab835bf296779aab599d6670c",
+  "qmath_16_30_clean_results.json": "56e4334d66d01540effc2d673b539fdaa8838a3c53319c97d1a9ec62e7a4ef3b",
+  "qmath_16_28_photon_normalized_results.json": "d0e7605dcae44b8588e0eb21f30b9e1a8d8d1d36b53d844dc3682c0ef23f6a21",
+  "qmath_16_29_same_state_readout.py": "a3d3866067e088d9bbcac806d4d9218d92ca36e6a37e8ac8a2f157c00cd3959e",
+  "qmath_16_30_bareT_bz_instability.png": "cc28b465f3310e66c02bcbfe413b6a7b6ff70f198c082eb06547df0b643c1f2f",
+  "qmath_16_30_output_mode_gram.py": "ed8b9acc19f747ba4f71b2e046b2d39b031462f9323dbcfa9065b13db7d7008f",
+  "qmath_16_29_material_null_results.json": "2bd70bf92c88161cc77e8cff556716aafefa6b5d64d4412e9dfbba9179a52d0d",
+  "Q-MATH-16.30_\u91cf\u5b50\u6563\u5c04\u6838\u6865\u63a5\u4e0e\u6750\u6599\u8bc1\u4e66\u7a33\u5b9a\u6027\u5ba1\u8ba1.docx": "5d75ea44d08f598dc987a8f5937b2492aae456814ed9e8d42c01fefffa34b8a8",
+  "SHA256_MANIFEST.json": "074a5b4c9f4d80ea9a3bdcd04915feb7c91b9accad1ccaecaebe5278be0f5d50",
+  "Q-MATH-16.30_\u91cf\u5b50\u6563\u5c04\u6838\u6865\u63a5\u4e0e\u6750\u6599\u8bc1\u4e66\u7a33\u5b9a\u6027\u5ba1\u8ba1.md": "ceecddc4e42860f0303772fabf4e88999d71fb12a2056078ad44a37367b4d1b1",
+  "qmath_16_30_bridge_audit.py": "f41b5c60fcbdbf30f4a7cda0175edd6ec061ada6c769660f664b3916d3c5b40d",
+  "qmath_16_29_material_dual_results.json": "a079b9dd8502c15783f63b3b521f001f59aaee2cb8939a840b9d8f57ed9f1eda",
+  "README_reproduce.md": "5719c0aa094d8368b959ffd13f44c1be32ce8ac9419b7f169ea96ca820db2670",
+  "q16_27_reference/qmath_16_27_retarded_kernel.py": "dc1ee1cae4aa6f4702d5787ce4d2e47106f9c6379c8c7c711c052ef18e2e94b8",
+  "q16_27_reference/qmath_16_26_cubic_audit.py": "233c8c9c1ca0877b5783eda942dd7bfa58dec4afa68d7bc02a9c8a42576ff73e",
+  "q16_27_reference/source/reference_q167/q167_m0_three_photon_T.py": "d8fcfcdea25651f7515e92a0c993cf736b3657994db2e647a7ee79210c278017",
+  "q16_27_reference/source/reference_q167/deps/q8_m0_model.py": "5d53090cabb60238c6c16a74b92ddc061d5adf2d8081e48b46b9bdf0089261d3",
+  "q16_27_reference/source/reference_q167/deps/q8_tperp_static_audit.py": "87bb177da2722bf70efe6bcd1c16cf92a4373186832c707ad2d6eb86ee8bf14b",
+  "q16_27_reference/source/reference_q167/deps/CrI3_scf_soc_a1h_clean.in": "ab14ef3bcb84186050ebf5086e7887ee698c5321969dfa51d87430f7595fca07"
+}

@@ -1,0 +1,58 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999979016,
+  "left_CAP_loss_prep": 6.104951069323144e-28,
+  "right_CAP_loss_prep": 6.3571431041786874e-77,
+  "N_100fs": 0.9643391338493226,
+  "N_125fs": 0.9643391338493226,
+  "left_CAP_loss_observation_100fs": 0.03525049683989877,
+  "right_CAP_loss_observation_100fs": 0.0004103692998401485,
+  "left_CAP_loss_total_125fs": 0.03525049683989877,
+  "right_CAP_loss_total_125fs": 0.0004103692998401485,
+  "signed_flux_100fs": 0.057413500343781114,
+  "signed_flux_125fs": 0.057413500343781114,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.0938472350119355e-11,
+  "Y_H": 0.05500613792959963,
+  "Y_H_lower": 0.055854061093457134,
+  "Y_H_upper": 0.05401302966589808,
+  "masked_norm": 0.0570250318364833,
+  "spectrum_integral": 0.057024961454040055,
+  "propagation_seconds": 1208.2299728999933,
+  "spectrum_seconds": 142.85812000000442,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 9660,
+      "masked_norm": 0.0570250318364833,
+      "spectrum_integral": 0.057024961454040055,
+      "spectrum_norm_absolute_difference": 7.038244324852894e-08,
+      "Y_H_lower": 0.055854061093457134,
+      "Y_H_main": 0.05500613792959963,
+      "Y_H_upper": 0.05401302966589808
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_probe_F0_I32_phi000_caphalf_r01",
+  "I_over_mu": 32.0,
+  "I_inc_W_per_cm2": 5333333333333.333,
+  "wall_seconds": 1357.3575251000002,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "a959403ef8ea953d9375f9b2073dffe96e7a52728f48abd05cfc64f51f802eeb",
+  "peak_working_set_bytes": 131588096
+}

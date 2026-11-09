@@ -1,0 +1,39 @@
+#!/bin/bash
+# A0 production guard/template: M88-full @ k50, selected SV states, GH5,
+# shared ±N manifests.
+#
+# k50 is a user-selected production compromise.  Existing material-model
+# convergence evidence is k40 -> k60, so k50 must not be described as a new
+# reference grid without an explicit comparison.
+#
+# Required gates before a reviewed production script may replace this guard:
+#   1. all GH3@k20 ±N tasks have status=PASS;
+#   2. strict pairing verifies identical manifest SHA-256 and matching
+#      id/weight/I/phi/order for every ±N pair;
+#   3. selected (r,theta) candidates are rerun with GH5@k20;
+#   4. GH3 -> GH5 preserves result sign/ranking and converges H2/H5/H7/H9/H10
+#      ICS, CS, complex phase, and weighted Jo within declared tolerances;
+#   5. production uses freshly generated GH5 manifests shared by ±N;
+#   6. at least one representative final state is spot-checked at k60;
+#   7. high-field nodes are checked against the stated material reference when
+#      the conclusion relies on H9/H10 or the distribution tail.
+#
+# Automation may postprocess and prepare a candidate script, but it must never
+# call sbatch automatically.  Submission is an explicit human action.
+#SBATCH --job-name=a0_m88_k50_h
+#SBATCH --partition=part_1
+#SBATCH --array=0-0
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=36
+#SBATCH --exclusive
+#SBATCH --time=12:00:00
+#SBATCH --output=a0_m88_k50_h_%A_%a.out
+#SBATCH --error=a0_m88_k50_h_%A_%a.err
+
+set -euo pipefail
+echo "PRODUCTION GUARD: no calculation and no submission were performed."
+echo "Complete GH5@k20 convergence and the k60 spot-check plan documented in"
+echo "deploy/a0_layerA_m88full/README_HARDENED.md, then generate a reviewed"
+echo "script with explicit states, GH5 manifests, array bounds, and OUTROOT."
+exit 1

@@ -1,0 +1,58 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 1.0000000000013276,
+  "left_CAP_loss_prep": 7.769551078916365e-28,
+  "right_CAP_loss_prep": 2.017222858205994e-29,
+  "N_100fs": 0.9639195080414958,
+  "N_125fs": 0.9639195080414958,
+  "left_CAP_loss_observation_100fs": 0.035711265668702585,
+  "right_CAP_loss_observation_100fs": 0.0003692262738797597,
+  "left_CAP_loss_total_125fs": 0.035711265668702585,
+  "right_CAP_loss_total_125fs": 0.0003692262738797597,
+  "signed_flux_100fs": 0.05785383647749904,
+  "signed_flux_125fs": 0.05785383647749904,
+  "actual_dt_au_main": 0.04999984680668353,
+  "actual_dt_au_late": null,
+  "steps_main": 165366,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.5921819418451832e-11,
+  "Y_H": 0.05537721998482685,
+  "Y_H_lower": 0.056237781526511654,
+  "Y_H_upper": 0.05449870191150537,
+  "masked_norm": 0.057505869228335164,
+  "spectrum_integral": 0.05750579558853606,
+  "propagation_seconds": 2230.4706222999375,
+  "spectrum_seconds": 154.17492619995028,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        -2.0,
+        239.47500000000002
+      ],
+      "energy_points": 9660,
+      "masked_norm": 0.057505869228335164,
+      "spectrum_integral": 0.05750579558853606,
+      "spectrum_norm_absolute_difference": 7.363979910579577e-08,
+      "Y_H_lower": 0.056237781526511654,
+      "Y_H_main": 0.05537721998482685,
+      "Y_H_upper": 0.05449870191150537
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01",
+  "I_over_mu": 32.0,
+  "I_inc_W_per_cm2": 5333333333333.333,
+  "wall_seconds": 2385.01224450022,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "2496dc220ba86d6b11e3bb5b2119dfb870924c02e3305381ad447345fffbd4b8",
+  "peak_working_set_bytes": 170676224
+}

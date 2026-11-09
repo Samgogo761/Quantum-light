@@ -1,0 +1,8 @@
+{
+  "schema": "ql-tip-1d-r1-pointer-v5",
+  "r1_gate": "results/bias_v3_audit/r1_20261107_v5/R1_gate_r1_20261107_v5.json",
+  "r1_sha256": "6a979abb57f7169615c0b79cd42f0bfe58f315311c129e1c6353cde725a1f6c9",
+  "status": "PASS",
+  "numerical_evidence_complete": true,
+  "note": "Apply to active_evidence.json explicitly; this script does not edit it."
+}
