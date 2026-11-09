@@ -9,17 +9,31 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from q8_m0_classical import (  # noqa: E402
+    P0Protocol,
+    cache_identity_matches,
+    field_resources,
+    initial_rho,
+    k_grid,
+    kappa_shift,
+    p1_protocol,
+    project_harmonic,
+    propagate,
+    run_fingerprint,
+)
 from q8_m0_model import (  # noqa: E402
     INV_C,
     N_OCC,
     M0Params,
     R0,
     build_geometry,
+    current_ops,
     dh8,
     f_and_grad,
     g_and_grad,
     gamma_energies,
     h8,
+    h8_and_current,
     mirror_matrix_inplane,
     op_P,
     op_V_specified,
@@ -30,16 +44,6 @@ from q8_m0_model import (  # noqa: E402
     op_theta_unitary,
     same_spectrum_barred_residual,
     t0_and_grad,
-)
-from q8_m0_classical import (  # noqa: E402
-    P0Protocol,
-    field_resources,
-    initial_rho,
-    k_grid,
-    kappa_shift,
-    p1_protocol,
-    propagate,
-    run_fingerprint,
 )
 
 
@@ -204,6 +208,14 @@ def test_short_propagation_identity() -> None:
     dU, wrk = float(r3["delta_U_e"]), float(r3["work_integral"])
     require(abs(dU - wrk) / max(abs(dU), 1e-8) < 0.03, f"ΔU_e vs work relative residual {dU} {wrk}")
     require("k_harm_total" in r3 and r3["k_harm_total"].shape[0] == 3, "k-resolved harmonics")
+    _, kc_ops, _ = k_grid(geo, 6, shift=0.0)
+    j_ops = current_ops(geo, p, kc_ops, +1)
+    _, j_h = h8_and_current(geo, p, kc_ops, +1)
+    require(np.max(np.abs(j_ops - j_h)) < 1e-14, "current_ops must match h8_and_current")
+    r4 = propagate(geo, p, prot, nk=8, nt_per_cycle=20, neel=+1, sign=+1, mu=mu, verbose=False, subspace=False, k_orders=(2,))
+    z_k = np.einsum("k,k->", r4["w_k"], r4["k_harm_total"][0, :, 0]) / geo.a_cell_ang2
+    z_j = project_harmonic(r4["times"], r4["J_sheet"], 2.0 * prot.omega0, "sin2")[0]
+    require(abs(complex(z_k) - complex(z_j)) < 1e-12, "k_orders without subspace reconstructs J_sheet H2")
 
 
 def test_p1_resources_and_identity() -> None:
@@ -225,6 +237,37 @@ def test_p1_resources_and_identity() -> None:
     idb = run_fingerprint(geo, R0, p1, nk=8, nt_per_cycle=20, mu=0.0, grid_shift=0.0, subspace=False, k_orders=(), neel=+1, sign=+1)
     require(ida["identity_sha256"] != idb["identity_sha256"], "P0/P1 identities must differ")
     require(ida["protocol_id"] != idb["protocol_id"], "protocol_id differs")
+    require(ida["physics_identity_sha256"] != idb["physics_identity_sha256"], "physics identity differs")
+    require(abs(res1["E_spectrum_weight_above_direct_gap"] - 2.0683e-6) / 2.0683e-6 < 0.02, "P1 continuous above-gap weight")
+    require(res0["E_spectrum_weight_above_direct_gap"] > 0.99999, "P0 almost all weight above gap")
+    require(res1["E_spectrum_weight_above_direct_gap_legacy_rfft_unpadded"] < 1e-9, "legacy rfft still tiny")
+    ida_mod = dict(ida)
+    ida_mod["classical_module_sha256"] = "deadbeef"
+    require(cache_identity_matches(ida, ida_mod), "module hash must not break physics cache")
+    keys = {tuple(np.round(np.mod(row, 1.0), 12)) for row in kf1}
+    for row in kf1:
+        partner = tuple(np.round(np.mod(-row, 1.0), 12))
+        require(partner in keys, "shift 0.5 remains inversion-paired")
+
+
+def test_h2_classification_boundaries() -> None:
+    from q8_m0_h2_qualify import classify_channel
+
+    z_ref = 1e-6 + 0j
+    ok = classify_channel(z_ref, z_k=z_ref * 1.01, z_ind=z_ref * 0.99, z_dt=z_ref)
+    require(ok["status"] == "qualified_preliminary", "5% stable channel")
+    ylike = classify_channel(z_ref, z_k=z_ref * 3.17, z_ind=z_ref * 0.65, z_dt=z_ref)
+    require(ylike["status"] == "unresolved", "change larger than |z| is unresolved")
+    xlike = classify_channel(z_ref, z_k=z_ref * 0.4, z_ind=-0.9 * z_ref, z_dt=z_ref)
+    require(xlike["status"] == "unresolved", "phase flip is unresolved")
+    trend = classify_channel(z_ref, z_k=z_ref * 0.7, z_ind=z_ref * 1.2, z_dt=z_ref)
+    require(trend["status"] == "trend_not_qualified", "sub-signal change with stable phase")
+    tiny = classify_channel(1e-12 + 0j, z_k=1e-12, z_ind=1e-12, z_dt=1e-12)
+    require(tiny["status"] == "below_reporting_resolution", "tiny reference and tiny diffs")
+    tiny_but_wild = classify_channel(1e-12 + 0j, z_k=1e-6, z_ind=1e-12, z_dt=1e-12)
+    require(tiny_but_wild["status"] == "unresolved", "tiny reference with large absolute disagreement")
+    missing = classify_channel(z_ref, z_k=z_ref, z_ind=None, z_dt=z_ref)
+    require(missing["status"] == "unresolved", "incomplete checks")
 
 
 def main() -> None:
@@ -234,6 +277,7 @@ def main() -> None:
     test_no_constant_intertwiner()
     test_short_propagation_identity()
     test_p1_resources_and_identity()
+    test_h2_classification_boundaries()
     print("test_q8_m0: PASS")
 
 

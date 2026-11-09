@@ -1,0 +1,60 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9901646798312782,
+  "N_125fs": 0.9901646798312782,
+  "left_CAP_loss_observation_100fs": 0.009793809642928206,
+  "right_CAP_loss_observation_100fs": 4.151051292807433e-05,
+  "left_CAP_loss_total_125fs": 0.009793809642928208,
+  "right_CAP_loss_total_125fs": 4.151051292807433e-05,
+  "signed_flux_100fs": 0.03386436140236312,
+  "signed_flux_125fs": 0.03386436140236312,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.2865486453961239e-11,
+  "Y_H": "not_computed",
+  "Y_H_lower": "not_computed",
+  "Y_H_upper": "not_computed",
+  "masked_norm": "not_computed",
+  "spectrum_integral": "not_computed",
+  "propagation_seconds": 852.3613415,
+  "spectrum_seconds": 6.500002200482413e-06,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        0.0,
+        0.0
+      ],
+      "energy_points": 0,
+      "masked_norm": "not_computed",
+      "spectrum_integral": "not_computed",
+      "spectrum_norm_absolute_difference": "not_computed",
+      "Y_H_lower": "not_computed",
+      "Y_H_main": "not_computed",
+      "Y_H_upper": "not_computed",
+      "execution_status": "NOT_COMPUTED",
+      "note": "legacy eta=.1 diagnostic skipped; all yields are not_computed and must not be consumed; continuation common readout is authoritative"
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_lib_F1_I20_phi180_r01",
+  "I_over_mu": 20.0,
+  "I_inc_W_per_cm2": 3333333333333.3335,
+  "wall_seconds": 852.675829900003,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "ce959f5537f56b28f5c64e5e1c767329bfe8602cadf0ec1f0244e3e1660412f8",
+  "peak_working_set_bytes": 127823872
+}

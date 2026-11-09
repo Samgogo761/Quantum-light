@@ -246,6 +246,11 @@ program hhg_sbe_solver
           spectrum_scale * (abs(Jw_x(iw_h))**2 + abs(Jw_y(iw_h))**2)
       end do
 
+      if (bsv_save_jt) then
+        write(tag, '(I4.4)') nodes(isamp)%id
+        call write_current('Jt_node_'//trim(tag)//'.dat', Jt_sample, nt, dt)
+      end if
+
       if (bsv_save_complex) then
         if (bsv_save_all_complex .or. isamp == 1) then
           write(tag, '(I4.4)') nodes(isamp)%id

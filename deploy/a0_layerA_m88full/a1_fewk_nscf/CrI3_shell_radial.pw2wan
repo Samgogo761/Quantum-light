@@ -1,0 +1,13 @@
+&INPUTPP
+    outdir = './temp_a1h_scf_clean/'
+    prefix = 'CrI3_scf_soc'
+    seedname = 'CrI3_shell_radial'
+    spin_component = 'none'
+    wan_mode = 'standalone'
+    write_mmn = .false.
+    write_amn = .true.
+    write_eig = .true.
+    write_unk = .false.
+    write_spn = .false.
+    regular_mesh = .true.
+/

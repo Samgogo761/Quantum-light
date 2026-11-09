@@ -1,0 +1,335 @@
+{"kind":"deck","id":"pr/l1rtco","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"DEFAULT"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"导师讨论版 · Wannier 模型与计算成本","textShapes":10}
+{"kind":"shape","id":"sh/547294r6","slide":1,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/vmdcj2xw","slide":1,"name":"矩形 12","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4r6dg7et","slide":1,"name":"矩形 13","text":"导师讨论版 · Wannier 模型与计算成本","textPreview":"导师讨论版 · Wannier 模型与计算成本","textChars":23,"textLines":1,"bbox":[72,58,650,28]}
+{"kind":"textbox","id":"sh/5sfepcfe","slide":1,"name":"矩形 14","text":"双层 AFM-CrI₃：Wannier 子空间选择","textPreview":"双层 AFM-CrI₃：Wannier 子空间选择","textChars":25,"textLines":1,"bbox":[72,150,1000,74]}
+{"kind":"textbox","id":"sh/ipovexwn","slide":1,"name":"矩形 15","text":"用全部收敛结果回答：为什么约 30 带不能直接套用，以及 78 带为何是最低可靠生产空间","textPreview":"用全部收敛结果回答：为什么约 30 带不能直接套用，以及 78 带为何是最低可靠生产空间","textChars":44,"textLines":1,"bbox":[72,238,1020,62]}
+{"kind":"shape","id":"sh/3qxwn2x8","slide":1,"name":"矩形 16","bbox":[72,325,470,5]}
+{"kind":"shape","id":"sh/sfqdkrep","slide":1,"name":"圆角矩形 17","bbox":[72,370,850,190]}
+{"kind":"textbox","id":"sh/dgzetcfa","slide":1,"name":"矩形 18","text":"本次汇报只解决一个问题","textPreview":"本次汇报只解决一个问题","textChars":11,"textLines":1,"bbox":[90,384,814,30]}
+{"kind":"textbox","id":"sh/1cvuxc7e","slide":1,"name":"矩形 19","text":"112 带是“算得多”，还是化学完备的参考子空间；\nM40 / M52 / M64 / M88 为什么分别构建，各自检验什么；\n后续生产究竟用哪个模型、哪个 k 网格，以及在哪些阶数内可信。","textPreview":"112 带是“算得多”，还是化学完备的参考子空间； | M40 / M52 / M64 / M88 为什么分别构建，各自检验什么； | 后续生产究竟用哪个模型、哪个 k 网格，以及在哪些阶数内可信。","textChars":95,"textLines":3,"bbox":[90,422,814,124]}
+{"kind":"shape","id":"sh/0bmd476t","slide":1,"name":"圆角矩形 20","bbox":[954,378,245,82]}
+{"kind":"textbox","id":"sh/zadcv2p8","slide":1,"name":"矩形 21","text":"M88-c20","textPreview":"M88-c20","textChars":7,"textLines":1,"bbox":[966,388,221,35]}
+{"kind":"textbox","id":"sh/e94v2hon","slide":1,"name":"矩形 22","text":"H1–H9 / Jₒ H2–H8","textPreview":"H1–H9 / Jₒ H2–H8","textChars":16,"textLines":1,"bbox":[966,426,221,22]}
+{"kind":"shape","id":"sh/90ve1w7q","slide":1,"name":"圆角矩形 23","bbox":[954,478,245,82]}
+{"kind":"textbox","id":"sh/ozmd8r65","slide":1,"name":"矩形 24","text":"full112","textPreview":"full112","textChars":7,"textLines":1,"bbox":[966,488,221,35]}
+{"kind":"textbox","id":"sh/nydczmpk","slide":1,"name":"矩形 25","text":"材料基准 / 高阶边界","textPreview":"材料基准 / 高阶边界","textChars":11,"textLines":1,"bbox":[966,526,221,22]}
+{"kind":"textbox","id":"sh/mx4v6hoz","slide":1,"name":"矩形 26","text":"2026-07-28","textPreview":"2026-07-28","textChars":10,"textLines":1,"bbox":[72,640,220,26]}
+{"kind":"image","id":"im/mlofqdgr","slide":1,"name":"Image 0","bbox":[672,305.79,470,270]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_QE_Wannier工作汇报_202605.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\P2_k60_验收报告_20260721.md"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"总图 · 不是“试带数”，而是四层证据","textShapes":23}
+{"kind":"shape","id":"sh/9072xkry","slide":2,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cnupgny5","slide":2,"name":"矩形 17","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/do3q9szq","slide":2,"name":"矩形 18","text":"总图 · 不是“试带数”，而是四层证据","textPreview":"总图 · 不是“试带数”，而是四层证据","textChars":19,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/t8byxkn2","slide":2,"name":"矩形 19","text":"从化学完备性到动力学闸门，逐层排除不可靠降维","textPreview":"从化学完备性到动力学闸门，逐层排除不可靠降维","textChars":22,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/s72xofmh","slide":2,"name":"矩形 20","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/76twva5c","slide":2,"name":"矩形 21","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/65kfmpor","slide":2,"name":"圆角矩形 22","bbox":[78,225,255,260]}
+{"kind":"textbox","id":"sh/hcvy14ne","slide":2,"name":"矩形 23","text":"B0","textPreview":"B0","textChars":2,"textLines":1,"bbox":[96,243,70,38]}
+{"kind":"textbox","id":"sh/gbmxszmt","slide":2,"name":"矩形 24","text":"基准子空间","textPreview":"基准子空间","textChars":5,"textLines":1,"bbox":[96,295,220,52]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":2,"name":"矩形 25","text":"full112 = 全 Cr-d + I-p；先过 QE、spread 与 gap","textPreview":"full112 = 全 Cr-d + I-p；先过 QE、spread 与 gap","textChars":41,"textLines":1,"bbox":[96,357,220,62]}
+{"kind":"textbox","id":"sh/u94fqp4n","slide":2,"name":"矩形 26","text":"已完成","textPreview":"已完成","textChars":3,"textLines":1,"bbox":[96,439,220,28]}
+{"kind":"shape","id":"sh/p0vy54na","slide":2,"name":"矩形 27","bbox":[332,345,20,3]}
+{"kind":"textbox","id":"sh/4zmxwzmp","slide":2,"name":"矩形 28","text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[348,333,20,24]}
+{"kind":"shape","id":"sh/mlgvq147","slide":2,"name":"圆角矩形 29","bbox":[370,203,255,260]}
+{"kind":"textbox","id":"sh/nmpcj6ls","slide":2,"name":"矩形 30","text":"B1","textPreview":"B1","textChars":2,"textLines":1,"bbox":[388,221,70,38]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":2,"name":"矩形 31","text":"30 带反证","textPreview":"30 带反证","textChars":6,"textLines":1,"bbox":[388,273,220,52]}
+{"kind":"textbox","id":"sh/9o7ulg3y","slide":2,"name":"矩形 32","text":"对称窗口、d-only、24v+6c 均直接测试","textPreview":"对称窗口、d-only、24v+6c 均直接测试","textChars":24,"textLines":1,"bbox":[388,335,220,62]}
+{"kind":"textbox","id":"sh/a9gvulkj","slide":2,"name":"矩形 33","text":"均失败","textPreview":"均失败","textChars":3,"textLines":1,"bbox":[388,417,220,28]}
+{"kind":"shape","id":"sh/ba9cn6l4","slide":2,"name":"矩形 34","bbox":[624,323,20,3]}
+{"kind":"textbox","id":"sh/wbidwb29","slide":2,"name":"矩形 35","text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[640,311,20,24]}
+{"kind":"shape","id":"sh/xcrupg3u","slide":2,"name":"圆角矩形 36","bbox":[662,181,255,260]}
+{"kind":"textbox","id":"sh/id0vylkf","slide":2,"name":"矩形 37","text":"B2","textPreview":"B2","textChars":2,"textLines":1,"bbox":[680,199,70,38]}
+{"kind":"textbox","id":"sh/je9crql0","slide":2,"name":"矩形 38","text":"轨道消融","textPreview":"轨道消融","textChars":4,"textLines":1,"bbox":[680,251,220,52]}
+{"kind":"textbox","id":"sh/ru5cbqd4","slide":2,"name":"矩形 39","text":"M52 / M64 / M88：区分 pz 与 px/py","textPreview":"M52 / M64 / M88：区分 pz 与 px/py","textChars":29,"textLines":1,"bbox":[680,313,220,62]}
+{"kind":"textbox","id":"sh/69wbilcj","slide":2,"name":"矩形 40","text":"M88 胜出","textPreview":"M88 胜出","textChars":6,"textLines":1,"bbox":[680,395,220,28]}
+{"kind":"shape","id":"sh/tw7ud0va","slide":2,"name":"矩形 41","bbox":[916,301,20,3]}
+{"kind":"textbox","id":"sh/svedkvup","slide":2,"name":"矩形 42","text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[932,289,20,24]}
+{"kind":"shape","id":"sh/fypcfqdg","slide":2,"name":"圆角矩形 43","bbox":[954,159,255,260]}
+{"kind":"textbox","id":"sh/exgvmlcv","slide":2,"name":"矩形 44","text":"B3","textPreview":"B3","textChars":2,"textLines":1,"bbox":[972,177,70,38]}
+{"kind":"textbox","id":"sh/107uh0v6","slide":2,"name":"矩形 45","text":"生产验收","textPreview":"生产验收","textChars":4,"textLines":1,"bbox":[972,229,220,52]}
+{"kind":"textbox","id":"sh/gzydovul","slide":2,"name":"矩形 46","text":"c20 ↔ full88：复幅值、相位、k 收敛","textPreview":"c20 ↔ full88：复幅值、相位、k 收敛","textChars":24,"textLines":1,"bbox":[972,291,220,62]}
+{"kind":"textbox","id":"sh/v2lc36dw","slide":2,"name":"矩形 47","text":"已通过","textPreview":"已通过","textChars":3,"textLines":1,"bbox":[972,373,220,28]}
+{"kind":"textbox","id":"sh/a1cba1wb","slide":2,"name":"矩形 48","text":"结论不是“带越多越好”，而是先保留正确轨道，再在正确 parent 上截空带。","textPreview":"结论不是“带越多越好”，而是先保留正确轨道，再在正确 parent 上截空带。","textChars":39,"textLines":1,"bbox":[85,570,1110,54]}
+{"kind":"image","id":"im/va1wzadg","slide":2,"name":"Image 0","bbox":[70,199,500,404]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_带数缩减评估方案_20260706.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_S2截断与E0诊断全量报告_20260720.md"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"基准 · 112 条不是任意大窗口","textShapes":9}
+{"kind":"shape","id":"sh/cza94vmx","slide":3,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/k3m1g7yp","slide":3,"name":"矩形 30","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z2d07mh4","slide":3,"name":"矩形 31","text":"基准 · 112 条不是任意大窗口","textPreview":"基准 · 112 条不是任意大窗口","textChars":17,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/y14jehgj","slide":3,"name":"矩形 32","text":"它恰好覆盖 Cr-d + I-p spinor 化学子空间，并在 QE 能带与局域性上通过验收","textPreview":"它恰好覆盖 Cr-d + I-p spinor 化学子空间，并在 QE 能带与局域性上通过验收","textChars":47,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/x0vi5czy","slide":3,"name":"矩形 33","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/czmhc7id","slide":3,"name":"矩形 34","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/byd032h8","slide":3,"name":"圆角矩形 35","bbox":[70,180,550,330]}
+{"kind":"textbox","id":"sh/hwzihwzi","slide":3,"name":"矩形 37","text":"近带隙：QE200 vs full112","textPreview":"近带隙：QE200 vs full112","textChars":20,"textLines":1,"bbox":[82,477,526,22]}
+{"kind":"shape","id":"sh/wv61obyx","slide":3,"name":"圆角矩形 38","bbox":[660,180,550,330]}
+{"kind":"textbox","id":"sh/po3ilcvm","slide":3,"name":"矩形 40","text":"高导带：仍保持一致","textPreview":"高导带：仍保持一致","textChars":9,"textLines":1,"bbox":[672,477,526,22]}
+{"kind":"shape","id":"sh/21szqxcb","slide":3,"name":"圆角矩形 41","bbox":[72,540,520,80]}
+{"kind":"textbox","id":"sh/32l0j2dw","slide":3,"name":"矩形 42","text":"化学组成","textPreview":"化学组成","textChars":4,"textLines":1,"bbox":[90,554,484,30]}
+{"kind":"textbox","id":"sh/cruhwrud","slide":3,"name":"矩形 43","text":"4 Cr×5d×2 + 12 I×3p×2 = 112；84 占据 + 28 空带。","textPreview":"4 Cr×5d×2 + 12 I×3p×2 = 112；84 占据 + 28 空带。","textChars":42,"textLines":1,"bbox":[90,592,484,14]}
+{"kind":"shape","id":"sh/ds3ipcvy","slide":3,"name":"圆角矩形 44","bbox":[628,540,580,80]}
+{"kind":"textbox","id":"sh/qpczuhc7","slide":3,"name":"矩形 45","text":"数值质量","textPreview":"数值质量","textChars":4,"textLines":1,"bbox":[646,554,544,30]}
+{"kind":"textbox","id":"sh/rql0nmds","slide":3,"name":"矩形 46","text":"gap 0.65–0.67 eV；Ωtotal=202.29 Å²，ΩD=0.005 Å²；最大 WF spread <3 Å²。","textPreview":"gap 0.65–0.67 eV；Ωtotal=202.29 Å²，ΩD=0.005 Å²；最大 WF spread <3 Å²。","textChars":65,"textLines":1,"bbox":[646,592,544,14]}
+{"kind":"image","id":"im/vu9o3ql8","slide":3,"name":"图片 67","bbox":[123.08,188,443.83,286]}
+{"kind":"image","id":"im/ut07a54n","slide":3,"name":"图片 68","bbox":[693.21,188,483.59,286]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_QE_Wannier工作汇报_202605.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_qe_vs_full112_bands_near_gap_pubstyle.svg\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_qe200_vs_full112_overlay_highCB.svg"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"能带拟合审计 · 每个候选模型均先优化 Wannier 参数","textShapes":9}
+{"kind":"shape","id":"sh/1cj2d8b6","slide":4,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/jm5gze1g","slide":4,"name":"矩形 30","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/knex8j21","slide":4,"name":"矩形 31","text":"能带拟合审计 · 每个候选模型均先优化 Wannier 参数","textPreview":"能带拟合审计 · 每个候选模型均先优化 Wannier 参数","textChars":30,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/5ony1oj6","slide":4,"name":"矩形 32","text":"以 M40(d-only) 为最严格例：带隙可复现，但纯 Cr-d 子空间仍存在不可消除的结构性缺失","textPreview":"以 M40(d-only) 为最严格例：带隙可复现，但纯 Cr-d 子空间仍存在不可消除的结构性缺失","textChars":50,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/axcf29kj","slide":4,"name":"矩形 33","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/vy5gbe14","slide":4,"name":"矩形 34","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/wzex4z2p","slide":4,"name":"圆角矩形 35","bbox":[60,176,1160,342]}
+{"kind":"textbox","id":"sh/mtcfypkn","slide":4,"name":"矩形 37","text":"三栏：QE200 ｜ full112 ｜ M40-opt1；Γ/K 带隙均复现为 0.667 / 1.124 eV","textPreview":"三栏：QE200 ｜ full112 ｜ M40-opt1；Γ/K 带隙均复现为 0.667 / 1.124 eV","textChars":57,"textLines":1,"bbox":[80,480,600,30]}
+{"kind":"shape","id":"sh/nulw7u18","slide":4,"name":"圆角矩形 38","bbox":[660,176,550,342]}
+{"kind":"textbox","id":"sh/elwba54j","slide":4,"name":"矩形 40","text":"能量误差 L_E 均过闸：M52 8.7、M64 6.4、M88 7.5、M40-opt1 20.2 meV（阈值 50 meV）","textPreview":"能量误差 L_E 均过闸：M52 8.7、M64 6.4、M88 7.5、M40-opt1 20.2 meV（阈值 50 meV）","textChars":65,"textLines":1,"bbox":[680,480,520,30]}
+{"kind":"shape","id":"sh/18nu50nu","slide":4,"name":"圆角矩形 41","bbox":[72,538,520,102]}
+{"kind":"textbox","id":"sh/0netcvm9","slide":4,"name":"矩形 42","text":"M40 参数确已充分搜索","textPreview":"M40 参数确已充分搜索","textChars":12,"textLines":1,"bbox":[90,549,484,26]}
+{"kind":"textbox","id":"sh/rilczq5s","slide":4,"name":"矩形 43","text":"pilot：近隙 MAE 6.4 meV，但 Ω/WF=10.68 Å²；\nopt1：Ω/WF 降至 6.57 Å²，中窗 RMS 18.4 meV。","textPreview":"pilot：近隙 MAE 6.4 meV，但 Ω/WF=10.68 Å²； | opt1：Ω/WF 降至 6.57 Å²，中窗 RMS 18.4 meV。","textChars":75,"textLines":2,"bbox":[90,579,484,52]}
+{"kind":"shape","id":"sh/qhcb6l47","slide":4,"name":"圆角矩形 44","bbox":[628,538,580,102]}
+{"kind":"textbox","id":"sh/dknu10ny","slide":4,"name":"矩形 45","text":"能带闸门通过 ≠ 模型最终通过","textPreview":"能带闸门通过 ≠ 模型最终通过","textChars":15,"textLines":1,"bbox":[646,549,544,26]}
+{"kind":"textbox","id":"sh/sjut8vmd","slide":4,"name":"矩形 46","text":"两套 40-WF 都把可表示的 d-like 能带拟合到极限；\n但密集 I-p 价带与部分高导带不在该 Hilbert 子空间中。","textPreview":"两套 40-WF 都把可表示的 d-like 能带拟合到极限； | 但密集 I-p 价带与部分高导带不在该 Hilbert 子空间中。","textChars":65,"textLines":2,"bbox":[646,579,544,52]}
+{"kind":"image","id":"im/7upwnm98","slide":4,"name":"","alt":"QE200、full112 与 M40-opt1 的近带隙和高导带能带比较","bbox":[76,181,1128,295]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_40WF审计第一轮_20260714.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_模型评分与nv12验收_20260715.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_M52_M64_M88验收与评分_20260716.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_qe200_wannier112_donly40opt1_1x3_highCB.svg\n\n[讲解要点]\n- 先强调我们不是因为参数没调好而淘汰 M40；pilot 与 opt1 分别优化近隙误差和局域化。\n- 能量误差只是第一道闸门。所有 reduced models 都先通过 L_E，再比较子空间、位置矩阵和 HHG。"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"M40 负面对照 · 能带吻合是必要条件，但不是 HHG 充分条件","textShapes":9}
+{"kind":"shape","id":"sh/dgbulwnm","slide":5,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/vu5kbihc","slide":5,"name":"矩形 30","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wve1knyx","slide":5,"name":"矩形 31","text":"M40 负面对照 · 能带吻合是必要条件，但不是 HHG 充分条件","textPreview":"M40 负面对照 · 能带吻合是必要条件，但不是 HHG 充分条件","textChars":33,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/xwn2dszi","slide":5,"name":"矩形 32","text":"M40 能拟合 Eₙ(k)，却无法表示 I-p 价带波函数；偶极、位置矩阵与相干路径随之失真","textPreview":"M40 能拟合 Eₙ(k)，却无法表示 I-p 价带波函数；偶极、位置矩阵与相干路径随之失真","textChars":46,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/ihw3mxg3","slide":5,"name":"矩形 33","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/ji5kf2ho","slide":5,"name":"矩形 34","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/kjelony9","slide":5,"name":"圆角矩形 35","bbox":[70,180,550,330]}
+{"kind":"textbox","id":"sh/e1sjatgz","slide":5,"name":"矩形 37","text":"p_d,n(k)=Σα∈Cr-3d |⟨φαk|ψn,k^QE⟩|²；红=占据、蓝=导带，误差棒为 k 范围","textPreview":"p_d,n(k)=Σα∈Cr-3d |⟨φαk|ψn,k^QE⟩|²；红=占据、蓝=导带，误差棒为 k 范围","textChars":54,"textLines":1,"bbox":[82,476,526,38]}
+{"kind":"shape","id":"sh/zmlk3yhk","slide":5,"name":"圆角矩形 38","bbox":[660,180,550,330]}
+{"kind":"textbox","id":"sh/ehkzepsn","slide":5,"name":"矩形 40","text":"图中为 M40-pilot：H1=0.727×、H6=1.733×、H10=6.638×；opt1 另为 H1=0.344×、H6=6.593×","textPreview":"图中为 M40-pilot：H1=0.727×、H6=1.733×、H10=6.638×；opt1 另为 H1=0.344×、H6=6.593×","textChars":72,"textLines":1,"bbox":[672,476,526,38]}
+{"kind":"shape","id":"sh/1kvi94re","slide":5,"name":"圆角矩形 41","bbox":[72,538,520,102]}
+{"kind":"textbox","id":"sh/gjmhgzqt","slide":5,"name":"矩形 42","text":"左图表现与原因","textPreview":"左图表现与原因","textChars":7,"textLines":1,"bbox":[90,549,484,26]}
+{"kind":"textbox","id":"sh/3md0bu94","slide":5,"name":"矩形 43","text":"VBM 的 p_d 仅 3–6%，第一导带 40–47%，第二导带 81–86%。\n价带顶约 94% 以上不是 Cr-d，d-only 无法表示初始波函数。","textPreview":"VBM 的 p_d 仅 3–6%，第一导带 40–47%，第二导带 81–86%。 | 价带顶约 94% 以上不是 Cr-d，d-only 无法表示初始波函数。","textChars":78,"textLines":2,"bbox":[90,579,484,52]}
+{"kind":"shape","id":"sh/2l4zip8j","slide":5,"name":"圆角矩形 44","bbox":[628,538,580,102]}
+{"kind":"textbox","id":"sh/povid4ra","slide":5,"name":"矩形 45","text":"右图表现与结论","textPreview":"右图表现与结论","textChars":7,"textLines":1,"bbox":[646,549,544,26]}
+{"kind":"textbox","id":"sh/onmhkzqp","slide":5,"name":"矩形 46","text":"R_q=P_q^M40/P_q^ref；虚线 1 才是正确参考。\n低阶被压低、高阶伪增强，说明 Dₘₙ(k)、相位与 sum rule 已失真。","textPreview":"R_q=P_q^M40/P_q^ref；虚线 1 才是正确参考。 | 低阶被压低、高阶伪增强，说明 Dₘₙ(k)、相位与 sum rule 已失真。","textChars":72,"textLines":2,"bbox":[646,579,544,52]}
+{"kind":"image","id":"im/329w3qho","slide":5,"name":"","alt":"QE 各能带在 Cr-d 子空间中的 projectability","bbox":[92,188,505,284]}
+{"kind":"image","id":"im/i10fulg3","slide":5,"name":"","alt":"M40-pilot 相对 nb1-104 参考的 HHG 峰高比","bbox":[680,188,510,284]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_40WF审计第一轮_20260714.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_模型评分与nv12验收_20260715.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_qe_crd_projectability.png\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_HHG_peak_ratios_vs_nb104.svg\n\n[讲解要点]\n- 左图纵轴接近 1 表示 QE 态可由 Cr-d 子空间表示；接近 0 表示该态主要来自被删掉的 I-p。\n- 右图的柱状数据属于 M40-pilot；旧版把 opt1 数值写到 pilot 图旁，现已纠正。\n- 核心句：Eₙ(k) 接近只约束本征值，不保证本征矢、偶极矩阵和 HHG 相位正确。"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"模型设计 · M52 / M64 / M88 是轨道消融，不是凑带数","textShapes":20}
+{"kind":"shape","id":"sh/yhg7epsj","slide":6,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/7698f214","slide":6,"name":"矩形 37","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m5076xkj","slide":6,"name":"矩形 38","text":"模型设计 · M52 / M64 / M88 是轨道消融，不是凑带数","textPreview":"模型设计 · M52 / M64 / M88 是轨道消融，不是凑带数","textChars":34,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/2dkbalg3","slide":6,"name":"矩形 39","text":"围绕层间 pz 与面内 px/py 两类通道，逐步回答“哪些 I-p 必须显式保留”","textPreview":"围绕层间 pz 与面内 px/py 两类通道，逐步回答“哪些 I-p 必须显式保留”","textChars":42,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/netcjqxo","slide":6,"name":"矩形 40","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/of2tcvy9","slide":6,"name":"矩形 41","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/pgbul0fu","slide":6,"name":"圆角矩形 42","bbox":[72,185,540,170]}
+{"kind":"textbox","id":"sh/ep0b6lg7","slide":6,"name":"矩形 43","text":"full112","textPreview":"full112","textChars":7,"textLines":1,"bbox":[92,203,145,36]}
+{"kind":"textbox","id":"sh/fq9cfqxc","slide":6,"name":"矩形 44","text":"Cr-d + 全部 I-p","textPreview":"Cr-d + 全部 I-p","textChars":13,"textLines":1,"bbox":[252,205,325,30]}
+{"kind":"textbox","id":"sh/0r2t8vyx","slide":6,"name":"矩形 45","text":"112 WF / 84 occ","textPreview":"112 WF / 84 occ","textChars":15,"textLines":1,"bbox":[92,253,200,28]}
+{"kind":"textbox","id":"sh/1sbuh0fi","slide":6,"name":"矩形 46","text":"最终材料参考；定义真值与高阶边界","textPreview":"最终材料参考；定义真值与高阶边界","textChars":16,"textLines":1,"bbox":[92,293,490,42]}
+{"kind":"shape","id":"sh/ql0b21gv","slide":6,"name":"圆角矩形 47","bbox":[646,185,540,170]}
+{"kind":"textbox","id":"sh/rm9sb6xg","slide":6,"name":"矩形 48","text":"M88","textPreview":"M88","textChars":3,"textLines":1,"bbox":[666,203,145,36]}
+{"kind":"textbox","id":"sh/9gfeh4zy","slide":6,"name":"矩形 49","text":"Cr-d + 全部 I-px/py","textPreview":"Cr-d + 全部 I-px/py","textChars":17,"textLines":1,"bbox":[826,205,325,30]}
+{"kind":"textbox","id":"sh/8f6x8jid","slide":6,"name":"矩形 50","text":"88 WF / 58 occ","textPreview":"88 WF / 58 occ","textChars":14,"textLines":1,"bbox":[666,253,200,28]}
+{"kind":"textbox","id":"sh/7exwfehs","slide":6,"name":"矩形 51","text":"x 偏振主通道；普通与磁性 HHG 联合 parent","textPreview":"x 偏振主通道；普通与磁性 HHG 联合 parent","textChars":27,"textLines":1,"bbox":[666,293,490,42]}
+{"kind":"shape","id":"sh/mdof6907","slide":6,"name":"圆角矩形 52","bbox":[72,390,540,170]}
+{"kind":"textbox","id":"sh/lcfed4z2","slide":6,"name":"矩形 53","text":"M52","textPreview":"M52","textChars":3,"textLines":1,"bbox":[92,408,145,36]}
+{"kind":"textbox","id":"sh/kb6d4zih","slide":6,"name":"矩形 54","text":"Cr-d + 6 个界面 I-pz","textPreview":"Cr-d + 6 个界面 I-pz","textChars":17,"textLines":1,"bbox":[252,410,325,30]}
+{"kind":"textbox","id":"sh/zaxwbuhw","slide":6,"name":"矩形 55","text":"52 WF / 24 occ","textPreview":"52 WF / 24 occ","textChars":14,"textLines":1,"bbox":[92,458,200,28]}
+{"kind":"textbox","id":"sh/y94v2p0b","slide":6,"name":"矩形 56","text":"检验层间机制；也是 strict-30 路线的 parent","textPreview":"检验层间机制；也是 strict-30 路线的 parent","textChars":30,"textLines":1,"bbox":[92,498,490,42]}
+{"kind":"shape","id":"sh/x8ve9kzq","slide":6,"name":"圆角矩形 57","bbox":[646,390,540,170]}
+{"kind":"textbox","id":"sh/c7md0zi5","slide":6,"name":"矩形 58","text":"M64","textPreview":"M64","textChars":3,"textLines":1,"bbox":[666,408,145,36]}
+{"kind":"textbox","id":"sh/o3a5cjud","slide":6,"name":"矩形 59","text":"Cr-d + 全部 I-pz","textPreview":"Cr-d + 全部 I-pz","textChars":14,"textLines":1,"bbox":[826,410,325,30]}
+{"kind":"textbox","id":"sh/p4j6loby","slide":6,"name":"矩形 60","text":"64 WF / 36 occ","textPreview":"64 WF / 36 occ","textChars":14,"textLines":1,"bbox":[666,458,200,28]}
+{"kind":"textbox","id":"sh/21snatc7","slide":6,"name":"矩形 61","text":"只保留 pz 的压力测试；位置矩阵/高阶异常","textPreview":"只保留 pz 的压力测试；位置矩阵/高阶异常","textChars":22,"textLines":1,"bbox":[666,498,490,42]}
+{"kind":"textbox","id":"sh/n21ojets","slide":6,"name":"矩形 62","text":"物理依据：界面 pz 捕获约 70–72% 层间通道；px/py 捕获约 81% 面内 d-p 通道。","textPreview":"物理依据：界面 pz 捕获约 70–72% 层间通道；px/py 捕获约 81% 面内 d-p 通道。","textChars":51,"textLines":1,"bbox":[78,620,1120,32]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_PhaseB_hopping排名与M52草案_20260715.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_M52_M64_M88验收与评分_20260716.md"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"静态闸门 · 雷达图怎样读，为什么 M88 胜出","textShapes":7}
+{"kind":"shape","id":"sh/cb2tkvap","slide":7,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/d4f2t0nm","slide":7,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/e5o32lor","slide":7,"name":"矩形 27","text":"静态闸门 · 雷达图怎样读，为什么 M88 胜出","textPreview":"静态闸门 · 雷达图怎样读，为什么 M88 胜出","textChars":24,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/f6xkvq5c","slide":7,"name":"矩形 28","text":"四个方向均为归一化惩罚量：越靠中心越好；带数不是唯一决定因素","textPreview":"四个方向均为归一化惩罚量：越靠中心越好；带数不是唯一决定因素","textChars":30,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/p0zmlk7u","slide":7,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/ozq5szq9","slide":7,"name":"矩形 30","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/nyh4jupo","slide":7,"name":"圆角矩形 31","bbox":[60,178,610,355]}
+{"kind":"textbox","id":"sh/x4j6p47q","slide":7,"name":"矩形 33","text":"半径越小越好：M88 是 reduced models 中面积最小、最均衡者","textPreview":"半径越小越好：M88 是 reduced models 中面积最小、最均衡者","textChars":38,"textLines":1,"bbox":[72,496,586,28]}
+{"kind":"shape","id":"sh/c3a5wzq5","slide":7,"name":"圆角矩形 34","bbox":[690,178,530,355]}
+{"kind":"textbox","id":"sh/a18nup8z","slide":7,"name":"矩形 36","text":"静态评分只做预筛；最终必须由普通 HHG 与磁性 Jₒ 动力学验收","textPreview":"静态评分只做预筛；最终必须由普通 HHG 与磁性 Jₒ 动力学验收","textChars":33,"textLines":1,"bbox":[710,495,490,26]}
+{"kind":"shape","id":"sh/lsj6t47m","slide":7,"name":"圆角矩形 37","bbox":[710,198,490,285]}
+{"kind":"textbox","id":"sh/kra50jqh","slide":7,"name":"矩形 38","text":"四个轴的物理意义","textPreview":"四个轴的物理意义","textChars":8,"textLines":1,"bbox":[730,212,450,30]}
+{"kind":"textbox","id":"sh/wneps3ap","slide":7,"name":"矩形 39","text":"L_E：QE–Wannier 能量 RMS 误差\nL_sub：目标能窗内的子空间/态数失配\nL_loc：Wannier spread，衡量局域化\nL_hop：相对 full112 丢失的 hopping 权重\n\nM88 四项同时较小；M64 虽有 64 WF，方向选错仍失败。","textPreview":"L_E：QE–Wannier 能量 RMS 误差 | L_sub：目标能窗内的子空间/态数失配 | L_loc：Wannier spread，衡量局域化 | L_hop：相对 full112 丢失的 hopping 权重 |  | M88 四项同时较小；M64 虽有 64 ...","textChars":138,"textLines":6,"bbox":[730,252,450,215]}
+{"kind":"image","id":"im/gf6hg7e5","slide":7,"name":"","alt":"full112、M40、M52、M64、M88 的静态评分雷达图","bbox":[82,184,565,300]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_M52_M64_M88验收与评分_20260716.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\figures\\CrI3_model_score_radar_20260716.png\n\n[讲解要点]\n- 所有轴都是惩罚量，因此不能按普通能力雷达图理解成越外越好。\n- M88 的优势来自同时保留面内 I-px/py 与 Cr-d 杂化，不是单纯因为 88 大于 64。"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"动力学闸门 1 · 普通 HHG 比值怎样读","textShapes":7}
+{"kind":"shape","id":"sh/18byd4zy","slide":8,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/i5wva1o3","slide":8,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x4ne1wni","slide":8,"name":"矩形 27","text":"动力学闸门 1 · 普通 HHG 比值怎样读","textPreview":"动力学闸门 1 · 普通 HHG 比值怎样读","textChars":22,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/w3ed8r6x","slide":8,"name":"矩形 28","text":"横向比较同一谐波阶次；R_q=1 表示待检验模型与 full112 的强度完全一致","textPreview":"横向比较同一谐波阶次；R_q=1 表示待检验模型与 full112 的强度完全一致","textChars":41,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/m9sb2x4v","slide":8,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/na1sb2lg","slide":8,"name":"矩形 30","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/8bat47ml","slide":8,"name":"圆角矩形 31","bbox":[60,178,730,355]}
+{"kind":"textbox","id":"sh/y5sbed4j","slide":8,"name":"矩形 33","text":"结论：准确性不随 52→64→88 简单单调变化；轨道方向更重要","textPreview":"结论：准确性不随 52→64→88 简单单调变化；轨道方向更重要","textChars":32,"textLines":1,"bbox":[840,506,360,20]}
+{"kind":"shape","id":"sh/z61s7il4","slide":8,"name":"圆角矩形 34","bbox":[820,178,400,355]}
+{"kind":"textbox","id":"sh/l8ja9s3a","slide":8,"name":"矩形 36","text":"R_q=I_q^(M)/I_q^(112)，I_q∝|J_q|²；虚线 1 是理想参考","textPreview":"R_q=I_q^(M)/I_q^(112)，I_q∝|J_q|²；虚线 1 是理想参考","textChars":43,"textLines":1,"bbox":[72,490,706,30]}
+{"kind":"shape","id":"sh/q18bad4n","slide":8,"name":"圆角矩形 37","bbox":[840,198,360,305]}
+{"kind":"textbox","id":"sh/b2hs3il8","slide":8,"name":"矩形 38","text":"符号与读图结论","textPreview":"符号与读图结论","textChars":7,"textLines":1,"bbox":[860,213,320,30]}
+{"kind":"textbox","id":"sh/3u18fepo","slide":8,"name":"矩形 39","text":"q：谐波阶数\nJ_q：qω₀ 处的复电流\nI_q：第 q 阶谐波强度\nM：待检验模型；112：full112\n\nM88 的 H1/H3/H5/H7/H9=\n0.994/0.974/1.012/0.923/0.975。\nM52 系统偏弱；M64 高阶异常。","textPreview":"q：谐波阶数 | J_q：qω₀ 处的复电流 | I_q：第 q 阶谐波强度 | M：待检验模型；112：full112 |  | M88 的 H1/H3/H5/H7/H9= | 0.994/0.974/1.012/0.923/0.975。 | M52 系统偏弱；M64 高...","textChars":127,"textLines":8,"bbox":[860,252,320,235]}
+{"kind":"image","id":"im/tobmh0nq","slide":8,"name":"","alt":"M52、M64、M88 的普通 HHG 强度相对 full112 的比值","bbox":[72,205,706,270]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_pmN消融完成后现状_20260719.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\magnetic_hhg_ablation_pmN_20260719\\figures\\figB_hhg_ratio_H1_H9.png\n\n[讲解要点]\n- 横轴是谐波阶数，纵轴是强度比；每个点只与同阶 full112 比较。\n- M88 基本贴住 1，证明保留全部 I-px/py 对 x 偏振普通 HHG 是关键。"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"磁序奇通道 1/2 · Jₒ 是什么，幅值比怎样读","textShapes":7}
+{"kind":"shape","id":"sh/1cfmhgne","slide":9,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/u9sja98z","slide":9,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/xgzitk76","slide":9,"name":"矩形 27","text":"磁序奇通道 1/2 · Jₒ 是什么，幅值比怎样读","textPreview":"磁序奇通道 1/2 · Jₒ 是什么，幅值比怎样读","textChars":25,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/cf6h0fql","slide":9,"name":"矩形 28","text":"±N 磁畴差分消除与磁畴无关的背景；Jₒ 是复电流振幅，不是谐波强度","textPreview":"±N 磁畴差分消除与磁畴无关的背景；Jₒ 是复电流振幅，不是谐波强度","textChars":34,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/2l4faloj","slide":9,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/nmdg3q54","slide":9,"name":"矩形 30","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/onmxcv69","slide":9,"name":"圆角矩形 31","bbox":[60,178,700,355]}
+{"kind":"textbox","id":"sh/apofe5of","slide":9,"name":"矩形 33","text":"Rₒ,q^(M/112)=|Jₒ,q^M|/|Jₒ,q^112|；水平线 1 表示幅值与 full112 一致","textPreview":"Rₒ,q^(M/112)=|Jₒ,q^M|/|Jₒ,q^112|；水平线 1 表示幅值与 full112 一致","textChars":55,"textLines":1,"bbox":[72,490,676,32]}
+{"kind":"shape","id":"sh/bqxg7q50","slide":9,"name":"圆角矩形 34","bbox":[790,178,430,355]}
+{"kind":"textbox","id":"sh/xcfy90n6","slide":9,"name":"矩形 36","text":"Jₑ,q = [J_q(+N)+J_q(−N)] / 2\nJₒ,q = [J_q(+N)−J_q(−N)] / 2","textPreview":"Jₑ,q = [J_q(+N)+J_q(−N)] / 2 | Jₒ,q = [J_q(+N)−J_q(−N)] / 2","textChars":57,"textLines":2,"bbox":[812,195,386,78]}
+{"kind":"shape","id":"sh/qtkf21ob","slide":9,"name":"圆角矩形 37","bbox":[810,286,390,220]}
+{"kind":"textbox","id":"sh/rutwv65w","slide":9,"name":"矩形 38","text":"下标与物理意义","textPreview":"下标与物理意义","textChars":7,"textLines":1,"bbox":[830,301,350,30]}
+{"kind":"textbox","id":"sh/7y14jyd8","slide":9,"name":"矩形 39","text":"q：谐波阶数；J_q：复 Fourier 振幅\n+N/−N：一对反向 Néel 磁畴\ne：even，磁畴反转后不变\no：odd，磁畴反转后变号\n|Jₒ,q|：磁序敏感幅值；arg Jₒ,q：相位\n\nM88：H2/H4/H6/H8=\n1.007/1.000/0.940/0.967。","textPreview":"q：谐波阶数；J_q：复 Fourier 振幅 | +N/−N：一对反向 Néel 磁畴 | e：even，磁畴反转后不变 | o：odd，磁畴反转后变号 | |Jₒ,q|：磁序敏感幅值；arg Jₒ,q：相位 |  | M88：H2/H4/H6/H8= | 1.007/1...","textChars":140,"textLines":8,"bbox":[830,340,350,150]}
+{"kind":"image","id":"im/z25w3i14","slide":9,"name":"","alt":"M52、M64、M88 的磁序奇电流幅值相对 full112 的比值","bbox":[70,218,680,260]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_pmN消融完成后现状_20260719.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\magnetic_hhg_ablation_pmN_20260719\\figures\\figC_Jo_ablation_vs_full112.png\n\n[讲解要点]\n- J_e 保留磁畴无关背景；J_o 提取在 N→−N 时变号的磁序敏感通道。\n- M64 的 H10 看似增强 5.27 倍，但该模型已在位置矩阵和高阶健康检查中失败，不能解释成新物理。"}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"磁序奇通道 2/2 · 复相位误差怎样定义","textShapes":7}
+{"kind":"shape","id":"sh/xc3mho32","slide":10,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/yxgbilcj","slide":10,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1o3ahwvq","slide":10,"name":"矩形 27","text":"磁序奇通道 2/2 · 复相位误差怎样定义","textPreview":"磁序奇通道 2/2 · 复相位误差怎样定义","textChars":21,"textLines":1,"bbox":[70,35,720,24]}
+{"kind":"textbox","id":"sh/0nut8rul","slide":10,"name":"矩形 28","text":"量子关联和模式干涉依赖复相位；只比较 |Jₒ| 或强度不够","textPreview":"量子关联和模式干涉依赖复相位；只比较 |Jₒ| 或强度不够","textChars":29,"textLines":1,"bbox":[70,72,1120,62]}
+{"kind":"shape","id":"sh/q9srixs3","slide":10,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/ru18r2to","slide":10,"name":"矩形 30","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/cva9k7a9","slide":10,"name":"圆角矩形 31","bbox":[60,178,740,355]}
+{"kind":"shape","id":"sh/zyl8vmt0","slide":10,"name":"圆角矩形 34","bbox":[830,178,390,355]}
+{"kind":"textbox","id":"sh/103qxcbq","slide":10,"name":"矩形 36","text":"M88 在 H2–H8 同时保住幅值和相位；H10 开始进入高导带敏感边界","textPreview":"M88 在 H2–H8 同时保住幅值和相位；H10 开始进入高导带敏感边界","textChars":37,"textLines":1,"bbox":[72,490,716,32]}
+{"kind":"shape","id":"sh/u187adsv","slide":10,"name":"圆角矩形 37","bbox":[850,288,340,215]}
+{"kind":"textbox","id":"sh/f2h8jitg","slide":10,"name":"矩形 38","text":"上标、符号与判据","textPreview":"上标、符号与判据","textChars":8,"textLines":1,"bbox":[870,303,300,30]}
+{"kind":"textbox","id":"sh/bmpgrah8","slide":10,"name":"矩形 39","text":"M/112：模型 M 相对 full112\n*：复共轭；arg：复数相位\nΔφ=0：发射相位完全一致\n\n相位偏差会改变谐波间干涉；\nH10 的敏感性不能被强度相近掩盖。","textPreview":"M/112：模型 M 相对 full112 | *：复共轭；arg：复数相位 | Δφ=0：发射相位完全一致 |  | 相位偏差会改变谐波间干涉； | H10 的敏感性不能被强度相近掩盖。","textChars":84,"textLines":6,"bbox":[870,342,300,145]}
+{"kind":"textbox","id":"sh/xo7ytkzy","slide":10,"text":"Δφₒ,q^(M/112) = arg[Jₒ,q^M (Jₒ,q^112)*]","textPreview":"Δφₒ,q^(M/112) = arg[Jₒ,q^M (Jₒ,q^112)*]","textChars":39,"textLines":1,"bbox":[850,214,350,42]}
+{"kind":"image","id":"im/lsnit8be","slide":10,"name":"","alt":"M52 与 M88 的磁序奇复幅值和相位误差","bbox":[70,214,720,268]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\magnetic_hhg_P0_JeJo_complex_20260719\\figures\\figP0_Jo_amp_phase_error_M52_M88.png\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_pmN消融完成后现状_20260719.md\n\n[讲解要点]\n- 相位误差用模型复幅值乘参考复共轭来定义，避免分别取相位造成分支跳跃。\n- M88 H2–H8 的幅值和相位同时通过，才有资格做后续磁性模式关联的材料 parent。"}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"S2 截断 1/2 · 固定 parent 后还能删多少导带？","textShapes":7}
+{"kind":"shape","id":"sh/xcryxg7y","slide":11,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/y1czalob","slide":11,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p07ixkn6","slide":11,"name":"矩形 27","text":"S2 截断 1/2 · 固定 parent 后还能删多少导带？","textPreview":"S2 截断 1/2 · 固定 parent 后还能删多少导带？","textChars":31,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/4zyhofml","slide":11,"name":"矩形 28","text":"S2 是项目内部的第二阶段 active-space 测试：不重新 Wannier 化，只改变 SBE 中保留的 Bloch 带","textPreview":"S2 是项目内部的第二阶段 active-space 测试：不重新 Wannier 化，只改变 SBE 中保留的 Bloch 带","textChars":64,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/m58fih43","slide":11,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/n61wbmlo","slide":11,"name":"矩形 30","text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/o7axk7m9","slide":11,"name":"圆角矩形 31","bbox":[60,178,720,355]}
+{"kind":"textbox","id":"sh/eh8fex47","slide":11,"name":"矩形 33","text":"谱线越重合越可靠：M88-c20 紧贴 parent；c10 已损失 H1；M52-c6 出现伪峰","textPreview":"谱线越重合越可靠：M88-c20 紧贴 parent；c10 已损失 H1；M52-c6 出现伪峰","textChars":49,"textLines":1,"bbox":[72,495,696,28]}
+{"kind":"shape","id":"sh/z2hw72lc","slide":11,"name":"圆角矩形 34","bbox":[810,178,410,355]}
+{"kind":"textbox","id":"sh/14ze9c3i","slide":11,"name":"矩形 36","text":"命名规则：Mxx 是 Wannier parent；cN 表示保留最低 N 条导带","textPreview":"命名规则：Mxx 是 Wannier parent；cN 表示保留最低 N 条导带","textChars":41,"textLines":1,"bbox":[830,195,370,42]}
+{"kind":"shape","id":"sh/ydcfq1kb","slide":11,"name":"圆角矩形 37","bbox":[830,248,370,260]}
+{"kind":"textbox","id":"sh/jylwj6lw","slide":11,"name":"矩形 38","text":"S2 的六种情况","textPreview":"S2 的六种情况","textChars":8,"textLines":1,"bbox":[850,263,330,30]}
+{"kind":"textbox","id":"sh/3qhsfypc","slide":11,"name":"矩形 39","text":"M88-full = 58v+30c = 88\nM88-c20 = 58v+20c = 78\nM88-c10 = 58v+10c = 68\nM52-full = 24v+28c = 52\nM52-c10 = 24v+10c = 34\nM52-c6  = 24v+6c  = 30\n\nv：全部占据价带；c：最低空导带。","textPreview":"M88-full = 58v+30c = 88 | M88-c20 = 58v+20c = 78 | M88-c10 = 58v+10c = 68 | M52-full = 24v+28c = 52 | M52-c10 = 24v+10c = 34 | M52-c6  = ...","textChars":158,"textLines":8,"bbox":[850,302,330,190]}
+{"kind":"image","id":"im/velo76t8","slide":11,"name":"","alt":"M88 与 M52 不同 active Bloch 带数下的 HHG 光谱叠加","bbox":[70,220,700,270]}
+{"kind":"notes","id":"nt/jetc3ut0","slide":11,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_S2截断与F0诊断全量报告_20260720.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\S2_truncation_pmN_20260720\\figures\\fig1_S2_hhg_overlay.png\n\n[讲解要点]\n- parent/full 是该 Wannier 模型的全部 Bloch 带；full112 才是最终材料参考。\n- S2 的科学问题是：在轨道子空间已经选对之后，还能安全删除多少高导带。"}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"S2 截断 2/2 · 为什么裸 30 带失败，而 78 带通过","textShapes":7}
+{"kind":"shape","id":"sh/1gbm9s3a","slide":12,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/6t0n6hg7","slide":12,"name":"矩形 26","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/dcv6dgz2","slide":12,"name":"矩形 27","text":"S2 截断 2/2 · 为什么裸 30 带失败，而 78 带通过","textPreview":"S2 截断 2/2 · 为什么裸 30 带失败，而 78 带通过","textChars":32,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/cbm5kbyh","slide":12,"name":"矩形 28","text":"先与各自 parent 比较截断误差，再检查 parent 是否接近 full112；两个闸门缺一不可","textPreview":"先与各自 parent 比较截断误差，再检查 parent 是否接近 full112；两个闸门缺一不可","textChars":51,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/alwbitsn","slide":12,"name":"矩形 29","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/bm5sryt8","slide":12,"name":"矩形 30","text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/wnetkjat","slide":12,"name":"圆角矩形 31","bbox":[60,178,720,355]}
+{"kind":"textbox","id":"sh/mhcbe9sr","slide":12,"name":"矩形 33","text":"图中蓝柱在 1.5 处截断；真实的 M52-c6 H5=16.27×、H9=8.05×","textPreview":"图中蓝柱在 1.5 处截断；真实的 M52-c6 H5=16.27×、H9=8.05×","textChars":43,"textLines":1,"bbox":[830,195,370,46]}
+{"kind":"shape","id":"sh/nilsnetc","slide":12,"name":"圆角矩形 34","bbox":[810,178,410,355]}
+{"kind":"textbox","id":"sh/9k3apob2","slide":12,"name":"矩形 36","text":"R_q^(trunc/parent)=I_q^trunc/I_q^parent；R_q=1 表示截断后完全复现 parent","textPreview":"R_q^(trunc/parent)=I_q^trunc/I_q^parent；R_q=1 表示截断后完全复现 parent","textChars":62,"textLines":1,"bbox":[72,495,696,28]}
+{"kind":"shape","id":"sh/6dgbqdsv","slide":12,"name":"圆角矩形 37","bbox":[830,252,370,256]}
+{"kind":"textbox","id":"sh/7epczitg","slide":12,"name":"矩形 38","text":"逐项比较结果","textPreview":"逐项比较结果","textChars":6,"textLines":1,"bbox":[850,267,330,30]}
+{"kind":"textbox","id":"sh/r6l8vaxw","slide":12,"name":"矩形 39","text":"M52-c6=30：高阶伪增强，淘汰\nM52-c10=34：恢复 M52 parent，\n但 M52 parent 本身低估 full112\nM88-c10=68：H1 已明显损失\nM88-c20=78：H1–H9 保持 parent\n\n结论：78 带是最低通过候选；\n失败的是裸 24v+6c，不是否定 downfolding。","textPreview":"M52-c6=30：高阶伪增强，淘汰 | M52-c10=34：恢复 M52 parent， | 但 M52 parent 本身低估 full112 | M88-c10=68：H1 已明显损失 | M88-c20=78：H1–H9 保持 parent |  | 结论：78 ...","textChars":165,"textLines":8,"bbox":[850,306,330,186]}
+{"kind":"image","id":"im/9cv2xc76","slide":12,"name":"","alt":"不同 active-space 截断相对各自 parent 的 HHG 峰高比","bbox":[70,214,700,280]}
+{"kind":"notes","id":"nt/8f2psfyx","slide":12,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_S2截断与F0诊断全量报告_20260720.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\S2_truncation_pmN_20260720\\figures\\fig2_S2_hhg_ratio_vs_parent.png\n\n[讲解要点]\n- M52-c10 通过 parent 闸门但不通过 full112 闸门，因此只能是机制模型。\n- M52-c6 的异常来自导带不完整破坏通道抵消；不能把图中被截短的柱高误读为约 1.5。"}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"P2 最终验收 1/2 · 带截断复误差怎样定义","textShapes":13}
+{"kind":"shape","id":"sh/q50nydsj","slide":13,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/sfe1s3e9","slide":13,"name":"矩形 36","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7i107edk","slide":13,"name":"矩形 37","text":"P2 最终验收 1/2 · 带截断复误差怎样定义","textPreview":"P2 最终验收 1/2 · 带截断复误差怎样定义","textChars":24,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/mhsje9wz","slide":13,"name":"矩形 38","text":"同一 k60 网格下比较 M88-c20(78) 与 M88-full(88)：同时检验幅值和相位","textPreview":"同一 k60 网格下比较 M88-c20(78) 与 M88-full(88)：同时检验幅值和相位","textChars":49,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/y1wju94v","slide":13,"name":"矩形 39","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/z25kne5g","slide":13,"name":"矩形 40","text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/03e1wjm1","slide":13,"name":"圆角矩形 41","bbox":[60,178,690,350]}
+{"kind":"textbox","id":"sh/m5gjyt4r","slide":13,"name":"矩形 43","text":"红虚线：普通通道 10%、磁序奇通道 15% 的验收阈值","textPreview":"红虚线：普通通道 10%、磁序奇通道 15% 的验收阈值","textChars":28,"textLines":1,"bbox":[72,490,666,26]}
+{"kind":"shape","id":"sh/n6pkrelc","slide":13,"name":"圆角矩形 44","bbox":[780,178,440,350]}
+{"kind":"textbox","id":"sh/9s72to3i","slide":13,"name":"矩形 46","text":"ε_band^J(q)=|J_q^78−J_q^88|/(|J_q^88|+δ)\nε_band^o(q)=|Jₒ,q^78−Jₒ,q^88|/(|Jₒ,q^88|+δ)\n\n上标 J：普通电流；o：磁序奇通道\n下标 band：误差来自 active-band 截断\n78/88：active 带数；q：谐波阶数；δ>0：数值底","textPreview":"ε_band^J(q)=|J_q^78−J_q^88|/(|J_q^88|+δ) | ε_band^o(q)=|Jₒ,q^78−Jₒ,q^88|/(|Jₒ,q^88|+δ) |  | 上标 J：普通电流；o：磁序奇通道 | 下标 band：误差来自 active-band ...","textChars":162,"textLines":6,"bbox":[805,195,390,305]}
+{"kind":"shape","id":"sh/atgj2t43","slide":13,"name":"圆角矩形 47","bbox":[80,555,250,82]}
+{"kind":"textbox","id":"sh/vupkvylo","slide":13,"name":"矩形 48","text":"≤7.5%","textPreview":"≤7.5%","textChars":5,"textLines":1,"bbox":[92,565,226,35]}
+{"kind":"textbox","id":"sh/50behwr2","slide":13,"name":"矩形 49","text":"普通 H1–H9","textPreview":"普通 H1–H9","textChars":8,"textLines":1,"bbox":[92,603,226,22]}
+{"kind":"shape","id":"sh/4z2d8rah","slide":13,"name":"圆角矩形 50","bbox":[365,555,250,82]}
+{"kind":"textbox","id":"sh/jytcfmtw","slide":13,"name":"矩形 51","text":"≤6.7%","textPreview":"≤6.7%","textChars":5,"textLines":1,"bbox":[377,565,226,35]}
+{"kind":"textbox","id":"sh/ixkv6hsb","slide":13,"name":"矩形 52","text":"Jₒ H2–H8","textPreview":"Jₒ H2–H8","textChars":8,"textLines":1,"bbox":[377,603,226,22]}
+{"kind":"shape","id":"sh/t4velwry","slide":13,"name":"圆角矩形 53","bbox":[650,555,250,82]}
+{"kind":"textbox","id":"sh/s3mdcrad","slide":13,"name":"矩形 54","text":"46%","textPreview":"46%","textChars":3,"textLines":1,"bbox":[662,565,226,35]}
+{"kind":"textbox","id":"sh/r2dwjm98","slide":13,"name":"矩形 55","text":"Jₒ H10 复误差","textPreview":"Jₒ H10 复误差","textChars":10,"textLines":1,"bbox":[662,603,226,22]}
+{"kind":"shape","id":"sh/614va1sn","slide":13,"name":"圆角矩形 56","bbox":[935,555,250,82]}
+{"kind":"textbox","id":"sh/1svepgra","slide":13,"name":"矩形 57","text":"0.43 rad","textPreview":"0.43 rad","textChars":8,"textLines":1,"bbox":[947,565,226,35]}
+{"kind":"textbox","id":"sh/g7mdgbap","slide":13,"name":"矩形 58","text":"Jₒ H10 相位差","textPreview":"Jₒ H10 相位差","textChars":10,"textLines":1,"bbox":[947,603,226,22]}
+{"kind":"image","id":"im/dkje5wfq","slide":13,"name":"","alt":"M88-c20 相对 M88-full 的普通与磁序奇通道复误差","bbox":[70,214,670,265]}
+{"kind":"notes","id":"nt/hgzapcr6","slide":13,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\P2_k60_验收报告_20260721.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\P2_k60_accept_20260721\\figures\\fig2_eps_band_k60.png\n\n[讲解要点]\n- ε_band 比较的是两个复数的距离，所以会同时惩罚振幅和相位偏差。\n- H10 的 J_o 虽弱，但 46% 复误差和 0.43 rad 相位差都明确失败；H2–H8 通过。"}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"P2 最终验收 2/2 · k 网格误差怎样定义","textShapes":13}
+{"kind":"shape","id":"sh/xc7eds76","slide":14,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/lkrmhsju","slide":14,"name":"矩形 36","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6l0nqxkf","slide":14,"name":"矩形 37","text":"P2 最终验收 2/2 · k 网格误差怎样定义","textPreview":"P2 最终验收 2/2 · k 网格误差怎样定义","textChars":24,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/7m94j210","slide":14,"name":"矩形 38","text":"固定模型，比较 k40 与 k60；目标通道变化小于约 1%，说明当前主误差来自删带而非 k 网格","textPreview":"固定模型，比较 k40 与 k60；目标通道变化小于约 1%，说明当前主误差来自删带而非 k 网格","textChars":49,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/fi5432t4","slide":14,"name":"矩形 39","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/uhw3axcj","slide":14,"name":"矩形 40","text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/h4nm5sba","slide":14,"name":"圆角矩形 41","bbox":[60,178,690,350]}
+{"kind":"shape","id":"sh/25w3excv","slide":14,"name":"圆角矩形 44","bbox":[780,178,440,350]}
+{"kind":"textbox","id":"sh/47y5g7u1","slide":14,"name":"矩形 46","text":"k40=40×40×1，k60=60×60×1；目标通道均已进入平台区","textPreview":"k40=40×40×1，k60=60×60×1；目标通道均已进入平台区","textChars":35,"textLines":1,"bbox":[72,490,666,26]}
+{"kind":"shape","id":"sh/jal4vidw","slide":14,"name":"圆角矩形 47","bbox":[80,555,250,82]}
+{"kind":"textbox","id":"sh/i9c32dcr","slide":14,"name":"矩形 48","text":"k40","textPreview":"k40","textChars":3,"textLines":1,"bbox":[92,565,226,35]}
+{"kind":"textbox","id":"sh/ofq1cja9","slide":14,"name":"矩形 49","text":"40×40×1","textPreview":"40×40×1","textChars":7,"textLines":1,"bbox":[92,603,226,22]}
+{"kind":"shape","id":"sh/9gji5oru","slide":14,"name":"圆角矩形 50","bbox":[365,555,250,82]}
+{"kind":"textbox","id":"sh/mt8ja9sj","slide":14,"name":"矩形 51","text":"k60","textPreview":"k60","textChars":3,"textLines":1,"bbox":[377,565,226,35]}
+{"kind":"textbox","id":"sh/neh03eto","slide":14,"name":"矩形 52","text":"60×60×1","textPreview":"60×60×1","textChars":7,"textLines":1,"bbox":[377,603,226,22]}
+{"kind":"shape","id":"sh/0rq18zad","slide":14,"name":"圆角矩形 53","bbox":[650,555,250,82]}
+{"kind":"textbox","id":"sh/1szi14by","slide":14,"name":"矩形 54","text":"X=J 或 o","textPreview":"X=J 或 o","textChars":7,"textLines":1,"bbox":[662,565,226,35]}
+{"kind":"textbox","id":"sh/ep8j6ps7","slide":14,"name":"矩形 55","text":"普通 / 磁序奇","textPreview":"普通 / 磁序奇","textChars":8,"textLines":1,"bbox":[662,603,226,22]}
+{"kind":"shape","id":"sh/zqh0zuts","slide":14,"name":"圆角矩形 56","bbox":[935,555,250,82]}
+{"kind":"textbox","id":"sh/knu1k3ah","slide":14,"name":"矩形 57","text":"无需 k80","textPreview":"无需 k80","textChars":6,"textLines":1,"bbox":[947,565,226,35]}
+{"kind":"textbox","id":"sh/5o32d8r2","slide":14,"name":"矩形 58","text":"当前目标已收敛","textPreview":"当前目标已收敛","textChars":7,"textLines":1,"bbox":[947,603,226,22]}
+{"kind":"textbox","id":"sh/s3q1oj2l","slide":14,"text":"ε_k^X(q;M) = |J_X,q^(M,k60) − J_X,q^(M,k40)|\n/(|J_X,q^(M,k60)| + δ)\n\nX=J：普通总电流；X=o：磁序奇通道\nM：M88-full 或 M88-c20\n下标 k：误差来自 k 网格；q：谐波阶数\nδ>0：数值底，防止弱信号比值发散","textPreview":"ε_k^X(q;M) = |J_X,q^(M,k60) − J_X,q^(M,k40)| | /(|J_X,q^(M,k60)| + δ) |  | X=J：普通总电流；X=o：磁序奇通道 | M：M88-full 或 M88-c20 | 下标 k：误差来自 k 网格；q：...","textChars":149,"textLines":7,"bbox":[812,204,374,284]}
+{"kind":"image","id":"im/y9sz29gj","slide":14,"name":"","alt":"M88-full 与 M88-c20 从 k40 到 k60 的普通和磁序奇通道复误差","bbox":[70,214,670,265]}
+{"kind":"notes","id":"nt/6lsnupw7","slide":14,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\P2_k60_验收报告_20260721.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\P2_k60_accept_20260721\\figures\\fig3_eps_k_mesh.png\n\n[讲解要点]\n- k40/k60 的差别通常小于 1%，所以 M88-c20@k40 可用于日常 H1–H9 与 J_o H2–H8。\n- 这里的结论不能外推到 H11+、不同波长、不同强度或量子双时关联。"}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"冻结后的统一参数 · 按科学目标升级","textShapes":11}
+{"kind":"shape","id":"sh/547mhg3m","slide":15,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cbuh8nmh","slide":15,"name":"矩形 28","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/uh4v2pkj","slide":15,"name":"矩形 29","text":"冻结后的统一参数 · 按科学目标升级","textPreview":"冻结后的统一参数 · 按科学目标升级","textChars":18,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/vixcvu14","slide":15,"name":"矩形 30","text":"一个默认生产模型，两条升级路径；50×50 未测试，不作为统一口径","textPreview":"一个默认生产模型，两条升级路径；50×50 未测试，不作为统一口径","textChars":33,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/wj6d4z2p","slide":15,"name":"矩形 31","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/hkfexkja","slide":15,"name":"矩形 32","text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/ilov6pkv","slide":15,"name":"圆角矩形 33","bbox":[70,190,340,310]}
+{"kind":"textbox","id":"sh/jmxwzu1g","slide":15,"name":"矩形 34","text":"日常生产","textPreview":"日常生产","textChars":4,"textLines":1,"bbox":[88,204,304,30]}
+{"kind":"textbox","id":"sh/4n6d8z21","slide":15,"name":"矩形 35","text":"M88-c20｜58v+20c=78\nk=40×40｜lg_cov\n普通 H1–H9\nJₒ H2–H8\nk60 仅作验收","textPreview":"M88-c20｜58v+20c=78 | k=40×40｜lg_cov | 普通 H1–H9 | Jₒ H2–H8 | k60 仅作验收","textChars":60,"textLines":5,"bbox":[88,242,304,244]}
+{"kind":"shape","id":"sh/5ofe14j6","slide":15,"name":"圆角矩形 36","bbox":[470,190,330,310]}
+{"kind":"textbox","id":"sh/6p8va9kr","slide":15,"name":"矩形 37","text":"H10 边界","textPreview":"H10 边界","textChars":6,"textLines":1,"bbox":[488,204,294,30]}
+{"kind":"textbox","id":"sh/rqhw3e1c","slide":15,"name":"矩形 38","text":"M88-full\n最终 k=60×60\nJₒ H10 幅值/相位\n仍需 full112 抽查\n先做通道分析再谈新物理","textPreview":"M88-full | 最终 k=60×60 | Jₒ H10 幅值/相位 | 仍需 full112 抽查 | 先做通道分析再谈新物理","textChars":58,"textLines":5,"bbox":[488,242,294,244]}
+{"kind":"shape","id":"sh/f6dcnetg","slide":15,"name":"圆角矩形 39","bbox":[860,190,350,310]}
+{"kind":"textbox","id":"sh/e54ve9cv","slide":15,"name":"矩形 40","text":"H11+ / 10 eV","textPreview":"H11+ / 10 eV","textChars":12,"textLines":1,"bbox":[878,204,314,30]}
+{"kind":"textbox","id":"sh/18vup4bm","slide":15,"name":"矩形 41","text":"full112 或扩展空间\nH11+ 单独收敛\n3200 nm：H26≈10 eV\nreduced 模型不能外推\n不同模型的谱不拼接","textPreview":"full112 或扩展空间 | H11+ 单独收敛 | 3200 nm：H26≈10 eV | reduced 模型不能外推 | 不同模型的谱不拼接","textChars":66,"textLines":5,"bbox":[878,242,314,244]}
+{"kind":"shape","id":"sh/07mdgzu1","slide":15,"name":"圆角矩形 42","bbox":[70,545,1140,85]}
+{"kind":"textbox","id":"sh/nadwrets","slide":15,"name":"矩形 43","text":"成本与边界","textPreview":"成本与边界","textChars":5,"textLines":1,"bbox":[88,559,1104,30]}
+{"kind":"textbox","id":"sh/294vi9c7","slide":15,"name":"矩形 44","text":"同批 k60：c20=2.21 h、full88=2.87 h，墙时节省约 23%；高阶是否扩展由科学问题决定。","textPreview":"同批 k60：c20=2.21 h、full88=2.87 h，墙时节省约 23%；高阶是否扩展由科学问题决定。","textChars":56,"textLines":1,"bbox":[88,597,1104,19]}
+{"kind":"notes","id":"nt/vaxsvy10","slide":15,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\P2_k60_验收报告_20260721.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_nb1-104高阶可信区间_20260709.md\n- 3200 nm corresponds to 0.38745 eV per photon; H26 is approximately 10.07 eV."}
+{"kind":"slide","id":"sl/gny5sjyp","slide":16,"title":"收尾 · 请导师拍板","textShapes":13}
+{"kind":"shape","id":"sh/8z2h8bq1","slide":16,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/kbudgrqt","slide":16,"name":"矩形 43","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/5c3u9wry","slide":16,"name":"矩形 44","text":"收尾 · 请导师拍板","textPreview":"收尾 · 请导师拍板","textChars":10,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/i9sve18n","slide":16,"name":"矩形 45","text":"四个决定，冻结后续计算口径并避免重复试错","textPreview":"四个决定，冻结后续计算口径并避免重复试错","textChars":20,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/ja1c7m98","slide":16,"name":"矩形 46","bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/sfudkbqp","slide":16,"name":"矩形 47","text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/tg3udgra","slide":16,"name":"圆角矩形 48","bbox":[74,175,1120,72]}
+{"kind":"textbox","id":"sh/3apg3atc","slide":16,"name":"矩形 49","text":"基准模型","textPreview":"基准模型","textChars":4,"textLines":1,"bbox":[94,192,145,28]}
+{"kind":"textbox","id":"sh/29wfa5sr","slide":16,"name":"矩形 50","text":"同意 full112 只承担材料真值、轨道校准与高阶边界，不再作为日常生产。","textPreview":"同意 full112 只承担材料真值、轨道校准与高阶边界，不再作为日常生产。","textChars":38,"textLines":1,"bbox":[255,190,900,36]}
+{"kind":"shape","id":"sh/pc7y5kbi","slide":16,"name":"圆角矩形 51","bbox":[74,267,1120,72]}
+{"kind":"textbox","id":"sh/obyxcfax","slide":16,"name":"矩形 52","text":"生产模型","textPreview":"生产模型","textChars":4,"textLines":1,"bbox":[94,284,145,28]}
+{"kind":"textbox","id":"sh/f65wzqtg","slide":16,"name":"矩形 53","text":"同意 M88-c20@k40 用于普通 H1–H9 / Jₒ H2–H8；保留 full88/full112 对照。","textPreview":"同意 M88-c20@k40 用于普通 H1–H9 / Jₒ H2–H8；保留 full88/full112 对照。","textChars":58,"textLines":1,"bbox":[255,282,900,36]}
+{"kind":"shape","id":"sh/u5wf6lcv","slide":16,"name":"圆角矩形 54","bbox":[74,359,1120,72]}
+{"kind":"textbox","id":"sh/h8ne10b6","slide":16,"name":"矩形 55","text":"30 带结论","textPreview":"30 带结论","textChars":6,"textLines":1,"bbox":[94,376,145,28]}
+{"kind":"textbox","id":"sh/g7ex8va1","slide":16,"name":"矩形 56","text":"同意“裸 30 带已被数据否定”；若必须≤30，只能做 composite/downfolding 并重验有效算符。","textPreview":"同意“裸 30 带已被数据否定”；若必须≤30，只能做 composite/downfolding 并重验有效算符。","textChars":58,"textLines":1,"bbox":[255,374,900,36]}
+{"kind":"shape","id":"sh/z29gbutk","slide":16,"name":"圆角矩形 57","bbox":[74,451,1120,72]}
+{"kind":"textbox","id":"sh/y10fipsz","slide":16,"name":"矩形 58","text":"高阶路线","textPreview":"高阶路线","textChars":4,"textLines":1,"bbox":[94,468,145,28]}
+{"kind":"textbox","id":"sh/axkjatc7","slide":16,"name":"矩形 59","text":"同意 Jₒ H10 升级到 M88-full@k60；H11+ 回 full112/扩展高能空间，单独收敛。","textPreview":"同意 Jₒ H10 升级到 M88-full@k60；H11+ 回 full112/扩展高能空间，单独收敛。","textChars":54,"textLines":1,"bbox":[255,466,900,36]}
+{"kind":"shape","id":"sh/vyt03yds","slide":16,"name":"圆角矩形 60","bbox":[74,548,1120,112]}
+{"kind":"textbox","id":"sh/wz21c3ud","slide":16,"name":"矩形 61","text":"一句话结论","textPreview":"一句话结论","textChars":5,"textLines":1,"bbox":[92,562,1084,30]}
+{"kind":"textbox","id":"sh/x0bi58vy","slide":16,"name":"矩形 62","text":"不是为了“多用带”，而是保留 Cr-d/I-p 杂化与复相位；78 带是当前目标下最低已验证空间。","textPreview":"不是为了“多用带”，而是保留 Cr-d/I-p 杂化与复相位；78 带是当前目标下最低已验证空间。","textChars":49,"textLines":1,"bbox":[92,600,1084,46]}
+{"kind":"notes","id":"nt/gny5sjyp","slide":16,"text":"[Sources]\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\08_QE与Wannier\\CrI3_M52_M64_M88验收与评分_20260716.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\给场外AI_S2截断与E0诊断全量报告_20260720.md\n- C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\docs\\09_少带模型\\P2_k60_验收报告_20260721.md"}

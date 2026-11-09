@@ -1,0 +1,397 @@
+{
+  "scope": "stored-series postprocessing diagnostic only; no propagation; not a new certified result",
+  "cases": [
+    {
+      "case": "QED_theta0",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_q1a_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": 1.1642067505781423e-08,
+            "im": -6.7164544091457635e-09
+          },
+          "even": {
+            "re": -0.005468420694201961,
+            "im": 0.00024110521829310639
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": 1.495110656416984e-08,
+            "im": -6.510708500215463e-09
+          },
+          "even": {
+            "re": -0.001437391902272686,
+            "im": 0.00045849661714571086
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": 1.4885911082018928e-08,
+            "im": -6.495157333090591e-09
+          },
+          "even": {
+            "re": -0.0014390049361362118,
+            "im": 0.00045786621648423453
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": -4.357761523579491e-06,
+        "endpoint_trapezoid": -2.150470503240303e-05,
+        "endpoint_linear_exact_oscillatory": -2.139542371880551e-05
+      },
+      "odd_change_relative_to_original": 0.24190842827515488,
+      "odd_phase_change_degrees": 6.40813757982188
+    },
+    {
+      "case": "QED_theta_pi",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_theta_pi_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": -8.323234598544768e-08,
+            "im": 2.603308114543755e-08
+          },
+          "even": {
+            "re": -0.005421522073103653,
+            "im": 0.0002408165828530846
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": -8.156367512000915e-08,
+            "im": 2.617815997375578e-08
+          },
+          "even": {
+            "re": -0.0013974212587457308,
+            "im": 0.0004578275131275838
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": -8.125145315839976e-08,
+            "im": 2.6050538185130477e-08
+          },
+          "even": {
+            "re": -0.0013991770120562593,
+            "im": 0.00045720074927135075
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": 3.106969826650758e-05,
+        "endpoint_trapezoid": 0.00011650420737389164,
+        "endpoint_linear_exact_oscillatory": 0.0001159309725445494
+      },
+      "odd_change_relative_to_original": 0.02271529550976179,
+      "odd_phase_change_degrees": -0.4082651332103806
+    },
+    {
+      "case": "QED_theta_pi2",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_q3a_pi2_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": -2.0296136150205202e-08,
+            "im": 5.615497555524389e-08
+          },
+          "even": {
+            "re": -0.005448739337418543,
+            "im": 0.00021679955068184615
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": -1.7484274847595974e-08,
+            "im": 5.633731851742516e-08
+          },
+          "even": {
+            "re": -0.0014190807354277355,
+            "im": 0.00043401299522900013
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": -1.7422880838253475e-08,
+            "im": 5.6096414397394925e-08
+          },
+          "even": {
+            "re": -0.001420764434869539,
+            "im": 0.0004333527910362028
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": 8.256908108911973e-06,
+        "endpoint_trapezoid": 4.4740421895349326e-05,
+        "endpoint_linear_exact_oscillatory": 4.4474345784444834e-05
+      },
+      "odd_change_relative_to_original": 0.04812995830449923,
+      "odd_phase_change_degrees": -2.6172406987035393
+    },
+    {
+      "case": "QED_theta_3pi2",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_qed_q3b_3pi2_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": -5.0592775757436065e-08,
+            "im": -3.780481080153898e-08
+          },
+          "even": {
+            "re": -0.005444617837278662,
+            "im": 0.0002647542501170666
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": -4.8416786611730524e-08,
+            "im": -3.763577062035361e-08
+          },
+          "even": {
+            "re": -0.0014179242516845604,
+            "im": 0.00048200783345228083
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": -4.8233921647565514e-08,
+            "im": -3.750265729286404e-08
+          },
+          "even": {
+            "re": -0.0014196030568659798,
+            "im": 0.00048140966176952234
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": 1.7866979761310553e-05,
+        "endpoint_trapezoid": 4.504162849810127e-05,
+        "endpoint_linear_exact_oscillatory": 4.4876057344453386e-05
+      },
+      "odd_change_relative_to_original": 0.03765409282426056,
+      "odd_phase_change_degrees": 1.0971874189113766
+    },
+    {
+      "case": "GH5_pi4_eta05",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_q6_pi4_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": 7.618096266662211e-10,
+            "im": 5.960673929699539e-09
+          },
+          "even": {
+            "re": -0.005541041708706779,
+            "im": 0.00031066435494187813
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": 7.023262244129289e-10,
+            "im": 5.95223890054869e-09
+          },
+          "even": {
+            "re": -0.0015669655392692222,
+            "im": 0.0005251194412546497
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": 6.994075071702077e-10,
+            "im": 5.918758897327948e-09
+          },
+          "even": {
+            "re": -0.0015679680899005637,
+            "im": 0.0005245060961240949
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": -1.5386210988733946e-07,
+        "endpoint_trapezoid": 1.4829863940477149e-06,
+        "endpoint_linear_exact_oscillatory": 1.4689449904405886e-06
+      },
+      "odd_change_relative_to_original": 0.012509643354448631,
+      "odd_phase_change_degrees": 0.5439858117749602
+    },
+    {
+      "case": "GH5_pi4_eta10",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_q6_pi4_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": 7.226619095235948e-09,
+            "im": 3.191250022259993e-08
+          },
+          "even": {
+            "re": -0.0054756924370447015,
+            "im": 0.00021351995833463643
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": 7.038886896092167e-09,
+            "im": 3.1905873190208114e-08
+          },
+          "even": {
+            "re": -0.001439500986319386,
+            "im": 0.000431055540278733
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": 7.011506300363089e-09,
+            "im": 3.1776585762330854e-08
+          },
+          "even": {
+            "re": -0.0014411176628190505,
+            "im": 0.00043037216610767573
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": -2.1816915434746605e-06,
+        "endpoint_trapezoid": 3.207053785860083e-06,
+        "endpoint_linear_exact_oscillatory": 3.157638209400307e-06
+      },
+      "odd_change_relative_to_original": 0.007776555555500293,
+      "odd_phase_change_degrees": 0.31655045952769784
+    },
+    {
+      "case": "GH5_pi4_eta15",
+      "source_dir": "C:\\Users\\26507\\Documents\\New_SBEs\\Quantum-light\\results\\q_line\\qinput_qin_a2_141_gh5_q6_pi4_20261120",
+      "omitted_boundary_intervals": [
+        1.8251318267223837,
+        0.7435722257017687
+      ],
+      "boundary_fraction": 0.010220548682087173,
+      "constant_current_H2_leak_original": {
+        "re": -0.010137857134352765,
+        "im": -0.0005487698861884061
+      },
+      "constant_current_H2_leak_endpoint_linear": {
+        "re": -9.188269079783492e-17,
+        "im": -1.2015428796639952e-16
+      },
+      "values": {
+        "archived_mask_trapezoid": {
+          "odd": {
+            "re": -1.6005116333169152e-06,
+            "im": 1.7053125712163716e-06
+          },
+          "even": {
+            "re": -0.0021267298983852372,
+            "im": 0.0018925661219756779
+          }
+        },
+        "endpoint_trapezoid": {
+          "odd": {
+            "re": -1.6238344808837749e-06,
+            "im": 1.706557694233432e-06
+          },
+          "even": {
+            "re": 0.0036856122206012894,
+            "im": 0.00222105987042536
+          }
+        },
+        "endpoint_linear_exact_oscillatory": {
+          "odd": {
+            "re": -1.6174452067115389e-06,
+            "im": 1.7021036830110886e-06
+          },
+          "even": {
+            "re": 0.0036610799664315496,
+            "im": 0.0022262800078728913
+          }
+        }
+      },
+      "coherent_source_contrast_x": {
+        "archived_mask_trapezoid": 0.0016363831907723946,
+        "endpoint_trapezoid": -0.0002370227552870492,
+        "endpoint_linear_exact_oscillatory": -0.00023227189964021935
+      },
+      "odd_change_relative_to_original": 0.007369307590830733,
+      "odd_phase_change_degrees": 0.3548794981154458
+    }
+  ]
+}

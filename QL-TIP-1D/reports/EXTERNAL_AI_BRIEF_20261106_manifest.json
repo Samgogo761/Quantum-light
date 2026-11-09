@@ -1,0 +1,49 @@
+{
+  "scope": "external AI briefing compiled from existing evidence; no new scientific calculation",
+  "date": "2026-11-06",
+  "inherited_review_commit": "68ab493a",
+  "execution_checkpoint": "05dd5154",
+  "shareable_document": "QL-TIP-1D/reports/EXTERNAL_AI_BRIEF_20261106.md",
+  "files": [
+    {
+      "path": "QL-TIP-1D/reports/EXTERNAL_AI_BRIEF_20261106.md",
+      "bytes": 24143,
+      "sha256": "a080b3b44e3044d87f415b213656360753798ffa3b51846586a3c2794c235cfd"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_execution_review/evidence_snapshot.json",
+      "bytes": 41882,
+      "sha256": "8c25e278a80710d6070f4acf68d950a1c4d1b021ecf17b8a8105539828894679"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_execution_review/REVIEW_AND_NEXT_ACTIONS.md",
+      "bytes": 11771,
+      "sha256": "e287371042f53f19a6036086d1b729bdf3162ae590350bb7c53b666aad275a3f"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md",
+      "bytes": 40898,
+      "sha256": "3619e5fc5bd28e4273ab1a2c543b2b63d5f0d0d8bf13b9ae4a4b069a2546bf8e"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_evening_decision/DECISION_AND_AGENT_INSTRUCTIONS.md",
+      "bytes": 17611,
+      "sha256": "19ccca5837f7e05696300f7081896759a6330fd8b2f40c320cf608509a70089e"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "bytes": 31537,
+      "sha256": "b6eebb1f0282e8a193e78ae23e6cd312d21f6d1cb026cb2273c287511e1de351"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json",
+      "bytes": 18509,
+      "sha256": "7496deaa8139a9f163f8614770951a8c543d0e5f2039b042b8a7c47d3138acc8"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json",
+      "bytes": 1579,
+      "sha256": "d61a0b4a508898474b566152dd5f3f5be6a191e5ceec796ccfa3d7e50157c88c"
+    }
+  ]
+}

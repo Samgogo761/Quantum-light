@@ -1,0 +1,5 @@
+&BANDS
+  prefix  = 'hBN'
+  outdir  = './tmp'
+  filband = 'hBN_qe_bands_path.dat'
+/

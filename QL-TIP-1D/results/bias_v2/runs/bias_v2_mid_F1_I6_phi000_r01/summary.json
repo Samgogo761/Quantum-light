@@ -1,0 +1,60 @@
+{
+  "run_kind": "laser",
+  "status": "PASS",
+  "N_prep": 0.9999999999961283,
+  "left_CAP_loss_prep": 1.5792683699582965e-18,
+  "right_CAP_loss_prep": 6.456875854752901e-77,
+  "N_100fs": 0.9999072574525453,
+  "N_125fs": 0.9999072574525453,
+  "left_CAP_loss_observation_100fs": 9.27425343383672e-05,
+  "right_CAP_loss_observation_100fs": 6.287592638998129e-19,
+  "left_CAP_loss_total_125fs": 9.274253433836879e-05,
+  "right_CAP_loss_total_125fs": 6.287592638998129e-19,
+  "signed_flux_100fs": 0.0008978746131923364,
+  "signed_flux_125fs": 0.0008978746131923364,
+  "actual_dt_au_main": 0.09999969361336707,
+  "actual_dt_au_late": null,
+  "steps_main": 82683,
+  "steps_late": 0,
+  "max_probability_budget_residual": 1.3116396857526524e-11,
+  "Y_H": "not_computed",
+  "Y_H_lower": "not_computed",
+  "Y_H_upper": "not_computed",
+  "masked_norm": "not_computed",
+  "spectrum_integral": "not_computed",
+  "propagation_seconds": 1289.897428199998,
+  "spectrum_seconds": 7.499998901039362e-06,
+  "spectra": [
+    {
+      "label": "t100_eta0p1_dE0p025_mask2to4",
+      "eta_eV": 0.1,
+      "energy_step_eV": 0.025,
+      "mask_bounds_nm": [
+        2.0,
+        4.0
+      ],
+      "energy_range_eV": [
+        0.0,
+        0.0
+      ],
+      "energy_points": 0,
+      "masked_norm": "not_computed",
+      "spectrum_integral": "not_computed",
+      "spectrum_norm_absolute_difference": "not_computed",
+      "Y_H_lower": "not_computed",
+      "Y_H_main": "not_computed",
+      "Y_H_upper": "not_computed",
+      "execution_status": "NOT_COMPUTED",
+      "note": "legacy eta=.1 diagnostic skipped; all yields are not_computed and must not be consumed; continuation common readout is authoritative"
+    }
+  ],
+  "schema": "continuation-v2-run-summary",
+  "run_id": "bias_v2_mid_F1_I6_phi000_r01",
+  "I_over_mu": 6.0,
+  "I_inc_W_per_cm2": 1000000000000.0,
+  "wall_seconds": 1290.2799087000021,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED",
+  "state_100fs_sha256": "d96d9df2d9601221504f96ce4ecd54b9a6067215d91253a3be66c7d8397a2dac",
+  "peak_working_set_bytes": 127668224
+}

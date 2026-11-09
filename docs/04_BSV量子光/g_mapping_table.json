@@ -1,0 +1,84 @@
+{
+  "title": "1600 nm g mapping table (conditional, no propagation)",
+  "date": "2026-11-03",
+  "frozen_fit_sha256": "17a8e37ec3e0ab54096ff4edd1440c5a3f0412b09450c2fd8960cbc00d8e69db",
+  "not_experimental_claim": true,
+  "did_not_rescale_g_as_omega_to_the_minus_half": true,
+  "protocol_A": {
+    "omega_eV": 0.775,
+    "g_Ainv": 0.005,
+    "alpha": 0.5,
+    "r": 0.3,
+    "nbar": 0.34273260912113385,
+    "Mabs": 0.31832679107412065,
+    "R": 1.2733071642964826,
+    "s_t": "1+4+1 sin^2 coupling switch, not 25 fs Gaussian",
+    "X": "a+a^dagger",
+    "var_vac_X": 1.0,
+    "X_mean_real_alpha": 1.0
+  },
+  "geometry": {
+    "a_nn_mean_ang": 4.040881841019413,
+    "max_abs_e_dot_delta_ang": 7.000428065780361,
+    "q_max_at_s1_X1": 0.035002140329,
+    "Q0_scale_2_ann_g_absalpha": 0.020204409205097064
+  },
+  "identification": {
+    "k_shift": "k -> k + g s(t) X e_hat",
+    "A_SI": "A_SI = (hbar/e) * (g X) with g converted to m^-1",
+    "A_zpf_from_code_g_Vs_per_m": 3.2910597827380377e-08,
+    "harmonic_E_peak": "E_peak = omega * A_peak (Coulomb-gauge harmonic identification)",
+    "I_cycle_mean_field": "0.5 * c * eps0 * E_peak^2 of <E>, not BSV intensity",
+    "cavity_A_zpf": "sqrt(hbar / (2*eps0*omega*V_eff)) in front of X=a+a^dagger"
+  },
+  "implied_by_frozen_g": {
+    "A_zpf_Vs_per_m": 3.2910597827380377e-08,
+    "V_eff_1600nm_m3": 4.669710497994278e-24,
+    "V_eff_1600nm_cube_nm": 16.73,
+    "V_eff_24800nm_m3": 7.23805127189113e-23,
+    "E_zpf_1600_V_per_m": 38750000.0,
+    "E_mean_peak_1600_V_per_m": 38750000.0,
+    "I_mean_cycle_1600_W_per_cm2": 199288781.06259617,
+    "I_nbar_scaled_1600_W_per_cm2": 273211055.608616,
+    "E_mean_peak_248_V_per_m": 2500000.0,
+    "I_mean_cycle_248_W_per_cm2": 829505.8524977991,
+    "dk_peak_Ainv": 0.005,
+    "note": "Once g and alpha are fixed, mean Peierls amplitude is fixed. V_eff is only the cavity volume that would make this g a single-mode ZPF."
+  },
+  "reference_scales_not_used_by_protocol_A": {
+    "lambda_1600nm_cubed_m3": 4.096e-18,
+    "lambda_over_2pi_cubed_m3": 1.651278562979814e-20,
+    "pulse_Aeff_m2_w0_15um": 3.534291735288517e-10,
+    "pulse_tau_eff_s_25fs_FWHM": 2.6611675485780654e-14,
+    "pulse_Aeff_c_taueff_m3": 2.819650738359674e-15
+  },
+  "V_eff_scan_1600nm_keep_protocolA_alpha_r": [
+    {"V_eff_m3": 1e-27, "A_zpf_Vs_per_m": 2.2489549187815058e-06, "g_Ainv": 0.3416764001944778, "I_mean_cycle_W_per_cm2": 930620913060.4884, "alpha_for_0p1_TW_cm2_mean": 0.1638, "fock_qed_at_protocolA_n": true},
+    {"V_eff_m3": 1e-24, "A_zpf_Vs_per_m": 7.111819898388549e-08, "g_Ainv": 0.010804756473417483, "I_mean_cycle_W_per_cm2": 930620913.0604887, "alpha_for_0p1_TW_cm2_mean": 5.181, "fock_qed_at_protocolA_n": true},
+    {"V_eff_m3": 1e-21, "A_zpf_Vs_per_m": 2.248954918781506e-09, "g_Ainv": 0.0003416764001944779, "I_mean_cycle_W_per_cm2": 930620.9130604886, "alpha_for_0p1_TW_cm2_mean": 163.8, "fock_qed_at_protocolA_n": true},
+    {"V_eff_m3": 1e-18, "A_zpf_Vs_per_m": 7.111819898388548e-11, "g_Ainv": 1.0804756473417483e-05, "I_mean_cycle_W_per_cm2": 930.6209130604885, "alpha_for_0p1_TW_cm2_mean": 5181.0, "fock_qed_at_protocolA_n": true},
+    {"V_eff_m3": 1e-15, "A_zpf_Vs_per_m": 2.248954918781506e-12, "g_Ainv": 3.416764001944778e-07, "I_mean_cycle_W_per_cm2": 0.9306209130604884, "alpha_for_0p1_TW_cm2_mean": 163800.0, "fock_qed_at_protocolA_n": true},
+    {"V_eff_m3": 1e-12, "A_zpf_Vs_per_m": 7.111819898388548e-14, "g_Ainv": 1.0804756473417484e-08, "I_mean_cycle_W_per_cm2": 0.0009306209130604888, "alpha_for_0p1_TW_cm2_mean": 5181000.0, "fock_qed_at_protocolA_n": true}
+  ],
+  "traveling_wave_25fs_w0_15um_intensity_scan": [
+    {"I0_W_per_cm2": 100.0, "nbar": 75.75614463447339, "R1_alpha": 6.174660565980199, "R1_r": 2.5136225890853914, "fock_qed": false},
+    {"I0_W_per_cm2": 100000.0, "nbar": 75756.1446344734, "R1_alpha": 194.62353998318562, "R1_r": 5.964214309015706, "fock_qed": false},
+    {"I0_W_per_cm2": 100000000.0, "nbar": 75756144.6344734, "R1_alpha": 6154.516436507157, "R1_r": 9.418088651755385, "fock_qed": false},
+    {"I0_W_per_cm2": 100000000000.0, "nbar": 75756144634.47339, "R1_alpha": 194622.89772143136, "R1_r": 12.871966287949691, "fock_qed": false}
+  ],
+  "R_eq_1_vs_nbar": [
+    {"nbar": 0.343, "alpha": 0.5227045508215753, "r": 0.26117942978983183, "nmax10_ok": true},
+    {"nbar": 1.0, "alpha": 0.8164965809277259, "r": 0.5493061443340549, "nmax10_ok": true},
+    {"nbar": 10.0, "alpha": 2.288688541085317, "r": 1.5222612188617115, "nmax10_ok": false},
+    {"nbar": 100.0, "alpha": 7.088635709281827, "r": 2.651652454029538, "nmax10_ok": false},
+    {"nbar": 10000.0, "alpha": 70.71244577512944, "r": 4.951768775643085, "nmax10_ok": false},
+    {"nbar": 75756100000.0, "alpha": 194622.84038686226, "r": 12.871965993356515, "nmax10_ok": false}
+  ],
+  "missing_for_W_per_cm2_claim": [
+    "independent V_eff or (I0, A_eff, calibrated envelope)",
+    "whether the lab mode is a cavity standing mode or a traveling pulse mode",
+    "interface transmission / local-field factor",
+    "number of electronic subsystems sharing the mode (code uses 2)",
+    "true temporal mode function replacing 1+4+1 switch"
+  ]
+}

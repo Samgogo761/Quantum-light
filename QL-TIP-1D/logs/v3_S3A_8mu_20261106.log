@@ -1,0 +1,13 @@
+library new=22 selected=6
+bias_v2_lib_F0_I8_phi090_r01: F=0.0 I/mu=8.0 CEP=1.5707963267948966
+bias_v2_lib_F0_I8_phi180_r01: F=0.0 I/mu=8.0 CEP=3.141592653589793
+bias_v2_lib_F0_I8_phi270_r01: F=0.0 I/mu=8.0 CEP=4.71238898038469
+bias_v2_lib_F0_I12_phi000_r01: F=0.0 I/mu=12.0 CEP=0.0
+bias_v2_lib_F0_I12_phi090_r01: F=0.0 I/mu=12.0 CEP=1.5707963267948966
+bias_v2_lib_F0_I12_phi180_r01: F=0.0 I/mu=12.0 CEP=3.141592653589793
+{"run_id": "bias_v2_lib_F0_I8_phi090_r01", "status": "PASS", "wall_seconds": 1296.6720750000022, "Y": 0.0}
+{"run_id": "bias_v2_lib_F0_I8_phi180_r01", "status": "PASS", "wall_seconds": 1263.1532260999957, "Y": 0.0}
+{"run_id": "bias_v2_lib_F0_I8_phi270_r01", "status": "PASS", "wall_seconds": 1317.4006437000062, "Y": 0.0}
+{"run_id": "bias_v2_lib_F0_I12_phi000_r01", "status": "PASS", "wall_seconds": 1307.4263644999955, "Y": 0.0}
+{"run_id": "bias_v2_lib_F0_I12_phi090_r01", "status": "PASS", "wall_seconds": 1316.087518100001, "Y": 0.0}
+{"run_id": "bias_v2_lib_F0_I12_phi180_r01", "status": "PASS", "wall_seconds": 1317.7206747999953, "Y": 0.0}

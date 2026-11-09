@@ -1,0 +1,38 @@
+{
+  "schema": "continuation-v2-readout",
+  "readout_id": "ro2_bias_v2_ph8_F1_I32_phi315_r01_t100_eta0p05_dE0p0125_m2-4",
+  "run_id": "bias_v2_ph8_F1_I32_phi315_r01",
+  "config_path": "results/bias_v2/runs/bias_v2_ph8_F1_I32_phi315_r01/config.json",
+  "state_path": "data/raw/bias_v2/bias_v2_ph8_F1_I32_phi315_r01/state_100fs.npz",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 32.0,
+  "CEP_rad": 5.497787143782138,
+  "expected_readout_fs": 100.0,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "kind": "v2_probe",
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_start_nm": 2.0,
+  "mask_end_nm": 4.0,
+  "energy_max_mode": "base",
+  "state_sha256": "b15ac06368df3426dd4467305d3d3c770596bc7082b9c4500a8827e76fb4141c",
+  "run_config_sha256": "0b720fc2e32bb52f6bfe567ce5bc0f65c94d9e4a083cf4cdbfce8e0e58ac4987",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5c9476617402b91b9ebf6d84229e9c0ead48f19ec0e1433947c3a05edc7e100d",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "actual_readout_fs": 100.0,
+  "energy_range_eV": [
+    -22.0,
+    259.475
+  ],
+  "energy_points": 22519
+}

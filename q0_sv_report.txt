@@ -1,0 +1,19 @@
+# Q0 Husimi-Q moment validation (layer A0)
+state_type = squeezed_vacuum
+n_draw = 200000
+d_target =   0.00000000E+00  0.00000000E+00
+d_sample =  -1.10542807E-04 -1.23451171E-03
+err_d =   1.23945104E-03
+VQ_target =
+  8.08411817E-01 -6.70673282E-01
+ -6.70673282E-01  2.76905265E+00
+VQ_sample =
+  8.09485195E-01 -6.69963413E-01
+ -6.69963413E-01  2.76419250E+00
+err_VQ =   1.67211576E-03
+N_target =   7.88732236E-01
+N_sample =   7.88706002E-01
+err_N =   2.62337523E-05
+M_sample =  -9.76371817E-01 -6.69936689E-01
+err_M =   3.38169082E-03
+pass = T

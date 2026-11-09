@@ -38,6 +38,7 @@
 
 &dephasing
   T2_cycles = 0.5
+  dephasing_enabled = .true.
 /
 
 &bsv
@@ -53,6 +54,7 @@
   bsv_save_ics_cs = .true.
   bsv_save_complex = .true.
   bsv_save_all_complex = .false.
+  bsv_save_jt = .false.
   bsv_harmonics = '2,5,7,9,10'
   bsv_propagate_ids = 'PROPAGATE_IDS_PLACEHOLDER'
 /

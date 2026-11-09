@@ -24,6 +24,26 @@ REPO = Path(__file__).resolve().parents[2]
 OUT_ROOT = REPO / "results/q_line/m0_v1_20260912"
 ALGORITHM = "midpoint_unitary_exponential_v1"
 CLASSICAL_MODULE = Path(__file__).resolve()
+POSTPROCESS_VERSION = "20260915_h2qual_a"
+PHYSICS_IDENTITY_KEYS = (
+    "model_id",
+    "algorithm",
+    "dtype",
+    "params",
+    "protocol",
+    "protocol_id",
+    "nk",
+    "nt_per_cycle",
+    "mu",
+    "grid_shift",
+    "subspace",
+    "k_orders",
+    "neel",
+    "field_sign",
+    "a_nn_ang",
+    "a_cell_ang2",
+    "source_hashes",
+)
 
 
 @dataclass(frozen=True)
@@ -64,11 +84,80 @@ def p1_protocol(a_star: float) -> DriveProtocol:
     return DriveProtocol(hbar_omega0=0.05, a0_dimless=float(a_star), label=f"P1_A{a_star:g}")
 
 
-def pol_vector(prot: DriveProtocol) -> np.ndarray:
+def p1_a2_protocol(a_star: float) -> DriveProtocol:
+    """Same P1 envelope/carrier/A*, linear polarization along a2. M0/R0 unchanged."""
+    return DriveProtocol(
+        hbar_omega0=0.05,
+        a0_dimless=float(a_star),
+        polarization="a2",
+        label=f"P1_a2_A{a_star:g}",
+    )
+
+
+def p1_a2_flat_282_protocol(a_star: float) -> DriveProtocol:
+    """P1 carrier/A*/a2 polarization with a C¹ 2+8+2 flat-top envelope.
+
+    Does not change the default eight-cycle sin² P1 protocol. n_cycles is 12
+    optical cycles: 2-cycle raised-cosine rise, 8-cycle unit plateau, 2-cycle
+    fall. On the plateau, A(t+T0/2)=-A(t) holds by definition for the cosine
+    carrier. Electronic half-cycle covariance is not assumed.
+    """
+    return DriveProtocol(
+        hbar_omega0=0.05,
+        n_cycles=12,
+        a0_dimless=float(a_star),
+        polarization="a2",
+        envelope="flat_2_8_2_on_vector_potential",
+        carrier="cos",
+        cep=0.0,
+        label=f"P1_a2_flat_2_8_2_A{a_star:g}",
+    )
+
+
+def envelope_and_derivative(t, prot: DriveProtocol):
+    """Vector-potential envelope and d(env)/dt. Zero outside [0, t_pulse].
+
+    sin2_on_vector_potential is the production P0/P1 envelope.
+    flat_2_8_2_on_vector_potential is C¹ with a constant unit plateau.
+    """
+    t = np.asarray(t, dtype=float)
+    tp = prot.t_pulse
+    inside = (t >= 0.0) & (t <= tp)
+    if prot.envelope == "sin2_on_vector_potential":
+        ph = np.pi * t / tp
+        env = np.where(inside, np.sin(ph) ** 2, 0.0)
+        denv = np.where(inside, (np.pi / tp) * np.sin(2.0 * ph), 0.0)
+        return env, denv
+    if prot.envelope == "flat_2_8_2_on_vector_potential":
+        if int(prot.n_cycles) != 12:
+            raise ValueError("flat_2_8_2 envelope requires n_cycles=12")
+        t0 = prot.period
+        u = t / t0
+        env_rise = np.sin(np.pi * u / 4.0) ** 2
+        # f=sin²(πu/4) ⇒ df/dt = (π/(4 T0)) sin(πu/2). The factor is π/4, not π/2.
+        denv_rise = (np.pi / (4.0 * t0)) * np.sin(np.pi * u / 2.0)
+        v = 12.0 - u
+        env_fall = np.sin(np.pi * v / 4.0) ** 2
+        denv_fall = -(np.pi / (4.0 * t0)) * np.sin(np.pi * v / 2.0)
+        env = np.where(u < 2.0, env_rise, np.where(u <= 10.0, 1.0, env_fall))
+        denv = np.where(u < 2.0, denv_rise, np.where(u <= 10.0, 0.0, denv_fall))
+        return np.where(inside, env, 0.0), np.where(inside, denv, 0.0)
+    raise ValueError(prot.envelope)
+
+
+def pol_vector(prot: DriveProtocol, geo=None) -> np.ndarray:
     if prot.polarization == "x":
         return np.array([1.0, 0.0])
     if prot.polarization == "y":
         return np.array([0.0, 1.0])
+    if prot.polarization == "a2":
+        if geo is None:
+            raise ValueError("polarization=a2 requires geometry")
+        e = np.asarray(geo.a2_cart[:2], dtype=float)
+        nrm = float(np.linalg.norm(e))
+        if nrm < 1e-15:
+            raise ValueError("a2_cart is degenerate")
+        return e / nrm
     raise ValueError(prot.polarization)
 
 
@@ -76,23 +165,32 @@ def kappa_shift(t, geo, prot: DriveProtocol, sign: int = +1) -> np.ndarray:
     """a(t) = eA(t)/ħ  [Å^-1], shape (...,2)."""
     t = np.asarray(t, dtype=float)
     a0 = prot.a0_dimless / geo.a_nn_mean_ang
-    inside = (t >= 0.0) & (t <= prot.t_pulse)
-    env = np.where(inside, np.sin(np.pi * t / prot.t_pulse) ** 2, 0.0)
+    env, _denv = envelope_and_derivative(t, prot)
     scal = sign * a0 * env * np.cos(prot.omega0 * t + prot.cep)
-    return scal[..., None] * pol_vector(prot)
+    return scal[..., None] * pol_vector(prot, geo)
 
 
 def e_field(t, geo, prot: DriveProtocol, sign: int = +1) -> np.ndarray:
     """eE/ħ = -d a/dt  [Å^-1 t_h/ħ]. With t_h = 1 eV this is numerically E in V/Å."""
     t = np.asarray(t, dtype=float)
     a0 = prot.a0_dimless / geo.a_nn_mean_ang
-    inside = (t >= 0.0) & (t <= prot.t_pulse)
-    ph = np.pi * t / prot.t_pulse
-    env = np.sin(ph) ** 2
-    denv = (np.pi / prot.t_pulse) * np.sin(2.0 * ph)
+    env, denv = envelope_and_derivative(t, prot)
     dadt = a0 * (denv * np.cos(prot.omega0 * t + prot.cep) - prot.omega0 * env * np.sin(prot.omega0 * t + prot.cep))
-    dadt = np.where(inside, dadt, 0.0)
-    return (-sign * dadt)[..., None] * pol_vector(prot)
+    return (-sign * dadt)[..., None] * pol_vector(prot, geo)
+
+
+def k_grid_xy(geo, nk: int, shift_x: float = 0.0, shift_y: float = 0.0):
+    """nk×nk Monkhorst-Pack with independent fractional shifts along b1 and b2.
+
+    Equal-weight inversion-closed Cartesian grid. The production helper
+    k_grid(geo, nk, shift) is exactly k_grid_xy(geo, nk, shift, shift).
+    """
+    g1 = (np.arange(nk) + float(shift_x)) / nk
+    g2 = (np.arange(nk) + float(shift_y)) / nk
+    kf = np.stack(np.meshgrid(g1, g2, indexing="ij"), axis=-1).reshape(-1, 2)
+    kc = geo.k_cart(kf)
+    w = np.full(kc.shape[0], 1.0 / kc.shape[0])
+    return kf, kc, w
 
 
 def k_grid(geo, nk: int, shift: float = 0.0):
@@ -100,11 +198,7 @@ def k_grid(geo, nk: int, shift: float = 0.0):
 
     shift=0: Γ-centred (original P0). shift=0.5: half-step shifted, still inversion-paired.
     """
-    g1 = (np.arange(nk) + float(shift)) / nk
-    kf = np.stack(np.meshgrid(g1, g1, indexing="ij"), axis=-1).reshape(-1, 2)
-    kc = geo.k_cart(kf)
-    w = np.full(kc.shape[0], 1.0 / kc.shape[0])
-    return kf, kc, w
+    return k_grid_xy(geo, nk, shift, shift)
 
 
 def run_fingerprint(geo, p: M0Params, prot: DriveProtocol, *, nk: int, nt_per_cycle: int, mu: float,
@@ -127,11 +221,34 @@ def run_fingerprint(geo, p: M0Params, prot: DriveProtocol, *, nk: int, nt_per_cy
         "a_nn_ang": float(geo.a_nn_mean_ang),
         "a_cell_ang2": float(geo.a_cell_ang2),
         "source_hashes": geo.source_hashes,
-        "classical_module_sha256": sha256_file(CLASSICAL_MODULE),
     }
-    blob = json.dumps(body, sort_keys=True, ensure_ascii=True)
-    body["identity_sha256"] = hashlib.sha256(blob.encode("utf-8")).hexdigest()
+    body["physics_identity_sha256"] = physics_identity_sha256(body)
+    body["classical_module_sha256"] = sha256_file(CLASSICAL_MODULE)
+    body["postprocess_version"] = POSTPROCESS_VERSION
+    ident_blob = json.dumps(
+        {k: body[k] for k in body if k not in ("identity_sha256",)},
+        sort_keys=True,
+        ensure_ascii=True,
+    )
+    body["identity_sha256"] = hashlib.sha256(ident_blob.encode("utf-8")).hexdigest()
     return body
+
+
+def physics_identity_sha256(ident: dict) -> str:
+    """Cache key: physical trajectory, not postprocess or module hash."""
+    missing = [k for k in PHYSICS_IDENTITY_KEYS if k not in ident]
+    if missing:
+        raise KeyError(f"physics identity missing {missing}")
+    payload = {k: ident[k] for k in PHYSICS_IDENTITY_KEYS}
+    blob = json.dumps(payload, sort_keys=True, ensure_ascii=True)
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()
+
+
+def cache_identity_matches(stored: dict, current: dict) -> bool:
+    try:
+        return physics_identity_sha256(stored) == physics_identity_sha256(current)
+    except KeyError:
+        return stored.get("identity_sha256") == current.get("identity_sha256")
 
 
 def initial_rho(geo, p: M0Params, kc, neel: int, mu: float):
@@ -175,9 +292,13 @@ def _sin2_window(t, tp):
 
 def propagate(geo, p: M0Params, prot: DriveProtocol, *, nk: int, nt_per_cycle: int, neel: int, sign: int, mu: float,
               n_diag: int = 64, verbose: bool = True, grid_shift: float = 0.0, subspace: bool = False,
-              k_orders=()) -> dict:
+              k_orders=(), shift_xy=None) -> dict:
     k_orders = tuple(int(x) for x in k_orders)
-    kf, kc, w = k_grid(geo, nk, shift=grid_shift)
+    if shift_xy is None:
+        sx = sy = float(grid_shift)
+    else:
+        sx, sy = float(shift_xy[0]), float(shift_xy[1])
+    kf, kc, w = k_grid_xy(geo, nk, sx, sy)
     rho, e0 = initial_rho(geo, p, kc, neel, mu)
     rho0 = rho.copy()
     h0 = h8(geo, p, kc, neel)
@@ -206,7 +327,10 @@ def propagate(geo, p: M0Params, prot: DriveProtocol, *, nk: int, nt_per_cycle: i
     for n in range(nt + 1):
         t = times[n]
         kap = kc + kappa_shift(t, geo, prot, sign)
-        need_h = subspace or bool(k_orders) or n % diag_every == 0 or n == nt
+        # Harmonic accumulation at selected k_orders only needs j(k,t).
+        # Instantaneous H(k) / valence projectors are for subspace blocks and
+        # sparse diagnostics; forcing them on every step was an accidental cost.
+        need_h = subspace or n % diag_every == 0 or n == nt
         if need_h:
             h, j = h8_and_current(geo, p, kap, neel)
         else:
@@ -276,6 +400,7 @@ def propagate(geo, p: M0Params, prot: DriveProtocol, *, nk: int, nt_per_cycle: i
         "nk": nk,
         "nt_per_cycle": nt_per_cycle,
         "grid_shift": float(grid_shift),
+        "shift_xy": (float(sx), float(sy)),
         "dt": dt,
         "times": times,
         "J_sheet": j_sheet,
@@ -336,22 +461,85 @@ def spectrum(times, signal, omega0, wmax=12.0, dw=0.02, window="sin2"):
     return ws, vals
 
 
-def field_resources(geo, prot: DriveProtocol, eg_direct: float, n_sample: int = 20001) -> dict:
-    """Pulse resources from A(t), E(t). No propagation."""
-    times = np.linspace(0.0, prot.t_pulse, n_sample)
-    a = kappa_shift(times, geo, prot, +1)
-    ef = e_field(times, geo, prot, +1)
-    fe = float(np.trapezoid(np.sum(ef**2, axis=-1), times))
-    e_peak = float(np.max(np.abs(ef)))
-    a_peak = float(np.max(np.abs(a)))
-    dt = times[1] - times[0]
-    spec = np.fft.rfft(ef[:, 0])
+def _integrate_power_from(omegas, power, omega_min):
+    """Trapezoid of power on [omega_min, omega_max], interpolating the lower edge."""
+    omegas = np.asarray(omegas, dtype=float)
+    power = np.asarray(power, dtype=float)
+    if omegas.size < 2:
+        return 0.0
+    if omega_min >= omegas[-1]:
+        return 0.0
+    if omega_min <= omegas[0]:
+        return float(np.trapezoid(power, omegas))
+    i = int(np.searchsorted(omegas, omega_min))
+    p_th = float(np.interp(omega_min, omegas, power))
+    om = np.concatenate(([omega_min], omegas[i:]))
+    pw = np.concatenate(([p_th], power[i:]))
+    return float(np.trapezoid(pw, om))
+
+
+def _fourier_trapz(times, signal, omegas, chunk: int = 256):
+    """Ẽ(Ω) = ∫ dt E(t) exp(+i Ω t) on a dense positive-Ω grid."""
+    t = np.asarray(times, dtype=float)
+    sig = np.asarray(signal, dtype=float)
+    out = np.empty(len(omegas), dtype=complex)
+    for i0 in range(0, len(omegas), chunk):
+        w = omegas[i0 : i0 + chunk]
+        kern = np.exp(1j * np.outer(w, t))
+        out[i0 : i0 + chunk] = np.trapezoid(sig[None, :] * kern, t, axis=1)
+    return out
+
+
+def _legacy_unpadded_rfft_weight(times, e_x, omega_thresh):
+    dt = float(times[1] - times[0])
+    spec = np.fft.rfft(e_x)
     freq = 2.0 * np.pi * np.fft.rfftfreq(len(times), d=dt)
     power = np.abs(spec) ** 2
     pos = freq > 1.0e-12
     tot = float(np.trapezoid(power[pos], freq[pos])) if np.any(pos) else 0.0
-    above = pos & (freq >= eg_direct)
-    w_above = float(np.trapezoid(power[above], freq[above]) / tot) if tot > 0.0 else 0.0
+    above = pos & (freq >= omega_thresh)
+    return float(np.trapezoid(power[above], freq[above]) / tot) if tot > 0.0 else 0.0
+
+
+def _zeropad_rfft_weight(times, e_x, omega_thresh, pad: int):
+    dt = float(times[1] - times[0])
+    n_fft = int(len(times) * pad)
+    spec = np.fft.rfft(e_x, n=n_fft) * dt
+    freq = 2.0 * np.pi * np.fft.rfftfreq(n_fft, d=dt)
+    power = np.abs(spec) ** 2
+    pos = freq >= 0.0
+    tot = _integrate_power_from(freq[pos], power[pos], 0.0)
+    above = _integrate_power_from(freq[pos], power[pos], omega_thresh)
+    return above / tot if tot > 0.0 else 0.0
+
+
+def field_resources(geo, prot: DriveProtocol, eg_direct: float, n_sample: int = 20001) -> dict:
+    """Pulse resources from A(t), E(t). No propagation.
+
+    Above-gap spectral weight uses Ẽ(Ω)=∫_0^{Tp} E(t) e^{+iΩt} dt.
+    The primary quadrature is a highly zero-padded rFFT; a coarser trapz
+    grid is stored only as a cross-check. Unpadded 8-cycle rFFT is legacy.
+    """
+    times = np.linspace(0.0, prot.t_pulse, n_sample)
+    a = kappa_shift(times, geo, prot, +1)
+    ef = e_field(times, geo, prot, +1)
+    e_pol = ef @ pol_vector(prot, geo)
+    fe = float(np.trapezoid(np.sum(ef**2, axis=-1), times))
+    e_peak = float(np.max(np.abs(ef)))
+    a_peak = float(np.max(np.abs(a)))
+    omega_th = float(eg_direct)
+    pad_weights = {f"pad_{p}": _zeropad_rfft_weight(times, e_pol, omega_th, p) for p in (16, 64, 256)}
+    w_above = pad_weights["pad_256"]
+    dt = float(times[1] - times[0])
+    n_fft = int(len(times) * 256)
+    spec = np.fft.rfft(e_pol, n=n_fft) * dt
+    freq = 2.0 * np.pi * np.fft.rfftfreq(n_fft, d=dt)
+    power = np.abs(spec) ** 2
+    pos = freq >= 0.0
+    tot = _integrate_power_from(freq[pos], power[pos], 0.0)
+    parseval_pi = np.pi * float(np.trapezoid(e_pol**2, times))
+    parseval_ratio = tot / parseval_pi if parseval_pi > 0.0 else None
+    legacy = _legacy_unpadded_rfft_weight(times, e_pol, omega_th)
     return {
         "protocol_id": prot.protocol_id,
         "label": prot.label,
@@ -370,7 +558,19 @@ def field_resources(geo, prot: DriveProtocol, eg_direct: float, n_sample: int = 
         "E_g_direct_over_hbar_omega": eg_direct / prot.hbar_omega0,
         "m_min_center_frequency": int(np.ceil(eg_direct / prot.hbar_omega0 - 1e-12)),
         "E_spectrum_weight_above_direct_gap": w_above,
-        "note_spectrum_weight": "relative |Ẽ(ω)|² weight for ω ≥ E_g^dir/ħ; not an absorption probability",
+        "E_spectrum_weight_above_direct_gap_continuous": w_above,
+        "E_spectrum_weight_above_direct_gap_legacy_rfft_unpadded": legacy,
+        "E_spectrum_zeropad_rfft_weights": pad_weights,
+        "E_spectrum_parseval_int_|Etilde|^2_over_pi_int_E2": parseval_ratio,
+        "E_spectrum_n_time": n_sample,
+        "E_spectrum_n_rfft_pad256": n_fft,
+        "postprocess_version": POSTPROCESS_VERSION,
+        "note_spectrum_weight": (
+            "2026-09-15: E_spectrum_weight_above_direct_gap is the continuous Fourier "
+            "integral weight for Ω≥E_g^dir/ħ; not an absorption probability. "
+            "The pre-20260915 unpadded rFFT (8-cycle comb) is stored as "
+            "E_spectrum_weight_above_direct_gap_legacy_rfft_unpadded and must not be cited."
+        ),
     }
 
 
@@ -441,12 +641,16 @@ def run_set(geo, p, prot, mu, nk, nt_per_cycle, *, signs=(+1, -1), neels=(+1, -1
             meta_path = fn.with_suffix(".meta.json")
             if fn.exists() and meta_path.exists():
                 stored = json.loads(meta_path.read_text(encoding="utf-8"))
-                if stored.get("identity_sha256") == ident["identity_sha256"]:
+                if cache_identity_matches(stored, ident):
                     runs[key] = _load_run(fn)
                     runs[key]["neel"], runs[key]["field_sign"] = neel, sign
-                    print(f"[{tag}] loaded {key} identity={ident['identity_sha256'][:12]}", flush=True)
+                    print(
+                        f"[{tag}] loaded {key} physics={ident['physics_identity_sha256'][:12]} "
+                        f"(module hash not used for cache)",
+                        flush=True,
+                    )
                     continue
-                print(f"[{tag}] identity mismatch for {key}; recomputing", flush=True)
+                print(f"[{tag}] physics identity mismatch for {key}; recomputing", flush=True)
             elif fn.exists() and not meta_path.exists():
                 print(f"[{tag}] refusing cache without identity file: {fn.name}", flush=True)
             print(f"[{tag}] run {key} nk={nk} nt/cycle={nt_per_cycle} shift={grid_shift} subspace={subspace}", flush=True)
@@ -605,6 +809,39 @@ def low_frequency_summary(sets: dict, prot: DriveProtocol) -> dict:
     return out
 
 
+def _phase_deg(z: complex) -> float | None:
+    if abs(z) == 0.0:
+        return None
+    return float(np.angle(z, deg=True))
+
+
+def compare_complex_amplitudes(za: complex, zb: complex) -> dict:
+    """za = test/coarse, zb = reference/fine. Denominator is |zb| when usable."""
+    za = complex(za)
+    zb = complex(zb)
+    abs_a = abs(za)
+    abs_b = abs(zb)
+    cdiff = abs(za - zb)
+    return {
+        "re_a": za.real,
+        "im_a": za.imag,
+        "re_b": zb.real,
+        "im_b": zb.imag,
+        "abs_a": abs_a,
+        "abs_b": abs_b,
+        "phase_a_deg": _phase_deg(za),
+        "phase_b_deg": _phase_deg(zb),
+        "phase_diff_deg": None if abs_a == 0.0 or abs_b == 0.0 else float(np.angle(za * np.conj(zb), deg=True)),
+        "complex_abs_diff": cdiff,
+        "abs_diff": abs(abs_a - abs_b),
+        "rel_complex_vs_b": cdiff / abs_b if abs_b > 0.0 else None,
+        "rel_abs_vs_b": abs(abs_a - abs_b) / abs_b if abs_b > 0.0 else None,
+        "rel_diff": cdiff / max(abs_b, 1e-300),
+        "denominator": "|z_b|",
+        "note": "|z_a-z_b| is the complex error; ||z_a|-|z_b|| is not a complete error",
+    }
+
+
 def compare_harmonics(tab_a: dict, tab_b: dict, orders, names=("J_e", "J_o")) -> dict:
     out = {}
     for name in names:
@@ -613,12 +850,8 @@ def compare_harmonics(tab_a: dict, tab_b: dict, orders, names=("J_e", "J_o")) ->
             for comp in ("x", "y"):
                 va = complex(*tab_a[name][str(n)][comp])
                 vb = complex(*tab_b[name][str(n)][comp])
-                out[name][f"{n}{comp}"] = {
-                    "abs_a": abs(va),
-                    "abs_b": abs(vb),
-                    "abs_diff": abs(va - vb),
-                    "rel_diff": abs(va - vb) / max(abs(vb), 1e-300),
-                }
+                rec = compare_complex_amplitudes(va, vb)
+                out[name][f"{n}{comp}"] = rec
     return out
 
 

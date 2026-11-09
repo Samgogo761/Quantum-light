@@ -1,0 +1,373 @@
+v2_readouts listed=104 runnable=8 selected=8
+ro2_bias_v2_lib_F0_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I12_phi000_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I12_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I12_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I8_phi090_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I8_phi180_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+ro2_bias_v2_lib_F1_I8_phi270_r01_t100_eta0p05_dE0p0125_m2-4 eta=0.05 step=0.0125 emax=base
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F0_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F0_I12_phi270_r01",
+  "F_dc_V_per_nm": 0.0,
+  "I_over_mu": 12.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -2.0,
+    96.05000000000001
+  ],
+  "energy_points": 7845,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0031499097992199166,
+  "Y_at_E_main": 0.0030029309719800286,
+  "Y_at_E_high": 0.002811993159300798,
+  "masked_norm": 0.003572406094039144,
+  "spectrum_integral": 0.0035724035289222376,
+  "integral_over_masked_norm": 0.9999992819637973,
+  "state_sha256": "e531de3d096d288d7edfefdde74e713e267213ff6d0d86ddc19269b15a834794",
+  "run_config_sha256": "2e7eb97bd71cc23b1c5a0da2f23e80bbc7b99a6eee6b9696e40819c4ddf0c3a9",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 131.2106303000037,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I12_phi000_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I12_phi000_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 12.0,
+  "CEP_rad": 0.0,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    116.05000000000001
+  ],
+  "energy_points": 11045,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.00443912803237514,
+  "Y_at_E_main": 0.004185957844778924,
+  "Y_at_E_high": 0.003680900584373806,
+  "masked_norm": 0.007252167208805365,
+  "spectrum_integral": 0.007252167193630347,
+  "integral_over_masked_norm": 0.9999999979075196,
+  "state_sha256": "5e419d0d2cbdcea57ad3467b73f86f11136f2e9661f9fc122ce4d9525b0dc714",
+  "run_config_sha256": "0699bedf9fbf398d19de23cc59944a9a9920ffea300827270f042b0501a07ab7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 201.38750820000132,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I12_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I12_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 12.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    116.05000000000001
+  ],
+  "energy_points": 11045,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.003918663139729656,
+  "Y_at_E_main": 0.0037222598269562725,
+  "Y_at_E_high": 0.0034216074686423633,
+  "masked_norm": 0.007614970714103701,
+  "spectrum_integral": 0.007614970697623639,
+  "integral_over_masked_norm": 0.9999999978358338,
+  "state_sha256": "a3313866d62a635af3cace8de776fa127f0552cda25370df307a91a16b0b3a10",
+  "run_config_sha256": "5a5ab9b6c21a1437cb9f774c77a64c7b283654c772f3c20592692b752d566749",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 212.1703295999905,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I12_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I12_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 12.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    116.05000000000001
+  ],
+  "energy_points": 11045,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.004917159184910244,
+  "Y_at_E_main": 0.0046227952970655335,
+  "Y_at_E_high": 0.004334914684429236,
+  "masked_norm": 0.007948826850690876,
+  "spectrum_integral": 0.00794882683389196,
+  "integral_over_masked_norm": 0.9999999978866169,
+  "state_sha256": "657a604d1ea67949d40093a342d728fac33c886cf87b5ecfe0d0723e7c439d85",
+  "run_config_sha256": "8186d1a75135e975dccbae635f8d0c0f7dc55725f762b8e3b44c34ab3102e5d1",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 205.3017012999917,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I12_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I12_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 12.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    116.05000000000001
+  ],
+  "energy_points": 11045,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.005331640716946108,
+  "Y_at_E_main": 0.0050397006628145925,
+  "Y_at_E_high": 0.004801762600531497,
+  "masked_norm": 0.007613897634153678,
+  "spectrum_integral": 0.007613897618591267,
+  "integral_over_masked_norm": 0.999999997956052,
+  "state_sha256": "cc387b7395c20c61cba93c1a57125b22b23fb2b2b6ee084c67746bd959075f24",
+  "run_config_sha256": "fe0d3659ee7a122141dc7314599faccb1ce2e2ebbfe7293c002759f3631e2bb7",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 176.50804570000037,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I8_phi090_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I8_phi090_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 1.5707963267948966,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0007194464235252823,
+  "Y_at_E_main": 0.000570002819673607,
+  "Y_at_E_high": 0.0005076463702463797,
+  "masked_norm": 0.002100703145740644,
+  "spectrum_integral": 0.0021007031407829003,
+  "integral_over_masked_norm": 0.9999999976399598,
+  "state_sha256": "a90362ba616f7e90073ac36b0c600edfd4e3447a422a51eb2934ddd2e9afeef9",
+  "run_config_sha256": "393be8eef3b0aa5052737d879984f4d24ef7d07019aad0a1021e371cb4209d88",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 168.35339259999455,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I8_phi180_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I8_phi180_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 3.141592653589793,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0010322828290036177,
+  "Y_at_E_main": 0.0008011212027071663,
+  "Y_at_E_high": 0.0005799881962563837,
+  "masked_norm": 0.0023113172609049056,
+  "spectrum_integral": 0.0023113172554758096,
+  "integral_over_masked_norm": 0.9999999976510815,
+  "state_sha256": "483787a39544fb78978b6620baf00b395e182e5c389d5979f1b3870ae20b4cd5",
+  "run_config_sha256": "82274fc5464cf4539866339b3354a7400a145114581cea25c9b7e933a3232396",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 144.8955844000011,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "schema": "continuation-v2-readout-summary",
+  "readout_id": "ro2_bias_v2_lib_F1_I8_phi270_r01_t100_eta0p05_dE0p0125_m2-4",
+  "kind": "v2_probe",
+  "run_id": "bias_v2_lib_F1_I8_phi270_r01",
+  "F_dc_V_per_nm": 1.0,
+  "I_over_mu": 8.0,
+  "CEP_rad": 4.71238898038469,
+  "actual_readout_fs": 100.0,
+  "eta_eV": 0.05,
+  "step_eV": 0.0125,
+  "mask_bounds_nm": [
+    2.0,
+    4.0
+  ],
+  "energy_range_eV": [
+    -22.0,
+    87.375
+  ],
+  "energy_points": 8751,
+  "thresholds_eV": [
+    0.5170816,
+    0.7170816,
+    0.9170816
+  ],
+  "Y_at_E_low": 0.0010041603956966558,
+  "Y_at_E_main": 0.0008881034781277508,
+  "Y_at_E_high": 0.0007646323805680423,
+  "masked_norm": 0.0021002785198823565,
+  "spectrum_integral": 0.0021002785149988137,
+  "integral_over_masked_norm": 0.9999999976748118,
+  "state_sha256": "3d393f72868073fcc39aa0deb20cffe0f801dc7a015719ee0e1e8c84db601347",
+  "run_config_sha256": "885ccd14bdf6db4157f77b24293bd83a76b58e94109d4e9644998fa58e954ee1",
+  "source_sha256": {
+    "scripts/readout_continuation_v2.py": "2b0af6349916b32f62c80ead70e0e8d2c82ac08a8b17d88407d7d10413084692",
+    "src/ql_tip_1d/continuation_v2.py": "5cccab65d94824157063babeaa9a87793c34058a8b1bfe077a2ea57418612ebc",
+    "src/ql_tip_1d/core.py": "8ee6f60e73c69b82d22de41b6c183de494094824059f48a3e2bf45e86bf731ef",
+    "src/ql_tip_1d/bias_v1.py": "1faff033af6b9242ad2a3a85d221e9dfe606e6f6af590e41b2f0a8d8b8f3202c",
+    "src/ql_tip_1d/spectrum_v1.py": "5477ee1a8f6a131e31efebc62744fbd6700a1df57dcdd05518eaa007dbe14a3f",
+    "configs/continuation_v2/protocol_v2.json": "1d84acdb7408271b11957f592a19d6b8c801fa53da7506cd76851167c41cdda7"
+  },
+  "wall_seconds": 148.96380850000423,
+  "execution_status": "PASS",
+  "scientific_gate_status": "NOT_EVALUATED"
+}
+{
+  "completed_now": 8,
+  "remaining": 0
+}

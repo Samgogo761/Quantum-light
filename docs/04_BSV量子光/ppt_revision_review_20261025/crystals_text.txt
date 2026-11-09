@@ -1,0 +1,604 @@
+PAGE 1
+Academic Editor: Arcady Zhukov
+Received: 7 July 2026
+Revised: 17 July 2026
+Accepted: 19 July 2026
+Published: 29 July 2026
+Copyright: © 2026 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license.
+Article
+Electrically Activating and Switching the Magneto-Optic Faraday
+Effect in 2D Antiferromagnets
+Liyuan Zhang 1,*, Chen Liang 1
+ and Chuanhui Gong 2,*
+1 School of Marxism, Central University of Finance and Economics, Beijing 100081, China;
+l15195902978@163.com
+2 Guangdong Greater Bay Area Institute of Aerospace Information, Guangzhou 510300, China
+* Correspondence: zhangliyuan@cufe.edu.cn (L.Z.); gongch@aircas.ac.cn (C.G.)
+Abstract
+Two-dimensional (2D) antiferromagnets are highly promising for next-generation spin-
+tronics due to their ultrafast dynamics and robustness against stray fields; however, their
+practical application is severely hindered by the vanishing magneto-optic effects restricted
+by strict crystal symmetries. In this work, we propose a universal physical mechanism to
+activate and manipulate the magneto-optic Faraday effect in 2D fully compensated bilayer
+antiferromagnets using an external vertical electric field. By constructing a comprehen-
+sive tight-binding model and performing first-principles calculations on bilayer VSe2, we
+demonstrate that the applied electric field explicitly breaks the spatial inversion and com-
+bined P T symmetries. This symmetry breaking lifts the Kramers degeneracy, inducing a
+pronounced spin splitting that, in conjunction with intrinsic spin–orbit coupling, generates
+non-vanishing Berry curvature. Consequently, the previously forbidden Faraday rotation
+angle is activated from zero to a significant non-zero value, and its rotation direction can
+be deterministically reversed by switching the electric field polarity. Our findings provide
+profound physical insights into the symmetry-modulated light–matter interactions and
+pave the way for designing fully electrically controllable, energy-efficient antiferromagnetic
+opto-spintronic devices.
+Keywords: 2D antiferromagnets; magneto-optic Faraday effect; first-principles calculations
+1. Introduction
+In the exploration of next-generation high-density and ultrafast spintronic devices,
+antiferromagnets and fully compensated magnets are gradually replacing traditional fer-
+romagnets as a central focus in condensed matter physics and materials science [ 1–8].
+Compared to ferromagnets, antiferromagnetic systems feature zero macroscopic net mag-
+netization, which fundamentally avoids bit crosstalk caused by stray magnetic fields,
+enabling extremely high-density information storage [ 9–13]. Meanwhile, they exhibit
+strong robustness against external magnetic field perturbations, and their spin dynamic
+responses typically lie in the terahertz (THz) frequency range, which is three orders of
+magnitude faster than that of ferromagnets [14–16]. In recent years, with the vigorous de-
+velopment of two-dimensional (2D) magnetic systems, researchers have made substantial
+breakthroughs in the precise synthesis, magnetic order manipulation, and electrical readout
+of 2D antiferromagnetic materials [17–21]. These advancements have not only profoundly
+broadened our physical understanding of low-dimensional magnetism but also laid a
+Crystals 2026, 16, 497 https://doi.org/10.3390/cryst16080497
+
+PAGE 2
+Crystals 2026, 16, 497 2 of 10
+solid foundation for the development of smaller, faster, and more stable antiferromagnetic
+spintronic devices [22–26].
+Despite the tremendous potential of antiferromagnets in electrical transport and dynam-
+ics, achieving non-contact, high-resolution detection and optoelectronic applications of their
+magnetic states remains a major challenge [27–31]. In this context, magneto-optic effects (such
+as the magneto-optic Faraday effect), serving as a bridge between magnetism and optics, play
+an indispensable role in opto-spintronic devices and information reading/writing [32–35].
+However, for antiferromagnets and fully compensated magnets, their conventional linear
+magneto-optic effects are often forbidden by severe physical restrictions. This prohibition
+stems from specific crystal symmetries universally present in their lattice structures, such as
+the combined spatial inversion and time-reversal symmetry (PT symmetry), or the combined
+two-fold rotation and time-reversal symmetry (C2T symmetry) [36–38]. According to the
+symmetry principles of physics, these symmetry operations force the system’s responses to for-
+ward and backward propagating light waves to cancel out exactly , resulting in a macroscopic
+magneto-optic Faraday rotation angle that is strictly zero [39,40]. Therefore, effectively break-
+ing these inherent symmetry restrictions to activate and manipulate the magneto-optic effect
+in fully compensated antiferromagnetic systems has become a critical obstacle to overcome in
+the current field of antiferromagnetic optoelectronics.
+In this work, we reveal a universal physical mechanism for manipulating the magneto-
+optic response of 2D antiferromagnetic materials using an external electric field, and
+conduct an in-depth study using bilayer VSe2 as a representative material (which exhibits
+ferromagnetism in the monolayer limit but becomes antiferromagnetic in the bilayer form
+due to interlayer coupling) [41–43]. Our results demonstrate that without an applied electric
+field, the two layers of bilayer VSe2 are strictly constrained by crystal symmetries such as
+P T and C2T , rendering its magneto-optic Faraday effect completely silent (i.e., the Faraday
+angle is zero). However, upon introducing an external electric field perpendicular to the
+2D plane, the electric field directly and effectively breaks the spatial symmetry connection
+between the layers. This symmetry breaking disrupts the original optical response balance,
+successfully realizing the activation of the magneto-optic Faraday effect from zero to
+a significant non-zero Faraday rotation angle. More importantly, we demonstrate that
+simply switching the polarity (positive/negative direction) of the perpendicular electric
+field can directly reverse the direction of the Faraday rotation angle. Our study not only
+provides profound physical insights into the microscopic mechanism of symmetry and
+light–matter interactions in 2D antiferromagnetic systems but also offers a practical and
+universal approach for designing fully electrically controlled magneto-optic switches and
+next-generation antiferromagnetic optoelectronic information processing devices based on
+compensated magnets.
+2. Results
+2.1. Calculations Details
+First-principles calculations for VSe2 were carried out within density functional the-
+ory using the Perdew–Burke–Ernzerhof (PBE) functional under the generalized gradient
+approximation, as implemented in the Vienna ab initio Simulation Package (VASP) [44,45].
+A 12 × 12 × 1 k-point mesh was employed to sample the Brillouin zone, with a plane-wave
+cutoff energy of 600 eV . Structural relaxations incorporated interlayer van der Waals in-
+teractions through the DFT-D3 correction [46]. The on-site Hubbard parameter for V was
+set to U = 2.7 eV . Symmetry-adapted Wannier functions were generated using VASP in
+conjunction with the WANNIER90 package [47].
+The magneto-optical Faraday effect was evaluated from the frequency-dependent
+optical conductivity tensor. For normal incidence, the eigenmodes in the magnetic medium
+https://doi.org/10.3390/cryst16080497
+
+PAGE 3
+Crystals 2026, 16, 497 3 of 10
+are left- and right-circularly polarized light. Their corresponding complex refractive indices
+are given by
+n±(ω) =
+q
+ε xx (ω) ± iε xy(ω), (1)
+where n+ and n− represent the refractive indices of the two circularly polarized modes,
+respectively. Because of the nonzero off-diagonal dielectric-tensor component ε xy, the
+two circularly polarized waves acquire different phases and amplitudes while propagat-
+ing through the material. Consequently, an incident linearly polarized wave becomes
+elliptically polarized after transmission.
+For a film with thickness d, the exact relation can be expressed as
+1 − tan ηF
+1 + tan ηF
+exp(2iθF) = exp
+ iωd
+c (n+ − n−)
+
+, (2)
+where c denotes the speed of light in vacuum. When the Faraday rotation and ellipticity
+are small, the complex Faraday angle can be approximated as
+ϕF(ω) = ωd
+2c [n+(ω) − n−(ω)]. (3)
+Accordingly, the real and imaginary parts of ϕF correspond to the Faraday rotation angle
+and ellipticity, respectively:
+θF(ω) = Re[ϕF(ω)]. (4)
+2.2. Symmetry Analysis and Theoretical Foundation for Electric-Field-Induced Magneto-Optic Effects
+In exploring the physical origin of magneto-optic effects in two-dimensional (2D)
+bilayer antiferromagnetic systems, crystal symmetry plays a decisive role. According to
+Neumann’s principle, any macroscopic physical property of a material must be invariant
+under all symmetry operations of its point group. For an ideal 2D bilayer fully compensated
+antiferromagnet (e.g., bilayer VSe2), in the absence of external perturbations, the upper
+and lower layers possess magnetic moments of equal magnitude but opposite directions.
+In this pristine state, although the system as a whole breaks time-reversal symmetry (T ),
+it is often protected by a joint symmetry due to strict geometric symmetry operations
+connecting the two layers, such as in-plane two-fold rotation ( C2), spatial inversion (P),
+or interlayer mirror symmetry (M). For instance, the spatial inversion P maps the spin
+sites of the upper layer to the lower layer, while time-reversal T flips the antiparallel spins.
+Therefore, the entire bilayer system remains invariant under the combined operationP T (or
+similarly, C2T , MT ). It is precisely this strict symmetry that forces the system’s responses
+to forward- and backward-propagating light to cancel out exactly, thereby strictly restricting
+the macroscopic observables of the anomalous Hall effect (AHE) and the magneto-optic
+Faraday effect to zero.
+To activate these forbidden physical effects in such systems, an external field must
+be introduced to break the spatial symmetries connecting the upper and lower layers.
+Applying an external gate electric field (Ez) perpendicular to the 2D plane provides a highly
+precise and efficient tuning method. A vertical electric field is inherently a polar vector,
+which changes sign (i.e., reverses direction) under spatial inversion P and in-plane rotation
+C2 operations. Consequently, when an external field Ez ̸= 0 is applied, it introduces an
+electrostatic potential difference between the upper and lower layers (i.e., the Stark effect).
+This interlayer electrostatic asymmetry directly and completely breaks all lattice symmetry
+operations that can map the upper layer to the lower layer (including P, C2, and M).
+The complete breaking of symmetry triggers a profound physical phase transition.
+Since the upper and lower layers are no longer physically equivalent under the electric field,
+https://doi.org/10.3390/cryst16080497
+
+PAGE 4
+Crystals 2026, 16, 497 4 of 10
+the originally degenerate interlayer electronic band structures undergo relative shifting
+and reconstruction. As a result, the symmetry relating the sublattices with opposite spin
+orientations is broken, leading to a transition of the system from a fully compensated
+antiferromagnetic state to a fully compensated ferrimagnetic state with a non-zero net
+magnetic moment.
+With the destruction of spatial lattice symmetries (P, C2, M), the original combined
+symmetry groups (such as P T or C2T ) also collapse. The lifting of these symmetry
+restrictions allows the Berry curvature, which is associated with time-reversal symmetry
+breaking, to yield a non-zero integral in momentum space. Consequently, macroscopic
+physical properties that were strictly forbidden in the pristine antiferromagnetic state can
+now emerge (Figure 1). On the one hand, the system can exhibit an intrinsic anomalous Hall
+current; on the other hand, the off-diagonal elements of the dielectric tensor become non-
+zero, thereby directly activating the magneto-optic Faraday effect in the optical frequency
+range. In summary, by breaking the interlayer symmetry via an electric field, we not
+only achieve a magnetic phase transition from an antiferromagnet to a fully compensated
+ferrimagnet but also theoretically establish a solid foundation for the electrically controllable
+“zero to non-zero” magneto-optic Faraday effect.
+O O O
+Ez
+Ez
+(b)(a) (c)
+Figure 1. Schematic illustration of the electric-field-tunable magneto-optic Faraday effect in 2D
+bilayer antiferromagnets. (a) In the absence of an external electric field (E = 0), the system exhibits a
+fully compensated bilayer antiferromagnetic ground state, formed by two ferromagnetic monolayers
+with opposite magnetizations. The top and bottom layers are geometrically connected by a specific
+spatial symmetry operation O (e.g., spatial inversion P). Protected by this symmetry constraint,
+the macroscopic magneto-optic Faraday rotation angle is strictly zero (θF = 0). (b,c) The scenarios
+under an applied vertical electric field pointing (b) upwards (+Ez) and (c) downwards (−Ez). The
+electric-field-induced interlayer potential difference explicitly breaks the symmetry operation O.
+This symmetry breaking successfully activates the magneto-optic Faraday effect (θF ̸= 0). Notably,
+switching the direction of the applied electric field deterministically reverses the rotation direction
+(sign) of the Faraday angle.
+2.3. Tight-Binding Model
+To investigate the microscopic mechanism of the electric-field-induced magneto-optic
+effect, we construct an 8 × 8 tight-binding (TB) Hamiltonian for the bilayer antiferromag-
+netic system. The basis is chosen as Ψ = ( Ψtop, Ψbot)T, where each layer includes two
+sublattices and two spin degrees of freedom (e.g., |A ↑⟩, |A ↓⟩, |B ↑⟩, |B ↓⟩). The total
+Hamiltonian can be written in a block-matrix form:
+H(k, kz) =
+ 
+Htop(k) Hint(kz)
+H†
+int(kz) Hbot(k)
+!
+(5)
+Here, Hint(kz) = tieikzdz I4×4 represents the interlayer coupling, where ti is the inter-
+layer hopping amplitude, dz = 1/10 is the effective interlayer distance, and I4×4 is the
+4 × 4 identity matrix.
+https://doi.org/10.3390/cryst16080497
+
+PAGE 5
+Crystals 2026, 16, 497 5 of 10
+The intralayer Hamiltonians Htop(k) and Hbot(k) are 4 × 4 matrices given by
+Htop(k) =
+ 
+EA T(k)
+T†(k) EB
+!
+, Hbot(k) =
+ 
+EB T(k)
+T†(k) EA′
+!
+(6)
+where the diagonal energy blocks are EA = diag(e1, e2), EB = diag(e3, e3), and
+EA′ = diag(e2, e1). The energy splitting in EA and its exact reversal in EA′ (e1 ↔ e2)
+perfectly capture the P T -symmetric antiferromagnetic order between the two layers.
+The intralayer hopping matrix T(k) describes the transitions between the two sublat-
+tices and is given by
+T(k) =
+ 
+f (k) g1(k)
+g2(k) f (k)
+!
+(7)
+To express the momentum-dependent hopping functions elegantly, we define three nearest-
+neighbor vectors δ1 = ( 1
+3, 2
+3 ), δ2 = ( 1
+3, − 1
+3 ), and δ3 = ( − 2
+3, − 1
+3 ). The spin-conserving
+hopping function f (k) is expressed as
+f (k) = t
+3
+∑
+j=1
+eik·δj (8)
+The spin-flipping terms induced by spin–orbit coupling (SOC), denoted as g1(k) and
+g2(k), can be written compactly using complex phase factors:
+g1(k) = t′
+2
+
+e−iπ/2eik·δ1 + eiπ/6eik·δ2 + ei5π/6eik·δ3
+
+(9)
+g2(k) = t′
+2
+
+e−iπ/2eik·δ1 + ei5π/6eik·δ2 + eiπ/6eik·δ3
+
+(10)
+where t′
+2 = 2√
+3 t2 is the effective SOC hopping amplitude. This structured decomposition
+significantly clarifies the underlying physical processes, clearly separating the symmetric
+hopping (t) from the chiral phase-dependent SOC hoppings (t2).
+The lattice structure and the corresponding interatomic hoppings are schematically il-
+lustrated in Figure 2a. The system can be effectively described as a bilayer hexagonal lattice,
+where each layer contains one magnetic atom per unit cell. To reflect the antiferromagnetic
+nature, the local magnetic moments of the upper and lower layers are set to be strictly
+anti-aligned. Geometrically, the two magnetic sublattices—residing in the top and bottom
+layers with opposite spins—are mapped onto each other by the spatial inversion operation
+P. Given that the time-reversal operation T flips the spin orientation, the system preserves
+the combined P T symmetry. It is precisely this strict P T symmetry that guarantees the
+model represents a perfectly compensated antiferromagnet.
+To investigate the fundamental electronic properties of this antiferromagnet, we first
+analyze the energy spectrum in the absence of spin–orbit coupling (SOC) by setting the
+spin-flipping hopping parameter t2 = 0. The on-site energies and hopping amplitudes
+in the tight-binding model are parameterized as e1 = 0, e2 = −2, e3 = 1, t = 0.8, and
+the interlayer coupling ti = 0.2. The calculated electronic band structure is presented in
+Figure 2b. As expected from Kramers’ theorem extended by the spatial inversion, the strict
+protection of the P T symmetry enforces a perfect degeneracy between the spin-up and
+spin-down energy bands throughout the entire Brillouin zone.
+https://doi.org/10.3390/cryst16080497
+
+PAGE 6
+Crystals 2026, 16, 497 6 of 10
+2
+0
+−2Energy(eV)
+Γ M K Γ
+up
+dn
+t/t2
+ti
+(a) (b)
+Figure 2. Tight-binding model and its initial electronic band structure. (a) Schematic representation
+of the lattice sites and interatomic hopping pathways in the bilayer model. The parameters t and t2
+denote the spin-conserving and spin-flipping (induced by spin–orbit coupling) intralayer nearest-
+neighbor hopping amplitudes, respectively. The parameter ti represents the vertical interlayer
+hopping amplitude between the top and bottom layers. (b) The calculated electronic band structure
+of the model. The band structures of spin up and spin down are completely overlap.
+When a vertical gate electric field is applied to the system, it induces an electrostatic
+potential difference between the upper and lower layers. In our tight-binding model, this
+electric-field-induced perturbation is rigorously captured by adding a Stark potential term,
+HE = Vz(σz ⊗ I4×4), to the pristine Hamiltonian. Here, Vz represents the electrostatic
+potential energy modulated by the electric field, σz is the Pauli matrix acting on the layer
+pseudospin space (assigning on-site energies of +Vz and −Vz to the top and bottom layers,
+respectively), and I4×4 is the 4 × 4 identity matrix acting on the sublattice and spin degrees
+of freedom. This interlayer potential difference acts as a symmetry-breaking perturbation
+that directly and completely destroys all spatial symmetry operations connecting the two
+layers, such as the spatial inversion P and the in-plane two-fold rotation C2. Consequently,
+the combined P T symmetry is entirely lifted. At this point, the electronic structure of
+the system no longer maintains its strictly compensated antiferromagnetic characteristics;
+instead, it transitions into a fully compensated ferrimagnetic state. Figures 3a and 3b
+display the calculated band structures under positive (+Vz) and negative (−Vz) vertical
+electric fields, respectively. It is clearly visible that the destruction of P T symmetry lifts
+the initial Kramers degeneracy, inducing a pronounced spin splitting in the energy bands.
+Interestingly, when the direction of the applied electric field is reversed, the spin splitting is
+exactly flipped, indicating that the spin polarization is tightly coupled to the polarity of the
+external electric field.
+Γ M K Γ Γ M K Γ
+2
+0
+−2Energy (t)
+2
+0
+−2Energy (t)
+up
+dn
+up
+dn
+0.0
+0.5
+1.0
+1.5
+2.0
+−15
+−10
+−5
+0
+5
+10
+15
+ 
+ 
+ 
+θF (108 deg/a)
+E=0
+E=-0.1
+E=0.1
+(a) (b) (c)
+Figure 3. Electric-field-induced spin splitting and the activation of the magneto-optic Faraday effect.
+(a,b) Calculated electronic band structures of the tight-binding model under an applied vertical
+electric field pointing (a) upwards (+Ez) and (b) downwards (−Ez). (c) The calculated magneto-optic
+Faraday rotation angle (θF) of the system with spin–orbit coupling included (t2 = 0.2).
+Building upon the symmetry-breaking-induced spin splitting, we further incorporate
+the spin–orbit coupling (SOC) effect by setting t2 ̸= 0 to evaluate the magneto-optic
+response of the system. In the absence of an applied electric field ( Vz = 0), the magneto-
+optic Faraday rotation angle remains strictly zero (Figure 3c), which is dictated by the
+https://doi.org/10.3390/cryst16080497
+
+PAGE 7
+Crystals 2026, 16, 497 7 of 10
+preserved P T and C2T symmetries of the pristine lattice. However, upon the application
+of a vertical electric field ( Vz ̸= 0), the interplay between the electric-field-induced spin
+splitting and the intrinsic SOC generates non-vanishing Berry curvature in momentum
+space. This topological contribution successfully activates the magneto-optic Faraday
+effect, transitioning the Faraday angle from zero to a significant non-zero value. More
+importantly, our calculations demonstrate that the rotation direction of the Faraday angle
+can be deterministically controlled: simply switching the polarity of the external electric
+field perfectly reverses the direction of the Faraday rotation angle (Figure 3c). This finding
+provides direct and robust theoretical evidence for the realization of fully electrically
+controllable, reversible magneto-optic switches in 2D compensated magnets.
+2.4. Material Realization in Bilayer VSe2
+To substantiate the physical insights derived from the tight-binding model and verify
+the universality of our theory in realistic materials, we performed first-principles calcula-
+tions based on density functional theory (DFT) on bilayer VSe2. While monolayer VSe2
+exhibits intrinsic ferromagnetism, its bilayer counterpart favors an interlayer fully compen-
+sated antiferromagnetic ground state driven by the interlayer antiferromagnetic exchange
+coupling, as illustrated in Figure 4a. Symmetry analysis reveals that the antiferromagnetic
+bilayer VSe2 belongs to the magnetic space group P¯3′m′1 (No. 164.88). Crucially, this spe-
+cific structure strictly preserves the combined spatial inversion and time-reversal symmetry
+(P T ). Under this symmetry operation, the magnetic vanadium (V) atoms located in the top
+and bottom layers are geometrically mapped onto each other, possessing local magnetic
+moments of equal magnitude but strictly opposite directions. This rigorous crystallographic
+and magnetic symmetry leaves a distinct signature on the electronic band structure. As
+shown in Figure 4b, the DFT-calculated band structure in the absence of an applied electric
+field exhibits perfect degeneracy between the spin-up and spin-down bands across the
+entire Brillouin zone, which is a hallmark of P T -symmetric compensated antiferromagnets.
+Γ M K Γ
+up
+dn
+2
+−2
+1
+0
+−1Energy(eV)
+V
+Se
+(a) (b)
+Figure 4. Crystal structure and electronic band structure of bilayerVSe2 obtained from first-principles
+calculations. (a) Top and side views of the fully compensated antiferromagnetic bilayer VSe2 crystal
+structure. ( b) Band structure of bilayer VSe2. The band structures of spin up and spin down are
+completely overlap.
+Subsequently, we introduced a vertical external electric field in our first-principles
+calculations. In perfect agreement with the tight-binding model predictions, the applied
+electric field induces an interlayer electrostatic potential difference that breaks the spatial
+inversion symmetry P, thereby completely lifting the P T symmetry constraint. Driven by
+this symmetry breaking, the originally degenerate energy bands undergo a pronounced
+spin splitting. Moreover, our calculations confirm that simply reversing the direction of the
+vertical electric field perfectly switches the polarity of the spin splitting (Figure 5a,b).
+By further incorporating the spin–orbit coupling (SOC) effect, we quantitatively eval-
+uated the magneto-optic Faraday responses of bilayer VSe2 under varying electric field
+https://doi.org/10.3390/cryst16080497
+
+PAGE 8
+Crystals 2026, 16, 497 8 of 10
+strengths. At zero electric field, the macroscopic symmetries strictly restrict the Faraday
+rotation angle to zero (Figure 5c). However, upon the application of a vertical electric
+field, the Faraday angle immediately transitions from zero to a significant non-zero value
+(Figure 5c). Notably, as the magnitude of the electric field increases, the absolute value
+of the Faraday rotation angle exhibits a monotonic increase. Furthermore, the rotation
+direction (i.e., the sign) of the Faraday angle is deterministically controlled by the direction
+of the applied electric field. These first-principles results not only provide robust material-
+level validation for our theoretical mechanism but also highlight the immense potential of
+bilayer antiferromagnetic VSe2 for designing highly tunable, fully electrically controlled
+magneto-optic modulators.
+2
+−2
+1
+0
+−1Energy(eV)
+up
+dn
+Γ M K Γ
+up
+dn
+Γ M K Γ
+2
+−2
+1
+0
+−1Energy(eV)
+321
+−1
+0
+1
+θF (105 deg/cm)
+Enerey (eV)
+ E=-0.1
+ E=-0.08
+ E=-0.06
+ E=-0.04
+ E=-0.02
+ E=0
+ E=0.02
+ E=0.04
+ E=0.06
+ E=0.08
+ E=0.1
+(a) (b) (c)
+Figure 5. Electric-field-induced spin splitting and the tunable magneto-optic Faraday effect in bilayer
+VSe2. (a,b) First-principles calculated spin-projected electronic band structures of bilayer VSe2 under
+an applied vertical electric field pointing ( a) upwards ( +Ez) and ( b) downwards ( −Ez). ( c) The
+calculated magneto-optic Faraday rotation angle (θF) spectra of bilayer VSe2 under varying electric
+field strengths, with spin–orbit coupling (SOC) included.
+3. Conclusions
+In summary, we have theoretically and computationally demonstrated the electric-
+field-induced activation and reversible tuning of the magneto-optic Faraday effect in 2D
+fully compensated bilayer antiferromagnets. Using a symmetry-based tight-binding model,
+we revealed that a vertical gate electric field breaks the inherent spatial inversion (P) and
+joint P T symmetries, triggering a phase transition from an antiferromagnetic state to a
+fully compensated ferrimagnetic state. The interplay between the electric-field-induced
+spin splitting and intrinsic spin–orbit coupling generates non-zero Berry curvature, which
+subsequently activates the macroscopic Faraday effect. These theoretical predictions are
+rigorously corroborated by first-principles calculations on bilayer VSe2. We show that the
+magnitude of the Faraday rotation angle increases monotonically with the electric field
+strength, and its sign can be perfectly switched by reversing the field direction. This work
+not only broadens our fundamental understanding of symmetry-broken optical responses
+in low-dimensional magnetism but also establishes a practical paradigm for developing
+high-density, ultrafast, and fully electrically tunable magneto-optic modulators based on
+2D compensated magnets.
+Author Contributions: L.Z.: writing—original draft preparation, conceptualization, methodology,
+validation, visualization; C.L.: writing—review and editing, visualization; C.G.: conceptualization,
+supervision, writing—review and editing, project administration. All authors have read and agreed
+to the published version of the manuscript
+Funding: This research received no external funding.
+Data Availability Statement: The original contributions presented in the study are included in the
+article, further inquiries can be directed to the corresponding authors.
+Conflicts of Interest: The authors declare no conflict of interest.
+https://doi.org/10.3390/cryst16080497
+
+PAGE 9
+Crystals 2026, 16, 497 9 of 10
+References
+1. Jungwirth, T.; Marti, X.; Wadley, P .; Wunderlich, J. Antiferromagnetic spintronics.Nat. Nanotechnol. 2016, 11, 231–241. [CrossRef]
+[PubMed]
+2. Baltz, V .; Manchon, A.; Tsoi, M.; Moriyama, T.; Ono, T.; Tserkovnyak, Y. Antiferromagnetic spintronics.Rev. Mod. Phys. 2018,
+90, 015005. [CrossRef]
+3. Gomonay, O.; Baltz, V .; Brataas, A.; Tserkovnyak, Y. Antiferromagnetic spin textures and dynamics.Nat. Phys. 2018, 14, 213–216.
+[CrossRef]
+4. MacDonald, A.H.; Tsoi, M. Antiferromagnetic metal spintronics. Philos. T rans. R. Soc. A 2011, 369, 3098–3114. [CrossRef]
+5. Šmejkal, L.; Sinova, J.; Jungwirth, T. Emerging research landscape of altermagnetism. Phys. Rev. X 2022, 12, 040501. [CrossRef]
+6. Song, C.; Bai, H.; Zhou, Z.; Han, L.; Reichlova, H.; Dil, J.H.; Liu, J.; Chen, X.; Pan, F. Altermagnets as a new class of functional
+materials. Nat. Rev. Mater. 2025, 10, 473–485. [CrossRef]
+7. Mazin, I. Altermagnetism—A new punch line of fundamental magnetism. Phys. Rev. X 2022, 12, 040002. [CrossRef]
+8. Liu, Y.; Guo, S.-D.; Li, Y.; Liu, C.-C. Two-dimensional fully compensated ferrimagnetism. Phys. Rev. Lett. 2025, 134, 116703.
+[CrossRef] [PubMed]
+9. Wadley, P .; Howells, B.; Železný, J.; Andrews, C.; Hills, V .; Campion, R.P .; Novák, V .; Olejník, K.; Maccherozzi, F.; Dhesi, S.S.; et al.
+Electrical switching of an antiferromagnet. Science 2016, 351, 587–590. [CrossRef] [PubMed]
+10. Bodnar, S.Y.; Šmejkal, L.; Turek, I.; Jungwirth, T.; Gomonay, O.; Sinova, J.; Sapozhnik, A.A.; Elmers, H.-J.; Kläui, M.; Jourdan, M.;
+et al. Writing and reading antiferromagnetic Mn2Au by Néel spin-orbit torques and large anisotropic magnetoresistance. Nat.
+Commun. 2018, 9, 348. [CrossRef] [PubMed]
+11. Jungwirth, T.; Sinova, J.; Manchon, A.; Marti, X.; Wunderlich, J.; Felser, C. The multiple directions of antiferromagnetic spintronics.
+Nat. Phys. 2018, 14, 200–203. [CrossRef]
+12. Šmejkal, L.; Mokrousov, Y.; Romashevskiy, P .R.; Jungwirth, T. Topological antiferromagnetic spintronics.Nat. Phys. 2018, 14,
+242–251. [CrossRef]
+13. Železný, J.; Wadley, P .; Olejník, K.; Hoffmann, A.; Ohno, H. Spin transport and spin torque in antiferromagnetic devices.Nat.
+Phys. 2018, 14, 220–228. [CrossRef]
+14. Nemec, P .; Fiebig, M.; Kampfrath, T.; Kimel, A.V . Antiferromagnetic opto-spintronics. Nat. Phys. 2018, 14, 229–241. [CrossRef]
+15. Kampfrath, T.; Sell, A.; Klatt, G.; Pashkin, A.; Mährlein, S.; Dekorsy, T.; Wolf, M.; Fiebig, M.; Leitenstorfer, A.; Huber, R. Coherent
+terahertz control of antiferromagnetic spin waves. Nat. Photon. 2011, 5, 31–34.
+16. Baierl, S.; Hohenleutner, M.; Kampfrath, T.; Zvezdin, A.K.; Kimel, A.V .; Huber, R.; Mikhaylovskiy, R.V . Nonlinear spin control by
+terahertz-driven anisotropy fields. Nat. Photon. 2016, 10, 715–718. [CrossRef]
+17. Huang, B.; Clark, G.; Navarro-Moratalla, E.; Klein, D.R.; Cheng, R.; Seyler, K.L.; Zhong, D.; Schmidgall, E.; McGuire, M.A.;
+Cobden, D.H.; et al. Layer-dependent ferromagnetism in a van der Waals crystal down to the monolayer limit. Nature 2017, 546,
+270–273. [CrossRef] [PubMed]
+18. Gong, C.; Li, L.; Li, Z.; Ji, H.; Stern, A.; Xia, Y.; Cao, T.; Bao, W.; Wang, C.; Wang, Y.; et al. Discovery of intrinsic ferromagnetism in
+two-dimensional van der Waals crystals. Nature 2017, 546, 265–269. [CrossRef] [PubMed]
+19. Burch, K.S.; Mandrus, D.; Park, J.-G. Magnetism in two-dimensional van der Waals materials. Nature 2018, 563, 47–52. [CrossRef]
+[PubMed]
+20. Gibertini, M.; Koperski, M.; Morpurgo, A.F.; Novoselov, K.S. Magnetic 2D materials and heterostructures.Nat. Nanotechnol. 2019,
+14, 408–419. [CrossRef] [PubMed]
+21. Mak, K.F.; Shan, J.; Ralph, D.C. Probing and controlling magnetic states in 2D layered materials. Nat. Rev. Phys. 2019, 1, 646–661.
+[CrossRef]
+22. Jiang, S.; Shan, J.; Mak, K.F. Electric-field switching of two-dimensional van der Waals magnets.Nat. Mater. 2018, 17, 406–410.
+[CrossRef] [PubMed]
+23. Huang, B.; Clark, G.; Klein, D.R.; MacNeill, D.; Navarro-Moratalla, E.; Seyler, K.L.; Wilson, N.; McGuire, M.A.; Cobden, D.H.;
+Xiao, D.; et al. Electrical control of 2D magnetism in bilayer CrI3. Nat. Nanotechnol. 2018, 13, 544–548. [CrossRef] [PubMed]
+24. Wang, Z.; Zhang, T.; Ding, M.; Dong, B.; Li, Y.; Chen, M.; Li, X.; Huang, J.; Wang, H.; Zhao, X.; et al. Electric-field control
+of magnetism in a few-layered van der Waals ferromagnetic semiconductor. Nat. Nanotechnol. 2018, 13, 554–559. [CrossRef]
+[PubMed]
+25. Jiang, S.; Li, L.; Wang, Z.; Mak, K.F.; Shan, J. Controlling magnetism in 2D CrI3 by electrostatic doping. Nat. Nanotechnol. 2018, 13,
+549–553. [CrossRef] [PubMed]
+26. Klein, D.R.; MacNeill, D.; Lado, J.L.; Soriano, D.; Navarro-Moratalla, E.; Watanabe, K.; Taniguchi, T.; Manni, S.; Canfield, P .;
+Fernández-Rossier, J.; et al. Probing magnetism in 2D van der Waals crystalline insulators via electron tunneling.Science 2018,
+360, 1218–1222. [CrossRef] [PubMed]
+27. Kimel, A.V .; Kirilyuk, A.; Usachev, P .A.; Pisarev, R.V .; Balbashov, A.M.; Rasing, T. Ultrafast non-thermal control of magnetization
+by instantaneous photomagnetic pulses. Nature 2005, 435, 655–657. [CrossRef] [PubMed]
+https://doi.org/10.3390/cryst16080497
+
+PAGE 10
+Crystals 2026, 16, 497 10 of 10
+28. Kirilyuk, A.; Kimel, A.V .; Rasing, T. Ultrafast optical manipulation of magnetic order. Rev. Mod. Phys. 2010, 82, 2731–2784.
+[CrossRef]
+29. Qaiumzadeh, A.; Skarsvåg, H.; Holmqvist, C.; Brataas, A. Spin superfluidity in biaxial antiferromagnetic insulators. Phys. Rev.
+Lett. 2017, 118, 137201. [CrossRef] [PubMed]
+30. Cheng, R.; Xiao, D.; Brataas, A. Terahertz antiferromagnetic spin Hall nano-oscillator.Phys. Rev. Lett. 2016, 116, 207603. [CrossRef]
+[PubMed]
+31. Awschalom, D.D.; Bassett, L.C.; Dzurak, A.S.; Hu, E.L.; Petta, J.R. Quantum spintronics: Engineering and manipulating atom-like
+spins in semiconductors. Science 2013, 339, 1174–1179. [CrossRef] [PubMed]
+32. Faraday, M. On the magnetization of light and the illumination of magnetic lines of force. Philos. T rans. R. Soc. Lond. 1846, 136,
+1–20.
+33. Kerr, J. On rotation of the plane of polarization by reflection from the pole of a magnet. Philos. Mag. 1877, 3, 321–343. [CrossRef]
+34. Argyres, P .N. Theory of the Faraday and Kerr effects in ferromagnetics. Phys. Rev. 1955, 97, 334–345. [CrossRef]
+35. Ebert, H. Magneto-optical effects in transition metal systems. Rep. Prog. Phys. 1996, 59, 1665–1735. [CrossRef]
+36. Ahn, J.; Guo, G.-Y.; Nagaosa, N. Low-frequency divergence and quantum geometry of the bulk photovoltaic effect in topological
+semimetals. Phys. Rev. X 2020, 10, 041041. [CrossRef]
+37. Kleiner, W.H. Space-time symmetry of crystal structures and its influence on their physical properties.Phys. Rev. 1967, 153, 726.
+[CrossRef]
+38. Bradley, C.; Cracknell, A. The Mathematical Theory of Symmetry in Solids ; Clarendon: Oxford, UK, 1972.
+39. Eremenko, V .V .; Kharchenko, N.F. Magneto-optics of antiferromagnets. Phys. Rep. 1987, 155, 379–401. [CrossRef]
+40. Rado, G.T. Observation and possible mechanisms of magnetoelectric effects in a ferromagnet. Phys. Rev. Lett. 1964, 13, 335.
+[CrossRef]
+41. Bonilla, M.; Kolekar, S.; Ma, Y.; Diaz, H.C.; Kalappattil, V .; Das, R.; Eggers, T.; Gutierrez, H.R.; Phan, M.-H.; Batzill, M. Strong
+room-temperature ferromagnetism in VSe 2 monolayers on van der Waals substrates. Nat. Nanotechnol. 2018, 13, 289–293.
+[CrossRef] [PubMed]
+42. Huang, C.; Feng, J.; Wu, F.; Ahmed, D.; Huang, B.; Xiang, H.; Deng, K.; Kan, E. Toward intrinsic room-temperature ferromagnetism
+in two-dimensional semiconductors. J. Am. Chem. Soc. 2018, 140, 11519–11525. [CrossRef] [PubMed]
+43. O’Hara, D.J.; Zhu, T.; Trout, A.H.; Ahmed, A.S.; Luo, Y.K.; Lee, C.H.; Brenner, M.R.; Rajan, S.; Gupta, J.A.; McComb, D.W.; et al.
+Room temperature intrinsic ferromagnetism in epitaxial manganese selenide films in the monolayer limit. Nano Lett. 2018, 18,
+3125–3131. [CrossRef] [PubMed]
+44. Perdew, J.P .; Burke, K.; Ernzerhof, M. Generalized gradient approximation made simple.Phys. Rev. Lett. 1996, 77, 3865. Erratum
+in Phys. Rev. Lett. 1997, 78, 1396. [CrossRef] [PubMed]
+45. Kresse, G.; Furthmüller, J. Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set. Phys. Rev.
+B 1996, 54, 11169–11186. [CrossRef]
+46. Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, H. A consistent and accurate ab initio parametrization of density functional dispersion
+correction (DFT-D) for the 94 elements H–Pu. J. Chem. Phys. 2010, 132, 154104. [CrossRef] [PubMed]
+47. Mostofi, A.A.; Yates, J.R.; Lee, Y.-S.; Souza, I.; Vanderbilt, D.; Marzari, N. Wannier90: A tool for obtaining maximally-localised
+Wannier functions. Comput. Phys. Commun. 2008, 178, 685–699. [CrossRef]
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
+https://doi.org/10.3390/cryst16080497

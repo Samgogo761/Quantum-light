@@ -1,0 +1,299 @@
+[
+  {
+    "page": 1,
+    "text": "线 Q · 课题进展汇报\n压缩光相位对反铁磁序敏感非线性电流的调控\nPT‑AFM 八带有效模型 · 截断 QED 与 Wigner/MTEF 对照 · 冻结样本外预测\n2026-10-24\n组会汇报 · 线 Q（量子光 × 磁性谐波）",
+    "notes": "各位老师好。今天汇报线 Q 的最新进展：在 PT 对称双层反铁磁的八带有效模型里，固定一束位移压缩光的输入资源，只旋转它的压缩方向，看磁序奇的二次谐波复电流怎样变化。封面三幅示意就是全稿的主线：左边是中心相同、方向不同的两只涨落椭圆，中间是 +N 与 −N 两个磁畴，右边是我们读取的复电流相量。后面的数值都来自有限模型内的截断 QED 与高斯 Wigner/MTEF 计算。下一页先说明为什么“只转方向”这个问题值得问。",
+    "media": [
+      "ppt/media/image1.png",
+      "ppt/media/svgimage1.svg"
+    ]
+  },
+  {
+    "page": 2,
+    "text": "问题\n相同平均场与能量，涨落方向能改变什么？\n两束输入：位移 α=0.5、压缩 r=0.3、平均光子数相同；只把压缩方向转 90°\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n2\n椭圆中心\n = 平均场：两束输入完全相同\n椭圆形状与方向\n = 涨落协方差：面积、主轴长度相同，方向不同\n磁序奇的二次谐波复电流会不会跟着变？\n本次发现预告（后文逐页给出）\n5.80×\nθ=π 对 θ=0\n二维幅值比 ‖J‖\n2\n106.9°\nθ=π/2 对 3π/2\nJ\nx\n 复相位差\n≤1.23%\nθ=π/4 冻结预测\n误差（分母 |A|）\n固定的是输入资源，改变的只是二阶涨落的方向",
+    "notes": "先看左图：两束输入的椭圆中心都在 α=0.5，代表平均场相同；椭圆面积和主轴长度也相同，所以平均光子数相同，唯一不同的是二阶涨落的方向转了 90°。如果材料只认平均场和能量，两束光应给出同样的电流。我们关心的是磁序奇分量，也就是两个磁畴响应之差。右边三个数字是后文的预告：5.80 倍是二维电流范数比，不是强度比；106.9° 是 Jx 分量的复相位差；1.23% 是事先冻结预测的最大误差，分母是旋转项模长 |A|。下一页把这个问题放进已有研究中定位。",
+    "media": [
+      "ppt/media/image2.png",
+      "ppt/media/svgimage2.svg"
+    ]
+  },
+  {
+    "page": 3,
+    "text": "研究背景\n已有研究与我们的具体问题\n磁序可被二次谐波读出；光的量子统计与压缩相位可进入固体谐波响应\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n3\n① 磁序敏感的二次谐波\nSun 等, Nature 2019\n：双层 CrI₃ 的反铁磁序产生巨大非互易 SHG；磁序奇信号可由二次谐波读出（经典驱动）\n② 量子光驱动的高次谐波\nGorlach 等, Nat. Phys. 2023\n：HHG 依赖驱动光的量子统计\nRasputnyi 等, Nat. Phys. 2024\n：亮压缩真空驱动 HHG 实验（宏观占据）\n③ 压缩相干态与涨落感知（最接近先例）\nLi 等, PRA 2025\n：压缩相干态驱动固体 HHG 的量子光学特征\nPrabhu & Dixit, PRB 2026\n：用禁戒谐波感知量子涨落（石墨烯，双圆 ω/2ω）\n④ 方法与对称性\nde‑la‑Peña 等, JCTC 2025\n：多轨迹 Ehrenfest 与精确 QED 的 HHG 对照\nStammer 等, arXiv 2026（预印本）\n：量子光导致固体 HHG 的对称性破缺\n本工作聚焦\n固定资源的压缩协方差方向 → Néel‑odd 复电流 → 交换依赖 → 事先冻结的样本外预测",
+    "notes": "这一页说明我们建立在哪些工作上。第一组是磁性二次谐波：Sun 等在双层 CrI₃ 中观测到由反铁磁序产生的巨大非互易 SHG，说明磁序奇信号可以用二次谐波读出。第二组表明高次谐波对驱动光的量子统计敏感，Rasputnyi 等已做了亮压缩真空实验，但那是宏观占据，和我们的低占据位移压缩态不同。第三组是最接近的先例：Li 等研究压缩相干态驱动的固体 HHG，Prabhu 与 Dixit 用禁戒谐波感知量子涨落。第四组提供方法与对称性背景。我们不主张首次把量子光用于固体谐波，聚焦点是底部这条链。下一页进入模型。\n【来源】\n· Sun, Z. et al. Giant nonreciprocal second-harmonic generation from antiferromagnetic bilayer CrI₃. Nature 572, 497–501 (2019). DOI: 10.1038/s41586-019-1445-3. https://www.nature.com/articles/s41586-019-1445-3\n  本页借鉴：双层 CrI₃ 的层状反铁磁序产生巨大非互易二次谐波，说明磁序奇信号可由 SHG 读出；只作磁性 SHG 动机，不证明本工作的压缩角规律。\n· Gorlach, A. et al. High-harmonic generation driven by quantum light. Nature Physics 19, 1689–1696 (2023). DOI: 10.1038/s41567-023-02127-y. https://www.nature.com/articles/s41567-023-02127-y\n  本页借鉴：高次谐波谱依赖驱动光的量子统计，而不只是平均场强。\n· Rasputnyi, A. et al. High-harmonic generation by a bright squeezed vacuum. Nature Physics 20, 1960–1965 (2024). DOI: 10.1038/s41567-024-02659-x. https://www.nature.com/articles/s41567-024-02659-x\n  本页借鉴：亮压缩真空驱动 HHG 的实验背景；其宏观 BSV 条件不同于本稿低占据的位移压缩态。\n· Li et al. Quantum-optical signatures of solid-state high-harmonic generation driven by squeezed coherent states. Physical Review A 112, 033507 (2025). DOI: 10.1103/vmk1-qjpj. https://journals.aps.org/pra/abstract/10.1103/vmk1-qjpj\n  本页借鉴：压缩相干态可改变固体 HHG 的量子光学特征——最接近先例之一，“压缩相干态调控固体 HHG”并非本工作独有命题。\n· Prabhu and Dixit. Sensing quantum fluctuations via forbidden harmonics in quantum materials. Physical Review B 114, L140301 (2026). DOI: 10.1103/v886-ypf7. https://journals.aps.org/prb/abstract/10.1103/v886-ypf7\n  本页借鉴：石墨烯中双圆 ω/2ω 驱动下，禁戒谐波与相位相关偏振可感知量子涨落；说明“用谐波感知涨落”已有研究。\n· de-la-Peña, S. et al. Quantum Electrodynamics in High-Harmonic Generation: Multitrajectory Ehrenfest and Exact Quantum Analysis. J. Chem. Theory Comput. 21, 283–290 (2025). DOI: 10.1021/acs.jctc.4c01206. https://pubs.acs.org/doi/10.1021/acs.jctc.4c01206 （公开全文 https://pmc.ncbi.nlm.nih.gov/articles/PMC11736686/）\n  本页借鉴：多轨迹 Ehrenfest 与精确 QED 的 HHG 对照思路；其反馈处理与本地实现不同，本稿不是照搬。\n· Stammer et al. Symmetry breaking by quantum light in solid-state high-harmonic generation. arXiv:2605.28236 (2026，预印本). https://arxiv.org/abs/2605.28236\n  本页借鉴：量子光可导致固体 HHG 的对称性破缺；作为相关预印本引用，未填期刊信息。",
+    "media": []
+  },
+  {
+    "page": 4,
+    "text": "模型 · 磁畴\n双层磁序与固定装置翻畴\n+N 与 −N 只翻转上下层交换场；入射光、偏振、时间零点与观测算符完全相同\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n4\nN=±1：静态的经典磁畴标签，不是可叠加的磁畴算符\nJ\ne\n：磁序偶；J\no\n：磁序奇（随 N 变号）\n“磁序奇偶”针对 N，“谐波奇偶”针对 q：二阶谐波也可以是磁序奇\n另一种关系：畴–光场联合反演 (N, α, ξ) → (−N, −α, ξ)，见附录 A4\n本稿所有“磁序奇响应”都按这一减法定义",
+    "notes": "本页定义“磁序奇响应”。左右两套装置完全相同：同一输入光、同一偏振 a₂、同一时间零点与相位参考，只把上下层交换场整体翻转，得到 +N 与 −N 两个磁畴。把两次计算的电流相加、相减，就得到磁序偶分量和磁序奇分量，这正是公式的作用。要区分两套“奇偶”：这里的奇偶针对 N，与谐波阶数 q 的奇偶无关，所以二阶谐波也可以有磁序奇分量。N 是静态标签，我们没有让光与磁畴形成叠加态。畴与光场的联合反演关系放在附录 A4。下一页看模型里保留了哪些自由度。",
+    "media": [
+      "ppt/media/image3.png",
+      "ppt/media/svgimage3.svg",
+      "ppt/media/image4.png",
+      "ppt/media/svgimage4.svg"
+    ]
+  },
+  {
+    "page": 5,
+    "text": "模型 · 八带\n八带模型保留哪些磁性自由度？\nM0：PT 对称双层反铁磁的八带有效（机制）模型\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n5\nh\ne\n：最近邻跃迁 t\nh\nf(k)、层内 SOC λ\nSO\n、层间 u / v；不随 N、η 改变\nh\nm\n：上下层反号的交换场 ±Δ s\nz\n；η 只缩放交换\nt\nh\n=1，λ\nSO\n=0.1，Δ=0.8，u=v=0.1\n每 k 半填充 4 电子（N\n↑\n=N\n↓\n=2）\n为何选机制模型：保留磁畴相关对称结构，又能承受电子–光子联合演化。M0 不是双层 CrI₃ 的定量模型（见 A7）\nSOC 结构参照 Kane & Mele（PRL 2005）；f、g、T₀ 完整形式见 A1",
+    "notes": "八带来自两层、两个子晶格和两个自旋。图中实线是层内最近邻跃迁 t_h f(k)，虚线 u 连接上下层的同类格点，点线 v 连接异类格点；SOC 采用 Kane–Mele 型次近邻形式。右侧是上下层符号相反的交换场，N 翻转时两层一起换号。公式把哈密顿量拆成不随磁畴变化的 h_e 与磁性部分 h_m，η 只缩放交换，第 17 页会用到。选择这个机制模型，是因为它保留了相关对称结构，又小到能做电子–光子联合演化；它不是双层 CrI₃ 的定量模型，材料迁移见附录 A7。下一页介绍输入光。\n【来源】\n· Kane, C. L. and Mele, E. J. Quantum Spin Hall Effect in Graphene. Physical Review Letters 95, 226801 (2005). DOI: 10.1103/PhysRevLett.95.226801. https://doi.org/10.1103/PhysRevLett.95.226801\n  本页借鉴：蜂窝晶格内禀次近邻 SOC 的结构形式 λ_SO g(k) σz sz；不表示该文直接给出本稿 M0 模型。",
+    "media": [
+      "ppt/media/image5.png",
+      "ppt/media/svgimage5.svg",
+      "ppt/media/image6.png",
+      "ppt/media/svgimage6.svg"
+    ]
+  },
+  {
+    "page": 6,
+    "text": "输入 · 位移压缩态\n位移压缩输入的控制参数\nX=a+a†，P=−i(a−a†)，真空方差 1；θ 是压缩参数相位，压缩轴的几何角为 θ/2\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n6\n固定 α=0.5、r=0.3，只改 θ\n理想 n̄≈0.342733，各 θ 相同；低占据位移压缩态，非 BSV\n对照\nVar X\nVar P\nCov(X,P)\n含义\nθ=0 → π\n0.5488 → 1.8221\n1.8221 → 0.5488\n0\n方差互换\nθ=π/2 → 3π/2\n1.1855\n1.1855\n−0.6367 → +0.6367\n方差相同、协方差反号",
+    "notes": "输入态是先压缩真空、再位移：位移 α=0.5 与压缩幅度 r=0.3 都固定，只改压缩相位 θ。读图时注意，图中虚线是压缩轴，它的几何角是 θ/2，所以 θ 从 0 到 π 椭圆只转 90°，不是 180°。下表给出两组关键比较：0 与 π 的 X、P 方差互换；π/2 与 3π/2 的方差都等于 1.1855，只有协方差反号，这是第 12 页的对照基础。理想态平均光子数约 0.3427，对所有 θ 相同；这是低占据的位移压缩态，不是亮压缩真空。有限截断带来的微小资源差列在附录 A2。下一页说明这束光如何进入电子哈密顿量。\n【来源】\n· Walls, D. F. and Milburn, G. J. Quantum Optics, 2nd ed. Springer (2008). DOI: 10.1007/978-3-540-28574-8. https://doi.org/10.1007/978-3-540-28574-8\n  本页借鉴：位移、压缩算符与二阶矩的标准恒等式；不用于证明本稿的 B+ΛM 机制。",
+    "media": [
+      "ppt/media/image7.png",
+      "ppt/media/svgimage7.svg",
+      "ppt/media/image8.png",
+      "ppt/media/svgimage8.svg"
+    ]
+  },
+  {
+    "page": 7,
+    "text": "输入 · 光–电子耦合\n量子光怎样进入电子哈密顿量？\nħ=1 模型单位；一个共享光模同时耦合 k 与 −k 两个电子子空间\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n7\nPeierls 代换\n：k → κ + g s(t) e X̂，矢势换成光场算符\ndΓ[·]\n：8×8 单粒子矩阵提升为固定粒子数的多电子算符\n共享光模\n：k 与 −k 可经光场形成关联；本轮读取平均电流\n初态\n：零耦合电子基态 ⊗ 输入光态（不是耦合基态）\n联合维数 36²×9=11664；有限光子算符顺序见 A1",
+    "notes": "这一页回答量子光怎样进入电子哈密顿量。第一行公式里，Peierls 代换把晶体动量平移 g s(t) e X̂，其中 X̂ 是光场算符而不是经典数，所以电子跃迁相位随光子态而变；dΓ 把 8×8 单粒子矩阵提升为固定粒子数的多电子算符。图中只有一个光模，同时连到 k 与 −k 两个电子子空间，两者可以通过光场间接关联。第二行是初态：耦合关闭时的电子基态直接乘上输入光态，不是耦合后的联合基态。联合空间共 11664 维；本轮读取平均电流。有限光子截断下的算符顺序见附录 A1。下一页看耦合协议与读取窗口。",
+    "media": [
+      "ppt/media/image9.png",
+      "ppt/media/svgimage9.svg",
+      "ppt/media/image10.png",
+      "ppt/media/svgimage10.svg",
+      "ppt/media/image11.png",
+      "ppt/media/svgimage11.svg"
+    ]
+  },
+  {
+    "page": 8,
+    "text": "协议 · 时间窗\n六周期耦合协议与实际读取窗口\ng=0.005 Å⁻¹，ω₀=0.05 t\nh\n，偏振 a₂；6T₀ = 11154 个时间步\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n8\ns(t)：1+4+1 周期的耦合开关，\n不是电场\n平台上 H 不显含时间，但输入光态本身在振荡\n主窗 [2,4]T₀ 做整数频率投影：这是观测量的\n定义\n是否为稳定谐波需更长平台另验（A5）\n所有展示结果的主窗均完整；各 QED 终止时间见 A3",
+    "notes": "耦合不是一开始就打开：s(t) 在第 1 个周期缓慢打开，平台保持 4 个周期，最后 1 个周期关闭。注意 s(t) 只是耦合开关；下方振荡曲线是不计反作用时光场期望的示意，并不是外加电场。平台上哈密顿量不显含时间，但输入光态本身在振荡，所以电流带有频率结构。我们在主窗 [2,4]T₀ 内做整数频率投影，这是观测量的定义；它是否对应稳定谐波，需要更长平台另行验证。前窗和后窗只用于敏感性检查，各路 QED 的实际终止时间放在附录 A3。下一页定义复电流。",
+    "media": [
+      "ppt/media/image12.png",
+      "ppt/media/svgimage12.svg"
+    ]
+  },
+  {
+    "page": 9,
+    "text": "观测量\n我们读取的是复电流，不仅是强度\n平均电子电流在主窗内的有限时间复投影；q=2 为 H2 邻域（下文简称 H2）\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n9\ne/o：对 N 的偶/奇组合；正号 Fourier\n同一时间参考：J\nx\n、J\ny\n 各有长度与相位（右图）\n二维向量只报范数 ‖J‖\n2\n，不配单一相位\n不是输出光子数谱、压缩度或 g\n(2)\n后文“相位”都指 J\nx\n 分量；幅值分别标明 ‖J‖\n2\n 或 |J\nx\n|",
+    "notes": "本页定义全稿的观测量。第一个公式对奇或偶电流在窗口内做正号 Fourier 投影，q=2 就是第二谐波邻域，下文简称 H2。所有计算共用同一时间参考，所以投影结果是复数，长度与相位都有物理意义。右图读法：Jx 与 Jy 各是一根相量，各自有相位；二维向量的大小用第二个公式的范数表示，不能给它配一个单一相位。将来若连接实验读出，可在某个偏振方向比较两磁畴的强度差，它等于偶、奇分量干涉项实部的四倍；这只是解释，本轮没有计算远场强度。下一页介绍两种计算方法。",
+    "media": [
+      "ppt/media/image13.png",
+      "ppt/media/svgimage13.svg",
+      "ppt/media/image14.png",
+      "ppt/media/svgimage14.svg",
+      "ppt/media/image15.png",
+      "ppt/media/svgimage15.svg"
+    ]
+  },
+  {
+    "page": 10,
+    "text": "方法\n精确联合演化与 Wigner/MTEF 的对照\n两条流程使用同一哈密顿量、输入定义、磁畴、时间窗与电流算符\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n10\n截断 QED：联合态演化\n电子 36×36 ⊗ 光子 n\nmax\n=8\n共 11664 维\n联合 Schrödinger 演化\n含光子反作用\n读取 ⟨J(t)⟩ → J\no\n2\nGH5：Wigner 高斯 + 自洽 MTEF\n输入 Wigner 写成相关二维高斯\n保留 Cov(X,P)≠0\n5×5 = 25 个 Gauss–Hermite 节点\n（不是 5 条轨迹）\n各节点光场随电流反馈自洽演化\n→ 加权平均 ⟨J⟩\n用法：GH5 先给预测 → QED 检验同一观测量；偏差只说明近似精度，不自动等于“量子优势”\n多轨迹 Ehrenfest 与精确 QED 对照思路：de‑la‑Peña 等, JCTC 2025；本稿的光场反馈约定按本地实现",
+    "notes": "同一个观测量用两种方法计算。左边是截断 QED：电子与光子的联合态直接演化，包含光子反作用，代价是 11664 维的联合空间。右边是 GH5：先把输入光的 Wigner 分布写成相关二维高斯，保留 X、P 协方差，再取 5×5 共 25 个 Gauss–Hermite 节点，每个节点做光场随电流反馈的自洽平均场演化，最后加权平均。GH5 是求积阶数的简称，不是 5 条轨迹。两者共用同一哈密顿量、输入、磁畴、窗口与电流算符。用法上 GH5 先给预测，QED 再检验；两者偏差只说明近似精度，不自动等于量子优势。下一页给出第一个结果。\n【来源】\n· de-la-Peña, S. et al. Quantum Electrodynamics in High-Harmonic Generation: Multitrajectory Ehrenfest and Exact Quantum Analysis. J. Chem. Theory Comput. 21, 283–290 (2025). DOI: 10.1021/acs.jctc.4c01206. https://pubs.acs.org/doi/10.1021/acs.jctc.4c01206 （公开全文 https://pmc.ncbi.nlm.nih.gov/articles/PMC11736686/）\n  本页借鉴：多轨迹 Ehrenfest 与精确 QED 的 HHG 对照思路；其反馈处理与本地实现不同，本稿不是照搬。",
+    "media": []
+  },
+  {
+    "page": 11,
+    "text": "结果 1 · 幅值\n旋转压缩轴改变磁序奇响应幅值\n均值与平均光子数相同，只转压缩方向：复响应的幅值与相位同时大幅改变\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n11\nη=1，截断 QED，主窗 [2,4]T₀；单位 10\n−8\n（模型单位）\n5.80×\n二维范数 ‖J‖\n2\n1.537 → 8.913\n6.49×\n|J\nx\n| 分量\n1.344 → 8.721\n167.4°\nJ\nx\n 最短相位差\n−30.0° → 162.6°\n比值不是强度比或光子数比",
+    "notes": "第一个结果在 η=1、截断 QED、主窗条件下得到。左图是 θ=0 与 θ=π 的 Jx 相量：θ=0 很短，指向约 −30°；θ=π 长得多，指向约 162.6°，两者最短相位距离约 167.4°。右侧条形给二维范数：从 1.537 增到 8.913，比值 5.80；只看 Jx 分量则是 6.49。两个比值分别对应二维范数和 Jx，不能互换，也都不是强度比或光子数比。由于两束输入的均值和平均光子数相同，这说明压缩方向本身就能大幅调控磁序奇复响应。下一页让方差保持不变，只反转协方差的符号。",
+    "media": [
+      "ppt/media/image16.png",
+      "ppt/media/svgimage16.svg"
+    ]
+  },
+  {
+    "page": 12,
+    "text": "结果 2 · 相位\n反转协方差符号，主要改变响应相位\nθ=π/2 与 3π/2：初始 Var X = Var P = 1.1855 相同，Cov(X,P) = ∓0.6367 反号\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n12\nη=1\n截断 QED\n主窗\n[2,4]T₀\n单位 10\n−8\n长度接近：5.971 vs 6.316（×1.058）　｜　方向不同：109.87° vs −143.23°（差 106.90°）",
+    "notes": "上一页的比较中，X、P 方差发生了互换。本页的对照更严格：θ=π/2 与 3π/2 两束输入的初始 X、P 方差都是 1.1855，只有协方差符号相反，左图就是两只 ±45° 的椭圆。右图是 QED 的 Jx 相量：长度分别为 5.971 与 6.316，只差 1.058 倍；方向却分别在 109.87° 与 −143.23°，绕行差 106.90°。所以“长度接近、方向不同”是这组对照的核心。这里相同的是初始方差，自由演化后 Var X(t) 一般不同，不能说全程方差都一样。下一页检查近似方法能否事先预测这些复差。",
+    "media": [
+      "ppt/media/image17.png",
+      "ppt/media/svgimage17.svg",
+      "ppt/media/image18.png",
+      "ppt/media/svgimage18.svg"
+    ]
+  },
+  {
+    "page": 13,
+    "text": "结果 3 · 方法交叉验证\nGH5 预测了关键 QED 复差向量\n同一复平面：实心＝QED，空心＝GH5 事先预测；两种灰度只区分两条复差\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n13\nδ\nθ\n = J\nx\n(π) − J\nx\n(0)\nQED  (−9.487+3.275i)×10\n−8\nGH5  (−9.526+2.929i)×10\n−8\n误差 \n3.47%\n，方向 \n1.95°\nδ\n⊥\n = J\nx\n(3π/2) − J\nx\n(π/2)\nQED  (−3.030−9.396i)×10\n−8\nGH5  (−3.323−9.553i)×10\n−8\n误差 \n3.36%\n，方向 \n1.31°\n误差 = |δ\nGH5\n − δ\nQED\n| / |δ\nQED\n|\n只针对这两条复差向量；η=1，主窗 [2,4]T₀",
+    "notes": "本页把两种方法放在同一复平面上。实心点与实线是 QED，空心点与虚线是 GH5 在 QED 结果出来之前给出的预测。深色向量是 θ 从 0 到 π 的复差，灰色是 π/2 到 3π/2 的复差；右侧两个小图放大了箭头端点。误差定义为两种方法复差之差的模，除以 QED 复差的模：分别是 3.47% 与 3.36%，方向偏差都小于 2°。这个精度只针对这两条复差向量，不代表所有电流或所有参数。作为参照，Q1a 中同一 α 的位移压缩态减相干态，GH5 误差约 4.5%。下一页把四个角放在一起看整体结构。",
+    "media": [
+      "ppt/media/image19.png",
+      "ppt/media/svgimage19.svg"
+    ]
+  },
+  {
+    "page": 14,
+    "text": "结构 · 四角\n四角结果显示带背景的旋转结构\nη=1：四个压缩角的 QED 点与 GH5 四角经验模型\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n14\nB：与 θ 无关的背景；A e\niθ\n：随压缩相位旋转；C 很小（|C/A|≈0.02）\nθ=0：旋转项几乎与 B 反向 → 相消，电流小\nθ=π：同向叠加 → 电流大\nθ=π/2、3π/2：旋转项垂直于 B、分居两侧 → 长度接近、方向不同\nη=1 GH5 拟合：|A|=5.02×10\n−8\n，|A/B|=1.29\n虚线＝由四角 GH5 得到的经验模型，不是密集角度扫描；第 19 页用新角度 π/4 检验",
+    "notes": "把四个角的 QED 点画在一起，可以看出一个带背景的旋转结构。经验式中 B 是与 θ 无关的背景，A e^{iθ} 随压缩相位转动，C 是很小的反向项。图中灰色粗箭头是 B，彩色箭头从 B 的端点出发表示旋转项：θ=0 时它几乎与 B 反向，两者相消，所以电流小；θ=π 时同向叠加，所以电流大；π/2 与 3π/2 时旋转项垂直于 B、分居两侧，于是长度接近而方向不同。一个式子同时解释了前两页。虚线来自四角 GH5 的拟合，只是模型，不是密集扫描；第 19 页会用新的角度检验它。下一页解释 A 项从何而来。",
+    "media": [
+      "ppt/media/image20.png",
+      "ppt/media/svgimage20.svg",
+      "ppt/media/image21.png",
+      "ppt/media/svgimage21.svg"
+    ]
+  },
+  {
+    "page": 15,
+    "text": "机制 · 二阶关联\n反常二阶关联提供有效机制图像\n输入的 M\nθ\n 随 θ 旋转；材料把它缩放、旋转后叠加在背景 B 上\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n15\n|M\nθ\n| = ½ sinh 2r 固定，只转方向\nΛ：材料响应系数\nA = −½ Λ sinh 2r\n当前观测量的\n有效描述\n保留小 C 项与高阶修正，不宣称严格 χ\n(2)",
+    "notes": "A e^{iθ} 为什么跟着 θ 转？输入光的反常二阶关联 M_θ 正好按 e^{iθ} 旋转，模长固定为 sinh2r 的一半，约 0.318，左图五个角度都落在同一个圆上。如果材料对它的响应近似线性，就得到第二个公式：电流等于背景 B 加上复系数 Λ 乘 M_θ。Λ 把输入圆缩放、旋转，再平移到右图的响应圆上。直观上，自由场的 Var X(t)=cosh2r−sinh2r cos(2ω₀t−θ) 本身以二倍频振荡，相位由 θ 决定，正好与 H2 匹配。但真实联合反馈需要完整响应核，所以这是当前观测量的有效描述，保留 C 与高阶修正。下一页用热态对照检验它。\n【来源】\n· Walls, D. F. and Milburn, G. J. Quantum Optics, 2nd ed. Springer (2008). DOI: 10.1007/978-3-540-28574-8. https://doi.org/10.1007/978-3-540-28574-8\n  本页借鉴：位移、压缩算符与二阶矩的标准恒等式；不用于证明本稿的 B+ΛM 机制。",
+    "media": [
+      "ppt/media/image22.png",
+      "ppt/media/svgimage22.svg",
+      "ppt/media/image23.png",
+      "ppt/media/svgimage23.svg",
+      "ppt/media/image24.png",
+      "ppt/media/svgimage24.svg"
+    ]
+  },
+  {
+    "page": 16,
+    "text": "检验 · 热态对照\n热态对照支持二阶统计的解释\n位移热态 vs θ=0、π 两压缩态等权混合：平均场与总协方差相同，四阶统计不同（GH5）\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n16\n两者方差均为 1.1855\nX 四阶中心矩：热态 4.216，混合 5.432\nε\n2\n=0.171%：该观测量对所比的高阶差异不敏感；不是全部高阶项的误差上界，也不是 QED 热态验证",
+    "notes": "如果响应主要由二阶统计决定，那么二阶矩相同、高阶矩不同的两种输入应给出几乎相同的电流。我们比较位移热态与 θ=0、π 两种压缩态的等权混合：左图中热态是一个圆，混合态是两只正交椭圆的叠加；两者平均场和总协方差相同，方差都是 1.1855，但四阶中心矩分别为 4.216 与 5.432。右图在与 0→π 复差同一尺度下，两点几乎重合；放大后差值 |R₂|=1.70×10⁻¹⁰，只占 0→π 复差的 0.171%。这支持该观测量对所比的高阶差异不敏感，但不是所有高阶项的误差上界，也不是 QED 热态验证。下一页改变材料的交换强度。",
+    "media": [
+      "ppt/media/image25.png",
+      "ppt/media/svgimage25.svg",
+      "ppt/media/image26.png",
+      "ppt/media/svgimage26.svg"
+    ]
+  },
+  {
+    "page": 17,
+    "text": "结果 4 · 交换依赖\n交换强度重整化材料复响应\nη 只缩放交换（η=0.5/1/1.5 对应 Δ=0.4/0.8/1.2），每个 η 重建电子初态；GH5 四角结果\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n17\nη (Δ)\n局部能隙\n|A/B|\n0.5 (0.4)\n1.9141\n1.154\n1.0 (0.8)\n1.1354\n1.286\n1.5 (1.2)\n0.3619\n1.311\n对照：2ω₀ = 0.10\nη 1→1.5：|A| 约 \n×63\n，arg A 转 \n+57.4°\n，能谱同时明显变化\n63× 是角向系数比，不是谐波产额；能隙 0.362 ≠ 2ω₀=0.10，不能直接称两光子共振\nη 改变静态参数与相应电子基态，不只是转动磁矩方向",
+    "notes": "现在改变材料参数：η 只缩放交换场，η=0.5、1、1.5 对应 Δ=0.4、0.8、1.2，每个 η 都重新求电子初态；本页所有点都是 GH5 四角结果。左图用对数轴画旋转项模长 |A|：从 η=1 到 1.5 约增大 63 倍；右图 arg A 转动约 57.4°。右表给出局部能隙，从 1.91 降到 0.362，能谱同时明显变化。需要强调：63 倍是角向系数之比，不是谐波产额；0.362 仍远大于 2ω₀=0.10，不能直接说成两光子共振；η 改变的是静态参数和相应基态，不只是磁矩方向。下一页问：角向形状是否随 η 保持？",
+    "media": [
+      "ppt/media/image27.png",
+      "ppt/media/svgimage27.svg"
+    ]
+  },
+  {
+    "page": 18,
+    "text": "结构 · 角向形状\n去除独立背景后，角向形状近似保留\n|A| 随 η 变化几十倍时，比较统一归一化后的角向形状（指标均来自四角 GH5）\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n18\n✗ 严格因子化\nθ=0 处相消而失败：误差 90% / 37%\n✓ 弱因子化（保留独立 B）\n残差 3.3% / 0.73%\n统一的复归一化\n形状距离 4.3% / 0.92%（相对 η=1）\n数值依次对应 η=0.5 / 1.5；显式复旋转，无逐组相位对齐\n角向形状随 η 近似保留；独立背景 B 不能省略",
+    "notes": "既然 |A| 随 η 变化几十倍，角向形状是否也变？最简单的猜想是严格因子化：电流等于只依赖 η 的因子乘只依赖 θ 的函数。它在 θ=0 附近失败，因为那里 B 与旋转项相消，相对误差高达 90% 与 37%。保留独立背景 B 的弱因子化好得多，残差只有 3.3% 与 0.73%。比较形状时统一定义 z=(J−B)/A，这个复旋转显式写出，没有对各组数据分别做相位对齐；相对 η=1 的形状距离为 4.3% 与 0.92%。所有指标都来自四角 GH5。下一页用一个从未参与拟合的新角度检验这个模型。",
+    "media": [
+      "ppt/media/image28.png",
+      "ppt/media/svgimage28.svg",
+      "ppt/media/image29.png",
+      "ppt/media/svgimage29.svg",
+      "ppt/media/image30.png",
+      "ppt/media/svgimage30.svg",
+      "ppt/media/image31.png",
+      "ppt/media/svgimage31.svg"
+    ]
+  },
+  {
+    "page": 19,
+    "text": "结果 5 · 样本外预测\n冻结模型预测了新的 π/4 输入\n每个 η：先由四角 GH5 冻结 B、A、C，再计算新角度；本轮无新 QED\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n19\n① 四角 GH5 → 冻结 B、A、C\n② 计算前写下 θ=π/4 预测\n③ 六路新 GH5 计算 → 对照\nη\n误差/|A|\n相位差\n0.5\n0.67%\n−0.04°\n1.0\n0.39%\n+0.20°\n1.5\n1.23%\n+0.58°\n误差 = |实际 − 预测| / |A|，不是除以 |J|\nπ/4 可区分 e\niθ\n 与 e\ni5θ\n；e\ni9θ\n 仍混叠\n窗口依赖见第 20 页与 A5\n近圆角向模型获得一次样本外预测支持",
+    "notes": "这是一次真正的样本外检验，流程分三步：先用每个 η 的四角 GH5 冻结 B、A、C；运行之前写下 θ=π/4 的预测；再做六路新的 GH5 计算来对照。三个小图对应三个 η，以预测点为中心局部放大，虚线圆半径是 0.5%、1%、1.5% 的 |A|。右表的误差是实际与预测之差除以 |A|，而不是除以实际电流：分别为 0.67%、0.39%、1.23%，相位差都小于 0.6°。π/4 能区分 e^{iθ} 与 e^{i5θ}，但 e^{i9θ} 在这些角上仍会混叠。本轮没有新的 QED。下一页集中说明这些证据的适用范围。",
+    "media": [
+      "ppt/media/image32.png",
+      "ppt/media/svgimage32.svg"
+    ]
+  },
+  {
+    "page": 20,
+    "text": "证据范围\n已经得到的发现与证据适用范围\n数值模型内可重复的控制现象；与“真实材料定量预测”“输出光子非经典统计”分开\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n20\n发现\n证据（方法 · 范围）\n尚不能推出\n固定资源下，压缩方向调控幅值与相位\n截断 QED；η=1，θ=0 / π；主窗 [2,4]T₀\n真实材料定量预测；输出光子非经典统计\n初始方差相同、协方差反号 → 主要转相位\n截断 QED，θ=π/2 / 3π/2；GH5 复差偏差 ≈3.4%\n全程方差相同；H2 输出光子态的相位\n交换强度重整化 A（×63，+57.4°）\nGH5 四角，η=0.5 / 1 / 1.5\n谐波产额增强或两光子共振\n近圆角向模型的一次样本外预测\nGH5，θ=π/4，三个 η；误差 ≤1.23% |A|\n所有 θ 成立；全部高阶混叠已排除\n待验证清单（为结论划边界）\n有限 Fock\nn\nmax\n=8\n单个 k/−k 对\n非全布里渊区\n窗口敏感性\n前 / 主 / 后窗不同\nθ=π QED 到 4.76T₀\n后窗不完整\n输出端口\n远场光子未计算\n这些限定不否定已得结果；论文级的时频、Fock、求积与 k/BZ 验证见附录 A3、A5",
+    "notes": "这一页把发现与证据放进一张表。前两行由 η=1 的截断 QED 支持；后两行来自 GH5，包括交换依赖和一次独立预测。右列写明每项尚不能推出的内容，例如真实材料的定量预测、输出光子的非经典统计。下方是待验证清单：光子截断 n_max=8；只用一个 k/−k 对而非全布里渊区；前、主、后窗结果不同；θ=π 的 QED 只到 4.76T₀，后窗不完整；还没有输出端口与远场光子计算。这些是给结论划定边界，并不否定已有结果：它们是数值模型内可重复的控制现象。下一页提出下一项机制检验。",
+    "media": []
+  },
+  {
+    "page": 21,
+    "text": "下一步\n下一项磁性机制问题：SOC 与 Néel 交换\n已知：交换强度调控旋转项；拟检验：SOC 是否为磁序奇通道所必需\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n21\n已计算：交换 η 调控\nη = 0.5 / 1 / 1.5 三组交换强度\n|A| 与 arg A 随 η 系统变化\n四角冻结模型 → π/4 预测成功\n全部计算固定 λ\nSO\n=0.1\n结果见第 17–19 页\n拟检验（未计算）：SOC 负控\n若同一模型、初态与电流算符满足上式（R\nx\n：绕 x 轴的自旋 π 旋转），则\n① 同协议矩阵恒等式审计\n② λ\nSO\n=0 下 ±N 最小数值验证 J\no\n 是否消失\n③ 恢复 λ\nSO\n，比较 A、B 的变化\n候选机制：材料提供磁序敏感通道，输入协方差控制其复系数。\n注意：纯 BSV 偶宇称定理不直接移植到位移压缩态；本次未运行 SOC 计算。",
+    "notes": "左框是已知部分：交换强度 η 会系统地调控旋转项。右框是拟做的 SOC 负控，用虚线标出，尚未计算。如果同一模型、初态与电流算符满足图中的关系，即绕 x 轴的自旋旋转同时翻转交换 D 和 SOC λ，那么 λ=0 时 +N 与 −N 两个磁畴只差一个自旋旋转，电流相同，磁序奇响应应严格为零。这是待同协议核验的对称性推论，不是 Q6 已完成的结果；Q-MATH 中纯 BSV 的偶宇称定理也不能直接移植到位移压缩态。若检验成立，物理图像是：材料提供磁序敏感通道，输入协方差控制其复系数。下一页总结。",
+    "media": [
+      "ppt/media/image33.png",
+      "ppt/media/svgimage33.svg",
+      "ppt/media/image34.png",
+      "ppt/media/svgimage34.svg"
+    ]
+  },
+  {
+    "page": 22,
+    "text": "结论\n研究结论与讨论\n三条有数据支撑的结论\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n22\n① 压缩方向调控幅值与相位\n固定资源，θ: 0 → π\n‖J‖\n2\n ×5.80\nJ\nx\n 相位差 167.4°\n（截断 QED，η=1）\n② 反协方差主要转相位\n初始方差相同、Cov 反号\n长度 ×1.058\nJ\nx\n 相位差 106.9°\n（截断 QED，η=1）\n③ 交换依赖模型可预测\nη 调控 A：×63、+57.4°\n四角冻结 → π/4 新输入\n预测误差 ≤1.23%|A|\n（GH5，三个 η）\n科学意义：光场涨落的相位可作为磁序敏感非线性响应的控制参数\n想讨论的选择\n先用 SOC 负控明确机制，再对少量代表参数完成时频稳定性、Fock 截断与求积误差验证；真实材料迁移与严格经典界作为后续工作。",
+    "notes": "总结三条有数据支撑的结论。第一，固定输入资源、只转压缩方向，QED 给出 5.80 倍的二维幅值变化和约 167° 的 Jx 相位变化。第二，初始方差相同、协方差反号时，长度几乎不变而相位转动约 107°。第三，交换强度调控角向系数，四角模型在新角 π/4 上的预测误差不超过 1.23%|A|。科学意义是：光场涨落的相位可以作为磁序敏感非线性响应的控制参数。想与老师讨论的是下一步顺序：先完成 SOC 负控、明确机制，再对少量代表参数做时频、Fock 与求积验证；真实材料迁移与严格经典界作为后续工作。",
+    "media": []
+  },
+  {
+    "page": 23,
+    "text": "附录 A1 · 模型\n完整模型与电子空间\n供追问哈密顿量几何来源与算符顺序时使用（结构沿用 M0 实施规范）\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n23\na₁、a₂：原胞平移；d：A→B 基底位移；q：上下层 A→A 位移\nε\nt\n=+1，ε\nb\n=−1；η 只缩放交换项\nP：N→−N；T：N→−N；PT：N→N（N 为两个经典磁畴标签）\n每 k：4 电子，N\n↑\n=N\n↓\n=2 → C(4,2)²=36 维\nk / −k 共享一个光模 → 36²×9 = 11664 维；有限光子截断下 Peierls 算符按左式构造：\nf、g、T₀ 采用固定基底的 Bloch 相位约定（换规范相位可变、物理不变）；不是 CrI₃ 全部 Cr–I 配位的 Wannier 跃迁",
+    "notes": "附录 A1 用于回答模型细节的追问。f(k) 是层内最近邻结构因子，三个最近邻矢量为 d、d−a₁、d+a₂；g(k) 是对应三个次近邻方向的 Kane–Mele 型 SOC 结构因子；T₀(k) 是上层到下层的层间块，u 连接同类格点，v 连接异类格点。这些相位来自本地 M0 实施规范，采用固定基底的 Bloch 相位约定，换规范时相位可变而物理不变；它们不是 CrI₃ 全部 Cr–I 配位的 Wannier 跃迁。下方列出对称操作对 N 的作用、36 维电子扇区，以及有限光子截断下 Peierls 算符的正确顺序。\n【来源】\n· Kane, C. L. and Mele, E. J. Quantum Spin Hall Effect in Graphene. Physical Review Letters 95, 226801 (2005). DOI: 10.1103/PhysRevLett.95.226801. https://doi.org/10.1103/PhysRevLett.95.226801\n  本页借鉴：蜂窝晶格内禀次近邻 SOC 的结构形式 λ_SO g(k) σz sz；不表示该文直接给出本稿 M0 模型。",
+    "media": [
+      "ppt/media/image35.png",
+      "ppt/media/svgimage35.svg",
+      "ppt/media/image36.png",
+      "ppt/media/svgimage36.svg",
+      "ppt/media/image37.png",
+      "ppt/media/svgimage37.svg",
+      "ppt/media/image38.png",
+      "ppt/media/svgimage38.svg",
+      "ppt/media/image39.png",
+      "ppt/media/svgimage39.svg",
+      "ppt/media/image40.png",
+      "ppt/media/svgimage40.svg"
+    ]
+  },
+  {
+    "page": 24,
+    "text": "附录 A2 · 输入态\n输入态与协方差推导\n|ψ⟩=D(α)S(ξ)|0⟩，ξ=re\niθ\n，S(ξ)=exp[(ξ*a²−ξa†²)/2]；X=a+a†，P=−i(a−a†)\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n24\nθ\nVar X\nVar P\nCov(X,P)\n压缩轴角 θ/2\nn̄（理想）\n0\n0.5488\n1.8221\n0\n0°\n0.342733\nπ/4\n0.7353\n1.6356\n−0.4502\n22.5°\n0.342733\nπ/2\n1.1855\n1.1855\n−0.6367\n45°\n0.342733\nπ\n1.8221\n0.5488\n0\n90°\n0.342733\n3π/2\n1.1855\n1.1855\n+0.6367\n135°\n0.342733\n有限截断 n\nmax\n=8：θ=0 与 π 的实际 n̄ 差约 0.146%，只称“理想资源相同”\n|M\nθ\n| > n̄−|α|²：正交压缩（非经典）判据\n同 α 相干态参照：n̄=0.25",
+    "notes": "附录 A2 给出输入态约定：先作用压缩算符、再作用位移，X=a+a†、P=−i(a−a†)，真空方差为 1。三条二阶矩公式说明，θ 改变的是协方差方向，压缩轴的几何角是 θ/2；反常关联 M_θ 的模长不随 θ 改变。表中列出五个角的方差与协方差，理想平均光子数都等于 0.342733。在 n_max=8 的有限截断下，θ=0 与 π 的实际平均光子数相差约 0.146%，所以只说“理想资源相同”，不说达到机器精度。|M_θ| 大于 n̄−|α|² 是正交压缩的判据，表明输入确实处在非经典区。\n【来源】\n· Walls, D. F. and Milburn, G. J. Quantum Optics, 2nd ed. Springer (2008). DOI: 10.1007/978-3-540-28574-8. https://doi.org/10.1007/978-3-540-28574-8\n  本页借鉴：位移、压缩算符与二阶矩的标准恒等式；不用于证明本稿的 B+ΛM 机制。",
+    "media": [
+      "ppt/media/image41.png",
+      "ppt/media/svgimage41.svg",
+      "ppt/media/image42.png",
+      "ppt/media/svgimage42.svg",
+      "ppt/media/image43.png",
+      "ppt/media/svgimage43.svg",
+      "ppt/media/image44.png",
+      "ppt/media/svgimage44.svg"
+    ]
+  },
+  {
+    "page": 25,
+    "text": "附录 A3 · 计算\nQED 与 MTEF 的计算覆盖与精度范围\n比较总在同一观测量、同一主窗下进行；旧单周期结果只作背景\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n25\n路径（η=1）\n终止时间\n主窗 [2,4]\n后窗 [3,5]\nQED θ=0\n6T₀\n完整\n完整\nQED θ=π\n4.76T₀\n完整\n不完整\nQED θ=π/2\n5.70T₀\n完整\n完整\nQED θ=3π/2\n6T₀\n完整\n完整\nQED 相干态参照\n6T₀\n完整\n完整\nQ0：400 步 24.73 s（≈0.215T₀）\nQ1a 首波：900 s 推进到 ≈3.12T₀\nQ1a：同 α 的 DS − 相干态差 ≈5.17×10\n−8\n（n̄ 0.343 vs 0.250），GH5 误差约 4.5%、1.6°\nGH5\n相关二维 Wigner 高斯采样（保留 Cov），25 节点，各节点自洽 MTEF\n不是旧 Husimi‑Q 谱平均，也不是正 P 经典光态\n截断与精度\n已有截断与步长检查支持当前比较，但不是全面收敛研究\n论文级待验：频率稳定性、GH5 求积误差上界、Fock、k/BZ、输出端口\n旧单周期绝对奇电流结果不混入当前多周期曲线",
+    "notes": "附录 A3 记录计算覆盖与精度范围。从表中可见，θ=0、3π/2 与相干态参照的 QED 都跑满 6T₀；θ=π/2 到 5.70T₀；θ=π 只到 4.76T₀，主窗完整而后窗不完整，所以正文只使用主窗。GH5 采用相关二维 Wigner 高斯采样、25 个节点、各节点自洽 MTEF；它既不是旧的 Husimi-Q 谱平均，也不是正 P 经典光态。已有截断与步长检查支持当前比较，但不是全面收敛研究；频率稳定性、求积误差上界、Fock、k/BZ 与输出端口是论文级待验项。旧单周期结果只作背景。",
+    "media": []
+  },
+  {
+    "page": 26,
+    "text": "附录 A4 · 对称性\n磁畴与反演字典\n两种“翻转”：同输入翻畴，与畴–光场联合反演\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n26\n操作\nN\nα（位移）\nξ（压缩）\n电流\n用途\n同输入翻畴\nN → −N\nα\nξ\nJ\n+N\n → J\n−N\n定义 J\ne/o\n（第 4 页）\n联合反演 P\nN → −N\nα → −α\nξ（二次量不变）\nJ → −J\nJ\n−N\n(α,ξ) = −J\n+N\n(−α,ξ)\n磁序奇偶（对 N）与谐波奇偶（对 q）是两套独立分类：H2 可以有磁序奇分量\n对称操作：P：N→−N；T：N→−N；PT：N→N（PT 保持磁畴）\n纯 BSV（α=0）在 a→−a 下不变，偶宇称输出定理依赖于此；位移压缩态 α≠0，不能直接移植\nN 是静态标签：不构造光与磁畴的叠加或纠缠",
+    "notes": "附录 A4 整理与磁畴有关的符号关系。正文的奇偶分解来自同一输入下翻转 N。另一种关系是联合反演：空间反演同时把 N 变号、把光场位移 α 变号，而压缩参数 ξ 是二次量，保持不变；电流作为矢量变号，于是得到图中公式。它说明“翻畴”和“翻光场”可以换算，但前提是两者一起变。磁序奇偶针对 N，谐波奇偶针对频率阶数 q，两者独立。纯亮压缩真空的偶宇称结论依赖 α=0 时态在 a→−a 下不变；位移压缩态 α≠0，所以不能直接搬来解释 H2 的磁序奇分量。",
+    "media": [
+      "ppt/media/image45.png",
+      "ppt/media/svgimage45.svg"
+    ]
+  },
+  {
+    "page": 27,
+    "text": "附录 A5 · 频率投影\n频率投影与窗口敏感性\n主窗定义观测量；前窗与后窗只用于敏感性检查\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n27\n窗口\n区间\n用途 / 状态\n前窗\n[1,3]T₀\n含开启段，敏感性检查\n主窗\n[2,4]T₀\n全稿观测量定义；所展示结果均完整\n后窗\n[3,5]T₀\nθ=π QED 不完整（到 4.76T₀）\n正号 Fourier e\n+iqω₀t\n，全稿同一时间参考\n两周期窗分辨率 ≈0.5ω₀；采样密度 ≠ 频率分辨率\n泄漏模板拟合差 1.3–1.4%；等长窗相位 99°–107°；H2 峰位 q≈2.02–2.04\nQ6：窗口间差异 > 预测误差 ⇒ 预测只针对主窗观测量，不是稳定 HHG 证书\n投影偏振 ε 下两磁畴的相干源代理强度差：偶、奇分量的干涉项（解释用；本轮未计算远场强度）",
+    "notes": "附录 A5 说明频率投影的读法。正号 Fourier 与时间参考在全稿统一。两周期窗口的频率分辨率约 0.5ω₀，提高采样密度并不能提高分辨率。前窗、主窗与后窗的结果确实不同：等长窗的相位落在 99° 到 107° 之间，H2 峰位在 q≈2.02–2.04，泄漏模板拟合差约 1.3–1.4%。Q6 中窗口之间的差异大于预测误差，所以预测成功只针对主窗定义的观测量，不能当作稳定高次谐波的证书。最后给出偏振投影下两磁畴强度差的干涉式，作为将来实验读出的解释，本轮没有计算远场强度。",
+    "media": [
+      "ppt/media/image46.png",
+      "ppt/media/svgimage46.svg"
+    ]
+  },
+  {
+    "page": 28,
+    "text": "附录 A6 · 历史分支\n历史分支与本轮工作的关系\n只说明已积累的方法；旧结果不与当前量子输入计算混用\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n28\n分支\n结果 / 状态\n与本轮关系\n经典强场筛选\nA*=0.8；当前量子输入平均尺度约 0.0202（≈40×）\n不可同资源比较\n36 通道筛查\n无可认证的强度反差\n背景\nD1（2+8+2 协议）\n半周期关系达浮点精度；J\no\n 残差约 √2\n背景\n旧 G1 输出分支\nMaxwell 端口、W\nin/out\n、U/V、n/m、CCR、Γ12\n冻结；不作本轮前置\n旧 P1+δA、p‑h Gaussian / Bogoliubov\n早期近似方法\n历史备查\nGPU / 转置算法\n19.9×（158.85→7.99 s）；15.7×（159.67→10.18 s）\n旧输入列负载，工程备查\n本轮主线：零耦合初态 + 位移压缩输入 + 有限时间复电流；不以重启旧 G1 输出计算为前置",
+    "notes": "附录 A6 简要交代历史分支与本轮的关系，避免把旧结果与新计算混在一起。经典强场筛选使用的矢势幅值 A*=0.8，比当前量子输入的平均尺度约 0.0202 大约 40 倍，不能当作同资源比较。36 个通道没有可认证的强度反差；2+8+2 协议的半周期关系在浮点精度成立，但奇电流残差约 √2。旧 G1 输出分支，包括 Maxwell 端口、输入输出 Wigner、U/V、n/m、CCR 与 Γ12，目前冻结，不再作为本轮前置。GPU 与转置算法的加速倍数只对应旧输入列负载，仅作工程备查。",
+    "media": []
+  },
+  {
+    "page": 29,
+    "text": "附录 A7 · 后续线索\n材料迁移与 Q‑MATH 线索\n两条后续主线：真实双层 CrI₃，与输入态响应的数学结构\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n29\n材料主线（真实双层 CrI₃）\n模型\n现状\nfull112\nQE/Wannier+SBE 参考（84 占据 × 28 空带）\nM88\n多个普通 HHG 与磁性通道较接近 full112\nM52\n对部分界面磁性贡献有价值\nM64\n曾出现位置矩阵 / 零场电流 / 高阶谱异常\nnb1–104\n低阶有限带窗，部分谐波接近 full112\n尚缺磁性机制、active space 与材料量子耦合映射；M0 的结果不是 CrI₃ 的预测，暂不建议将 full112 全量量子化\nQ‑MATH（数学主线）\nR0/R1/R1.5：有限时间 H2 的精确输入态响应算符；正 P 输入对应 f(z) 的经典广义矩问题；具体 f(z) 与证书未算出\n16.2：弱场二阶核含密度矩阵项、一次电流顶点项与二阶接触项；协议不同，不跨协议移植数值\n16.14：纯 BSV 高阶异常矩的经典界，不自动意味 M0 输出有非经典优势\n16.15：R\nx\nH\nD,λ\nR\nx\n†\n=H\n−D,−λ\n → 第 21 页 SOC 负控（待审计）",
+    "notes": "附录 A7 给出两条后续线索。材料方面，full112 的 QE/Wannier 加 SBE 是真实双层 CrI₃ 的参考，M88 在多个普通与磁性通道接近它，M52 对部分界面磁性贡献有价值，M64 曾出现异常，低阶带窗 nb1–104 对部分谐波接近 full112；但材料量子耦合映射尚未建立，M0 结果不是 CrI₃ 的预测。数学方面，有限时间 H2 可写成输入密度矩阵与响应算符的迹，相干态期望 f(z) 是正 P 经典界问题的出发点，但具体界尚未算出；16.15 的对称关系正是第 21 页负控的来源。",
+    "media": [
+      "ppt/media/image47.png",
+      "ppt/media/svgimage47.svg"
+    ]
+  },
+  {
+    "page": 30,
+    "text": "附录 A8 · 文献与数据\n参考文献与数据索引\n线 Q｜压缩光相位 × 反铁磁序敏感复响应\n30\n1. Sun, Z. et al. Giant nonreciprocal second-harmonic generation from antiferromagnetic bilayer CrI₃. Nature 572, 497–501 (2019). doi:10.1038/s41586-019-1445-3\n2. Gorlach, A. et al. High-harmonic generation driven by quantum light. Nat. Phys. 19, 1689–1696 (2023). doi:10.1038/s41567-023-02127-y\n3. Rasputnyi, A. et al. High-harmonic generation by a bright squeezed vacuum. Nat. Phys. 20, 1960–1965 (2024). doi:10.1038/s41567-024-02659-x\n4. de-la-Peña, S. et al. Quantum Electrodynamics in High-Harmonic Generation: Multitrajectory Ehrenfest and Exact Quantum Analysis. J. Chem. Theory Comput. 21, 283–290 (2025). doi:10.1021/acs.jctc.4c01206\n5. Li et al. Quantum-optical signatures of solid-state high-harmonic generation driven by squeezed coherent states. Phys. Rev. A 112, 033507 (2025). doi:10.1103/vmk1-qjpj\n6. Prabhu and Dixit. Sensing quantum fluctuations via forbidden harmonics in quantum materials. Phys. Rev. B 114, L140301 (2026). doi:10.1103/v886-ypf7\n7. Stammer et al. Symmetry breaking by quantum light in solid-state high-harmonic generation. arXiv:2605.28236 (2026, preprint)\n8. Kane, C. L. & Mele, E. J. Quantum Spin Hall Effect in Graphene. Phys. Rev. Lett. 95, 226801 (2005). doi:10.1103/PhysRevLett.95.226801\n9. Walls, D. F. & Milburn, G. J. Quantum Optics, 2nd ed. Springer (2008).\n本稿数值来源\n综合报告：量子光磁性HHG_研究现状总结_Q6_20261024.md\n线Q_量子光多周期磁序响应_*_20261120.md：Q1a、Q1a_GH5、Q1a_QED_theta_pi、Q1a_GH5_thermal、Q2_GH5_covsign、Q3_QED_covsign、Q4_GH5_eta、Q5_GH5_fourangle、Q6_GH5_pi4\nM0：线Q_M0_v1实施spec与静态报告_20260912.md\n数据图按报告数值重绘；原始 SVG 位于 results/q_line/，本稿未直接嵌入\n本工作：h8 模型、初态与协议、B/A/C 拟合、弱因子化、Q6 预测",
+    "notes": "最后一页是参考文献与数据索引。正文各页已就近标注作者、期刊与年份，完整题名、DOI 与链接列在这里和对应页备注中。每篇文献只支持它自己的结论：Sun 等支持磁性 SHG 的动机；Li 等与 Prabhu–Dixit 是最接近的先例；de-la-Peña 等提供 QED 与 MTEF 的比较思路；Stammer 等是预印本；Kane–Mele 提供 SOC 结构背景；Walls–Milburn 提供压缩态恒等式。右侧列出本稿数值的出处，即综合报告与 Q1a 至 Q6 的本地记录。模型、协议、B/A/C 拟合、弱因子化与 Q6 预测均为本工作。\n【来源】\n· Sun, Z. et al. Giant nonreciprocal second-harmonic generation from antiferromagnetic bilayer CrI₃. Nature 572, 497–501 (2019). DOI: 10.1038/s41586-019-1445-3. https://www.nature.com/articles/s41586-019-1445-3\n  本页借鉴：双层 CrI₃ 的层状反铁磁序产生巨大非互易二次谐波，说明磁序奇信号可由 SHG 读出；只作磁性 SHG 动机，不证明本工作的压缩角规律。\n· Gorlach, A. et al. High-harmonic generation driven by quantum light. Nature Physics 19, 1689–1696 (2023). DOI: 10.1038/s41567-023-02127-y. https://www.nature.com/articles/s41567-023-02127-y\n  本页借鉴：高次谐波谱依赖驱动光的量子统计，而不只是平均场强。\n· Rasputnyi, A. et al. High-harmonic generation by a bright squeezed vacuum. Nature Physics 20, 1960–1965 (2024). DOI: 10.1038/s41567-024-02659-x. https://www.nature.com/articles/s41567-024-02659-x\n  本页借鉴：亮压缩真空驱动 HHG 的实验背景；其宏观 BSV 条件不同于本稿低占据的位移压缩态。\n· Li et al. Quantum-optical signatures of solid-state high-harmonic generation driven by squeezed coherent states. Physical Review A 112, 033507 (2025). DOI: 10.1103/vmk1-qjpj. https://journals.aps.org/pra/abstract/10.1103/vmk1-qjpj\n  本页借鉴：压缩相干态可改变固体 HHG 的量子光学特征——最接近先例之一，“压缩相干态调控固体 HHG”并非本工作独有命题。\n· Prabhu and Dixit. Sensing quantum fluctuations via forbidden harmonics in quantum materials. Physical Review B 114, L140301 (2026). DOI: 10.1103/v886-ypf7. https://journals.aps.org/prb/abstract/10.1103/v886-ypf7\n  本页借鉴：石墨烯中双圆 ω/2ω 驱动下，禁戒谐波与相位相关偏振可感知量子涨落；说明“用谐波感知涨落”已有研究。\n· de-la-Peña, S. et al. Quantum Electrodynamics in High-Harmonic Generation: Multitrajectory Ehrenfest and Exact Quantum Analysis. J. Chem. Theory Comput. 21, 283–290 (2025). DOI: 10.1021/acs.jctc.4c01206. https://pubs.acs.org/doi/10.1021/acs.jctc.4c01206 （公开全文 https://pmc.ncbi.nlm.nih.gov/articles/PMC11736686/）\n  本页借鉴：多轨迹 Ehrenfest 与精确 QED 的 HHG 对照思路；其反馈处理与本地实现不同，本稿不是照搬。\n· Stammer et al. Symmetry breaking by quantum light in solid-state high-harmonic generation. arXiv:2605.28236 (2026，预印本). https://arxiv.org/abs/2605.28236\n  本页借鉴：量子光可导致固体 HHG 的对称性破缺；作为相关预印本引用，未填期刊信息。\n· Kane, C. L. and Mele, E. J. Quantum Spin Hall Effect in Graphene. Physical Review Letters 95, 226801 (2005). DOI: 10.1103/PhysRevLett.95.226801. https://doi.org/10.1103/PhysRevLett.95.226801\n  本页借鉴：蜂窝晶格内禀次近邻 SOC 的结构形式 λ_SO g(k) σz sz；不表示该文直接给出本稿 M0 模型。\n· Walls, D. F. and Milburn, G. J. Quantum Optics, 2nd ed. Springer (2008). DOI: 10.1007/978-3-540-28574-8. https://doi.org/10.1007/978-3-540-28574-8\n  本页借鉴：位移、压缩算符与二阶矩的标准恒等式；不用于证明本稿的 B+ΛM 机制。",
+    "media": []
+  }
+]

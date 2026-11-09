@@ -1,0 +1,13 @@
+&INPUTPP
+    outdir = '/public/home/wangjs/project/CrI3_TB/window144_hilbert/ref112_large/temp_nscf576/'
+    prefix = 'CrI3_scf_soc'
+    seedname = 'CrI3_232id'
+    spin_component = 'none'
+    wan_mode = 'standalone'
+    write_mmn = .false.
+    write_amn = .true.
+    write_eig = .false.
+    write_unk = .false.
+    write_spn = .false.
+    regular_mesh = .true.
+/

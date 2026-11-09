@@ -1,0 +1,66 @@
+&crystal
+  a1_ang = 1.2500000000, -2.1650635095, 0.0000000000
+  a2_ang = 1.2500000000,  2.1650635095, 0.0000000000
+  a3_ang = 0.0000000000,  0.0000000000, 20.0000000000
+  E_fermi_eV = 0.0
+  SOC = 0
+  wannier_tb_file = "C:/Users/26507/Documents/New_SBEs/Quantum-light/examples/hBN_model_tb/hBN_model_tb.dat"
+  wannier_hr_file = ""
+  wannier_r_file  = ""
+/
+
+&kgrid
+  nkx = 20
+  nky = 20
+/
+
+&bands
+  nv_orig = 1
+  nb_start = 1
+  nb_end = 2
+/
+
+&laser
+  wvl_nm = 1600.0
+  intensity_Wcm2 = 3.5e12
+  theta_deg = 0.0
+  phi_cep_deg = 90.0
+  ncyc = 6.0
+  env_type = 2
+  ellipticity = 0.0
+  delta_phase_deg = 90.0
+/
+
+&timestep
+  dt = 0.50
+  n_dt_deph = 5
+/
+
+&dephasing
+  T2_cycles = -1.0
+  T2_fs = 5.0
+/
+
+&bsv
+  bsv_enabled = .true.
+  bsv_mean_intensity = 1.75e12
+  bsv_seed = 7
+  bsv_state_type = 'squeezed_vacuum'
+  bsv_squeeze_r = 0.8
+  bsv_squeeze_theta_deg = 0.0
+  bsv_sampling_mode = 'gauss_hermite'
+  bsv_gh_order = 3
+  bsv_nodes_file = 'nodes_sv_r0p8_th0.dat'
+  bsv_write_nodes = .true.
+  bsv_save_ics_cs = .true.
+  bsv_save_complex = .true.
+  bsv_harmonics = '1,3,5'
+/
+
+&method
+  gauge_method = 'lg_cov'
+/
+
+&output
+  save_geometry = .false.
+/

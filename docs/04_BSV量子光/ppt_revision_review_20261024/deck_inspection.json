@@ -1,0 +1,445 @@
+[
+  {
+    "page": 1,
+    "xml": "ppt/slides/slide1.xml",
+    "text": "研究设想与阶段进展\n磁序如何进入\n高次谐波输出的量子关联？\n双层 PT-AFM 机制模型｜从强场电子涨落到光子协方差\n研究问题已定义 · Γ12 双磁畴已运行 · 量子输出资格仍待验证\n上层\n下层\n+N\n资料更新至 2026.10.08",
+    "notes": "汇报开场：这不是已经得到量子优势或磁畴纠缠的课题，而是一条由已有磁性 SHG 与量子光学 HHG 研究启发的理论研究线。我们建立了计算方法，完成 Γ12 双磁畴传播，但完整输出正则性仍未通过。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 2,
+    "xml": "ppt/slides/slide2.xml",
+    "text": "01 研究背景\n量子光驱动 HHG：从改变谐波谱，到追问输出光子态\n量子态已成为新的驱动自由度；但“谐波增强”与“量子优势”不是同一命题。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n02\nGorlach et al., Nat. Phys. 19, 1689 (2023)  ·  Rasputnyi et al., Nat. Phys. 20, 1960 (2024)  ·  Stammer et al., arXiv:2605.28236 (2026)\n2023 · 理论\n量子态能够改变 HHG 光谱\nGorlach 等预测：热态、压缩态驱动可使截止频率高于相同平均强度的相干态。\n关注：cutoff 与 plateau\n2024 · 固体实验\n明亮压缩真空真正驱动固体\nRasputnyi 等使用单时空模式 BSV，实现固体非微扰 HHG，观察到显著谐波增强。\n关注：产额与输入光统计\n2026 · 选择定则\n量子涨落还能影响对称性\nStammer 等预印本讨论石墨烯 / MoS₂ 中，量子光涨落对动力学选择定则的影响。\n关注：禁戒谐波与对称性\n已知：输入量子统计可以重塑 HHG 响应  ｜  待问：输出光子是否出现超出经典随机驱动的关联？",
+    "notes": "汇报思路：先讲量子光驱动 HHG 是已有的前沿领域，不要一上来就讨论 CJJ。\nGorlach et al., High-harmonic generation driven by quantum light, Nat Phys 19, 1689–1696 (2023), DOI:10.1038/s41567-023-02127-y。研究 cutoff 对输入量子态的依赖。\nRasputnyi et al., High-harmonic generation by a bright squeezed vacuum, Nat Phys 20, 1960–1965 (2024), DOI:10.1038/s41567-024-02659-x。实验测到与同平均强度经典泵相比的谐波增强。\nStammer et al., Symmetry breaking by quantum light in solid-state high-harmonic generation, arXiv:2605.28236 (2026), 仍为预印本。\n注意：这些研究并不自动证明输出存在量子优势，也不能断言经典模型无法复现所有现象。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 3,
+    "xml": "ppt/slides/slide3.xml",
+    "text": "01 理论边界\nHusimi Q 平均为何有效，又在哪里止步？\n它是有物理依据的高效近似；问题不在 Q 函数，而在“只平均经典响应”能保留哪些量。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n03\nGorlach et al., Nat. Phys. 19 (2023)  ·  González-Monge & Feist, arXiv:2512.06602 (2025)  ·  Liu et al., PRR 8, 023326 (2026)\n分布描述与经典响应抽样\nQ(α) = ⟨α | ρ̂ | α⟩ / π\n经典场样本  α  →  HHG 响应  Scl(ω; α)\nS̄Q(ω) ≈ ∫ d²α Q(α) Scl(ω; α)\n这里是谱平均的近似示意，不是任意输出态的严格恒等式。\n能够研究\n平均谱、cutoff、强度分布；特定近似下的对称性 / 选择定则变化。\n不能仅凭谱平均判定\n输出光子的完整密度矩阵、压缩、纠缠，或“不能由经典随机场复现”的量子优势。\n关键区别：Q(α) ≥ 0 并不代表量子态拥有非负 Glauber–Sudarshan P 分布。",
+    "notes": "这一页先纠正一个常见误区。Husimi Q 函数是完整量子态的一种表象，而用 Q 权重去平均经典 HHG 谱是一种特定半经典处理，两者不能画等号。图片公式带≈，仅作代表性近似结构示意；更严格的 Q 表象处理可涉及非对角核和不同算符排序。\nGonzález-Monge & Feist, High-harmonic generation driven by temporal-mode quantum states of light, arXiv:2512.06602 (2025) 指出典型自由空间大光子数 HHG 的 Q 半经典方法可能非常精确，不能脱离范围宣布“无量子优势定理”。\nLiu et al., Theory of high-harmonic generation with quantum light, Phys. Rev. Research 8, 023326 (2026), DOI:10.1103/y3gr-tsns，比较了 Husimi 型方法与完整量子理论，特别强调两时偶极关联及光子统计。\n此外 Stammer et al. (2026) 确已研究量子光涨落下固体 HHG 选择定则，不能说分布理论完全不能做选择定则。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 4,
+    "xml": "ppt/slides/slide4.xml",
+    "text": "01 理论切入\n从平均电流到光子协方差：我们真正要增加什么？\n谱只描述相干辐射的一部分；完整输出光态还需要研究电子涨落怎样传递到传播光子。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n04\nPizzi et al., Nat. Phys. 19, 551 (2023)  ·  Lange & Madsen, PRA 111, 013113 (2025)  ·  Liu et al., PRR 8, 023326 (2026)\n电子侧：强场响应与量子涨落\nJₐ(t) = ⟨Îₐ(t)⟩\n决定通常的相干辐射谱与相位\nCₐᵦ^>(t,t′) = ⟨δÎₐ(t) δÎᵦ(t′)⟩\n描述两时、两偏振的电子电流涨落\n光子侧：归一化出射模式的二阶矩\nβ\nμ\n = ⟨b̂\nμ\n⟩\nn\nμν\n = ⟨δb̂\nμ\n†\n δb̂\nν\n⟩\nm\nμν\n = ⟨δb̂\nμ\n δb̂\nν\n⟩\nβ：平均场   n：正常关联   m：相位敏感关联\n→\n电子 CJJ ≠ 最终光子 n、m；中间必须经过联合电子—光场演化与正则输入—输出匹配。",
+    "notes": "请先回答为什么不能只用常规电子电流谱：平均电流 J(t) 给相干幅度；二时关联 CJJ 描述量子电流涨落。两个具有相同 J(t) 的电子系统可以具有不同 CJJ。\n从 CJJ 不能直接推出最后传播光的 n,m。需要 H_Q、电子-光子反馈、自由场 Maxwell 接线及正则输入输出，才能确保光子模式是物理的。\nPizzi et al., Light emission from strongly driven many-body systems, Nat Phys 19, 551–561 (2023), DOI:10.1038/s41567-022-01910-7。\nLange & Madsen, Hierarchy of approximations for describing quantum light from high-harmonic generation, Phys Rev A 111, 013113 (2025), DOI:10.1103/PhysRevA.111.013113。强调可检验的近似层级。\nLiu et al., Theory of high-harmonic generation with quantum light, Phys Rev Research 8, 023326 (2026), DOI:10.1103/y3gr-tsns。\n物理边界：m 非零可以是经典随机共变，不自动等于非经典性。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 5,
+    "xml": "ppt/slides/slide5.xml",
+    "text": "01 科学定位\n已有理论工具不断发展：我们的切入点在哪里？\n不是“重新发明量子光学”，而是在磁性固体强场问题中建立并验证可计算的量子关联机制。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n05\nPizzi et al., Nat. Phys. 19 (2023) · Lange et al., PRL 135, 043603 (2025) · Liu et al., PRR 8 (2026) · Sun et al., Nature 572, 497 (2019)\n输出量子光学\nPizzi 2023 · Lange 2025\n电流涨落与材料激发可影响输出光子的非经典统计\n量子驱动 HHG\nGorlach 2023 · Liu 2026\n驱动态统计和完整光子关联是不同但相关的研究对象\n磁性二阶谐波\nSun et al. 2019\n双层 AFM 的 Néel 磁序能够显著影响二阶非线性辐射\n待检验假说：\nm₁₂(+N)  ≠  m₁₂(−N)  ?\n建立适用于磁性强场固体的、可验证的量子输出方法，并找出磁序影响非经典输出光的具体机制。\n模式 1/2：同侧 H2∥ 与 H2⊥；固定泵浦、CEP、探测及相位参考。",
+    "notes": "这一页用作进入材料动机的过渡。三条文献链：\n1. 输出 HHG 量子光学：Pizzi et al. Nat Phys 2023；Lange et al., Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation from a Mott Insulator, PRL 135, 043603 (2025), DOI 10.1103/wyk5-k8tk。后者表明材料电子激发可选择性地增强压缩。\n2. 量子光驱动：Gorlach et al. Nat Phys 2023、Liu et al. PRR 2026，量子输入强度谱和输出统计并不等同。\n3. PT-AFM 磁光：Sun et al., Giant nonreciprocal second-harmonic generation from antiferromagnetic bilayer CrI3, Nature 572, 497–501 (2019), DOI 10.1038/s41586-019-1445-3。\n提出方案 C：固定实验条件仅翻转 N，测量 H2 平行/垂直模式交叉异常协方差的磁畴变化；不先声称该信号必为非经典，也不把经典驱动的现阶段与未来强 BSV 驱动混为一谈。\n当前阶段是经典 P1 强泵浦 + 量子输出涨落，Γ12 canonical 输出资格尚未通过；未来 BSV 作为主要驱动需重新检验 Gaussian 小涨落近似。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 6,
+    "xml": "ppt/slides/slide6.xml",
+    "text": "02 PT-AFM 材料动机\n双层反铁磁提供可翻转的 Néel 磁序参照\nP、T 分别交换磁畴；联合 PT 保留同一磁畴\n线 Q｜双层 PT-AFM 的量子谐波输出\n05\n上层\n下层\n+N\n上层\n下层\n−N\nP : N → −N     T : N → −N     PT : N → N\n当前 N 是两个经典磁畴标签，不包含“磁畴自身的量子叠加”。\n实验动机：Sun et al., Nature 572, 497 (2019)；M0 的 P/T/PT 表示由本项目模型审计。",
+    "notes": "空间反演交换上下层，磁矩是轴矢量而非极矢量，因此上下两层磁结构交换导致 N 翻转。时间反演直接翻转磁矩，也使 N 翻转。PT 联合保留该畴。需要强调反铁磁总磁化近零不代表光学非线性不随磁序变。示意图为磁序，非真实层堆垛原子。",
+    "media": [
+      "ppt/media/image2.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 1
+  },
+  {
+    "page": 7,
+    "xml": "ppt/slides/slide7.xml",
+    "text": "02 PT-AFM 材料动机\n为什么优先考虑偶次谐波？\n磁序可以解除电偶极二阶响应的反演禁戒，但量子关联仍是待检验假说\n线 Q｜双层 PT-AFM 的量子谐波输出\n06\n中心对称体电偶极极限\n反演使 P^(2) 翻号，但两个电场相乘的因子不翻号；因此理想体电偶极 χ^(2) 必须为零。\nPT-AFM 的磁性 SHG\n单畴可破坏反演；Sun 等在双层 AFM CrI₃ 中观察到显著磁性二次响应。\n弱场 χ(2) 的符号规律是物理线索，不等于强八周期 HHG 输出 m 必然翻号。",
+    "notes": "说明这一页第二个等式需要前提：属于在反演配对磁畴的电偶极弱场二阶系数的关系。模型在强场非微扰驱动下有 J_N[A] = -J_-N[-A]，不能由此直接对同场+N/-N 得到 m 的精确翻号。这里的磁性 SHG 不是唯一可能的光学效应，磁偶极和四极等也可能存在。",
+    "media": [
+      "ppt/media/image6.svg",
+      "ppt/media/image5.svg",
+      "ppt/media/image4.svg",
+      "ppt/media/image3.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 8,
+    "xml": "ppt/slides/slide8.xml",
+    "text": "02 材料模型｜过渡论证\n新增过渡页 1/2\n为什么从 CrI₃的 112 带，转向八带机制模型？\n不是把真实材料“压缩成八条带”，而是将材料定量问题与量子输出机制分层研究。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n6\n已有工作  ·  材料参照\n112\n条自旋 Wannier 带\n84 占据 × 28 空带 = 2352 对 / k\nCr-d + I-p；已建立普通 / 磁性 HHG 参考。\nM88 接近主要低阶结果；M52 仅部分有效，截带必须验证。\n→\n本阶段  ·  量子光学机制\n2 \n层 × \n2 \n子晶格 × \n2 \n自旋\n4 占据 × 4 空带 = 16 对 / k\n进一步连接电流涨落、量子光场与输出 U / V。\n真实 CrI₃ 提供材料锚点    →    八带 M0 检验磁性量子机制    →    返回 Wannier 校验适用范围\n文献方法论：Lange & Madsen, PRA 111, 013113 (2025)；Soriano et al., npj Comput. Mater. 7, 162 (2021)。",
+    "notes": "本页建议讲 80–110 秒。\n承接上一次导师汇报：前期双层 HT-AFM CrI3 的 QE/Wannier + SOC 已用 Cr-d + I-p 获得 112 自旋轨道（在当前冻结的 full112 分组中，84 个占据、28 个未占据）。已有经典 SBE 显示 full112 为参照，M88（Cr-d 与 I-px/py）在 H1–H9 普通与部分磁性通道靠近参考，M52（界面 I-pz）仅部分接近；不能随便删掉配体轨道，也不能未经验证只选几条靠费米面的带。\n现在计算目标变化了：平均电流 J 只需单粒子演化，但输出 n,m 还要保留粒子—空穴电流涨落、联合 Gaussian 演化、连续光子输入输出及其正则性检验。full112 若保留 84v/28c，则每 k 潜在的 p-h 组合 84×28=2352；M0 半填充 4v/4c 为 16，约 147 倍的坐标规模差。此数是局域 p-h 组合数比较，不是成本严格缩放或晶体约化精度证明。\n明确：112 带真实材料线不停止，继续承担材料解释和可靠性校准；8 带机制线用于在可处理成本下回答 PT 约束如何影响光子相关性、理论近似是否可信。\n与文献区别：Lange & Madsen, PRA 111, 013113 (2025), DOI 10.1103/PhysRevA.111.013113，用可处理的 Fermi-Hubbard 体系对量子 HHG 输出近似形成逐级检验；这支持“先机制模型再精细化”的方法，不是 M0 Hamiltonian 的来源。Pizzi et al., Nat Phys 19, 551–561 (2023), DOI 10.1038/s41567-022-01910-7，说明多体发射体关联可使输出光呈现非经典性质。Soriano et al., npj Comput. Mater. 7, 162 (2021), DOI 10.1038/s41524-021-00631-4，比较 d-only 与 d+p CrI3 模型，提示 I-p 的真实物理贡献重要，不能说本 M0 已严格消去 I-p。\n后续量子光驱动分两层：当前是经典 P1 主导电子轨迹，输出光量子化；未来弱量子涨落输入可扩展现有 Gaussian；若 BSV 本身承担强驱动，则不一定可以仅替换输入协方差，需重新检验电子的非微扰量子驱动。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 9,
+    "xml": "ppt/slides/slide9.xml",
+    "text": "Zhang L, Liang C, Gong C. Electrically Activating and Switching the Magneto-Optic Faraday Effect in 2D Antiferromagnets[J]. Crystals, 2026, 16(8): 497.\n他们通过八带紧束缚模型分析双层反铁磁中的对称性与磁光响应，再以双层 \nVSe₂\n的第一性原理计算检验材料层面的预测。",
+    "notes": "",
+    "media": [
+      "ppt/media/image7.png"
+    ],
+    "pics": 1
+  },
+  {
+    "page": 10,
+    "xml": "ppt/slides/slide10.xml",
+    "text": "02 材料模型｜过渡论证\n新增过渡页 2/2\n为什么选“层 × 子晶格 × 自旋”的八带 M0？\n保留磁序对称性与有效电子跃迁；配体、真实堆垛和关联激发的影响留给材料线检验。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n7\n8 个有效自旋轨道基态\n2 层 × 2 子晶格 × 2 自旋\nt\nb\nA\nB\nA\nB\n↑  磁序\n↓  磁序\n层内 t    ·    层间 u / v    ·    反向交换场 ±Δ\n保留的结构\n对应可研究的物理问题\n两层 + 反向交换场  ±NΔs_z\n磁畴翻转与 P / T / PT 约束\n蜂窝 A / B + 层内跳跃  t f(k)\n动量依赖电流和带间跃迁\n自旋 + Kane–Mele 型 SOC\n自旋相关磁光效应的最小表示\n层间 T₀(k)：u / v 跃迁\n层间混成与 Bloch 相位\n相关先例：Song 2020（SOC / 堆垛敏感）；Zhang 2026（不同磁光问题中的八带建模）。\n边界：无显式 I-p、未完成 CrI₃ 参数拟合与激子计算；先验证 β / n / m，再逐步返回材料与量子泵浦。\nSun et al., Nature 572, 497 (2019)  ·  Song et al., PRB 102, 045411 (2020)  ·  Soriano et al., npj Comput. Mater. 7, 162 (2021)",
+    "notes": "本页建议讲 100–130 秒。\n从结构说起：当前 M0 不是从 full112 严格下折叠出来的 CrI3 八带。它以蜂窝几何抽象每一层有 A、B 两个等效 Cr 基元，各保留两个自旋，双层一共 8 个 spin-orbitals；数学上可写 H_(8,N)(k)=[ h_t,N  T0⊗s0 ; T0†⊗s0  h_b,N ]。层内 h_l,N = t_h(Re f σ_x − Im f σ_y)s0 + λ_SO g σ_z s_z + N η_l Δ s_z，η_t=+1, η_b=−1；T0 为自旋守恒层间 hopping，含 AA/BB 与 AB/BA 跃迁的 Bloch 相位。选择 Kane–Mele 型 SOC 是一组对称性允许、数学简单的有效 SOC 项，不代表已推导出 CrI3 原子 SOC 的定量投影。磁序 N 是外加静态交换场标签，不是从真实 Cr-I-Cr 超交换自洽求解得到的。\n真正保留层-子晶格-自旋的目的：让 PT 对称、磁畴翻转、层间混成和 SOC 能进入电流算符与非微扰驱动的 p-h 跃迁。八带单胞沿用蜂窝几何，但真实 HT/monoclinic 双层 CrI3 的晶体空间群和层间偏移并未全部精确约束；数值中的 mirror/C2 也只近似。该 M0 不含显式 I-p 轨道，因此不能独立预测交换常数、光吸收共振、真实 SHG 的绝对量级、配体相关激子等。\n研究支持：Sun et al., Nature 572, 497–501 (2019), DOI 10.1038/s41586-019-1445-3 实验说明 AFM 磁序可引起显著非互易 SHG、偏振测量还识别了堆垛；Song et al., PRB 102, 045411 (2020), DOI 10.1103/PhysRevB.102.045411 从第一性原理发现 PT-AFM CrI3 的 SHG 对 SOC 和层间结构敏感。Soriano et al., npj Comput Mater 7, 162 (2021), DOI 10.1038/s41524-021-00631-4 的 d-only 与 d+p 对比说明 I-p 是磁交换重要贡献，不能用“省去 I 没影响”来解释。\n方法论结构类比（不是直接来源）：Zhang, Liang & Gong, Crystals 16, 497 (2026), DOI 10.3390/cryst16080497 使用“层×子晶格×自旋”的 8×8 紧束缚研究双层 AFM 的 Faraday；但其具体 Hamiltonian、外场破缺条件和研究的光学响应不同，绝不能误写为我们直接照搬此文或其验证了 M0。Kane & Mele, PRL 95, 226801 (2005), DOI 10.1103/PhysRevLett.95.226801 提供 SOC 有效项的标准结构先例。\n与当前科学目标连接：先做经典强 P1 下的固定实验装置 ±N 比较，并经正则性 / 输入光连续谱 / Pauli / BZ 审计后研究 H2 双偏振 β,n,m；即使 m(+N)≠m(−N)，并不自动证明压缩、纠缠或量子优势，还需要经典随机基准和非经典判据。以后可以加入弱压缩光涨落；若强 BSV 自己主导 HHG，原来围绕单条经典 P1 轨迹展开的 Gaussian 近似不一定有效，需另行建模。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 11,
+    "xml": "ppt/slides/slide11.xml",
+    "text": "02  物质模型\n八带 M0 保留层、子晶格与自旋自由度\n并不是从真实 \nCrI₃\n的 \nDFT/Wannier Hamiltonian \n严格约化得到的八带模型。\n线 Q  /  双层 PT-AFM 的量子谐波输出\n05\n2 层 × 2 子晶格 × 2 自旋\n每个 A / B 基元都保留 ↑、↓\nt：层内跃迁\nu：层间 AA / BB\nv：层间 AB / BA\n基元连线示意；不表示实际堆垛和键长\nh\nℓ,N\n = t\nh\nRe\n(\n f σ\nx\n − Im f σ\ny\n)s\n0\n + λ\nSO\ng σ\nz\ns\nz\n + Nη\nℓ\nΔs\nz\n第二项是 \nKane–Mele \n型内禀自旋轨道耦合\n:Kane & Mele, Physical Review Letters 95, 226801 (2005)",
+    "notes": "先解释三种二能级结构，再介绍Hamiltonian，避免直接塞8×8矩阵。层内项包括蜂窝跃迁、SOC与相反交换场。非对角层间块来自冻结几何，Bloch相位不能随意去掉。详式在附录A。当前忽略显式I轨道并采用有效系数，没有完成严格材料Wannier下折叠，因此不能宣称已经保真描述CrI3全部磁性交换与能带。当前M0参数来自机制设定。\n图像讲解与引用边界：\n图仅显示四个层×子晶格基元，每个基元仍有两个自旋自由度，共八带。为了讲清u/v，图中仅画AA和AB代表连接，实际块还含BB和BA。实空间蜂窝结构因子仍为附录A和实施spec的f(k)、g(k)，本图不是把蜂窝晶格改为两点分子。η上=+1、η下=−1。基准参数t_h=1eV、λSO=0.1、Δ=0.8、u=v=0.1见原备注。\n可见引用：模型定义：本项目 M0 实施 spec（2026-09-12）。材料动机：Sun et al., Nature (2019).\nhttps://doi.org/10.1038/s41586-019-1445-3\n工作记录：\nC:/Users/26507/Documents/New_SBEs/Quantum-light/docs/04_BSV量子光/线Q_M0_v1实施spec与静态报告_20260912.md\nC:/Users/26507/Documents/New_SBEs/Quantum-light/docs/04_BSV量子光/线Q_M0对称性只读审计与文献边界_20260926.md\n文献：",
+    "media": [
+      "ppt/media/image15.png",
+      "ppt/media/image14.png",
+      "ppt/media/image13.png",
+      "ppt/media/image12.png",
+      "ppt/media/image11.png",
+      "ppt/media/image10.png",
+      "ppt/media/image9.png",
+      "ppt/media/image8.png"
+    ],
+    "pics": 8
+  },
+  {
+    "page": 12,
+    "xml": "ppt/slides/slide12.xml",
+    "text": "02 科学比较\n同一实验装置，只反转 Néel 磁畴\n反演操作本身还会改变泵浦，不能把它等同于同场翻畴\n线 Q｜双层 PT-AFM 的量子谐波输出\n09\n上层\n下层\n+N\n上层\n下层\n−N\n激光频率、CEP、偏振、收光侧、时间零点与相位参考在两个磁畴中严格相同。",
+    "notes": "方案C已由用户确认：固定实验室坐标系只翻转N。P联系的是 (N,A) 与 (-N,-A)，不是同一个A下两磁畴必然相等或翻号。T 是反幺正还涉及时间倒流和输入输出条件，不能简单用复共轭替代。M0的镜面/C2仅近似，H2双偏振可能的奇偶结构是候选，不是定理。",
+    "media": [
+      "ppt/media/image18.svg",
+      "ppt/media/image17.svg",
+      "ppt/media/image16.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 3
+  },
+  {
+    "page": 13,
+    "xml": "ppt/slides/slide13.xml",
+    "text": "02 观测量\n第一批目标：H2 同侧、同频带、两个正交面内偏振\n只定义希望测什么，并不限制电子 Hamiltonian 的演化\n线 Q｜双层 PT-AFM 的量子谐波输出\n10\n对照：每模强度 |β\nμ\n|²+n\nμμ\n 及平均复振幅 β；m 翻号不自动等于纠缠。\n∥ 沿晶轴 a₂，⊥ 在膜内垂直 a₂\n强度对照：I\nμ\n = |β\nμ\n|² + n\nμμ",
+    "notes": " ∥ 沿 a₂ 方向，⊥ 为面内垂直 a₂，而不是z方向。两者都在沿 +z 法向传播光的横向偏振空间。选 H2 参考磁性 SHG 已有观察，但本模型 H2 的磁畴关联尚未经可靠输出验证。探测模式还需要 finite-band normalized packet, 此页只确定候选。",
+    "media": [
+      "ppt/media/image22.png",
+      "ppt/media/image21.svg",
+      "ppt/media/image20.svg",
+      "ppt/media/image19.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 14,
+    "xml": "ppt/slides/slide14.xml",
+    "text": "03 理论主线\n从电子 Hamiltonian 到 H2 光子协方差：我们需要五步\n每一步产生下一步必需的数学对象\n线 Q｜双层 PT-AFM 的量子谐波输出\n11\n1\n强 P1 驱动\nH₈,N → 𝒰ₖ(t)\n2\n电子涨落\n⟨I⟩ → CJJ\n3\n联合量子动力学\nCJJ → H_Q\n4\n自由光场与探测\na_out(ω) → bμ\n5\n关联与可靠性\nU,V → β,n,m\n下面逐步回答电子如何产生可测量的光子关联。",
+    "notes": "这一页专门给导师建立全局定位，避免突然进入复杂的符号。强P1的单粒子演化和平均电流先做；Slater初态的CJJ用Wick；准玻色联合Hamiltonian；用连续光场 Maxwell boundary 和 detector kernel 对应实验可测模式；最终 U,V 收缩得到n,m并检验正则性。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 15,
+    "xml": "ppt/slides/slide15.xml",
+    "text": "03 理论链 1/10\n强经典 P1：非微扰传播八带电子态\n电子处于半填充模型基态，强驱动通过 Peierls 替换进入\n线 Q｜双层 PT-AFM 的量子谐波输出\n12\n当前 R0 / P1 工作点\ntₕ = 1 eV\nλ\nSO\n = 0.1 tₕ；Δ = 0.8 tₕ\nu = v = 0.1 tₕ\nħω₀ = 0.05 tₕ\nA* = 0.8，沿 a₂，CEP = 0\n8 周期，sin² 包络\n电子背景用中点幺正传播；无现象学 T₁/T₂。𝒰ₖ 是单粒子传播子。\nPeierls \n替换\n，\n把激光耦合引入电子系统\n时间演化算符，初态在强激光作用到时间\nt\n时，这个态会变成什么？\nP\n(0)\nk\n是激光到来之前的占据态投影算符\nω\nk\n是 \nBZ \n求积权重，满足求和为\n1\n。\nN\ncell\n是照射区域包含的物理原胞数。\nI\na\n是面电流源。",
+    "notes": "Peierls 规范/最小耦合：κ=k+eA/ħ，电子动力学对经典P1非微扰。每k初始四条占据态；P_k^(0)是占据态投影，不是空间反演P。单粒子 j_a=−(e/ħ)∂_{k_a}H(κ)。该页给出的参数来自项目冻结 R0/P1，不是拟合CrI3。8周期在ħω0=0.05eV下总持续约661.7fs。数值电子传播采用时间中点指数且无T2。",
+    "media": [
+      "ppt/media/image26.svg",
+      "ppt/media/image25.svg",
+      "ppt/media/image24.svg",
+      "ppt/media/image23.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 16,
+    "xml": "ppt/slides/slide16.xml",
+    "text": "03 理论链 2/10\n平均电流之外，为什么必须求两时电流关联？\n实验探测的是整块样品：同一宏观电流的涨落由各 k 通道共同贡献\n线 Q｜双层 PT-AFM 的量子谐波输出\n13\nSlater 初态用 Wick 定理化简。\nQ₀=I−P₀； j̃(t)=𝒰†(t)j(t)𝒰(t)（Heisenberg 表象）\n这里的 k 求和是总电流噪声之和，并不是声称不同 k 有额外关联。\nδÎ\na\n=Î\na\n−⟨Î\na\n⟩\n在时间\nt\n的\na\n方向电流涨落，与时间\nt’\n的\nb\n方向电流涨落，有怎样的量子关联？\n表示电流相对于平均值的量子涨落\n~",
+    "notes": "首先总电流 I=Σ_k I_k。其 connected two-time correlator 原则上 Σ_kk′，仅因为当前 quadratic Hamiltonian + translation-symmetric Slater initial + uniform classic P1 在 k 扇区独立，k!=k′ 的 connected correlator 消失，才写一个k求和。Γ12 k权重数值求积与真实 Ncell 不同。借助 Wick 定理原始四费米算符约化为单粒子矩阵迹。C^> 是 unsymmetrized，交换时间与方向不是同一个数。",
+    "media": [
+      "ppt/media/image30.png",
+      "ppt/media/image29.svg",
+      "ppt/media/image28.svg",
+      "ppt/media/image27.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 17,
+    "xml": "ppt/slides/slide17.xml",
+    "text": "03 理论链 3/10\n为什么要把粒子—空穴涨落写成准玻色子？\n已有 CJJ 是电子源统计；要让电子涨落与量子光场共同演化，需要算符表示\n线 Q｜双层 PT-AFM 的量子谐波输出\n14\n从费米子激发到涨落模式\np=(k,c,v)，不是束缚激子；需检查 Pauli 耗尽。\n保留与原始费米子一致的电流关联\n准玻色真空重现指定 CJJ；它是 P1 背景附近的 Gaussian 小振幅近似，并非精确费米子理论。\n是动量\nk\n处产生一个电子\n-\n空穴对的玻色型涨落算符。\n随机相位近似（\nRPA\n）的准玻色处理\n（激发太强时失效）\n任何玻色型实标量场算符的标准展开形式",
+    "notes": "准玻色起源：Slater参考态占据/空态分解; B† ∼ c†_c c_v，并非由库仑束缚产生的 exciton。严格费米 bilinear 对易包含占据因子；基态附近 Pauli 压力低时近似玻色。X取共动（P1 transported）占据/未占据子空间，不是瞬时能带。使用u=√(Ncell wk)X，使 ph Gaussian真空二时CJJ与Wick source Gram一致。这里不需要再手加一份无关随机噪声。",
+    "media": [
+      "ppt/media/image36.png",
+      "ppt/media/image35.svg",
+      "ppt/media/image34.svg",
+      "ppt/media/image33.svg",
+      "ppt/media/image32.svg",
+      "ppt/media/image31.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 6
+  },
+  {
+    "page": 18,
+    "xml": "ppt/slides/slide18.xml",
+    "text": "03 理论链 4/10\n联合涨落 Hamiltonian ：从 Peierls 耦合展开\n先分离强经典场，再对量子矢势 δA 保留二次项\n线 Q｜双层 PT-AFM 的量子谐波输出\n15\n平均电流的线性驱动 → 相干辐射背景；δD·(δA)² 是三阶涨落，当前 Gaussian 截断不保留。",
+    "notes": "推导必须先讲：A_total=A_cl+δA；电子部分 Taylor 展开；I=-∂H/∂A，D=∂²H/∂A²。将I=<I>+δI，D=<D>+δD。平均I线性δA负责相干辐射，要通过位移/经典背景分离，不能直接删除；δD δA²为联合涨落三次阶，舍去。电子背景H_el[A_cl]在相互作用/共动表象吸收至时间依赖电流顶点；光子的自由H_EM仍保留。最终 δI换成准玻色 ph，得到二次 Gaussian H_Q。D 接触项源于同一Hamiltonian，并不自动保证截断系统完全正则。",
+    "media": [
+      "ppt/media/image40.svg",
+      "ppt/media/image39.svg",
+      "ppt/media/image38.svg",
+      "ppt/media/image37.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 19,
+    "xml": "ppt/slides/slide19.xml",
+    "text": "03 理论链 5/10\n为什么求解二次 Hamiltonian 会得到 Bogoliubov 变换？\n先看一个模式：二次 Hamiltonian 对玻色算符求对易，结果只含一次算符\n线 Q｜双层 PT-AFM 的量子谐波输出\n16\n联合 H_Q 仍是二次型：把所有光子 a 与电子 B 排成向量，方程仍线性。",
+    "notes": "讲出关键对易子：[a†a,a]=-a，[a†²,a]=-2a†，二次Hamiltonian求Heisenberg方程剩下一次算符。为说明数学原理使用单模有配对项的例子，不是M0真实H。推广至H_Q时变量c=(photon a, electron quasi-boson B)；基于线性微分方程的传播子S(t,t0)就得到Bogoliubov形式。强P1背景通过时间依赖L(t)进入。",
+    "media": [
+      "ppt/media/image44.svg",
+      "ppt/media/image43.svg",
+      "ppt/media/image42.svg",
+      "ppt/media/image41.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 20,
+    "xml": "ppt/slides/slide20.xml",
+    "text": "03 理论链 6/10\nH_Q 中的 H_EM 与 δA，究竟对应哪些传播光子？\n自由空间两侧、两个面内偏振、正频连续光子模式\n线 Q｜双层 PT-AFM 的量子谐波输出\n17\nσ：左右两侧传播通道；λ：∥/⊥ 偏振；S：光斑有效面积；Z₀：真空阻抗\n这一页是在具体化 H_Q 的光学环境。",
+    "notes": "第10页的H_EM和δA若不指定几何，只是抽象符号。光的规范通道是频率连续，两个传播方向+两种横向偏振，正则 [a(ω),a†(ω′)]=δ(ω-ω′)。写δA时用free in field展开是求解的Green-function输入表示；完整场还含与电子相互作用后的辐射。这组归一化与Maxwell边界需要一致。同一显式光子连续谱不能再手加完整自场反馈一遍。",
+    "media": [
+      "ppt/media/image46.svg",
+      "ppt/media/image45.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 2
+  },
+  {
+    "page": 21,
+    "xml": "ppt/slides/slide21.xml",
+    "text": "03 理论链 7/10\n二维薄膜 Maxwell 边界，确定电流向两侧的辐射\n双层电子仍由八带模型描述；仅在远场长波长极限等效为一张电流片\n线 Q｜双层 PT-AFM 的量子谐波输出\n18\n源场 a_src 不是完整正则出射光子：输入、材料响应与其他通道必须一同保留。",
+    "notes": "J_sheet 是沿样品平面的面电流密度(A/m)。Maxwell边界切向E连续、磁场有面电流跳变，向两侧源场 E_emit=-Z0 J_sheet/2。双层相距远小于H2波长，电流来源仍为完整八带两层电子，远场电流片取上下层和。定量上忽略两层传播相位/非局域磁偶极高阶效应。连续E^(+)的光子归一给a_src(ω)。R/L in/out关系采用传播两端口；总场包含输入，源场单独非正则。",
+    "media": [
+      "ppt/media/image54.png",
+      "ppt/media/image53.png",
+      "ppt/media/image52.png",
+      "ppt/media/image51.png",
+      "ppt/media/image50.svg",
+      "ppt/media/image49.svg",
+      "ppt/media/image48.svg",
+      "ppt/media/image47.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 8
+  },
+  {
+    "page": 22,
+    "xml": "ppt/slides/slide22.xml",
+    "text": "03 理论链 8/10\n探测的是有限带宽 H2 波包，而非“精确某一频率”\n将第\n上一\n页连续源场代入波包定义，就得到 K\ndet\n 的时间积分\n线 Q｜双层 PT-AFM 的量子谐波输出\n19\nK\ndet \n把整段电流 I(t) 加权投影成指定 H2 模式；不等于电子的响应函数。\n      ∫\n0\n∞\n |φ\nμ\n(ω)|\n2\n dω = 1\n这里\nμ\n代表一个完整的探测模式，包含传播方向、偏振和频率波包。\n[b̂\nμ\n , b̂\nν\n†\n] = δ\nμν",
+    "notes": "口头纸笔推导：a_out=a_in+i√(Z0/(4πħωS))∫dt exp(iωt) I(t)。用b=∫φ a_out代入，换序dω与dt即可定义Kdet。在离散传播中可以边传播边积累 source output row b_acc，db_acc/dt=Kdet(t)I(t)，要覆盖必要的脉冲后辐射尾。δI是完整互动电流若计算涨落，需包含响应和接触项。归一波包并不是电子源滤波器本身，而是指定完整正则光子输出的实验模式。",
+    "media": [
+      "ppt/media/image59.png",
+      "ppt/media/image58.svg",
+      "ppt/media/image57.svg",
+      "ppt/media/image56.svg",
+      "ppt/media/image55.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 5
+  },
+  {
+    "page": 23,
+    "xml": "ppt/slides/slide23.xml",
+    "text": "03 理论链 9/10\n初态与末态要对应同一套真实光子通道\nW_in / W_out \n引入用作\n物理边界匹配\n激光到来之前，电子与量子光场的耦合已经存在。我们选用无泵浦系统的\n渐近正则入射\n真空作为准备条件\n线 Q｜双层 PT-AFM 的量子谐波输出\n20\n物理入射通道\nc_in，入射真空\n有限时间初始坐标\nΞ(t₀)\n联合线性动力学\nS(t,t₀)\n远场波包\nb_H2,out\nW_in：入射 → 初始坐标\nW_out + Kdet：传播变量 → 远场 H2\n准备条件：P1 来前耦合已存在，采用无泵浦渐近正则入射真空；不声称已求精确相互作用基态。",
+    "notes": "不要说“光子、电子裸算符都是零且未耦合的真空”是我们物理输入；裸乘积真空一般不是耦合H0的基态。采用无泵浦耦合长期存在的渐近入射通道 c_in vacuum，满足 c_in |0_in>=0，与有限时间a,B坐标并不直接相等。W_in在数值中可通过选定输入列实现，不一定是稠密矩阵。输出W_out提取自由远场通道，Kdet是其中波包投影的具体实现；两者包含物理归一化，不是单纯加速。不能未经证明就说这一asymptotic incoming vacuum等于整体interacting ground state。",
+    "media": [
+      "ppt/media/image60.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 1
+  },
+  {
+    "page": 24,
+    "xml": "ppt/slides/slide24.xml",
+    "text": "03 理论链 10/10\n怎样从已求解的 H_Q 提取 H2 输出 U、V？\n将完整电流展开为入射算符，再用 K\ndet \n做时间积分\n线 Q｜双层 PT-AFM 的量子谐波输出\n21\nH_Q 负责产生 f,g；Kdet 负责提取 H2 行；U₀ 是无泵浦的完整散射参考。\n对前作波戈留波夫变换",
+    "notes": "第一式来自上页二次Hamiltonian Heisenberg封闭线性方程：对每个输入列 j，电子总电流是 input c_j 与 c†_j 的系数组合；这一I_A包括 quantum backaction。第二式源自 b[A]=b_in+∫K I_A 与 b[0]=b_in+∫K I_0，在同一输入基底/相位/场归一化下相减，得 b[A]=b_out,0 + ∫K (I_A-I_0)。按每个输入列收集f和g积分，得到U,V，U=U0+ΔU。若无泵参考确实无产生块，则V由泵引起的g差决定；正式程序必须保留U0 V^T。Kdet必须覆盖实际时窗和far-field输出，不能用末时刻电子坐标代替。",
+    "media": [
+      "ppt/media/image65.png",
+      "ppt/media/image64.png",
+      "ppt/media/image63.png",
+      "ppt/media/image62.png",
+      "ppt/media/image61.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 5
+  },
+  {
+    "page": 25,
+    "xml": "ppt/slides/slide25.xml",
+    "text": "04 量子光学观测\n前面\n计算的\n两时关联函数\n CJJ ？\n它既校验准玻色电子源，也直接进入源场光子关联\n线 Q｜双层 PT-AFM 的量子谐波输出\n22\n重要区别\n前面\n的 CJJ：经典 P1 背景上的电子源关联。\n完整输出 m：还包含入射场、材料响应和输入—源交叉关联。\n因此我们求联合 Gaussian 的完整 U、V，不能只对“未反馈的 CJJ”做两次积分。",
+    "notes": "来源联系：原始费米CJJ经Wick确定X顶点，准玻色真空再现这一Gram。源项b_src=∫K δI，与它本身的异常关联 ∫∫ KK CJJ。若I指反馈后的完整current，源项关联包括反馈；但总b_out=b_in+b_src还存在b_in-b_src混合交叉项。对于P1下的强场量子输出，用完整Gaussian input/output得到U,V统一构造，既满足正确normalization（理想情况下）也不会漏掉干涉项。",
+    "media": [
+      "ppt/media/image67.svg",
+      "ppt/media/image66.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 2
+  },
+  {
+    "page": 26,
+    "xml": "ppt/slides/slide26.xml",
+    "text": "04 量子光学观测\n从 U、V 到 n、m：只需要指定入射协方差\n当前采用的正则入射真空使矩阵公式特别简单\n线 Q｜双层 PT-AFM 的量子谐波输出\n23\nn 是正常涨落关联，m 是相位敏感异常关联；光子平均数另含 |βμ|²。",
+    "notes": "把δb_μ=Σ_j(U_μj c_j+V_μj c†_j)代入二阶矩定义。在canonical incoming vacuum下，只有<c_i c†_j>=δ_ij，因此n=V* V^T（本项目指标次序 nμν=<bμ†bν>），m=U V^T。n 的对角是涨落光子数；β由平均场另算；m复数与探测相位绑定。不得把m写成只含ΔU V^T：U0 V^T与ΔU V^T同阶而且可能关键。",
+    "media": [
+      "ppt/media/image71.svg",
+      "ppt/media/image70.svg",
+      "ppt/media/image69.svg",
+      "ppt/media/image68.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 27,
+    "xml": "ppt/slides/slide27.xml",
+    "text": "04 量子光学观测\n先保证光子模式是正则的，再解释磁畴关联\nm 的磁畴差是候选读出，压缩与纠缠需要更完整判据\n线 Q｜双层 PT-AFM 的量子谐波输出\n24\n这两条等式不是优化指标，而是 [bμ,bν†]=δμν 与 [bμ,bν]=0 的代数要求\n，检查光子算符是否正确\n。\n对比 +N/−N 时固定同一相位参考，\n联系到了可以通过相位敏感测量研究的光场涨落关联。\n如果输出正则对易关系不通过，就不能据此宣布磁畴读出、压缩或量子优势。",
+    "notes": "公式推导由b=Uc+Vc†的玻色正则CCR直接得来。对两个正交模式 Xθ=(e^-iθδb+e^iθδb†)/√2，交叉正交分量协方差含m12与n12。因此m不是一个探测器直接显示的单独数，必须选相位与本振/测量协议。m相位翻转也可能是局域相位旋转，纠缠度量可能不变。n,m真正判断非经典还需对真空阈值和Gaussian PPT等完整判据。",
+    "media": [
+      "ppt/media/image75.png",
+      "ppt/media/image74.svg",
+      "ppt/media/image73.svg",
+      "ppt/media/image72.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 28,
+    "xml": "ppt/slides/slide28.xml",
+    "text": "04  已有计算证据 / 有限模型\n两 k 点：首次闭合有限量子输出计算链\n目的不是预测材料光子数，而是检查时间传播、输入频率积分与辐射波包读取能否稳定工作。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 01\nTr n  =  0.01224071\n两个选定 H2 模式涨落占据之和（两 k 点测试值）\nn\nμμ\n = ⟨δb\nμ\n†\n δb\nμ\n⟩\nTr n = Σ\nμ\n n\nμμ\n：只含涨落贡献，不含相干平均场 |β\nμ\n|²\n有限对照\nn 的相对变化\nm 的相对变化\n时间：每周期 1024 → 2048 步\n1.70%\n1.13%\n输入光子频率求积：601 → 891 点\n0.081%\n0.030%\n补测输入频率边界节点\n0.150%\n0.062%\n脉冲后尾部：延长 1 → 3 周期\n约 10⁻¹¹\n约 10⁻¹¹\n说明有限代码链可以进行误差对照；不代表 BZ 收敛、磁畴信号或真实光子产额。\n数据依据：已提供的两 k 点有限量子输出基准；数值未经本轮重新求解。",
+    "notes": "• 这页先讲清楚 tr n 是什么：选定输出光子模式涨落占据的迹。对于 H2 平行和垂直两个模式，tr n=n平行平行+n垂直垂直；并不包含相干辐射强度。\n\n• 这一页的科学目的不是利用 0.01224071 判断压缩、纠缠或磁畴效应，而是逐项改变有限计算中的时间步、输入频率积分和脉冲后的收集时间窗口，确认数值链可重复并可开展误差检查。\n\n• 两 k 点不能表示完整布里渊区；而且这里的计算值是特定测试模型的参考，不能与尚未通过正则检查的 Γ12 数值直接按大小比较。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 29,
+    "xml": "ppt/slides/slide29.xml",
+    "text": "05  当前计算进展 / Γ12\nΓ12 双磁畴全程传播完成，但量子输出尚未合格\n12×12 动量网格；4 占据 × 4 空态 / k，共 2304 个电子粒子—空穴坐标。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 02\n+N / −N 均完成八周期 P1 与时间尾；首轮保留 78,472 条输入数值列。\n每周期时间步\ntr n（未合格诊断）\n正常对易最大残差\n1,024\n73,207\n0.852834\n2,048\n78,298\n0.851723\n4,096\n79,632\n0.851325\n正则输出必须满足\nU U† − V V† = I\n目标残差 ≈ 0，而不是 0.85\n单纯加密时间步没有消除主要对易缺口；大 Tr n 暂时不能解释为光子产额。\n注：时间步收敛趋势 ≠ 对易关系合格；Γ12 尚未经 BZ 与 Pauli 资格验证。",
+    "notes": "• 比前一个两 k 点参考更进一步，当前 12×12 网格模拟了更完整的晶体动量取样，且两个磁畴都已算完。此时研究的仍是同样的八带 M0、P1 和同侧 H2 双偏振探测。\n\n• 对真空输入的 Bogoliubov 输出 U、V 必须保持光子的正则对易关系。正常最大残差约 0.85，意味着不能用所算到的 tr n 直接宣称光子数或量子压缩。\n\n• 随着每周期时间步从 1024 到 4096，tr n 有变化，但残差在 0.85 附近基本未动，表明主要错误不只是普通时间积分步长。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 30,
+    "xml": "ppt/slides/slide30.xml",
+    "text": "05  当前计算进展 / 受控排查\n保持物理输入不变，只加密共振侧翼的频率求积\n固定：每周期 4096 步、共振核心 160 节点、M0 / P1 / 量子初态 / H2 探测模式。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 03\n光子输入 ν 轴：核心区不变，只增加两侧求积节点\n共振核心：160 节点（固定）\n左侧翼 ×2\n右侧翼 ×2\n侧翼求积设置\n正频输入节点\n正常对易残差\n反常对易残差\n原设置 ×1\n29,812\n1.014586\n0.103894\n侧翼加密 ×2\n32,904\n0.184151\n0.016138\nn 与 m 的矩阵相对变化 ≈ 0.19%   ·   主要差异来自输入 ν = 0.13–0.30 的区段（模型频率单位）\n侧翼积分是明确的误差来源线索；残差虽显著下降，仍未通过正则性检查。\n重要：这是同一共振核心下的受控对照；与上一页 0.85 的不同配置残差不直接并列比较。",
+    "notes": "• 第三张结果页回答为什么我们认为输入光子连续谱的频率求积值得继续检查。这里控制 Hamiltonian、初态、时间步、探测波包和共振核心不变，只增加共振两侧的光子输入频率节点。\n\n• 正常和反常对易残差都显著下降，而 n、m 的相对变化只有约 0.19%。这符合某些输入频率对于维持完整输出正则性比较重要、但对当前占据和异常关联的有限求和贡献相对小的可能性。\n\n• 这不是根因最终确认，也不是收敛证明。0.184 与 0.016 在正则性要求下仍属于明显残差。下一步应继续受控检查侧翼求积，而不任意修改物理模型或删除通道。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 31,
+    "xml": "ppt/slides/slide31.xml",
+    "text": "05  数值方法 / GPU 与转置传播\n加速来自两种不同思路：GPU 并行 + 固定输出行转置算法\n目标只有 H2 的两种偏振；输入却有连续光子频率列与大量电子涨落坐标。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 04\n常规正向：传播全部输入列\n线性传播 S\nH2\n每列完整求解：重复工作量大\n固定 H2 输出：只需 U、V 的指定行\nD · S · Wᵢₙ\n输出转置（伴随）传播，并累积 Kᵈᵉᵗ 波包核\n验证：与原正向全列输出比较\nmax |ΔU| ≈ 9.9×10⁻¹³\n传播本体  158.85 s → 7.99 s\n整块 worker  159.67 s → 10.18 s\n同一物理模型、complex128，RTX 5060 Ti 测试；19.9× / 15.7× 只适用于该负载。\n源数据：160 输入列、2176 时间步，有泵/无泵两条传播；与转置算法一致性检查是另一项独立验证。",
+    "notes": "• 这页需要给导师区分两个层面的算法进展。第一，GPU 加速：同一份 Hamiltonian、同一套双精度复数数值演化，在多列输入的张量运算上并行执行。在给定 160 列、2176 步的测试中，传播本体为 158.85 秒对 7.99 秒，worker 总时长为 159.67 秒对 10.18 秒。\n\n• 第二，转置传播：我们并不需要整个巨大的传播矩阵，而是两个指定 H2 输出模式对应的输出行。对于线性映射 b_out=D S W_in Xi_in，可把输出行的线性泛函反向传播，并把探测核 Kdet 的全时段积分纳入传播。数学上是离散转置/伴随方法，不代表让真实物理时间倒流。\n\n• 两种加速机制并不相同，19.9 倍和 15.7 倍只描述这组 GPU/CPU 对照，不是转置算法单独的加速系数，也不是服务器整体生产作业速度保证。新旧算法 U 的最大差约 9.9e-13，仅证明算法结果一致，不能修复两者共同的正则性误差。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 32,
+    "xml": "ppt/slides/slide32.xml",
+    "text": "06  阶段总结 / 已完成与开放问题\n我们已建立什么？哪些仍不能称为物理结论？\n把“理论构造”“计算能力”“输出可信度”“磁畴发现”明确分开。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 05\n已建立：物质与强场电子背景\n8-band PT-AFM M0；P1 非微扰电子传播；两时电流 CJJ 与 p-h 准玻色表示。\n已建立：联合输出计算链\nH_Q、光子 in/out、Kᵈᵉᵗ、Wᵢₙ/输出匹配；计算 H2 模式 U、V、n、m。\n已验证：数值可执行\n两 k 点基准；Γ12 双磁畴全程；侧翼求积受控对照；GPU 与转置算法一致。\n未完成：量子输出物理资格\n完整正则性、输入频谱收敛、BZ/Pauli；因此不能认定磁畴光子数、压缩、纠缠。\n当前成果是可审查的量子输出框架与误差线索；首个可信的 ±N 光子关联仍待验证。\n“完成”只指指定理论近似与已报告数值测试范围，不代表真实 CrI₃ 定量拟合。",
+    "notes": "• 这页是整个科研进展段落的汇总，要避免导师只看到求积残差。第一部分完成了物质 M0 模型、P1 强驱动电子传播、Wick 两时电流关联，以及再现它的准玻色源。\n\n• 第二部分完成了 H_Q 的联合 Gaussian 演化形式、Maxwell 连续光子和归一化输出波包，并实现了从入射算符到探测 H2 模式的输出 U、V 的有限算法。\n\n• 第三部分是工程事实：两点、Gamma12、GPU/离散转置、受控加密都确实运行并有对照。第四部分是科学边界：正常与反常对易残差尚大，因此不能从大的 tr n 提出光子数、磁畴差或非经典性。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 33,
+    "xml": "ppt/slides/slide33.xml",
+    "text": "06   应用定位 / 三层目标\n从磁畴关联到量子光驱动：什么结果才真正有价值？\n先问“能否补充经典读出”，再问“是否真正非经典”，最后研究“强量子光能否主导驱动”。\n01  近期｜磁畴关联谱学\nΔ\nN\n C₁₂(θ₁, θ₂)\n固定激光、探测器与相位参考，只翻转 ±N；检验 H2 双偏振涨落能否补充已有磁性 SHG。\n证据：同光子预算下的磁畴可辨度 / SNR\n02  中期｜非经典谐波光源\nVmin = ½ + n − |m| < ½\n检验磁序能否改变压缩、两模不可分性；仅 m(+N)≠m(−N) 不等于量子优势。\n证据：非经典判据 + 经典随机场对照\n03  长期｜量子光主导驱动\n⟨Â⟩ = 0，⟨Â²⟩ ≠ 0\nBSV 等量子输入若决定电子非微扰轨迹，不能仅替换输入真空；需重新检验 P1 附近的 Gaussian 近似。\n证据：驱动近似有效性 + 材料检验\n›\n›\n共同的实验门槛\n当前 R0/P1：H2 = 0.10 eV（约 12.4 μm，中红外）\n必须量化：光子通量 · 相位稳定 · 损耗后关联 · 经典 SHG 基准\nm₁₂(det) = √(η₁η₂) m₁₂(src)\n参考：Sun et al., Nature (2019)  ·  Lange et al., PRL (2025)  ·  Rasputnyi et al., Nature Physics (2024)\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 06–08",
+    "notes": "这一页把此前的三页应用讨论合并成三层研究目标。第一层，近期的磁畴关联谱学：在完全相同的经典泵浦、探测器、相位参考及样品条件下翻转 Néel 磁畴，比较 H2 两个正交偏振的正交分量涨落关联。因为 Sun et al. (Nature 2019) 已能通过磁性 SHG 探测磁畴，我们必须用同光子预算、带宽、收集效率和测量次数的公平基准比较磁畴识别能力。仅有 Δ_N m 不代表更有用、更不代表非经典性。\n第二层，中期研究磁序是否能调节真正的非经典光学量。如单模压缩判据 Vmin=1/2+n-|m|<1/2；两模不可分性需要完整协方差判据。Lange et al., PRL (2025) 说明电子激子共振可能增强 HHG 光场压缩，但我们的 M0 没有束缚激子，不能直接照搬。必须和合理匹配的经典随机场模型比较。\n第三层，长期真正量子光主导的 HHG。Rasputnyi et al., Nature Physics (2024) 的 BSV 驱动固体 HHG 已提供实验基础。BSV 可以零平均场但非零二阶涨落，如果强量子涨落本身决定电子非微扰轨迹，当前围绕固定 P1 经典轨迹的 Gaussian 小涨落近似不再理所当然有效，不能单纯换入射真空协方差。\n共同实验约束：当前机制模型 P1 的基频是 0.05 eV，H2 为 0.10 eV，约 12.4 微米（中红外），并非已经对齐 CrI3 的真实最优频带。光学损耗对关联的简化线性作用是 m12_det=sqrt(eta1 eta2)m12_src，需要报告实际光子通量、损耗后关联、探测效率、背景噪声和相比传统磁性 SHG 的优势或局限。此式只适用于两模式独立真空损耗。\n汇报时一句话结论：先做到可信的磁畴关联；再检验是否非经典；最后才研究由 BSV 量子光真正承担强场驱动。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 34,
+    "xml": "ppt/slides/slide34.xml",
+    "text": "07  研究计划 / 物理关卡\n第一份可信结果，需要依次通过四道物理关卡\n将“修程序”改为“每一步能回答什么科学问题、产生什么可验收的证据”。\n线 Q / 双层 PT-AFM 的量子谐波输出\n补 09\n01\n输出正则性\n继续侧翼频率受控求积；U U†−V V†→I；检验时间与截断误差\n可信 Γ12 的 n、m\n02\n材料机制资格\nBZ 网格收敛；Pauli 耗尽与 Gaussian 近似；±N 使用统一相位参考\n可辨认的磁畴协方差\n03\n非经典性与应用\n经典随机场对照；压缩/不可分判据；通量、损耗及磁畴信噪比\n是否存在真正额外的光学能力\n04\n量子输入与真实材料\n受控压缩涨落→强 BSV；检验超出 P1 Gaussian 的有效性；返回 CrI₃\n量子驱动—磁序—输出的机制\n定位：由真实双层 CrI₃ HHG 出发，在可控 PT-AFM 机制模型中寻找可检验的输出量子统计规律。\n本阶段尚无通过完整正则检查的磁畴量子光学结论；未来强非经典泵浦可能需要新的近似层级。",
+    "notes": "• 这一页的第一关不是跑完服务器算例，而是拿到满足同一输入量度与探测基底的 U、V，并通过对易检查。通过后才允许把 n、m 当成可信光子统计。\n\n• 第二关问机制：固定装置比较两个磁畴，完成 BZ 收敛、Pauli 有效性以及对称性解释。模型仍不是对 CrI3 的定量预测。第三关才谈真正非经典性或应用优势，必须做相同资源的经典随机场与传统磁光方案对照。\n\n• 第四关重新联系博士研究初衷：从经典强 P1 上的量子输出，推进到量子态作为驱动。若强 BSV 主导电子轨迹，不能简单替换输入协方差而保持同一近似不动。最后返回真实 CrI3 的 Wannier/磁光线，或者选择更适合光子压缩/纠缠的相关磁性材料。",
+    "media": [],
+    "pics": 0
+  },
+  {
+    "page": 35,
+    "xml": "ppt/slides/slide35.xml",
+    "text": "附录 A / M0\n从实空间 hopping 到 Bloch 相位的具体公式\n供导师追问 Hamiltonian 几何来源时使用\n线 Q｜双层 PT-AFM 的量子谐波输出\n31\na₁、a₂ 是原胞平移矢量；d 是 A→B 基底位移；q 是上下层 A→A 的层间位移。",
+    "notes": "这些 f,g,T0 来自用户本地 M0 实施spec，不能解释成具体CrI3实材全部Cr-I配位的Wannier hopping。在固定基底Bloch相位约定中，T0†为反向层间跃迁块。若改变基底规范，相位可换而物理不变。",
+    "media": [
+      "ppt/media/image78.svg",
+      "ppt/media/image77.svg",
+      "ppt/media/image76.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 3
+  },
+  {
+    "page": 36,
+    "xml": "ppt/slides/slide36.xml",
+    "text": "附录 B / 源关联\nCJJ 的电子基底形式与准玻色核的一致性\n完整证明比正文更适合放在备查页\n线 Q｜双层 PT-AFM 的量子谐波输出\n32\n严格 Wick CJJ 提供 p-h Gaussian 电子源的校验目标，不等于最后的输出光子 n,m。",
+    "notes": "Wick化简条件：单粒子二次电子Hamiltonian + 纯Slater占据态。后续光场反馈可能使不同电子通道通过公共光模式间接相关；基底CJJ为驱动背景的初始source kernel。X方向必须与定义一致，避免共轭和指标顺序错。",
+    "media": [
+      "ppt/media/image81.svg",
+      "ppt/media/image80.svg",
+      "ppt/media/image79.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 3
+  },
+  {
+    "page": 37,
+    "xml": "ppt/slides/slide37.xml",
+    "text": "附录 C / 光子输入输出\n从源场波包到 U₀、ΔU、V 的收集公式\n附录用于回答 Kdet 与第 13 页具体怎样相连\n线 Q｜双层 PT-AFM 的量子谐波输出\n33\n必须在同一个入射真空、模式相位、探测核与场归一化下，才能对有泵 / 无泵算符相减。",
+    "notes": "V0在当前被动正频的无泵参考表示中为0，但这里列一般式便于说明。I_A必须包含量子响应与接触项；如果使用时域探测核求最终自由输出需要正确的渐近匹配和时间尾。U0是完整无泵正规散射而非简单的无泵电流时间积分，不能删掉U0V^T。",
+    "media": [
+      "ppt/media/image85.svg",
+      "ppt/media/image84.svg",
+      "ppt/media/image83.svg",
+      "ppt/media/image82.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 4
+  },
+  {
+    "page": 38,
+    "xml": "ppt/slides/slide38.xml",
+    "text": "附录 D / 光子非经典性\n相位敏感、压缩与纠缠是不同的命题\n即使 m 随磁畴变化，也必须经过额外量子光学判据\n线 Q｜双层 PT-AFM 的量子谐波输出\n34\n相位旋转会改变 m 的复相位，却不改变纠缠程度；两模纠缠需完整协方差判断。",
+    "notes": "对固定单模Gaussian，quadrature Xθ定义真空方差=1/2。Vmin=1/2+n−|m|，低于1/2才叫 squeezing。在两模系统中需要完整矩阵n,m和partial transpose/Simon criterion等。单独m12非零、翻号、光子交叉相关均不能证明纠缠。",
+    "media": [
+      "ppt/media/image88.svg",
+      "ppt/media/image87.svg",
+      "ppt/media/image86.svg",
+      "ppt/media/image1.png"
+    ],
+    "pics": 3
+  },
+  {
+    "page": 39,
+    "xml": "ppt/slides/slide39.xml",
+    "text": "附录 E / 参考文献\n理论与代表文献：每一篇负责哪一段推导\n新增文献需在正式汇报前核对 DOI 与具体结论\n线 Q｜双层 PT-AFM 的量子谐波输出\n35\nSun et al., Nature 572, 497–501 (2019)：双层 AFM CrI₃ 磁性 SHG\nGorlach et al., Nat. Commun. 11, 4598 (2020)：HHG 输出量子光学\nPizzi et al., Nat. Phys. 19, 551–561 (2023)：强驱动发射体关联与光\nTheidel et al., PRX Quantum 5, 040319 (2024)：半导体 HHG 非经典迹象\nWilhelm et al., PRB 103, 125419 (2021)：SBE / HHG 电流\nKane & Mele, PRL 95, 226801 (2005)：内禀 SOC 的紧束缚结构\nThouless, Nucl. Phys. 22, 78 (1961)：粒子—空穴 RPA 基础\nGardiner–Collett, PRA 31, 3761 (1985)：量子输入—输出\nBlow et al., PRA 42, 4102 (1990)：连续光场与归一化波包\nSimon, PRL 84, 2726 (2000)：Gaussian 可分性与纠缠判据\n具体 M0 键几何、二维片辐射归一化、P1 共动顶点及其数值验证来自本项目。",
+    "notes": "Nature, APS 主要文献检索于2026-10-12并核对期刊来源。该附录只列与当前ppt支撑直接相关的稳妥代表文献，未在此审核完整2025/2026量子光论文优先权。文献基础不能作为新材料效应已成立证据。",
+    "media": [],
+    "pics": 0
+  }
+]

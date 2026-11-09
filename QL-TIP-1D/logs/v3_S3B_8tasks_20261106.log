@@ -1,0 +1,17 @@
+library new=8 selected=8
+bias_v2_lib_F0_I12_phi270_r01: F=0.0 I/mu=12.0 CEP=4.71238898038469
+bias_v2_lib_F1_I8_phi090_r01: F=1.0 I/mu=8.0 CEP=1.5707963267948966
+bias_v2_lib_F1_I8_phi180_r01: F=1.0 I/mu=8.0 CEP=3.141592653589793
+bias_v2_lib_F1_I8_phi270_r01: F=1.0 I/mu=8.0 CEP=4.71238898038469
+bias_v2_lib_F1_I12_phi000_r01: F=1.0 I/mu=12.0 CEP=0.0
+bias_v2_lib_F1_I12_phi090_r01: F=1.0 I/mu=12.0 CEP=1.5707963267948966
+bias_v2_lib_F1_I12_phi180_r01: F=1.0 I/mu=12.0 CEP=3.141592653589793
+bias_v2_lib_F1_I12_phi270_r01: F=1.0 I/mu=12.0 CEP=4.71238898038469
+{"run_id": "bias_v2_lib_F0_I12_phi270_r01", "status": "PASS", "wall_seconds": 1319.6599803999998, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I8_phi090_r01", "status": "PASS", "wall_seconds": 1355.7807838000008, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I8_phi180_r01", "status": "PASS", "wall_seconds": 1430.3095603999973, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I8_phi270_r01", "status": "PASS", "wall_seconds": 1491.469059199997, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I12_phi000_r01", "status": "PASS", "wall_seconds": 1584.3139048999947, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I12_phi090_r01", "status": "PASS", "wall_seconds": 1496.0524470999953, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I12_phi180_r01", "status": "PASS", "wall_seconds": 1477.8063924000016, "Y": 0.0}
+{"run_id": "bias_v2_lib_F1_I12_phi270_r01", "status": "PASS", "wall_seconds": 1473.608831800011, "Y": 0.0}

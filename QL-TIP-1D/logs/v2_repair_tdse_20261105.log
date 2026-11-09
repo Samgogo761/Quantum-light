@@ -1,0 +1,29 @@
+repair_tdse listed=4 selected=4
+bias_v2_fix_F0_I4_dx048_r01: F=0.0 I/mu=4.0 prep=data/raw/bias_v1/bias_p1_prep_F0.000_dx048_r02/state_prep.npz baseline=bias_p2_F0.000_I4_phi000_r02
+bias_v2_fix_F0_I4_dt005_r01: F=0.0 I/mu=4.0 prep=data/raw/bias_v1/bias_p1_prep_F0.000_dt005_r02/state_prep.npz baseline=bias_p2_F0.000_I4_phi000_r02
+bias_v2_fix_F1_I1_ramp080_r01: F=1.0 I/mu=1.0 prep=data/raw/bias_v1/bias_p1_prep_F1.000_ramp080_r02/state_prep.npz baseline=bias_p1_F1.000_I1_phi000_r02
+bias_v2_fix_F1_I1_wait040_r01: F=1.0 I/mu=1.0 prep=data/raw/bias_v1/bias_p1_prep_F1.000_wait040_r02/state_prep.npz baseline=bias_p1_F1.000_I1_phi000_r02
+{
+  "run_id": "bias_v2_fix_F0_I4_dx048_r01",
+  "execution_status": "PASS",
+  "wall_seconds": 2640.557728800224,
+  "Y_diagnostic": 9.110608076096589e-06
+}
+{
+  "run_id": "bias_v2_fix_F0_I4_dt005_r01",
+  "execution_status": "PASS",
+  "wall_seconds": 2356.4458920999896,
+  "Y_diagnostic": 8.894118286537405e-06
+}
+{
+  "run_id": "bias_v2_fix_F1_I1_ramp080_r01",
+  "execution_status": "PASS",
+  "wall_seconds": 977.0440192001406,
+  "Y_diagnostic": 5.697994885586034e-09
+}
+{
+  "run_id": "bias_v2_fix_F1_I1_wait040_r01",
+  "execution_status": "PASS",
+  "wall_seconds": 897.6267884001136,
+  "Y_diagnostic": 5.697994789433722e-09
+}

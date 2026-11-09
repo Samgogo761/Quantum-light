@@ -8,9 +8,11 @@
     "grid": "gamma_centred_MP",
     "E4_max": -0.05565590791154006,
     "E5_min": 0.03693426509571547,
+    "E_g_indirect_sampled_minmax_on_grid": 0.09259017300725553,
     "E_g_indirect_lower_bound_on_grid": 0.09259017300725553,
     "E_g_direct_min_on_grid": 0.09274472753948107,
     "insulating_on_this_grid": true,
-    "note": "coarse full-BZ coverage check, not a 1e-10 global bound on the continuous BZ"
+    "note": "coarse full-BZ coverage check, not a 1e-10 global bound on the continuous BZ. E_g_indirect_sampled_minmax_on_grid = min(Ec)-max(Ev) on this grid; typically an upper bound on the continuous-BZ indirect gap, not a strict lower bound. E_g_indirect_lower_bound_on_grid is a compatibility alias of the same sampled minmax.",
+    "postprocess_version": "20260915_h2qual_a"
   }
 }

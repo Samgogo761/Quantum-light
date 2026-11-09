@@ -1,0 +1,7 @@
+# node-moment validation
+state_type = coherent
+n_nodes = 9
+sum_weight =   1.00000000E+00
+err_d =   5.52786215E-19
+err_VQ =   1.65605684E-15
+pass = T

@@ -69,10 +69,17 @@ def coarse_gap_check(geo, p, nk: int = 120) -> dict:
         "grid": "gamma_centred_MP",
         "E4_max": e4max,
         "E5_min": e5min,
+        "E_g_indirect_sampled_minmax_on_grid": e5min - e4max,
         "E_g_indirect_lower_bound_on_grid": e5min - e4max,
         "E_g_direct_min_on_grid": dmin,
         "insulating_on_this_grid": bool(e5min > e4max),
-        "note": "coarse full-BZ coverage check, not a 1e-10 global bound on the continuous BZ",
+        "note": (
+            "coarse full-BZ coverage check, not a 1e-10 global bound on the continuous BZ. "
+            "E_g_indirect_sampled_minmax_on_grid = min(Ec)-max(Ev) on this grid; this is typically "
+            "an upper bound on the continuous-BZ indirect gap, not a strict lower bound. "
+            "E_g_indirect_lower_bound_on_grid is a compatibility alias of the same sampled minmax "
+            "and must not be read as a proven insulating lower bound."
+        ),
     }
 
 
@@ -244,7 +251,11 @@ def summarize_campaign(geo, gap, resources, records: list[dict]) -> dict:
     by = {r["name"]: r for r in records}
     p0_archival = {
         "source": "results/q_line/m0_v1_20260912/classical/classical_report.json",
-        "note": "original NPZ not retained in tree; JSON is the archival P0 record. Partial k-convergence remains.",
+        "note": (
+            "archival JSON is the P0 record in-tree. NPZ may exist locally but are not required "
+            "to be in git; if present they can be used to recover work integrals. The JSON does "
+            "not store ΔU_e. Partial k-convergence remains."
+        ),
         "targets_nk192_sin2": {
             "Jo_y_0": 2.3396423462554736e-05,
             "Jo_y_H2": 2.760e-6,
@@ -272,7 +283,12 @@ def summarize_campaign(geo, gap, resources, records: list[dict]) -> dict:
             envelope[label] = {
                 "targets_a": tgt(a),
                 "targets_b": tgt(b),
-                "harmonics_sin2": compare_harmonics(by[a]["analysis"]["windows"]["sin2"], by[b]["analysis"]["windows"]["sin2"], ORDERS),
+                "harmonics_sin2": compare_harmonics(
+                    by[a]["analysis"]["windows"]["sin2"],
+                    by[b]["analysis"]["windows"]["sin2"],
+                    ORDERS,
+                    names=("J_plus", "J_minus", "J_e", "J_o"),
+                ),
             }
     return {
         "model_id": MODEL_ID,

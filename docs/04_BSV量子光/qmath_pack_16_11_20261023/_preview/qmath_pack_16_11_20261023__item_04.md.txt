@@ -1,0 +1,166 @@
+# Q-MATH-16.11｜早期底稿补全、文献/AI审计与能量加权经典界
+
+**日期：2026-10-23。** 本报告包含资料库时间线恢复、文献与 AI 方法审计、一个严格经典界和玩具核独立单元测试。**没有重新运行 M0 的 Q16.7/Q16.8 原始散射源码与双频数组；玩具数值不是 M0 结果。**
+
+## 1. Q-MATH 从何时开始？
+
+本次在 `/Sam/` 找到：
+- **2026-10-21 03:28**：`研究底稿_八带量子光HHG_数学重构_v1.md` 和 `八带量子光HHG_数学重构_研究包_v1.zip`，属于未编号的数学重构底稿。
+- **03:52**：`q8_m0_model.py`。
+- **07:01**：`QMATH03_八带量子光酉演化_首轮实算结果_20261021.zip`，是目前能确认的最早显式编号 Q-MATH 计算包。
+- **07:25**：Q-MATH-04 的双偏振位移压缩态报告与计算包。
+- **07:46**：Q-MATH-05 的共享量子光场报告与计算包。
+- **08:19**：Q-MATH-06 数学审计报告。
+
+Q-MATH-01、02 尚未作为独立文件定位；不能仅凭编号推断其内容。Q-MATH 并非整个课题的起点：`量子光理论核心` 在 2026-05-21 已有记录，完整量子光 HHG 理论系列在 2026-07-29 已存在，线 Q 的 M0/经典基线任务单在 2026-09-11 已有记录。今后须并行保留“课题理论史”与“Q-MATH 集中重构史”。
+
+## 2. M0 身份与旧计算的关键教训
+
+M0 是**现象学八带 PT-AFM 机制模型**，不是第一性原理 CrI₃ Wannier 拟合，也不含显式电子—电子相互作用。基底为
+\[
+(tA\uparrow,tA\downarrow,tB\uparrow,tB\downarrow,bA\uparrow,bA\downarrow,bB\uparrow,bB\downarrow).
+\]
+R0 参数 \(t_h=1,\lambda_{\rm SO}=0.1,\Delta=0.8,u=v=0.1\)，内部单位 \(e=\hbar=1\)。由于 \(s_z\) 守恒，固定 \(N_\uparrow=N_\downarrow=2\) 的单 k 四电子空间可由 70 维降为 36 维；这依赖自旋守恒。
+
+Q-MATH-04 的局部 k 计算显示压缩相位可调制 H2，但相干光也能产生类似磁畴奇诊断信号。Q-MATH-05 的共享光场传播推翻了旧的“某一相位下位移压缩总比相干光强”的趋势。Q-MATH-16.8 负控显示检测窗叠加材料核后次要谱模功率约 9.74%，将材料核换常数后仍约 9.25%，而裸材料核次要谱模功率仅约 0.0285%。因此必须先剥离探测器引入的多模结构。
+
+## 3. 文献审计：已知成果与可能空白
+
+**量子光 HHG：**
+- Rasputnyi et al., *High Harmonic Generation by Bright Squeezed Vacuum*, Nature Physics 20, 1960–1965 (2024), DOI https://doi.org/10.1038/s41567-024-02659-x：已实验展示宏观 BSV 驱动固体非微扰 HHG。
+- Gothelf, Lange & Madsen, *High-order harmonic generation in a crystal driven by quantum light*, Phys. Rev. A 111, 063105 (2025), DOI https://doi.org/10.1103/PhysRevA.111.063105：研究 ZnO 带内 HHG、BSV/热光截止和强度标度。
+- Rivera-Dean et al., *Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries*, Phys. Rev. Lett. 135, 013801 (2025), DOI https://doi.org/10.1103/4hdl-bdwj：结构化压缩光可在经典驱动受抑的圆偏振几何中打开 HHG。
+- Mukamel & Dorfman (2015), DOI https://doi.org/10.1103/PhysRevA.91.053844；Dorfman, Schlawin & Mukamel (2016), DOI https://doi.org/10.1103/RevModPhys.88.045008：量子光非线性响应涉及多时刻关联，一般不能假定对经典响应作正概率平均即可复现全部量子信号。
+
+**磁性谐波：**
+- Sun et al. (2019), 双层 CrI₃ 磁性 SHG，DOI https://doi.org/10.1038/s41586-019-1445-3。
+- *Classification of second harmonic generation effect in magnetically ordered materials*, npj Quantum Materials 8, 62 (2023), DOI https://doi.org/10.1038/s41535-023-00594-3。
+- Jita et al. (2026 preprint), https://arxiv.org/abs/2604.06700；Mizuno (2026), DOI https://doi.org/10.1103/1vc6-c7rs，讨论反铁磁/交错磁性谐波选择规则。
+
+可能的创新交集不是一般 BSV-HHG，也不是一般磁性 SHG，而是证明：**PT-AFM 的真实材料散射核如何读取非经典光关联，并在公平经典正 P 优化后留下可观测差异。** 当前文献检索不支持绝对“首创”宣称。
+
+## 4. 新定理：固定真实自由光能量的经典二光子响应界
+
+设入射频率模式 \(a=(a_1,\dots,a_d)^T\)，
+\[
+W=\mathrm{diag}(\hbar\omega_1,\dots,\hbar\omega_d)>0,\quad
+U=\sum_i\hbar\omega_i\langle a_i^\dagger a_i\rangle.
+\]
+定义异常矩 \(M_{ij}=\langle a_i a_j\rangle\)。对于固定输出端口、最低阶弹性二光子通道
+\[
+\hat A_H=\sum_{ij}K_{ij}a_i a_j,\quad
+\beta_H^{(2)}=\mathrm{Tr}(K^TM),\quad K=K^T,
+\]
+自主散射能量壳要求 \(\omega_i+\omega_j=\Omega_H\)。
+
+对任意非负 Glauber–Sudarshan P 输入，
+\[
+\boxed{|\beta_{H,\mathrm{cl}}^{(2)}|
+\le U\|W^{-1/2}KW^{-1/2}\|_{\rm op}.}
+\tag{16.11.1}
+\]
+
+**证明。** 对经典输入 \(M=\int P(\alpha)\alpha\alpha^T d\alpha\)。令 \(\widetilde M=W^{1/2}MW^{1/2}\)。因为秩一矩阵 \(yy^T\) 的核范数为 \(\|y\|^2\)，
+\[
+\|\widetilde M\|_*
+\le\int P(\alpha)\|W^{1/2}\alpha\|^2d\alpha=U.
+\]
+核范数与算符范数的对偶性立即给出式 (16.11.1)。对于对称核，加权 Takagi 最优模可由正负相干振幅混合达到，因此该界是此弱弹性二光子相干泛函下的最优经典界。
+
+**适用范围：** 有限模式网格、指定端口、最低阶弹性二光子相干振幅。有限时间门、非弹性电子终态和更高阶过程不能未经证明并入同一公式。
+
+## 5. 反铁磁版本：候选可证伪判据
+
+在同一明确入射/探测协议下定义
+\[
+K_e=(K_{+N}+K_{-N})/2,\quad K_o=(K_{+N}-K_{-N})/2.
+\]
+空间反演会交换左右端口，不能将反演匹配的符号关系未经证明套到同侧收光。
+
+最低阶磁畴奇响应满足
+\[
+\boxed{|\beta_{o,\mathrm{cl}}^{(2)}|
+\le U\|W^{-1/2}K_oW^{-1/2}\|_{\rm op}.}
+\tag{16.11.2}
+\]
+单模 BSV 波包 \(u\) 的 \(M=muu^T\)、\(|m|=\sqrt{n(n+1)}\)、\(U=n\,u^\dagger Wu\)，因此
+\[
+|\beta_{o,\mathrm{BSV}}^{(2)}|=\sqrt{n(n+1)}|u^TK_ou|.
+\]
+只有 BSV 响应越过式 (16.11.2) 的全体经典 P 最优界，且材料核通过 BZ、频率、展宽和输出窗收敛，才有资格称为该弱相干通道的非经典磁性优势。它不自动证明输出光纠缠、压缩或非经典。
+
+## 6. 玩具核独立数值测试（不是 M0 结果）
+
+对于 \(K=\begin{pmatrix}0&\kappa\\\kappa&0\end{pmatrix}\)、\(\omega_1+\omega_2=\Omega_H\)，加权最优 BSV 模平均频率
+\[
+\bar\omega_u=\frac{2\omega_1\omega_2}{\omega_1+\omega_2},\quad
+R_{\rm BSV/cl}=\sqrt{1+\bar\omega_u/U}.
+\]
+在同一输出频率 0.36、同一自由光能量 \(U=0.10\) 下：
+- 频率对 (0.16, 0.20)：\(\bar\omega_u=0.177778\)，比值 1.666667；
+- 频率对 (0.08, 0.28)：\(\bar\omega_u=0.124444\)，比值 1.498147。
+
+这是数学单元测试，说明真实能量约束下材料核选择的频率模式会进入最优量子/经典比值。独立程序还随机抽取 5000 个经典相干幅度检查加权经典界。
+
+## 7. 数学文献：本次推导的根基与边界
+
+本报告中的能量加权经典界不是凭空创造新的抽象算子不等式；其核心是标准的 Schatten/迹类范数对偶性，将它应用到物理能量加权的二光子散射核，并再投影到 Néel-odd 通道。若要声称数学创新，创新点必须在**物理约束、散射核结构、紧界或可检验的 AFM 推论**，不能把标准范数对偶性本身当成新定理。
+
+- Barry Simon, *Trace Ideals and Their Applications*, 2nd ed. (2005), AMS, DOI https://doi.org/10.1090/surv/120。作为核范数与算符范数对偶、Schatten 类、迹类算符的数学基础。
+- Roger A. Horn & Charles R. Johnson, *Matrix Analysis*, 2nd ed. (2012), Cambridge University Press, DOI https://doi.org/10.1017/CBO9781139020411。作为复对称矩阵、矩阵范数、奇异值与 Takagi 型分解的标准参考。
+- Jan Dereziński & Christian Gérard, *Mathematics of Quantization and Quantum Fields* (2013), Cambridge University Press, DOI https://doi.org/10.1017/9781009290876。其内容覆盖 Hilbert 空间算子、CCR/CAR、Fock 空间、准自由态与量子场动力学，可用于审计 Weyl 位移、费米外代数与量子散射的定义域。
+- Weedbrook et al., *Gaussian quantum information*, Rev. Mod. Phys. 84, 621 (2012), DOI https://doi.org/10.1103/RevModPhys.84.621。作为多模 Gaussian/BSV 协方差、压缩与 Takagi/Bloch–Messiah 结构的参考。
+- Dorfman, Schlawin & Mukamel, *Nonlinear optical signals and spectroscopy with quantum light*, Rev. Mod. Phys. 88, 045008 (2016), DOI https://doi.org/10.1103/RevModPhys.88.045008。把光场多时刻关联与物质超算符响应联系起来。
+
+这几条参考分别支撑四层：算子范数与凸对偶、有限维矩阵结构、Fock/Weyl/费米空间数学、量子光非线性响应。接下来要优先从这些来源核验符号与假设，再决定哪些部分值得用 Mathematica 或 Lean 做形式化，而不是让 AI 自行判断“证明看起来合理”。
+
+## 8. AI 数学物理能力：怎么用而不迷信？
+
+- AlphaProof 使用 Lean 形式化环境与强化学习寻找证明：https://www.nature.com/articles/s41586-025-09833-y
+- Gemini Deep Think 配合树搜索与自动数值反馈，公开展示求解宇宙弦引力辐射谱困难积分：https://arxiv.org/abs/2603.04735
+- First Proof 2026 第二批基准中，四套系统面对 40 道研究级数学问题，合计 7 道至少获得通过评价；评审指出 AI 对结构接近既有结果的问题更擅长，也可能略过最困难步骤：https://simons.berkeley.edu/news/ai-systems-solve-many-not-all-research-level-math-problems-rigorous-new-benchmark
+
+本课题工作流：AI 生成多条推导与反例；Mathematica/Wolfram 检查符号恒等式；Python/NumPy 独立复算；关键结论补区间误差、截断误差或形式化证明；最后做文献新颖性审计。AI 用于提出候选与反证搜索，不作为正确性或“首创”的权威。
+
+## 9. Q-MATH-16.12：计算所有电子最终态的散射核 Gram 秩
+
+从 Q-MATH-16.7 的 M0 三光子程序，把弹性通道扩展到所有满足能量壳的电子最终态 \(f\)，提取
+\[
+K_{f,N}(\omega,\omega';\Omega_H),\quad
+\omega+\omega'=\Omega_H+(E_f-E_G).
+\]
+构造加权 Gram 矩阵
+\[
+\mathcal G_{fg}=\mathrm{Tr}(\widetilde K_{f,N}^\dagger\widetilde K_{g,N}),\quad
+\widetilde K_f=W^{-1/2}K_fW^{-1/2}.
+\]
+### 通道 Gram 秩的严格因子化定理
+
+在一阶输出耦合下，令电子初态为 \(|G\rangle\)，H2 输出初态为真空。把从输入泵浦到一个 H2 光子的电子终态分辨振幅写成
+\[
+|\Psi^{(1)}_{\rm out}\rangle
+=\sum_f |f\rangle|1_H\rangle A_f|\psi_{\rm in}\rangle,\quad
+A_f=\sum_{ij}(K_f)_{ij}a_i a_j.
+\]
+忽略共同输出耦合常数后，电子仍留在初态的相干振幅与总 H2 光子数分别满足
+\[
+\beta_H\propto\langle A_G\rangle,\qquad
+n_H\propto\sum_f\langle A_f^\dagger A_f\rangle.
+\]
+若所有终态算符共线 \(A_f=c_f A\)，则
+\[
+\boxed{\frac{|\beta_H|^2}{n_H}
+=\frac{|c_G|^2}{\sum_f|c_f|^2}
+\frac{|\langle A\rangle|^2}{\langle A^\dagger A\rangle}.}
+\]
+右侧第一因子只含材料的弹性分支权重，第二因子只含输入态统计。这是一个严格的最低阶 no-go：若终态散射算符全共线，就不能在该可观测量中得到材料特有的“量子统计×电子通道”耦合；这不排除更高阶、其他输出统计或不同散射端口出现新效应。
+
+在同一离散输入模式空间内定义 \(\widetilde K_f=W^{-1/2}K_fW^{-1/2}\) 及
+\[
+\mathcal G_{fg}=\operatorname{Tr}(\widetilde K_f^\dagger\widetilde K_g).
+\]
+这是矩阵向量 \(\operatorname{vec}(\widetilde K_f)\) 的 Gram 矩阵，故其秩严格等于这些散射核的线性张成维数。于是 \(\operatorname{rank}\mathcal G=1\) 当且仅当所有非零 \(K_f\) 共线；若秩稳定大于 1，才有多个独立电子散射通道的数学空间。秩大于 1 只是候选机制的必要结构条件，不是量子优势证明。
+
+随后应剥离输出窗、分解 Néel-even/odd 核，并用式 (16.11.1)–(16.11.2) 做全域经典 P 优化。
+
+**验收标准：** 固定真实入射能量与带宽；Peierls 顶点与能量壳一致；分别收敛 BZ、频率离散、人工展宽 \(\gamma\) 和 Fock 截断；在同一物理端口下仍越过经典界。任何一项失败，都保留为数学限制或负结果，不称为新发现。

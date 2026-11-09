@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-06",
+  "scope": "read-only source and saved-result audit; no science executed",
+  "files": [
+    {
+      "path": "QL-TIP-1D/scripts/run_continuation_v2.py",
+      "bytes": 36823,
+      "sha256": "ee9c1f75af0936b8575b36aae7907e34acbc08cb56ebc50140696808ad72d420"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_high_intensity_v2.py",
+      "bytes": 7053,
+      "sha256": "6fd9c5e49a23896dddfb0e8da0613e8b392462068100d5501b9e042e484a51fe"
+    },
+    {
+      "path": "QL-TIP-1D/scripts/analyze_statistics_v2.py",
+      "bytes": 18432,
+      "sha256": "dd5048a6ac4b71341e27a54ccb142902e175d58ded8b1e72ded7dc4bce3dc31c"
+    },
+    {
+      "path": "QL-TIP-1D/tests/test_continuation_v2.py",
+      "bytes": 4880,
+      "sha256": "c28dd83d3b5e9119ca63656a2e82c7858591dc81e7145ce0b8f19378fc153127"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/compute_ledger_v2.csv",
+      "bytes": 36211,
+      "sha256": "a1c8fd342bbeb5f33c463cfd48fc9f9538e298ddecb045c8bbbd6ca192cccef5"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R1_gate_r1_20261105_v1.json",
+      "bytes": 18509,
+      "sha256": "7496deaa8139a9f163f8614770951a8c543d0e5f2039b042b8a7c47d3138acc8"
+    },
+    {
+      "path": "QL-TIP-1D/results/bias_v2/reports/r1_20261105_v1/R2_gate_r1_20261105_v1.json",
+      "bytes": 3877,
+      "sha256": "c6371dbeed22159a8442da4bc60373ca0a248bb17b80c69c06f2abc55f9290a4"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261105_continuation_v2/EXECUTION_TASKBOOK.md",
+      "bytes": 40898,
+      "sha256": "3619e5fc5bd28e4273ab1a2c543b2b63d5f0d0d8bf13b9ae4a4b069a2546bf8e"
+    },
+    {
+      "path": "QL-TIP-1D/reports/R2_DT_REVIEW_20261106_v2.md",
+      "bytes": 8451,
+      "sha256": "d9d4d2472786e311cc728616f6bbd6a4652fec0611e206efae54422b76d64629"
+    }
+  ],
+  "ledger_kind_counts": {
+    "readout": 90,
+    "tdse": 16
+  },
+  "ledger_hours": 12.23303721922291,
+  "R2_gate": {
+    "schema": "continuation-v2-R2-gate",
+    "probes": {
+      "bias_v2_probe_F0_I8_phi000_r01": {
+        "wall_seconds": 929.4397109001875,
+        "peak_working_set_bytes": 131923968,
+        "Y_diagnostic_eta01": 0.00044050536490590394,
+        "Y_main_eta005": 0.00044320308517670725,
+        "right_CAP_fraction": 4.016080985736555e-23,
+        "budget_residual": 1.2967293905319366e-11,
+        "execution_status": "PASS",
+        "cap_warning": false
+      },
+      "bias_v2_probe_F1_I8_phi000_r01": {
+        "wall_seconds": 913.7453610000666,
+        "peak_working_set_bytes": 131923968,
+        "Y_diagnostic_eta01": 0.0006528734585512591,
+        "Y_main_eta005": 0.0006502063538353673,
+        "right_CAP_fraction": 3.3028043278991683e-15,
+        "budget_residual": 1.3156586931017955e-11,
+        "execution_status": "PASS",
+        "cap_warning": false
+      },
+      "bias_v2_probe_F0_I32_phi000_r01": {
+        "wall_seconds": 940.1644073000643,
+        "peak_working_set_bytes": 130719744,
+        "Y_diagnostic_eta01": 0.05500016457217915,
+        "Y_main_eta005": 0.05501353250754793,
+        "right_CAP_fraction": 0.007569891746706372,
+        "budget_residual": 1.2531198301246604e-11,
+        "execution_status": "PASS",
+        "cap_warning": true
+      },
+      "bias_v2_probe_F1_I32_phi000_r01": {
+        "wall_seconds": 943.5022555000614,
+        "peak_working_set_bytes": 131039232,
+        "Y_diagnostic_eta01": 0.09141606488016506,
+        "Y_main_eta005": 0.09136638575335669,
+        "right_CAP_fraction": 0.004800712599575994,
+        "budget_residual": 1.2478240662971984e-11,
+        "execution_status": "PASS",
+        "cap_warning": true
+      }
+    },
+    "controls": {
+      "F0_dx048": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01",
+        "Y": 0.0552961884233884,
+        "relative_change": 0.005137934303740355,
+        "pass": true
+      },
+      "F0_dt005": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01",
+        "Y": 0.055380622785491856,
+        "relative_change": 0.006672726894851917,
+        "pass": true
+      },
+      "F0_box900": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_box900_r01",
+        "Y": 0.05542962818899918,
+        "relative_change": 0.007563515056848221,
+        "pass": true
+      },
+      "F0_caphalf": {
+        "run_id": "bias_v2_probe_F0_I32_phi000_caphalf_r01",
+        "Y": 0.05501946377954498,
+        "relative_change": 0.00010781478168552056,
+        "pass": true
+      },
+      "F1_dx048": {
+        "run_id": "bias_v2_probe_F1_I32_phi000_dx048_r01",
+        "Y": 0.0916025100440329,
+        "relative_change": 0.002584367201671153,
+        "pass": true
+      },
+      "F1_dt005": {
+        "run_id": "bias_v2_probe_F1_I32_phi000_dt005_r01",
+        "Y": 0.08715506583548993,
+        "relative_change": -0.04609266179396881,
+        "pass": true
+      },
+      "F1_box900": {
+        "run_id": "bias_v2_probe_F1_I32_phi000_box900_r01",
+        "Y": 0.09180524786270675,
+        "relative_change": 0.0048033213279855685,
+        "pass": true
+      },
+      "F1_caphalf": {
+        "run_id": "bias_v2_probe_F1_I32_phi000_caphalf_r01",
+        "Y": 0.09136981822169318,
+        "relative_change": 3.7568174643114196e-05,
+        "pass": true
+      }
+    },
+    "eta32_relative": {
+      "F0": 8.810808339775076e-05,
+      "F1": -0.0001448838867150863
+    },
+    "grid32_relative": {
+      "F0": 1.2010531208872986e-06,
+      "F1": -1.576912162316197e-06
+    },
+    "range32_relative": {
+      "F0": 1.6684565483645579e-12,
+      "F1": 1.3559364391932096e-12
+    },
+    "controls_pass": true,
+    "cap_warning_present": true,
+    "cap_mitigated_by_box": true,
+    "total_high_intensity_error": {
+      "F0": 0.019571300175313108,
+      "F1": 0.053664379298501985
+    },
+    "estimated_library_hours": 22.0,
+    "estimated_library_note": "52 library + 16 midpoint propagations at measured R2 rates plus readouts; scheduling estimate, not guarantee",
+    "status": "INCOMPLETE"
+  },
+  "current_F1_high_error_envelope_formula_value": 0.12519605842280054,
+  "note": "envelope value diagnoses duplicate error categories; it is not a new numerical error measurement"
+}

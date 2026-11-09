@@ -7,14 +7,17 @@
 #
 # Hard rule: do NOT recompile. "Same source" is NOT "same binary".
 # DO NOT treat as GH5 clearance. CEP-π / GH5 remain closed.
+#
+# Partition: part_2 (工作区2) when part_1 is congested.
+#   8 cores / 56G; wall ~4-5× part_1; OMP threads = SLURM_CPUS_PER_TASK.
 #=============================================================================
 #SBATCH --job-name=a0_f112_gh3_ctrl
-#SBATCH --partition=part_1
+#SBATCH --partition=part_2
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=36
-#SBATCH --exclusive
-#SBATCH --time=12:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=56G
+#SBATCH --time=48:00:00
 #SBATCH --no-requeue
 #SBATCH --output=a0_f112_gh3_ctrl_%j.out
 #SBATCH --error=a0_f112_gh3_ctrl_%j.err
@@ -112,12 +115,14 @@ echo " binary_sha256=${BIN_SHA_REF}"
 echo " source_sha256=${SRC_SHA_REF}"
 echo " build_key=${BUILD_KEY_REF}"
 echo " propagate_ids: ${REF_PROP_IDS} -> ${PROP_IDS}"
+echo " partition=part_2 cpus=${SLURM_CPUS_PER_TASK:-8} mem=56G wall=48h"
 echo " OUTDIR=${OUTDIR}"
 echo " host=$(hostname) date=$(date)"
 echo "============================================="
 
-# Exact OpenMP/MKL binding as smoke 28861
-export OMP_NUM_THREADS=36
+# OpenMP/MKL binding: match part_2 allocation (8 cores), same policy as smoke.
+NTHREADS="${SLURM_CPUS_PER_TASK:-8}"
+export OMP_NUM_THREADS="${NTHREADS}"
 export MKL_NUM_THREADS=1
 export MKL_DYNAMIC=FALSE
 export OMP_PLACES=cores

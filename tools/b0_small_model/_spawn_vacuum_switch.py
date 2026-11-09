@@ -1,0 +1,31 @@
+import os
+import subprocess
+import time
+from pathlib import Path
+
+py = Path(r"C:\Users\26507\AppData\Local\Python\pythoncore-3.14-64\python.exe")
+root = Path(r"C:\Users\26507\Documents\New_SBEs\Quantum-light")
+out = root / "results" / "q_line" / "qinput_a_shared_kk_vacuum_switch_20261101"
+out.mkdir(parents=True, exist_ok=True)
+script = root / "tools" / "b0_small_model" / "q8_m0_qinput_shared_kk_vacuum_switch_20261101.py"
+env = dict(os.environ)
+env["PYTHONPATH"] = str(root / "tools" / "b0_small_model")
+env["PYTHONUNBUFFERED"] = "1"
+env["OPENBLAS_NUM_THREADS"] = "1"
+env["OMP_NUM_THREADS"] = "1"
+log = out / "spawned.txt"
+p = subprocess.Popen(
+    [str(py), "-u", str(script),
+     "--report", str(out / "switch.json"),
+     "--progress", str(out / "progress.txt")],
+    cwd=str(root),
+    env=env,
+    stdout=open(out / "stdout.txt", "w", encoding="utf-8"),
+    stderr=subprocess.STDOUT,
+    creationflags=0x00000008 | 0x00000200 | 0x08000000,
+)
+log.write_text(
+    f"pid={p.pid} t={time.strftime('%Y-%m-%dT%H:%M:%S')}\n",
+    encoding="utf-8",
+)
+print(p.pid)

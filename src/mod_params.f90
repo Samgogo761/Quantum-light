@@ -85,6 +85,9 @@ module mod_params
   real(dp) :: T2_fs     = 10.0_dp
   real(dp) :: T2_cycles = -1.0_dp
   real(dp) :: T2        = 0.0_dp
+  ! If .false.: skip instantaneous diagonalization, coherence decay,
+  ! basis transforms, AND Hermitianization (true off — not large-T2).
+  logical  :: dephasing_enabled = .true.
 
   ! --- Quantum-light / phase-space ensemble (legacy namelist name: &bsv) ---
   ! Historical path: random_phase_exponential with I_bar scale (<I>=2*I_bar).
@@ -106,6 +109,7 @@ module mod_params
   character(256) :: bsv_nodes_file = ''     ! read (from_file) and/or write path
   logical  :: bsv_write_nodes = .true.
   logical  :: bsv_save_all_complex = .false.
+  logical  :: bsv_save_jt = .false.         ! write Jt_node_XXXX.dat per propagated node
   character(64) :: bsv_harmonics = '2,5,7,9,10'
   character(256) :: bsv_propagate_ids = ''   ! comma-separated subset; empty = all nodes
 
@@ -142,14 +146,14 @@ module mod_params
                        ncyc_2, env_type_2, ellipticity_2, delta_phase_deg_2
   namelist /external_field/ use_external_A, external_A_file
   namelist /timestep/  dt, n_dt_deph
-  namelist /dephasing/ T2_fs, T2_cycles
+  namelist /dephasing/ T2_fs, T2_cycles, dephasing_enabled
   namelist /bsv/       bsv_enabled, bsv_n_samples, bsv_mean_intensity, bsv_seed, &
                        bsv_state_type, bsv_squeeze_r, bsv_squeeze_theta_deg, &
                        bsv_alpha0_abs, bsv_alpha0_phase_deg, bsv_thermal_nbar, &
                        bsv_save_complex, bsv_save_ics_cs, &
                        bsv_sampling_mode, bsv_gh_order, bsv_nodes_file, &
-                       bsv_write_nodes, bsv_save_all_complex, bsv_harmonics, &
-                       bsv_propagate_ids
+                       bsv_write_nodes, bsv_save_all_complex, bsv_save_jt, &
+                       bsv_harmonics, bsv_propagate_ids
   namelist /method/    gauge_method
   namelist /diagnostics/ run_pcenter_check, stop_after_diagnostics, &
                          pcenter_summary_file, pcenter_kresolved_file
@@ -323,6 +327,7 @@ contains
     else
       write(*,'(A,ES12.4,A)') '  T2 input     : ', T2_fs, ' fs'
     end if
+    write(*,'(A,L1)')      '  dephasing_enabled : ', dephasing_enabled
     write(*,'(A,I0)')      '  n_dt_deph    : ', n_dt_deph
     if (bsv_enabled) then
       write(*,'(A)')       '--- Quantum-light ensemble (/bsv) ---------'
@@ -335,6 +340,7 @@ contains
       write(*,'(A,F10.2,A)') '  squeeze_theta: ', bsv_squeeze_theta_deg, ' deg'
       write(*,'(A,L1)')    '  save_complex : ', bsv_save_complex
       write(*,'(A,L1)')    '  save_ics_cs  : ', bsv_save_ics_cs
+      write(*,'(A,L1)')    '  save_jt      : ', bsv_save_jt
       write(*,'(A,A)')     '  sampling_mode: ', trim(bsv_sampling_mode)
       write(*,'(A,I0)')    '  gh_order     : ', bsv_gh_order
       if (len_trim(bsv_nodes_file) > 0) then

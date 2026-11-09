@@ -1,0 +1,34 @@
+{
+  "schema": "ql-tip-plan-file-inventory-v1",
+  "date": "2026-11-06",
+  "excludes": "file_inventory.json itself",
+  "scientific_execution": false,
+  "qmath_registration": "BLOCKED_EXISTING_ORIGINAL_HASH_CONFLICT",
+  "files": [
+    {
+      "path": "QL-TIP-1D/plans/20261106_finish_v3/EXECUTION_TASKBOOK.md",
+      "bytes": 27090,
+      "sha256": "661d222e4aa7000ad911c0e95c992b4a99f92df6f1a682379b69ca6a23b39555"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_finish_v3/START_HERE.md",
+      "bytes": 2162,
+      "sha256": "571dcdf6e912e88bcfee0fae342cbb1825804a3772bf1e126b1bce3cf6fd223a"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_finish_v3/PLAN_MANIFEST.json",
+      "bytes": 38776,
+      "sha256": "401cbe0aa1e10cc9d79eaf7972e8bc36c96e6419623d9a78bf6ed7a9e82e0d32"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_finish_v3/build_plan_manifest.py",
+      "bytes": 11379,
+      "sha256": "6d58c541b21a4ad47d5d3b19bce20e646228c55ff35866caf6b0000d820da632"
+    },
+    {
+      "path": "QL-TIP-1D/plans/20261106_finish_v3/ARCHIVE_STATUS.md",
+      "bytes": 2003,
+      "sha256": "3c68c38d51e79c3689a34cefd032c4be9bf111a0793a51cd59d80596f0d21278"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "shell_trial_nnkp_v1",
+  "n_spinor": 288,
+  "rvalue": 1,
+  "zona_bohr_inv": 1.0,
+  "radial_rvalue_1": "R(r)=2*alpha**(3/2)*exp(-alpha*r)  (QE 7.2 pw2wannier90 radialpart)",
+  "not": [
+    "spectroscopic I 5d atomic radial",
+    "UPF PP_CHI",
+    "new Wannier parent",
+    "chemical I-d 144"
+  ],
+  "shells": [
+    {
+      "shell": "Cr_s",
+      "species": "Cr",
+      "l": 0,
+      "n_mr": 1,
+      "index0": 0,
+      "n_spinor": 8
+    },
+    {
+      "shell": "Cr_p",
+      "species": "Cr",
+      "l": 1,
+      "n_mr": 3,
+      "index0": 8,
+      "n_spinor": 24
+    },
+    {
+      "shell": "Cr_d",
+      "species": "Cr",
+      "l": 2,
+      "n_mr": 5,
+      "index0": 32,
+      "n_spinor": 40
+    },
+    {
+      "shell": "I_s",
+      "species": "I",
+      "l": 0,
+      "n_mr": 1,
+      "index0": 72,
+      "n_spinor": 24
+    },
+    {
+      "shell": "I_p",
+      "species": "I",
+      "l": 1,
+      "n_mr": 3,
+      "index0": 96,
+      "n_spinor": 72
+    },
+    {
+      "shell": "I_d",
+      "species": "I",
+      "l": 2,
+      "n_mr": 5,
+      "index0": 168,
+      "n_spinor": 120
+    }
+  ],
+  "source_scf": "deploy\\a0_layerA_m88full\\a1_fewk_nscf\\CrI3_scf_soc_a1h_clean.in",
+  "template_nnkp": "deploy\\a0_layerA_m88full\\a1_fewk_nscf\\CrI3_a1o.nnkp"
+}

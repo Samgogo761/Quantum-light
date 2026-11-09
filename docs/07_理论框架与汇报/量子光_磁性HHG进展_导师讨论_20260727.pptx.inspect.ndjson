@@ -1,0 +1,641 @@
+{"kind":"deck","id":"pr/q9bazy","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"DEFAULT"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"导师讨论版 · 课题进展与路线拍板","textShapes":10}
+{"kind":"shape","id":"sh/547294r6","slide":1,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/vmdcj2xw","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4r6dg7et","slide":1,"text":"导师讨论版 · 课题进展与路线拍板","textPreview":"导师讨论版 · 课题进展与路线拍板","textChars":17,"textLines":1,"bbox":[72,58,650,28]}
+{"kind":"textbox","id":"sh/5sfepcfe","slide":1,"text":"量子光驱动 · 双层 AFM-CrI₃","textPreview":"量子光驱动 · 双层 AFM-CrI₃","textChars":19,"textLines":1,"bbox":[72,150,1000,74]}
+{"kind":"textbox","id":"sh/ipovexwn","slide":1,"text":"从可信磁性 HHG 模型，到可审计的量子输出统计","textPreview":"从可信磁性 HHG 模型，到可审计的量子输出统计","textChars":24,"textLines":1,"bbox":[72,238,1020,62]}
+{"kind":"shape","id":"sh/3qxwn2x8","slide":1,"bbox":[72,325,470,5]}
+{"kind":"shape","id":"sh/sfqdkrep","slide":1,"bbox":[72,370,850,190]}
+{"kind":"textbox","id":"sh/dgzetcfa","slide":1,"text":"本次汇报的中心任务","textPreview":"本次汇报的中心任务","textChars":9,"textLines":1,"bbox":[90,384,814,30]}
+{"kind":"textbox","id":"sh/1cvuxc7e","slide":1,"text":"冻结经典磁性 HHG 的生产模型与适用阶数；\n把 BSV 平均谱（R1）和真正量子输出统计（R2）分开；\n在写 QRT/QFI 生产代码前，先通过开放系统与 input-output 方法闸门。","textPreview":"冻结经典磁性 HHG 的生产模型与适用阶数； | 把 BSV 平均谱（R1）和真正量子输出统计（R2）分开； | 在写 QRT/QFI 生产代码前，先通过开放系统与 input-output 方法闸门。","textChars":97,"textLines":3,"bbox":[90,422,814,124]}
+{"kind":"shape","id":"sh/0bmd476t","slide":1,"bbox":[954,378,245,82]}
+{"kind":"textbox","id":"sh/zadcv2p8","slide":1,"text":"M88-c20","textPreview":"M88-c20","textChars":7,"textLines":1,"bbox":[966,388,221,35]}
+{"kind":"textbox","id":"sh/e94v2hon","slide":1,"text":"H1-H9 / Jₒ H2-H8","textPreview":"H1-H9 / Jₒ H2-H8","textChars":16,"textLines":1,"bbox":[966,426,221,22]}
+{"kind":"shape","id":"sh/90ve1w7q","slide":1,"bbox":[954,478,245,82]}
+{"kind":"textbox","id":"sh/ozmd8r65","slide":1,"text":"full112","textPreview":"full112","textChars":7,"textLines":1,"bbox":[966,488,221,35]}
+{"kind":"textbox","id":"sh/nydczmpk","slide":1,"text":"高阶与绝对基准","textPreview":"高阶与绝对基准","textChars":7,"textLines":1,"bbox":[966,526,221,22]}
+{"kind":"textbox","id":"sh/mx4v6hoz","slide":1,"text":"2026-07-27","textPreview":"2026-07-27","textChars":10,"textLines":1,"bbox":[72,640,220,26]}
+{"kind":"image","id":"im/5cze9svq","slide":1,"name":"Image 0","bbox":[672,305.79,470,270]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"开场只说清楚两件事：经典数值链已可生产，但量子优势还没有被证明。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/00_当前状态/课题整体进展报告_理论与文献审校_20260727.md\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/09_少带模型/P2_k60_验收报告_20260721.md\n[/Sources]"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"开场 · 今天要拍板","textShapes":13}
+{"kind":"shape","id":"sh/9072xkry","slide":2,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/hcvy14ne","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/gbmxszmt","slide":2,"text":"开场 · 今天要拍板","textPreview":"开场 · 今天要拍板","textChars":10,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":2,"text":"三个决定，把后续工作从“并行发散”变成“分层推进”","textPreview":"三个决定，把后续工作从“并行发散”变成“分层推进”","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/u94fqp4n","slide":2,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/p0vy54na","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/4zmxwzmp","slide":2,"bbox":[80,190,1120,105]}
+{"kind":"textbox","id":"sh/mlgvq147","slide":2,"text":"① 生产模型","textPreview":"① 生产模型","textChars":6,"textLines":1,"bbox":[102,208,190,28]}
+{"kind":"textbox","id":"sh/nmpcj6ls","slide":2,"text":"M88-c20@k40","textPreview":"M88-c20@k40","textChars":11,"textLines":1,"bbox":[315,206,260,34]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":2,"text":"冻结到 H1-H9；N-奇磁性通道 Jₒ 到 H2-H8。","textPreview":"冻结到 H1-H9；N-奇磁性通道 Jₒ 到 H2-H8。","textChars":29,"textLines":1,"bbox":[600,210,555,58]}
+{"kind":"shape","id":"sh/9o7ulg3y","slide":2,"bbox":[80,325,1120,105]}
+{"kind":"textbox","id":"sh/a9gvulkj","slide":2,"text":"② R1 复核","textPreview":"② R1 复核","textChars":7,"textLines":1,"bbox":[102,343,190,28]}
+{"kind":"textbox","id":"sh/ba9cn6l4","slide":2,"text":"量子输入平均谱","textPreview":"量子输入平均谱","textChars":7,"textLines":1,"bbox":[315,341,260,34]}
+{"kind":"textbox","id":"sh/wbidwb29","slide":2,"text":"用生产模型重跑，并补高强度尾部节点与误差预算。","textPreview":"用生产模型重跑，并补高强度尾部节点与误差预算。","textChars":23,"textLines":1,"bbox":[600,345,555,58]}
+{"kind":"shape","id":"sh/xcrupg3u","slide":2,"bbox":[80,460,1120,105]}
+{"kind":"textbox","id":"sh/id0vylkf","slide":2,"text":"③ R2 闸门","textPreview":"③ R2 闸门","textChars":7,"textLines":1,"bbox":[102,478,190,28]}
+{"kind":"textbox","id":"sh/je9crql0","slide":2,"text":"量子输出统计","textPreview":"量子输出统计","textChars":6,"textLines":1,"bbox":[315,476,260,34]}
+{"kind":"textbox","id":"sh/ru5cbqd4","slide":2,"text":"先验证 Lindblad/QRT 或受控 input-output，再计算 g²、压缩和 QFI。","textPreview":"先验证 Lindblad/QRT 或受控 input-output，再计算 g²、压缩和 QFI。","textChars":49,"textLines":1,"bbox":[600,480,555,58]}
+{"kind":"textbox","id":"sh/69wbilcj","slide":2,"text":"拍板标准：每个结论都写明“模型、阶数、可观测量、误差和升级路径”。","textPreview":"拍板标准：每个结论都写明“模型、阶数、可观测量、误差和升级路径”。","textChars":33,"textLines":1,"bbox":[80,612,1120,35]}
+{"kind":"image","id":"im/do3yp03u","slide":2,"name":"Image 0","bbox":[150,286,980,90.11]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"本页不讨论细节，只让导师知道需要作出哪三个选择。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"总图 · 研究分层","textShapes":23}
+{"kind":"shape","id":"sh/cza94vmx","slide":3,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"text":"总图 · 研究分层","textPreview":"总图 · 研究分层","textChars":9,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/e10f2twf","slide":3,"text":"L0-L3：把“平均谱增强”和“严格量子优势”分开","textPreview":"L0-L3：把“平均谱增强”和“严格量子优势”分开","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":3,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/03ix43e5","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/14ryd8fq","slide":3,"bbox":[78,225,255,260]}
+{"kind":"textbox","id":"sh/6d0fytg3","slide":3,"text":"L0","textPreview":"L0","textChars":2,"textLines":1,"bbox":[96,243,70,38]}
+{"kind":"textbox","id":"sh/re9g7yxo","slide":3,"text":"经典磁性 HHG","textPreview":"经典磁性 HHG","textChars":8,"textLines":1,"bbox":[96,295,220,52]}
+{"kind":"textbox","id":"sh/sfix03y9","slide":3,"text":"SBE、N-宇称、模型与 k 网格","textPreview":"SBE、N-宇称、模型与 k 网格","textChars":17,"textLines":1,"bbox":[96,357,220,62]}
+{"kind":"textbox","id":"sh/tgry9ofu","slide":3,"text":"已收口","textPreview":"已收口","textChars":3,"textLines":1,"bbox":[96,439,220,28]}
+{"kind":"shape","id":"sh/a9kfadwn","slide":3,"bbox":[332,345,20,3]}
+{"kind":"textbox","id":"sh/batgjixs","slide":3,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[348,333,20,24]}
+{"kind":"shape","id":"sh/l4fi9cza","slide":3,"bbox":[370,203,255,260]}
+{"kind":"textbox","id":"sh/k3m1g7yp","slide":3,"text":"L1","textPreview":"L1","textChars":2,"textLines":1,"bbox":[388,221,70,38]}
+{"kind":"textbox","id":"sh/z2d07mh4","slide":3,"text":"量子输入平均谱","textPreview":"量子输入平均谱","textChars":7,"textLines":1,"bbox":[388,273,220,52]}
+{"kind":"textbox","id":"sh/y14jehgj","slide":3,"text":"对输入强度/相空间分布加权","textPreview":"对输入强度/相空间分布加权","textChars":13,"textLines":1,"bbox":[388,335,220,62]}
+{"kind":"textbox","id":"sh/x0vi5czy","slide":3,"text":"旧 pilot；待重跑","textPreview":"旧 pilot；待重跑","textChars":11,"textLines":1,"bbox":[388,417,220,28]}
+{"kind":"shape","id":"sh/czmhc7id","slide":3,"bbox":[624,323,20,3]}
+{"kind":"textbox","id":"sh/byd032h8","slide":3,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[640,311,20,24]}
+{"kind":"shape","id":"sh/ax4zax0n","slide":3,"bbox":[662,181,255,260]}
+{"kind":"textbox","id":"sh/hwzihwzi","slide":3,"text":"L2","textPreview":"L2","textChars":2,"textLines":1,"bbox":[680,199,70,38]}
+{"kind":"textbox","id":"sh/wv61obyx","slide":3,"text":"输出光量子统计","textPreview":"输出光量子统计","textChars":7,"textLines":1,"bbox":[680,251,220,52]}
+{"kind":"textbox","id":"sh/4nuhs7uh","slide":3,"text":"Cconn → 模式投影 → g²/压缩","textPreview":"Cconn → 模式投影 → g²/压缩","textChars":20,"textLines":1,"bbox":[680,313,220,62]}
+{"kind":"textbox","id":"sh/po3ilcvm","slide":3,"text":"方法定义中","textPreview":"方法定义中","textChars":5,"textLines":1,"bbox":[680,395,220,28]}
+{"kind":"shape","id":"sh/21szqxcb","slide":3,"bbox":[916,301,20,3]}
+{"kind":"textbox","id":"sh/32l0j2dw","slide":3,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[932,289,20,24]}
+{"kind":"shape","id":"sh/cruhwrud","slide":3,"bbox":[954,159,255,260]}
+{"kind":"textbox","id":"sh/ds3ipcvy","slide":3,"text":"L3","textPreview":"L3","textChars":2,"textLines":1,"bbox":[972,177,70,38]}
+{"kind":"textbox","id":"sh/qpczuhc7","slide":3,"text":"严格量子优势","textPreview":"严格量子优势","textChars":6,"textLines":1,"bbox":[972,229,220,52]}
+{"kind":"textbox","id":"sh/rql0nmds","slide":3,"text":"等资源经典基准、QFI、矩问题","textPreview":"等资源经典基准、QFI、矩问题","textChars":15,"textLines":1,"bbox":[972,291,220,62]}
+{"kind":"textbox","id":"sh/0ve10ru9","slide":3,"text":"长期目标","textPreview":"长期目标","textChars":4,"textLines":1,"bbox":[972,373,220,28]}
+{"kind":"textbox","id":"sh/1wnitwvu","slide":3,"text":"当前策略：先把 L0 变成可靠论文结果；L1 可并行复核；L2 先过方法闸门；L3 暂不宣称已实现。","textPreview":"当前策略：先把 L0 变成可靠论文结果；L1 可并行复核；L2 先过方法闸门；L3 暂不宣称已实现。","textChars":50,"textLines":1,"bbox":[85,570,1110,54]}
+{"kind":"image","id":"im/vmlojqd0","slide":3,"name":"Image 0","bbox":[70,199,500,404]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"这张图是全片导航。后面每一页都对应其中一层。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"世界坐标 · 已有工作与本课题增量","textShapes":19}
+{"kind":"shape","id":"sh/1cj2d8b6","slide":4,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/p0batw72","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/oz29krqh","slide":4,"text":"世界坐标 · 已有工作与本课题增量","textPreview":"世界坐标 · 已有工作与本课题增量","textChars":17,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/3ytsrmpw","slide":4,"text":"文献已经回答了什么；我们还必须回答什么","textPreview":"文献已经回答了什么；我们还必须回答什么","textChars":19,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/2xkrih8b","slide":4,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/1wbapc7q","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":4,"text":"已有工作","textPreview":"已有工作","textChars":4,"textLines":1,"bbox":[90,172,275,30]}
+{"kind":"textbox","id":"sh/fu9sn2p0","slide":4,"text":"已经建立","textPreview":"已经建立","textChars":4,"textLines":1,"bbox":[385,172,480,30]}
+{"kind":"textbox","id":"sh/et0reh8f","slide":4,"text":"留下的空白","textPreview":"留下的空白","textChars":5,"textLines":1,"bbox":[890,172,290,30]}
+{"kind":"shape","id":"sh/tsrqlc7u","slide":4,"bbox":[78,208,1120,76]}
+{"kind":"textbox","id":"sh/sri9s7q9","slide":4,"text":"Liu 2022 / Sun 2019","textPreview":"Liu 2022 / Sun 2019","textChars":19,"textLines":1,"bbox":[96,226,270,40]}
+{"kind":"textbox","id":"sh/ilwf69kv","slide":4,"text":"CrI₃ 经典 HHG、AFM SHG 与磁序读出","textPreview":"CrI₃ 经典 HHG、AFM SHG 与磁序读出","textChars":25,"textLines":1,"bbox":[385,224,480,44]}
+{"kind":"textbox","id":"sh/jm5gze1g","slide":4,"text":"缺量子输入与输出统计","textPreview":"缺量子输入与输出统计","textChars":10,"textLines":1,"bbox":[890,224,285,44]}
+{"kind":"shape","id":"sh/knex8j21","slide":4,"bbox":[78,300,1120,76]}
+{"kind":"textbox","id":"sh/5ony1oj6","slide":4,"text":"Gorlach 2023 / Rasputnyi 2024","textPreview":"Gorlach 2023 / Rasputnyi 2024","textChars":29,"textLines":1,"bbox":[96,318,270,40]}
+{"kind":"textbox","id":"sh/axcf29kj","slide":4,"text":"量子输入可改变 plateau/cutoff；BSV 实验增强","textPreview":"量子输入可改变 plateau/cutoff；BSV 实验增强","textChars":31,"textLines":1,"bbox":[385,316,480,44]}
+{"kind":"textbox","id":"sh/vy5gbe14","slide":4,"text":"主要是输入统计对平均谱","textPreview":"主要是输入统计对平均谱","textChars":11,"textLines":1,"bbox":[890,316,285,44]}
+{"kind":"shape","id":"sh/wzex4z2p","slide":4,"bbox":[78,392,1120,76]}
+{"kind":"textbox","id":"sh/xknyx4ja","slide":4,"text":"Theidel 2024 / Stammer 2024","textPreview":"Theidel 2024 / Stammer 2024","textChars":27,"textLines":1,"bbox":[96,410,270,40]}
+{"kind":"textbox","id":"sh/mtcfypkn","slide":4,"text":"固体 HHG 的 g²、压缩和模间关联","textPreview":"固体 HHG 的 g²、压缩和模间关联","textChars":19,"textLines":1,"bbox":[385,408,480,44]}
+{"kind":"textbox","id":"sh/nulw7u18","slide":4,"text":"未结合 AFM N-宇称","textPreview":"未结合 AFM N-宇称","textChars":12,"textLines":1,"bbox":[890,408,285,44]}
+{"kind":"shape","id":"sh/fm5c3q54","slide":4,"bbox":[78,484,1120,76]}
+{"kind":"textbox","id":"sh/elwba54j","slide":4,"text":"González-Monge & Feist 2025","textPreview":"González-Monge & Feist 2025","textChars":27,"textLines":1,"bbox":[96,502,270,40]}
+{"kind":"textbox","id":"sh/18nu50nu","slide":4,"text":"realistic free-space 平均谱可由半经典平均高度复现","textPreview":"realistic free-space 平均谱可由半经典平均高度复现","textChars":35,"textLines":1,"bbox":[385,500,480,44]}
+{"kind":"textbox","id":"sh/0netcvm9","slide":4,"text":"严格优势必须跨过的反例","textPreview":"严格优势必须跨过的反例","textChars":11,"textLines":1,"bbox":[890,500,285,44]}
+{"kind":"textbox","id":"sh/rilczq5s","slide":4,"text":"本课题增量 = 可信 AFM-CrI₃ 模型 + N-宇称复响应 + 可审计的量子输出与经典基准。","textPreview":"本课题增量 = 可信 AFM-CrI₃ 模型 + N-宇称复响应 + 可审计的量子输出与经典基准。","textChars":49,"textLines":1,"bbox":[80,610,1120,38]}
+{"kind":"image","id":"im/q5onm50v","slide":4,"name":"Image 0","bbox":[72,187,1136,454]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"强调：不是首次做 CrI3 HHG，也不能把平均谱增强直接称为量子优势。\n\n[Sources]\n- https://doi.org/10.1209/0295-5075/ac9c26\n- https://doi.org/10.1038/s41586-019-1445-3\n- https://doi.org/10.1038/s41567-023-02127-y\n- https://doi.org/10.1038/s41567-024-02659-x\n- https://doi.org/10.1103/PRXQuantum.5.040319\n- https://doi.org/10.1103/PhysRevLett.132.143603\n- https://arxiv.org/abs/2512.06602\n[/Sources]"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"物理对象 · 为什么选双层 AFM-CrI₃","textShapes":10}
+{"kind":"shape","id":"sh/dgbulwnm","slide":5,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/m5kbi1oj","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"text":"物理对象 · 为什么选双层 AFM-CrI₃","textPreview":"物理对象 · 为什么选双层 AFM-CrI₃","textChars":22,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":5,"text":"磁序既改变非线性响应，也提供可验证的 N-宇称结构","textPreview":"磁序既改变非线性响应，也提供可验证的 N-宇称结构","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/ahkvi1cb","slide":5,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/k7mxovud","slide":5,"bbox":[72,190,330,350]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"text":"对称性","textPreview":"对称性","textChars":3,"textLines":1,"bbox":[90,204,294,30]}
+{"kind":"textbox","id":"sh/i54fmlc7","slide":5,"text":"空间反演 P 破缺\n时间反演 T 破缺\n组合 PT 守恒\n\n自旋为轴矢量；层交换使 +N 与 −N 对应。","textPreview":"空间反演 P 破缺 | 时间反演 T 破缺 | 组合 PT 守恒 |  | 自旋为轴矢量；层交换使 +N 与 −N 对应。","textChars":53,"textLines":5,"bbox":[90,242,294,284]}
+{"kind":"shape","id":"sh/j6dwfqds","slide":5,"bbox":[430,190,390,350]}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"text":"选择定则","textPreview":"选择定则","textChars":4,"textLines":1,"bbox":[448,204,354,30]}
+{"kind":"textbox","id":"sh/tcfel0vu","slide":5,"text":"Jₙ(−N) = (−1)ⁿ⁺¹ Jₙ(N)\n\n奇次：N-偶\n偶次：N-奇\n\n前提：+N/−N 必须是严格 P 共轭，而非两次独立收敛的近似结构。","textPreview":"Jₙ(−N) = (−1)ⁿ⁺¹ Jₙ(N) |  | 奇次：N-偶 | 偶次：N-奇 |  | 前提：+N/−N 必须是严格 P 共轭，而非两次独立收敛的近似结构。","textChars":73,"textLines":6,"bbox":[448,242,354,284]}
+{"kind":"shape","id":"sh/hgrmpwj2","slide":5,"bbox":[848,190,360,350]}
+{"kind":"textbox","id":"sh/gfi5grih","slide":5,"text":"材料机制","textPreview":"材料机制","textChars":4,"textLines":1,"bbox":[866,204,324,30]}
+{"kind":"textbox","id":"sh/fe94nm1w","slide":5,"text":"Cr-d：磁矩与低能带边\nI-p：SOC、杂化与光学矩阵元\n界面 I-pz：层间机制候选\n\n因此少带化不能只看能带误差。","textPreview":"Cr-d：磁矩与低能带边 | I-p：SOC、杂化与光学矩阵元 | 界面 I-pz：层间机制候选 |  | 因此少带化不能只看能带误差。","textChars":60,"textLines":5,"bbox":[866,242,324,284]}
+{"kind":"textbox","id":"sh/ud0ne10b","slide":5,"text":"选择定则既是物理信号，也是求解器、TB 配对和带空间的 debug 工具。","textPreview":"选择定则既是物理信号，也是求解器、TB 配对和带空间的 debug 工具。","textChars":37,"textLines":1,"bbox":[80,592,1120,38]}
+{"kind":"image","id":"im/apobah8v","slide":5,"name":"Image 0","bbox":[64,174,1152,430]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"这里明确严格 P 共轭是选择定则数值检验的前提。\n\n[Sources]\n- https://doi.org/10.1038/s41586-019-1445-3\n[/Sources]"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"PART 1","textShapes":4}
+{"kind":"shape","id":"sh/yhg7epsj","slide":6,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/zi98nu94","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"text":"PART 1","textPreview":"PART 1","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/98rqt4r6","slide":6,"text":"验证链","textPreview":"验证链","textChars":3,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/ml07i9sv","slide":6,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/7m98ru9g","slide":6,"text":"先回答：求解器、母模型和对称性基线是否足够可信？","textPreview":"先回答：求解器、母模型和对称性基线是否足够可信？","textChars":24,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"进入证据部分。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"验证链 · 外部与内部基准","textShapes":13}
+{"kind":"shape","id":"sh/cb2tkvap","slide":7,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/2x8nqp83","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x4j6p47q","slide":7,"text":"验证链 · 外部与内部基准","textPreview":"验证链 · 外部与内部基准","textChars":13,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/c3a5wzq5","slide":7,"text":"不是只对一张谱：四条相互独立的证据","textPreview":"不是只对一张谱：四条相互独立的证据","textChars":17,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/b2h4nupk","slide":7,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/a18nup8z","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/lsj6t47m","slide":7,"bbox":[70,185,550,315]}
+{"kind":"textbox","id":"sh/wneps3ap","slide":7,"text":"ZnO：QE → Wannier 能带插值链","textPreview":"ZnO：QE → Wannier 能带插值链","textChars":22,"textLines":1,"bbox":[82,467,526,22]}
+{"kind":"shape","id":"sh/honq18ru","slide":7,"bbox":[660,185,550,315]}
+{"kind":"textbox","id":"sh/vm58zi94","slide":7,"text":"hBN 解析模型：k 网格与极化分量 benchmark","textPreview":"hBN 解析模型：k 网格与极化分量 benchmark","textChars":28,"textLines":1,"bbox":[672,467,526,22]}
+{"kind":"shape","id":"sh/8jupo3ad","slide":7,"bbox":[80,535,250,82]}
+{"kind":"textbox","id":"sh/9k3qx8ry","slide":7,"text":"ZnO / hBN","textPreview":"ZnO / hBN","textChars":9,"textLines":1,"bbox":[92,545,226,35]}
+{"kind":"textbox","id":"sh/mxc7mts7","slide":7,"text":"外部链","textPreview":"外部链","textChars":3,"textLines":1,"bbox":[92,583,226,22]}
+{"kind":"shape","id":"sh/7yl8vy9s","slide":7,"bbox":[365,535,250,82]}
+{"kind":"textbox","id":"sh/sfy907ah","slide":7,"text":"H1 弱场指数 ≈ 1","textPreview":"H1 弱场指数 ≈ 1","textChars":11,"textLines":1,"bbox":[377,545,226,35]}
+{"kind":"textbox","id":"sh/tg7q9sr2","slide":7,"text":"线性极限","textPreview":"线性极限","textChars":4,"textLines":1,"bbox":[377,583,226,22]}
+{"kind":"shape","id":"sh/na9sz6tk","slide":7,"bbox":[650,535,250,82]}
+{"kind":"textbox","id":"sh/290bq1cz","slide":7,"text":"|J(0)| ~ 10⁻¹⁹","textPreview":"|J(0)| ~ 10⁻¹⁹","textChars":14,"textLines":1,"bbox":[662,545,226,35]}
+{"kind":"textbox","id":"sh/pcra1wba","slide":7,"text":"基态","textPreview":"基态","textChars":2,"textLines":1,"bbox":[662,583,226,22]}
+{"kind":"shape","id":"sh/obitsrup","slide":7,"bbox":[935,535,250,82]}
+{"kind":"textbox","id":"sh/betc36tg","slide":7,"text":"k/带窗/±N","textPreview":"k/带窗/±N","textChars":7,"textLines":1,"bbox":[947,545,226,35]}
+{"kind":"textbox","id":"sh/adkbu1cv","slide":7,"text":"内部一致性","textPreview":"内部一致性","textChars":5,"textLines":1,"bbox":[947,583,226,22]}
+{"kind":"image","id":"im/bapkral4","slide":7,"name":"Image 0","bbox":[102,207,1076,75.17]}
+{"kind":"image","id":"im/wbylkfmp","slide":7,"name":"Image 1","bbox":[382.91,288.17,162.55,22]}
+{"kind":"image","id":"im/zi5kjqlw","slide":7,"name":"","alt":"ZnO：QE → Wannier 能带插值链","bbox":[78,193,534,271]}
+{"kind":"image","id":"im/1gfipcvq","slide":7,"name":"","alt":"hBN 解析模型：k 网格与极化分量 benchmark","bbox":[668,193,534,271]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"这些 benchmark 用于排除传播、插值、初态和谱后处理的系统性错误；不是声称 ZnO/hBN 与 CrI3 物理相同。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/examples/ZnO_wurtzite_qe_wannier/output/ZnO_qe_vs_wannier_bands_near_gap_clean.png\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/figures/hBN_benchmark/hbn_model_k_scan_T2_5fs.svg\n[/Sources]"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"验证链 · AFM ±N","textShapes":17}
+{"kind":"shape","id":"sh/18byd4zy","slide":8,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/kredcr6t","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jq5w365o","slide":8,"text":"验证链 · AFM ±N","textPreview":"验证链 · AFM ±N","textChars":12,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/i5wva1o3","slide":8,"text":"H2 异常已经追溯到 DFT/Wannier 配对，而非 SBE 传播","textPreview":"H2 异常已经追溯到 DFT/Wannier 配对，而非 SBE 传播","textChars":35,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/x4ne1wni","slide":8,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/w3ed8r6x","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/m9sb2x4v","slide":8,"bbox":[70,185,410,300]}
+{"kind":"textbox","id":"sh/na1sb2lg","slide":8,"text":"复电流分解","textPreview":"复电流分解","textChars":5,"textLines":1,"bbox":[88,199,374,30]}
+{"kind":"textbox","id":"sh/8bat47ml","slide":8,"text":"Jₑ = [J(+N)+J(−N)]/2\nJₒ = [J(+N)−J(−N)]/2\n\n奇次谐波进入 Jₑ；偶次磁性谐波进入 Jₒ。","textPreview":"Jₑ = [J(+N)+J(−N)]/2 | Jₒ = [J(+N)−J(−N)]/2 |  | 奇次谐波进入 Jₑ；偶次磁性谐波进入 Jₒ。","textChars":65,"textLines":4,"bbox":[88,237,374,234]}
+{"kind":"shape","id":"sh/9w3uds36","slide":8,"bbox":[500,318,62,3]}
+{"kind":"textbox","id":"sh/y5sbed4j","slide":8,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[558,306,20,24]}
+{"kind":"shape","id":"sh/z61s7il4","slide":8,"bbox":[590,185,280,300]}
+{"kind":"textbox","id":"sh/07atgnmp","slide":8,"text":"独立 −N TB","textPreview":"独立 −N TB","textChars":8,"textLines":1,"bbox":[608,199,244,30]}
+{"kind":"textbox","id":"sh/l8ja9s3a","slide":8,"text":"SCF 总能与 Eₙ(k) 不严格匹配\nH2 forbidden/allowed ≈ 13.1\n\n结论：不是严格 P 共轭对。","textPreview":"SCF 总能与 Eₙ(k) 不严格匹配 | H2 forbidden/allowed ≈ 13.1 |  | 结论：不是严格 P 共轭对。","textChars":63,"textLines":4,"bbox":[608,237,244,234]}
+{"kind":"shape","id":"sh/q18bad4n","slide":8,"bbox":[885,318,52,3]}
+{"kind":"textbox","id":"sh/b2hs3il8","slide":8,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[933,306,20,24]}
+{"kind":"shape","id":"sh/3u18fepo","slide":8,"bbox":[965,185,245,300]}
+{"kind":"textbox","id":"sh/2ts769o3","slide":8,"text":"严格 P 共轭 TB","textPreview":"严格 P 共轭 TB","textChars":10,"textLines":1,"bbox":[983,199,209,30]}
+{"kind":"textbox","id":"sh/pwjqho7u","slide":8,"text":"逐算符构造 −N\nH2 leakage ≈ 0.32\n改善约 41×\n\nH1/H3/H5 禁戒通道降到数值地板。","textPreview":"逐算符构造 −N | H2 leakage ≈ 0.32 | 改善约 41× |  | H1/H3/H5 禁戒通道降到数值地板。","textChars":56,"textLines":5,"bbox":[983,237,209,234]}
+{"kind":"shape","id":"sh/4vap8j69","slide":8,"bbox":[130,540,260,82]}
+{"kind":"textbox","id":"sh/fq1obeps","slide":8,"text":"≈10⁻¹⁹","textPreview":"≈10⁻¹⁹","textChars":6,"textLines":1,"bbox":[142,550,236,35]}
+{"kind":"textbox","id":"sh/up872987","slide":8,"text":"两套 TB 的 |J(0)|","textPreview":"两套 TB 的 |J(0)|","textChars":14,"textLines":1,"bbox":[142,588,236,22]}
+{"kind":"shape","id":"sh/hsjqd47y","slide":8,"bbox":[510,540,260,82]}
+{"kind":"textbox","id":"sh/grap4zqd","slide":8,"text":"41×","textPreview":"41×","textChars":3,"textLines":1,"bbox":[522,550,236,35]}
+{"kind":"textbox","id":"sh/72ho7upg","slide":8,"text":"H2 通道改善","textPreview":"H2 通道改善","textChars":7,"textLines":1,"bbox":[522,588,236,22]}
+{"kind":"shape","id":"sh/6187yp8b","slide":8,"bbox":[890,540,260,82]}
+{"kind":"textbox","id":"sh/cvmdsb2h","slide":8,"text":"PASS","textPreview":"PASS","textChars":4,"textLines":1,"bbox":[902,550,236,35]}
+{"kind":"textbox","id":"sh/xwvelwj2","slide":8,"text":"选择定则闭环","textPreview":"选择定则闭环","textChars":6,"textLines":1,"bbox":[902,588,236,22]}
+{"kind":"image","id":"im/jqhsb2ls","slide":8,"name":"Image 0","bbox":[98,286.58,479.42,31.58]}
+{"kind":"image","id":"im/krqtkn2x","slide":8,"name":"Image 1","bbox":[98,358.16,479.42,27.91]}
+{"kind":"image","id":"im/lszads3i","slide":8,"name":"Image 2","bbox":[621.42,242.32,60,120]}
+{"kind":"image","id":"im/alored4v","slide":8,"name":"Image 3","bbox":[725.42,286.64,120,120]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"残余 H2 leakage 很小但不应称为严格零；它受 k 网格、时间窗和极弱信号数值地板影响。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/AFM_Neel_Pconjugate选择定则结果_20260602.md\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/AFM_Neel_Pconjugate构造完成_20260602.md\n[/Sources]"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"母模型 · full112","textShapes":9}
+{"kind":"shape","id":"sh/1cfmhgne","slide":9,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/nmdg3q54","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/onmxcv69","slide":9,"text":"母模型 · full112","textPreview":"母模型 · full112","textChars":13,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/pofy50nu","slide":9,"text":"能带拟合是必要条件，但不是光学与磁性响应的充分条件","textPreview":"能带拟合是必要条件，但不是光学与磁性响应的充分条件","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/apofe5of","slide":9,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/bqxg7q50","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/cr6xgv6l","slide":9,"bbox":[70,180,550,330]}
+{"kind":"textbox","id":"sh/qtkf21ob","slide":9,"text":"full112：QE 200-band 与 Wannier 近带隙对照","textPreview":"full112：QE 200-band 与 Wannier 近带隙对照","textChars":35,"textLines":1,"bbox":[82,477,526,22]}
+{"kind":"shape","id":"sh/rutwv65w","slide":9,"bbox":[660,180,550,330]}
+{"kind":"textbox","id":"sh/mdsnatcn","slide":9,"text":"反例：d-only/裸截断不能复现光学响应","textPreview":"反例：d-only/裸截断不能复现光学响应","textChars":21,"textLines":1,"bbox":[672,477,526,22]}
+{"kind":"shape","id":"sh/903ml8be","slide":9,"bbox":[72,540,520,80]}
+{"kind":"textbox","id":"sh/8zu5c3ut","slide":9,"text":"化学完备性","textPreview":"化学完备性","textChars":5,"textLines":1,"bbox":[90,554,484,30]}
+{"kind":"textbox","id":"sh/v2l4nitk","slide":9,"text":"full112 = 4Cr×5d + 12I×3p，再乘 spinor；84 占据 + 28 空带。","textPreview":"full112 = 4Cr×5d + 12I×3p，再乘 spinor；84 占据 + 28 空带。","textChars":50,"textLines":1,"bbox":[90,592,484,14]}
+{"kind":"shape","id":"sh/u1cnedcz","slide":9,"bbox":[628,540,580,80]}
+{"kind":"textbox","id":"sh/h43mp8ba","slide":9,"text":"方法结论","textPreview":"方法结论","textChars":4,"textLines":1,"bbox":[646,554,544,30]}
+{"kind":"textbox","id":"sh/w3u5g3u5","slide":9,"text":"少带模型必须同时验证 H、J、偶极/联络和相位；不能只验证 Eₙ(k)。","textPreview":"少带模型必须同时验证 H、J、偶极/联络和相位；不能只验证 Eₙ(k)。","textChars":36,"textLines":1,"bbox":[646,592,544,14]}
+{"kind":"image","id":"im/wj6p4ve1","slide":9,"name":"Image 0","bbox":[98,301.28,481.47,65.81]}
+{"kind":"image","id":"im/xkfqd0fm","slide":9,"name":"Image 1","bbox":[218.06,385.09,304.34,26]}
+{"kind":"image","id":"im/y5or65w7","slide":9,"name":"Image 2","bbox":[623.47,275.3,60,120]}
+{"kind":"image","id":"im/j6x8faxs","slide":9,"name":"Image 3","bbox":[869.95,241,15.59,25]}
+{"kind":"image","id":"im/t0za54zu","slide":9,"name":"Image 4","bbox":[725.47,377.6,220,92]}
+{"kind":"image","id":"im/u1sbe9gf","slide":9,"name":"","alt":"full112：QE 200-band 与 Wannier 近带隙对照","bbox":[78,188,534,286]}
+{"kind":"image","id":"im/03edcnip","slide":9,"name":"","alt":"反例：d-only/裸截断不能复现光学响应","bbox":[668,188,534,286]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"full112 是母模型，不意味着所有生产轨迹都必须 112 带；它提供不可随意移动的参照系。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/08_QE与Wannier/figures/CrI3_qe200_vs_full112_overlay_near_gap.png\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/08_QE与Wannier/figures/CrI3_HHG_donly40_vs_nb104_vs_112.png\n[/Sources]"}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"模型优化 · 不是裸截断","textShapes":20}
+{"kind":"shape","id":"sh/xc3mho32","slide":10,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/u187adsv","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/f2h8jitg","slide":10,"text":"模型优化 · 不是裸截断","textPreview":"模型优化 · 不是裸截断","textChars":12,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/bmpgrah8","slide":10,"text":"三套化学子空间各有任务；只有 M88 进入生产候选","textPreview":"三套化学子空间各有任务；只有 M88 进入生产候选","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/algfy50n","slide":10,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/xo7ytkzy","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/wnyx0fit","slide":10,"bbox":[72,185,540,170]}
+{"kind":"textbox","id":"sh/jq9gvuh4","slide":10,"text":"full112","textPreview":"full112","textChars":7,"textLines":1,"bbox":[92,203,145,36]}
+{"kind":"textbox","id":"sh/ip0f2p0j","slide":10,"text":"Cr-d + 全部 I-p","textPreview":"Cr-d + 全部 I-p","textChars":13,"textLines":1,"bbox":[252,205,325,30]}
+{"kind":"textbox","id":"sh/5cryx4za","slide":10,"text":"112 WF / 84 occ","textPreview":"112 WF / 84 occ","textChars":15,"textLines":1,"bbox":[92,253,200,28]}
+{"kind":"textbox","id":"sh/kbix4zyp","slide":10,"text":"母模型；高阶与绝对基准","textPreview":"母模型；高阶与绝对基准","textChars":11,"textLines":1,"bbox":[92,293,490,42]}
+{"kind":"shape","id":"sh/7e9gzuhg","slide":10,"bbox":[646,185,540,170]}
+{"kind":"textbox","id":"sh/6d0f6pgv","slide":10,"text":"M88","textPreview":"M88","textChars":3,"textLines":1,"bbox":[666,203,145,36]}
+{"kind":"textbox","id":"sh/4j2xwzet","slide":10,"text":"Cr-d + 全部 I-px/py","textPreview":"Cr-d + 全部 I-px/py","textChars":17,"textLines":1,"bbox":[826,205,325,30]}
+{"kind":"textbox","id":"sh/pkbep4fe","slide":10,"text":"88 WF / 58 occ","textPreview":"88 WF / 58 occ","textChars":14,"textLines":1,"bbox":[666,253,200,28]}
+{"kind":"textbox","id":"sh/2hkfu9w3","slide":10,"text":"磁性 HHG 生产 parent","textPreview":"磁性 HHG 生产 parent","textChars":16,"textLines":1,"bbox":[666,293,490,42]}
+{"kind":"shape","id":"sh/3itwnex8","slide":10,"bbox":[72,390,540,170]}
+{"kind":"textbox","id":"sh/gfixszex","slide":10,"text":"M52","textPreview":"M52","textChars":3,"textLines":1,"bbox":[92,408,145,36]}
+{"kind":"textbox","id":"sh/hgrel4fi","slide":10,"text":"Cr-d + 6 个界面 I-pz","textPreview":"Cr-d + 6 个界面 I-pz","textChars":17,"textLines":1,"bbox":[252,410,325,30]}
+{"kind":"textbox","id":"sh/ud0vqpwr","slide":10,"text":"52 WF / 24 occ","textPreview":"52 WF / 24 occ","textChars":14,"textLines":1,"bbox":[92,458,200,28]}
+{"kind":"textbox","id":"sh/fe9wjuxc","slide":10,"text":"界面机制与 strict-30 候选","textPreview":"界面机制与 strict-30 候选","textChars":18,"textLines":1,"bbox":[92,498,490,42]}
+{"kind":"shape","id":"sh/sridofel","slide":10,"bbox":[646,390,540,170]}
+{"kind":"textbox","id":"sh/tsrehkf6","slide":10,"text":"M64","textPreview":"M64","textChars":3,"textLines":1,"bbox":[666,408,145,36]}
+{"kind":"textbox","id":"sh/98julg7a","slide":10,"text":"Cr-d + 全部 I-pz","textPreview":"Cr-d + 全部 I-pz","textChars":14,"textLines":1,"bbox":[826,410,325,30]}
+{"kind":"textbox","id":"sh/87atcb6p","slide":10,"text":"64 WF / 36 occ","textPreview":"64 WF / 36 occ","textChars":14,"textLines":1,"bbox":[666,458,200,28]}
+{"kind":"textbox","id":"sh/n61cj6p4","slide":10,"text":"位置矩阵/高阶异常；停止生产","textPreview":"位置矩阵/高阶异常；停止生产","textChars":14,"textLines":1,"bbox":[666,498,490,42]}
+{"kind":"textbox","id":"sh/mlsba18j","slide":10,"text":"核心原则：减少维数必须保留主导配体杂化和有效光学算符；生产模型与机制模型可以不同。","textPreview":"核心原则：减少维数必须保留主导配体杂化和有效光学算符；生产模型与机制模型可以不同。","textChars":41,"textLines":1,"bbox":[78,620,1120,32]}
+{"kind":"image","id":"im/s3axkfad","slide":10,"name":"Image 0","bbox":[189.53,221,309.31,22]}
+{"kind":"image","id":"im/r2hwru98","slide":10,"name":"Image 1","bbox":[249.03,257.45,190.33,22]}
+{"kind":"image","id":"im/618fipsn","slide":10,"name":"Image 2","bbox":[212.19,295.83,138,26]}
+{"kind":"image","id":"im/18jex4ra","slide":10,"name":"Image 3","bbox":[860.44,234,108.22,22]}
+{"kind":"image","id":"im/g7axozap","slide":10,"name":"Image 4","bbox":[658.39,264.46,529.61,27.89]}
+{"kind":"image","id":"im/f61wvu94","slide":10,"name":"Image 5","bbox":[803.73,300.35,18.72,22]}
+{"kind":"image","id":"im/e5sfmpsj","slide":10,"name":"Image 6","bbox":[70,363.83,420,150]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":"M88/M52 是重新 Wannier 化得到的化学子空间模型；不要把它们与 full112 后对角化裸截断混为一谈。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/09_少带模型/场外调整后执行计划与回执_P0-P3_20260719.md\n[/Sources]"}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"PART 2","textShapes":4}
+{"kind":"shape","id":"sh/xcryxg7y","slide":11,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/epobatgr","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/zaxs3yhc","slide":11,"text":"PART 2","textPreview":"PART 2","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/cn6t83y1","slide":11,"text":"生产模型选型","textPreview":"生产模型选型","textChars":6,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/dofa18z6","slide":11,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/tsnip0ny","slide":11,"text":"验收对象是复电流与 N-宇称通道，不只是“谱线看起来像”。","textPreview":"验收对象是复电流与 N-宇称通道，不只是“谱线看起来像”。","textChars":29,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/87ehgv6d","slide":11,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"image","id":"im/3m5orml0","slide":11,"name":"Image 0","bbox":[377.06,392.11,46.42,33]}
+{"kind":"image","id":"im/21cnihkf","slide":11,"name":"Image 1","bbox":[630.66,392.11,118.86,33]}
+{"kind":"notes","id":"nt/jetc3ut0","slide":11,"text":"下面给出 P0 复响应和 P2 k60 验收。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"P0 · 复振幅与相位","textShapes":7}
+{"kind":"shape","id":"sh/1gbm9s3a","slide":12,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/6t0n6hg7","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/dcv6dgz2","slide":12,"text":"P0 · 复振幅与相位","textPreview":"P0 · 复振幅与相位","textChars":11,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/cbm5kbyh","slide":12,"text":"M88 在目标低阶紧贴 full112；M52 适合解释机制，不适合绝对生产","textPreview":"M88 在目标低阶紧贴 full112；M52 适合解释机制，不适合绝对生产","textChars":38,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/alwbitsn","slide":12,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/bm5sryt8","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/wnetkjat","slide":12,"bbox":[60,178,570,355]}
+{"kind":"textbox","id":"sh/mhcbe9sr","slide":12,"text":"Jₑ：奇次 / N-偶通道的幅值比与相位误差","textPreview":"Jₑ：奇次 / N-偶通道的幅值比与相位误差","textChars":22,"textLines":1,"bbox":[72,500,546,22]}
+{"kind":"shape","id":"sh/nilsnetc","slide":12,"bbox":[650,178,570,355]}
+{"kind":"textbox","id":"sh/9k3apob2","slide":12,"text":"Jₒ：偶次 / N-奇通道的幅值比与相位误差","textPreview":"Jₒ：偶次 / N-奇通道的幅值比与相位误差","textChars":22,"textLines":1,"bbox":[662,500,546,22]}
+{"kind":"shape","id":"sh/6dgbqdsv","slide":12,"bbox":[72,548,1136,116]}
+{"kind":"textbox","id":"sh/7epczitg","slide":12,"text":"读图结论","textPreview":"读图结论","textChars":4,"textLines":1,"bbox":[90,562,1100,30]}
+{"kind":"textbox","id":"sh/r6l8vaxw","slide":12,"text":"M88：H1-H9 和 Jₒ(H2-H8) 保留幅值与相位；H11+ 开始失去保证。\nM52：低阶机制可读，但幅值系统偏小。","textPreview":"M88：H1-H9 和 Jₒ(H2-H8) 保留幅值与相位；H11+ 开始失去保证。 | M52：低阶机制可读，但幅值系统偏小。","textChars":62,"textLines":2,"bbox":[90,600,1100,50]}
+{"kind":"image","id":"im/kfa90j6t","slide":12,"name":"Image 0","bbox":[483.13,91,176.09,49]}
+{"kind":"image","id":"im/lgja9ony","slide":12,"name":"Image 1","bbox":[102,199,1076,60.34]}
+{"kind":"image","id":"im/ap8rupob","slide":12,"name":"Image 2","bbox":[208.5,324.35,63.22,30]}
+{"kind":"image","id":"im/bqhs3u5w","slide":12,"name":"Image 3","bbox":[786.5,324.72,57.5,30]}
+{"kind":"image","id":"im/crq9wz6h","slide":12,"name":"Image 4","bbox":[133.08,463.91,300,76]}
+{"kind":"image","id":"im/2pw3qhc3","slide":12,"name":"","alt":"Jₑ：奇次 / N-偶通道的幅值比与相位误差","bbox":[68,186,554,311]}
+{"kind":"image","id":"im/vm5kf2tc","slide":12,"name":"","alt":"Jₒ：偶次 / N-奇通道的幅值比与相位误差","bbox":[658,186,554,311]}
+{"kind":"notes","id":"nt/8f2psfyx","slide":12,"text":"相位误差只在幅值高于数值地板时有意义。P0 统一使用相同 Hann window 和 Fourier 约定。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/results/magnetic_hhg_P0_JeJo_complex_20260719\n[/Sources]"}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"P2 · k60 验收","textShapes":13}
+{"kind":"shape","id":"sh/q50nydsj","slide":13,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/sfe1s3e9","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7i107edk","slide":13,"text":"P2 · k60 验收","textPreview":"P2 · k60 验收","textChars":11,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/mhsje9wz","slide":13,"text":"41/42 个闸门通过；唯一明确失败是 Jₒ(H10)","textPreview":"41/42 个闸门通过；唯一明确失败是 Jₒ(H10)","textChars":27,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/y1wju94v","slide":13,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/z25kne5g","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/03e1wjm1","slide":13,"bbox":[60,178,570,350]}
+{"kind":"textbox","id":"sh/m5gjyt4r","slide":13,"text":"M88-c20 相对 M88-full：幅值误差 ε_band @ k60","textPreview":"M88-c20 相对 M88-full：幅值误差 ε_band @ k60","textChars":37,"textLines":1,"bbox":[72,495,546,22]}
+{"kind":"shape","id":"sh/n6pkrelc","slide":13,"bbox":[650,178,570,350]}
+{"kind":"textbox","id":"sh/9s72to3i","slide":13,"text":"M88-c20 相对 M88-full：相位误差 Δφ @ k60","textPreview":"M88-c20 相对 M88-full：相位误差 Δφ @ k60","textChars":33,"textLines":1,"bbox":[662,495,546,22]}
+{"kind":"shape","id":"sh/atgj2t43","slide":13,"bbox":[80,555,250,82]}
+{"kind":"textbox","id":"sh/vupkvylo","slide":13,"text":"≤7.5%","textPreview":"≤7.5%","textChars":5,"textLines":1,"bbox":[92,565,226,35]}
+{"kind":"textbox","id":"sh/50behwr2","slide":13,"text":"Jₑ H1-H9 幅值误差","textPreview":"Jₑ H1-H9 幅值误差","textChars":13,"textLines":1,"bbox":[92,603,226,22]}
+{"kind":"shape","id":"sh/4z2d8rah","slide":13,"bbox":[365,555,250,82]}
+{"kind":"textbox","id":"sh/jytcfmtw","slide":13,"text":"≤6.7%","textPreview":"≤6.7%","textChars":5,"textLines":1,"bbox":[377,565,226,35]}
+{"kind":"textbox","id":"sh/ixkv6hsb","slide":13,"text":"Jₒ H2-H8 幅值误差","textPreview":"Jₒ H2-H8 幅值误差","textChars":13,"textLines":1,"bbox":[377,603,226,22]}
+{"kind":"shape","id":"sh/t4velwry","slide":13,"bbox":[650,555,250,82]}
+{"kind":"textbox","id":"sh/s3mdcrad","slide":13,"text":"≈0.006 rad","textPreview":"≈0.006 rad","textChars":10,"textLines":1,"bbox":[662,565,226,35]}
+{"kind":"textbox","id":"sh/r2dwjm98","slide":13,"text":"k40→k60 主通道相位","textPreview":"k40→k60 主通道相位","textChars":13,"textLines":1,"bbox":[662,603,226,22]}
+{"kind":"shape","id":"sh/614va1sn","slide":13,"bbox":[935,555,250,82]}
+{"kind":"textbox","id":"sh/1svepgra","slide":13,"text":"46% / 0.43 rad","textPreview":"46% / 0.43 rad","textChars":14,"textLines":1,"bbox":[947,565,226,35]}
+{"kind":"textbox","id":"sh/g7mdgbap","slide":13,"text":"Jₒ H10：FAIL","textPreview":"Jₒ H10：FAIL","textChars":11,"textLines":1,"bbox":[947,603,226,22]}
+{"kind":"image","id":"im/o7el8fmt","slide":13,"name":"Image 0","bbox":[127.33,219.47,173.83,23]}
+{"kind":"image","id":"im/98nm1k3e","slide":13,"name":"Image 1","bbox":[127.33,301.22,173.83,23]}
+{"kind":"image","id":"im/mlw36p4n","slide":13,"name":"Image 2","bbox":[139.17,376.77,291.66,25]}
+{"kind":"image","id":"im/2lsju1kj","slide":13,"name":"","alt":"M88-c20 相对 M88-full：幅值误差 ε_band @ k60","bbox":[68,186,554,306]}
+{"kind":"image","id":"im/rq107q10","slide":13,"name":"","alt":"M88-c20 相对 M88-full：相位误差 Δφ @ k60","bbox":[658,186,554,306]}
+{"kind":"notes","id":"nt/hgzapcr6","slide":13,"text":"这里的 41/42 是预先定义闸门，不是事后挑选。因为 k40→k60 已收敛，不提交 k80。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/09_少带模型/P2_k60_验收报告_20260721.md\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/results/P2_k60_accept_20260721\n[/Sources]"}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"选型结论 · 明确适用域","textShapes":11}
+{"kind":"shape","id":"sh/xc7eds76","slide":14,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/cz6h4fq1","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/atg3idk7","slide":14,"text":"选型结论 · 明确适用域","textPreview":"选型结论 · 明确适用域","textChars":12,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/bup4rils","slide":14,"text":"一个默认模型，两条升级通道；不再用“万能少带模型”叙事","textPreview":"一个默认模型，两条升级通道；不再用“万能少带模型”叙事","textChars":27,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/cvylkn2d","slide":14,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/xw7mts3y","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/yxgnmxkj","slide":14,"bbox":[70,190,340,310]}
+{"kind":"textbox","id":"sh/jyp4fil4","slide":14,"text":"默认生产","textPreview":"默认生产","textChars":4,"textLines":1,"bbox":[88,204,304,30]}
+{"kind":"textbox","id":"sh/kzy5on2p","slide":14,"text":"M88-c20 @ k40\nlg_cov\n\n普通谱：H1-H9\n磁性 Jₒ：H2-H8","textPreview":"M88-c20 @ k40 | lg_cov |  | 普通谱：H1-H9 | 磁性 Jₒ：H2-H8","textChars":43,"textLines":5,"bbox":[88,242,304,244]}
+{"kind":"shape","id":"sh/lkrmhsju","slide":14,"bbox":[470,190,330,310]}
+{"kind":"textbox","id":"sh/6l0nqxkf","slide":14,"text":"升级 1","textPreview":"升级 1","textChars":4,"textLines":1,"bbox":[488,204,294,30]}
+{"kind":"textbox","id":"sh/7m94j210","slide":14,"text":"M88-full\n\nJₒ(H10) 的幅值/相位\n更强场节点\n自旋/轨道算符校验","textPreview":"M88-full |  | Jₒ(H10) 的幅值/相位 | 更强场节点 | 自旋/轨道算符校验","textChars":40,"textLines":5,"bbox":[488,242,294,244]}
+{"kind":"shape","id":"sh/fi5432t4","slide":14,"bbox":[860,190,350,310]}
+{"kind":"textbox","id":"sh/uhw3axcj","slide":14,"text":"升级 2","textPreview":"升级 2","textChars":4,"textLines":1,"bbox":[878,204,314,30]}
+{"kind":"textbox","id":"sh/h4nm5sba","slide":14,"text":"full112 或扩展空间\n\nH11+ / cutoff\n极弱禁戒通道\n最终绝对误差","textPreview":"full112 或扩展空间 |  | H11+ / cutoff | 极弱禁戒通道 | 最终绝对误差","textChars":42,"textLines":5,"bbox":[878,242,314,244]}
+{"kind":"shape","id":"sh/gjelc7up","slide":14,"bbox":[70,545,1140,85]}
+{"kind":"textbox","id":"sh/365472tg","slide":14,"text":"仍需防范","textPreview":"仍需防范","textChars":4,"textLines":1,"bbox":[88,559,1104,30]}
+{"kind":"textbox","id":"sh/25w3excv","slide":14,"text":"BSV 高强度尾部可能访问被截空带；有效模型的 spin/orbital observables 需要有效算符而非裸投影；T2 模型仍是系统误差。","textPreview":"BSV 高强度尾部可能访问被截空带；有效模型的 spin/orbital observables 需要有效算符而非裸投影；T2 模型仍是系统误差。","textChars":73,"textLines":1,"bbox":[88,597,1104,19]}
+{"kind":"image","id":"im/ulgfat4j","slide":14,"name":"Image 0","bbox":[94,227,51.7,25]}
+{"kind":"image","id":"im/vm9g3yl4","slide":14,"name":"Image 1","bbox":[94,260.95,380,150]}
+{"kind":"image","id":"im/wnixc3mp","slide":14,"name":"Image 2","bbox":[600,242.97,80,120]}
+{"kind":"image","id":"im/hory583a","slide":14,"name":"Image 3","bbox":[724,227,68.34,25]}
+{"kind":"image","id":"im/apwfy94f","slide":14,"name":"Image 4","bbox":[724,260.96,300,150]}
+{"kind":"notes","id":"nt/6lsnupw7","slide":14,"text":"本页是模型拍板页。强调适用域，不回避 H10/H11+ 风险。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"PART 3","textShapes":4}
+{"kind":"shape","id":"sh/547mhg3m","slide":15,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/0z29cbyh","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/l0bqlgf2","slide":15,"text":"PART 3","textPreview":"PART 3","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/1kjyt83e","slide":15,"text":"量子输入 R1","textPreview":"量子输入 R1","textChars":7,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/gjax03m9","slide":15,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/fi1grylo","slide":15,"text":"平均谱增强可以研究，但它回答的是输入统计效应，不是严格量子优势。","textPreview":"平均谱增强可以研究，但它回答的是输入统计效应，不是严格量子优势。","textChars":32,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/ehsfyt43","slide":15,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"image","id":"im/4fulknqd","slide":15,"name":"Image 0","bbox":[497.16,413.71,20.28,33]}
+{"kind":"notes","id":"nt/vaxsvy10","slide":15,"text":"进入 BSV 旧 pilot 和文献边界。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/gny5sjyp","slide":16,"title":"R1 · 已完成的探索性 BSV pilot","textShapes":9}
+{"kind":"shape","id":"sh/8z2h8bq1","slide":16,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/j6947i9w","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i503ydsr","slide":16,"text":"R1 · 已完成的探索性 BSV pilot","textPreview":"R1 · 已完成的探索性 BSV pilot","textChars":22,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/p4vmlwrm","slide":16,"text":"16 节点求积消除 MC 噪声；增强主要来自强度分布尾部","textPreview":"16 节点求积消除 MC 噪声；增强主要来自强度分布尾部","textChars":28,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/o3m5crq1","slide":16,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/wnadcrqh","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/xoju5wr2","slide":16,"bbox":[60,178,570,350]}
+{"kind":"textbox","id":"sh/vm1c3m9w","slide":16,"text":"旧 pilot：经典谱与 BSV 加权平均谱","textPreview":"旧 pilot：经典谱与 BSV 加权平均谱","textChars":22,"textLines":1,"bbox":[72,495,546,22]}
+{"kind":"shape","id":"sh/kbudgrqt","slide":16,"bbox":[650,178,570,350]}
+{"kind":"textbox","id":"sh/i9sve18n","slide":16,"text":"逐阶增强因子；高阶对强度尾部极敏感","textPreview":"逐阶增强因子；高阶对强度尾部极敏感","textChars":17,"textLines":1,"bbox":[662,495,546,22]}
+{"kind":"shape","id":"sh/ja1c7m98","slide":16,"bbox":[70,548,700,112]}
+{"kind":"textbox","id":"sh/sfudkbqp","slide":16,"text":"数学对象","textPreview":"数学对象","textChars":4,"textLines":1,"bbox":[88,562,664,30]}
+{"kind":"textbox","id":"sh/tg3udgra","slide":16,"text":"S̄ₙ = ∫ dI P(I) Sₙ(I)；若 Sₙ∝Iᵖ 且 P 为指数型，微扰标尺为 ∫₀∞e⁻ˣxᵖdx = p!。","textPreview":"S̄ₙ = ∫ dI P(I) Sₙ(I)；若 Sₙ∝Iᵖ 且 P 为指数型，微扰标尺为 ∫₀∞e⁻ˣxᵖdx = p!。","textChars":61,"textLines":1,"bbox":[88,600,664,46]}
+{"kind":"shape","id":"sh/3apg3atc","slide":16,"bbox":[800,548,410,112]}
+{"kind":"textbox","id":"sh/29wfa5sr","slide":16,"text":"必须重新标注","textPreview":"必须重新标注","textChars":6,"textLines":1,"bbox":[818,562,374,30]}
+{"kind":"textbox","id":"sh/pc7y5kbi","slide":16,"text":"旧结果是探索性平均谱；分布参数 Ī 与真实均值要区分；量子生产应换成 M88-c20/full。","textPreview":"旧结果是探索性平均谱；分布参数 Ī 与真实均值要区分；量子生产应换成 M88-c20/full。","textChars":48,"textLines":1,"bbox":[818,600,374,46]}
+{"kind":"image","id":"im/69c7yl03","slide":16,"name":"Image 0","bbox":[198.62,222,303.75,22]}
+{"kind":"image","id":"im/ra58rqho","slide":16,"name":"Image 1","bbox":[207.03,269.72,286.92,23]}
+{"kind":"image","id":"im/sbep0vi9","slide":16,"name":"Image 2","bbox":[246.91,335.48,207.19,22]}
+{"kind":"image","id":"im/tcnqtgze","slide":16,"name":"Image 3","bbox":[276.84,373.05,147.31,26]}
+{"kind":"image","id":"im/ilc7u10r","slide":16,"name":"Image 4","bbox":[888,225.01,71.41,23]}
+{"kind":"image","id":"im/jmlon6hc","slide":16,"name":"Image 5","bbox":[642.41,442.38,55.19,30]}
+{"kind":"image","id":"im/9cnmxc32","slide":16,"name":"","alt":"旧 pilot：经典谱与 BSV 加权平均谱","bbox":[68,186,554,306]}
+{"kind":"image","id":"im/y5c3yx4f","slide":16,"name":"","alt":"逐阶增强因子；高阶对强度尾部极敏感","bbox":[658,186,554,306]}
+{"kind":"notes","id":"nt/gny5sjyp","slide":16,"text":"H13 约 363 倍是旧配置下的平均谱增强，不是量子优势证据。旧 MC 51 样本只作定性，16-node quadrature 才用于均值。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/figures/bsv_quadrature\n[/Sources]"}
+{"kind":"slide","id":"sl/14bup87q","slide":17,"title":"R1 · 文献边界","textShapes":11}
+{"kind":"shape","id":"sh/1c7e50ni","slide":17,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/oza547ed","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p0j6dcvy","slide":17,"text":"R1 · 文献边界","textPreview":"R1 · 文献边界","textChars":9,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/e98nydwb","slide":17,"text":"量子输入能改变平均谱；realistic free-space 中却可能被半经典平均精确复现","textPreview":"量子输入能改变平均谱；realistic free-space 中却可能被半经典平均精确复现","textChars":46,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/fah47idw","slide":17,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/gbq50neh","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/1cj69sv2","slide":17,"bbox":[70,195,350,300]}
+{"kind":"textbox","id":"sh/658nudwf","slide":17,"text":"Gorlach / Rasputnyi","textPreview":"Gorlach / Rasputnyi","textChars":19,"textLines":1,"bbox":[88,209,314,30]}
+{"kind":"textbox","id":"sh/r6h43id0","slide":17,"text":"理论与实验：BSV/热式尾部延展 cutoff、提高高阶效率。\n\n结论：支持做 R1","textPreview":"理论与实验：BSV/热式尾部延展 cutoff、提高高阶效率。 |  | 结论：支持做 R1","textChars":42,"textLines":3,"bbox":[88,247,314,234]}
+{"kind":"shape","id":"sh/jy1kfehg","slide":17,"bbox":[460,195,350,300]}
+{"kind":"textbox","id":"sh/ixsj690v","slide":17,"text":"Gothelf-Lange-Madsen","textPreview":"Gothelf-Lange-Madsen","textChars":20,"textLines":1,"bbox":[478,209,314,30]}
+{"kind":"textbox","id":"sh/50j2hozm","slide":17,"text":"用量子光相空间权重平均经典 SBE 轨迹，复现平均谱。\n\n结论：给出算法模板","textPreview":"用量子光相空间权重平均经典 SBE 轨迹，复现平均谱。 |  | 结论：给出算法模板","textChars":38,"textLines":3,"bbox":[478,247,314,234]}
+{"kind":"shape","id":"sh/kza18ji1","slide":17,"bbox":[850,195,350,300]}
+{"kind":"textbox","id":"sh/vuhkbehk","slide":17,"text":"González-Monge / Feist","textPreview":"González-Monge / Feist","textChars":22,"textLines":1,"bbox":[868,209,314,30]}
+{"kind":"textbox","id":"sh/at8j290z","slide":17,"text":"realistic temporal-mode free-space 中，Husimi 平均误差可低于 10⁻⁴。\n\n结论：否定“平均谱=严格优势”","textPreview":"realistic temporal-mode free-space 中，Husimi 平均误差可低于 10⁻⁴。 |  | 结论：否定“平均谱=严格优势”","textChars":74,"textLines":3,"bbox":[868,247,314,234]}
+{"kind":"shape","id":"sh/xwz2dozq","slide":17,"bbox":[70,540,1135,92]}
+{"kind":"textbox","id":"sh/wvq14ji5","slide":17,"text":"因此 R1 的科学问题","textPreview":"因此 R1 的科学问题","textChars":11,"textLines":1,"bbox":[88,554,1099,30]}
+{"kind":"textbox","id":"sh/n6h07uh8","slide":17,"text":"在可信 CrI₃ 磁性模型上，量子输入的宽强度分布如何改变 N-偶/奇平均谱、cutoff 与场强依赖？——回答材料响应，不抢先声称非经典输出。","textPreview":"在可信 CrI₃ 磁性模型上，量子输入的宽强度分布如何改变 N-偶/奇平均谱、cutoff 与场强依赖？——回答材料响应，不抢先声称非经典输出。","textChars":72,"textLines":1,"bbox":[88,592,1099,26]}
+{"kind":"image","id":"im/twzaxonu","slide":17,"name":"Image 0","bbox":[426.03,206.95,14.31,23]}
+{"kind":"image","id":"im/i5obi9o7","slide":17,"name":"Image 1","bbox":[459.34,206.95,94.87,23]}
+{"kind":"image","id":"im/j6xsreps","slide":17,"name":"Image 2","bbox":[94,238.67,750,44.92]}
+{"kind":"image","id":"im/lknexc7a","slide":17,"name":"Image 3","bbox":[298.09,287.59,13.94,22]}
+{"kind":"image","id":"im/0jedorqp","slide":17,"name":"Image 4","bbox":[890,172,320,280]}
+{"kind":"notes","id":"nt/14bup87q","slide":17,"text":"R1 重跑需补强度尾部节点，因为尾部可能越过 M88-c20 的有效能窗。\n\n[Sources]\n- https://doi.org/10.1038/s41567-023-02127-y\n- https://doi.org/10.1038/s41567-024-02659-x\n- https://arxiv.org/abs/2502.11803\n- https://arxiv.org/abs/2512.06602\n[/Sources]"}
+{"kind":"slide","id":"sl/y5wne50z","slide":18,"title":"PART 4","textShapes":4}
+{"kind":"shape","id":"sh/wrelszu9","slide":18,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/to72pw76","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/snylgrql","slide":18,"text":"PART 4","textPreview":"PART 4","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/bi94zqp4","slide":18,"text":"量子输出 R2","textPreview":"量子输出 R2","textChars":7,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/qh03ql8j","slide":18,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/md4nipsr","slide":18,"text":"真正的新问题：出射谐波光的二阶及更高阶量子统计，怎样携带磁序信息？","textPreview":"真正的新问题：出射谐波光的二阶及更高阶量子统计，怎样携带磁序信息？","textChars":33,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/nedoru9c","slide":18,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"image","id":"im/5cjmtof6","slide":18,"name":"Image 0","bbox":[350.06,390.61,88.98,33]}
+{"kind":"notes","id":"nt/y5wne50z","slide":18,"text":"R2 与 R1 的分水岭：R1 是均值，R2 是算符涨落和模式相关。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/nid43ytk","slide":19,"title":"R2 · input-output 链条","textShapes":20}
+{"kind":"shape","id":"sh/9gb6xgbi","slide":19,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/21k36lk7","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/32t4zqls","slide":19,"text":"R2 · input-output 链条","textPreview":"R2 · input-output 链条","textChars":20,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/gz2l4v2h","slide":19,"text":"材料电流是源，但不是完整的输出光量子态","textPreview":"材料电流是源，但不是完整的输出光量子态","textChars":19,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/h0bmx03m","slide":19,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/uxk32lkb","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/fytkvqlw","slide":19,"bbox":[70,185,470,190]}
+{"kind":"textbox","id":"sh/svil0b25","slide":19,"text":"输入-输出关系","textPreview":"输入-输出关系","textChars":7,"textLines":1,"bbox":[88,199,434,30]}
+{"kind":"textbox","id":"sh/twb2tg3q","slide":19,"text":"Êout⁽⁺⁾(ω) = Êin⁽⁺⁾(ω)\n+ i μ₀ ω G(ω) Ĵ⁽⁺⁾(ω)","textPreview":"Êout⁽⁺⁾(ω) = Êin⁽⁺⁾(ω) | + i μ₀ ω G(ω) Ĵ⁽⁺⁾(ω)","textChars":44,"textLines":2,"bbox":[88,237,434,124]}
+{"kind":"shape","id":"sh/9s3ixcve","slide":19,"bbox":[70,405,470,175]}
+{"kind":"textbox","id":"sh/8ra1o7ut","slide":19,"text":"探测模式","textPreview":"探测模式","textChars":4,"textLines":1,"bbox":[88,419,434,30]}
+{"kind":"textbox","id":"sh/7q10v2do","slide":19,"text":"âq = ∫dt fq(t) Êout⁽⁺⁾(t)\n\nfq 决定带宽、时间窗、偏振与归一化。","textPreview":"âq = ∫dt fq(t) Êout⁽⁺⁾(t) |  | fq 决定带宽、时间窗、偏振与归一化。","textChars":46,"textLines":3,"bbox":[88,457,434,109]}
+{"kind":"shape","id":"sh/mpsjmxc3","slide":19,"bbox":[605,255,120,125]}
+{"kind":"textbox","id":"sh/lojitsvi","slide":19,"text":"𝓛t","textPreview":"𝓛t","textChars":3,"textLines":1,"bbox":[615,273,100,35]}
+{"kind":"textbox","id":"sh/kna1knux","slide":19,"text":"材料传播子","textPreview":"材料传播子","textChars":5,"textLines":1,"bbox":[615,325,100,36]}
+{"kind":"shape","id":"sh/z210ridc","slide":19,"bbox":[723,315,10,3]}
+{"kind":"textbox","id":"sh/y1sjixwr","slide":19,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[729,303,20,24]}
+{"kind":"shape","id":"sh/5kn25wvm","slide":19,"bbox":[750,255,120,125]}
+{"kind":"textbox","id":"sh/4ju1wru1","slide":19,"text":"CJJ","textPreview":"CJJ","textChars":3,"textLines":1,"bbox":[760,273,100,35]}
+{"kind":"textbox","id":"sh/25ozqtsj","slide":19,"text":"双时电流关联","textPreview":"双时电流关联","textChars":6,"textLines":1,"bbox":[760,325,100,36]}
+{"kind":"shape","id":"sh/n6xgzyt4","slide":19,"bbox":[868,315,10,3]}
+{"kind":"textbox","id":"sh/o76hsjap","slide":19,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[874,303,20,24]}
+{"kind":"shape","id":"sh/p8fy1oba","slide":19,"bbox":[895,255,120,125]}
+{"kind":"textbox","id":"sh/e14fm9cn","slide":19,"text":"G,fq","textPreview":"G,fq","textChars":4,"textLines":1,"bbox":[905,273,100,35]}
+{"kind":"textbox","id":"sh/f2xgvet8","slide":19,"text":"传播与模式","textPreview":"传播与模式","textChars":5,"textLines":1,"bbox":[905,325,100,36]}
+{"kind":"shape","id":"sh/036xojat","slide":19,"bbox":[1013,315,10,3]}
+{"kind":"textbox","id":"sh/14fyxoby","slide":19,"text":"›","textPreview":"›","textChars":1,"textLines":1,"bbox":[1019,303,20,24]}
+{"kind":"shape","id":"sh/yx8zydsr","slide":19,"bbox":[1040,255,120,125]}
+{"kind":"textbox","id":"sh/zyhg7itc","slide":19,"text":"⟨â†â⟩","textPreview":"⟨â†â⟩","textChars":5,"textLines":1,"bbox":[1050,273,100,35]}
+{"kind":"textbox","id":"sh/7idoveh4","slide":19,"text":"光学矩","textPreview":"光学矩","textChars":3,"textLines":1,"bbox":[1050,325,100,36]}
+{"kind":"shape","id":"sh/mhk729gj","slide":19,"bbox":[605,425,555,125]}
+{"kind":"textbox","id":"sh/94vqxoza","slide":19,"text":"不能省略的项","textPreview":"不能省略的项","textChars":6,"textLines":1,"bbox":[623,439,519,30]}
+{"kind":"textbox","id":"sh/83mp4jyp","slide":19,"text":"输入真空噪声；输入场-材料电流交叉关联；算符排序；检测效率与传播几何。","textPreview":"输入真空噪声；输入场-材料电流交叉关联；算符排序；检测效率与传播几何。","textChars":35,"textLines":1,"bbox":[623,477,519,59]}
+{"kind":"image","id":"im/xgfi1kn2","slide":19,"name":"Image 0","bbox":[197.84,87,128.48,48]}
+{"kind":"image","id":"im/adojqpob","slide":19,"name":"Image 1","bbox":[218.53,220.67,276.53,22]}
+{"kind":"image","id":"im/vex0za5w","slide":19,"name":"Image 2","bbox":[157.47,259.83,11.08,22]}
+{"kind":"image","id":"im/kjq1wz6d","slide":19,"name":"Image 3","bbox":[324.97,259.83,231.17,22]}
+{"kind":"image","id":"im/5kzi54ny","slide":19,"name":"Image 4","bbox":[92,309.98,529.61,56.36]}
+{"kind":"image","id":"im/ih8jupon","slide":19,"name":"Image 5","bbox":[705.66,222.69,51.62,22]}
+{"kind":"image","id":"im/jih03u58","slide":19,"name":"Image 6","bbox":[865.28,222.69,51.62,22]}
+{"kind":"image","id":"im/s7q10z6p","slide":19,"name":"Image 7","bbox":[1164.05,257.69,14.98,22]}
+{"kind":"image","id":"im/t8z294na","slide":19,"name":"Image 8","bbox":[683.61,315.69,330,116]}
+{"kind":"image","id":"im/32l4zypc","slide":19,"name":"Image 9","bbox":[835.41,470.03,57.19,30]}
+{"kind":"image","id":"im/21c36t8r","slide":19,"name":"Image 10","bbox":[1012.59,470.03,20,30]}
+{"kind":"notes","id":"nt/nid43ytk","slide":19,"text":"现有 SBE 的 Cconn 只是材料源关联。没有 Green 函数和 fq，不能直接称为输出光态。\n\n[Sources]\n- https://doi.org/10.1103/PhysRevLett.132.143603\n- https://arxiv.org/abs/2604.20388\n[/Sources]"}
+{"kind":"slide","id":"sl/zyxsni5k","slide":20,"title":"R2 · N-宇称双时关联","textShapes":17}
+{"kind":"shape","id":"sh/qpwjmh8n","slide":20,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/43q5cz69","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/54j6l47e","slide":20,"text":"R2 · N-宇称双时关联","textPreview":"R2 · N-宇称双时关联","textChars":13,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/za50r2ds","slide":20,"text":"Coo 是 N-偶通道；真正的磁畴差分是 Ceo + Coe","textPreview":"Coo 是 N-偶通道；真正的磁畴差分是 Ceo + Coe","textChars":30,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/e9wzyxcn","slide":20,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/1cnitsvy","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/0beh07ud","slide":20,"bbox":[70,185,480,150]}
+{"kind":"textbox","id":"sh/ny50v2d4","slide":20,"text":"电流算符","textPreview":"电流算符","textChars":4,"textLines":1,"bbox":[88,199,444,30]}
+{"kind":"textbox","id":"sh/mdwz2xcj","slide":20,"text":"Ĵe = [Ĵ(+N)+Ĵ(−N)]/2\nĴo = [Ĵ(+N)−Ĵ(−N)]/2","textPreview":"Ĵe = [Ĵ(+N)+Ĵ(−N)]/2 | Ĵo = [Ĵ(+N)−Ĵ(−N)]/2","textChars":41,"textLines":2,"bbox":[88,237,444,84]}
+{"kind":"shape","id":"sh/907ixcva","slide":20,"bbox":[70,365,480,150]}
+{"kind":"textbox","id":"sh/8zeh47up","slide":20,"text":"连通关联","textPreview":"连通关联","textChars":4,"textLines":1,"bbox":[88,379,444,30]}
+{"kind":"textbox","id":"sh/32lgjid0","slide":20,"text":"Cηη′(t,t′)=⟨ΔĴη(t)ΔĴη′(t′)⟩\nη,η′∈{e,o}","textPreview":"Cηη′(t,t′)=⟨ΔĴη(t)ΔĴη′(t′)⟩ | η,η′∈{e,o}","textChars":38,"textLines":2,"bbox":[88,417,444,84]}
+{"kind":"shape","id":"sh/2hczqdwf","slide":20,"bbox":[610,185,255,145]}
+{"kind":"textbox","id":"sh/ulwz6d4b","slide":20,"text":"Cee · N-偶","textPreview":"Cee · N-偶","textChars":9,"textLines":1,"bbox":[628,199,219,30]}
+{"kind":"textbox","id":"sh/vmp0zilg","slide":20,"text":"普通背景涨落","textPreview":"普通背景涨落","textChars":6,"textLines":1,"bbox":[628,237,219,79]}
+{"kind":"shape","id":"sh/gnyh8nm1","slide":20,"bbox":[895,185,255,145]}
+{"kind":"textbox","id":"sh/ho7i1s3m","slide":20,"text":"Coo · N-偶","textPreview":"Coo · N-偶","textChars":9,"textLines":1,"bbox":[913,199,219,30]}
+{"kind":"textbox","id":"sh/ipgzadk7","slide":20,"text":"N-奇电流涨落的自相关；非自动非经典","textPreview":"N-奇电流涨落的自相关；非自动非经典","textChars":18,"textLines":1,"bbox":[913,237,219,79]}
+{"kind":"shape","id":"sh/3qp03ils","slide":20,"bbox":[610,360,255,145]}
+{"kind":"textbox","id":"sh/4ryhcn2d","slide":20,"text":"Ceo · N-奇","textPreview":"Ceo · N-奇","textChars":9,"textLines":1,"bbox":[628,374,219,30]}
+{"kind":"textbox","id":"sh/5s7i5s3y","slide":20,"text":"磁性×普通交叉关联","textPreview":"磁性×普通交叉关联","textChars":9,"textLines":1,"bbox":[628,412,219,79]}
+{"kind":"shape","id":"sh/qdgzexk3","slide":20,"bbox":[895,360,255,145]}
+{"kind":"textbox","id":"sh/re9072lo","slide":20,"text":"Coe · N-奇","textPreview":"Coe · N-奇","textChars":9,"textLines":1,"bbox":[913,374,219,30]}
+{"kind":"textbox","id":"sh/18b2xwn6","slide":20,"text":"磁性×普通交叉关联","textPreview":"磁性×普通交叉关联","textChars":9,"textLines":1,"bbox":[913,412,219,79]}
+{"kind":"shape","id":"sh/07214r6l","slide":20,"bbox":[610,535,540,112]}
+{"kind":"textbox","id":"sh/fmtkvm50","slide":20,"text":"磁畴差分","textPreview":"磁畴差分","textChars":4,"textLines":1,"bbox":[628,549,504,30]}
+{"kind":"textbox","id":"sh/el0j2hof","slide":20,"text":"[C(+N)−C(−N)]/2 = Ceo + Coe。计算前必须把 ±N 映射到共同 Hilbert 空间。","textPreview":"[C(+N)−C(−N)]/2 = Ceo + Coe。计算前必须把 ±N 映射到共同 Hilbert 空间。","textChars":55,"textLines":1,"bbox":[628,587,504,46]}
+{"kind":"image","id":"im/ru54fidw","slide":20,"name":"Image 0","bbox":[84,204,455,150]}
+{"kind":"image","id":"im/6tw3mdwb","slide":20,"name":"Image 1","bbox":[580,182,120,200]}
+{"kind":"image","id":"im/tg7mhsv2","slide":20,"name":"Image 2","bbox":[741,204,455,150]}
+{"kind":"image","id":"im/sfeloneh","slide":20,"name":"Image 3","bbox":[947.98,430.34,82.38,30]}
+{"kind":"notes","id":"nt/zyxsni5k","slide":20,"text":"这页修正旧口径：Coo 不是磁畴差分，也不能仅凭名称称为量子磁指纹。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/00_当前状态/课题整体进展报告_理论与文献审校_20260727.md\n[/Sources]"}
+{"kind":"slide","id":"sl/m1wvqtk3","slide":21,"title":"PART 5","textShapes":4}
+{"kind":"shape","id":"sh/1gbmxs7a","slide":21,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/wvax03q1","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hwjy98rm","slide":21,"text":"PART 5","textPreview":"PART 5","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/utsfyt8v","slide":21,"text":"方法闸门","textPreview":"方法闸门","textChars":4,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/vu1w7y9g","slide":21,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/8rqxw3q5","slide":21,"text":"先证明传播子和输出定义合法，再谈 QRT、纠缠与量子 Fisher 信息。","textPreview":"先证明传播子和输出定义合法，再谈 QRT、纠缠与量子 Fisher 信息。","textChars":37,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/9sze58rq","slide":21,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"image","id":"im/47itwfuh","slide":21,"name":"Image 0","bbox":[443.16,438.32,84.05,33]}
+{"kind":"notes","id":"nt/m1wvqtk3","slide":21,"text":"这一部分决定是否继续改当前求解器，还是切换量子方法。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/5onypobq","slide":22,"title":"R2 · 三条技术路线","textShapes":14}
+{"kind":"shape","id":"sh/6987itcr","slide":22,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/rup0va5s","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qtwz2547","slide":22,"text":"R2 · 三条技术路线","textPreview":"R2 · 三条技术路线","textChars":11,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/dw7ixkni","slide":22,"text":"主路线、备选路线和停止条件必须同时写清","textPreview":"主路线、备选路线和停止条件必须同时写清","textChars":19,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/cvy14fmx","slide":22,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/zyp0za5o","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/exgj6p43","slide":22,"bbox":[72,180,1135,120]}
+{"kind":"textbox","id":"sh/1k7i1knu","slide":22,"text":"A · Lindblad + QRT","textPreview":"A · Lindblad + QRT","textChars":18,"textLines":1,"bbox":[94,198,290,34]}
+{"kind":"textbox","id":"sh/0jy18fm9","slide":22,"text":"定义线性 CPTP 生成元；非厄米辅助算符不做 Hermitization/归一化；先过两能级解析测试。","textPreview":"定义线性 CPTP 生成元；非厄米辅助算符不做 Hermitization/归一化；先过两能级解析测试。","textChars":52,"textLines":1,"bbox":[400,196,590,72]}
+{"kind":"textbox","id":"sh/nm903u5k","slide":22,"text":"最贴近现有 SBE","textPreview":"最贴近现有 SBE","textChars":9,"textLines":1,"bbox":[1010,210,170,48]}
+{"kind":"shape","id":"sh/ml0jap4f","slide":22,"bbox":[72,325,1135,120]}
+{"kind":"textbox","id":"sh/65836tcb","slide":22,"text":"B · 弱关联 input-output","textPreview":"B · 弱关联 input-output","textChars":20,"textLines":1,"bbox":[94,343,290,34]}
+{"kind":"textbox","id":"sh/7qhkzytw","slide":22,"text":"按 Ilin/Stammer 的电流涨落路线，直接构造输出二阶矩；重新推导 free-space CrI₃ 的适用条件。","textPreview":"按 Ilin/Stammer 的电流涨落路线，直接构造输出二阶矩；重新推导 free-space CrI₃ 的适用条件。","textChars":60,"textLines":1,"bbox":[400,341,590,72]}
+{"kind":"textbox","id":"sh/8rql83uh","slide":22,"text":"当前最有吸引力","textPreview":"当前最有吸引力","textChars":7,"textLines":1,"bbox":[1010,355,170,48]}
+{"kind":"shape","id":"sh/tsz218b2","slide":22,"bbox":[72,470,1135,120]}
+{"kind":"textbox","id":"sh/ut83adcn","slide":22,"text":"C · Keldysh / Heisenberg / FCS","textPreview":"C · Keldysh / Heisenberg / FCS","textChars":30,"textLines":1,"bbox":[94,488,290,34]}
+{"kind":"textbox","id":"sh/vuhk3it8","slide":22,"text":"处理非 Markov、非高斯和高阶累积量；工程量大，作为 A/B 失败时的后备。","textPreview":"处理非 Markov、非高斯和高阶累积量；工程量大，作为 A/B 失败时的后备。","textChars":40,"textLines":1,"bbox":[400,486,590,72]}
+{"kind":"textbox","id":"sh/gvqlcnud","slide":22,"text":"最严谨也最昂贵","textPreview":"最严谨也最昂贵","textChars":7,"textLines":1,"bbox":[1010,500,170,48]}
+{"kind":"shape","id":"sh/hwz258by","slide":22,"bbox":[72,602,1135,88]}
+{"kind":"textbox","id":"sh/ax4jy9c3","slide":22,"text":"现有 T2 的位置","textPreview":"现有 T2 的位置","textChars":9,"textLines":1,"bbox":[90,616,1099,30]}
+{"kind":"textbox","id":"sh/byxkreto","slide":22,"text":"瞬时本征基唯象退相干可用于经典灵敏度扫描，但尚未证明对应 Lindblad 生成元；不能因为方程“看起来线性”就直接套 QRT。","textPreview":"瞬时本征基唯象退相干可用于经典灵敏度扫描，但尚未证明对应 Lindblad 生成元；不能因为方程“看起来线性”就直接套 QRT。","textChars":64,"textLines":1,"bbox":[90,654,1099,22]}
+{"kind":"image","id":"im/sfeh0jil","slide":22,"name":"Image 0","bbox":[364.67,197.77,56,22]}
+{"kind":"image","id":"im/jalg3e1o","slide":22,"name":"Image 1","bbox":[438.67,197.77,226.69,22]}
+{"kind":"image","id":"im/i9czu9kj","slide":22,"name":"Image 2","bbox":[397.8,249.22,176.11,23]}
+{"kind":"image","id":"im/5c3y54ju","slide":22,"name":"Image 3","bbox":[353.31,288.03,260.53,23]}
+{"kind":"image","id":"im/4buhwji9","slide":22,"name":"Image 4","bbox":[92,338.75,734,52.47]}
+{"kind":"image","id":"im/n6p0fy18","slide":22,"name":"Image 5","bbox":[870,172.01,340,260]}
+{"kind":"image","id":"im/25wz6t0n","slide":22,"name":"Image 6","bbox":[162.95,451.38,30.08,30]}
+{"kind":"notes","id":"nt/5onypobq","slide":22,"text":"建议先做 A 的两能级单元测试；同时让另一组推进 B 的文献复现，避免单路线锁死。\n\n[Sources]\n- https://arxiv.org/abs/2604.20388\n- https://doi.org/10.1016/j.cpc.2025.109885\n[/Sources]"}
+{"kind":"slide","id":"sl/c7uhcr6t","slide":23,"title":"R2/L3 · 可观测量与论断边界","textShapes":13}
+{"kind":"shape","id":"sh/90vqdczq","slide":23,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/e1s7ipsz","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/f2lorutk","slide":23,"text":"R2/L3 · 可观测量与论断边界","textPreview":"R2/L3 · 可观测量与论断边界","textChars":17,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/03upkfa5","slide":23,"text":"每一个“量子”结论都要绑定模式定义、统计阶数和假设","textPreview":"每一个“量子”结论都要绑定模式定义、统计阶数和假设","textChars":25,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/1436tkba","slide":23,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/u58n6lcv","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/v6hofqt0","slide":23,"bbox":[70,182,535,155]}
+{"kind":"textbox","id":"sh/bqpcnihs","slide":23,"text":"g⁽²⁾ / CSI","textPreview":"g⁽²⁾ / CSI","textChars":10,"textLines":1,"bbox":[88,196,499,30]}
+{"kind":"textbox","id":"sh/apgvud07","slide":23,"text":"模间光子关联；CSI 违反是充分 witness，不是完整态重构。","textPreview":"模间光子关联；CSI 违反是充分 witness，不是完整态重构。","textChars":33,"textLines":1,"bbox":[88,234,499,89]}
+{"kind":"shape","id":"sh/xs7upszy","slide":23,"bbox":[645,182,535,155]}
+{"kind":"textbox","id":"sh/wrydwnid","slide":23,"text":"协方差 / 压缩","textPreview":"协方差 / 压缩","textChars":8,"textLines":1,"bbox":[663,196,499,30]}
+{"kind":"textbox","id":"sh/ju9wr2ho","slide":23,"text":"需定义 fq、真空归一化；二阶矩只在高斯近似下决定完整状态。","textPreview":"需定义 fq、真空归一化；二阶矩只在高斯近似下决定完整状态。","textChars":30,"textLines":1,"bbox":[663,234,499,89]}
+{"kind":"shape","id":"sh/yt0vyx0j","slide":23,"bbox":[70,372,535,155]}
+{"kind":"textbox","id":"sh/lwretszu","slide":23,"text":"对数负性","textPreview":"对数负性","textChars":4,"textLines":1,"bbox":[88,386,499,30]}
+{"kind":"textbox","id":"sh/kvid07i9","slide":23,"text":"适用于高斯双模态；非高斯输出需额外判据。","textPreview":"适用于高斯双模态；非高斯输出需额外判据。","textChars":20,"textLines":1,"bbox":[88,424,499,89]}
+{"kind":"shape","id":"sh/7i9wv2h0","slide":23,"bbox":[645,372,535,155]}
+{"kind":"textbox","id":"sh/6h0v2x0f","slide":23,"text":"QFI","textPreview":"QFI","textChars":3,"textLines":1,"bbox":[663,386,499,30]}
+{"kind":"textbox","id":"sh/4n2ds7et","slide":23,"text":"比较等能量、带宽、时长、偏振和探测资源下的最强经典集合。","textPreview":"比较等能量、带宽、时长、偏振和探测资源下的最强经典集合。","textChars":28,"textLines":1,"bbox":[663,424,499,89]}
+{"kind":"shape","id":"sh/5obulcfy","slide":23,"bbox":[70,548,1135,112]}
+{"kind":"textbox","id":"sh/ilkbqxwn","slide":23,"text":"严格优势判据","textPreview":"严格优势判据","textChars":6,"textLines":1,"bbox":[88,562,1099,30]}
+{"kind":"textbox","id":"sh/3mtcj2x8","slide":23,"text":"FQquantum(N) > supρcl∈Cresource FQ[ρoutcl(N)]；Cresource 应允许正 P 的多模、相位、偏振与时域相关经典场，而非只允许随机强度。","textPreview":"FQquantum(N) > supρcl∈Cresource FQ[ρoutcl(N)]；Cresource 应允许正 P 的多模、相位、偏振与时域相关经典场，而非只允许随机强度。","textChars":91,"textLines":1,"bbox":[88,600,1099,46]}
+{"kind":"image","id":"im/q5sf69cv","slide":23,"name":"Image 0","bbox":[96,272.69,378,39.62]}
+{"kind":"image","id":"im/b61gfedg","slide":23,"name":"Image 1","bbox":[145.78,326.31,29.11,22]}
+{"kind":"image","id":"im/tkr2lcfy","slide":23,"name":"Image 2","bbox":[524,174,240,230]}
+{"kind":"image","id":"im/szy1c7ed","slide":23,"name":"Image 3","bbox":[1074.48,247.77,27.56,25]}
+{"kind":"image","id":"im/rypkj2xs","slide":23,"name":"Image 4","bbox":[1131.02,247.77,15.97,25]}
+{"kind":"image","id":"im/6xgjaxw7","slide":23,"name":"Image 5","bbox":[944.08,321.77,61.89,22]}
+{"kind":"notes","id":"nt/c7uhcr6t","slide":23,"text":"高斯 QFI 的 even/odd 数学分解不能自动等同于 Néel parity，必须先建立明确映射。\n\n[Sources]\n- https://doi.org/10.1103/PRXQuantum.5.040319\n- https://arxiv.org/abs/2601.06513\n[/Sources]"}
+{"kind":"slide","id":"sl/7qto7e10","slide":24,"title":"PART 6","textShapes":4}
+{"kind":"shape","id":"sh/1sfqxsv6","slide":24,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/0r6p4nul","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nux8zidc","slide":24,"text":"PART 6","textPreview":"PART 6","textChars":6,"textLines":1,"bbox":[72,110,270,36]}
+{"kind":"textbox","id":"sh/2to76dcr","slide":24,"text":"推进与分工","textPreview":"推进与分工","textChars":5,"textLines":1,"bbox":[72,178,1070,95]}
+{"kind":"shape","id":"sh/9wzq1svi","slide":24,"bbox":[72,293,250,5]}
+{"kind":"textbox","id":"sh/ov6p8nux","slide":24,"text":"数值主线和量子理论并行；每条线都有可证伪假设、交付物和停止条件。","textPreview":"数值主线和量子理论并行；每条线都有可证伪假设、交付物和停止条件。","textChars":32,"textLines":1,"bbox":[72,333,900,74]}
+{"kind":"textbox","id":"sh/3ydonyd8","slide":24,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[995,120,220,230]}
+{"kind":"notes","id":"nt/7qto7e10","slide":24,"text":"收尾前给出组内可并行执行的结构。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/69wfm9o7","slide":25,"title":"执行计划 · 假设驱动，而不是任务堆叠","textShapes":20}
+{"kind":"shape","id":"sh/xg7axgf2","slide":25,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/s7utkvqx","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/t83at0ri","slide":25,"text":"执行计划 · 假设驱动，而不是任务堆叠","textPreview":"执行计划 · 假设驱动，而不是任务堆叠","textChars":19,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/1czihwva","slide":25,"text":"五组并行；三轮冲刺；每一步都有失败后的替代路线","textPreview":"五组并行；三轮冲刺；每一步都有失败后的替代路线","textChars":23,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/gbq1obep","slide":25,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/fax0f6d4","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/e9ojm1wj","slide":25,"bbox":[70,180,500,62]}
+{"kind":"textbox","id":"sh/t8fidwfe","slide":25,"text":"A 数值基线","textPreview":"A 数值基线","textChars":6,"textLines":1,"bbox":[88,193,145,28]}
+{"kind":"textbox","id":"sh/s761kret","slide":25,"text":"M88-c20/full112；强场节点；误差预算","textPreview":"M88-c20/full112；强场节点；误差预算","textChars":25,"textLines":1,"bbox":[240,192,305,34]}
+{"kind":"shape","id":"sh/r6x0bmx8","slide":25,"bbox":[70,258,500,62]}
+{"kind":"textbox","id":"sh/6lojihwn","slide":25,"text":"B 机制分析","textPreview":"B 机制分析","textChars":6,"textLines":1,"bbox":[88,271,145,28]}
+{"kind":"textbox","id":"sh/5kfi9cf2","slide":25,"text":"M52 与 orbital-resolved；SOC/磁构型","textPreview":"M52 与 orbital-resolved；SOC/磁构型","textChars":30,"textLines":1,"bbox":[240,270,305,34]}
+{"kind":"shape","id":"sh/4j61g7eh","slide":25,"bbox":[70,336,500,62]}
+{"kind":"textbox","id":"sh/upkfqdcf","slide":25,"text":"C 开放系统","textPreview":"C 开放系统","textChars":6,"textLines":1,"bbox":[88,349,145,28]}
+{"kind":"textbox","id":"sh/vqtgjid0","slide":25,"text":"Lindblad、QRT 两能级测试、T2 审计","textPreview":"Lindblad、QRT 两能级测试、T2 审计","textChars":24,"textLines":1,"bbox":[240,348,305,34]}
+{"kind":"shape","id":"sh/wr2xsnul","slide":25,"bbox":[70,414,500,62]}
+{"kind":"textbox","id":"sh/hcvylsb6","slide":25,"text":"D 量子光学","textPreview":"D 量子光学","textChars":6,"textLines":1,"bbox":[88,427,145,28]}
+{"kind":"textbox","id":"sh/mlkfmdcj","slide":25,"text":"Green 函数、fq、g²/协方差原型","textPreview":"Green 函数、fq、g²/协方差原型","textChars":20,"textLines":1,"bbox":[240,426,305,34]}
+{"kind":"shape","id":"sh/7mtgfido","slide":25,"bbox":[70,492,500,62]}
+{"kind":"textbox","id":"sh/8n2xonu9","slide":25,"text":"E 数学计量","textPreview":"E 数学计量","textChars":6,"textLines":1,"bbox":[88,505,145,28]}
+{"kind":"textbox","id":"sh/9obyh8vu","slide":25,"text":"N-宇称、正 P/矩问题、QFI 基准","textPreview":"N-宇称、正 P/矩问题、QFI 基准","textChars":19,"textLines":1,"bbox":[240,504,305,34]}
+{"kind":"shape","id":"sh/yh0fitc7","slide":25,"bbox":[630,185,560,105]}
+{"kind":"textbox","id":"sh/zi9gbyds","slide":25,"text":"冲刺 1 · 现在","textPreview":"冲刺 1 · 现在","textChars":9,"textLines":1,"bbox":[648,199,524,30]}
+{"kind":"textbox","id":"sh/batcnexo","slide":25,"text":"冻结 L0/R1 模型；补高强度节点","textPreview":"冻结 L0/R1 模型；补高强度节点","textChars":18,"textLines":1,"bbox":[648,237,524,39]}
+{"kind":"shape","id":"sh/q9kve9g3","slide":25,"bbox":[630,320,560,105]}
+{"kind":"textbox","id":"sh/dcbup4fe","slide":25,"text":"冲刺 2 · 1-2 月","textPreview":"冲刺 2 · 1-2 月","textChars":12,"textLines":1,"bbox":[648,334,524,30]}
+{"kind":"textbox","id":"sh/cb2dgjy9","slide":25,"text":"Lindblad-QRT 闸门 + 单谐波对 input-output","textPreview":"Lindblad-QRT 闸门 + 单谐波对 input-output","textChars":35,"textLines":1,"bbox":[648,372,524,39]}
+{"kind":"shape","id":"sh/36tcjuxc","slide":25,"bbox":[630,455,560,105]}
+{"kind":"textbox","id":"sh/250bapgr","slide":25,"text":"冲刺 3 · 闸门后","textPreview":"冲刺 3 · 闸门后","textChars":10,"textLines":1,"bbox":[648,469,524,30]}
+{"kind":"textbox","id":"sh/p8bul4fi","slide":25,"text":"g²/压缩/纠缠/QFI；或切换 Keldysh","textPreview":"g²/压缩/纠缠/QFI；或切换 Keldysh","textChars":24,"textLines":1,"bbox":[648,507,524,39]}
+{"kind":"textbox","id":"sh/o72tczyx","slide":25,"text":"停止条件：若 A/B 两条量子输出路线都无法在可控近似下复现单元测试，暂停 QFI 生产，先发表可靠磁性 HHG。","textPreview":"停止条件：若 A/B 两条量子输出路线都无法在可控近似下复现单元测试，暂停 QFI 生产，先发表可靠磁性 HHG。","textChars":57,"textLines":1,"bbox":[70,610,1120,46]}
+{"kind":"image","id":"im/hcrixc3u","slide":25,"name":"Image 0","bbox":[98,190,1084,78.11]}
+{"kind":"image","id":"im/wbi1o7m9","slide":25,"name":"Image 1","bbox":[70,332.11,320,170]}
+{"kind":"notes","id":"nt/69wfm9o7","slide":25,"text":"分工的目的不是平摊工作量，而是让数值、开放系统、量子光学和数学判据互相验收。\n\n[Sources]\n[/Sources]"}
+{"kind":"slide","id":"sl/l0bepsfm","slide":26,"title":"收尾 · 请导师拍板","textShapes":13}
+{"kind":"shape","id":"sh/uhk36lk7","slide":26,"name":"Shape 0","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/qxknmxor","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/byd4f2pc","slide":26,"text":"收尾 · 请导师拍板","textPreview":"收尾 · 请导师拍板","textChars":10,"textLines":1,"bbox":[70,42,600,28]}
+{"kind":"textbox","id":"sh/czm5o76x","slide":26,"text":"四个决定，确定下一阶段的风险承担方式","textPreview":"四个决定，确定下一阶段的风险承担方式","textChars":18,"textLines":1,"bbox":[70,77,1110,60]}
+{"kind":"shape","id":"sh/d0vmhs7i","slide":26,"bbox":[70,142,255,4]}
+{"kind":"textbox","id":"sh/y14nqxo3","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1180,47,42,25]}
+{"kind":"shape","id":"sh/z2d4j2po","slide":26,"bbox":[74,175,1120,72]}
+{"kind":"textbox","id":"sh/9wfq9wrq","slide":26,"text":"模型冻结","textPreview":"模型冻结","textChars":4,"textLines":1,"bbox":[94,192,145,28]}
+{"kind":"textbox","id":"sh/8v6pgbq5","slide":26,"text":"是否同意 M88-c20@k40 作为 H1-H9 / Jₒ H2-H8 的生产配置？","textPreview":"是否同意 M88-c20@k40 作为 H1-H9 / Jₒ H2-H8 的生产配置？","textChars":43,"textLines":1,"bbox":[255,190,900,36]}
+{"kind":"shape","id":"sh/nux8769k","slide":26,"bbox":[74,267,1120,72]}
+{"kind":"textbox","id":"sh/mto7e18z","slide":26,"text":"高阶升级","textPreview":"高阶升级","textChars":4,"textLines":1,"bbox":[94,284,145,28]}
+{"kind":"textbox","id":"sh/xkzqdgrm","slide":26,"text":"是否同意 Jₒ H10 用 M88-full，H11+ 与 cutoff 回到 full112/扩展空间？","textPreview":"是否同意 Jₒ H10 用 M88-full，H11+ 与 cutoff 回到 full112/扩展空间？","textChars":53,"textLines":1,"bbox":[255,282,900,36]}
+{"kind":"shape","id":"sh/wjqpkbqh","slide":26,"bbox":[74,359,1120,72]}
+{"kind":"textbox","id":"sh/vih8b69w","slide":26,"text":"量子路线","textPreview":"量子路线","textChars":4,"textLines":1,"bbox":[94,376,145,28]}
+{"kind":"textbox","id":"sh/ah87i18b","slide":26,"text":"是否同意 R1 立即复核，而 R2 在方法闸门通过前不写生产 QRT/QFI？","textPreview":"是否同意 R1 立即复核，而 R2 在方法闸门通过前不写生产 QRT/QFI？","textChars":39,"textLines":1,"bbox":[255,374,900,36]}
+{"kind":"shape","id":"sh/5ojqhgry","slide":26,"bbox":[74,451,1120,72]}
+{"kind":"textbox","id":"sh/knqpovqd","slide":26,"text":"风险对冲","textPreview":"风险对冲","textChars":4,"textLines":1,"bbox":[94,468,145,28]}
+{"kind":"textbox","id":"sh/o3i10j2l","slide":26,"text":"是否把 cavity/nanophotonic 增强作为 free-space 修正过小的中长期分支？","textPreview":"是否把 cavity/nanophotonic 增强作为 free-space 修正过小的中长期分支？","textChars":51,"textLines":1,"bbox":[255,466,900,36]}
+{"kind":"shape","id":"sh/p4ri9o36","slide":26,"bbox":[74,548,1120,112]}
+{"kind":"textbox","id":"sh/210jytkv","slide":26,"text":"三句话结论","textPreview":"三句话结论","textChars":5,"textLines":1,"bbox":[92,562,1084,30]}
+{"kind":"textbox","id":"sh/32907elg","slide":26,"text":"经典磁性 HHG 已在明确阶数内收口；R1 可以重跑但不叫严格优势；R2 的创新空间真实存在，但必须先补齐耗散与 input-output 的数学合法性。","textPreview":"经典磁性 HHG 已在明确阶数内收口；R1 可以重跑但不叫严格优势；R2 的创新空间真实存在，但必须先补齐耗散与 input-output 的数学合法性。","textChars":77,"textLines":1,"bbox":[92,600,1084,46]}
+{"kind":"image","id":"im/qdwrapor","slide":26,"name":"Image 0","bbox":[251.7,187.19,146.64,22]}
+{"kind":"image","id":"im/re583upc","slide":26,"name":"Image 1","bbox":[149.77,223.64,91.45,22]}
+{"kind":"image","id":"im/cbi9o361","slide":26,"name":"Image 2","bbox":[348.16,223.64,94.08,22]}
+{"kind":"image","id":"im/xcrahonm","slide":26,"name":"Image 3","bbox":[216.19,264.59,159.62,27]}
+{"kind":"image","id":"im/tgj69gny","slide":26,"name":"Image 4","bbox":[542,163.01,200,150]}
+{"kind":"image","id":"im/8fa5gvmd","slide":26,"name":"Image 5","bbox":[890.05,229.01,22.87,22]}
+{"kind":"image","id":"im/7e1o7q58","slide":26,"name":"Image 6","bbox":[233.97,387.41,231.05,21]}
+{"kind":"image","id":"im/6dsnel4n","slide":26,"name":"Image 7","bbox":[811.34,387.41,238.31,22]}
+{"kind":"notes","id":"nt/l0bepsfm","slide":26,"text":"停在这页请导师逐条回答。\n\n[Sources]\n- C:/Users/26507/Documents/New_SBEs/Quantum-light/docs/00_当前状态/课题整体进展报告_理论与文献审校_20260727.md\n[/Sources]"}

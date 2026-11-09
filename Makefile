@@ -97,6 +97,7 @@ test: dirs
 	python tools/analysis/test_finite_bandwidth_modes.py
 	python tools/b0_small_model/test_b0_gates.py
 	python tools/b0_small_model/test_b0_open_gaussian.py
+	python tools/b0_small_model/test_b1_dev_closed_wick.py
 	$(MAKE) test-field-cep
 
 # Production generate_field_sample antipode gate (mod_params + mod_laser only).

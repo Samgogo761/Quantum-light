@@ -1,0 +1,15 @@
+high_intensity listed=11 selected=7
+bias_v2_probe_F0_I32_phi000_dx048_r01: F=0.0 I/mu=32.0 numerics=48/0.1
+bias_v2_probe_F0_I32_phi000_dt005_r01: F=0.0 I/mu=32.0 numerics=24/0.05
+bias_v2_probe_F1_I32_phi000_dx048_r01: F=1.0 I/mu=32.0 numerics=48/0.1
+bias_v2_probe_F1_I32_phi000_dt005_r01: F=1.0 I/mu=32.0 numerics=24/0.05
+bias_v2_probe_F1_I32_phi000_box900_r01: F=1.0 I/mu=32.0 numerics=24/0.1
+bias_v2_probe_F1_I32_phi000_caphalf_r01: F=1.0 I/mu=32.0 numerics=24/0.1
+bias_v2_probe_F0_I32_phi000_box900_r01: F=0.0 I/mu=32.0 numerics=24/0.1
+{"run_id": "bias_v2_probe_F0_I32_phi000_dx048_r01", "status": "PASS", "wall_seconds": 1879.5687645000871, "Y": 0.055282346942744774}
+{"run_id": "bias_v2_probe_F0_I32_phi000_dt005_r01", "status": "PASS", "wall_seconds": 2385.01224450022, "Y": 0.05537721998482685}
+{"run_id": "bias_v2_probe_F1_I32_phi000_dx048_r01", "status": "PASS", "wall_seconds": 2972.8218779000454, "Y": 0.09165212105615926}
+{"run_id": "bias_v2_probe_F1_I32_phi000_dt005_r01", "status": "PASS", "wall_seconds": 2630.046087300172, "Y": 0.08717008265236786}
+{"run_id": "bias_v2_probe_F1_I32_phi000_box900_r01", "status": "PASS", "wall_seconds": 2202.3894801998977, "Y": 0.09185492698897321}
+{"run_id": "bias_v2_probe_F1_I32_phi000_caphalf_r01", "status": "PASS", "wall_seconds": 1694.9707128000446, "Y": 0.09141951623270937}
+{"run_id": "bias_v2_probe_F0_I32_phi000_box900_r01", "status": "PASS", "wall_seconds": 2384.3616476999596, "Y": 0.0554162602107144}

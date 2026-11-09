@@ -1,0 +1,19 @@
+# Q0 Husimi-Q moment validation (layer A0)
+state_type = coherent
+n_draw = 200000
+d_target =   3.90773085E+00  1.65216210E+00
+d_sample =   3.90763753E+00  1.65702931E+00
+err_d =   1.14742338E-03
+VQ_target =
+  1.00000000E+00  0.00000000E+00
+  0.00000000E+00  1.00000000E+00
+VQ_sample =
+  1.00061227E+00  2.65948819E-03
+  2.65948819E-03  1.00254105E+00
+err_VQ =   3.23863842E-03
+N_target =   9.00000000E+00
+N_sample =   9.00570306E+00
+err_N =   6.33672937E-04
+M_sample =   6.26196183E+00  6.47710111E+00
+err_M =   0.00000000E+00
+pass = T

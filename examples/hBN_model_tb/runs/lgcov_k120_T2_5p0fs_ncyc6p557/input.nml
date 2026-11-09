@@ -1,0 +1,82 @@
+&crystal
+  a1_ang = 1.2500000000, -2.1650635095, 0.0000000000
+  a2_ang = 1.2500000000,  2.1650635095, 0.0000000000
+  a3_ang = 0.0000000000,  0.0000000000, 20.0000000000
+  E_fermi_eV = 0.0
+  SOC = 0
+  wannier_tb_file = "../../hBN_model_tb.dat"
+  wannier_hr_file = ""
+  wannier_r_file  = ""
+/
+
+&kgrid
+  nkx = 120
+  nky = 120
+/
+
+&bands
+  nv_orig = 1
+  nb_start = 1
+  nb_end = 2
+/
+
+&laser
+  wvl_nm = 1600.0
+  intensity_Wcm2 = 3.5e12
+  theta_deg = 0.0
+  phi_cep_deg = 90.0
+  ncyc = 6.55700000
+  env_type = 2
+  ellipticity = 0.0
+  delta_phase_deg = 90.0
+/
+
+&laser2
+  wvl_nm_2 = 0.0
+  intensity_Wcm2_2 = 0.0
+/
+
+&external_field
+  use_external_A = .false.
+  external_A_file = ""
+/
+
+&timestep
+  dt = 0.50
+  n_dt_deph = 5
+/
+
+&dephasing
+  T2_cycles = -1.0
+  T2_fs = 5.00000000e+00
+/
+
+&bsv
+  bsv_enabled = .false.
+  bsv_n_samples = 1
+  bsv_mean_intensity = 0.0
+  bsv_seed = 42
+/
+
+&method
+  gauge_method = 'lg_cov'
+/
+
+&diagnostics
+  run_pcenter_check = .false.
+  stop_after_diagnostics = .false.
+/
+
+&output
+  save_geometry = .true.
+  save_occupation = .false.
+  occ_stride = 0
+  occ_band_resolved = .false.
+  save_coherence = .false.
+/
+
+&spin
+  spin_current = .false.
+  spin_sz_file = ""
+  spin_order = 'interleaved'
+/
