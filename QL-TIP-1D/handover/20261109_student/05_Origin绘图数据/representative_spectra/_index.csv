@@ -1,0 +1,9 @@
+file,readout_id,F_dc_V_per_nm,I_over_mu,eta_eV,dE_eV,mask_nm,save_time_fs,split_parts
+F0_I1_phi000.csv,ro2_bias_p1_F0.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,0.0,1.0,0.05,0.0125,2-4,100.0,1
+F0_I4_phi000.csv,ro2_bias_p2_F0.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,0.0,4.0,0.05,0.0125,2-4,100.0,1
+F0_I8_phi000.csv,ro2_bias_v2_probe_F0_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4,0.0,8.0,0.05,0.0125,2-4,100.0,1
+F0_I32_phi000_part1.csv;F0_I32_phi000_part2.csv,ro2_bias_v2_probe_F0_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4,0.0,32.0,0.05,0.0125,2-4,100.0,2
+F1_I1_phi000.csv,ro2_bias_p1_F1.000_I1_phi000_r02_t100_eta0p05_dE0p0125_m2-4,1.0,1.0,0.05,0.0125,2-4,100.0,1
+F1_I4_phi000.csv,ro2_bias_p2_F1.000_I4_phi000_r02_t100_eta0p05_dE0p0125_m2-4,1.0,4.0,0.05,0.0125,2-4,100.0,1
+F1_I8_phi000.csv,ro2_bias_v2_probe_F1_I8_phi000_r01_t100_eta0p05_dE0p0125_m2-4,1.0,8.0,0.05,0.0125,2-4,100.0,1
+F1_I32_phi000_part1.csv;F1_I32_phi000_part2.csv,ro2_bias_v2_probe_F1_I32_phi000_r01_t100_eta0p05_dE0p0125_m2-4,1.0,32.0,0.05,0.0125,2-4,100.0,2

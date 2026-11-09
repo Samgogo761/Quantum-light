@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1502 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1589 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -513,6 +513,93 @@
 | reports | [QL-TIP-1D/docs/numerical_methods.md](../QL-TIP-1D/docs/numerical_methods.md) | 3422 | `28a23fc46132` |
 | reports | [QL-TIP-1D/docs/prompt_for_independent_ai_20261104.md](../QL-TIP-1D/docs/prompt_for_independent_ai_20261104.md) | 2726 | `2c0951673e0d` |
 | results | [QL-TIP-1D/file_inventory.json](../QL-TIP-1D/file_inventory.json) | 65098 | `8e46f75340ba` |
+| reports | [QL-TIP-1D/handover/20261109_student/00_README.md](../QL-TIP-1D/handover/20261109_student/00_README.md) | 3875 | `663ad38d3284` |
+| reports | [QL-TIP-1D/handover/20261109_student/01_研究交接与学习指导手册.md](../QL-TIP-1D/handover/20261109_student/01_研究交接与学习指导手册.md) | 38402 | `71073f7aa6c9` |
+| reports | [QL-TIP-1D/handover/20261109_student/02_项目现状与证据摘要.md](../QL-TIP-1D/handover/20261109_student/02_项目现状与证据摘要.md) | 5036 | `5fc4fc2ac716` |
+| reports | [QL-TIP-1D/handover/20261109_student/03_代码地图.md](../QL-TIP-1D/handover/20261109_student/03_代码地图.md) | 5209 | `ec2bb1f127b1` |
+| reports | [QL-TIP-1D/handover/20261109_student/04_数据地图与复现说明.md](../QL-TIP-1D/handover/20261109_student/04_数据地图与复现说明.md) | 4928 | `16e907e115d4` |
+| code | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/_export_origin_csv.py](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/_export_origin_csv.py) | 13183 | `4656e2ce5f8c` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/bias_ratio_by_intensity.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/bias_ratio_by_intensity.csv) | 982 | `8c612477cd82` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/cep_averaged_response.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/cep_averaged_response.csv) | 2153 | `b69ff2767736` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/intensity_response_by_bias.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/intensity_response_by_bias.csv) | 31304 | `481a0c4ffccb` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I1_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I1_phi000.csv) | 272341 | `2b8ae76ce000` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I32_phi000_part1.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I32_phi000_part1.csv) | 1054355 | `56e72ae72a35` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I32_phi000_part2.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I32_phi000_part2.csv) | 1064796 | `d0dbd58c5125` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I4_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I4_phi000.csv) | 346792 | `74b0555d2db6` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I8_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F0_I8_phi000.csv) | 603652 | `797bdff8f22b` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I1_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I1_phi000.csv) | 506613 | `3c91392c5fd2` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I32_phi000_part1.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I32_phi000_part1.csv) | 1232652 | `07a2af3d6a23` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I32_phi000_part2.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I32_phi000_part2.csv) | 1244153 | `c20f8c396e19` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I4_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I4_phi000.csv) | 690852 | `cd0a3221d988` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I8_phi000.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/F1_I8_phi000.csv) | 953030 | `a5d2a41bb69c` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/_index.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/representative_spectra/_index.csv) | 1041 | `7e12e3c9695a` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/statistics_contribution_BSV.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/statistics_contribution_BSV.csv) | 2313 | `053f0525b5d2` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/statistics_contribution_thermal.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/statistics_contribution_thermal.csv) | 2325 | `db61d6ff7f42` |
+| results | [QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/threshold_sensitivity.csv](../QL-TIP-1D/handover/20261109_student/05_Origin绘图数据/threshold_sensitivity.csv) | 1120 | `09f015eb6fb9` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/analyze_error_headroom.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/analyze_error_headroom.py) | 4006 | `8386587e04b1` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/analyze_statistics_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/analyze_statistics_v2.py) | 36807 | `1095de283582` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/apply_r1_v5.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/apply_r1_v5.py) | 3381 | `01605d631480` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/backfill_ledger_v5.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/backfill_ledger_v5.py) | 5266 | `43305e5d2dc1` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/build_error_component_map_v4.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/build_error_component_map_v4.py) | 13089 | `04be6381c62e` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/build_node_error_table.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/build_node_error_table.py) | 18733 | `4cdb5569e768` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/estimate_acceptance_path.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/estimate_acceptance_path.py) | 7391 | `118a0910603b` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/migrate_artifact_versions.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/migrate_artifact_versions.py) | 4169 | `ea7de6048803` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/readout_continuation_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/readout_continuation_v2.py) | 9482 | `2b0af6349916` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/rebuild_r1_pairs_v5.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/rebuild_r1_pairs_v5.py) | 20114 | `6097cd5a42b4` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_bias_v1.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_bias_v1.py) | 20600 | `a9920174a983` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_continuation_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_continuation_v2.py) | 44197 | `37cd9537d9e7` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_v3_full_v4.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/run_v3_full_v4.py) | 22708 | `44652988f4b3` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/v3_stage_v4.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/scripts/v3_stage_v4.py) | 44682 | `70f1e0b0ddd6` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/bias_v1.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/bias_v1.py) | 6357 | `1faff033af6b` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/continuation_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/continuation_v2.py) | 18781 | `5c9476617402` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/core.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/core.py) | 6196 | `8ee6f60e73c6` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/spectrum_v1.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/spectrum_v1.py) | 6982 | `5477ee1a8f6a` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/statistics_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/src/ql_tip_1d/statistics_v2.py) | 6628 | `e21303c7df50` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_continuation_v2.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_continuation_v2.py) | 6123 | `da6859d2edc5` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_statistics_gate_v4.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_statistics_gate_v4.py) | 6577 | `0bab61b05041` |
+| code | [QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_v4_review_fixes.py](../QL-TIP-1D/handover/20261109_student/06_关键代码/tests/test_v4_review_fixes.py) | 12902 | `fdb68360ea69` |
+| reports | [QL-TIP-1D/handover/20261109_student/06_关键代码/路径映射.md](../QL-TIP-1D/handover/20261109_student/06_关键代码/路径映射.md) | 550 | `b4c3f4d55287` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_components_v5.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_components_v5.csv) | 30839 | `d7eefb7542b7` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_gate_r1_20261107_v5.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_gate_r1_20261107_v5.json) | 3127 | `6a979abb57f7` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_pair_audit_v5.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R1_pair_audit_v5.csv) | 24072 | `0df0cf844d96` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R3_statistics.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/R3_statistics.json) | 25930 | `f40e3f7ba5f8` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/acceptance_path_estimate.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/acceptance_path_estimate.json) | 4286 | `7731bfa525da` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/classical_response.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/classical_response.csv) | 4127 | `dea2a35c89ef` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/compute_ledger_v2.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/compute_ledger_v2.csv) | 88402 | `4b617f6818b9` |
+| reports | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision.md](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision.md) | 2823 | `e793d6703045` |
+| reports | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision_r2.md](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision_r2.md) | 3490 | `890318181d1f` |
+| reports | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision_r3.md](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/decision_r3.md) | 4431 | `141ad70b71c2` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/error_component_map.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/error_component_map.csv) | 11106 | `0e46a8497d5d` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/error_headroom.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/error_headroom.json) | 12964 | `4dd7bc72ed17` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/integration_audit.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/integration_audit.csv) | 1225 | `2f5fac885141` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/integration_weights.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/integration_weights.csv) | 3900 | `05f8c06ddd9e` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/intensity_contributions.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/intensity_contributions.csv) | 1982 | `2e8466cf781c` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/midpoint_plan.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/midpoint_plan.json) | 4058 | `3547dee821de` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/node_error_summary.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/node_error_summary.json) | 3342 | `2c567ee7e115` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/node_error_table.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/node_error_table.csv) | 61748 | `b688b4b880f6` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/phase8_selection.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/phase8_selection.json) | 3815 | `7cf6d614a3ac` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/phase_validation.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/phase_validation.json) | 18061 | `58cb2b8de771` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/raw_state_manifest.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/raw_state_manifest.csv) | 16241 | `3bf243a0f2f0` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s3_stage_budget.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s3_stage_budget.json) | 1208 | `f3ebb0a35e59` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_controls.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_controls.csv) | 687 | `3349fbd9486e` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_gate.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_gate.json) | 2262 | `1f35bf8106b3` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_readout_controls.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/s4_readout_controls.json) | 2459 | `5cb514de271f` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/statistical_yields.csv](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/statistical_yields.csv) | 1206 | `acc854fb8af4` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/tail_audit.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/tail_audit.json) | 18380 | `72dc4ff4aec7` |
+| results | [QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/tail_precheck.json](../QL-TIP-1D/handover/20261109_student/07_关键结果与误差审计/tail_precheck.json) | 15561 | `3b0baaab0a0f` |
+| reports | [QL-TIP-1D/handover/20261109_student/08_文献与来源/README.md](../QL-TIP-1D/handover/20261109_student/08_文献与来源/README.md) | 1362 | `d742a0a2b096` |
+| reports | [QL-TIP-1D/handover/20261109_student/08_文献与来源/literature_audit.md](../QL-TIP-1D/handover/20261109_student/08_文献与来源/literature_audit.md) | 7936 | `d560c09aa9a0` |
+| reports | [QL-TIP-1D/handover/20261109_student/08_文献与来源/literature_update_20261104.md](../QL-TIP-1D/handover/20261109_student/08_文献与来源/literature_update_20261104.md) | 7185 | `99f42482feb5` |
+| results | [QL-TIP-1D/handover/20261109_student/08_文献与来源/source_inventory.json](../QL-TIP-1D/handover/20261109_student/08_文献与来源/source_inventory.json) | 3550 | `dc74e5c0e3d6` |
+| reports | [QL-TIP-1D/handover/20261109_student/08_文献与来源/文献清单.md](../QL-TIP-1D/handover/20261109_student/08_文献与来源/文献清单.md) | 1301 | `e34832292c33` |
+| results | [QL-TIP-1D/handover/20261109_student/09_环境与复现/environment.json](../QL-TIP-1D/handover/20261109_student/09_环境与复现/environment.json) | 1302 | `9da6d36a86d8` |
+| reports | [QL-TIP-1D/handover/20261109_student/09_环境与复现/numerical_methods.md](../QL-TIP-1D/handover/20261109_student/09_环境与复现/numerical_methods.md) | 3422 | `28a23fc46132` |
+| reports | [QL-TIP-1D/handover/20261109_student/09_环境与复现/requirements-lock.txt](../QL-TIP-1D/handover/20261109_student/09_环境与复现/requirements-lock.txt) | 199 | `00710d223d3c` |
+| reports | [QL-TIP-1D/handover/20261109_student/09_环境与复现/环境与复现.md](../QL-TIP-1D/handover/20261109_student/09_环境与复现/环境与复现.md) | 1478 | `b8cc9a785ab4` |
+| reports | [QL-TIP-1D/handover/20261109_student/10_Agent自查报告.md](../QL-TIP-1D/handover/20261109_student/10_Agent自查报告.md) | 4270 | `f418afb994e4` |
+| reports | [QL-TIP-1D/handover/20261109_student/11_GitHub上传说明.md](../QL-TIP-1D/handover/20261109_student/11_GitHub上传说明.md) | 3738 | `9384644bfbb5` |
+| results | [QL-TIP-1D/handover/20261109_student/MANIFEST.csv](../QL-TIP-1D/handover/20261109_student/MANIFEST.csv) | 13967 | `f182a58f5435` |
+| reports | [QL-TIP-1D/handover/20261109_student/SHA256SUMS.txt](../QL-TIP-1D/handover/20261109_student/SHA256SUMS.txt) | 9800 | `02040c7e75f8` |
 | reports | [QL-TIP-1D/logs/stage1_20261103_r1_failure.txt](../QL-TIP-1D/logs/stage1_20261103_r1_failure.txt) | 923 | `bfeefa4af71c` |
 | reports | [QL-TIP-1D/logs/stage2_saved_runs_audit_20261104.txt](../QL-TIP-1D/logs/stage2_saved_runs_audit_20261104.txt) | 5413 | `9c85fa01864a` |
 | reports | [QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md](../QL-TIP-1D/plans/20261104_solo_v1/EXECUTION_TASKBOOK.md) | 40491 | `3932679f2231` |

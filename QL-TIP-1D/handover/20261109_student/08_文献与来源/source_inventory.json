@@ -1,0 +1,81 @@
+[
+  {
+    "source_id": 0,
+    "filename": "QL-TIP-1D_本地Agent科研执行任务书.md",
+    "original_path": "C:\\Users\\26507\\Downloads\\QL-TIP-1D_本地Agent科研执行任务书.md",
+    "bytes": 22716,
+    "sha256": "f8f66a3ba9da51d12178f73f423b49f2e45553bdd65acc56e8f69c180279c089",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "extraction_path": "references/extracted/00_QL-TIP-1D_本地Agent科研执行任务书.txt",
+    "extracted_characters": 12785
+  },
+  {
+    "source_id": 1,
+    "filename": "s41567-025-03087-1.pdf",
+    "original_path": "C:\\Users\\26507\\Downloads\\s41567-025-03087-1.pdf",
+    "bytes": 4970740,
+    "sha256": "8b820e77df429cf3a32965a3485ff01fb5281b42e32994c0ee2a344f336347b6",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "pages": 13,
+    "extraction_path": "references/extracted/01_s41567-025-03087-1.txt",
+    "extracted_characters": 60747
+  },
+  {
+    "source_id": 2,
+    "filename": "s41567-024-02472-6.pdf",
+    "original_path": "C:\\Users\\26507\\Downloads\\s41567-024-02472-6.pdf",
+    "bytes": 1825313,
+    "sha256": "4115ab5804d237ed86d47e393bc963adaa9e9b6978edeec4697bfab898caaa49",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "pages": 10,
+    "extraction_path": "references/extracted/02_s41567-024-02472-6.txt",
+    "extracted_characters": 44294
+  },
+  {
+    "source_id": 3,
+    "filename": "量子光注入金属纳米尖端的背景调查与可行性评估.docx",
+    "original_path": "C:\\Users\\26507\\Downloads\\量子光注入金属纳米尖端的背景调查与可行性评估.docx",
+    "bytes": 49346,
+    "sha256": "f4c664bfa6675a0be1155335ac9034327391103c633eabba33d496d3ef85f8a6",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "extraction_path": "references/extracted/03_量子光注入金属纳米尖端的背景调查与可行性评估.txt",
+    "extracted_characters": 21527
+  },
+  {
+    "source_id": 4,
+    "filename": "已粘贴的文本.txt",
+    "original_path": "C:\\Users\\26507\\.codex\\attachments\\cada1c1a-6dfe-4d07-9d8f-c2cb6e35e7ba\\已粘贴的文本.txt",
+    "bytes": 21695,
+    "sha256": "a54c095828ffdf2c22b6828c82875418b505ecdad9646d1418109844167ba2d7",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "extraction_path": "references/extracted/04_已粘贴的文本.txt",
+    "extracted_characters": 12497
+  },
+  {
+    "source_id": 5,
+    "filename": "已粘贴的文本.txt",
+    "original_path": "C:\\Users\\26507\\.codex\\attachments\\7f0e154a-26d8-430a-bce9-282c6ccafd03\\已粘贴的文本.txt",
+    "bytes": 12310,
+    "sha256": "4acb6f91e461980485935135e0aa932746e03e935e35bcbe6b2476c48fc8c383",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "extraction_path": "references/extracted/05_已粘贴的文本.txt",
+    "extracted_characters": 6856
+  },
+  {
+    "source_id": 6,
+    "filename": "QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md",
+    "original_path": "C:\\Users\\26507\\Downloads\\QL-TIP-1D_选题最终方案与Agent变更指令_20261103.md",
+    "bytes": 14714,
+    "sha256": "70b2131f0d0393a51937851c4dc84f85500b6acb11ad5f1b55bc135b07c2e47f",
+    "accessed_local_date": "2026-11-04",
+    "original_modified": false,
+    "extraction_path": "references/extracted/06_QL-TIP-1D_选题最终方案与Agent变更指令_20261103.txt",
+    "extracted_characters": 7881
+  }
+]
