@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1488 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1489 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -545,6 +545,7 @@
 | reports | [QL-TIP-1D/reports/P0_protocol.md](../QL-TIP-1D/reports/P0_protocol.md) | 4083 | `6113c8398e63` |
 | reports | [QL-TIP-1D/reports/P1_spectrum_validation.md](../QL-TIP-1D/reports/P1_spectrum_validation.md) | 4689 | `bbf86234b5e3` |
 | reports | [QL-TIP-1D/reports/P2_two_bias_pilot.md](../QL-TIP-1D/reports/P2_two_bias_pilot.md) | 3670 | `7d6f14901760` |
+| reports | [QL-TIP-1D/reports/PROJECT_STATUS_FOR_EXTERNAL_REVIEW_20261109.md](../QL-TIP-1D/reports/PROJECT_STATUS_FOR_EXTERNAL_REVIEW_20261109.md) | 10609 | `cfb2f2a995f9` |
 | reports | [QL-TIP-1D/reports/R1_continuation_validation.md](../QL-TIP-1D/reports/R1_continuation_validation.md) | 2655 | `5e7b729e9cc7` |
 | reports | [QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108.md](../QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108.md) | 7526 | `37e9d20fe662` |
 | results | [QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_evidence.json](../QL-TIP-1D/reports/RESCUE_R2_DECISION_REVIEW_20261108_evidence.json) | 4823 | `df1a9aa7e438` |

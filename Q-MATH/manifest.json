@@ -12882,6 +12882,14 @@
       "origins": [
         "registered:QL-TIP-1D/results/bias_v3_audit/reallocation_20261106/acceptance_path_estimate.json"
       ]
+    },
+    "QL-TIP-1D/reports/PROJECT_STATUS_FOR_EXTERNAL_REVIEW_20261109.md": {
+      "sha256": "cfb2f2a995f9b085deaaa15d3ece36c6fabfc01e2d923d79b3ae43addc7345b5",
+      "bytes": 10609,
+      "kind": "reports",
+      "origins": [
+        "registered:QL-TIP-1D/reports/PROJECT_STATUS_FOR_EXTERNAL_REVIEW_20261109.md"
+      ]
     }
   }
 }
