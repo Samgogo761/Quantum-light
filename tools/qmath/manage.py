@@ -287,6 +287,7 @@ def main():
     p = sub.add_parser('import'); p.add_argument('paths', nargs='+', type=Path)
     p.add_argument('--package', help='Explicit independent-project/version archive label')
     p = sub.add_parser('register'); p.add_argument('paths', nargs='+', type=Path)
+    p = sub.add_parser('unregister'); p.add_argument('paths', nargs='+', type=Path)
     sub.add_parser('refresh'); sub.add_parser('check')
     p = sub.add_parser('finish'); p.add_argument('--message', required=True)
     p.add_argument('--resume-owned-index', action='store_true',
@@ -307,6 +308,17 @@ def main():
             # Explicit registration preserves its chosen authoritative location.
             known[digest(raw)] = rel
             retain(m, known, 'new-round', rel, raw, 'registered:' + rel)
+        refresh(m)
+    elif args.command == 'unregister':
+        for p in args.paths:
+            rel = Path(p).as_posix()
+            try:
+                rel = p.resolve(strict=True).relative_to(ROOT).as_posix()
+            except (OSError, ValueError):
+                pass
+            if rel not in m['artifacts']:
+                raise ValueError(f'Not in inventory: {rel}')
+            del m['artifacts'][rel]
         refresh(m)
     elif args.command == 'refresh':
         refresh(m)

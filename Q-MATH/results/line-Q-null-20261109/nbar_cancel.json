@@ -1,0 +1,176 @@
+{
+  "status": "ok",
+  "mode": "nbar_cancel",
+  "verdict": "gh5_tracks_R_at_cancellation_STOP",
+  "answer": "固定 nbar 的 GH5 相消点仍落在 R=1 上：θ=0 近相消，|A+C|/|B|≈1。平均场共同核未被材料改写。停止扩 A/B/C，不开 QED。",
+  "tracks_R": true,
+  "rho_track_mark": 0.02,
+  "arg_track_deg": 10.0,
+  "inherited_freeze_sha256": "17a8e37ec3e0ab54096ff4edd1440c5a3f0412b09450c2fd8960cbc00d8e69db",
+  "alpha": 0.5225316298753016,
+  "r": 0.26102080980486986,
+  "R_star": 1.0,
+  "nbar": 0.34273260912113385,
+  "omega0": 0.775,
+  "envelope": {
+    "omega0": 0.775,
+    "t_h_eV": 1.0,
+    "period_model": 8.107335880231725,
+    "period_fs": 5.336345414619954,
+    "t_total_model": 48.64401528139035,
+    "t_total_fs": 32.01807248771973,
+    "ramp_cycles": 1.0,
+    "flat_cycles": 4.0,
+    "not_25fs_gaussian": true,
+    "not_free_space_pulse": true,
+    "used_pf_OMEGA0": false,
+    "g_abs": 0.005,
+    "g_note": {
+      "g": 0.005,
+      "units": "Angstrom^-1 abstract, not experimental V_eff",
+      "n_electronic_subsystems": 2,
+      "linear_force": "F_shared = sum_alpha -g e·<J_alpha> on a product state",
+      "if_currents_cancel": "linear mean force can vanish while g stays finite",
+      "if_currents_do_not_cancel": "F scales with subsystem count at fixed g",
+      "adding_k_without_rescaling_g": "not the thermodynamic limit of one cavity mode",
+      "not_macroscopic_BSV_intensity": true,
+      "shared_mode_is_not_sum_of_independent_photon_runs": true
+    },
+    "k_frac": [
+      0.173,
+      0.271
+    ],
+    "two_hbar_omega_eV": 1.55,
+    "three_hbar_omega_eV": 2.325,
+    "local_gap_note_eV": 1.91
+  },
+  "windows": {
+    "main": {
+      "t0_over_T": 2.0,
+      "t1_over_T": 4.0,
+      "proxy": {
+        "B_proxy": {
+          "re": 4.2097389774606946e-05,
+          "im": 2.9743162325280396e-06
+        },
+        "A_plus_C_proxy": {
+          "re": -4.158620647948988e-05,
+          "im": -2.0276690083938495e-06
+        },
+        "abs_AC_over_B": 0.9865713202134159,
+        "J0": {
+          "re": 5.111832951170665e-07,
+          "im": 9.466472241341897e-07
+        },
+        "Jpi": {
+          "re": 8.368359625409683e-05,
+          "im": 5.001985240921889e-06
+        },
+        "amp_ratio_pi_over_0": 77.92266097006974,
+        "arg_AC_over_B_deg": 178.750013380572,
+        "arg_distance_to_pi_deg": 1.2499866194280003,
+        "cannot_separate_A_and_C": true
+      },
+      "rho_proxy_AC_over_B": 0.9865713202134159,
+      "rho_over_Rstar": 0.9865713202134159,
+      "amp_Jx_pi_over_0": 77.92266097006974,
+      "arg_AC_over_B_deg": 178.750013380572,
+      "arg_distance_to_pi_deg": 1.2499866194280003,
+      "odd0_h2x": {
+        "re": 5.111832951170665e-07,
+        "im": 9.466472241341897e-07
+      },
+      "oddpi_h2x": {
+        "re": 8.368359625409683e-05,
+        "im": 5.001985240921889e-06
+      }
+    },
+    "front": {
+      "t0_over_T": 1.0,
+      "t1_over_T": 3.0,
+      "proxy": {
+        "B_proxy": {
+          "re": 4.4532100787148545e-05,
+          "im": -3.893242294111717e-06
+        },
+        "A_plus_C_proxy": {
+          "re": -4.415492104032359e-05,
+          "im": 2.987325590779483e-06
+        },
+        "abs_AC_over_B": 0.9900205505335148,
+        "J0": {
+          "re": 3.771797468249493e-07,
+          "im": -9.05916703332234e-07
+        },
+        "Jpi": {
+          "re": 8.868702182747213e-05,
+          "im": -6.8805678848911996e-06
+        },
+        "amp_ratio_pi_over_0": 90.64865999384584,
+        "arg_AC_over_B_deg": -178.8740695177947,
+        "arg_distance_to_pi_deg": 1.1259304822052911,
+        "cannot_separate_A_and_C": true
+      },
+      "rho_proxy_AC_over_B": 0.9900205505335148,
+      "rho_over_Rstar": 0.9900205505335148,
+      "amp_Jx_pi_over_0": 90.64865999384584,
+      "arg_AC_over_B_deg": -178.8740695177947,
+      "arg_distance_to_pi_deg": 1.1259304822052911,
+      "odd0_h2x": {
+        "re": 3.771797468249493e-07,
+        "im": -9.05916703332234e-07
+      },
+      "oddpi_h2x": {
+        "re": 8.868702182747213e-05,
+        "im": -6.8805678848911996e-06
+      }
+    },
+    "back": {
+      "t0_over_T": 3.0,
+      "t1_over_T": 5.0,
+      "proxy": {
+        "B_proxy": {
+          "re": 4.589540957745454e-05,
+          "im": -3.534870448474818e-06
+        },
+        "A_plus_C_proxy": {
+          "re": -4.553655190114112e-05,
+          "im": 2.7658349429287367e-06
+        },
+        "abs_AC_over_B": 0.9910742308761044,
+        "J0": {
+          "re": 3.588576763134196e-07,
+          "im": -7.690355055460816e-07
+        },
+        "Jpi": {
+          "re": 9.143196147859566e-05,
+          "im": -6.300705391403555e-06
+        },
+        "amp_ratio_pi_over_0": 107.99456481243898,
+        "arg_AC_over_B_deg": -179.07157266969872,
+        "arg_distance_to_pi_deg": 0.9284273303012753,
+        "cannot_separate_A_and_C": true
+      },
+      "rho_proxy_AC_over_B": 0.9910742308761044,
+      "rho_over_Rstar": 0.9910742308761044,
+      "amp_Jx_pi_over_0": 107.99456481243898,
+      "arg_AC_over_B_deg": -179.07157266969872,
+      "arg_distance_to_pi_deg": 0.9284273303012753,
+      "odd0_h2x": {
+        "re": 3.588576763134196e-07,
+        "im": -7.690355055460816e-07
+      },
+      "oddpi_h2x": {
+        "re": 9.143196147859566e-05,
+        "im": -6.300705391403555e-06
+      }
+    }
+  },
+  "abs_rho_minus_1_main": 0.01342867978658413,
+  "cannot_separate_A_and_C": true,
+  "gh5_is_not_qed": true,
+  "did_not_start_new_QED": true,
+  "did_not_expand_ABC": true,
+  "did_not_write_20261102": true,
+  "utc": "2026-11-09T04:45:53.781553+00:00"
+}

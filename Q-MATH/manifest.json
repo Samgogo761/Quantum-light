@@ -12890,6 +12890,110 @@
       "origins": [
         "registered:QL-TIP-1D/reports/PROJECT_STATUS_FOR_EXTERNAL_REVIEW_20261109.md"
       ]
+    },
+    "docs/04_BSV量子光/线Q_共同核零假设_冻结复算_20261109.md": {
+      "sha256": "cb72994d863953a1810086991c66ac9f5dcd62c01edc7e9adc2bd7fecbdba4a4",
+      "bytes": 9748,
+      "kind": "reports",
+      "origins": [
+        "registered:docs/04_BSV量子光/线Q_共同核零假设_冻结复算_20261109.md"
+      ]
+    },
+    "tools/b0_small_model/q8_m0_qinput_1600nm_protocolA_gh5_nbar_cancel_20261109.py": {
+      "sha256": "8cd04e0ef6da911fe2baa6f860e7ac0d1478dc4941dfb55fdd28c4de87fe726a",
+      "bytes": 25356,
+      "kind": "code",
+      "origins": [
+        "registered:tools/b0_small_model/q8_m0_qinput_1600nm_protocolA_gh5_nbar_cancel_20261109.py"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/null_hypothesis.json": {
+      "sha256": "943543bb6061b16f73f555b31ac7b5e722d80963c6b3bd0f43f1274ba7e205c7",
+      "bytes": 15942,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/null_hypothesis.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/nbar_cancel.json": {
+      "sha256": "1d860b0e14f4f59ea1b1ffe0317a8ba8ced9c8fa8e6642a4a6e70f5f5bf294ee",
+      "bytes": 5743,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/nbar_cancel.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/resources.json": {
+      "sha256": "c5abffd9267decdee7531713748aaa496472dcaff938e95cd5a2771366f0d3e7",
+      "bytes": 5893,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/resources.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/job_p_0.json": {
+      "sha256": "3cb3c6d3badda697ab998d1d12f5a0e856dbbfaabe9f8d8e81dceaa40fb5df5e",
+      "bytes": 1988,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/job_p_0.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/job_m_0.json": {
+      "sha256": "37806c698302d5fa584324b465258f63630e6eb24d45546df6df2ce9a3051543",
+      "bytes": 1974,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/job_m_0.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/job_p_pi.json": {
+      "sha256": "cd4327c5d28fc0f5c3bd288439b7712c1803454fbd4ff4762206b15750b4a442",
+      "bytes": 2002,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/job_p_pi.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/job_m_pi.json": {
+      "sha256": "dd281ce6234761c482c1f41ff4fe6ecf1e84bafd0150822d335c0c302f2e4a61",
+      "bytes": 1989,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/job_m_pi.json"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/series_p_0.npz": {
+      "sha256": "7f3defb8e0a97c5914bfa1957786bc7cc0f92bc1fb455c87c8dd50bfd12fdafd",
+      "bytes": 14156,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/series_p_0.npz"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/series_m_0.npz": {
+      "sha256": "6ed9008311f67743f303c24aef1972c706df6f6e9da3abb2eca47102896ddb6f",
+      "bytes": 14162,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/series_m_0.npz"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/series_p_pi.npz": {
+      "sha256": "c9aae792928d0370b7c0eb686c4ab4f025ba0d7990fbac2a2371776924e234e0",
+      "bytes": 14152,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/series_p_pi.npz"
+      ]
+    },
+    "Q-MATH/results/line-Q-null-20261109/series_m_pi.npz": {
+      "sha256": "9fb1f8f4740e2ae75981ec1c5a5e2a4688b184ab8aaf747cbc6f6116435591bd",
+      "bytes": 14159,
+      "kind": "results",
+      "origins": [
+        "registered:Q-MATH/results/line-Q-null-20261109/series_m_pi.npz"
+      ]
     }
   }
 }

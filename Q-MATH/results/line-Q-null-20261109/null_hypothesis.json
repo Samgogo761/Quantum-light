@@ -1,0 +1,452 @@
+{
+  "schema": "q_line_common_kernel_null_frozen_20261109",
+  "created_utc": "2026-11-09T04:36:46.627556+00:00",
+  "question": "Does AFM electron dynamics nontrivially move/reshape the quantum-statistical coherence cancellation point?",
+  "zero_hypothesis": "K_D = K_M  =>  rho = |A|/|B| = R = sinh(2r)/(2 alpha^2), arg(A/B)=pi",
+  "did_not_propagate": true,
+  "did_not_rewrite_fourangle_fit": true,
+  "inherited_freeze_sha256": "17a8e37ec3e0ab54096ff4edd1440c5a3f0412b09450c2fd8960cbc00d8e69db",
+  "fourangle_fit": "results\\q_line\\qinput_1600nm_protocolA_qed_fourangle_20261102\\fourangle_fit.json",
+  "working_point": {
+    "alpha": 0.5,
+    "r": 0.3,
+    "R": 1.2733071642964826,
+    "nbar": 0.34273260912113385,
+    "state": "D(0.5) S(0.3 e^{i theta}) |0>"
+  },
+  "fixed_nbar_cancellation_never_hit_in_old_rscan": {
+    "nbar_held": 0.34273260912113385,
+    "s_star": 0.0696933049009947,
+    "r_star": 0.26102080980486986,
+    "alpha_star": 0.5225316298753016,
+    "R_star": 1.0,
+    "old_rscan_held_alpha_0.5_varied_r": true,
+    "closest_old_points": [
+      "a05r02 r=0.2 R=0.8215",
+      "a05r03 r=0.3 R=1.2733"
+    ]
+  },
+  "protocol_A_1600nm": {
+    "omega0_eV": 0.775,
+    "window_main": "[2T,4T]",
+    "observable": "Jx Neel-odd H2, nmax=8",
+    "g_abs_Ainv": 0.005,
+    "not_far_field_yield": true,
+    "coupling_switch_fs_note": "1+4+1 at 1600 nm is about 32 fs, not a 25 fs free-space pulse",
+    "qed_windows": {
+      "front": {
+        "rho": 1.2690863359118931,
+        "rho_over_R": 0.9966851451849629,
+        "arg_A_over_B_deg": -179.5155731838113,
+        "arg_distance_to_pi_deg": 0.4844268161886797,
+        "abs_C_over_A": 0.0027581425581851243,
+        "x_amp_ratio_pi_over_0": 8.336061913122382,
+        "amp2d_ratio_pi_over_0": 8.35011710295068,
+        "relative_L2_residual": 0.0006206455775635743,
+        "A": {
+          "re": -5.282029028162312e-05,
+          "im": 3.7637482387819663e-06,
+          "abs": 5.295421481090872e-05,
+          "phase_deg": 175.92423626816415
+        },
+        "B": {
+          "re": 4.159416059060372e-05,
+          "im": -3.3175013652940384e-06,
+          "abs": 4.1726250856573e-05,
+          "phase_deg": -4.560190548024562
+        },
+        "C": {
+          "re": -8.973520912722635e-08,
+          "im": -1.1523773323692502e-07,
+          "abs": 1.4605527350524438e-07,
+          "phase_deg": -127.90776391616457
+        }
+      },
+      "main": {
+        "rho": 1.2673731506656307,
+        "rho_over_R": 0.9953396840941121,
+        "arg_A_over_B_deg": 179.39145984553713,
+        "arg_distance_to_pi_deg": 0.6085401544628654,
+        "abs_C_over_A": 0.003196437630879734,
+        "x_amp_ratio_pi_over_0": 8.533749340054134,
+        "amp2d_ratio_pi_over_0": 8.497974011268397,
+        "relative_L2_residual": 0.0005808291278465488,
+        "A": {
+          "re": -4.9907945521726e-05,
+          "im": -2.6309542914000657e-06,
+          "abs": 4.997724428860605e-05,
+          "phase_deg": -176.98238085465846
+        },
+        "B": {
+          "re": 3.9354776957546616e-05,
+          "im": 2.494032388309913e-06,
+          "abs": 3.943372499437735e-05,
+          "phase_deg": 3.6261592998044363
+        },
+        "C": {
+          "re": 1.313955454959297e-07,
+          "im": 9.085702910925299e-08,
+          "abs": 1.5974914433176965e-07,
+          "phase_deg": 34.66297598265759
+        }
+      },
+      "back": {
+        "rho": 1.2642371558486851,
+        "rho_over_R": 0.9928768103234471,
+        "arg_A_over_B_deg": -179.4914164112012,
+        "arg_distance_to_pi_deg": 0.5085835887987886,
+        "abs_C_over_A": 0.003004211602246768,
+        "x_amp_ratio_pi_over_0": 8.426798436379952,
+        "amp2d_ratio_pi_over_0": 8.428569704571473,
+        "relative_L2_residual": 0.0006656167961168867,
+        "A": {
+          "re": -5.433459037241468e-05,
+          "im": 3.3867991775759818e-06,
+          "abs": 5.4440041509970646e-05,
+          "phase_deg": 176.43323769062545
+        },
+        "B": {
+          "re": 4.2952690637745274e-05,
+          "im": -3.0603104163569543e-06,
+          "abs": 4.306157373884881e-05,
+          "phase_deg": -4.07534589817338
+        },
+        "C": {
+          "re": -1.5158841692813028e-07,
+          "im": -6.139510982370217e-08,
+          "abs": 1.6354940433104947e-07,
+          "phase_deg": -157.95146774842635
+        }
+      }
+    },
+    "gh5_windows": {
+      "front": {
+        "rho": 1.2650906978090457,
+        "rho_over_R": 0.9935471450111752,
+        "arg_A_over_B_deg": -178.84688866266333,
+        "arg_distance_to_pi_deg": 1.1531113373366568,
+        "abs_C_over_A": 0.002655153726226668,
+        "x_amp_ratio_pi_over_0": 8.447655774821426,
+        "amp2d_ratio_pi_over_0": 8.471532664374404,
+        "relative_L2_residual": 3.5002977345458736e-05,
+        "A": {
+          "re": -5.213186407707599e-05,
+          "im": 3.4849430774525254e-06,
+          "abs": 5.2248216049964904e-05,
+          "phase_deg": 176.1755463651053
+        },
+        "B": {
+          "re": 4.114422388545164e-05,
+          "im": -3.5834197574543733e-06,
+          "abs": 4.1299976468447094e-05,
+          "phase_deg": -4.977564972231364
+        },
+        "C": {
+          "re": -9.200058339015971e-08,
+          "im": -1.03832007677769e-07,
+          "abs": 1.3872704553376033e-07,
+          "phase_deg": -131.54261996488046
+        }
+      },
+      "main": {
+        "rho": 1.2720447106891786,
+        "rho_over_R": 0.9990085239110379,
+        "arg_A_over_B_deg": 178.7238953377039,
+        "arg_distance_to_pi_deg": 1.276104662296098,
+        "abs_C_over_A": 0.0027093222862887784,
+        "x_amp_ratio_pi_over_0": 8.390710520284577,
+        "amp2d_ratio_pi_over_0": 8.359611813725916,
+        "relative_L2_residual": 6.542676671323483e-05,
+        "A": {
+          "re": -4.9621331766499254e-05,
+          "im": -2.483334920255703e-06,
+          "abs": 4.9683433039667755e-05,
+          "phase_deg": -177.1349821586776
+        },
+        "B": {
+          "re": 3.895595779468652e-05,
+          "im": 2.8205024774063174e-06,
+          "abs": 3.905792982131097e-05,
+          "phase_deg": 4.141122503618512
+        },
+        "C": {
+          "re": 1.0775507615655216e-07,
+          "im": 8.067387206516818e-08,
+          "abs": 1.3460843239370808e-07,
+          "phase_deg": 36.82139590979101
+        }
+      },
+      "back": {
+        "rho": 1.25843059319575,
+        "rho_over_R": 0.9883165888656944,
+        "arg_A_over_B_deg": -179.06105793621825,
+        "arg_distance_to_pi_deg": 0.938942063781771,
+        "abs_C_over_A": 0.0030335655105445227,
+        "x_amp_ratio_pi_over_0": 8.609392078593327,
+        "amp2d_ratio_pi_over_0": 8.618076519403823,
+        "relative_L2_residual": 6.648881494859769e-05,
+        "A": {
+          "re": -5.350316112960887e-05,
+          "im": 3.2342042377038534e-06,
+          "abs": 5.3600823948070716e-05,
+          "phase_deg": 176.54074571174
+        },
+        "B": {
+          "re": 4.246795870350547e-05,
+          "im": -3.26638654607973e-06,
+          "abs": 4.2593389129195355e-05,
+          "phase_deg": -4.398196352041793
+        },
+        "C": {
+          "re": -1.5047708671497265e-07,
+          "im": -6.161112099186634e-08,
+          "abs": 1.6260161086563623e-07,
+          "phase_deg": -157.73391535636912
+        }
+      }
+    },
+    "leaveout": {
+      "primary_Esym": 0.0009060516893417415,
+      "Esym_pass_0p02": true,
+      "verdict_string": "当前保存数据不足以稳健判断",
+      "do_not_upgrade_verdict_to_physics_claim": true,
+      "front_Esym_fail": 0.15088523872638757,
+      "back_Esym_fail": 0.15331056450698682
+    },
+    "nmax8_to_10": {
+      "did_not_refit_ABC": true,
+      "not_full_ABC_convergence": true,
+      "theta0_h2_odd_x_rel": 0.0013160963972803188,
+      "theta_pi_h2_odd_x_rel": 0.00217948367874813
+    },
+    "null_on_certifiable_data": "PASS",
+    "reason": "QED rho/R = 0.99534 on main, 0.993-0.997 on three windows; leaveout Esym=0.0906%; nmax ~0.13%/0.22%. Deviation << window/truncation."
+  },
+  "Q6_24p8um": {
+    "omega_eV": 0.05,
+    "estimator": "linear_exact",
+    "channel": "odd x",
+    "do_not_mix_2d_4p98_with_protocolA_x_8p534": true,
+    "same_cycle_count_is_not_same_lab_time": true,
+    "six_period_fs": 496.2801235596557,
+    "qed": {
+      "main": {
+        "rho": 1.4556082069386271,
+        "rho_over_R": 1.14317130049517,
+        "arg_A_over_B_deg": 177.6519822863755,
+        "arg_distance_to_pi_deg": 2.3480177136245004,
+        "abs_C_over_A": 0.015369328972979256,
+        "A": {
+          "re": 4.743410898064329e-08,
+          "im": -1.5839184075052783e-08,
+          "abs": 5.000874370498573e-08,
+          "phase_deg": -18.46518089333257
+        },
+        "B": {
+          "re": -3.3005586139682594e-08,
+          "im": 9.537284491981947e-09,
+          "abs": 3.435590941752244e-08,
+          "phase_deg": 163.88283682029194
+        },
+        "C": {
+          "re": 6.34573135500289e-10,
+          "im": -4.336636680657489e-10,
+          "abs": 7.686008335273312e-10,
+          "phase_deg": -34.34847882942779
+        }
+      },
+      "front": {
+        "rho": 1.2273188599872804,
+        "rho_over_R": 0.9638827883807508,
+        "arg_A_over_B_deg": 172.7345711542207,
+        "arg_distance_to_pi_deg": 7.265428845779297,
+        "abs_C_over_A": 0.009299675674858274,
+        "A": {
+          "re": 4.92571490286729e-08,
+          "im": -9.628456613131322e-09,
+          "abs": 5.0189380422394574e-08,
+          "phase_deg": -11.060330420372937
+        },
+        "B": {
+          "re": -4.0803848858062246e-08,
+          "im": 2.7065417519347603e-09,
+          "abs": 4.089351354293922e-08,
+          "phase_deg": 176.20509842540636
+        },
+        "C": {
+          "re": -1.982624852324029e-10,
+          "im": -4.225433053174229e-10,
+          "abs": 4.667449602503509e-10,
+          "phase_deg": -115.13654380362345
+        }
+      }
+    },
+    "gh5": {
+      "main": {
+        "rho": 1.2631012934408832,
+        "rho_over_R": 0.9919847534500928,
+        "arg_A_over_B_deg": 174.10166544737214,
+        "arg_distance_to_pi_deg": 5.898334552627858,
+        "abs_C_over_A": 0.02589644435025989,
+        "A": {
+          "re": 4.8029623075941364e-08,
+          "im": -1.577654998267539e-08,
+          "abs": 5.055436897215565e-08,
+          "phase_deg": -18.184079998942988
+        },
+        "B": {
+          "re": -3.910739428540405e-08,
+          "im": 8.516599431347898e-09,
+          "abs": 4.002400221951934e-08,
+          "phase_deg": 167.71425455368487
+        },
+        "C": {
+          "re": 4.15155114679017e-10,
+          "im": 1.2416095686578454e-09,
+          "abs": 1.3091784027499342e-09,
+          "phase_deg": 71.51168874822002
+        }
+      },
+      "front": {
+        "rho": 1.4208961718269841,
+        "rho_over_R": 1.1159099796725374,
+        "arg_A_over_B_deg": -178.92947480545203,
+        "arg_distance_to_pi_deg": 1.0705251945479688,
+        "abs_C_over_A": 0.015681234772962117,
+        "A": {
+          "re": 4.9657722882047064e-08,
+          "im": -9.48318943682545e-09,
+          "abs": 5.055512163693109e-08,
+          "phase_deg": -10.811658240334411
+        },
+        "B": {
+          "re": -3.4817378628967076e-08,
+          "im": 7.32586569063089e-09,
+          "abs": 3.5579743713382986e-08,
+          "phase_deg": 168.11781656511764
+        },
+        "C": {
+          "re": -7.894807237049456e-10,
+          "im": -7.210601401039772e-11,
+          "abs": 7.927667313643733e-10,
+          "phase_deg": -174.78145618876846
+        }
+      },
+      "back": {
+        "rho": 1.1506325816427885,
+        "rho_over_R": 0.9036567247138099,
+        "arg_A_over_B_deg": -178.82566732061412,
+        "arg_distance_to_pi_deg": 1.1743326793858841,
+        "abs_C_over_A": 0.02679563109884514,
+        "A": {
+          "re": 4.6063251924293434e-08,
+          "im": -2.158606962987075e-08,
+          "abs": 5.087024257762637e-08,
+          "phase_deg": -25.10863461870905
+        },
+        "B": {
+          "re": -3.9640091246436046e-08,
+          "im": 1.9576693002394392e-08,
+          "abs": 4.421067453608656e-08,
+          "phase_deg": 153.71703270190508
+        },
+        "C": {
+          "re": 1.2466454771021143e-09,
+          "im": -5.512870005061534e-10,
+          "abs": 1.3631002540188413e-09,
+          "phase_deg": -23.85579738546337
+        }
+      }
+    },
+    "qed_back_linear_exact_missing": true,
+    "main_qed_rho_over_R_not_certified_KD_neq_KM": true,
+    "reason": "QED rho itself moves 1.456 -> 1.227 with window; 14% vs R is same order as window swing. GH5 main still tracks R (rho/R=0.992)."
+  },
+  "old_rscan_gh5_fixed_alpha": {
+    "source": "results/q_line/abc_rscan_gh5_20261029/abc_rscan_post.json",
+    "verdict": "rho_tracks_R_field_dominated",
+    "rho_over_R_mean": 0.9976033051801712,
+    "rho_over_R_pop_std_over_mean": 0.00271831330708528,
+    "rows": [
+      {
+        "prefix": "a05r01",
+        "alpha": 0.5,
+        "r": 0.1,
+        "R": 0.4026720050821879,
+        "nbar": 0.26003337780953795,
+        "rho": 0.4005820874216103,
+        "rho_over_R": 0.9948098759431983,
+        "arg_AC_over_B_deg": 175.62775951349758
+      },
+      {
+        "prefix": "a05r02",
+        "alpha": 0.5,
+        "r": 0.2,
+        "R": 0.821504651605631,
+        "nbar": 0.2905361859192274,
+        "rho": 0.8176595676585007,
+        "rho_over_R": 0.995319461746668,
+        "arg_AC_over_B_deg": 175.56840985892194
+      },
+      {
+        "prefix": "a05r03",
+        "alpha": 0.5,
+        "r": 0.3,
+        "R": 1.2733071642964824,
+        "nbar": 0.34273260912113385,
+        "rho": 1.2684513656405816,
+        "rho_over_R": 0.9961864671839935,
+        "arg_AC_over_B_deg": 175.47958835148648
+      },
+      {
+        "prefix": "a05r05",
+        "alpha": 0.5,
+        "r": 0.5,
+        "R": 2.3504023872876028,
+        "nbar": 0.5215403174076219,
+        "rho": 2.348366900091714,
+        "rho_over_R": 0.9991339835226096,
+        "arg_AC_over_B_deg": 175.28404083077925
+      },
+      {
+        "prefix": "a08r03",
+        "alpha": 0.8,
+        "r": 0.3,
+        "R": 0.49738561105331336,
+        "nbar": 0.7327326091211339,
+        "rho": 0.4960916214927968,
+        "rho_over_R": 0.9973984177833848,
+        "arg_AC_over_B_deg": 177.51356938201266
+      },
+      {
+        "prefix": "a12r03",
+        "alpha": 1.2,
+        "r": 0.3,
+        "R": 0.22106027157925043,
+        "nbar": 1.5327326091211337,
+        "rho": 0.22167296773261952,
+        "rho_over_R": 1.0027716249011729,
+        "arg_AC_over_B_deg": 178.2253464738291
+      }
+    ],
+    "notes_wrongly_call_QED_rho_over_R_1p144_exact_quantum_correction": true,
+    "rejudge": "Do not copy that note. Re-judge 24.8 um QED 14% with window uncertainty."
+  },
+  "scientific_judgment": {
+    "ehrenfest_gh5_common_kernel_holds_at_mean_field": true,
+    "qed_1600nm_null_PASS": true,
+    "qed_24p8um_not_certified_material_shift": true,
+    "null_not_falsified_on_certifiable_data": true,
+    "do_not_start_new_QED": true,
+    "next": "fixed-nbar GH5 cancellation scan at r_star, alpha_star, 1600 nm protocol, theta=0,pi only"
+  },
+  "not_claims": [
+    "A/B/C is not the laboratory 0-2 subspace",
+    "Q3 showed 0-2 cannot replace full DS",
+    "finite-time complex current is not far-field photon yield",
+    "abstract g=0.005 A^{-1} is not a measured coupling",
+    "single k/-k is not full BZ",
+    "leaveout Chinese verdict is not a physics claim",
+    "Q6 14% is not a certified quantum correction versus Ehrenfest"
+  ]
+}

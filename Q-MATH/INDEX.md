@@ -2,7 +2,7 @@
 
 由 `python tools/qmath/manage.py refresh` 更新；仅核验文件，不运行科研程序。
 
-归档来源 38 个；独立文件 1489 个；可重建历史包 16 个。
+归档来源 38 个；独立文件 1502 个；可重建历史包 16 个。
 
 所有文件的完整 SHA-256、原包成员名与去重映射见 [manifest.json](manifest.json)。
 
@@ -197,6 +197,17 @@
 | results | [Q-MATH/results/foundation-M0/M0_independent_equation_results.json](results/foundation-M0/M0_independent_equation_results.json) | 104 | `768d03f32f60` |
 | results | [Q-MATH/results/foundation-M0/M0_influence_exterior_results.json](results/foundation-M0/M0_influence_exterior_results.json) | 1366 | `9a0c93138624` |
 | results | [Q-MATH/results/foundation-M0/M0_joint_manifest.json](results/foundation-M0/M0_joint_manifest.json) | 1623 | `49308c8ef079` |
+| results | [Q-MATH/results/line-Q-null-20261109/job_m_0.json](results/line-Q-null-20261109/job_m_0.json) | 1974 | `37806c698302` |
+| results | [Q-MATH/results/line-Q-null-20261109/job_m_pi.json](results/line-Q-null-20261109/job_m_pi.json) | 1989 | `dd281ce62347` |
+| results | [Q-MATH/results/line-Q-null-20261109/job_p_0.json](results/line-Q-null-20261109/job_p_0.json) | 1988 | `3cb3c6d3badd` |
+| results | [Q-MATH/results/line-Q-null-20261109/job_p_pi.json](results/line-Q-null-20261109/job_p_pi.json) | 2002 | `cd4327c5d28f` |
+| results | [Q-MATH/results/line-Q-null-20261109/nbar_cancel.json](results/line-Q-null-20261109/nbar_cancel.json) | 5743 | `1d860b0e14f4` |
+| results | [Q-MATH/results/line-Q-null-20261109/null_hypothesis.json](results/line-Q-null-20261109/null_hypothesis.json) | 15942 | `943543bb6061` |
+| results | [Q-MATH/results/line-Q-null-20261109/resources.json](results/line-Q-null-20261109/resources.json) | 5893 | `c5abffd9267d` |
+| results | [Q-MATH/results/line-Q-null-20261109/series_m_0.npz](results/line-Q-null-20261109/series_m_0.npz) | 14162 | `6ed9008311f6` |
+| results | [Q-MATH/results/line-Q-null-20261109/series_m_pi.npz](results/line-Q-null-20261109/series_m_pi.npz) | 14159 | `9fb1f8f4740e` |
+| results | [Q-MATH/results/line-Q-null-20261109/series_p_0.npz](results/line-Q-null-20261109/series_p_0.npz) | 14156 | `7f3defb8e0a9` |
+| results | [Q-MATH/results/line-Q-null-20261109/series_p_pi.npz](results/line-Q-null-20261109/series_p_pi.npz) | 14152 | `c9aae792928d` |
 | results | [Q-MATH/results/v03/QMATH03_RESULTS.json](results/v03/QMATH03_RESULTS.json) | 32652 | `8d92e03cb9f0` |
 | results | [Q-MATH/results/v03/SYMMETRY_PAIR_RESULT.json](results/v03/SYMMETRY_PAIR_RESULT.json) | 2411 | `f71cce482584` |
 | results | [Q-MATH/results/v03/mean_H2_results.png](results/v03/mean_H2_results.png) | 69748 | `e8a963313798` |
@@ -1493,7 +1504,9 @@
 | results | [docs/04_BSV量子光/qmath_r1_recompute.json](../docs/04_BSV量子光/qmath_r1_recompute.json) | 241596 | `3d97fe5e57fa` |
 | reports | [docs/04_BSV量子光/线Q_QMATH_R1.5_正P经典可达界_20261023.md](../docs/04_BSV量子光/线Q_QMATH_R1.5_正P经典可达界_20261023.md) | 15140 | `9ca4d06ee654` |
 | reports | [docs/04_BSV量子光/线Q_QMATH数学成果收割_响应算符与正P经典界_R1.md](../docs/04_BSV量子光/线Q_QMATH数学成果收割_响应算符与正P经典界_R1.md) | 23654 | `c7ee8b3eaacf` |
+| reports | [docs/04_BSV量子光/线Q_共同核零假设_冻结复算_20261109.md](../docs/04_BSV量子光/线Q_共同核零假设_冻结复算_20261109.md) | 9748 | `cb72994d8639` |
 | code | [tools/b0_small_model/q8_m0_model.py](../tools/b0_small_model/q8_m0_model.py) | 17386 | `5d53090cabb6` |
+| code | [tools/b0_small_model/q8_m0_qinput_1600nm_protocolA_gh5_nbar_cancel_20261109.py](../tools/b0_small_model/q8_m0_qinput_1600nm_protocolA_gh5_nbar_cancel_20261109.py) | 25356 | `8cd04e0ef6da` |
 | code | [tools/b0_small_model/q8_tperp_static_audit.py](../tools/b0_small_model/q8_tperp_static_audit.py) | 37002 | `87bb177da272` |
 | code | [tools/b0_small_model/qmath_r1_compact.py](../tools/b0_small_model/qmath_r1_compact.py) | 3745 | `cae69a51cbaf` |
 | code | [tools/b0_small_model/qmath_r1_extract_h2.py](../tools/b0_small_model/qmath_r1_extract_h2.py) | 4285 | `67be5420d01d` |
